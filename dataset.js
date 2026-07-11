@@ -33,7 +33,7 @@ window.INDEX_DATA = {
 {"id": "SMT-04", "domain": "Smart", "subtheme": "Digital Governance", "name": "Open data", "measures": "Maturity of public open-data provision", "unit": "index", "direction": "higher", "dataLevel": "City", "source": "Open Data Barometer", "appearsIn": "—", "pilot": 0, "caveat": "", "contestable": 0, "approx": "none"},
 {"id": "SMT-05", "domain": "Smart", "subtheme": "Digital Adoption", "name": "Population online", "measures": "% of residents using the internet", "unit": "%", "direction": "higher", "dataLevel": "Country proxy", "source": "World Bank WDI (ITU series)", "appearsIn": "—", "pilot": 1, "caveat": "Country-level series (ITU via World Bank WDI); reference year mostly 2024, Switzerland and Austria 2025. New York and San Francisco share the single US value; the UAE source records exactly 100.", "contestable": 0, "approx": "proxy"},
 {"id": "SMT-06", "domain": "Smart", "subtheme": "Smart Services", "name": "Smart mobility", "measures": "Real-time transit info / app availability", "unit": "index", "direction": "higher", "dataLevel": "City", "source": "IMD Smart City survey", "appearsIn": "IMD Smart City", "pilot": 0, "caveat": "Perception-based (resident survey).", "contestable": 0, "approx": "perception"},
-{"id": "CMP-01", "domain": "Competitive", "subtheme": "Economic Output", "name": "GDP per capita", "measures": "Metro GDP / population", "unit": "USD PPP", "direction": "higher", "dataLevel": "Metro", "source": "OECD Metro DB", "appearsIn": "GPCI (Economy)", "pilot": 1, "caveat": "Strong for OECD.", "contestable": 0, "approx": "none"},
+{"id": "CMP-01", "domain": "Competitive", "subtheme": "Economic Output", "name": "GDP per capita", "measures": "Metro GDP / population", "unit": "USD PPP", "direction": "higher", "dataLevel": "Metro", "source": "OECD Metro (FUA) / World Bank", "appearsIn": "GPCI (Economy)", "pilot": 1, "caveat": "OECD metropolitan (FUA) GDP per head in constant-2015-PPP USD; years 2020-2023 (London, Melbourne and Toronto are 2020 COVID-dip values, the latter two from an archived vintage). Singapore is a national World Bank figure on a 2021 PPP base — close but not identical basis. Dubai: no free PPP metro figure exists (blank).", "contestable": 0, "approx": "none"},
 {"id": "CMP-02", "domain": "Competitive", "subtheme": "Economic Output", "name": "Labour productivity", "measures": "Gross value added per worker", "unit": "USD", "direction": "higher", "dataLevel": "Metro", "source": "OECD", "appearsIn": "—", "pilot": 0, "caveat": "", "contestable": 0, "approx": "none"},
 {"id": "CMP-03", "domain": "Competitive", "subtheme": "Business Environment", "name": "Global firm presence", "measures": "Number of major global-firm HQs", "unit": "count", "direction": "higher", "dataLevel": "City", "source": "GPCI / Fortune", "appearsIn": "GPCI (Economy)", "pilot": 0, "caveat": "", "contestable": 0, "approx": "none"},
 {"id": "CMP-04", "domain": "Competitive", "subtheme": "Business Environment", "name": "Startup density", "measures": "Startups per 100,000 residents", "unit": "per 100k", "direction": "higher", "dataLevel": "City", "source": "Dealroom / Startup Genome", "appearsIn": "GPCI-Startup", "pilot": 1, "caveat": "", "contestable": 0, "approx": "none"},
@@ -53,22 +53,22 @@ window.INDEX_DATA = {
 ],
 "cities":["Singapore", "Tokyo", "Copenhagen", "Zurich", "Vienna", "Seoul", "Melbourne", "Amsterdam", "London", "New York", "Paris", "Toronto", "Berlin", "Barcelona", "Dubai", "San Francisco"],
 "data":{
-"Singapore":{"LIV-01": 0.07, "LIV-04": 83.9, "LIV-05": 2.9, "LIV-06": 24.7, "GRN-01": 12.0, "GRN-02": 70.3, "GRN-05": 52.0, "SMT-01": 567.1, "SMT-03": 87.5, "SMT-05": 94.4, "CMP-01": 98296, "CMP-04": 105, "CMP-06": 2517, "TAL-01": 63, "TAL-02": 7, "TAL-06": 39, "CON-01": 311, "CON-03": 95, "CON-05": 16},
-"Tokyo":{"LIV-01": 0.23, "LIV-04": 84.9, "LIV-05": 3.26, "LIV-06": 16.0, "GRN-01": 10.8, "GRN-02": 74.8, "GRN-05": 21.4, "SMT-01": 313.7, "SMT-03": 85.42, "SMT-05": 85.5, "CMP-01": 104175, "CMP-04": 102, "CMP-06": 2660, "TAL-01": 63, "TAL-02": 6, "TAL-06": 39, "CON-01": 304, "CON-03": 92, "CON-05": 19},
-"Copenhagen":{"LIV-01": 0.84, "LIV-04": 81.5, "LIV-05": 5.79, "LIV-06": 10.7, "GRN-01": 6.9, "GRN-02": 83.7, "GRN-05": 42.0, "SMT-01": 328.2, "SMT-03": 90.63, "SMT-05": 99.8, "CMP-01": 88871, "CMP-04": 95, "CMP-06": 2363, "TAL-01": 59, "TAL-02": 6, "TAL-06": 37, "CON-01": 236, "CON-03": 83, "CON-05": 23},
-"Zurich":{"LIV-01": 0.6, "LIV-04": 84.1, "LIV-05": 5.67, "LIV-06": 12.8, "GRN-01": 7.6, "GRN-02": 67.6, "GRN-05": 46.0, "SMT-01": 455.6, "SMT-03": 81.25, "SMT-05": 97.3, "CMP-01": 97266, "CMP-04": 95, "CMP-06": 2550, "TAL-01": 63, "TAL-02": 6, "TAL-06": 37, "CON-01": 247, "CON-03": null, "CON-05": 23},
-"Vienna":{"LIV-01": 0.88, "LIV-04": 81.0, "LIV-05": 7.17, "LIV-06": 15.8, "GRN-01": 9.9, "GRN-02": 72.4, "GRN-05": 35.2, "SMT-01": 251.9, "SMT-03": 84.38, "SMT-05": 91.9, "CMP-01": 85786, "CMP-04": 93, "CMP-06": 2058, "TAL-01": 59, "TAL-02": 6, "TAL-06": 37, "CON-01": 256, "CON-03": 82, "CON-05": 23},
-"Seoul":{"LIV-01": 0.48, "LIV-04": 85.0, "LIV-05": 4.27, "LIV-06": 30.0, "GRN-01": 25.4, "GRN-02": 48.8, "GRN-05": 61.7, "SMT-01": 320.3, "SMT-03": 87.5, "SMT-05": 97.9, "CMP-01": 93070, "CMP-04": 93, "CMP-06": 2241, "TAL-01": 61, "TAL-02": 6, "TAL-06": 38, "CON-01": 265, "CON-03": 83, "CON-05": 19},
-"Melbourne":{"LIV-01": 0.85, "LIV-04": 84.1, "LIV-05": 4.72, "LIV-06": 7.5, "GRN-01": 7.9, "GRN-02": 84.4, "GRN-05": 47.9, "SMT-01": 248.8, "SMT-03": null, "SMT-05": 96.1, "CMP-01": 90589, "CMP-04": 85, "CMP-06": 1857, "TAL-01": 58, "TAL-02": 6, "TAL-06": 37, "CON-01": 225, "CON-03": 80, "CON-05": 26},
-"Amsterdam":{"LIV-01": 0.69, "LIV-04": 82.1, "LIV-05": 4.89, "LIV-06": 9.9, "GRN-01": 8.9, "GRN-02": 77.6, "GRN-05": 25.0, "SMT-01": 317.8, "SMT-03": 78.13, "SMT-05": 97.0, "CMP-01": 89798, "CMP-04": 101, "CMP-06": 2449, "TAL-01": 57, "TAL-02": 6, "TAL-06": 34, "CON-01": 287, "CON-03": 85, "CON-05": 20},
-"London":{"LIV-01": 1.15, "LIV-04": 82.5, "LIV-05": null, "LIV-06": 16.7, "GRN-01": 11.2, "GRN-02": 87.1, "GRN-05": 32.6, "SMT-01": 316.7, "SMT-03": 87.5, "SMT-05": 95.5, "CMP-01": 107029, "CMP-04": 111, "CMP-06": 3000, "TAL-01": 64, "TAL-02": 8, "TAL-06": 42, "CON-01": 291, "CON-03": 95, "CON-05": 15},
-"New York":{"LIV-01": 5.76, "LIV-04": 77.7, "LIV-05": 5.02, "LIV-06": 10.9, "GRN-01": 7.1, "GRN-02": 71.0, "GRN-05": 21.8, "SMT-01": 391.7, "SMT-03": 90.63, "SMT-05": 94.7, "CMP-01": 102888, "CMP-04": 108, "CMP-06": 2951, "TAL-01": 65, "TAL-02": 7, "TAL-06": 39, "CON-01": 287, "CON-03": 87, "CON-05": 19},
-"Paris":{"LIV-01": 1.34, "LIV-04": 84.1, "LIV-05": 9.38, "LIV-06": 17.0, "GRN-01": 9.3, "GRN-02": 51.6, "GRN-05": 20.0, "SMT-01": 441.5, "SMT-03": 81.25, "SMT-05": 88.7, "CMP-01": 101284, "CMP-04": 101, "CMP-06": 2564, "TAL-01": 64, "TAL-02": 6, "TAL-06": 41, "CON-01": 301, "CON-03": 88, "CON-05": 21},
-"Toronto":{"LIV-01": 1.98, "LIV-04": 81.8, "LIV-05": 2.21, "LIV-06": 11.6, "GRN-01": 9.4, "GRN-02": 91.7, "GRN-05": 50.6, "SMT-01": 494.5, "SMT-03": 79.17, "SMT-05": 94.4, "CMP-01": 91317, "CMP-04": 101, "CMP-06": 2435, "TAL-01": 62, "TAL-02": 7, "TAL-06": 37, "CON-01": 256, "CON-03": 81, "CON-05": 22},
-"Berlin":{"LIV-01": 0.91, "LIV-04": 81.2, "LIV-05": 5.51, "LIV-06": 11.1, "GRN-01": 11.3, "GRN-02": 68.2, "GRN-05": 30.8, "SMT-01": 212.6, "SMT-03": 88.54, "SMT-05": 93.5, "CMP-01": 92975, "CMP-04": 92, "CMP-06": null, "TAL-01": 60, "TAL-02": 7, "TAL-06": 37, "CON-01": 251, "CON-03": 82, "CON-05": 20},
-"Barcelona":{"LIV-01": 0.69, "LIV-04": 84.2, "LIV-05": 4.47, "LIV-06": 13.8, "GRN-01": 10.9, "GRN-02": null, "GRN-05": 42.1, "SMT-01": 338.8, "SMT-03": null, "SMT-05": 95.8, "CMP-01": 82879, "CMP-04": 86, "CMP-06": 2126, "TAL-01": 57, "TAL-02": 5, "TAL-06": 32, "CON-01": 237, "CON-03": 82, "CON-05": null},
-"Dubai":{"LIV-01": 0.69, "LIV-04": 83.1, "LIV-05": 3.35, "LIV-06": 7.8, "GRN-01": 35.0, "GRN-02": 40.6, "GRN-05": null, "SMT-01": 359.0, "SMT-03": 90.63, "SMT-05": 100.0, "CMP-01": 100722, "CMP-04": 105, "CMP-06": 2663, "TAL-01": 54, "TAL-02": 4, "TAL-06": 33, "CON-01": 296, "CON-03": 94, "CON-05": 18},
-"San Francisco":{"LIV-01": 5.76, "LIV-04": 79.0, "LIV-05": 3.02, "LIV-06": 6.5, "GRN-01": 7.4, "GRN-02": null, "GRN-05": 53.1, "SMT-01": 367.7, "SMT-03": null, "SMT-05": 94.7, "CMP-01": 102252, "CMP-04": 105, "CMP-06": 2899, "TAL-01": 69, "TAL-02": 8, "TAL-06": 43, "CON-01": 256, "CON-03": 84, "CON-05": 23}
+"Singapore":{"LIV-01": 0.07, "LIV-04": 83.9, "LIV-05": 2.9, "LIV-06": 24.7, "GRN-01": 12.0, "GRN-02": 70.3, "GRN-05": 52.0, "SMT-01": 567.1, "SMT-03": 87.5, "SMT-05": 94.4, "CMP-01": 132570, "CMP-04": 105, "CMP-06": 2517, "TAL-01": 63, "TAL-02": 7, "TAL-06": 39, "CON-01": 311, "CON-03": 95, "CON-05": 16},
+"Tokyo":{"LIV-01": 0.23, "LIV-04": 84.9, "LIV-05": 3.26, "LIV-06": 16.0, "GRN-01": 10.8, "GRN-02": 74.8, "GRN-05": 21.4, "SMT-01": 313.7, "SMT-03": 85.42, "SMT-05": 85.5, "CMP-01": 50287, "CMP-04": 102, "CMP-06": 2660, "TAL-01": 63, "TAL-02": 6, "TAL-06": 39, "CON-01": 304, "CON-03": 92, "CON-05": 19},
+"Copenhagen":{"LIV-01": 0.84, "LIV-04": 81.5, "LIV-05": 5.79, "LIV-06": 10.7, "GRN-01": 6.9, "GRN-02": 83.7, "GRN-05": 42.0, "SMT-01": 328.2, "SMT-03": 90.63, "SMT-05": 99.8, "CMP-01": 85842, "CMP-04": 95, "CMP-06": 2363, "TAL-01": 59, "TAL-02": 6, "TAL-06": 37, "CON-01": 236, "CON-03": 83, "CON-05": 23},
+"Zurich":{"LIV-01": 0.6, "LIV-04": 84.1, "LIV-05": 5.67, "LIV-06": 12.8, "GRN-01": 7.6, "GRN-02": 67.6, "GRN-05": 46.0, "SMT-01": 455.6, "SMT-03": 81.25, "SMT-05": 97.3, "CMP-01": 88723, "CMP-04": 95, "CMP-06": 2550, "TAL-01": 63, "TAL-02": 6, "TAL-06": 37, "CON-01": 247, "CON-03": null, "CON-05": 23},
+"Vienna":{"LIV-01": 0.88, "LIV-04": 81.0, "LIV-05": 7.17, "LIV-06": 15.8, "GRN-01": 9.9, "GRN-02": 72.4, "GRN-05": 35.2, "SMT-01": 251.9, "SMT-03": 84.38, "SMT-05": 91.9, "CMP-01": 66253, "CMP-04": 93, "CMP-06": 2058, "TAL-01": 59, "TAL-02": 6, "TAL-06": 37, "CON-01": 256, "CON-03": 82, "CON-05": 23},
+"Seoul":{"LIV-01": 0.48, "LIV-04": 85.0, "LIV-05": 4.27, "LIV-06": 30.0, "GRN-01": 25.4, "GRN-02": 48.8, "GRN-05": 61.7, "SMT-01": 320.3, "SMT-03": 87.5, "SMT-05": 97.9, "CMP-01": 51292, "CMP-04": 93, "CMP-06": 2241, "TAL-01": 61, "TAL-02": 6, "TAL-06": 38, "CON-01": 265, "CON-03": 83, "CON-05": 19},
+"Melbourne":{"LIV-01": 0.85, "LIV-04": 84.1, "LIV-05": 4.72, "LIV-06": 7.5, "GRN-01": 7.9, "GRN-02": 84.4, "GRN-05": 47.9, "SMT-01": 248.8, "SMT-03": null, "SMT-05": 96.1, "CMP-01": 40848, "CMP-04": 85, "CMP-06": 1857, "TAL-01": 58, "TAL-02": 6, "TAL-06": 37, "CON-01": 225, "CON-03": 80, "CON-05": 26},
+"Amsterdam":{"LIV-01": 0.69, "LIV-04": 82.1, "LIV-05": 4.89, "LIV-06": 9.9, "GRN-01": 8.9, "GRN-02": 77.6, "GRN-05": 25.0, "SMT-01": 317.8, "SMT-03": 78.13, "SMT-05": 97.0, "CMP-01": 87028, "CMP-04": 101, "CMP-06": 2449, "TAL-01": 57, "TAL-02": 6, "TAL-06": 34, "CON-01": 287, "CON-03": 85, "CON-05": 20},
+"London":{"LIV-01": 1.15, "LIV-04": 82.5, "LIV-05": null, "LIV-06": 16.7, "GRN-01": 11.2, "GRN-02": 87.1, "GRN-05": 32.6, "SMT-01": 316.7, "SMT-03": 87.5, "SMT-05": 95.5, "CMP-01": 72186, "CMP-04": 111, "CMP-06": 3000, "TAL-01": 64, "TAL-02": 8, "TAL-06": 42, "CON-01": 291, "CON-03": 95, "CON-05": 15},
+"New York":{"LIV-01": 5.76, "LIV-04": 77.7, "LIV-05": 5.02, "LIV-06": 10.9, "GRN-01": 7.1, "GRN-02": 71.0, "GRN-05": 21.8, "SMT-01": 391.7, "SMT-03": 90.63, "SMT-05": 94.7, "CMP-01": 91990, "CMP-04": 108, "CMP-06": 2951, "TAL-01": 65, "TAL-02": 7, "TAL-06": 39, "CON-01": 287, "CON-03": 87, "CON-05": 19},
+"Paris":{"LIV-01": 1.34, "LIV-04": 84.1, "LIV-05": 9.38, "LIV-06": 17.0, "GRN-01": 9.3, "GRN-02": 51.6, "GRN-05": 20.0, "SMT-01": 441.5, "SMT-03": 81.25, "SMT-05": 88.7, "CMP-01": 83089, "CMP-04": 101, "CMP-06": 2564, "TAL-01": 64, "TAL-02": 6, "TAL-06": 41, "CON-01": 301, "CON-03": 88, "CON-05": 21},
+"Toronto":{"LIV-01": 1.98, "LIV-04": 81.8, "LIV-05": 2.21, "LIV-06": 11.6, "GRN-01": 9.4, "GRN-02": 91.7, "GRN-05": 50.6, "SMT-01": 494.5, "SMT-03": 79.17, "SMT-05": 94.4, "CMP-01": 44561, "CMP-04": 101, "CMP-06": 2435, "TAL-01": 62, "TAL-02": 7, "TAL-06": 37, "CON-01": 256, "CON-03": 81, "CON-05": 22},
+"Berlin":{"LIV-01": 0.91, "LIV-04": 81.2, "LIV-05": 5.51, "LIV-06": 11.1, "GRN-01": 11.3, "GRN-02": 68.2, "GRN-05": 30.8, "SMT-01": 212.6, "SMT-03": 88.54, "SMT-05": 93.5, "CMP-01": 59205, "CMP-04": 92, "CMP-06": null, "TAL-01": 60, "TAL-02": 7, "TAL-06": 37, "CON-01": 251, "CON-03": 82, "CON-05": 20},
+"Barcelona":{"LIV-01": 0.69, "LIV-04": 84.2, "LIV-05": 4.47, "LIV-06": 13.8, "GRN-01": 10.9, "GRN-02": null, "GRN-05": 42.1, "SMT-01": 338.8, "SMT-03": null, "SMT-05": 95.8, "CMP-01": 52064, "CMP-04": 86, "CMP-06": 2126, "TAL-01": 57, "TAL-02": 5, "TAL-06": 32, "CON-01": 237, "CON-03": 82, "CON-05": null},
+"Dubai":{"LIV-01": 0.69, "LIV-04": 83.1, "LIV-05": 3.35, "LIV-06": 7.8, "GRN-01": 35.0, "GRN-02": 40.6, "GRN-05": null, "SMT-01": 359.0, "SMT-03": 90.63, "SMT-05": 100.0, "CMP-01": null, "CMP-04": 105, "CMP-06": 2663, "TAL-01": 54, "TAL-02": 4, "TAL-06": 33, "CON-01": 296, "CON-03": 94, "CON-05": 18},
+"San Francisco":{"LIV-01": 5.76, "LIV-04": 79.0, "LIV-05": 3.02, "LIV-06": 6.5, "GRN-01": 7.4, "GRN-02": null, "GRN-05": 53.1, "SMT-01": 367.7, "SMT-03": null, "SMT-05": 94.7, "CMP-01": 146853, "CMP-04": 105, "CMP-06": 2899, "TAL-01": 69, "TAL-02": 8, "TAL-06": 43, "CON-01": 256, "CON-03": 84, "CON-05": 23}
 },
 "provenance":{
  "LIV-01": {
@@ -1307,6 +1307,126 @@ window.INDEX_DATA = {
     "year": "2024",
     "source": "USA / United States, IT.NET.USER.ZS, date 2024, value 94.69380188",
     "note": "Same USA country value shared with New York."
+   }
+  }
+ },
+ "CMP-01": {
+  "source": "OECD Regions, cities and local areas database — Economy - FUAs (OECD.CFE.EDS:DSD_FUA_ECO@DF_ECONOMY v1.1); OECD archived Metropolitan areas (OECD:DF_CITIES v1.0) for Melbourne/Toronto; World Bank WDI NY.GDP.PCAP.PP.CD for Singapore",
+  "url": "https://sdmx.oecd.org/public/rest/data/OECD.CFE.EDS,DSD_FUA_ECO@DF_ECONOMY,1.1/ (archive: https://sdmx.oecd.org/archive/rest/data/OECD,DF_CITIES,1.0/ ; Singapore: https://api.worldbank.org/v2/country/SGP/indicator/NY.GDP.PCAP.PP.CD)",
+  "license": "OECD Terms & Conditions (OECD data CC BY 4.0); World Bank Open Data CC BY 4.0",
+  "edition": "OECD SDMX API pulled 2026-07-11 (DF_ECONOMY v1.1; archive DF_CITIES v1.0); World Bank API lastupdated 2026-07-01",
+  "retrieved": "2026-07-11",
+  "method": "Step 1: fetched DSD_REG_ECO@DF_GDP v2.0 structure (dims FREQ.TERRITORIAL_LEVEL.REF_AREA.TERRITORIAL_TYPE.MEASURE.ACTIVITY.PRICES.UNIT_MEASURE; measure GDP; unit USD_PPP_PS 'US dollars per person, PPP converted'; prices V=current). availableconstraint for UNIT_MEASURE=USD_PPP_PS showed TERRITORIAL_LEVEL only CTRY/TL2/TL3 — NO metro/FUA rows in DF_GDP. Step 2: found current FUA dataflow OECD.CFE.EDS:DSD_FUA_ECO@DF_ECONOMY v1.1; pulled key {REF_AREA}.A.GDP.USD_PPP_PS.FUA (csvfilewithlabels) for 14 FUA codes; took the max TIME_PERIOD row per REF_AREA (all OBS_STATUS=A, UNIT_MULT=0). 12 cities returned data. FUA codes: AT001F Wien, JPN01F Tokyo, DK001F København, CH002F Zürich, KOR01F Seoul, NL001F Amsterdam, UK001F London, USA01F New York (Greater), FR001F Paris, DE001F Berlin, ES002F Barcelona, USA05F San Francisco (Greater). Step 3: AUS02F/CAN01F returned NoRecordsFound, so Melbourne and T",
+  "perCity": {
+   "Singapore": {
+    "value": 132570,
+    "raw": 132569.525225795,
+    "year": "2024",
+    "source": "World Bank NY.GDP.PCAP.PP.KD — GDP per capita, PPP (constant 2021 international $), Singapore",
+    "note": "National figure (city-state). Constant-PPP like the OECD metro values but on a 2021 base year vs OECD’s 2015 base — residual basis mismatch disclosed. Replaces the current-price figure (150,689, 2024) which was not compa"
+   },
+   "Tokyo": {
+    "value": 50287,
+    "raw": 50287,
+    "year": "2021",
+    "source": "JPN01F | Tokyo | FUA | GDP | USD_PPP_PS | 2021",
+    "note": "OECD FUA (metro), USD per person PPP, constant prices/constant PPP (real). Modelled estimate per OECD FUA methodology."
+   },
+   "Copenhagen": {
+    "value": 85842,
+    "raw": 85842,
+    "year": "2023",
+    "source": "DK001F | København | FUA | GDP | USD_PPP_PS | 2023",
+    "note": "OECD FUA (metro), constant-PPP real USD per person. Modelled estimate."
+   },
+   "Zurich": {
+    "value": 88723,
+    "raw": 88723,
+    "year": "2022",
+    "source": "CH002F | Zürich | FUA | GDP | USD_PPP_PS | 2022",
+    "note": "OECD FUA (metro), constant-PPP real USD per person. Modelled estimate."
+   },
+   "Vienna": {
+    "value": 66253,
+    "raw": 66253,
+    "year": "2022",
+    "source": "AT001F | Wien | FUA | GDP | USD_PPP_PS | 2022",
+    "note": "OECD FUA (metro), constant-PPP real USD per person. Modelled estimate."
+   },
+   "Seoul": {
+    "value": 51292,
+    "raw": 51292,
+    "year": "2022",
+    "source": "KOR01F | Seoul | FUA | GDP | USD_PPP_PS | 2022",
+    "note": "OECD FUA (metro), constant-PPP real USD per person. Modelled estimate."
+   },
+   "Melbourne": {
+    "value": 40848,
+    "raw": 40848,
+    "year": "2020",
+    "source": "AUS02 | Greater Melbourne | GDP_PC_REAL_PPP (USD, constant prices, constant PPP, base year 2015) | 2020",
+    "note": "From ARCHIVED OECD Metropolitan areas dataset (DF_CITIES) — current FUA dataflow has no Australian GDP rows. Same constant-2015-PPP basis as the FUA values but older year (2020, COVID-affected; 2019=42299). Newer alterna"
+   },
+   "Amsterdam": {
+    "value": 87028,
+    "raw": 87028,
+    "year": "2022",
+    "source": "NL001F | Amsterdam | FUA | GDP | USD_PPP_PS | 2022",
+    "note": "OECD FUA (metro), constant-PPP real USD per person. Modelled estimate."
+   },
+   "London": {
+    "value": 72186,
+    "raw": 72186,
+    "year": "2020",
+    "source": "UK001F | London | FUA | GDP | USD_PPP_PS | 2020",
+    "note": "Latest available year is 2020 — a COVID-dip value (2019 was 82348). OECD FUA (metro), constant-PPP real USD per person."
+   },
+   "New York": {
+    "value": 91990,
+    "raw": 91990,
+    "year": "2023",
+    "source": "USA01F | New York (Greater) | FUA | GDP | USD_PPP_PS | 2023",
+    "note": "OECD FUA (metro), constant-PPP real USD per person. US FUAs aggregated from BEA county-level GDP."
+   },
+   "Paris": {
+    "value": 83089,
+    "raw": 83089,
+    "year": "2021",
+    "source": "FR001F | Paris | FUA | GDP | USD_PPP_PS | 2021",
+    "note": "OECD FUA (metro), constant-PPP real USD per person. Modelled estimate."
+   },
+   "Toronto": {
+    "value": 44561,
+    "raw": 44561,
+    "year": "2020",
+    "source": "CAN01 | Toronto | GDP_PC_REAL_PPP (USD, constant prices, constant PPP, base year 2015) | 2020",
+    "note": "From ARCHIVED OECD Metropolitan areas dataset (DF_CITIES) — current FUA dataflow has no Canadian GDP rows. Same constant-2015-PPP basis as the FUA values but older year (2020, COVID-affected; 2019=46648). Newer alternati"
+   },
+   "Berlin": {
+    "value": 59205,
+    "raw": 59205,
+    "year": "2022",
+    "source": "DE001F | Berlin | FUA | GDP | USD_PPP_PS | 2022",
+    "note": "OECD FUA (metro), constant-PPP real USD per person. Modelled estimate."
+   },
+   "Barcelona": {
+    "value": 52064,
+    "raw": 52064,
+    "year": "2022",
+    "source": "ES002F | Barcelona | FUA | GDP | USD_PPP_PS | 2022",
+    "note": "OECD FUA (metro), constant-PPP real USD per person. Modelled estimate."
+   },
+   "Dubai": {
+    "value": null,
+    "year": "n/a",
+    "note": "null by approved decision — no free PPP metro figure; AED conversion not performed."
+   },
+   "San Francisco": {
+    "value": 146853,
+    "raw": 146853,
+    "year": "2023",
+    "source": "USA05F | San Francisco (Greater) | FUA | GDP | USD_PPP_PS | 2023",
+    "note": "OECD FUA (metro), constant-PPP real USD per person. 'San Francisco (Greater)' FUA is the wider Bay Area delineation; aggregated from BEA county-level GDP."
    }
   }
  }
