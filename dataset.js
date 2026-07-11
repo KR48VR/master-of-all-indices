@@ -20,7 +20,7 @@ window.INDEX_DATA = {
 {"id": "LIV-06", "domain": "Liveable", "subtheme": "Housing & Cost", "name": "House-price-to-income", "measures": "Median home price / median income", "unit": "ratio", "direction": "lower", "dataLevel": "City", "source": "Numbeo / OECD", "appearsIn": "—", "pilot": 1, "caveat": "Core affordability signal.", "contestable": 0, "approx": "crowd"},
 {"id": "LIV-07", "domain": "Liveable", "subtheme": "Housing & Cost", "name": "Cost of living", "measures": "Standard basket cost vs a benchmark city", "unit": "index", "direction": "lower", "dataLevel": "City", "source": "Numbeo", "appearsIn": "Mercer", "pilot": 0, "caveat": "Direction is contestable — a rich city having high costs isn't necessarily 'bad'.", "contestable": 1, "approx": "crowd"},
 {"id": "LIV-08", "domain": "Liveable", "subtheme": "Culture & Amenities", "name": "Cultural venues", "measures": "Museums / theatres / venues per 100,000", "unit": "per 100k", "direction": "higher", "dataLevel": "City", "source": "City open data / GPCI", "appearsIn": "GPCI (Cultural Interaction)", "pilot": 0, "caveat": "Sourcing and definitions vary widely.", "contestable": 0, "approx": "none"},
-{"id": "GRN-01", "domain": "Green", "subtheme": "Air & Environment", "name": "PM2.5 air pollution", "measures": "Annual mean fine particulate matter", "unit": "µg/m³", "direction": "lower", "dataLevel": "City", "source": "WHO Ambient Air Quality DB", "appearsIn": "GPCI (Environment)", "pilot": 1, "caveat": "Excellent global coverage.", "contestable": 0, "approx": "none"},
+{"id": "GRN-01", "domain": "Green", "subtheme": "Air & Environment", "name": "PM2.5 air pollution", "measures": "Annual mean fine particulate matter", "unit": "µg/m³", "direction": "lower", "dataLevel": "City", "source": "WHO Ambient Air Quality DB v6.1", "appearsIn": "GPCI (Environment)", "pilot": 1, "caveat": "WHO DB v6.1 (2024 release): reference year varies by city (2019-2021). New York, San Francisco and Amsterdam rows are metro-area aggregates. Upgrade to DB v8.0 (June 2026) pending.", "contestable": 0, "approx": "none"},
 {"id": "GRN-02", "domain": "Green", "subtheme": "Air & Environment", "name": "Green space access", "measures": "% residents within 300m of green space", "unit": "%", "direction": "higher", "dataLevel": "City", "source": "UN-Habitat / ESA satellite", "appearsIn": "—", "pilot": 1, "caveat": "Satellite-derived; consistent method.", "contestable": 0, "approx": "none"},
 {"id": "GRN-03", "domain": "Green", "subtheme": "Climate & Emissions", "name": "CO2 per capita", "measures": "Territorial emissions per resident", "unit": "tonnes", "direction": "lower", "dataLevel": "City", "source": "Global Covenant of Mayors", "appearsIn": "—", "pilot": 0, "caveat": "Self-reported by cities; has gaps.", "contestable": 0, "approx": "self-reported"},
 {"id": "GRN-04", "domain": "Green", "subtheme": "Climate & Emissions", "name": "Renewable share", "measures": "% of city energy from renewables", "unit": "%", "direction": "higher", "dataLevel": "City", "source": "WCCD (ISO 37120)", "appearsIn": "—", "pilot": 0, "caveat": "Only for cities that report to WCCD.", "contestable": 0, "approx": "self-reported"},
@@ -53,22 +53,22 @@ window.INDEX_DATA = {
 ],
 "cities":["Singapore", "Tokyo", "Copenhagen", "Zurich", "Vienna", "Seoul", "Melbourne", "Amsterdam", "London", "New York", "Paris", "Toronto", "Berlin", "Barcelona", "Dubai", "San Francisco"],
 "data":{
-"Singapore":{"LIV-01": 0.07, "LIV-04": 84.7, "LIV-05": 5.3, "LIV-06": 9.2, "GRN-01": 13.7, "GRN-02": 81, "GRN-05": 52, "SMT-01": 298, "SMT-03": 90, "SMT-05": 98.7, "CMP-01": 98296, "CMP-04": 105, "CMP-06": 2517, "TAL-01": 63, "TAL-02": 7, "TAL-06": 39, "CON-01": 311, "CON-03": 95, "CON-05": 16},
-"Tokyo":{"LIV-01": 0.23, "LIV-04": 84.0, "LIV-05": 5.5, "LIV-06": null, "GRN-01": 17.0, "GRN-02": 74, "GRN-05": 52, "SMT-01": 280, "SMT-03": 87, "SMT-05": 97.6, "CMP-01": 104175, "CMP-04": 102, "CMP-06": 2660, "TAL-01": 63, "TAL-02": 6, "TAL-06": 39, "CON-01": 304, "CON-03": 92, "CON-05": 19},
-"Copenhagen":{"LIV-01": 0.84, "LIV-04": 85.9, "LIV-05": 5.9, "LIV-06": 7.6, "GRN-01": 9.3, "GRN-02": 88, "GRN-05": 62, "SMT-01": 265, "SMT-03": 84, "SMT-05": 97.0, "CMP-01": 88871, "CMP-04": 95, "CMP-06": 2363, "TAL-01": 59, "TAL-02": 6, "TAL-06": 37, "CON-01": 236, "CON-03": 83, "CON-05": 23},
-"Zurich":{"LIV-01": 0.6, "LIV-04": 85.9, "LIV-05": 6.0, "LIV-06": 6.4, "GRN-01": 11.3, "GRN-02": 89, "GRN-05": 58, "SMT-01": 273, "SMT-03": 84, "SMT-05": 96.6, "CMP-01": 97266, "CMP-04": 95, "CMP-06": 2550, "TAL-01": 63, "TAL-02": 6, "TAL-06": 37, "CON-01": 247, "CON-03": null, "CON-05": 23},
+"Singapore":{"LIV-01": 0.07, "LIV-04": 84.7, "LIV-05": 5.3, "LIV-06": 9.2, "GRN-01": 12.0, "GRN-02": 81, "GRN-05": 52, "SMT-01": 298, "SMT-03": 90, "SMT-05": 98.7, "CMP-01": 98296, "CMP-04": 105, "CMP-06": 2517, "TAL-01": 63, "TAL-02": 7, "TAL-06": 39, "CON-01": 311, "CON-03": 95, "CON-05": 16},
+"Tokyo":{"LIV-01": 0.23, "LIV-04": 84.0, "LIV-05": 5.5, "LIV-06": null, "GRN-01": 10.8, "GRN-02": 74, "GRN-05": 52, "SMT-01": 280, "SMT-03": 87, "SMT-05": 97.6, "CMP-01": 104175, "CMP-04": 102, "CMP-06": 2660, "TAL-01": 63, "TAL-02": 6, "TAL-06": 39, "CON-01": 304, "CON-03": 92, "CON-05": 19},
+"Copenhagen":{"LIV-01": 0.84, "LIV-04": 85.9, "LIV-05": 5.9, "LIV-06": 7.6, "GRN-01": 8.3, "GRN-02": 88, "GRN-05": 62, "SMT-01": 265, "SMT-03": 84, "SMT-05": 97.0, "CMP-01": 88871, "CMP-04": 95, "CMP-06": 2363, "TAL-01": 59, "TAL-02": 6, "TAL-06": 37, "CON-01": 236, "CON-03": 83, "CON-05": 23},
+"Zurich":{"LIV-01": 0.6, "LIV-04": 85.9, "LIV-05": 6.0, "LIV-06": 6.4, "GRN-01": 10.1, "GRN-02": 89, "GRN-05": 58, "SMT-01": 273, "SMT-03": 84, "SMT-05": 96.6, "CMP-01": 97266, "CMP-04": 95, "CMP-06": 2550, "TAL-01": 63, "TAL-02": 6, "TAL-06": 37, "CON-01": 247, "CON-03": null, "CON-05": 23},
 "Vienna":{"LIV-01": 0.88, "LIV-04": 85.5, "LIV-05": 5.7, "LIV-06": 10.5, "GRN-01": 10.6, "GRN-02": 84, "GRN-05": 55, "SMT-01": 244, "SMT-03": 86, "SMT-05": 93.7, "CMP-01": 85786, "CMP-04": 93, "CMP-06": 2058, "TAL-01": 59, "TAL-02": 6, "TAL-06": 37, "CON-01": 256, "CON-03": 82, "CON-05": 23},
-"Seoul":{"LIV-01": 0.48, "LIV-04": 84.8, "LIV-05": 4.9, "LIV-06": 13.5, "GRN-01": 22.8, "GRN-02": 73, "GRN-05": 44, "SMT-01": 294, "SMT-03": 90, "SMT-05": 98.1, "CMP-01": 93070, "CMP-04": 93, "CMP-06": 2241, "TAL-01": 61, "TAL-02": 6, "TAL-06": 38, "CON-01": 265, "CON-03": 83, "CON-05": 19},
-"Melbourne":{"LIV-01": 0.85, "LIV-04": 85.0, "LIV-05": 5.3, "LIV-06": 9.7, "GRN-01": 15.5, "GRN-02": 78, "GRN-05": 51, "SMT-01": 257, "SMT-03": null, "SMT-05": 94.4, "CMP-01": 90589, "CMP-04": 85, "CMP-06": 1857, "TAL-01": 58, "TAL-02": 6, "TAL-06": 37, "CON-01": 225, "CON-03": 80, "CON-05": 26},
-"Amsterdam":{"LIV-01": 0.69, "LIV-04": 84.9, "LIV-05": 5.3, "LIV-06": 10.7, "GRN-01": 13.5, "GRN-02": 88, "GRN-05": 59, "SMT-01": 290, "SMT-03": 85, "SMT-05": 97.3, "CMP-01": 89798, "CMP-04": 101, "CMP-06": 2449, "TAL-01": 57, "TAL-02": 6, "TAL-06": 34, "CON-01": 287, "CON-03": 85, "CON-05": 20},
-"London":{"LIV-01": 1.15, "LIV-04": 83.6, "LIV-05": 4.8, "LIV-06": 14.8, "GRN-01": 20.6, "GRN-02": 77, "GRN-05": 49, "SMT-01": 284, "SMT-03": 85, "SMT-05": 94.8, "CMP-01": 107029, "CMP-04": 111, "CMP-06": 3000, "TAL-01": 64, "TAL-02": 8, "TAL-06": 42, "CON-01": 291, "CON-03": 95, "CON-05": 15},
-"New York":{"LIV-01": 5.76, "LIV-04": 83.1, "LIV-05": 4.7, "LIV-06": 17.0, "GRN-01": 23.8, "GRN-02": null, "GRN-05": null, "SMT-01": 263, "SMT-03": 82, "SMT-05": 95.6, "CMP-01": 102888, "CMP-04": 108, "CMP-06": 2951, "TAL-01": 65, "TAL-02": 7, "TAL-06": 39, "CON-01": 287, "CON-03": 87, "CON-05": 19},
-"Paris":{"LIV-01": 1.34, "LIV-04": 84.2, "LIV-05": 4.8, "LIV-06": 14.3, "GRN-01": 17.8, "GRN-02": 72, "GRN-05": 49, "SMT-01": 278, "SMT-03": null, "SMT-05": 95.3, "CMP-01": 101284, "CMP-04": 101, "CMP-06": 2564, "TAL-01": 64, "TAL-02": 6, "TAL-06": 41, "CON-01": 301, "CON-03": 88, "CON-05": 21},
-"Toronto":{"LIV-01": 1.98, "LIV-04": 84.4, "LIV-05": 5.1, "LIV-06": 12.0, "GRN-01": 16.3, "GRN-02": 78, "GRN-05": 51, "SMT-01": 276, "SMT-03": 86, "SMT-05": 94.1, "CMP-01": 91317, "CMP-04": 101, "CMP-06": 2435, "TAL-01": 62, "TAL-02": 7, "TAL-06": 37, "CON-01": 256, "CON-03": 81, "CON-05": 22},
-"Berlin":{"LIV-01": 0.91, "LIV-04": 84.8, "LIV-05": 5.1, "LIV-06": 15.6, "GRN-01": 15.5, "GRN-02": 83, "GRN-05": 53, "SMT-01": 271, "SMT-03": 83, "SMT-05": 95.1, "CMP-01": 92975, "CMP-04": 92, "CMP-06": null, "TAL-01": 60, "TAL-02": 7, "TAL-06": 37, "CON-01": 251, "CON-03": 82, "CON-05": 20},
-"Barcelona":{"LIV-01": 0.69, "LIV-04": 84.7, "LIV-05": 5.0, "LIV-06": 11.6, "GRN-01": 14.6, "GRN-02": 74, "GRN-05": 50, "SMT-01": 249, "SMT-03": 77, "SMT-05": 93.0, "CMP-01": 82879, "CMP-04": 86, "CMP-06": 2126, "TAL-01": 57, "TAL-02": 5, "TAL-06": 32, "CON-01": 237, "CON-03": 82, "CON-05": null},
-"Dubai":{"LIV-01": 0.69, "LIV-04": 83.8, "LIV-05": 4.5, "LIV-06": 18.9, "GRN-01": 26.7, "GRN-02": null, "GRN-05": 36, "SMT-01": 287, "SMT-03": 89, "SMT-05": 96.9, "CMP-01": 100722, "CMP-04": 105, "CMP-06": 2663, "TAL-01": 54, "TAL-02": 4, "TAL-06": 33, "CON-01": 296, "CON-03": 94, "CON-05": 18},
-"San Francisco":{"LIV-01": 5.76, "LIV-04": 82.4, "LIV-05": 4.6, "LIV-06": 18.1, "GRN-01": 15.4, "GRN-02": 72, "GRN-05": 50, "SMT-01": 294, "SMT-03": 90, "SMT-05": 96.2, "CMP-01": 102252, "CMP-04": 105, "CMP-06": 2899, "TAL-01": 69, "TAL-02": 8, "TAL-06": 43, "CON-01": 256, "CON-03": 84, "CON-05": 23}
+"Seoul":{"LIV-01": 0.48, "LIV-04": 84.8, "LIV-05": 4.9, "LIV-06": 13.5, "GRN-01": 25.4, "GRN-02": 73, "GRN-05": 44, "SMT-01": 294, "SMT-03": 90, "SMT-05": 98.1, "CMP-01": 93070, "CMP-04": 93, "CMP-06": 2241, "TAL-01": 61, "TAL-02": 6, "TAL-06": 38, "CON-01": 265, "CON-03": 83, "CON-05": 19},
+"Melbourne":{"LIV-01": 0.85, "LIV-04": 85.0, "LIV-05": 5.3, "LIV-06": 9.7, "GRN-01": 7.1, "GRN-02": 78, "GRN-05": 51, "SMT-01": 257, "SMT-03": null, "SMT-05": 94.4, "CMP-01": 90589, "CMP-04": 85, "CMP-06": 1857, "TAL-01": 58, "TAL-02": 6, "TAL-06": 37, "CON-01": 225, "CON-03": 80, "CON-05": 26},
+"Amsterdam":{"LIV-01": 0.69, "LIV-04": 84.9, "LIV-05": 5.3, "LIV-06": 10.7, "GRN-01": 9.6, "GRN-02": 88, "GRN-05": 59, "SMT-01": 290, "SMT-03": 85, "SMT-05": 97.3, "CMP-01": 89798, "CMP-04": 101, "CMP-06": 2449, "TAL-01": 57, "TAL-02": 6, "TAL-06": 34, "CON-01": 287, "CON-03": 85, "CON-05": 20},
+"London":{"LIV-01": 1.15, "LIV-04": 83.6, "LIV-05": 4.8, "LIV-06": 14.8, "GRN-01": 11.2, "GRN-02": 77, "GRN-05": 49, "SMT-01": 284, "SMT-03": 85, "SMT-05": 94.8, "CMP-01": 107029, "CMP-04": 111, "CMP-06": 3000, "TAL-01": 64, "TAL-02": 8, "TAL-06": 42, "CON-01": 291, "CON-03": 95, "CON-05": 15},
+"New York":{"LIV-01": 5.76, "LIV-04": 83.1, "LIV-05": 4.7, "LIV-06": 17.0, "GRN-01": 7.7, "GRN-02": null, "GRN-05": null, "SMT-01": 263, "SMT-03": 82, "SMT-05": 95.6, "CMP-01": 102888, "CMP-04": 108, "CMP-06": 2951, "TAL-01": 65, "TAL-02": 7, "TAL-06": 39, "CON-01": 287, "CON-03": 87, "CON-05": 19},
+"Paris":{"LIV-01": 1.34, "LIV-04": 84.2, "LIV-05": 4.8, "LIV-06": 14.3, "GRN-01": 12.9, "GRN-02": 72, "GRN-05": 49, "SMT-01": 278, "SMT-03": null, "SMT-05": 95.3, "CMP-01": 101284, "CMP-04": 101, "CMP-06": 2564, "TAL-01": 64, "TAL-02": 6, "TAL-06": 41, "CON-01": 301, "CON-03": 88, "CON-05": 21},
+"Toronto":{"LIV-01": 1.98, "LIV-04": 84.4, "LIV-05": 5.1, "LIV-06": 12.0, "GRN-01": 7.3, "GRN-02": 78, "GRN-05": 51, "SMT-01": 276, "SMT-03": 86, "SMT-05": 94.1, "CMP-01": 91317, "CMP-04": 101, "CMP-06": 2435, "TAL-01": 62, "TAL-02": 7, "TAL-06": 37, "CON-01": 256, "CON-03": 81, "CON-05": 22},
+"Berlin":{"LIV-01": 0.91, "LIV-04": 84.8, "LIV-05": 5.1, "LIV-06": 15.6, "GRN-01": 13.1, "GRN-02": 83, "GRN-05": 53, "SMT-01": 271, "SMT-03": 83, "SMT-05": 95.1, "CMP-01": 92975, "CMP-04": 92, "CMP-06": null, "TAL-01": 60, "TAL-02": 7, "TAL-06": 37, "CON-01": 251, "CON-03": 82, "CON-05": 20},
+"Barcelona":{"LIV-01": 0.69, "LIV-04": 84.7, "LIV-05": 5.0, "LIV-06": 11.6, "GRN-01": 12.2, "GRN-02": 74, "GRN-05": 50, "SMT-01": 249, "SMT-03": 77, "SMT-05": 93.0, "CMP-01": 82879, "CMP-04": 86, "CMP-06": 2126, "TAL-01": 57, "TAL-02": 5, "TAL-06": 32, "CON-01": 237, "CON-03": 82, "CON-05": null},
+"Dubai":{"LIV-01": 0.69, "LIV-04": 83.8, "LIV-05": 4.5, "LIV-06": 18.9, "GRN-01": 45.8, "GRN-02": null, "GRN-05": 36, "SMT-01": 287, "SMT-03": 89, "SMT-05": 96.9, "CMP-01": 100722, "CMP-04": 105, "CMP-06": 2663, "TAL-01": 54, "TAL-02": 4, "TAL-06": 33, "CON-01": 296, "CON-03": 94, "CON-05": 18},
+"San Francisco":{"LIV-01": 5.76, "LIV-04": 82.4, "LIV-05": 4.6, "LIV-06": 18.1, "GRN-01": 7.4, "GRN-02": 72, "GRN-05": 50, "SMT-01": 294, "SMT-03": 90, "SMT-05": 96.2, "CMP-01": 102252, "CMP-04": 105, "CMP-06": 2899, "TAL-01": 69, "TAL-02": 8, "TAL-06": 43, "CON-01": 256, "CON-03": 84, "CON-05": 23}
 },
 "provenance":{
  "LIV-01": {
@@ -158,6 +158,105 @@ window.INDEX_DATA = {
     "value": 0.69,
     "year": 2022,
     "series": "United Arab Emirates"
+   }
+  }
+ },
+ "GRN-01": {
+  "source": "WHO Ambient Air Quality Database v6.1 (2024 update), annual mean PM2.5",
+  "url": "https://cdn.who.int/media/docs/default-source/air-pollution-documents/air-quality-and-health/who_ambient_air_quality_database_version_2024_(v6.1).xlsx?sfvrsn=c504c0cd_3&download=true",
+  "license": "CC BY-NC-SA 3.0 IGO",
+  "retrieved": "2026-07-11 (via verified mirror; sheet \"Update 2024 (V6.1)\")",
+  "method": "Latest year per city with non-null pm25_concentration; exact Name/ISO3 row matching (Wien/AUT for Vienna, Kobenhavn/DNK for Copenhagen, Greater Amsterdam/NLD, US CBSA rows for NY & SF). v8.0 (June 2026) upgrade planned once downloadable.",
+  "perCity": {
+   "Singapore": {
+    "value": 12.0,
+    "year": 2021,
+    "whoRow": "Singapore/SGP"
+   },
+   "Tokyo": {
+    "value": 10.8,
+    "year": 2019,
+    "whoRow": "Tokyo/JPN",
+    "pm25TemporalCoverage": 98.0
+   },
+   "Seoul": {
+    "value": 25.4,
+    "year": 2019,
+    "whoRow": "Seoul/KOR"
+   },
+   "Melbourne": {
+    "value": 7.1,
+    "year": 2019,
+    "whoRow": "Melbourne/AUS"
+   },
+   "London": {
+    "value": 11.2,
+    "year": 2019,
+    "whoRow": "London/GBR",
+    "pm25TemporalCoverage": 95.0
+   },
+   "Paris": {
+    "value": 12.9,
+    "year": 2021,
+    "whoRow": "Paris/FRA",
+    "pm25TemporalCoverage": 82.0
+   },
+   "Toronto": {
+    "value": 7.3,
+    "year": 2020,
+    "whoRow": "Toronto/CAN",
+    "pm25TemporalCoverage": 99.0
+   },
+   "Berlin": {
+    "value": 13.1,
+    "year": 2021,
+    "whoRow": "Berlin/DEU",
+    "pm25TemporalCoverage": 88.0
+   },
+   "Barcelona": {
+    "value": 12.2,
+    "year": 2021,
+    "whoRow": "Barcelona/ESP",
+    "pm25TemporalCoverage": 73.0
+   },
+   "Dubai": {
+    "value": 45.8,
+    "year": 2021,
+    "whoRow": "Dubai/ARE",
+    "pm25TemporalCoverage": 97.0
+   },
+   "Vienna": {
+    "value": 10.6,
+    "year": 2021,
+    "whoRow": "Wien/AUT",
+    "pm25TemporalCoverage": 93.0
+   },
+   "Copenhagen": {
+    "value": 8.3,
+    "year": 2020,
+    "whoRow": "Kobenhavn/DNK",
+    "pm25TemporalCoverage": 98.0
+   },
+   "Zurich": {
+    "value": 10.1,
+    "year": 2021,
+    "whoRow": "Zurich/CHE"
+   },
+   "Amsterdam": {
+    "value": 9.6,
+    "year": 2020,
+    "whoRow": "Greater Amsterdam/NLD",
+    "pm25TemporalCoverage": 98.0
+   },
+   "New York": {
+    "value": 7.7,
+    "year": 2021,
+    "whoRow": "New York Newark Jersey City NY NJ PA/USA"
+   },
+   "San Francisco": {
+    "value": 7.4,
+    "year": 2021,
+    "whoRow": "San Francisco Oakland Hayward CA/USA"
    }
   }
  }
