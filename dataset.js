@@ -27,7 +27,7 @@ window.INDEX_DATA = {
 {"id": "GRN-05", "domain": "Green", "subtheme": "Resource Efficiency", "name": "Waste recycled", "measures": "% of municipal waste recycled", "unit": "%", "direction": "higher", "dataLevel": "City", "source": "WCCD (ISO 37120)", "appearsIn": "—", "pilot": 1, "caveat": "Only for reporting cities.", "contestable": 0, "approx": "self-reported"},
 {"id": "GRN-06", "domain": "Green", "subtheme": "Resource Efficiency", "name": "Water use per capita", "measures": "Daily water consumption per resident", "unit": "litres/day", "direction": "lower", "dataLevel": "City", "source": "WCCD", "appearsIn": "—", "pilot": 0, "caveat": "", "contestable": 0, "approx": "self-reported"},
 {"id": "GRN-07", "domain": "Green", "subtheme": "Climate Risk", "name": "Hazard exposure", "measures": "Modelled exposure to flood / extreme heat", "unit": "index", "direction": "lower", "dataLevel": "City", "source": "WRI / modelled", "appearsIn": "—", "pilot": 0, "caveat": "Modelled estimate, not observed.", "contestable": 0, "approx": "modelled"},
-{"id": "SMT-01", "domain": "Smart", "subtheme": "Connectivity", "name": "Broadband speed", "measures": "Median fixed download speed", "unit": "Mbps", "direction": "higher", "dataLevel": "City", "source": "Ookla Speedtest", "appearsIn": "IMD Smart City", "pilot": 1, "caveat": "Good city coverage.", "contestable": 0, "approx": "none"},
+{"id": "SMT-01", "domain": "Smart", "subtheme": "Connectivity", "name": "Broadband speed", "measures": "Test-weighted mean fixed download speed (Ookla open-data tiles)", "unit": "Mbps", "direction": "higher", "dataLevel": "City", "source": "Ookla Open Data (Speedtest tiles)", "appearsIn": "IMD Smart City", "pilot": 1, "caveat": "Computed from Ookla Q1 2026 open-data tiles aggregated over a documented city-core bounding box per city (recorded in provenance) — a test-weighted mean, not the median in Ookla’s consumer pages, and the boundary choice affects the value. © Ookla, CC BY-NC-SA 4.0.", "contestable": 0, "approx": "modelled"},
 {"id": "SMT-02", "domain": "Smart", "subtheme": "Connectivity", "name": "5G coverage", "measures": "% population with 5G access", "unit": "%", "direction": "higher", "dataLevel": "Metro", "source": "GSMA / regulators", "appearsIn": "—", "pilot": 0, "caveat": "", "contestable": 0, "approx": "none"},
 {"id": "SMT-03", "domain": "Smart", "subtheme": "Digital Governance", "name": "E-government", "measures": "Availability of online public services", "unit": "index", "direction": "higher", "dataLevel": "City", "source": "UN E-Gov / IMD", "appearsIn": "IMD Smart City", "pilot": 1, "caveat": "Partly survey-based.", "contestable": 0, "approx": "perception"},
 {"id": "SMT-04", "domain": "Smart", "subtheme": "Digital Governance", "name": "Open data", "measures": "Maturity of public open-data provision", "unit": "index", "direction": "higher", "dataLevel": "City", "source": "Open Data Barometer", "appearsIn": "—", "pilot": 0, "caveat": "", "contestable": 0, "approx": "none"},
@@ -53,22 +53,22 @@ window.INDEX_DATA = {
 ],
 "cities":["Singapore", "Tokyo", "Copenhagen", "Zurich", "Vienna", "Seoul", "Melbourne", "Amsterdam", "London", "New York", "Paris", "Toronto", "Berlin", "Barcelona", "Dubai", "San Francisco"],
 "data":{
-"Singapore":{"LIV-01": 0.07, "LIV-04": 84.7, "LIV-05": 5.3, "LIV-06": 9.2, "GRN-01": 12.0, "GRN-02": 81, "GRN-05": 52, "SMT-01": 298, "SMT-03": 90, "SMT-05": 98.7, "CMP-01": 98296, "CMP-04": 105, "CMP-06": 2517, "TAL-01": 63, "TAL-02": 7, "TAL-06": 39, "CON-01": 311, "CON-03": 95, "CON-05": 16},
-"Tokyo":{"LIV-01": 0.23, "LIV-04": 84.0, "LIV-05": 5.5, "LIV-06": null, "GRN-01": 10.8, "GRN-02": 74, "GRN-05": 52, "SMT-01": 280, "SMT-03": 87, "SMT-05": 97.6, "CMP-01": 104175, "CMP-04": 102, "CMP-06": 2660, "TAL-01": 63, "TAL-02": 6, "TAL-06": 39, "CON-01": 304, "CON-03": 92, "CON-05": 19},
-"Copenhagen":{"LIV-01": 0.84, "LIV-04": 85.9, "LIV-05": 5.9, "LIV-06": 7.6, "GRN-01": 8.3, "GRN-02": 88, "GRN-05": 62, "SMT-01": 265, "SMT-03": 84, "SMT-05": 97.0, "CMP-01": 88871, "CMP-04": 95, "CMP-06": 2363, "TAL-01": 59, "TAL-02": 6, "TAL-06": 37, "CON-01": 236, "CON-03": 83, "CON-05": 23},
-"Zurich":{"LIV-01": 0.6, "LIV-04": 85.9, "LIV-05": 6.0, "LIV-06": 6.4, "GRN-01": 10.1, "GRN-02": 89, "GRN-05": 58, "SMT-01": 273, "SMT-03": 84, "SMT-05": 96.6, "CMP-01": 97266, "CMP-04": 95, "CMP-06": 2550, "TAL-01": 63, "TAL-02": 6, "TAL-06": 37, "CON-01": 247, "CON-03": null, "CON-05": 23},
-"Vienna":{"LIV-01": 0.88, "LIV-04": 85.5, "LIV-05": 5.7, "LIV-06": 10.5, "GRN-01": 10.6, "GRN-02": 84, "GRN-05": 55, "SMT-01": 244, "SMT-03": 86, "SMT-05": 93.7, "CMP-01": 85786, "CMP-04": 93, "CMP-06": 2058, "TAL-01": 59, "TAL-02": 6, "TAL-06": 37, "CON-01": 256, "CON-03": 82, "CON-05": 23},
-"Seoul":{"LIV-01": 0.48, "LIV-04": 84.8, "LIV-05": 4.9, "LIV-06": 13.5, "GRN-01": 25.4, "GRN-02": 73, "GRN-05": 44, "SMT-01": 294, "SMT-03": 90, "SMT-05": 98.1, "CMP-01": 93070, "CMP-04": 93, "CMP-06": 2241, "TAL-01": 61, "TAL-02": 6, "TAL-06": 38, "CON-01": 265, "CON-03": 83, "CON-05": 19},
-"Melbourne":{"LIV-01": 0.85, "LIV-04": 85.0, "LIV-05": 5.3, "LIV-06": 9.7, "GRN-01": 7.1, "GRN-02": 78, "GRN-05": 51, "SMT-01": 257, "SMT-03": null, "SMT-05": 94.4, "CMP-01": 90589, "CMP-04": 85, "CMP-06": 1857, "TAL-01": 58, "TAL-02": 6, "TAL-06": 37, "CON-01": 225, "CON-03": 80, "CON-05": 26},
-"Amsterdam":{"LIV-01": 0.69, "LIV-04": 84.9, "LIV-05": 5.3, "LIV-06": 10.7, "GRN-01": 9.6, "GRN-02": 88, "GRN-05": 59, "SMT-01": 290, "SMT-03": 85, "SMT-05": 97.3, "CMP-01": 89798, "CMP-04": 101, "CMP-06": 2449, "TAL-01": 57, "TAL-02": 6, "TAL-06": 34, "CON-01": 287, "CON-03": 85, "CON-05": 20},
-"London":{"LIV-01": 1.15, "LIV-04": 83.6, "LIV-05": 4.8, "LIV-06": 14.8, "GRN-01": 11.2, "GRN-02": 77, "GRN-05": 49, "SMT-01": 284, "SMT-03": 85, "SMT-05": 94.8, "CMP-01": 107029, "CMP-04": 111, "CMP-06": 3000, "TAL-01": 64, "TAL-02": 8, "TAL-06": 42, "CON-01": 291, "CON-03": 95, "CON-05": 15},
-"New York":{"LIV-01": 5.76, "LIV-04": 83.1, "LIV-05": 4.7, "LIV-06": 17.0, "GRN-01": 7.7, "GRN-02": null, "GRN-05": null, "SMT-01": 263, "SMT-03": 82, "SMT-05": 95.6, "CMP-01": 102888, "CMP-04": 108, "CMP-06": 2951, "TAL-01": 65, "TAL-02": 7, "TAL-06": 39, "CON-01": 287, "CON-03": 87, "CON-05": 19},
-"Paris":{"LIV-01": 1.34, "LIV-04": 84.2, "LIV-05": 4.8, "LIV-06": 14.3, "GRN-01": 12.9, "GRN-02": 72, "GRN-05": 49, "SMT-01": 278, "SMT-03": null, "SMT-05": 95.3, "CMP-01": 101284, "CMP-04": 101, "CMP-06": 2564, "TAL-01": 64, "TAL-02": 6, "TAL-06": 41, "CON-01": 301, "CON-03": 88, "CON-05": 21},
-"Toronto":{"LIV-01": 1.98, "LIV-04": 84.4, "LIV-05": 5.1, "LIV-06": 12.0, "GRN-01": 7.3, "GRN-02": 78, "GRN-05": 51, "SMT-01": 276, "SMT-03": 86, "SMT-05": 94.1, "CMP-01": 91317, "CMP-04": 101, "CMP-06": 2435, "TAL-01": 62, "TAL-02": 7, "TAL-06": 37, "CON-01": 256, "CON-03": 81, "CON-05": 22},
-"Berlin":{"LIV-01": 0.91, "LIV-04": 84.8, "LIV-05": 5.1, "LIV-06": 15.6, "GRN-01": 13.1, "GRN-02": 83, "GRN-05": 53, "SMT-01": 271, "SMT-03": 83, "SMT-05": 95.1, "CMP-01": 92975, "CMP-04": 92, "CMP-06": null, "TAL-01": 60, "TAL-02": 7, "TAL-06": 37, "CON-01": 251, "CON-03": 82, "CON-05": 20},
-"Barcelona":{"LIV-01": 0.69, "LIV-04": 84.7, "LIV-05": 5.0, "LIV-06": 11.6, "GRN-01": 12.2, "GRN-02": 74, "GRN-05": 50, "SMT-01": 249, "SMT-03": 77, "SMT-05": 93.0, "CMP-01": 82879, "CMP-04": 86, "CMP-06": 2126, "TAL-01": 57, "TAL-02": 5, "TAL-06": 32, "CON-01": 237, "CON-03": 82, "CON-05": null},
-"Dubai":{"LIV-01": 0.69, "LIV-04": 83.8, "LIV-05": 4.5, "LIV-06": 18.9, "GRN-01": 45.8, "GRN-02": null, "GRN-05": 36, "SMT-01": 287, "SMT-03": 89, "SMT-05": 96.9, "CMP-01": 100722, "CMP-04": 105, "CMP-06": 2663, "TAL-01": 54, "TAL-02": 4, "TAL-06": 33, "CON-01": 296, "CON-03": 94, "CON-05": 18},
-"San Francisco":{"LIV-01": 5.76, "LIV-04": 82.4, "LIV-05": 4.6, "LIV-06": 18.1, "GRN-01": 7.4, "GRN-02": 72, "GRN-05": 50, "SMT-01": 294, "SMT-03": 90, "SMT-05": 96.2, "CMP-01": 102252, "CMP-04": 105, "CMP-06": 2899, "TAL-01": 69, "TAL-02": 8, "TAL-06": 43, "CON-01": 256, "CON-03": 84, "CON-05": 23}
+"Singapore":{"LIV-01": 0.07, "LIV-04": 84.7, "LIV-05": 5.3, "LIV-06": 9.2, "GRN-01": 12.0, "GRN-02": 81, "GRN-05": 52, "SMT-01": 567.1, "SMT-03": 90, "SMT-05": 98.7, "CMP-01": 98296, "CMP-04": 105, "CMP-06": 2517, "TAL-01": 63, "TAL-02": 7, "TAL-06": 39, "CON-01": 311, "CON-03": 95, "CON-05": 16},
+"Tokyo":{"LIV-01": 0.23, "LIV-04": 84.0, "LIV-05": 5.5, "LIV-06": null, "GRN-01": 10.8, "GRN-02": 74, "GRN-05": 52, "SMT-01": 313.7, "SMT-03": 87, "SMT-05": 97.6, "CMP-01": 104175, "CMP-04": 102, "CMP-06": 2660, "TAL-01": 63, "TAL-02": 6, "TAL-06": 39, "CON-01": 304, "CON-03": 92, "CON-05": 19},
+"Copenhagen":{"LIV-01": 0.84, "LIV-04": 85.9, "LIV-05": 5.9, "LIV-06": 7.6, "GRN-01": 8.3, "GRN-02": 88, "GRN-05": 62, "SMT-01": 328.2, "SMT-03": 84, "SMT-05": 97.0, "CMP-01": 88871, "CMP-04": 95, "CMP-06": 2363, "TAL-01": 59, "TAL-02": 6, "TAL-06": 37, "CON-01": 236, "CON-03": 83, "CON-05": 23},
+"Zurich":{"LIV-01": 0.6, "LIV-04": 85.9, "LIV-05": 6.0, "LIV-06": 6.4, "GRN-01": 10.1, "GRN-02": 89, "GRN-05": 58, "SMT-01": 455.6, "SMT-03": 84, "SMT-05": 96.6, "CMP-01": 97266, "CMP-04": 95, "CMP-06": 2550, "TAL-01": 63, "TAL-02": 6, "TAL-06": 37, "CON-01": 247, "CON-03": null, "CON-05": 23},
+"Vienna":{"LIV-01": 0.88, "LIV-04": 85.5, "LIV-05": 5.7, "LIV-06": 10.5, "GRN-01": 10.6, "GRN-02": 84, "GRN-05": 55, "SMT-01": 251.9, "SMT-03": 86, "SMT-05": 93.7, "CMP-01": 85786, "CMP-04": 93, "CMP-06": 2058, "TAL-01": 59, "TAL-02": 6, "TAL-06": 37, "CON-01": 256, "CON-03": 82, "CON-05": 23},
+"Seoul":{"LIV-01": 0.48, "LIV-04": 84.8, "LIV-05": 4.9, "LIV-06": 13.5, "GRN-01": 25.4, "GRN-02": 73, "GRN-05": 44, "SMT-01": 320.3, "SMT-03": 90, "SMT-05": 98.1, "CMP-01": 93070, "CMP-04": 93, "CMP-06": 2241, "TAL-01": 61, "TAL-02": 6, "TAL-06": 38, "CON-01": 265, "CON-03": 83, "CON-05": 19},
+"Melbourne":{"LIV-01": 0.85, "LIV-04": 85.0, "LIV-05": 5.3, "LIV-06": 9.7, "GRN-01": 7.1, "GRN-02": 78, "GRN-05": 51, "SMT-01": 248.8, "SMT-03": null, "SMT-05": 94.4, "CMP-01": 90589, "CMP-04": 85, "CMP-06": 1857, "TAL-01": 58, "TAL-02": 6, "TAL-06": 37, "CON-01": 225, "CON-03": 80, "CON-05": 26},
+"Amsterdam":{"LIV-01": 0.69, "LIV-04": 84.9, "LIV-05": 5.3, "LIV-06": 10.7, "GRN-01": 9.6, "GRN-02": 88, "GRN-05": 59, "SMT-01": 317.8, "SMT-03": 85, "SMT-05": 97.3, "CMP-01": 89798, "CMP-04": 101, "CMP-06": 2449, "TAL-01": 57, "TAL-02": 6, "TAL-06": 34, "CON-01": 287, "CON-03": 85, "CON-05": 20},
+"London":{"LIV-01": 1.15, "LIV-04": 83.6, "LIV-05": 4.8, "LIV-06": 14.8, "GRN-01": 11.2, "GRN-02": 77, "GRN-05": 49, "SMT-01": 316.7, "SMT-03": 85, "SMT-05": 94.8, "CMP-01": 107029, "CMP-04": 111, "CMP-06": 3000, "TAL-01": 64, "TAL-02": 8, "TAL-06": 42, "CON-01": 291, "CON-03": 95, "CON-05": 15},
+"New York":{"LIV-01": 5.76, "LIV-04": 83.1, "LIV-05": 4.7, "LIV-06": 17.0, "GRN-01": 7.7, "GRN-02": null, "GRN-05": null, "SMT-01": 391.7, "SMT-03": 82, "SMT-05": 95.6, "CMP-01": 102888, "CMP-04": 108, "CMP-06": 2951, "TAL-01": 65, "TAL-02": 7, "TAL-06": 39, "CON-01": 287, "CON-03": 87, "CON-05": 19},
+"Paris":{"LIV-01": 1.34, "LIV-04": 84.2, "LIV-05": 4.8, "LIV-06": 14.3, "GRN-01": 12.9, "GRN-02": 72, "GRN-05": 49, "SMT-01": 441.5, "SMT-03": null, "SMT-05": 95.3, "CMP-01": 101284, "CMP-04": 101, "CMP-06": 2564, "TAL-01": 64, "TAL-02": 6, "TAL-06": 41, "CON-01": 301, "CON-03": 88, "CON-05": 21},
+"Toronto":{"LIV-01": 1.98, "LIV-04": 84.4, "LIV-05": 5.1, "LIV-06": 12.0, "GRN-01": 7.3, "GRN-02": 78, "GRN-05": 51, "SMT-01": 494.5, "SMT-03": 86, "SMT-05": 94.1, "CMP-01": 91317, "CMP-04": 101, "CMP-06": 2435, "TAL-01": 62, "TAL-02": 7, "TAL-06": 37, "CON-01": 256, "CON-03": 81, "CON-05": 22},
+"Berlin":{"LIV-01": 0.91, "LIV-04": 84.8, "LIV-05": 5.1, "LIV-06": 15.6, "GRN-01": 13.1, "GRN-02": 83, "GRN-05": 53, "SMT-01": 212.6, "SMT-03": 83, "SMT-05": 95.1, "CMP-01": 92975, "CMP-04": 92, "CMP-06": null, "TAL-01": 60, "TAL-02": 7, "TAL-06": 37, "CON-01": 251, "CON-03": 82, "CON-05": 20},
+"Barcelona":{"LIV-01": 0.69, "LIV-04": 84.7, "LIV-05": 5.0, "LIV-06": 11.6, "GRN-01": 12.2, "GRN-02": 74, "GRN-05": 50, "SMT-01": 338.8, "SMT-03": 77, "SMT-05": 93.0, "CMP-01": 82879, "CMP-04": 86, "CMP-06": 2126, "TAL-01": 57, "TAL-02": 5, "TAL-06": 32, "CON-01": 237, "CON-03": 82, "CON-05": null},
+"Dubai":{"LIV-01": 0.69, "LIV-04": 83.8, "LIV-05": 4.5, "LIV-06": 18.9, "GRN-01": 45.8, "GRN-02": null, "GRN-05": 36, "SMT-01": 359.0, "SMT-03": 89, "SMT-05": 96.9, "CMP-01": 100722, "CMP-04": 105, "CMP-06": 2663, "TAL-01": 54, "TAL-02": 4, "TAL-06": 33, "CON-01": 296, "CON-03": 94, "CON-05": 18},
+"San Francisco":{"LIV-01": 5.76, "LIV-04": 82.4, "LIV-05": 4.6, "LIV-06": 18.1, "GRN-01": 7.4, "GRN-02": 72, "GRN-05": 50, "SMT-01": 367.7, "SMT-03": 90, "SMT-05": 96.2, "CMP-01": 102252, "CMP-04": 105, "CMP-06": 2899, "TAL-01": 69, "TAL-02": 8, "TAL-06": 43, "CON-01": 256, "CON-03": 84, "CON-05": 23}
 },
 "provenance":{
  "LIV-01": {
@@ -257,6 +257,207 @@ window.INDEX_DATA = {
     "value": 7.4,
     "year": 2021,
     "whoRow": "San Francisco Oakland Hayward CA/USA"
+   }
+  }
+ },
+ "SMT-01": {
+  "source": "Ookla Open Data — Speedtest by Ookla global fixed network performance tiles, Q1 2026",
+  "url": "https://ookla-open-data.s3.amazonaws.com/parquet/performance/type=fixed/year=2026/quarter=1/2026-01-01_performance_fixed_tiles.parquet",
+  "license": "CC BY-NC-SA 4.0, (c) Ookla",
+  "retrieved": "2026-07-11 (direct download, 348,853,499 bytes; file published 2026-04-13)",
+  "method": "SUM(avg_d_kbps*tests)/SUM(tests)/1000 over all zoom-16 tiles whose centroid falls in the city-core bounding box [lonMin, latMin, lonMax, latMax] below. Mean of tile averages weighted by test count; flagged \"modelled\" because boundary choice and mean-vs-median both shape the number.",
+  "perCity": {
+   "Singapore": {
+    "value": 567.1,
+    "year": "2026 Q1",
+    "bbox": [
+     103.6,
+     1.2,
+     104.1,
+     1.48
+    ],
+    "tiles": 1574,
+    "tests": 442452
+   },
+   "Tokyo": {
+    "value": 313.7,
+    "year": "2026 Q1",
+    "bbox": [
+     139.6,
+     35.53,
+     139.92,
+     35.82
+    ],
+    "tiles": 3093,
+    "tests": 166682
+   },
+   "Copenhagen": {
+    "value": 328.2,
+    "year": "2026 Q1",
+    "bbox": [
+     12.45,
+     55.61,
+     12.65,
+     55.73
+    ],
+    "tiles": 1005,
+    "tests": 34324
+   },
+   "Zurich": {
+    "value": 455.6,
+    "year": "2026 Q1",
+    "bbox": [
+     8.45,
+     47.32,
+     8.63,
+     47.44
+    ],
+    "tiles": 686,
+    "tests": 23925
+   },
+   "Vienna": {
+    "value": 251.9,
+    "year": "2026 Q1",
+    "bbox": [
+     16.25,
+     48.13,
+     16.5,
+     48.28
+    ],
+    "tiles": 1306,
+    "tests": 57381
+   },
+   "Seoul": {
+    "value": 320.3,
+    "year": "2026 Q1",
+    "bbox": [
+     126.8,
+     37.45,
+     127.15,
+     37.65
+    ],
+    "tiles": 2044,
+    "tests": 58979
+   },
+   "Melbourne": {
+    "value": 248.8,
+    "year": "2026 Q1",
+    "bbox": [
+     144.85,
+     -37.95,
+     145.1,
+     -37.7
+    ],
+    "tiles": 1995,
+    "tests": 127333
+   },
+   "Amsterdam": {
+    "value": 317.8,
+    "year": "2026 Q1",
+    "bbox": [
+     4.75,
+     52.3,
+     5.05,
+     52.43
+    ],
+    "tiles": 1195,
+    "tests": 66353
+   },
+   "London": {
+    "value": 316.7,
+    "year": "2026 Q1",
+    "bbox": [
+     -0.35,
+     51.4,
+     0.1,
+     51.6
+    ],
+    "tiles": 4444,
+    "tests": 411821
+   },
+   "New York": {
+    "value": 391.7,
+    "year": "2026 Q1",
+    "bbox": [
+     -74.05,
+     40.55,
+     -73.75,
+     40.9
+    ],
+    "tiles": 3053,
+    "tests": 265816
+   },
+   "Paris": {
+    "value": 441.5,
+    "year": "2026 Q1",
+    "bbox": [
+     2.25,
+     48.81,
+     2.42,
+     48.9
+    ],
+    "tiles": 745,
+    "tests": 58740
+   },
+   "Toronto": {
+    "value": 494.5,
+    "year": "2026 Q1",
+    "bbox": [
+     -79.55,
+     43.6,
+     -79.2,
+     43.8
+    ],
+    "tiles": 2248,
+    "tests": 118768
+   },
+   "Berlin": {
+    "value": 212.6,
+    "year": "2026 Q1",
+    "bbox": [
+     13.2,
+     52.42,
+     13.55,
+     52.6
+    ],
+    "tiles": 2531,
+    "tests": 76537
+   },
+   "Barcelona": {
+    "value": 338.8,
+    "year": "2026 Q1",
+    "bbox": [
+     2.05,
+     41.32,
+     2.25,
+     41.45
+    ],
+    "tiles": 633,
+    "tests": 54826
+   },
+   "Dubai": {
+    "value": 359.0,
+    "year": "2026 Q1",
+    "bbox": [
+     55.05,
+     24.9,
+     55.55,
+     25.35
+    ],
+    "tiles": 3427,
+    "tests": 377179
+   },
+   "San Francisco": {
+    "value": 367.7,
+    "year": "2026 Q1",
+    "bbox": [
+     -122.52,
+     37.7,
+     -122.35,
+     37.83
+    ],
+    "tiles": 542,
+    "tests": 64515
    }
   }
  }
