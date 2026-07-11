@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>City Index Workbench</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F5F6F2; --panel:#FFFFFF; --ink:#1b1f24; --ink2:#5c6470; --ink3:#8b929c;
+  --line:#E4E6E0; --line2:#EEF0EB; --indigo:#26324F; --indigo-soft:#eef1f7;
+  --amber:#B4740E; --amber-bg:#FBF1DE; --up:#1B8A6B; --down:#C0512F;
+  --focus:#26324F;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--paper); color:var(--ink);
+  font-family:"IBM Plex Sans",system-ui,sans-serif; font-size:14px; line-height:1.45;
+  -webkit-font-smoothing:antialiased;}
+.mono{font-family:"IBM Plex Mono",ui-monospace,monospace; font-variant-numeric:tabular-nums;}
+a{color:inherit}
+button{font-family:inherit}
+:focus-visible{outline:2px solid var(--focus); outline-offset:2px; border-radius:4px;}
+
+/* ---- masthead ---- */
+.masthead{display:flex; align-items:flex-end; justify-content:space-between; gap:20px;
+  padding:26px 34px 20px; border-bottom:1px solid var(--line); flex-wrap:wrap;}
+.brand h1{font-family:"Fraunces",serif; font-weight:500; font-size:30px; line-height:1;
+  margin:0; letter-spacing:-.01em;}
+.brand .kick{font-family:"IBM Plex Mono",monospace; font-size:11px; letter-spacing:.16em;
+  text-transform:uppercase; color:var(--ink3); margin-bottom:9px;}
+.brand p{margin:8px 0 0; color:var(--ink2); max-width:52ch; font-size:13px;}
+.flag{display:flex; gap:9px; align-items:center; background:var(--amber-bg);
+  border:1px solid #EAD4A6; color:#7a4e08; padding:9px 13px; border-radius:9px; max-width:340px;}
+.flag svg{flex:none}
+.flag b{font-weight:600}
+.flag span{font-size:12px; line-height:1.35}
+
+/* ---- layout ---- */
+.wrap{display:grid; grid-template-columns:372px 1fr; gap:0; align-items:start;}
+.controls{border-right:1px solid var(--line); padding:22px 22px 40px; min-height:calc(100vh - 120px);}
+.readout{padding:22px 30px 60px;}
+@media(max-width:900px){ .wrap{grid-template-columns:1fr} .controls{border-right:none; border-bottom:1px solid var(--line); min-height:0} }
+
+.sect-label{font-family:"IBM Plex Mono",monospace; font-size:11px; letter-spacing:.14em;
+  text-transform:uppercase; color:var(--ink3); margin:0 0 12px;}
+
+/* presets */
+.presets{display:flex; flex-wrap:wrap; gap:7px; margin-bottom:22px;}
+.chip{border:1px solid var(--line); background:var(--panel); border-radius:20px; padding:6px 13px;
+  font-size:12.5px; cursor:pointer; color:var(--ink2); transition:.15s;}
+.chip:hover{border-color:var(--indigo); color:var(--ink)}
+.chip.act{background:var(--indigo); color:#fff; border-color:var(--indigo)}
+
+/* domain card */
+.dcard{border:1px solid var(--line); border-radius:12px; margin-bottom:11px; background:var(--panel);
+  overflow:hidden; transition:.15s;}
+.dcard.off{opacity:.5}
+.dhead{display:flex; align-items:center; gap:11px; padding:12px 13px; cursor:pointer;}
+.swatch{width:13px; height:13px; border-radius:4px; flex:none}
+.dtitle{font-weight:600; font-size:14px; flex:1}
+.dcount{font-size:11px; color:var(--ink3)} 
+.chev{color:var(--ink3); transition:transform .18s; flex:none}
+.dcard.open .chev{transform:rotate(90deg)}
+.toggle{position:relative; width:36px; height:20px; border-radius:20px; background:#d7dae0;
+  border:none; cursor:pointer; flex:none; transition:.18s; padding:0}
+.toggle::after{content:""; position:absolute; top:2px; left:2px; width:16px; height:16px;
+  border-radius:50%; background:#fff; transition:.18s; box-shadow:0 1px 2px rgba(0,0,0,.2)}
+.toggle.on{background:var(--indigo)}
+.toggle.on::after{transform:translateX(16px)}
+
+.dbody{display:none; padding:2px 13px 13px; border-top:1px solid var(--line2)}
+.dcard.open .dbody{display:block}
+.wrow{display:flex; align-items:center; gap:9px; margin:11px 2px 3px}
+.wrow label{font-size:12px; color:var(--ink2); width:52px}
+.wrow input[type=range]{flex:1; accent-color:var(--indigo)}
+.wrow .wval{font-size:12px; color:var(--ink2); width:34px; text-align:right}
+
+.vlist{margin-top:8px}
+.vitem{display:flex; align-items:flex-start; gap:9px; padding:7px 0; border-top:1px solid var(--line2)}
+.vitem:first-child{border-top:none}
+.vchk{margin-top:2px; accent-color:var(--indigo); cursor:pointer; flex:none}
+.vmeta{flex:1; min-width:0}
+.vname{font-size:12.5px; font-weight:500; display:flex; align-items:center; gap:6px; flex-wrap:wrap}
+.vsub{font-size:11px; color:var(--ink3); margin-top:1px}
+.vnodata{font-style:italic; color:var(--amber); font-size:11px}
+
+/* badges + flags */
+.badge{font-family:"IBM Plex Mono",monospace; font-size:9.5px; letter-spacing:.03em; padding:1px 5px;
+  border-radius:4px; border:1px solid var(--line); color:var(--ink2); text-transform:uppercase; white-space:nowrap}
+.badge.metro{background:#f3f4f7}
+.badge.proxy{background:var(--amber-bg); border-color:#EAD4A6; color:#7a4e08}
+.dot{width:8px;height:8px;border-radius:50%;flex:none;cursor:help;border:1px solid rgba(0,0,0,.12)}
+.dot.crowd{background:#E7B24C}
+.dot.perception{background:#D98A5B}
+.dot.self-reported{background:#C9A227}
+.dot.modelled{background:#9AA8C4}
+.dot.proxy{background:#C0512F}
+.flagmark{color:var(--amber); cursor:help; font-size:12px}
+
+/* method + actions */
+.method{display:flex; gap:8px; margin:6px 0 4px}
+.mbtn{flex:1; border:1px solid var(--line); background:var(--panel); border-radius:9px; padding:9px 8px;
+  cursor:pointer; text-align:center; transition:.15s}
+.mbtn.act{border-color:var(--indigo); background:var(--indigo-soft)}
+.mbtn b{display:block; font-size:12.5px; font-weight:600}
+.mbtn small{display:block; font-size:10.5px; color:var(--ink3); margin-top:2px}
+.approxline{margin-top:16px; padding:11px 12px; border:1px dashed #EAD4A6; background:var(--amber-bg);
+  border-radius:9px; font-size:12px; color:#7a4e08}
+.approxline b{font-weight:600}
+
+/* readout */
+.rhead{display:flex; align-items:baseline; justify-content:space-between; gap:14px; margin-bottom:6px; flex-wrap:wrap}
+.rhead h2{font-family:"Fraunces",serif; font-weight:500; font-size:22px; margin:0}
+.rstat{font-size:12px; color:var(--ink2)}
+.rstat .mono{color:var(--ink)}
+.scale{display:flex; justify-content:space-between; font-size:10px; color:var(--ink3);
+  border-bottom:1px solid var(--line); padding-bottom:4px; margin:12px 0 4px}
+
+.row{display:grid; grid-template-columns:34px 1fr auto; gap:14px; align-items:center;
+  padding:13px 8px; border-bottom:1px solid var(--line2); cursor:pointer;
+  transition:transform .42s cubic-bezier(.22,.61,.36,1), background .15s; background:transparent;}
+.row:hover{background:#fafbf9}
+.rank{font-size:15px; color:var(--ink2); text-align:right}
+.rname{display:flex; align-items:center; gap:9px; min-width:0}
+.rname .cty{font-family:"Fraunces",serif; font-size:17px; font-weight:500}
+.delta{font-size:11px; display:inline-flex; align-items:center; gap:2px}
+.delta.up{color:var(--up)} .delta.down{color:var(--down)} .delta.same{color:var(--ink3)}
+.bartrack{height:9px; background:#EDEFEA; border-radius:6px; overflow:hidden; margin-top:6px; display:flex}
+.seg{height:100%; transition:width .42s ease}
+.barplain{height:100%; background:var(--indigo); transition:width .42s ease}
+.rright{display:flex; align-items:center; gap:16px; justify-self:end}
+.score{font-size:19px; font-weight:600}
+.cov{font-size:10.5px; color:var(--ink3); text-align:right; width:74px}
+.cov b{color:var(--ink2); font-weight:600}
+.cov.warn b{color:var(--amber)}
+
+/* breakdown */
+.break{grid-column:1/-1; margin:4px 0 6px; padding:14px 16px; background:#fbfcfa;
+  border:1px solid var(--line2); border-radius:11px}
+.bkgrid{display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr)); gap:16px}
+.bkdom{border-left:3px solid; padding-left:11px}
+.bkdom .dh{display:flex; justify-content:space-between; align-items:baseline; margin-bottom:7px}
+.bkdom .dn{font-weight:600; font-size:12.5px}
+.bkdom .ds{font-size:13px}
+.bkvar{display:flex; align-items:center; gap:7px; padding:4px 0; font-size:11.5px; border-top:1px solid var(--line2)}
+.bkvar .bn{flex:1; min-width:0; color:var(--ink2); white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
+.bkvar .braw{color:var(--ink3); font-size:10.5px}
+.bkvar .bsc{width:34px; text-align:right}
+.bknone{font-size:11px; color:var(--amber); font-style:italic}
+.bksrc{font-size:10px; color:var(--ink3); margin-top:9px}
+
+/* legend */
+.legend{margin-top:30px; padding:18px 20px; border:1px solid var(--line); border-radius:12px; background:var(--panel)}
+.legend h3{font-family:"IBM Plex Mono",monospace; font-size:11px; letter-spacing:.14em;
+  text-transform:uppercase; color:var(--ink3); margin:0 0 12px; font-weight:600}
+.lgrid{display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:12px 22px}
+.litem{display:flex; gap:9px; align-items:flex-start; font-size:12px; color:var(--ink2)}
+.litem .k{flex:none; margin-top:1px}
+.tip{position:relative}
+@media(prefers-reduced-motion:reduce){ *{transition:none!important} }
+.foot{margin-top:26px; font-size:11px; color:var(--ink3); line-height:1.6}
+</style>
+</head>
+<body>
+<div class="masthead">
+  <div class="brand">
+    <div class="kick">Modular City Index &middot; Phase 3 prototype</div>
+    <h1>The Index Workbench</h1>
+    <p>Pick the big areas, mix them, add or drop any measure &mdash; and watch the ranking rebuild live. Every approximation stays visible.</p>
+  </div>
+  <div class="flag" role="note">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 3 2 20h20L12 3Z" stroke="#B4740E" stroke-width="1.7" stroke-linejoin="round"/><path d="M12 9v5" stroke="#B4740E" stroke-width="1.7" stroke-linecap="round"/><circle cx="12" cy="17" r="1" fill="#B4740E"/></svg>
+    <span><b>Illustrative data.</b> All values are placeholders to show the engine working &mdash; not verified figures. Phase&nbsp;2 replaces them with sourced numbers.</span>
+  </div>
+</div>
+
+<div class="wrap">
+  <aside class="controls">
+    <p class="sect-label">Quick starts</p>
+    <div class="presets" id="presets"></div>
+
+    <p class="sect-label">Combine method</p>
+    <div class="method" id="method">
+      <button class="mbtn act" data-m="additive"><b>Simple average</b><small>every part counts equally</small></button>
+      <button class="mbtn" data-m="geometric"><b>Balanced</b><small>rewards all-round cities</small></button>
+    </div>
+
+    <p class="sect-label" style="margin-top:22px">Areas &amp; measures</p>
+    <div id="domains"></div>
+
+    <div class="approxline" id="approxline"></div>
+  </aside>
+
+  <main class="readout">
+    <div class="rhead">
+      <h2>Ranking</h2>
+      <div class="rstat" id="rstat"></div>
+    </div>
+    <div class="scale"><span>0</span><span>index score</span><span>100</span></div>
+    <div id="rows"></div>
+
+    <div class="legend">
+      <h3>How to read the flags</h3>
+      <div class="lgrid">
+        <div class="litem"><span class="badge metro k">METRO</span><span>Metro-area figure, not the city proper.</span></div>
+        <div class="litem"><span class="badge proxy k">PROXY</span><span>Country-level stand-in &mdash; the weakest kind of match. Use with care.</span></div>
+        <div class="litem"><span class="dot crowd k"></span><span>Crowd-sourced (e.g. Numbeo) &mdash; a soft signal.</span></div>
+        <div class="litem"><span class="dot perception k"></span><span>Perception / survey-based, not a hard count.</span></div>
+        <div class="litem"><span class="dot self-reported k"></span><span>Self-reported by the city; coverage gaps.</span></div>
+        <div class="litem"><span class="dot modelled k"></span><span>Modelled estimate, not observed.</span></div>
+        <div class="litem"><span class="flagmark k">&#9873;</span><span>Direction is contestable &mdash; "better" depends on your audience.</span></div>
+        <div class="litem"><span class="k" style="color:var(--amber);font-weight:600">cov</span><span>Coverage: share of your chosen measures the city actually has data for.</span></div>
+      </div>
+      <div class="foot">Engine defaults: measures rescaled 0&ndash;100 across the shown cities, "lower is better" measures flipped automatically, then rolled up measure &rarr; sub-theme &rarr; area &rarr; composite. Weights are equal unless you change them. A measure with no data for a city is dropped from that city's score, and the drop shows up in coverage.</div>
+    </div>
+  </main>
+</div>
+
+<script src="dataset.js"></script>
+<script>
+const P = window.INDEX_DATA;
+const domColor = {}; P.domains.forEach(d=>domColor[d.id]=d);
+const varById = {}; P.variables.forEach(v=>varById[v.id]=v);
+
+// ---------------- ENGINE (verified in tests) ----------------
+function computeIndex(P, state){
+  const {variables, cities, data} = P;
+  const {activeVars, domainWeights, method} = state;
+  const activeList = variables.filter(v=>activeVars.has(v.id));
+  const norm = {};
+  for(const v of activeList){
+    const vals = cities.map(c=>data[c][v.id]).filter(x=>x!==null && x!==undefined);
+    norm[v.id] = {};
+    if(vals.length===0) continue;
+    const mn=Math.min(...vals), mx=Math.max(...vals);
+    for(const c of cities){
+      const x = data[c][v.id];
+      if(x===null||x===undefined){ norm[v.id][c]=null; continue; }
+      let s = (mx===mn) ? 50 : (x-mn)/(mx-mn)*100;
+      if(v.direction==='lower') s = 100 - s;
+      norm[v.id][c] = s;
+    }
+  }
+  const byDom = {};
+  for(const v of activeList){ (byDom[v.domain] ??= {}); (byDom[v.domain][v.subtheme] ??= []).push(v.id); }
+  const activeDomains = Object.keys(byDom);
+  const rows = [];
+  for(const c of cities){
+    const domScores = {}, domVars = {};
+    for(const d of activeDomains){
+      const subScores = []; domVars[d]=[];
+      for(const st in byDom[d]){
+        const vs=[];
+        for(const id of byDom[d][st]){
+          const sc = norm[id][c];
+          domVars[d].push({id, score:sc, raw:data[c][id]});
+          if(sc!==null && sc!==undefined) vs.push(sc);
+        }
+        if(vs.length) subScores.push(vs.reduce((a,b)=>a+b,0)/vs.length);
+      }
+      domScores[d] = subScores.length ? subScores.reduce((a,b)=>a+b,0)/subScores.length : null;
+    }
+    const have = activeDomains.filter(d=>domScores[d]!==null);
+    let composite=null, contrib={};
+    if(have.length){
+      let hw=0; const w={}; for(const d of have){ w[d]=(domainWeights[d]??1); hw+=w[d]; } hw=hw||1;
+      if(method==='geometric'){
+        let s=0; for(const d of have){ s += (w[d]/hw)*Math.log(Math.max(1,domScores[d])); }
+        composite=Math.exp(s);
+      } else {
+        let s=0; for(const d of have){ const cc=(w[d]/hw)*domScores[d]; contrib[d]=cc; s+=cc; }
+        composite=s;
+      }
+    }
+    const nA=activeList.length, nH=activeList.filter(v=>data[c][v.id]!==null && data[c][v.id]!==undefined).length;
+    rows.push({city:c, composite, domScores, domVars, contrib, coverage:nA?nH/nA:0, activeDomains});
+  }
+  rows.sort((a,b)=>(b.composite??-1)-(a.composite??-1));
+  rows.forEach((r,i)=>r.rank=i+1);
+  return rows;
+}
+
+// ---------------- STATE ----------------
+const state = {
+  domOn:{}, varOn:{}, domWeight:{}, method:'additive', expanded:null, prevRanks:{}
+};
+P.domains.forEach(d=>{ state.domOn[d.id]=true; state.domWeight[d.id]=1; });
+P.variables.forEach(v=>{ state.varOn[v.id] = !!v.pilot; });
+
+function activeSet(){
+  const s=new Set();
+  P.variables.forEach(v=>{ if(state.domOn[v.domain] && state.varOn[v.id] && state.domWeight[v.domain]>0) s.add(v.id); });
+  return s;
+}
+
+// ---------------- CONTROLS RENDER ----------------
+function domVarCount(d){ return P.variables.filter(v=>v.domain===d && state.domOn[d] && state.varOn[v.id]).length; }
+function domTotal(d){ return P.variables.filter(v=>v.domain===d).length; }
+
+function renderControls(){
+  // presets
+  const presets = document.getElementById('presets'); presets.innerHTML='';
+  const mk=(label,fn,active)=>{ const b=document.createElement('button'); b.className='chip'+(active?' act':''); b.textContent=label; b.onclick=fn; presets.appendChild(b); };
+  mk('Balanced blend', ()=>{ P.domains.forEach(d=>{state.domOn[d.id]=true; state.domWeight[d.id]=1;}); P.variables.forEach(v=>state.varOn[v.id]=!!v.pilot); recompute(true); });
+  P.domains.forEach(d=> mk(d.id+' focus', ()=>{ P.domains.forEach(x=>{state.domOn[x.id]=(x.id===d.id); state.domWeight[x.id]=1;}); P.variables.forEach(v=>state.varOn[v.id]=!!v.pilot); recompute(true); }) );
+
+  // domains
+  const wrap=document.getElementById('domains'); wrap.innerHTML='';
+  P.domains.forEach(d=>{
+    const on=state.domOn[d.id];
+    const card=document.createElement('div'); card.className='dcard'+(on?'':' off')+(state._open===d.id?' open':'');
+    const head=document.createElement('div'); head.className='dhead';
+    head.innerHTML = `<span class="swatch" style="background:${d.tint}"></span>
+      <span class="dtitle">${d.id}</span>
+      <span class="dcount">${domVarCount(d.id)}/${domTotal(d.id)}</span>
+      <button class="toggle ${on?'on':''}" aria-label="toggle ${d.id}"></button>
+      <svg class="chev" width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+    head.querySelector('.toggle').onclick=(e)=>{ e.stopPropagation(); state.domOn[d.id]=!state.domOn[d.id]; recompute(true); };
+    head.onclick=()=>{ state._open = state._open===d.id?null:d.id; renderControls(); };
+    card.appendChild(head);
+
+    const body=document.createElement('div'); body.className='dbody';
+    // weight slider
+    const w=document.createElement('div'); w.className='wrow';
+    w.innerHTML=`<label>Weight</label><input type="range" min="0" max="5" step="1" value="${state.domWeight[d.id]}"><span class="wval mono"></span>`;
+    const slider=w.querySelector('input'); const wv=w.querySelector('.wval');
+    const setW=()=>{ const tot=P.domains.filter(x=>state.domOn[x.id]).reduce((a,x)=>a+state.domWeight[x.id],0)||1;
+      const pct = state.domOn[d.id]&&state.domWeight[d.id]>0 ? Math.round(state.domWeight[d.id]/tot*100) : 0;
+      wv.textContent = state.domWeight[d.id]==0?'off':pct+'%'; };
+    slider.oninput=()=>{ state.domWeight[d.id]=+slider.value; recompute(false); renderApprox(); setW(); };
+    setW();
+    body.appendChild(w);
+
+    // variables
+    const vl=document.createElement('div'); vl.className='vlist';
+    P.variables.filter(v=>v.domain===d.id).forEach(v=>{
+      const it=document.createElement('div'); it.className='vitem';
+      const hasData = P.cities.some(c=>P.data[c][v.id]!==null && P.data[c][v.id]!==undefined);
+      const badges = badgeHTML(v);
+      it.innerHTML = `<input type="checkbox" class="vchk" ${state.varOn[v.id]?'checked':''}>
+        <div class="vmeta">
+          <div class="vname">${v.name} ${badges}</div>
+          <div class="vsub">${v.subtheme} &middot; ${v.unit} &middot; ${v.direction==='lower'?'lower is better':'higher is better'} ${hasData?'':'&middot; <span class="vnodata">no starter data</span>'}</div>
+        </div>`;
+      it.querySelector('.vchk').onchange=(e)=>{ state.varOn[v.id]=e.target.checked; recompute(true); };
+      vl.appendChild(it);
+    });
+    body.appendChild(vl);
+    card.appendChild(body);
+    wrap.appendChild(card);
+  });
+
+  // method buttons
+  document.querySelectorAll('.mbtn').forEach(b=>{
+    b.classList.toggle('act', b.dataset.m===state.method);
+    b.onclick=()=>{ state.method=b.dataset.m; recompute(true); };
+  });
+  renderApprox();
+}
+
+function badgeHTML(v){
+  let h='';
+  if(v.dataLevel==='Metro') h+=`<span class="badge metro">metro</span>`;
+  if(v.dataLevel==='Country proxy') h+=`<span class="badge proxy tip" title="Country-level stand-in, not city-specific">proxy</span>`;
+  if(v.approx && v.approx!=='none') h+=`<span class="dot ${v.approx} tip" title="${v.caveat||v.approx}"></span>`;
+  if(v.contestable) h+=`<span class="flagmark tip" title="${v.caveat||'Direction is contestable'}">&#9873;</span>`;
+  return h;
+}
+
+function renderApprox(){
+  const act=[...activeSet()].map(id=>varById[id]);
+  const flagged = act.filter(v=> v.dataLevel==='Country proxy' || (v.approx&&v.approx!=='none'));
+  const contest = act.filter(v=>v.contestable);
+  const el=document.getElementById('approxline');
+  if(!act.length){ el.innerHTML='No measures selected.'; return; }
+  let parts=[];
+  parts.push(`<b>${flagged.length} of ${act.length}</b> active measures are approximations`);
+  const types={};
+  flagged.forEach(v=>{ const k = v.dataLevel==='Country proxy'?'country proxy':v.approx; types[k]=(types[k]||0)+1; });
+  const tstr=Object.entries(types).map(([k,n])=>`${n} ${k}`).join(', ');
+  el.innerHTML = parts[0] + (tstr?` (${tstr})`:'') + (contest.length?`.<br><span class="flagmark">&#9873;</span> ${contest.length} with a contestable direction.`:'.');
+}
+
+// ---------------- READOUT RENDER ----------------
+let lastRows=[];
+function recompute(reorder){
+  const prev={}; lastRows.forEach(r=>prev[r.city]=r.rank);
+  const rows=computeIndex(P,{activeVars:activeSet(), domainWeights:state.domWeight, method:state.method});
+  rows.forEach(r=> r.delta = (prev[r.city]!==undefined)? prev[r.city]-r.rank : 0);
+  lastRows=rows;
+  renderRows(rows);
+  renderControls_light();
+  // stat line
+  const nA=activeSet().size;
+  document.getElementById('rstat').innerHTML =
+    `<span class="mono">${rows.filter(r=>r.composite!==null).length}</span> cities &middot; <span class="mono">${nA}</span> measures &middot; method: <span class="mono">${state.method==='geometric'?'balanced':'simple average'}</span>`;
+}
+function renderControls_light(){ // update counts + approx without rebuilding sliders focus
+  document.querySelectorAll('.dcard').forEach((card,i)=>{
+    const d=P.domains[i]; const cnt=card.querySelector('.dcount'); if(cnt) cnt.textContent=`${domVarCount(d.id)}/${domTotal(d.id)}`;
+  });
+  renderApprox();
+}
+
+function fmtRaw(v,val){
+  if(val===null||val===undefined) return '—';
+  if(v.unit==='USD PPP'||v.unit==='USD') return '$'+Number(val).toLocaleString();
+  return val+ (['count','index','index 0-100'].includes(v.unit)?'':' '+v.unit);
+}
+
+function renderRows(rows){
+  const host=document.getElementById('rows'); host.innerHTML='';
+  rows.forEach(r=>{
+    const row=document.createElement('div'); row.className='row'; row.tabIndex=0;
+    const rankTxt = r.composite===null? '—' : r.rank;
+    const dl = r.delta;
+    const deltaHTML = r.composite===null?'' :
+      dl>0?`<span class="delta up">▲${dl}</span>`: dl<0?`<span class="delta down">▼${-dl}</span>`:`<span class="delta same">•</span>`;
+    // bar
+    let bar='';
+    if(r.composite===null){ bar=`<div class="bartrack"></div>`; }
+    else if(state.method==='additive'){
+      const segs = r.activeDomains.filter(d=>r.contrib[d]!==undefined)
+        .map(d=>`<div class="seg" style="width:${r.contrib[d]}%;background:${domColor[d].tint}" title="${d}: ${r.contrib[d].toFixed(1)} pts"></div>`).join('');
+      bar=`<div class="bartrack">${segs}</div>`;
+    } else {
+      bar=`<div class="bartrack"><div class="barplain" style="width:${r.composite}%"></div></div>`;
+    }
+    const covWarn = r.coverage<0.999;
+    const covTxt = r.composite===null?'no data':`<b>${Math.round(r.coverage*100)}%</b> covered`;
+    row.innerHTML = `
+      <div class="rank mono">${rankTxt}</div>
+      <div>
+        <div class="rname"><span class="cty">${r.city}</span> ${deltaHTML}</div>
+        ${bar}
+      </div>
+      <div class="rright">
+        <div class="cov ${covWarn?'warn':''}">${covTxt}</div>
+        <div class="score mono">${r.composite===null?'—':r.composite.toFixed(1)}</div>
+      </div>`;
+    const toggle=()=>{ state.expanded = state.expanded===r.city?null:r.city; renderRows(lastRows); };
+    row.onclick=toggle;
+    row.onkeydown=(e)=>{ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); toggle(); } };
+    host.appendChild(row);
+    if(state.expanded===r.city && r.composite!==null){ host.appendChild(breakdown(r)); }
+  });
+}
+
+function breakdown(r){
+  const box=document.createElement('div'); box.className='break';
+  const grid=document.createElement('div'); grid.className='bkgrid';
+  r.activeDomains.forEach(d=>{
+    if(r.domScores[d]===null) return;
+    const col=document.createElement('div'); col.className='bkdom'; col.style.borderColor=domColor[d].tint;
+    let vars = r.domVars[d].map(x=>{
+      const v=varById[x.id];
+      const sc = x.score===null? `<span class="bknone">no data</span>` : `<span class="bsc mono">${x.score.toFixed(0)}</span>`;
+      return `<div class="bkvar"><span class="bn" title="${v.name}">${v.name}</span>
+        <span class="braw mono">${fmtRaw(v,x.raw)}</span> ${badgeHTML(v)} ${sc}</div>`;
+    }).join('');
+    const srcs=[...new Set(r.domVars[d].map(x=>varById[x.id].source))].join(' · ');
+    col.innerHTML=`<div class="dh"><span class="dn">${d}</span><span class="ds mono">${r.domScores[d].toFixed(1)}</span></div>${vars}<div class="bksrc">Sources: ${srcs}</div>`;
+    grid.appendChild(col);
+  });
+  box.appendChild(grid);
+  return box;
+}
+
+renderControls();
+recompute(true);
+</script>
+</body>
+</html>
