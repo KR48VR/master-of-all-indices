@@ -44,7 +44,7 @@ window.INDEX_DATA = {
 {"id": "TAL-03", "domain": "Talent", "subtheme": "Skills & Workforce", "name": "Knowledge workers", "measures": "% employed in knowledge-intensive jobs", "unit": "%", "direction": "higher", "dataLevel": "Metro", "source": "Eurostat / OECD", "appearsIn": "—", "pilot": 0, "caveat": "", "contestable": 0, "approx": "none"},
 {"id": "TAL-04", "domain": "Talent", "subtheme": "Skills & Workforce", "name": "Researchers per capita", "measures": "R&D personnel per 1,000", "unit": "per 1k", "direction": "higher", "dataLevel": "Metro", "source": "OECD", "appearsIn": "GPCI (R&D)", "pilot": 0, "caveat": "", "contestable": 0, "approx": "none"},
 {"id": "TAL-05", "domain": "Talent", "subtheme": "Attractiveness", "name": "Talent inflow", "measures": "Net migration of working-age people", "unit": "%", "direction": "higher", "dataLevel": "Metro", "source": "National statistics", "appearsIn": "—", "pilot": 0, "caveat": "Hard to standardise across countries.", "contestable": 0, "approx": "none"},
-{"id": "TAL-06", "domain": "Talent", "subtheme": "Attractiveness", "name": "International openness", "measures": "Foreign-born population share", "unit": "%", "direction": "higher", "dataLevel": "Metro", "source": "OECD", "appearsIn": "GPCI", "pilot": 1, "caveat": "A proxy for openness — contestable as 'better'.", "contestable": 1, "approx": "none"},
+{"id": "TAL-06", "domain": "Talent", "subtheme": "Attractiveness", "name": "International openness", "measures": "Foreign-born population share", "unit": "%", "direction": "higher", "dataLevel": "Metro", "source": "OECD FUA / national censuses / UN DESA", "appearsIn": "GPCI", "pilot": 1, "caveat": "Mixes concepts and boundaries, disclosed per value: census/register foreign-born for most cities; foreign NATIONALS (not foreign-born) for Tokyo and Seoul; UN migrant-stock estimate for Singapore; city boundaries for the OECD-city rows, metro for the census rows; years 2021-2026. Dubai publishes no foreign-born statistic (blank). A proxy for openness — contestable as \"better\".", "contestable": 1, "approx": "none"},
 {"id": "CON-01", "domain": "Connected", "subtheme": "Global Connectivity", "name": "Airport connectivity", "measures": "Direct international destinations served", "unit": "count", "direction": "higher", "dataLevel": "City", "source": "OAG / GPCI", "appearsIn": "GPCI (Accessibility)", "pilot": 1, "caveat": "Well covered.", "contestable": 0, "approx": "none"},
 {"id": "CON-02", "domain": "Connected", "subtheme": "Global Connectivity", "name": "Global accessibility", "measures": "Travel time to major world hubs", "unit": "hours", "direction": "lower", "dataLevel": "City", "source": "GPCI", "appearsIn": "GPCI (Accessibility)", "pilot": 0, "caveat": "", "contestable": 0, "approx": "none"},
 {"id": "CON-03", "domain": "Connected", "subtheme": "Urban Mobility", "name": "Transit access", "measures": "% residents near frequent public transit", "unit": "%", "direction": "higher", "dataLevel": "City", "source": "UITP / WCCD", "appearsIn": "—", "pilot": 1, "caveat": "", "contestable": 0, "approx": "none"},
@@ -53,22 +53,22 @@ window.INDEX_DATA = {
 ],
 "cities":["Singapore", "Tokyo", "Copenhagen", "Zurich", "Vienna", "Seoul", "Melbourne", "Amsterdam", "London", "New York", "Paris", "Toronto", "Berlin", "Barcelona", "Dubai", "San Francisco"],
 "data":{
-"Singapore":{"LIV-01": 0.07, "LIV-04": 83.9, "LIV-05": 2.9, "LIV-06": 24.7, "GRN-01": 12.0, "GRN-02": 70.3, "GRN-05": 52.0, "SMT-01": 567.1, "SMT-03": 87.5, "SMT-05": 94.4, "CMP-01": 132570, "CMP-04": 68.1, "CMP-06": 690, "TAL-01": 54.1, "TAL-02": 2, "TAL-06": 39, "CON-01": 311, "CON-03": 95, "CON-05": 16},
-"Tokyo":{"LIV-01": 0.23, "LIV-04": 84.9, "LIV-05": 3.26, "LIV-06": 16.0, "GRN-01": 10.8, "GRN-02": 74.8, "GRN-05": 21.4, "SMT-01": 313.7, "SMT-03": 85.42, "SMT-05": 85.5, "CMP-01": 50287, "CMP-04": 14.8, "CMP-06": 81, "TAL-01": 64.2, "TAL-02": 4, "TAL-06": 39, "CON-01": 304, "CON-03": 92, "CON-05": 19},
-"Copenhagen":{"LIV-01": 0.84, "LIV-04": 81.5, "LIV-05": 5.79, "LIV-06": 10.7, "GRN-01": 6.9, "GRN-02": 83.7, "GRN-05": 42.0, "SMT-01": 328.2, "SMT-03": 90.63, "SMT-05": 99.8, "CMP-01": 85842, "CMP-04": null, "CMP-06": 842, "TAL-01": 58.2, "TAL-02": 1, "TAL-06": 37, "CON-01": 236, "CON-03": 83, "CON-05": 23},
-"Zurich":{"LIV-01": 0.6, "LIV-04": 84.1, "LIV-05": 5.67, "LIV-06": 12.8, "GRN-01": 7.6, "GRN-02": 67.6, "GRN-05": 46.0, "SMT-01": 455.6, "SMT-03": 81.25, "SMT-05": 97.3, "CMP-01": 88723, "CMP-04": 49.0, "CMP-06": 571, "TAL-01": 56.6, "TAL-02": 2, "TAL-06": 37, "CON-01": 247, "CON-03": null, "CON-05": 23},
-"Vienna":{"LIV-01": 0.88, "LIV-04": 81.0, "LIV-05": 7.17, "LIV-06": 15.8, "GRN-01": 9.9, "GRN-02": 72.4, "GRN-05": 35.2, "SMT-01": 251.9, "SMT-03": 84.38, "SMT-05": 91.9, "CMP-01": 66253, "CMP-04": null, "CMP-06": 63, "TAL-01": 46.3, "TAL-02": 2, "TAL-06": 37, "CON-01": 256, "CON-03": 82, "CON-05": 23},
-"Seoul":{"LIV-01": 0.48, "LIV-04": 85.0, "LIV-05": 4.27, "LIV-06": 30.0, "GRN-01": 25.4, "GRN-02": 48.8, "GRN-05": 61.7, "SMT-01": 320.3, "SMT-03": 87.5, "SMT-05": 97.9, "CMP-01": 51292, "CMP-04": null, "CMP-06": 258, "TAL-01": 67.3, "TAL-02": 8, "TAL-06": 38, "CON-01": 265, "CON-03": 83, "CON-05": 19},
-"Melbourne":{"LIV-01": 0.85, "LIV-04": 84.1, "LIV-05": 4.72, "LIV-06": 7.5, "GRN-01": 7.9, "GRN-02": 84.4, "GRN-05": 47.9, "SMT-01": 248.8, "SMT-03": null, "SMT-05": 96.1, "CMP-01": 40848, "CMP-04": 27.3, "CMP-06": 306, "TAL-01": 53.5, "TAL-02": 6, "TAL-06": 37, "CON-01": 225, "CON-03": 80, "CON-05": 26},
-"Amsterdam":{"LIV-01": 0.69, "LIV-04": 82.1, "LIV-05": 4.89, "LIV-06": 9.9, "GRN-01": 8.9, "GRN-02": 77.6, "GRN-05": 25.0, "SMT-01": 317.8, "SMT-03": 78.13, "SMT-05": 97.0, "CMP-01": 87028, "CMP-04": null, "CMP-06": null, "TAL-01": 52.2, "TAL-02": 2, "TAL-06": 34, "CON-01": 287, "CON-03": 85, "CON-05": 20},
-"London":{"LIV-01": 1.15, "LIV-04": 82.5, "LIV-05": null, "LIV-06": 16.7, "GRN-01": 11.2, "GRN-02": 87.1, "GRN-05": 32.6, "SMT-01": 316.7, "SMT-03": 87.5, "SMT-05": 95.5, "CMP-01": 72186, "CMP-04": 116.3, "CMP-06": 1867, "TAL-01": 74.1, "TAL-02": 9, "TAL-06": 42, "CON-01": 291, "CON-03": 95, "CON-05": 15},
-"New York":{"LIV-01": 5.76, "LIV-04": 77.7, "LIV-05": 5.02, "LIV-06": 10.9, "GRN-01": 7.1, "GRN-02": 71.0, "GRN-05": 21.8, "SMT-01": 391.7, "SMT-03": 90.63, "SMT-05": 94.7, "CMP-01": 91990, "CMP-04": 86.9, "CMP-06": 1717, "TAL-01": 53.0, "TAL-02": 2, "TAL-06": 39, "CON-01": 287, "CON-03": 87, "CON-05": 19},
-"Paris":{"LIV-01": 1.34, "LIV-04": 84.1, "LIV-05": 9.38, "LIV-06": 17.0, "GRN-01": 9.3, "GRN-02": 51.6, "GRN-05": 20.0, "SMT-01": 441.5, "SMT-03": 81.25, "SMT-05": 88.7, "CMP-01": 83089, "CMP-04": 42.0, "CMP-06": 516, "TAL-01": 58.6, "TAL-02": 7, "TAL-06": 41, "CON-01": 301, "CON-03": 88, "CON-05": 21},
-"Toronto":{"LIV-01": 1.98, "LIV-04": 81.8, "LIV-05": 2.21, "LIV-06": 11.6, "GRN-01": 9.4, "GRN-02": 91.7, "GRN-05": 50.6, "SMT-01": 494.5, "SMT-03": 79.17, "SMT-05": 94.4, "CMP-01": 44561, "CMP-04": 52.9, "CMP-06": 433, "TAL-01": 71.0, "TAL-02": 2, "TAL-06": 37, "CON-01": 256, "CON-03": 81, "CON-05": 22},
-"Berlin":{"LIV-01": 0.91, "LIV-04": 81.2, "LIV-05": 5.51, "LIV-06": 11.1, "GRN-01": 11.3, "GRN-02": 68.2, "GRN-05": 30.8, "SMT-01": 212.6, "SMT-03": 88.54, "SMT-05": 93.5, "CMP-01": 59205, "CMP-04": 49.4, "CMP-06": 452, "TAL-01": 48.1, "TAL-02": 3, "TAL-06": 37, "CON-01": 251, "CON-03": 82, "CON-05": 20},
-"Barcelona":{"LIV-01": 0.69, "LIV-04": 84.2, "LIV-05": 4.47, "LIV-06": 13.8, "GRN-01": 10.9, "GRN-02": null, "GRN-05": 42.1, "SMT-01": 338.8, "SMT-03": null, "SMT-05": 95.8, "CMP-01": 52064, "CMP-04": 28.5, "CMP-06": 222, "TAL-01": 46.9, "TAL-02": 5, "TAL-06": 32, "CON-01": 237, "CON-03": 82, "CON-05": null},
-"Dubai":{"LIV-01": 0.69, "LIV-04": 83.1, "LIV-05": 3.35, "LIV-06": 7.8, "GRN-01": 35.0, "GRN-02": 40.6, "GRN-05": null, "SMT-01": 359.0, "SMT-03": 90.63, "SMT-05": 100.0, "CMP-01": null, "CMP-04": null, "CMP-06": 661, "TAL-01": 41.0, "TAL-02": 0, "TAL-06": 33, "CON-01": 296, "CON-03": 94, "CON-05": 18},
-"San Francisco":{"LIV-01": 5.76, "LIV-04": 79.0, "LIV-05": 3.02, "LIV-06": 6.5, "GRN-01": 7.4, "GRN-02": null, "GRN-05": 53.1, "SMT-01": 367.7, "SMT-03": null, "SMT-05": 94.7, "CMP-01": 146853, "CMP-04": 320.8, "CMP-06": 20260, "TAL-01": 46.9, "TAL-02": 0, "TAL-06": 43, "CON-01": 256, "CON-03": 84, "CON-05": 23}
+"Singapore":{"LIV-01": 0.07, "LIV-04": 83.9, "LIV-05": 2.9, "LIV-06": 24.7, "GRN-01": 12.0, "GRN-02": 70.3, "GRN-05": 52.0, "SMT-01": 567.1, "SMT-03": 87.5, "SMT-05": 94.4, "CMP-01": 132570, "CMP-04": 68.1, "CMP-06": 690, "TAL-01": 54.1, "TAL-02": 2, "TAL-06": 48.7, "CON-01": 311, "CON-03": 95, "CON-05": 16},
+"Tokyo":{"LIV-01": 0.23, "LIV-04": 84.9, "LIV-05": 3.26, "LIV-06": 16.0, "GRN-01": 10.8, "GRN-02": 74.8, "GRN-05": 21.4, "SMT-01": 313.7, "SMT-03": 85.42, "SMT-05": 85.5, "CMP-01": 50287, "CMP-04": 14.8, "CMP-06": 81, "TAL-01": 64.2, "TAL-02": 4, "TAL-06": 5.6, "CON-01": 304, "CON-03": 92, "CON-05": 19},
+"Copenhagen":{"LIV-01": 0.84, "LIV-04": 81.5, "LIV-05": 5.79, "LIV-06": 10.7, "GRN-01": 6.9, "GRN-02": 83.7, "GRN-05": 42.0, "SMT-01": 328.2, "SMT-03": 90.63, "SMT-05": 99.8, "CMP-01": 85842, "CMP-04": null, "CMP-06": 842, "TAL-01": 58.2, "TAL-02": 1, "TAL-06": 26.7, "CON-01": 236, "CON-03": 83, "CON-05": 23},
+"Zurich":{"LIV-01": 0.6, "LIV-04": 84.1, "LIV-05": 5.67, "LIV-06": 12.8, "GRN-01": 7.6, "GRN-02": 67.6, "GRN-05": 46.0, "SMT-01": 455.6, "SMT-03": 81.25, "SMT-05": 97.3, "CMP-01": 88723, "CMP-04": 49.0, "CMP-06": 571, "TAL-01": 56.6, "TAL-02": 2, "TAL-06": 44.0, "CON-01": 247, "CON-03": null, "CON-05": 23},
+"Vienna":{"LIV-01": 0.88, "LIV-04": 81.0, "LIV-05": 7.17, "LIV-06": 15.8, "GRN-01": 9.9, "GRN-02": 72.4, "GRN-05": 35.2, "SMT-01": 251.9, "SMT-03": 84.38, "SMT-05": 91.9, "CMP-01": 66253, "CMP-04": null, "CMP-06": 63, "TAL-01": 46.3, "TAL-02": 2, "TAL-06": 40.9, "CON-01": 256, "CON-03": 82, "CON-05": 23},
+"Seoul":{"LIV-01": 0.48, "LIV-04": 85.0, "LIV-05": 4.27, "LIV-06": 30.0, "GRN-01": 25.4, "GRN-02": 48.8, "GRN-05": 61.7, "SMT-01": 320.3, "SMT-03": 87.5, "SMT-05": 97.9, "CMP-01": 51292, "CMP-04": null, "CMP-06": 258, "TAL-01": 67.3, "TAL-02": 8, "TAL-06": 3.9, "CON-01": 265, "CON-03": 83, "CON-05": 19},
+"Melbourne":{"LIV-01": 0.85, "LIV-04": 84.1, "LIV-05": 4.72, "LIV-06": 7.5, "GRN-01": 7.9, "GRN-02": 84.4, "GRN-05": 47.9, "SMT-01": 248.8, "SMT-03": null, "SMT-05": 96.1, "CMP-01": 40848, "CMP-04": 27.3, "CMP-06": 306, "TAL-01": 53.5, "TAL-02": 6, "TAL-06": 35.7, "CON-01": 225, "CON-03": 80, "CON-05": 26},
+"Amsterdam":{"LIV-01": 0.69, "LIV-04": 82.1, "LIV-05": 4.89, "LIV-06": 9.9, "GRN-01": 8.9, "GRN-02": 77.6, "GRN-05": 25.0, "SMT-01": 317.8, "SMT-03": 78.13, "SMT-05": 97.0, "CMP-01": 87028, "CMP-04": null, "CMP-06": null, "TAL-01": 52.2, "TAL-02": 2, "TAL-06": 37.6, "CON-01": 287, "CON-03": 85, "CON-05": 20},
+"London":{"LIV-01": 1.15, "LIV-04": 82.5, "LIV-05": null, "LIV-06": 16.7, "GRN-01": 11.2, "GRN-02": 87.1, "GRN-05": 32.6, "SMT-01": 316.7, "SMT-03": 87.5, "SMT-05": 95.5, "CMP-01": 72186, "CMP-04": 116.3, "CMP-06": 1867, "TAL-01": 74.1, "TAL-02": 9, "TAL-06": 40.6, "CON-01": 291, "CON-03": 95, "CON-05": 15},
+"New York":{"LIV-01": 5.76, "LIV-04": 77.7, "LIV-05": 5.02, "LIV-06": 10.9, "GRN-01": 7.1, "GRN-02": 71.0, "GRN-05": 21.8, "SMT-01": 391.7, "SMT-03": 90.63, "SMT-05": 94.7, "CMP-01": 91990, "CMP-04": 86.9, "CMP-06": 1717, "TAL-01": 53.0, "TAL-02": 2, "TAL-06": 30.8, "CON-01": 287, "CON-03": 87, "CON-05": 19},
+"Paris":{"LIV-01": 1.34, "LIV-04": 84.1, "LIV-05": 9.38, "LIV-06": 17.0, "GRN-01": 9.3, "GRN-02": 51.6, "GRN-05": 20.0, "SMT-01": 441.5, "SMT-03": 81.25, "SMT-05": 88.7, "CMP-01": 83089, "CMP-04": 42.0, "CMP-06": 516, "TAL-01": 58.6, "TAL-02": 7, "TAL-06": 22.7, "CON-01": 301, "CON-03": 88, "CON-05": 21},
+"Toronto":{"LIV-01": 1.98, "LIV-04": 81.8, "LIV-05": 2.21, "LIV-06": 11.6, "GRN-01": 9.4, "GRN-02": 91.7, "GRN-05": 50.6, "SMT-01": 494.5, "SMT-03": 79.17, "SMT-05": 94.4, "CMP-01": 44561, "CMP-04": 52.9, "CMP-06": 433, "TAL-01": 71.0, "TAL-02": 2, "TAL-06": 46.6, "CON-01": 256, "CON-03": 81, "CON-05": 22},
+"Berlin":{"LIV-01": 0.91, "LIV-04": 81.2, "LIV-05": 5.51, "LIV-06": 11.1, "GRN-01": 11.3, "GRN-02": 68.2, "GRN-05": 30.8, "SMT-01": 212.6, "SMT-03": 88.54, "SMT-05": 93.5, "CMP-01": 59205, "CMP-04": 49.4, "CMP-06": 452, "TAL-01": 48.1, "TAL-02": 3, "TAL-06": 24.9, "CON-01": 251, "CON-03": 82, "CON-05": 20},
+"Barcelona":{"LIV-01": 0.69, "LIV-04": 84.2, "LIV-05": 4.47, "LIV-06": 13.8, "GRN-01": 10.9, "GRN-02": null, "GRN-05": 42.1, "SMT-01": 338.8, "SMT-03": null, "SMT-05": 95.8, "CMP-01": 52064, "CMP-04": 28.5, "CMP-06": 222, "TAL-01": 46.9, "TAL-02": 5, "TAL-06": 27.3, "CON-01": 237, "CON-03": 82, "CON-05": null},
+"Dubai":{"LIV-01": 0.69, "LIV-04": 83.1, "LIV-05": 3.35, "LIV-06": 7.8, "GRN-01": 35.0, "GRN-02": 40.6, "GRN-05": null, "SMT-01": 359.0, "SMT-03": 90.63, "SMT-05": 100.0, "CMP-01": null, "CMP-04": null, "CMP-06": 661, "TAL-01": 41.0, "TAL-02": 0, "TAL-06": null, "CON-01": 296, "CON-03": 94, "CON-05": 18},
+"San Francisco":{"LIV-01": 5.76, "LIV-04": 79.0, "LIV-05": 3.02, "LIV-06": 6.5, "GRN-01": 7.4, "GRN-02": null, "GRN-05": 53.1, "SMT-01": 367.7, "SMT-03": null, "SMT-05": 94.7, "CMP-01": 146853, "CMP-04": 320.8, "CMP-06": 20260, "TAL-01": 46.9, "TAL-02": 0, "TAL-06": 32.4, "CON-01": 256, "CON-03": 84, "CON-05": 23}
 },
 "provenance":{
  "LIV-01": {
@@ -1921,6 +1921,126 @@ window.INDEX_DATA = {
     "year": "2026",
     "source": "QS city='San Francisco' (no matches)",
     "note": "True zero per city-proper rule: no top-500 entry carries QS city 'San Francisco'. Stanford (QS city 'Stanford') and UC Berkeley (QS city 'Berkeley') are separate QS cities and excluded."
+   }
+  }
+ },
+ "TAL-06": {
+  "source": "Multi-source stitch — lead: OECD 'Foreign-born population - Cities and FUAs' (OECD.CFE.EDS DSD_FUA_DEMO@DF_ORIGIN v1.2, gives shares directly as % of population); plus UN DESA International Migrant Stock 2024 (Singapore), US Census ACS 2024 1-year B05012 (NY, SF), ONS Census 2021 TS004 via Nomis (London), Statistics Canada Census 2021 Profile SDMX (Toronto), ABS Census 2021 General Community Profile G01 (Melbourne), Stadt Wien MA23/Statistik Austria table 5.2.6 (Vienna), Tokyo Metropolitan Government registration statistics (Tokyo), Korea MOIS 2024 Foreign Residents of Local Governments press release (Seoul)",
+  "url": "https://sdmx.oecd.org/public/rest/data/OECD.CFE.EDS,DSD_FUA_DEMO@DF_ORIGIN,1.2/all",
+  "license": "Mixed open licenses: OECD terms of use; UN CC BY 3.0 IGO; US Census public domain; UK OGL v3 (ONS/Nomis); Statistics Canada Open Licence; ABS CC BY 4.0; Stadt Wien OGD CC BY 4.0; Tokyo Metropolitan Government open data terms; Korea MOIS public release (KOGL)",
+  "edition": "All fetched 2026-07-11; reference years per city 2021-2026 (see perCity)",
+  "retrieved": "2026-07-11",
+  "method": "1) OECD SDMX: fetched full DSD_FUA_DEMO@DF_ORIGIN v1.2 dataset as CSV (62,702 rows) and structure XML. Filtered ORIGIN=FB (Foreign-born), UNIT_MEASURE=PT_POP (Percentage of population), AGE=_T, SEX=_T; took latest TIME_PERIOD at TERRITORIAL_LEVEL=CITY for Amsterdam (NL001C), Barcelona (ES002C), Berlin (DE001C), Copenhagen (DK001C), Paris (FR001C), Zurich (CH002C) — shares used verbatim, no arithmetic. FUA-level values recorded in notes. 2) US: data.census.gov table API (api.census.gov keyless was blocked, redirects to missing_key) ACSDT1Y2024.B05012 for MSAs 35620 and 41860; share = B05012_003E / B05012_001E * 100. 3) London: Nomis NM_2024_1 (Census 2021 TS004) geography E12000007; non-UK-born = Total (8,799,726) - 'Europe: United Kingdom' (5,223,986) = 3,575,740; share = 3,575,740/8,799,726. 4) Toronto: StatCan census profile SDMX DF_CMACA, DGUID 2021S0503535, characteristics 1513 (tota",
+  "perCity": {
+   "Singapore": {
+    "value": 48.7,
+    "raw": 48.72,
+    "year": "2024",
+    "source": "UN DESA International Migrant Stock 2024, destination workbook Table 3 ('International migrant stock as a percentage of the total population'), row 'Singapore' (location code 702, data type B), both s",
+    "note": "CONCEPT: international migrant stock as % of total population, derived from foreign-born data (workbook data-type legend: B = estimates derived from foreign-born population). Country level, but Singapore is a city-state."
+   },
+   "Tokyo": {
+    "value": 5.6,
+    "raw": 5.57,
+    "year": "2026",
+    "source": "TMG 外国人人口 table 1 (ga26ev0100.csv), 地域コード 13000 総数 = 783,701 (Jan 1, 2026); TMG 住民基本台帳による世帯と人口 (jm261v0000_1.csv), 13000 人口総数(日本人+外国人) = 14,077,552 (Jan 1, 2026). 783,701/14,077,552 = 5.567%",
+    "note": "CONCEPT: foreign nationals (registered residents under Basic Resident Registration), NOT foreign-born. Geography: Tokyo Metropolis (Tokyo-to, prefecture incl. 23 wards + Tama + islands). Numerator and denominator from th"
+   },
+   "Copenhagen": {
+    "value": 26.7,
+    "raw": 26.7,
+    "year": "2025",
+    "source": "OECD DSD_FUA_DEMO@DF_ORIGIN v1.2: REF_AREA=DK001C (København), TERRITORIAL_LEVEL=CITY, ORIGIN=FB, UNIT=PT_POP, 2025 = 26.7",
+    "note": "CONCEPT: foreign-born share, published directly as % of population by OECD. FUA (DK001F) 2025 = 22.0 also available. City = OECD 'city' boundary for København."
+   },
+   "Zurich": {
+    "value": 44.0,
+    "raw": 44,
+    "year": "2024",
+    "source": "OECD DSD_FUA_DEMO@DF_ORIGIN v1.2: REF_AREA=CH002C (Zurich), TERRITORIAL_LEVEL=CITY, ORIGIN=FB, UNIT=PT_POP, 2024 = 44.0",
+    "note": "CONCEPT: foreign-born share. FUA (CH002F) 2024 = 35.6 also available."
+   },
+   "Vienna": {
+    "value": 40.9,
+    "raw": 40.91,
+    "year": "2025",
+    "source": "Stadt Wien MA23 open-data table 5.2.6 'Bevölkerung nach Geburtsland' (source Statistik Austria), Stichtag 1.1.2025: Wien total 2,028,289; Geburtsland 'Fremde Insgesamt' (born abroad) 829,778. 829,778/",
+    "note": "CONCEPT: foreign-born (country of birth abroad). City of Vienna (= Bundesland Wien). OECD DF_ORIGIN had no usable total-FB row for AT001 (only FB_EU 31.2 + FB_NONEU 46.1 for 2021, which cannot both be % of total populati"
+   },
+   "Seoul": {
+    "value": 3.9,
+    "raw": 3.93,
+    "year": "2024",
+    "source": "Korea MOIS '2024 지방자치단체 외국인주민 현황' press-release statistical table (PDF p.7, basis 2024-11-01 register-based census): Seoul 총인구 9,335,444; 한국국적을 가지지 아니한 자 (foreign nationals) 소계 367,291. 367,291/9,335,",
+    "note": "CONCEPT: foreign nationals residing in Seoul (register-based census count of persons without Korean nationality), NOT foreign-born; excludes naturalized citizens (47,124) and Korean-born children of foreign residents (36"
+   },
+   "Melbourne": {
+    "value": 35.7,
+    "raw": 35.7,
+    "year": "2021",
+    "source": "ABS Census 2021 General Community Profile GCP_2GMEL.xlsx, sheet G01 'Selected person characteristics by sex', Greater Melbourne (GCCSA 2GMEL): Birthplace: Elsewhere = 1,755,627; Total persons = 4,917,",
+    "note": "CONCEPT: born overseas ('Birthplace: Elsewhere'). Denominator = total persons including birthplace not stated (~4.4%), so this understates the share among stated responses (37.3%). OECD AUS02C ('Greater Melbourne', CITY "
+   },
+   "Amsterdam": {
+    "value": 37.6,
+    "raw": 37.6,
+    "year": "2025",
+    "source": "OECD DSD_FUA_DEMO@DF_ORIGIN v1.2: REF_AREA=NL001C (Amsterdam), TERRITORIAL_LEVEL=CITY, ORIGIN=FB, UNIT=PT_POP, 2025 = 37.6",
+    "note": "CONCEPT: foreign-born share. FUA (NL001F) 2025 = 24.7 also available."
+   },
+   "London": {
+    "value": 40.6,
+    "raw": 40.63,
+    "year": "2021",
+    "source": "ONS Census 2021 table TS004 (Country of birth) via Nomis dataset NM_2024_1, geography E12000007 (London region = Greater London): Total usual residents 8,799,726; 'Europe: United Kingdom' 5,223,986; n",
+    "note": "CONCEPT: born outside the UK, census usual residents. Geography: Greater London (region). OECD UK001C (CITY) 2021 = 35.4 (APS-based, lower) — ONS census used per task instruction."
+   },
+   "New York": {
+    "value": 30.8,
+    "raw": 30.81,
+    "year": "2024",
+    "source": "US Census Bureau ACS 2024 1-year, table B05012, New York-Newark-Jersey City, NY-NJ Metro Area (MSA 35620, GEO_ID 310M700US35620): B05012_003E (foreign-born) 6,143,359 / B05012_001E (total) 19,940,274 ",
+    "note": "CONCEPT: foreign-born. Geography: metropolitan statistical area (Metro level). Fetched via data.census.gov table API because api.census.gov now requires an API key. OECD USA01 2023: CITY 30.5 / FUA 29.2 (cross-check, con"
+   },
+   "Paris": {
+    "value": 22.7,
+    "raw": 22.7,
+    "year": "2022",
+    "source": "OECD DSD_FUA_DEMO@DF_ORIGIN v1.2: REF_AREA=FR001C (Paris), TERRITORIAL_LEVEL=CITY, ORIGIN=FB, UNIT=PT_POP, 2022 = 22.7",
+    "note": "CONCEPT: foreign-born share. FUA (FR001F, ~Île-de-France functional area) 2022 = 20.3 also available."
+   },
+   "Toronto": {
+    "value": 46.6,
+    "raw": 46.6,
+    "year": "2021",
+    "source": "Statistics Canada Census 2021 Profile SDMX (STC_CP,DF_CMACA), DGUID 2021S0503535 (Toronto CMA): characteristic 1515 'Immigrants' 2,862,850 / characteristic 1513 'Total - Immigrant status...' 6,142,880",
+    "note": "CONCEPT: 'immigrants' (foreign-born landed immigrants/permanent residents), population in private households, 25% sample data. EXCLUDES non-permanent residents (249,980 = 4.1%), who are also foreign-born — so total forei"
+   },
+   "Berlin": {
+    "value": 24.9,
+    "raw": 24.9,
+    "year": "2022",
+    "source": "OECD DSD_FUA_DEMO@DF_ORIGIN v1.2: REF_AREA=DE001C (Berlin), TERRITORIAL_LEVEL=CITY, ORIGIN=FB, UNIT=PT_POP, 2022 = 24.9",
+    "note": "CONCEPT: foreign-born share. Only 2021-2022 available for Germany. FUA (DE001F) 2022 = 20.5 also available."
+   },
+   "Barcelona": {
+    "value": 27.3,
+    "raw": 27.3,
+    "year": "2022",
+    "source": "OECD DSD_FUA_DEMO@DF_ORIGIN v1.2: REF_AREA=ES002C (Barcelona), TERRITORIAL_LEVEL=CITY, ORIGIN=FB, UNIT=PT_POP, 2022 = 27.3",
+    "note": "CONCEPT: foreign-born share. FUA (ES002F) 2022 = 21.2 also available."
+   },
+   "Dubai": {
+    "value": null,
+    "year": "n/a",
+    "note": "Null per task instruction: no official foreign-born statistic is published for Dubai; the Emirati/non-Emirati nationality split is a different concept and was not used."
+   },
+   "San Francisco": {
+    "value": 32.4,
+    "raw": 32.4,
+    "year": "2024",
+    "source": "US Census Bureau ACS 2024 1-year, table B05012, San Francisco-Oakland-Fremont, CA Metro Area (MSA 41860, GEO_ID 310M700US41860): B05012_003E (foreign-born) 1,506,259 / B05012_001E (total) 4,648,486 = ",
+    "note": "CONCEPT: foreign-born. Geography: metropolitan statistical area (Metro level; 2023 OMB delineation 'SF-Oakland-Fremont'). OECD USA05 2023: CITY 34.9 / FUA 34.2 — difference reflects boundary/vintage, ACS 2024 MSA used pe"
    }
   }
  }
