@@ -49,26 +49,26 @@ window.INDEX_DATA = {
 {"id": "CON-02", "domain": "Connected", "subtheme": "Global Connectivity", "name": "Global accessibility", "measures": "Travel time to major world hubs", "unit": "hours", "direction": "lower", "dataLevel": "City", "source": "GPCI", "appearsIn": "GPCI (Accessibility)", "pilot": 0, "caveat": "", "contestable": 0, "approx": "none"},
 {"id": "CON-03", "domain": "Connected", "subtheme": "Urban Mobility", "name": "Transit access", "measures": "% residents within 500 m of frequent transit (ITDP PNFT)", "unit": "%", "direction": "higher", "dataLevel": "Metro", "source": "ITDP Atlas (People Near Frequent Transit)", "appearsIn": "—", "pilot": 1, "caveat": "Share of the GHSL urban agglomeration within 500 m of a stop served at least every ~10 min (7am-9pm), GIS-computed by ITDP from open GTFS feeds (2025 network). Where cities publish no usable open feed the Atlas reports zeros — Tokyo, London, Zurich, Melbourne, Amsterdam and Seoul are therefore blank here, NOT zero. San Francisco is the combined San Jose/SF/Oakland area.", "contestable": 0, "approx": "modelled"},
 {"id": "CON-04", "domain": "Connected", "subtheme": "Urban Mobility", "name": "Commute time", "measures": "Average one-way commute", "unit": "minutes", "direction": "lower", "dataLevel": "City", "source": "Numbeo / Moovit", "appearsIn": "—", "pilot": 0, "caveat": "Crowd-sourced component.", "contestable": 0, "approx": "crowd"},
-{"id": "CON-05", "domain": "Connected", "subtheme": "Urban Mobility", "name": "Traffic congestion", "measures": "Extra travel time caused by congestion", "unit": "%", "direction": "lower", "dataLevel": "City", "source": "TomTom Traffic Index", "appearsIn": "—", "pilot": 1, "caveat": "Great free annual data.", "contestable": 0, "approx": "none"}
+{"id": "CON-05", "domain": "Connected", "subtheme": "Urban Mobility", "name": "Traffic congestion", "measures": "Extra travel time caused by congestion", "unit": "%", "direction": "lower", "dataLevel": "City", "source": "TomTom Traffic Index", "appearsIn": "—", "pilot": 1, "caveat": "TomTom Traffic Index \"Ranking 2025\" (full-year 2025, city-center definition): average extra travel time vs free-flow. Seoul is not covered by TomTom — INRIX also excludes Korea (blank).", "contestable": 0, "approx": "none"}
 ],
 "cities":["Singapore", "Tokyo", "Copenhagen", "Zurich", "Vienna", "Seoul", "Melbourne", "Amsterdam", "London", "New York", "Paris", "Toronto", "Berlin", "Barcelona", "Dubai", "San Francisco"],
 "data":{
-"Singapore":{"LIV-01": 0.07, "LIV-04": 83.9, "LIV-05": 2.9, "LIV-06": 24.7, "GRN-01": 12.0, "GRN-02": 70.3, "GRN-05": 52.0, "SMT-01": 567.1, "SMT-03": 87.5, "SMT-05": 94.4, "CMP-01": 132570, "CMP-04": 68.1, "CMP-06": 690, "TAL-01": 54.1, "TAL-02": 2, "TAL-06": 48.7, "CON-01": 311, "CON-03": 28.0, "CON-05": 16},
-"Tokyo":{"LIV-01": 0.23, "LIV-04": 84.9, "LIV-05": 3.26, "LIV-06": 16.0, "GRN-01": 10.8, "GRN-02": 74.8, "GRN-05": 21.4, "SMT-01": 313.7, "SMT-03": 85.42, "SMT-05": 85.5, "CMP-01": 50287, "CMP-04": 14.8, "CMP-06": 81, "TAL-01": 64.2, "TAL-02": 4, "TAL-06": 5.6, "CON-01": 304, "CON-03": null, "CON-05": 19},
-"Copenhagen":{"LIV-01": 0.84, "LIV-04": 81.5, "LIV-05": 5.79, "LIV-06": 10.7, "GRN-01": 6.9, "GRN-02": 83.7, "GRN-05": 42.0, "SMT-01": 328.2, "SMT-03": 90.63, "SMT-05": 99.8, "CMP-01": 85842, "CMP-04": null, "CMP-06": 842, "TAL-01": 58.2, "TAL-02": 1, "TAL-06": 26.7, "CON-01": 236, "CON-03": 74.5, "CON-05": 23},
-"Zurich":{"LIV-01": 0.6, "LIV-04": 84.1, "LIV-05": 5.67, "LIV-06": 12.8, "GRN-01": 7.6, "GRN-02": 67.6, "GRN-05": 46.0, "SMT-01": 455.6, "SMT-03": 81.25, "SMT-05": 97.3, "CMP-01": 88723, "CMP-04": 49.0, "CMP-06": 571, "TAL-01": 56.6, "TAL-02": 2, "TAL-06": 44.0, "CON-01": 247, "CON-03": null, "CON-05": 23},
-"Vienna":{"LIV-01": 0.88, "LIV-04": 81.0, "LIV-05": 7.17, "LIV-06": 15.8, "GRN-01": 9.9, "GRN-02": 72.4, "GRN-05": 35.2, "SMT-01": 251.9, "SMT-03": 84.38, "SMT-05": 91.9, "CMP-01": 66253, "CMP-04": null, "CMP-06": 63, "TAL-01": 46.3, "TAL-02": 2, "TAL-06": 40.9, "CON-01": 256, "CON-03": 86.7, "CON-05": 23},
-"Seoul":{"LIV-01": 0.48, "LIV-04": 85.0, "LIV-05": 4.27, "LIV-06": 30.0, "GRN-01": 25.4, "GRN-02": 48.8, "GRN-05": 61.7, "SMT-01": 320.3, "SMT-03": 87.5, "SMT-05": 97.9, "CMP-01": 51292, "CMP-04": null, "CMP-06": 258, "TAL-01": 67.3, "TAL-02": 8, "TAL-06": 3.9, "CON-01": 265, "CON-03": null, "CON-05": 19},
-"Melbourne":{"LIV-01": 0.85, "LIV-04": 84.1, "LIV-05": 4.72, "LIV-06": 7.5, "GRN-01": 7.9, "GRN-02": 84.4, "GRN-05": 47.9, "SMT-01": 248.8, "SMT-03": null, "SMT-05": 96.1, "CMP-01": 40848, "CMP-04": 27.3, "CMP-06": 306, "TAL-01": 53.5, "TAL-02": 6, "TAL-06": 35.7, "CON-01": 225, "CON-03": null, "CON-05": 26},
-"Amsterdam":{"LIV-01": 0.69, "LIV-04": 82.1, "LIV-05": 4.89, "LIV-06": 9.9, "GRN-01": 8.9, "GRN-02": 77.6, "GRN-05": 25.0, "SMT-01": 317.8, "SMT-03": 78.13, "SMT-05": 97.0, "CMP-01": 87028, "CMP-04": null, "CMP-06": null, "TAL-01": 52.2, "TAL-02": 2, "TAL-06": 37.6, "CON-01": 287, "CON-03": null, "CON-05": 20},
-"London":{"LIV-01": 1.15, "LIV-04": 82.5, "LIV-05": null, "LIV-06": 16.7, "GRN-01": 11.2, "GRN-02": 87.1, "GRN-05": 32.6, "SMT-01": 316.7, "SMT-03": 87.5, "SMT-05": 95.5, "CMP-01": 72186, "CMP-04": 116.3, "CMP-06": 1867, "TAL-01": 74.1, "TAL-02": 9, "TAL-06": 40.6, "CON-01": 291, "CON-03": null, "CON-05": 15},
-"New York":{"LIV-01": 5.76, "LIV-04": 77.7, "LIV-05": 5.02, "LIV-06": 10.9, "GRN-01": 7.1, "GRN-02": 71.0, "GRN-05": 21.8, "SMT-01": 391.7, "SMT-03": 90.63, "SMT-05": 94.7, "CMP-01": 91990, "CMP-04": 86.9, "CMP-06": 1717, "TAL-01": 53.0, "TAL-02": 2, "TAL-06": 30.8, "CON-01": 287, "CON-03": 61.6, "CON-05": 19},
-"Paris":{"LIV-01": 1.34, "LIV-04": 84.1, "LIV-05": 9.38, "LIV-06": 17.0, "GRN-01": 9.3, "GRN-02": 51.6, "GRN-05": 20.0, "SMT-01": 441.5, "SMT-03": 81.25, "SMT-05": 88.7, "CMP-01": 83089, "CMP-04": 42.0, "CMP-06": 516, "TAL-01": 58.6, "TAL-02": 7, "TAL-06": 22.7, "CON-01": 301, "CON-03": 83.0, "CON-05": 21},
-"Toronto":{"LIV-01": 1.98, "LIV-04": 81.8, "LIV-05": 2.21, "LIV-06": 11.6, "GRN-01": 9.4, "GRN-02": 91.7, "GRN-05": 50.6, "SMT-01": 494.5, "SMT-03": 79.17, "SMT-05": 94.4, "CMP-01": 44561, "CMP-04": 52.9, "CMP-06": 433, "TAL-01": 71.0, "TAL-02": 2, "TAL-06": 46.6, "CON-01": 256, "CON-03": 55.7, "CON-05": 22},
-"Berlin":{"LIV-01": 0.91, "LIV-04": 81.2, "LIV-05": 5.51, "LIV-06": 11.1, "GRN-01": 11.3, "GRN-02": 68.2, "GRN-05": 30.8, "SMT-01": 212.6, "SMT-03": 88.54, "SMT-05": 93.5, "CMP-01": 59205, "CMP-04": 49.4, "CMP-06": 452, "TAL-01": 48.1, "TAL-02": 3, "TAL-06": 24.9, "CON-01": 251, "CON-03": 70.5, "CON-05": 20},
-"Barcelona":{"LIV-01": 0.69, "LIV-04": 84.2, "LIV-05": 4.47, "LIV-06": 13.8, "GRN-01": 10.9, "GRN-02": null, "GRN-05": 42.1, "SMT-01": 338.8, "SMT-03": null, "SMT-05": 95.8, "CMP-01": 52064, "CMP-04": 28.5, "CMP-06": 222, "TAL-01": 46.9, "TAL-02": 5, "TAL-06": 27.3, "CON-01": 237, "CON-03": 66.9, "CON-05": null},
-"Dubai":{"LIV-01": 0.69, "LIV-04": 83.1, "LIV-05": 3.35, "LIV-06": 7.8, "GRN-01": 35.0, "GRN-02": 40.6, "GRN-05": null, "SMT-01": 359.0, "SMT-03": 90.63, "SMT-05": 100.0, "CMP-01": null, "CMP-04": null, "CMP-06": 661, "TAL-01": 41.0, "TAL-02": 0, "TAL-06": null, "CON-01": 296, "CON-03": 24.8, "CON-05": 18},
-"San Francisco":{"LIV-01": 5.76, "LIV-04": 79.0, "LIV-05": 3.02, "LIV-06": 6.5, "GRN-01": 7.4, "GRN-02": null, "GRN-05": 53.1, "SMT-01": 367.7, "SMT-03": null, "SMT-05": 94.7, "CMP-01": 146853, "CMP-04": 320.8, "CMP-06": 20260, "TAL-01": 46.9, "TAL-02": 0, "TAL-06": 32.4, "CON-01": 256, "CON-03": 29.6, "CON-05": 23}
+"Singapore":{"LIV-01": 0.07, "LIV-04": 83.9, "LIV-05": 2.9, "LIV-06": 24.7, "GRN-01": 12.0, "GRN-02": 70.3, "GRN-05": 52.0, "SMT-01": 567.1, "SMT-03": 87.5, "SMT-05": 94.4, "CMP-01": 132570, "CMP-04": 68.1, "CMP-06": 690, "TAL-01": 54.1, "TAL-02": 2, "TAL-06": 48.7, "CON-01": 311, "CON-03": 28.0, "CON-05": 43.9},
+"Tokyo":{"LIV-01": 0.23, "LIV-04": 84.9, "LIV-05": 3.26, "LIV-06": 16.0, "GRN-01": 10.8, "GRN-02": 74.8, "GRN-05": 21.4, "SMT-01": 313.7, "SMT-03": 85.42, "SMT-05": 85.5, "CMP-01": 50287, "CMP-04": 14.8, "CMP-06": 81, "TAL-01": 64.2, "TAL-02": 4, "TAL-06": 5.6, "CON-01": 304, "CON-03": null, "CON-05": 44.1},
+"Copenhagen":{"LIV-01": 0.84, "LIV-04": 81.5, "LIV-05": 5.79, "LIV-06": 10.7, "GRN-01": 6.9, "GRN-02": 83.7, "GRN-05": 42.0, "SMT-01": 328.2, "SMT-03": 90.63, "SMT-05": 99.8, "CMP-01": 85842, "CMP-04": null, "CMP-06": 842, "TAL-01": 58.2, "TAL-02": 1, "TAL-06": 26.7, "CON-01": 236, "CON-03": 74.5, "CON-05": 40.2},
+"Zurich":{"LIV-01": 0.6, "LIV-04": 84.1, "LIV-05": 5.67, "LIV-06": 12.8, "GRN-01": 7.6, "GRN-02": 67.6, "GRN-05": 46.0, "SMT-01": 455.6, "SMT-03": 81.25, "SMT-05": 97.3, "CMP-01": 88723, "CMP-04": 49.0, "CMP-06": 571, "TAL-01": 56.6, "TAL-02": 2, "TAL-06": 44.0, "CON-01": 247, "CON-03": null, "CON-05": 48.9},
+"Vienna":{"LIV-01": 0.88, "LIV-04": 81.0, "LIV-05": 7.17, "LIV-06": 15.8, "GRN-01": 9.9, "GRN-02": 72.4, "GRN-05": 35.2, "SMT-01": 251.9, "SMT-03": 84.38, "SMT-05": 91.9, "CMP-01": 66253, "CMP-04": null, "CMP-06": 63, "TAL-01": 46.3, "TAL-02": 2, "TAL-06": 40.9, "CON-01": 256, "CON-03": 86.7, "CON-05": 48.6},
+"Seoul":{"LIV-01": 0.48, "LIV-04": 85.0, "LIV-05": 4.27, "LIV-06": 30.0, "GRN-01": 25.4, "GRN-02": 48.8, "GRN-05": 61.7, "SMT-01": 320.3, "SMT-03": 87.5, "SMT-05": 97.9, "CMP-01": 51292, "CMP-04": null, "CMP-06": 258, "TAL-01": 67.3, "TAL-02": 8, "TAL-06": 3.9, "CON-01": 265, "CON-03": null, "CON-05": null},
+"Melbourne":{"LIV-01": 0.85, "LIV-04": 84.1, "LIV-05": 4.72, "LIV-06": 7.5, "GRN-01": 7.9, "GRN-02": 84.4, "GRN-05": 47.9, "SMT-01": 248.8, "SMT-03": null, "SMT-05": 96.1, "CMP-01": 40848, "CMP-04": 27.3, "CMP-06": 306, "TAL-01": 53.5, "TAL-02": 6, "TAL-06": 35.7, "CON-01": 225, "CON-03": null, "CON-05": 52.9},
+"Amsterdam":{"LIV-01": 0.69, "LIV-04": 82.1, "LIV-05": 4.89, "LIV-06": 9.9, "GRN-01": 8.9, "GRN-02": 77.6, "GRN-05": 25.0, "SMT-01": 317.8, "SMT-03": 78.13, "SMT-05": 97.0, "CMP-01": 87028, "CMP-04": null, "CMP-06": null, "TAL-01": 52.2, "TAL-02": 2, "TAL-06": 37.6, "CON-01": 287, "CON-03": null, "CON-05": 45.7},
+"London":{"LIV-01": 1.15, "LIV-04": 82.5, "LIV-05": null, "LIV-06": 16.7, "GRN-01": 11.2, "GRN-02": 87.1, "GRN-05": 32.6, "SMT-01": 316.7, "SMT-03": 87.5, "SMT-05": 95.5, "CMP-01": 72186, "CMP-04": 116.3, "CMP-06": 1867, "TAL-01": 74.1, "TAL-02": 9, "TAL-06": 40.6, "CON-01": 291, "CON-03": null, "CON-05": 51.6},
+"New York":{"LIV-01": 5.76, "LIV-04": 77.7, "LIV-05": 5.02, "LIV-06": 10.9, "GRN-01": 7.1, "GRN-02": 71.0, "GRN-05": 21.8, "SMT-01": 391.7, "SMT-03": 90.63, "SMT-05": 94.7, "CMP-01": 91990, "CMP-04": 86.9, "CMP-06": 1717, "TAL-01": 53.0, "TAL-02": 2, "TAL-06": 30.8, "CON-01": 287, "CON-03": 61.6, "CON-05": 48.8},
+"Paris":{"LIV-01": 1.34, "LIV-04": 84.1, "LIV-05": 9.38, "LIV-06": 17.0, "GRN-01": 9.3, "GRN-02": 51.6, "GRN-05": 20.0, "SMT-01": 441.5, "SMT-03": 81.25, "SMT-05": 88.7, "CMP-01": 83089, "CMP-04": 42.0, "CMP-06": 516, "TAL-01": 58.6, "TAL-02": 7, "TAL-06": 22.7, "CON-01": 301, "CON-03": 83.0, "CON-05": 40.0},
+"Toronto":{"LIV-01": 1.98, "LIV-04": 81.8, "LIV-05": 2.21, "LIV-06": 11.6, "GRN-01": 9.4, "GRN-02": 91.7, "GRN-05": 50.6, "SMT-01": 494.5, "SMT-03": 79.17, "SMT-05": 94.4, "CMP-01": 44561, "CMP-04": 52.9, "CMP-06": 433, "TAL-01": 71.0, "TAL-02": 2, "TAL-06": 46.6, "CON-01": 256, "CON-03": 55.7, "CON-05": 47.7},
+"Berlin":{"LIV-01": 0.91, "LIV-04": 81.2, "LIV-05": 5.51, "LIV-06": 11.1, "GRN-01": 11.3, "GRN-02": 68.2, "GRN-05": 30.8, "SMT-01": 212.6, "SMT-03": 88.54, "SMT-05": 93.5, "CMP-01": 59205, "CMP-04": 49.4, "CMP-06": 452, "TAL-01": 48.1, "TAL-02": 3, "TAL-06": 24.9, "CON-01": 251, "CON-03": 70.5, "CON-05": 44.6},
+"Barcelona":{"LIV-01": 0.69, "LIV-04": 84.2, "LIV-05": 4.47, "LIV-06": 13.8, "GRN-01": 10.9, "GRN-02": null, "GRN-05": 42.1, "SMT-01": 338.8, "SMT-03": null, "SMT-05": 95.8, "CMP-01": 52064, "CMP-04": 28.5, "CMP-06": 222, "TAL-01": 46.9, "TAL-02": 5, "TAL-06": 27.3, "CON-01": 237, "CON-03": 66.9, "CON-05": 41.1},
+"Dubai":{"LIV-01": 0.69, "LIV-04": 83.1, "LIV-05": 3.35, "LIV-06": 7.8, "GRN-01": 35.0, "GRN-02": 40.6, "GRN-05": null, "SMT-01": 359.0, "SMT-03": 90.63, "SMT-05": 100.0, "CMP-01": null, "CMP-04": null, "CMP-06": 661, "TAL-01": 41.0, "TAL-02": 0, "TAL-06": null, "CON-01": 296, "CON-03": 24.8, "CON-05": 42.7},
+"San Francisco":{"LIV-01": 5.76, "LIV-04": 79.0, "LIV-05": 3.02, "LIV-06": 6.5, "GRN-01": 7.4, "GRN-02": null, "GRN-05": 53.1, "SMT-01": 367.7, "SMT-03": null, "SMT-05": 94.7, "CMP-01": 146853, "CMP-04": 320.8, "CMP-06": 20260, "TAL-01": 46.9, "TAL-02": 0, "TAL-06": 32.4, "CON-01": 256, "CON-03": 29.6, "CON-05": 49.7}
 },
 "provenance":{
  "LIV-01": {
@@ -2149,6 +2149,126 @@ window.INDEX_DATA = {
     "year": "2025",
     "source": "hdc=01461, name='The San Jose / San Francisco / Oakland area', United States, column transit_pnft_2025=0.295899140902484",
     "note": "Agglomeration merges San Jose, San Francisco and Oakland; the share is diluted by lower-frequency South Bay areas, so it understates SF proper."
+   }
+  }
+ },
+ "CON-05": {
+  "source": "TomTom Traffic Index — Ranking",
+  "url": "https://www.tomtom.com/traffic-index/ranking/",
+  "license": "Proprietary TomTom data, publicly published free of charge on tomtom.com; cite with attribution to TomTom Traffic Index (no open-data license)",
+  "edition": "TomTom Traffic Index 2026 edition (site label: 'Ranking 2025'), full-year 2025 data; page fetched 2026-07-11",
+  "retrieved": "2026-07-11",
+  "method": "curl-fetched the ranking page HTML (HTTP 200). The site is Astro: the complete ranking dataset is embedded in the HTML as serialized props on the RankingComponent astro-island (component-url /_astro/Ranking.B7ZbRa4G.js). HTML-unescaped the props attribute, JSON-parsed it, and recursively decoded Astro's [type, value] tuple encoding (0=scalar, 1=array). This yields rankingData.center (492 cities, the default 'City' tab) and rankingData.metro (492, the 'Metro' tab). Verified against the fetched JS bundles that field 'c' is rendered as the 'Average congestion' column with '%' suffix, and constants.js sets the edition year R=2025 ('Ranking 2025', delta column = 'Change from 2024'). Took each target city's 'c' value from the CITY (center) list only — never the metro list — matching by key: singapore, tokyo, copenhagen, zurich, vienna, melbourne, amsterdam, london (UK, not london-ontario), new",
+  "perCity": {
+   "Singapore": {
+    "value": 43.9,
+    "raw": 43.9,
+    "year": "2025",
+    "source": "Singapore, SG (key: singapore, City tab, rank 162)",
+    "note": "Average congestion, city-center definition"
+   },
+   "Tokyo": {
+    "value": 44.1,
+    "raw": 44.1,
+    "year": "2025",
+    "source": "Tokyo, JP (key: tokyo, City tab, rank 160)",
+    "note": "Average congestion, city-center definition"
+   },
+   "Copenhagen": {
+    "value": 40.2,
+    "raw": 40.2,
+    "year": "2025",
+    "source": "Copenhagen, DK (key: copenhagen, City tab, rank 229)",
+    "note": "Average congestion, city-center definition"
+   },
+   "Zurich": {
+    "value": 48.9,
+    "raw": 48.9,
+    "year": "2025",
+    "source": "Zurich, CH (key: zurich, City tab, rank 101)",
+    "note": "Average congestion, city-center definition"
+   },
+   "Vienna": {
+    "value": 48.6,
+    "raw": 48.6,
+    "year": "2025",
+    "source": "Vienna, AT (key: vienna, City tab, rank 104)",
+    "note": "Average congestion, city-center definition"
+   },
+   "Seoul": {
+    "value": null,
+    "year": "2025",
+    "note": "Confirmed absent: no Seoul entry and no South Korea (KR) entries at all in either the City or Metro lists of the TomTom Traffic Index (Japan is covered; South Korea is not)"
+   },
+   "Melbourne": {
+    "value": 52.9,
+    "raw": 52.9,
+    "year": "2025",
+    "source": "Melbourne, AU (key: melbourne, City tab, rank 64)",
+    "note": "Average congestion, city-center definition"
+   },
+   "Amsterdam": {
+    "value": 45.7,
+    "raw": 45.7,
+    "year": "2025",
+    "source": "Amsterdam, NL (key: amsterdam, City tab, rank 139)",
+    "note": "Average congestion, city-center definition"
+   },
+   "London": {
+    "value": 51.6,
+    "raw": 51.6,
+    "year": "2025",
+    "source": "London, UK (key: london, City tab, rank 75)",
+    "note": "UK London taken; a separate 'London, CA' (Ontario, key london-ontario) also exists and was excluded"
+   },
+   "New York": {
+    "value": 48.8,
+    "raw": 48.8,
+    "year": "2025",
+    "source": "New York, NY, US (key: new-york-ny, City tab, rank 102)",
+    "note": "Average congestion, city-center definition"
+   },
+   "Paris": {
+    "value": 40.0,
+    "raw": 40,
+    "year": "2025",
+    "source": "Paris, FR (key: paris, City tab, rank 231)",
+    "note": "Value is exactly 40 (site renders '40%'); population field (9,904,000) suggests a wide Paris region delineation, but this is the City-tab entry"
+   },
+   "Toronto": {
+    "value": 47.7,
+    "raw": 47.7,
+    "year": "2025",
+    "source": "Toronto, CA (key: toronto, City tab, rank 113)",
+    "note": "Average congestion, city-center definition"
+   },
+   "Berlin": {
+    "value": 44.6,
+    "raw": 44.6,
+    "year": "2025",
+    "source": "Berlin, DE (key: berlin, City tab, rank 155)",
+    "note": "Average congestion, city-center definition"
+   },
+   "Barcelona": {
+    "value": 41.1,
+    "raw": 41.1,
+    "year": "2025",
+    "source": "Barcelona, ES (key: barcelona, City tab, rank 209)",
+    "note": "Average congestion, city-center definition"
+   },
+   "Dubai": {
+    "value": 42.7,
+    "raw": 42.7,
+    "year": "2025",
+    "source": "Dubai, AE (key: dubai, City tab, rank 184)",
+    "note": "Average congestion, city-center definition"
+   },
+   "San Francisco": {
+    "value": 49.7,
+    "raw": 49.7,
+    "year": "2025",
+    "source": "San Francisco, CA, US (key: san-francisco-ca, City tab, rank 89)",
+    "note": "Average congestion, city-center definition"
    }
   }
  }
