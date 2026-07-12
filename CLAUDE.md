@@ -1,4 +1,4 @@
-# City Index Workbench — Project Memory
+# Master Index Workbench — Project Memory
 
 ## What this is
 A "build-your-own" city index tool. The insight behind it: liveability / green /
@@ -12,11 +12,21 @@ Live at: https://kr48vr.github.io/master-of-all-indices/
 ## Files
 - `index.html` — the app: the scoring engine plus the UI. Runs as-is on GitHub
   Pages, no build step.
-- `dataset.js` — ALL the data. It sets `window.INDEX_DATA = {...}` and the app
-  reads from it. This is the only file you edit to change data.
+- `dataset.js` — ALL the data (+ `meta` version block and `provenance` per
+  value). It sets `window.INDEX_DATA = {...}` and the app reads from it. This
+  is the only file you edit to change data.
+- `dataset.csv` — flat export of the same data. NEVER edit by hand: regenerate
+  with `node scripts/build-csv.js` after any dataset.js change (CI enforces
+  sync).
+- `scripts/check-integrity.js` — mechanical enforcement of the honesty rules
+  (every value provenanced, blanks explained, flags valid). Run it after any
+  data change; CI runs it on every push/PR.
 - `city_index_blueprint.xlsx` — the human-readable catalog of all 38 measures,
   with each one's source, direction, data level, and caveats. The app does NOT
   read it; it is the reference. READ IT to understand any measure.
+- `SOURCING.md`, `README.md`, `LICENSE.md`, `CITATION.cff` — sourcing plan,
+  public docs, licensing (code MIT / data CC BY-NC-SA 4.0), citation metadata.
+  Bump `meta.version` in dataset.js AND `CITATION.cff` together on release.
 
 ## Current status
 The engine works and is published. Phase 2 (real data) is largely done for the
