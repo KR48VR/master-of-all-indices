@@ -1,4 +1,4 @@
-# Master Index Workbench v1.0.0 (released 2026-07-12) — https://kr48vr.github.io/master-of-all-indices/
+# Master Index Workbench v2.0.0-beta.1 (released 2026-07-12) — https://kr48vr.github.io/master-of-all-indices/
 # Data license: CC BY-NC-SA 4.0 (compilation); individual values inherit source terms recorded in provenance
 # A blank value is honest missing data (see the note column), never a zero.
 city,measure_id,measure,area,subtheme,unit,direction,data_level,approx,value,year,source,note
