@@ -15,7 +15,8 @@ abstract: >-
   Talent, Connected). Every value records its source, reference year, method
   and caveats; missing data is left blank and explained, never estimated.
 authors:
-  - name: "KR48VR"
+  - family-names: "Poon"
+    given-names: "King Wang"
     website: "https://github.com/KR48VR"
 keywords:
   - cities
