@@ -97,19 +97,19 @@ window.INDEX_DATA = {
 "Auckland":{"SMT-01": 283.4, "CMP-01": 55906, "LIV-04": 82.7, "TAL-01": 45.5, "LIV-05": 3.47, "LIV-01": 1.46, "SMT-05": 93.5, "GRN-01": 5.5, "GRN-02": 88.4, "LIV-06": 10.5, "CON-05": 42.2, "CON-03": 37.6, "SMT-03": 80.21, "TAL-02": 2, "CON-01": 46, "TAL-06": 42.5, "GRN-05": null, "CMP-04": null, "CMP-06": 166},
 "Osaka":{"SMT-01": 295.1, "CMP-01": 41497, "LIV-04": 84.2, "TAL-01": 56.9, "LIV-05": 2.92, "LIV-01": 0.23, "SMT-05": 85.5, "GRN-01": 9.4, "GRN-02": 72.2, "LIV-06": 10.6, "CON-05": 42.9, "CON-03": null, "SMT-03": null, "TAL-02": 1, "CON-01": null, "TAL-06": 6.8, "GRN-05": null, "CMP-04": 3.7, "CMP-06": 21},
 "Tel Aviv":{"SMT-01": 366.9, "CMP-01": null, "LIV-04": 83.1, "TAL-01": 60.4, "LIV-05": 4.9, "LIV-01": 1.63, "SMT-05": 88.2, "GRN-01": 17.4, "GRN-02": 65.7, "LIV-06": 20.0, "CON-05": null, "CON-03": 87.9, "SMT-03": null, "TAL-02": 1, "CON-01": 114, "TAL-06": 23.5, "GRN-05": null, "CMP-04": null, "CMP-06": 2111},
-"Hong Kong":{"SMT-01": 431.6, "TAL-02": 5, "CON-03": 52.2, "CON-05": 47.7, "CMP-01": 66154, "LIV-01": 0.38, "SMT-05": 95.8, "GRN-01": 19.8},
-"Taipei":{"SMT-01": 258.2, "TAL-02": 4, "CON-03": null, "CON-05": 43.6, "CMP-01": null, "LIV-01": 0.32, "SMT-05": 88.8, "GRN-01": 15.0},
-"Bangkok":{"SMT-01": 375.6, "TAL-02": 1, "CON-03": null, "CON-05": 67.9, "CMP-01": null, "LIV-01": 4.79, "SMT-05": 90.9, "GRN-01": 23.4},
-"Kuala Lumpur":{"SMT-01": 272.1, "TAL-02": 4, "CON-03": null, "CON-05": 39.1, "CMP-01": null, "LIV-01": 0.73, "SMT-05": 98.0, "GRN-01": 28.3},
-"Jakarta":{"SMT-01": 97.7, "TAL-02": 0, "CON-03": 22.6, "CON-05": 59.8, "CMP-01": null, "LIV-01": 0.3, "SMT-05": 72.8, "GRN-01": 33.8},
-"Manila":{"SMT-01": 198.9, "TAL-02": 0, "CON-03": null, "CON-05": 57.3, "CMP-01": null, "LIV-01": 4.35, "SMT-05": 67.3, "GRN-01": 15.4},
-"Ho Chi Minh City":{"SMT-01": 269.6, "TAL-02": 0, "CON-03": null, "CON-05": 40.3, "CMP-01": null, "LIV-01": 1.54, "SMT-05": 84.2, "GRN-01": 23.5},
-"Mumbai":{"SMT-01": 93.4, "TAL-02": 1, "CON-03": null, "CON-05": 61.5, "CMP-01": null, "LIV-01": 2.82, "SMT-05": 70.0, "GRN-01": 49.5},
-"Abu Dhabi":{"SMT-01": 348.1, "TAL-02": 1, "CON-03": 60.8, "CON-05": 25.5, "CMP-01": null, "LIV-01": 0.69, "SMT-05": 100.0, "GRN-01": 30.9},
-"Shanghai":{"SMT-01": 458.1, "TAL-02": 5, "CON-03": null, "CON-05": null, "CMP-01": null, "LIV-01": 0.5, "SMT-05": 91.6, "GRN-01": 28.4},
-"Beijing":{"SMT-01": 331.9, "TAL-02": 7, "CON-03": null, "CON-05": null, "CMP-01": null, "LIV-01": 0.5, "SMT-05": 91.6, "GRN-01": 31.0},
-"Shenzhen":{"SMT-01": 314.9, "TAL-02": 2, "CON-03": null, "CON-05": null, "CMP-01": null, "LIV-01": 0.5, "SMT-05": 91.6, "GRN-01": 17.3},
-"Delhi":{"SMT-01": 120.5, "TAL-02": 2, "CON-03": null, "CON-05": 55.4, "CMP-01": null, "LIV-01": 2.82, "SMT-05": 70.0, "GRN-01": 107.0}
+"Hong Kong":{"SMT-01": 431.6, "TAL-02": 5, "CON-03": 52.2, "CON-05": 47.7, "CMP-01": 66154, "LIV-01": 0.38, "SMT-05": 95.8, "GRN-01": 19.8, "GRN-02": 95.7},
+"Taipei":{"SMT-01": 258.2, "TAL-02": 4, "CON-03": null, "CON-05": 43.6, "CMP-01": null, "LIV-01": 0.32, "SMT-05": 88.8, "GRN-01": 15.0, "GRN-02": null},
+"Bangkok":{"SMT-01": 375.6, "TAL-02": 1, "CON-03": null, "CON-05": 67.9, "CMP-01": null, "LIV-01": 4.79, "SMT-05": 90.9, "GRN-01": 23.4, "GRN-02": 11.8},
+"Kuala Lumpur":{"SMT-01": 272.1, "TAL-02": 4, "CON-03": null, "CON-05": 39.1, "CMP-01": null, "LIV-01": 0.73, "SMT-05": 98.0, "GRN-01": 28.3, "GRN-02": 46.1},
+"Jakarta":{"SMT-01": 97.7, "TAL-02": 0, "CON-03": 22.6, "CON-05": 59.8, "CMP-01": null, "LIV-01": 0.3, "SMT-05": 72.8, "GRN-01": 33.8, "GRN-02": 24.2},
+"Manila":{"SMT-01": 198.9, "TAL-02": 0, "CON-03": null, "CON-05": 57.3, "CMP-01": null, "LIV-01": 4.35, "SMT-05": 67.3, "GRN-01": 15.4, "GRN-02": 28.7},
+"Ho Chi Minh City":{"SMT-01": 269.6, "TAL-02": 0, "CON-03": null, "CON-05": 40.3, "CMP-01": null, "LIV-01": 1.54, "SMT-05": 84.2, "GRN-01": 23.5, "GRN-02": 30.4},
+"Mumbai":{"SMT-01": 93.4, "TAL-02": 1, "CON-03": null, "CON-05": 61.5, "CMP-01": null, "LIV-01": 2.82, "SMT-05": 70.0, "GRN-01": 49.5, "GRN-02": 35.3},
+"Abu Dhabi":{"SMT-01": 348.1, "TAL-02": 1, "CON-03": 60.8, "CON-05": 25.5, "CMP-01": null, "LIV-01": 0.69, "SMT-05": 100.0, "GRN-01": 30.9, "GRN-02": 37.6},
+"Shanghai":{"SMT-01": 458.1, "TAL-02": 5, "CON-03": null, "CON-05": null, "CMP-01": null, "LIV-01": 0.5, "SMT-05": 91.6, "GRN-01": 28.4, "GRN-02": 29.9},
+"Beijing":{"SMT-01": 331.9, "TAL-02": 7, "CON-03": null, "CON-05": null, "CMP-01": null, "LIV-01": 0.5, "SMT-05": 91.6, "GRN-01": 31.0, "GRN-02": null},
+"Shenzhen":{"SMT-01": 314.9, "TAL-02": 2, "CON-03": null, "CON-05": null, "CMP-01": null, "LIV-01": 0.5, "SMT-05": 91.6, "GRN-01": 17.3, "GRN-02": 21.9},
+"Delhi":{"SMT-01": 120.5, "TAL-02": 2, "CON-03": null, "CON-05": 55.4, "CMP-01": null, "LIV-01": 2.82, "SMT-05": 70.0, "GRN-01": 107.0, "GRN-02": 43.6}
 },
 "provenance":{
  "LIV-01": {
@@ -2551,6 +2551,82 @@ window.INDEX_DATA = {
     "year": "2021",
     "source": "City Code IL_TEL_AVIV_YAFO / City Name 'Tel Aviv-Yafo (Tel Aviv-Jaffa)' (Israel)",
     "note": "col [b] pop. within 400m walk of open public space; raw 65.70408763024312"
+   },
+   "Hong Kong": {
+    "value": 95.7,
+    "year": "2020",
+    "source": "Hong Kong, Hong Kong (CN_HONG_KONG)",
+    "note": "UN-Habitat SDG 11.7.1, % urban population within 400m of open public space; raw 95.7067"
+   },
+   "Taipei": {
+    "value": null,
+    "year": "n/a",
+    "note": "Not in UN-Habitat SDG 11.7.1 city sample (no Taipei/Taiwan row in sdg_11-7-1.csv) - null"
+   },
+   "Bangkok": {
+    "value": 11.8,
+    "year": "2020",
+    "source": "Krung Thep (Bangkok) (TH_BANGKOK)",
+    "note": "raw 11.7699"
+   },
+   "Kuala Lumpur": {
+    "value": 46.1,
+    "year": "2020",
+    "source": "Kuala Lumpur (MY_KUALA_LUMPUR)",
+    "note": "raw 46.1299"
+   },
+   "Jakarta": {
+    "value": 24.2,
+    "year": "2020",
+    "source": "Jakarta (ID_JAKARTA)",
+    "note": "raw 24.1664"
+   },
+   "Manila": {
+    "value": 28.7,
+    "year": "2020",
+    "source": "Manila (PH_MANILA)",
+    "note": "raw 28.7472; City of Manila, not Metro Manila"
+   },
+   "Ho Chi Minh City": {
+    "value": 30.4,
+    "year": "2020",
+    "source": "Thanh Pho Ho Chi Minh (Ho Chi Minh City) (VN_THANH_PHO_HO_CHI_MINH)",
+    "note": "raw 30.3985"
+   },
+   "Mumbai": {
+    "value": 35.3,
+    "year": "2020",
+    "source": "Mumbai (Bombay) (IN_MUMBAI)",
+    "note": "raw 35.3464"
+   },
+   "Abu Dhabi": {
+    "value": 37.6,
+    "year": "2020",
+    "source": "Abu Zaby (Abu Dhabi) (AE_ABU_ZABY)",
+    "note": "raw 37.5679"
+   },
+   "Shanghai": {
+    "value": 29.9,
+    "year": "2020",
+    "source": "Shanghai (CN_SHANGHAI)",
+    "note": "raw 29.9136"
+   },
+   "Beijing": {
+    "value": null,
+    "year": "n/a",
+    "note": "Not in UN-Habitat SDG 11.7.1 city sample - checked all 35 China rows and pinyin/Peking variants; no Beijing row exists - null"
+   },
+   "Shenzhen": {
+    "value": 21.9,
+    "year": "2020",
+    "source": "Shenzhen (CN_SHENZHEN_GUANGDONG)",
+    "note": "raw 21.9394"
+   },
+   "Delhi": {
+    "value": 43.6,
+    "year": "2020",
+    "source": "Delhi (IN_DELHI)",
+    "note": "raw 43.5836"
    }
   }
  },
