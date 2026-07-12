@@ -4,6 +4,7 @@
 // CLAUDE.md rule 3). A null/absent value is honest missing data — never
 // fill one with a guess. The 19 non-pilot measures have no data yet.
 window.INDEX_DATA = {
+"meta":{"name": "Master Index Workbench", "version": "1.0.0", "released": "2026-07-12", "dataLicense": "CC BY-NC-SA 4.0 (compilation); individual values inherit source terms recorded in provenance", "codeLicense": "MIT", "url": "https://kr48vr.github.io/master-of-all-indices/"},
 "domains":[
 {"id": "Liveable", "tint": "#F6C99A", "ink": "#8a4b12"},
 {"id": "Green", "tint": "#A9CE9C", "ink": "#2f5d29"},
