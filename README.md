@@ -27,6 +27,25 @@ The [integrity workflow](.github/workflows/integrity.yml) fails any change that
 adds a value without provenance, breaks a flag, or lets `dataset.csv` drift
 from `dataset.js`.
 
+## Why so small?
+
+Conventional indices cover 100–200 cities and dozens of indicators. This one is
+deliberately smaller — every cell must meet the same bar, or stay blank.
+
+| | Conventional global index | This workbench |
+|---|---|---|
+| Where a number comes from | a sources appendix, at best | click it: source, year, method, caveat |
+| Missing data | filled by estimation, invisibly | left blank, explained, counted against coverage |
+| Approximations | undisclosed | badged per measure, tallied in the UI |
+| Weights & method | fixed by the publisher | yours to change; ranking rebuilds live |
+| Robustness | asserted | measured (drop-one-measure rank ranges, in the UI) |
+| The data | paywalled or PDF | versioned CSV download, licensed |
+| The rules | an editorial promise | a public automated check on every change |
+
+Conventional indices are genuinely better at breadth, long time series and
+expert judgement where hard data doesn't exist. If you need 200 cities, use
+them. If you need to check the receipts, you're in the right place.
+
 ## What's in the box
 
 | File | What it is |

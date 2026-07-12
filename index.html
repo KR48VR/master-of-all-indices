@@ -202,6 +202,19 @@ button{font-family:inherit}
 .mstat{border:1px solid var(--line); border-radius:10px; padding:10px 14px; background:var(--paper); min-width:118px;}
 .mstat .n{font-family:"IBM Plex Mono",monospace; font-size:19px; font-weight:600; color:var(--ink);}
 .mstat .l{font-size:10.5px; color:var(--ink3); letter-spacing:.04em; margin-top:2px;}
+.methods table.cmp{border-collapse:collapse; margin:12px 0 12px; font-size:12.5px; max-width:76ch;}
+.methods table.cmp th{font-family:"IBM Plex Mono",monospace; font-size:10px; letter-spacing:.1em;
+  text-transform:uppercase; color:var(--ink3); text-align:left; font-weight:600; padding:7px 14px 7px 0;}
+.methods table.cmp td{border-top:1px solid var(--line2); padding:8px 14px 8px 0; vertical-align:top;
+  color:var(--ink2); line-height:1.5;}
+.methods table.cmp td:first-child{font-weight:600; color:var(--ink); white-space:nowrap; padding-right:18px;}
+.methods table.cmp td:last-child{color:var(--ink);}
+@media(max-width:700px){ .methods table.cmp td:first-child{white-space:normal} }
+
+/* stability check */
+.stab{font-family:"IBM Plex Mono",monospace; font-size:10.5px; color:var(--ink2); text-align:right;
+  background:var(--indigo-soft); border:1px solid var(--line); border-radius:6px; padding:2px 7px; cursor:help;}
+#stabbtn{margin-left:8px}
 </style>
 </head>
 <body>
@@ -209,7 +222,8 @@ button{font-family:inherit}
   <div class="brand">
     <div class="kick">Modular City Index &middot; <span id="ver">v1.0</span></div>
     <h1>Master Index Workbench</h1>
-    <p>Pick the big areas, mix them, add or drop any measure &mdash; and watch the ranking rebuild live. Every approximation stays visible.</p>
+    <p>Pick the big areas, mix them, add or drop any measure &mdash; and watch the ranking rebuild live. Every
+    approximation stays visible. Smaller than conventional indices &mdash; and able to prove every number they can't.</p>
     <a class="mlink" href="#methods">Why trust this? Methods &amp; choices &darr;</a>
   </div>
   <div class="flag" role="note">
@@ -238,7 +252,10 @@ button{font-family:inherit}
   <main class="readout">
     <div class="rhead">
       <h2>Ranking</h2>
-      <div class="rstat" id="rstat"></div>
+      <div>
+        <span class="rstat" id="rstat"></span>
+        <button class="chip" id="stabbtn" title="Rule 5, 'does it wobble': re-runs the index once per active measure, each time with that measure removed, and shows every city's best and worst rank across those runs. Narrow range = robust position.">Stability check</button>
+      </div>
     </div>
     <div class="scale"><span>0</span><span>index score</span><span>100</span></div>
     <div id="rows"></div>
@@ -312,6 +329,25 @@ button{font-family:inherit}
         <li><b>The bar that matters is not the counts</b> but: at least 85% of cells filled, 100% of filled cells with
         provenance, and every blank explained. We would rather be the reference for 50 cities than a rumour about 200.</li>
       </ul>
+
+      <h4>Why so small? How this compares</h4>
+      <p>Conventional indices cover 100&ndash;200 cities and dozens of indicators. This workbench is deliberately
+      smaller &mdash; not because rigour is easier at this size, but because we refuse to add a cell that can't meet
+      the bar. The honest comparison:</p>
+      <table class="cmp">
+        <tr><th></th><th>Conventional global index</th><th>This workbench</th></tr>
+        <tr><td>Where a number comes from</td><td>a sources appendix, at best</td><td>click it: source, year, method, caveat</td></tr>
+        <tr><td>Missing data</td><td>filled by estimation or analyst judgement, invisibly</td><td>left blank, explained, counted against coverage</td></tr>
+        <tr><td>Approximations</td><td>undisclosed</td><td>badged per measure, tallied above the ranking</td></tr>
+        <tr><td>Weights &amp; method</td><td>fixed by the publisher</td><td>yours to change; the ranking rebuilds live</td></tr>
+        <tr><td>Robustness</td><td>asserted</td><td>measured: the stability check shows each city's rank range when any one measure is dropped</td></tr>
+        <tr><td>The data itself</td><td>paywalled, or locked in a PDF</td><td>versioned CSV download, licensed</td></tr>
+        <tr><td>The rules</td><td>an editorial promise</td><td>a public automated check on every change</td></tr>
+        <tr><td>Size</td><td>100&ndash;200 cities</td><td>16 today, ~50 by design &mdash; every cell held to the same bar</td></tr>
+      </table>
+      <p>Conventional indices are genuinely better at breadth, long time series, and expert judgement where hard data
+      does not exist. If you need 200 cities, use them. If you need to check the receipts &mdash; and to see how much
+      a ranking wobbles when a measure is dropped &mdash; you're in the right place.</p>
 
       <h4>Known limits</h4>
       <p>Reference years are mixed within measures (each value shows its own). Some cities carry state- or
@@ -406,7 +442,7 @@ function computeIndex(P, state){
 
 // ---------------- STATE ----------------
 const state = {
-  domOn:{}, varOn:{}, domWeight:{}, method:'additive', expanded:null, prevRanks:{}
+  domOn:{}, varOn:{}, domWeight:{}, method:'additive', expanded:null, prevRanks:{}, stability:false
 };
 P.domains.forEach(d=>{ state.domOn[d.id]=true; state.domWeight[d.id]=1; });
 P.variables.forEach(v=>{ state.varOn[v.id] = !!v.pilot; });
@@ -507,17 +543,39 @@ function renderApprox(){
 
 // ---------------- READOUT RENDER ----------------
 let lastRows=[];
+let lastStab=null;
+
+// Rule 5, "does it wobble": re-run the (unchanged) engine once per active
+// measure, each time with that measure removed; record every city's best and
+// worst rank across those runs. Reads engine output only — no scoring change.
+function computeStability(){
+  const act=[...activeSet()];
+  if(act.length<2) return null;
+  const ranges={};
+  act.forEach(drop=>{
+    const sub=new Set(act.filter(id=>id!==drop));
+    computeIndex(P,{activeVars:sub, domainWeights:state.domWeight, method:state.method}).forEach(r=>{
+      if(r.composite===null) return;
+      const g=ranges[r.city]||(ranges[r.city]={min:r.rank,max:r.rank});
+      if(r.rank<g.min)g.min=r.rank; if(r.rank>g.max)g.max=r.rank;
+    });
+  });
+  return ranges;
+}
+
 function recompute(reorder){
   const prev={}; lastRows.forEach(r=>prev[r.city]=r.rank);
   const rows=computeIndex(P,{activeVars:activeSet(), domainWeights:state.domWeight, method:state.method});
   rows.forEach(r=> r.delta = (prev[r.city]!==undefined)? prev[r.city]-r.rank : 0);
   lastRows=rows;
+  lastStab = state.stability ? computeStability() : null;
   renderRows(rows);
   renderControls_light();
   // stat line
   const nA=activeSet().size;
   document.getElementById('rstat').innerHTML =
-    `<span class="mono">${rows.filter(r=>r.composite!==null).length}</span> cities &middot; <span class="mono">${nA}</span> measures &middot; method: <span class="mono">${state.method==='geometric'?'balanced':'simple average'}</span>`;
+    `<span class="mono">${rows.filter(r=>r.composite!==null).length}</span> cities &middot; <span class="mono">${nA}</span> measures &middot; method: <span class="mono">${state.method==='geometric'?'balanced':'simple average'}</span>` +
+    (state.stability?` &middot; <span class="mono">#a&ndash;b</span> = best&ndash;worst rank when any one measure is dropped`:'');
 }
 function renderControls_light(){ // update counts + approx without rebuilding sliders focus
   document.querySelectorAll('.dcard').forEach((card,i)=>{
@@ -563,6 +621,7 @@ function renderRows(rows){
         ${bar}
       </div>
       <div class="rright">
+        ${(state.stability && lastStab && lastStab[r.city] && r.composite!==null)?`<div class="stab" title="Best and worst rank for ${r.city} across re-runs each dropping one active measure. Narrow = robust.">#${lastStab[r.city].min}–${lastStab[r.city].max}</div>`:''}
         <div class="cov ${covWarn?'warn':''}">${covTxt}</div>
         <div class="score mono">${r.composite===null?'—':r.composite.toFixed(1)}</div>
       </div>`;
@@ -683,6 +742,9 @@ function showProv(vid, city, anchor){
     set('m-rel', P.meta.released);
   }
 })();
+
+const stabBtn=document.getElementById('stabbtn');
+stabBtn.onclick=()=>{ state.stability=!state.stability; stabBtn.classList.toggle('act', state.stability); recompute(true); };
 
 renderControls();
 recompute(true);
