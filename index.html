@@ -162,6 +162,26 @@ button{font-family:inherit}
 .tip{position:relative}
 @media(prefers-reduced-motion:reduce){ *{transition:none!important} }
 .foot{margin-top:26px; font-size:11px; color:var(--ink3); line-height:1.6}
+
+/* provenance popover */
+.braw.plink{cursor:pointer; text-decoration:underline dotted var(--amber); text-underline-offset:2px; border-radius:3px;}
+.braw.plink:hover{color:var(--amber)}
+.provpop{position:fixed; z-index:60; width:min(360px, calc(100vw - 24px)); max-height:min(430px,70vh);
+  overflow:auto; background:var(--panel); border:1px solid #EAD4A6; border-radius:12px;
+  box-shadow:0 10px 34px rgba(27,31,36,.16); padding:14px 15px 13px; font-size:12px; color:var(--ink2);}
+.provpop .ph{display:flex; align-items:baseline; gap:8px; justify-content:space-between; margin-bottom:2px;}
+.provpop .pt{font-family:"Fraunces",serif; font-size:15px; color:var(--ink); font-weight:600;}
+.provpop .px{border:none; background:none; cursor:pointer; color:var(--ink3); font-size:15px; line-height:1; padding:2px 4px;}
+.provpop .px:hover{color:var(--ink)}
+.provpop .pv{font-family:"IBM Plex Mono",monospace; font-size:13px; color:var(--ink); margin:2px 0 8px;}
+.provpop .pv .py{color:var(--ink3); font-size:11px; margin-left:7px;}
+.provpop dl{margin:0; display:grid; grid-template-columns:74px 1fr; gap:4px 10px;}
+.provpop dt{font-family:"IBM Plex Mono",monospace; font-size:9.5px; letter-spacing:.1em;
+  text-transform:uppercase; color:var(--ink3); padding-top:1px;}
+.provpop dd{margin:0; line-height:1.45; overflow-wrap:anywhere;}
+.provpop dd a{color:var(--amber); text-decoration:underline dotted; overflow-wrap:anywhere;}
+.provpop .pnull{color:var(--amber); font-style:italic}
+.provhint{color:var(--ink3)}
 </style>
 </head>
 <body>
@@ -461,15 +481,81 @@ function breakdown(r){
     let vars = r.domVars[d].map(x=>{
       const v=varById[x.id];
       const sc = x.score===null? `<span class="bknone">no data</span>` : `<span class="bsc mono">${x.score.toFixed(0)}</span>`;
+      const hasProv = !!(P.provenance && P.provenance[v.id] && P.provenance[v.id].perCity && P.provenance[v.id].perCity[r.city]);
+      const cls = hasProv ? 'braw mono plink' : 'braw mono';
+      const attrs = hasProv ? ` data-vid="${v.id}" role="button" tabindex="0" title="Where does this number come from?"` : '';
       return `<div class="bkvar"><span class="bn" title="${v.name}">${v.name}</span>
-        <span class="braw mono">${fmtRaw(v,x.raw)}</span> ${badgeHTML(v)} ${sc}</div>`;
+        <span class="${cls}"${attrs}>${fmtRaw(v,x.raw)}</span> ${badgeHTML(v)} ${sc}</div>`;
     }).join('');
     const srcs=[...new Set(r.domVars[d].map(x=>varById[x.id].source))].join(' · ');
-    col.innerHTML=`<div class="dh"><span class="dn">${d}</span><span class="ds mono">${r.domScores[d].toFixed(1)}</span></div>${vars}<div class="bksrc">Sources: ${srcs}</div>`;
+    col.innerHTML=`<div class="dh"><span class="dn">${d}</span><span class="ds mono">${r.domScores[d].toFixed(1)}</span></div>${vars}<div class="bksrc">Sources: ${srcs}${P.provenance?' · <span class="provhint">click a value for its source</span>':''}</div>`;
+    col.querySelectorAll('.braw.plink').forEach(el=>{
+      const open=(e)=>{ e.stopPropagation(); showProv(el.dataset.vid, r.city, el); };
+      el.onclick=open;
+      el.onkeydown=(e)=>{ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); open(e); } };
+    });
     grid.appendChild(col);
   });
   box.appendChild(grid);
   return box;
+}
+
+// ---- provenance popover ("click a number to see where it came from") ----
+let provEl=null;
+function closeProv(){ if(provEl){ provEl.remove(); provEl=null; } }
+document.addEventListener('click', (e)=>{ if(provEl && !provEl.contains(e.target)) closeProv(); });
+document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') closeProv(); });
+
+function showProv(vid, city, anchor){
+  closeProv();
+  const v=varById[vid];
+  const prov=(P.provenance||{})[vid]||{}; const pc=(prov.perCity||{})[city]||{};
+  const pop=document.createElement('div'); pop.className='provpop'; pop.setAttribute('role','dialog');
+  pop.onclick=(e)=>e.stopPropagation();
+
+  const head=document.createElement('div'); head.className='ph';
+  const t=document.createElement('span'); t.className='pt'; t.textContent=`${v.name} — ${city}`;
+  const x=document.createElement('button'); x.className='px'; x.setAttribute('aria-label','close'); x.textContent='✕';
+  x.onclick=closeProv;
+  head.appendChild(t); head.appendChild(x); pop.appendChild(head);
+
+  const val=document.createElement('div'); val.className='pv';
+  if(pc.value===null||pc.value===undefined){
+    val.innerHTML='<span class="pnull">no data — an honest blank</span>';
+  } else {
+    val.textContent=fmtRaw(v, pc.value);
+    const y=document.createElement('span'); y.className='py'; y.textContent=pc.year?`(${pc.year})`:''; val.appendChild(y);
+  }
+  pop.appendChild(val);
+
+  const dl=document.createElement('dl');
+  const row=(k,val,isLink)=>{
+    if(val===undefined||val===null||val==='') return;
+    const dt=document.createElement('dt'); dt.textContent=k;
+    const dd=document.createElement('dd');
+    if(isLink){ const a=document.createElement('a'); a.href=val; a.target='_blank'; a.rel='noopener'; a.textContent=val; dd.appendChild(a); }
+    else if(typeof val==='object'){ dd.textContent=JSON.stringify(val); }
+    else dd.textContent=val;
+    dl.appendChild(dt); dl.appendChild(dd);
+  };
+  row('Source', pc.source);
+  row('Note', pc.note);
+  Object.keys(pc).forEach(k=>{ if(!['value','year','source','note'].includes(k)) row(k, pc[k]); });
+  row('Dataset', prov.source);
+  row('Edition', prov.edition);
+  row('Retrieved', prov.retrieved);
+  row('License', prov.license);
+  if(prov.url && /^https?:/.test(prov.url)) row('Link', prov.url, true); else row('Link', prov.url);
+  row('Method', prov.method);
+  row('Caveat', v.caveat);
+  pop.appendChild(dl);
+  document.body.appendChild(pop);
+
+  const r=anchor.getBoundingClientRect(); const pw=pop.offsetWidth, ph=pop.offsetHeight;
+  let left=Math.min(r.left, window.innerWidth-pw-12); left=Math.max(12,left);
+  let top=r.bottom+8; if(top+ph>window.innerHeight-10) top=Math.max(10, r.top-ph-8);
+  pop.style.left=left+'px'; pop.style.top=top+'px';
+  provEl=pop;
 }
 
 renderControls();
