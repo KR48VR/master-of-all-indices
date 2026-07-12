@@ -77,6 +77,16 @@ for (const v of P.variables) {
   }
 }
 
+// sourced measures must have an explicit cell (value or explained null) for EVERY city —
+// a missing key would silently evade the explained-blank rule above
+for (const v of P.variables) {
+  if (!prov[v.id]) continue;
+  for (const city of P.cities) {
+    ok(v.id in (P.data[city] || {}),
+      `${city}/${v.id}: DATA KEY MISSING — sourced measure has no cell for this city (not even an explained blank)`);
+  }
+}
+
 if (errs.length) {
   console.error(`INTEGRITY FAIL — ${errs.length} problem(s):`);
   errs.forEach(e => console.error('  - ' + e));
