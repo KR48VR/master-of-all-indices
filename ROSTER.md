@@ -102,27 +102,64 @@ For calibration: the current 16 cities average 17.6/19 (93%) actually filled.
    official NBS/municipal statistics, which carry known comparability debates. Usable
    with explicit caveats — but that is a deliberate editorial position to take.
 
-## Decisions required before the roster is fixed
+## Decisions taken (2026-07-12, maintainer)
 
-1. **Selection rule** (to be published on the site once chosen):
-   - *Option A — coverage floor*: admit candidates projecting ≥85% with manual digs.
-     Result: ~40-seat roster, excludes Beijing/Shanghai/Shenzhen/Delhi (~74–79%).
-   - *Option B — floor + disclosed exceptions*: as A, plus named world cities admitted
-     below the floor with coverage prominently shown. Recommended by the maintainer's
-     assistant: the UI already makes thin coverage impossible to miss.
-   - *Option C — relevance first*: admit the ~50 most compared cities regardless,
-     coverage disclosed. Maximum representativeness, lowest average coverage.
-2. **China statistics stance**: accept official NBS/municipal data with caveats, or hold
-   mainland cities out until independent sources improve.
-3. **Within-metro judgment calls**: LOSI's Philippines entry is Quezon City, not Manila
-   proper; similar calls will recur (documented per value at fill time, as in v1.0).
+1. **Selection rule: Option B — coverage floor with named exceptions.**
+   The operational floor: a city is admitted by rule if it projects (or, for
+   incumbents, actually has) **no more than 3 honest blanks out of the 19 measures
+   (≥84% cell coverage)**. Cities below the floor may be admitted only as **named
+   exceptions**, listed here with reasons, their thinner coverage displayed by the
+   app as usual. The site's published bar (≥85% cell coverage) applies to the
+   index-wide average, which the roster below meets comfortably (~92% projected).
+
+2. **Mainland-China statistics: accepted, with blunt caveats.**
+   Where the only source for a Chinese city's value is official NBS/municipal
+   statistics, the value may be used; its provenance and caveat must state that it
+   is an official statistic for which independent verification is not possible.
+   This mirrors existing practice (crowd-sourced values are flagged, computed
+   values disclose their arithmetic). Any value that cannot even be verified as
+   officially published stays blank.
+
+3. **Within-metro judgment calls** (e.g. LOSI's Philippines entry is Quezon City,
+   not Manila proper) are decided at fill time and documented per value, as in v1.0.
+
+## The v2.0 roster (55 cities, frozen on merge of this document)
+
+Applying the rule to the whole candidate pool — incumbents included, because a rule
+that exempts incumbents is not a rule — yields **51 cities by floor and 4 by
+exception**. The target said ~50; the rule yields 55; we keep 55 rather than trim by
+taste, which would reintroduce the cherry-picking the rule exists to prevent.
+
+**Incumbents passing the floor (15):** Singapore, Tokyo, Copenhagen, Zurich, Vienna,
+Seoul, Melbourne, Amsterdam, London, New York, Paris, Toronto, Berlin, Barcelona,
+San Francisco.
+
+**New admissions by floor (35):** Stockholm, Oslo, Helsinki, Madrid, Milan, Rome,
+Munich, Frankfurt, Hamburg, Brussels, Dublin, Lisbon, Prague, Warsaw, Istanbul,
+Montreal, Vancouver, Chicago, Boston, Los Angeles, Seattle, Washington DC, Sydney,
+Auckland, Osaka, Tel Aviv, Abu Dhabi, Hong Kong, Taipei, Bangkok, Kuala Lumpur,
+Jakarta, Manila, Ho Chi Minh City, Mumbai.
+
+**Named exceptions (5):**
+- **Dubai** (incumbent, 15/19 actual = 79%): global hub; no foreign-born statistic,
+  no PPP metro GDP, no published recycling rate.
+- **Shanghai** (15/19 projected) and **Shenzhen** (15/19) and **Delhi** (15/19) and
+  **Beijing** (14/19 = 74%): among the most-compared cities on Earth; their gaps are
+  structural (OECD-only products, nonexistent statistics, TomTom's China exclusion),
+  not informational poverty. Excluding them would misrepresent the urban world more
+  than their blanks misrepresent them.
+
+Honest consequences to disclose when v2.0 ships: SMT-03 (e-government) coverage
+dilutes by design — LOSI scores only each country's most populous city, so every
+second city of a country arrives blank on it; and all scores re-scale when the city
+set grows, so v2.0 ranks are not comparable to v1.x.
 
 ## Next steps
 
-1. Roster decision (the two calls above), then freeze the city list.
-2. Wave 1 fill: the OECD candidates against existing pipelines.
+1. ~~Roster decision~~ — taken above; the list freezes when this document merges.
+2. Wave 1 fill: the 26 OECD-country admissions against existing pipelines.
 3. Phase 3 measure feasibility (the 19 unsourced catalog measures) against the full roster.
-4. Wave 2 fill: the manual-heavy cities. Ship as v2.0 (scores not comparable to v1.x).
+4. Wave 2 fill: the manual-heavy cities (Asia + exceptions). Ship as v2.0.
 
 Working data for this study (per-city, per-measure marks and the raw artifact checks)
 is preserved in the session records; the matrices above are the decision-relevant summary.
