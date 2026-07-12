@@ -71,32 +71,32 @@ window.INDEX_DATA = {
 "Barcelona":{"LIV-01": 0.69, "LIV-04": 84.2, "LIV-05": 4.47, "LIV-06": 13.8, "GRN-01": 10.9, "GRN-02": null, "GRN-05": 42.1, "SMT-01": 338.8, "SMT-03": null, "SMT-05": 95.8, "CMP-01": 52064, "CMP-04": 28.5, "CMP-06": 222, "TAL-01": 46.9, "TAL-02": 5, "TAL-06": 27.3, "CON-01": 202, "CON-03": 66.9, "CON-05": 41.1},
 "Dubai":{"LIV-01": 0.69, "LIV-04": 83.1, "LIV-05": 3.35, "LIV-06": 7.8, "GRN-01": 35.0, "GRN-02": 40.6, "GRN-05": null, "SMT-01": 359.0, "SMT-03": 90.63, "SMT-05": 100.0, "CMP-01": null, "CMP-04": null, "CMP-06": 661, "TAL-01": 41.0, "TAL-02": 0, "TAL-06": null, "CON-01": 310, "CON-03": 24.8, "CON-05": 42.7},
 "San Francisco":{"LIV-01": 5.76, "LIV-04": 79.0, "LIV-05": 3.02, "LIV-06": 6.5, "GRN-01": 7.4, "GRN-02": null, "GRN-05": 53.1, "SMT-01": 367.7, "SMT-03": null, "SMT-05": 94.7, "CMP-01": 146853, "CMP-04": 320.8, "CMP-06": 20260, "TAL-01": 46.9, "TAL-02": 0, "TAL-06": 32.4, "CON-01": 60, "CON-03": 29.6, "CON-05": 49.7},
-"Stockholm":{"SMT-01": 302.2, "CMP-01": 81394, "LIV-04": 85.0, "TAL-01": 60.0, "LIV-05": 4.91, "LIV-01": 1.15, "SMT-05": 95.8, "GRN-01": 4.9, "GRN-02": 86.0, "LIV-06": 12.5, "CON-05": 42.8, "CON-03": 70.1},
-"Oslo":{"SMT-01": 281.9, "CMP-01": 63394, "LIV-04": 83.3, "TAL-01": 56.5, "LIV-05": 6.8, "LIV-01": 0.72, "SMT-05": 99.0, "GRN-01": 8.5, "GRN-02": 56.0, "LIV-06": 11.0, "CON-05": 33.2, "CON-03": null},
-"Helsinki":{"SMT-01": 238.8, "CMP-01": 66107, "LIV-04": 81.9, "TAL-01": 48.1, "LIV-05": 3.72, "LIV-01": 0.98, "SMT-05": 93.7, "GRN-01": 5.4, "GRN-02": null, "LIV-06": 11.4, "CON-05": 51.9, "CON-03": 78.0},
-"Madrid":{"SMT-01": 382.3, "CMP-01": 59768, "LIV-04": 85.4, "TAL-01": 50.0, "LIV-05": 6.18, "LIV-01": 0.69, "SMT-05": 95.8, "GRN-01": 10.3, "GRN-02": 63.1, "LIV-06": 13.2, "CON-05": 38.0, "CON-03": 68.8},
-"Milan":{"SMT-01": 429.2, "CMP-01": 82014, "LIV-04": 84.7, "TAL-01": 23.6, "LIV-05": 5.59, "LIV-01": 0.57, "SMT-05": 89.2, "GRN-01": 20.4, "GRN-02": 76.2, "LIV-06": 18.2, "CON-05": 49.4, "CON-03": 50.4},
-"Rome":{"SMT-01": 376.5, "CMP-01": 65690, "LIV-04": 83.6, "TAL-01": 28.5, "LIV-05": 6.77, "LIV-01": 0.57, "SMT-05": 89.2, "GRN-01": 11.8, "GRN-02": 80.0, "LIV-06": 14.9, "CON-05": 45.2, "CON-03": 71.7},
-"Munich":{"SMT-01": 221.7, "CMP-01": 102244, "LIV-04": 83.1, "TAL-01": 38.6, "LIV-05": 4.56, "LIV-01": 0.91, "SMT-05": 93.5, "GRN-01": 7.9, "GRN-02": null, "LIV-06": 13.1, "CON-05": 43.7, "CON-03": 81.9},
-"Frankfurt":{"SMT-01": 232.1, "CMP-01": 82688, "LIV-04": 81.9, "TAL-01": 35.6, "LIV-05": 4.27, "LIV-01": 0.91, "SMT-05": 93.5, "GRN-01": 8.7, "GRN-02": null, "LIV-06": 7.7, "CON-05": 42.3, "CON-03": null},
-"Hamburg":{"SMT-01": 196.7, "CMP-01": 77768, "LIV-04": 80.9, "TAL-01": 43.0, "LIV-05": 6.4, "LIV-01": 0.91, "SMT-05": 93.5, "GRN-01": 9.1, "GRN-02": 78.2, "LIV-06": 11.1, "CON-05": 49.3, "CON-03": 68.8},
-"Brussels":{"SMT-01": 266.9, "CMP-01": 78040, "LIV-04": 82.2, "TAL-01": 56.9, "LIV-05": 4.44, "LIV-01": 1.08, "SMT-05": 95.8, "GRN-01": 7.6, "GRN-02": 85.8, "LIV-06": 7.2, "CON-05": 46.2, "CON-03": 89.0},
-"Dublin":{"SMT-01": 337.0, "CMP-01": 141694, "LIV-04": 83.3, "TAL-01": 61.0, "LIV-05": null, "LIV-01": 0.65, "SMT-05": 97.2, "GRN-01": 7.3, "GRN-02": 84.2, "LIV-06": 9.0, "CON-05": 72.9, "CON-03": 66.3},
-"Lisbon":{"SMT-01": 354.4, "CMP-01": 50408, "LIV-04": 81.2, "TAL-01": 43.3, "LIV-05": 8.37, "LIV-01": 0.72, "SMT-05": 88.5, "GRN-01": 7.6, "GRN-02": 87.4, "LIV-06": 18.7, "CON-05": 39.0, "CON-03": 43.6},
-"Prague":{"SMT-01": 258.9, "CMP-01": 83056, "LIV-04": 81.1, "TAL-01": 54.8, "LIV-05": 8.24, "LIV-01": 0.77, "SMT-05": 87.7, "GRN-01": 13.4, "GRN-02": 83.5, "LIV-06": 18.2, "CON-05": 53.5, "CON-03": 89.2},
-"Warsaw":{"SMT-01": 362.9, "CMP-01": 81920, "LIV-04": 81.0, "TAL-01": 65.3, "LIV-05": 6.3, "LIV-01": 0.8, "SMT-05": 88.6, "GRN-01": 14.7, "GRN-02": 88.0, "LIV-06": 11.7, "CON-05": 51.3, "CON-03": 70.1},
-"Istanbul":{"SMT-01": 251.2, "CMP-01": 56428, "LIV-04": 77.1, "TAL-01": 31.8, "LIV-05": 2.96, "LIV-01": 3.23, "SMT-05": 89.8, "GRN-01": 50.5, "GRN-02": 59.8, "LIV-06": 10.1, "CON-05": 62.0, "CON-03": null},
-"Montreal":{"SMT-01": 334.2, "CMP-01": 38730, "LIV-04": 82.5, "TAL-01": 59.0, "LIV-05": 2.6, "LIV-01": 1.98, "SMT-05": 94.4, "GRN-01": 8.6, "GRN-02": 91.8, "LIV-06": 7.6, "CON-05": 41.3, "CON-03": 52.7},
-"Vancouver":{"SMT-01": 374.2, "CMP-01": 45902, "LIV-04": 81.5, "TAL-01": 64.0, "LIV-05": 2.71, "LIV-01": 1.98, "SMT-05": 94.4, "GRN-01": 6.0, "GRN-02": null, "LIV-06": 11.7, "CON-05": 56.5, "CON-03": 53.7},
-"Chicago":{"SMT-01": 392.9, "CMP-01": 75524, "LIV-04": 76.8, "TAL-01": 50.9, "LIV-05": 3.7, "LIV-01": 5.76, "SMT-05": 94.7, "GRN-01": 8.7, "GRN-02": 47.8, "LIV-06": 3.2, "CON-05": 46.1, "CON-03": 43.2},
-"Boston":{"SMT-01": 361.6, "CMP-01": 101761, "LIV-04": 79.0, "TAL-01": 58.2, "LIV-05": 5.52, "LIV-01": 5.76, "SMT-05": 94.7, "GRN-01": 6.4, "GRN-02": 68.2, "LIV-06": 7.9, "CON-05": 42.1, "CON-03": 47.6},
-"Los Angeles":{"SMT-01": 392.1, "CMP-01": 70646, "LIV-04": 79.0, "TAL-01": 46.9, "LIV-05": 3.02, "LIV-01": 5.76, "SMT-05": 94.7, "GRN-01": 10.5, "GRN-02": null, "LIV-06": 8.2, "CON-05": 59.8, "CON-03": 5.7},
-"Seattle":{"SMT-01": 410.0, "CMP-01": 111516, "LIV-04": 79.2, "TAL-01": 52.9, "LIV-05": 2.98, "LIV-01": 5.76, "SMT-05": 94.7, "GRN-01": 6.1, "GRN-02": 63.5, "LIV-06": 4.8, "CON-05": 44.9, "CON-03": 26.1},
-"Washington DC":{"SMT-01": 362.5, "CMP-01": 83988, "LIV-04": 78.0, "TAL-01": 70.7, "LIV-05": 12.02, "LIV-01": 5.76, "SMT-05": 94.7, "GRN-01": 6.3, "GRN-02": 52.8, "LIV-06": 4.3, "CON-05": 37.3, "CON-03": 33.1},
-"Sydney":{"SMT-01": 239.5, "CMP-01": 45152, "LIV-04": 84.1, "TAL-01": 52.5, "LIV-05": 4.58, "LIV-01": 0.85, "SMT-05": 96.1, "GRN-01": null, "GRN-02": 33.4, "LIV-06": 12.5, "CON-05": 43.7, "CON-03": 49.2},
-"Auckland":{"SMT-01": 283.4, "CMP-01": 55906, "LIV-04": 82.7, "TAL-01": 45.5, "LIV-05": 3.47, "LIV-01": 1.46, "SMT-05": 93.5, "GRN-01": 5.5, "GRN-02": 88.4, "LIV-06": 10.5, "CON-05": 42.2, "CON-03": 37.6},
-"Osaka":{"SMT-01": 295.1, "CMP-01": 41497, "LIV-04": 84.2, "TAL-01": 56.9, "LIV-05": 2.92, "LIV-01": 0.23, "SMT-05": 85.5, "GRN-01": 9.4, "GRN-02": 72.2, "LIV-06": 10.6, "CON-05": 42.9, "CON-03": null},
-"Tel Aviv":{"SMT-01": 366.9, "CMP-01": null, "LIV-04": 83.1, "TAL-01": 60.4, "LIV-05": 4.9, "LIV-01": 1.63, "SMT-05": 88.2, "GRN-01": 17.4, "GRN-02": 65.7, "LIV-06": 20.0, "CON-05": null, "CON-03": 87.9}
+"Stockholm":{"SMT-01": 302.2, "CMP-01": 81394, "LIV-04": 85.0, "TAL-01": 60.0, "LIV-05": 4.91, "LIV-01": 1.15, "SMT-05": 95.8, "GRN-01": 4.9, "GRN-02": 86.0, "LIV-06": 12.5, "CON-05": 42.8, "CON-03": 70.1, "SMT-03": 80.21},
+"Oslo":{"SMT-01": 281.9, "CMP-01": 63394, "LIV-04": 83.3, "TAL-01": 56.5, "LIV-05": 6.8, "LIV-01": 0.72, "SMT-05": 99.0, "GRN-01": 8.5, "GRN-02": 56.0, "LIV-06": 11.0, "CON-05": 33.2, "CON-03": null, "SMT-03": 78.13},
+"Helsinki":{"SMT-01": 238.8, "CMP-01": 66107, "LIV-04": 81.9, "TAL-01": 48.1, "LIV-05": 3.72, "LIV-01": 0.98, "SMT-05": 93.7, "GRN-01": 5.4, "GRN-02": null, "LIV-06": 11.4, "CON-05": 51.9, "CON-03": 78.0, "SMT-03": 81.25},
+"Madrid":{"SMT-01": 382.3, "CMP-01": 59768, "LIV-04": 85.4, "TAL-01": 50.0, "LIV-05": 6.18, "LIV-01": 0.69, "SMT-05": 95.8, "GRN-01": 10.3, "GRN-02": 63.1, "LIV-06": 13.2, "CON-05": 38.0, "CON-03": 68.8, "SMT-03": 92.71},
+"Milan":{"SMT-01": 429.2, "CMP-01": 82014, "LIV-04": 84.7, "TAL-01": 23.6, "LIV-05": 5.59, "LIV-01": 0.57, "SMT-05": 89.2, "GRN-01": 20.4, "GRN-02": 76.2, "LIV-06": 18.2, "CON-05": 49.4, "CON-03": 50.4, "SMT-03": null},
+"Rome":{"SMT-01": 376.5, "CMP-01": 65690, "LIV-04": 83.6, "TAL-01": 28.5, "LIV-05": 6.77, "LIV-01": 0.57, "SMT-05": 89.2, "GRN-01": 11.8, "GRN-02": 80.0, "LIV-06": 14.9, "CON-05": 45.2, "CON-03": 71.7, "SMT-03": 81.25},
+"Munich":{"SMT-01": 221.7, "CMP-01": 102244, "LIV-04": 83.1, "TAL-01": 38.6, "LIV-05": 4.56, "LIV-01": 0.91, "SMT-05": 93.5, "GRN-01": 7.9, "GRN-02": null, "LIV-06": 13.1, "CON-05": 43.7, "CON-03": 81.9, "SMT-03": null},
+"Frankfurt":{"SMT-01": 232.1, "CMP-01": 82688, "LIV-04": 81.9, "TAL-01": 35.6, "LIV-05": 4.27, "LIV-01": 0.91, "SMT-05": 93.5, "GRN-01": 8.7, "GRN-02": null, "LIV-06": 7.7, "CON-05": 42.3, "CON-03": null, "SMT-03": null},
+"Hamburg":{"SMT-01": 196.7, "CMP-01": 77768, "LIV-04": 80.9, "TAL-01": 43.0, "LIV-05": 6.4, "LIV-01": 0.91, "SMT-05": 93.5, "GRN-01": 9.1, "GRN-02": 78.2, "LIV-06": 11.1, "CON-05": 49.3, "CON-03": 68.8, "SMT-03": null},
+"Brussels":{"SMT-01": 266.9, "CMP-01": 78040, "LIV-04": 82.2, "TAL-01": 56.9, "LIV-05": 4.44, "LIV-01": 1.08, "SMT-05": 95.8, "GRN-01": 7.6, "GRN-02": 85.8, "LIV-06": 7.2, "CON-05": 46.2, "CON-03": 89.0, "SMT-03": 73.96},
+"Dublin":{"SMT-01": 337.0, "CMP-01": 141694, "LIV-04": 83.3, "TAL-01": 61.0, "LIV-05": null, "LIV-01": 0.65, "SMT-05": 97.2, "GRN-01": 7.3, "GRN-02": 84.2, "LIV-06": 9.0, "CON-05": 72.9, "CON-03": 66.3, "SMT-03": 68.75},
+"Lisbon":{"SMT-01": 354.4, "CMP-01": 50408, "LIV-04": 81.2, "TAL-01": 43.3, "LIV-05": 8.37, "LIV-01": 0.72, "SMT-05": 88.5, "GRN-01": 7.6, "GRN-02": 87.4, "LIV-06": 18.7, "CON-05": 39.0, "CON-03": 43.6, "SMT-03": 70.83},
+"Prague":{"SMT-01": 258.9, "CMP-01": 83056, "LIV-04": 81.1, "TAL-01": 54.8, "LIV-05": 8.24, "LIV-01": 0.77, "SMT-05": 87.7, "GRN-01": 13.4, "GRN-02": 83.5, "LIV-06": 18.2, "CON-05": 53.5, "CON-03": 89.2, "SMT-03": 67.71},
+"Warsaw":{"SMT-01": 362.9, "CMP-01": 81920, "LIV-04": 81.0, "TAL-01": 65.3, "LIV-05": 6.3, "LIV-01": 0.8, "SMT-05": 88.6, "GRN-01": 14.7, "GRN-02": 88.0, "LIV-06": 11.7, "CON-05": 51.3, "CON-03": 70.1, "SMT-03": 77.08},
+"Istanbul":{"SMT-01": 251.2, "CMP-01": 56428, "LIV-04": 77.1, "TAL-01": 31.8, "LIV-05": 2.96, "LIV-01": 3.23, "SMT-05": 89.8, "GRN-01": 50.5, "GRN-02": 59.8, "LIV-06": 10.1, "CON-05": 62.0, "CON-03": null, "SMT-03": 89.58},
+"Montreal":{"SMT-01": 334.2, "CMP-01": 38730, "LIV-04": 82.5, "TAL-01": 59.0, "LIV-05": 2.6, "LIV-01": 1.98, "SMT-05": 94.4, "GRN-01": 8.6, "GRN-02": 91.8, "LIV-06": 7.6, "CON-05": 41.3, "CON-03": 52.7, "SMT-03": null},
+"Vancouver":{"SMT-01": 374.2, "CMP-01": 45902, "LIV-04": 81.5, "TAL-01": 64.0, "LIV-05": 2.71, "LIV-01": 1.98, "SMT-05": 94.4, "GRN-01": 6.0, "GRN-02": null, "LIV-06": 11.7, "CON-05": 56.5, "CON-03": 53.7, "SMT-03": null},
+"Chicago":{"SMT-01": 392.9, "CMP-01": 75524, "LIV-04": 76.8, "TAL-01": 50.9, "LIV-05": 3.7, "LIV-01": 5.76, "SMT-05": 94.7, "GRN-01": 8.7, "GRN-02": 47.8, "LIV-06": 3.2, "CON-05": 46.1, "CON-03": 43.2, "SMT-03": null},
+"Boston":{"SMT-01": 361.6, "CMP-01": 101761, "LIV-04": 79.0, "TAL-01": 58.2, "LIV-05": 5.52, "LIV-01": 5.76, "SMT-05": 94.7, "GRN-01": 6.4, "GRN-02": 68.2, "LIV-06": 7.9, "CON-05": 42.1, "CON-03": 47.6, "SMT-03": null},
+"Los Angeles":{"SMT-01": 392.1, "CMP-01": 70646, "LIV-04": 79.0, "TAL-01": 46.9, "LIV-05": 3.02, "LIV-01": 5.76, "SMT-05": 94.7, "GRN-01": 10.5, "GRN-02": null, "LIV-06": 8.2, "CON-05": 59.8, "CON-03": 5.7, "SMT-03": null},
+"Seattle":{"SMT-01": 410.0, "CMP-01": 111516, "LIV-04": 79.2, "TAL-01": 52.9, "LIV-05": 2.98, "LIV-01": 5.76, "SMT-05": 94.7, "GRN-01": 6.1, "GRN-02": 63.5, "LIV-06": 4.8, "CON-05": 44.9, "CON-03": 26.1, "SMT-03": null},
+"Washington DC":{"SMT-01": 362.5, "CMP-01": 83988, "LIV-04": 78.0, "TAL-01": 70.7, "LIV-05": 12.02, "LIV-01": 5.76, "SMT-05": 94.7, "GRN-01": 6.3, "GRN-02": 52.8, "LIV-06": 4.3, "CON-05": 37.3, "CON-03": 33.1, "SMT-03": null},
+"Sydney":{"SMT-01": 239.5, "CMP-01": 45152, "LIV-04": 84.1, "TAL-01": 52.5, "LIV-05": 4.58, "LIV-01": 0.85, "SMT-05": 96.1, "GRN-01": null, "GRN-02": 33.4, "LIV-06": 12.5, "CON-05": 43.7, "CON-03": 49.2, "SMT-03": 77.08},
+"Auckland":{"SMT-01": 283.4, "CMP-01": 55906, "LIV-04": 82.7, "TAL-01": 45.5, "LIV-05": 3.47, "LIV-01": 1.46, "SMT-05": 93.5, "GRN-01": 5.5, "GRN-02": 88.4, "LIV-06": 10.5, "CON-05": 42.2, "CON-03": 37.6, "SMT-03": 80.21},
+"Osaka":{"SMT-01": 295.1, "CMP-01": 41497, "LIV-04": 84.2, "TAL-01": 56.9, "LIV-05": 2.92, "LIV-01": 0.23, "SMT-05": 85.5, "GRN-01": 9.4, "GRN-02": 72.2, "LIV-06": 10.6, "CON-05": 42.9, "CON-03": null, "SMT-03": null},
+"Tel Aviv":{"SMT-01": 366.9, "CMP-01": null, "LIV-04": 83.1, "TAL-01": 60.4, "LIV-05": 4.9, "LIV-01": 1.63, "SMT-05": 88.2, "GRN-01": 17.4, "GRN-02": 65.7, "LIV-06": 20.0, "CON-05": null, "CON-03": 87.9, "SMT-03": null}
 },
 "provenance":{
  "LIV-01": {
@@ -2459,6 +2459,149 @@ window.INDEX_DATA = {
     "value": null,
     "year": "2024",
     "note": "LOSI covers only the most populous city per UN member state; San Francisco absent from both PDF Table 12 and the eGovKB 193-city list. Null is correct."
+   },
+   "Stockholm": {
+    "value": 80.21,
+    "year": "2024",
+    "source": "Stockholm (eGovKB id 70)",
+    "note": "raw LOSI 0.8021, rank 27; verified identical in Technical Appendix Table 12 (UN E-Government Survey 2024) AND eGovKB city page dataYear/2024."
+   },
+   "Oslo": {
+    "value": 78.13,
+    "year": "2024",
+    "source": "Oslo (eGovKB id 153)",
+    "note": "raw LOSI 0.7813, rank 35; verified identical in Technical Appendix Table 12 (UN E-Government Survey 2024) AND eGovKB city page dataYear/2024."
+   },
+   "Helsinki": {
+    "value": 81.25,
+    "year": "2024",
+    "source": "Helsinki (eGovKB id 29)",
+    "note": "raw LOSI 0.8125, rank 21; verified identical in Technical Appendix Table 12 (UN E-Government Survey 2024) AND eGovKB city page dataYear/2024."
+   },
+   "Madrid": {
+    "value": 92.71,
+    "year": "2024",
+    "source": "Madrid (eGovKB id 68)",
+    "note": "raw LOSI 0.9271, rank 1; verified identical in Technical Appendix Table 12 (UN E-Government Survey 2024) AND eGovKB city page dataYear/2024."
+   },
+   "Milan": {
+    "value": null,
+    "year": "2024",
+    "note": "not assessed (not the country's most populous city)"
+   },
+   "Rome": {
+    "value": 81.25,
+    "year": "2024",
+    "source": "Roma (eGovKB id 41)",
+    "note": "raw LOSI 0.8125, rank 21; verified identical in Technical Appendix Table 12 (UN E-Government Survey 2024) AND eGovKB city page dataYear/2024."
+   },
+   "Munich": {
+    "value": null,
+    "year": "2024",
+    "note": "not assessed (not the country's most populous city)"
+   },
+   "Frankfurt": {
+    "value": null,
+    "year": "2024",
+    "note": "not assessed (not the country's most populous city)"
+   },
+   "Hamburg": {
+    "value": null,
+    "year": "2024",
+    "note": "not assessed (not the country's most populous city)"
+   },
+   "Brussels": {
+    "value": 73.96,
+    "year": "2024",
+    "source": "Brussels (eGovKB id 10)",
+    "note": "raw LOSI 0.7396, rank 43; verified identical in Technical Appendix Table 12 (UN E-Government Survey 2024) AND eGovKB city page dataYear/2024."
+   },
+   "Dublin": {
+    "value": 68.75,
+    "year": "2024",
+    "source": "Dublin (eGovKB id 116)",
+    "note": "raw LOSI 0.6875, rank 47; verified identical in Technical Appendix Table 12 (UN E-Government Survey 2024) AND eGovKB city page dataYear/2024."
+   },
+   "Lisbon": {
+    "value": 70.83,
+    "year": "2024",
+    "source": "Lisbon (eGovKB id 60)",
+    "note": "raw LOSI 0.7083, rank 45; verified identical in Technical Appendix Table 12 (UN E-Government Survey 2024) AND eGovKB city page dataYear/2024."
+   },
+   "Prague": {
+    "value": 67.71,
+    "year": "2024",
+    "source": "Prague (eGovKB id 23)",
+    "note": "raw LOSI 0.6771, rank 49; verified identical in Technical Appendix Table 12 (UN E-Government Survey 2024) AND eGovKB city page dataYear/2024."
+   },
+   "Warsaw": {
+    "value": 77.08,
+    "year": "2024",
+    "source": "Warsaw (eGovKB id 59)",
+    "note": "raw LOSI 0.7708, rank 37; verified identical in Technical Appendix Table 12 (UN E-Government Survey 2024) AND eGovKB city page dataYear/2024."
+   },
+   "Istanbul": {
+    "value": 89.58,
+    "year": "2024",
+    "source": "Istanbul (eGovKB id 75)",
+    "note": "raw LOSI 0.8958, rank 7; verified identical in Technical Appendix Table 12 (UN E-Government Survey 2024) AND eGovKB city page dataYear/2024."
+   },
+   "Montreal": {
+    "value": null,
+    "year": "2024",
+    "note": "not assessed (not the country's most populous city)"
+   },
+   "Vancouver": {
+    "value": null,
+    "year": "2024",
+    "note": "not assessed (not the country's most populous city)"
+   },
+   "Chicago": {
+    "value": null,
+    "year": "2024",
+    "note": "not assessed (not the country's most populous city)"
+   },
+   "Boston": {
+    "value": null,
+    "year": "2024",
+    "note": "not assessed (not the country's most populous city)"
+   },
+   "Los Angeles": {
+    "value": null,
+    "year": "2024",
+    "note": "not assessed (not the country's most populous city)"
+   },
+   "Seattle": {
+    "value": null,
+    "year": "2024",
+    "note": "not assessed (not the country's most populous city)"
+   },
+   "Washington DC": {
+    "value": null,
+    "year": "2024",
+    "note": "not assessed (not the country's most populous city)"
+   },
+   "Sydney": {
+    "value": 77.08,
+    "year": "2024",
+    "source": "Sydney (eGovKB id 5)",
+    "note": "raw LOSI 0.7708, rank 37; verified identical in Technical Appendix Table 12 (UN E-Government Survey 2024) AND eGovKB city page dataYear/2024."
+   },
+   "Auckland": {
+    "value": 80.21,
+    "year": "2024",
+    "source": "Auckland (eGovKB id 95)",
+    "note": "raw LOSI 0.8021, rank 27; verified identical in Technical Appendix Table 12 (UN E-Government Survey 2024) AND eGovKB city page dataYear/2024."
+   },
+   "Osaka": {
+    "value": null,
+    "year": "2024",
+    "note": "not assessed (not the country's most populous city)"
+   },
+   "Tel Aviv": {
+    "value": null,
+    "year": "2024",
+    "note": "not assessed (not the country's most populous city)"
    }
   }
  },
