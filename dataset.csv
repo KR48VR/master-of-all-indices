@@ -209,19 +209,19 @@ Sydney,LIV-06,House-price-to-income,Liveable,Housing & Cost,ratio,lower,City,cro
 Auckland,LIV-06,House-price-to-income,Liveable,Housing & Cost,ratio,lower,City,crowd,10.5,2026 Mid-Year,"Auckland, New Zealand","Price To Income Ratio column, Numbeo Property Prices Index 2026 Mid-Year (rankings.jsp fetched 2026-07-12)"
 Osaka,LIV-06,House-price-to-income,Liveable,Housing & Cost,ratio,lower,City,crowd,10.6,current (last update 2026-06-19),"Osaka, Japan (city page)","Absent from 2026 Mid-Year rankings table; taken from numbeo.com/property-investment/in/Osaka current view: Price to Income Ratio 10.59 (80 entries, 16 contributors, past 18 months)."
 Tel Aviv,LIV-06,House-price-to-income,Liveable,Housing & Cost,ratio,lower,City,crowd,20,2026 Mid-Year,"Tel Aviv-Yafo, Israel","Price To Income Ratio column, Numbeo Property Prices Index 2026 Mid-Year (rankings.jsp fetched 2026-07-12)"
-Hong Kong,LIV-06,House-price-to-income,Liveable,Housing & Cost,ratio,lower,City,crowd,,,Numbeo Property Prices Index (Price To Income Ratio),
-Taipei,LIV-06,House-price-to-income,Liveable,Housing & Cost,ratio,lower,City,crowd,,,Numbeo Property Prices Index (Price To Income Ratio),
-Bangkok,LIV-06,House-price-to-income,Liveable,Housing & Cost,ratio,lower,City,crowd,,,Numbeo Property Prices Index (Price To Income Ratio),
-Kuala Lumpur,LIV-06,House-price-to-income,Liveable,Housing & Cost,ratio,lower,City,crowd,,,Numbeo Property Prices Index (Price To Income Ratio),
-Jakarta,LIV-06,House-price-to-income,Liveable,Housing & Cost,ratio,lower,City,crowd,,,Numbeo Property Prices Index (Price To Income Ratio),
-Manila,LIV-06,House-price-to-income,Liveable,Housing & Cost,ratio,lower,City,crowd,,,Numbeo Property Prices Index (Price To Income Ratio),
-Ho Chi Minh City,LIV-06,House-price-to-income,Liveable,Housing & Cost,ratio,lower,City,crowd,,,Numbeo Property Prices Index (Price To Income Ratio),
-Mumbai,LIV-06,House-price-to-income,Liveable,Housing & Cost,ratio,lower,City,crowd,,,Numbeo Property Prices Index (Price To Income Ratio),
-Abu Dhabi,LIV-06,House-price-to-income,Liveable,Housing & Cost,ratio,lower,City,crowd,,,Numbeo Property Prices Index (Price To Income Ratio),
-Shanghai,LIV-06,House-price-to-income,Liveable,Housing & Cost,ratio,lower,City,crowd,,,Numbeo Property Prices Index (Price To Income Ratio),
-Beijing,LIV-06,House-price-to-income,Liveable,Housing & Cost,ratio,lower,City,crowd,,,Numbeo Property Prices Index (Price To Income Ratio),
-Shenzhen,LIV-06,House-price-to-income,Liveable,Housing & Cost,ratio,lower,City,crowd,,,Numbeo Property Prices Index (Price To Income Ratio),
-Delhi,LIV-06,House-price-to-income,Liveable,Housing & Cost,ratio,lower,City,crowd,,,Numbeo Property Prices Index (Price To Income Ratio),
+Hong Kong,LIV-06,House-price-to-income,Liveable,Housing & Cost,ratio,lower,City,crowd,35.2,2026 Mid-Year,"Hong Kong, Hong Kong (China)","Price To Income Ratio column, Numbeo Property Prices Index 2026 Mid-Year (rankings.jsp fetched 2026-07-12)"
+Taipei,LIV-06,House-price-to-income,Liveable,Housing & Cost,ratio,lower,City,crowd,31.4,2026 Mid-Year,"Taipei, Taiwan","Price To Income Ratio column, Numbeo Property Prices Index 2026 Mid-Year (rankings.jsp fetched 2026-07-12)"
+Bangkok,LIV-06,House-price-to-income,Liveable,Housing & Cost,ratio,lower,City,crowd,37.8,2026 Mid-Year,"Bangkok, Thailand","Price To Income Ratio column, Numbeo Property Prices Index 2026 Mid-Year (rankings.jsp fetched 2026-07-12)"
+Kuala Lumpur,LIV-06,House-price-to-income,Liveable,Housing & Cost,ratio,lower,City,crowd,8.6,2026 Mid-Year,"Kuala Lumpur, Malaysia","Price To Income Ratio column, Numbeo Property Prices Index 2026 Mid-Year (rankings.jsp fetched 2026-07-12)"
+Jakarta,LIV-06,House-price-to-income,Liveable,Housing & Cost,ratio,lower,City,crowd,24.9,2026 Mid-Year,"Jakarta, Indonesia","Price To Income Ratio column, Numbeo Property Prices Index 2026 Mid-Year (rankings.jsp fetched 2026-07-12)"
+Manila,LIV-06,House-price-to-income,Liveable,Housing & Cost,ratio,lower,City,crowd,34.8,2026 Mid-Year,"Manila, Philippines","Price To Income Ratio column, Numbeo Property Prices Index 2026 Mid-Year (rankings.jsp fetched 2026-07-12)"
+Ho Chi Minh City,LIV-06,House-price-to-income,Liveable,Housing & Cost,ratio,lower,City,crowd,32.4,2026 Mid-Year,"Ho Chi Minh City, Vietnam","Price To Income Ratio column, Numbeo Property Prices Index 2026 Mid-Year (rankings.jsp fetched 2026-07-12)"
+Mumbai,LIV-06,House-price-to-income,Liveable,Housing & Cost,ratio,lower,City,crowd,30.1,2026 Mid-Year,"Mumbai, India","Price To Income Ratio column, Numbeo Property Prices Index 2026 Mid-Year (rankings.jsp fetched 2026-07-12)"
+Abu Dhabi,LIV-06,House-price-to-income,Liveable,Housing & Cost,ratio,lower,City,crowd,7.4,2026 Mid-Year,"Abu Dhabi, United Arab Emirates","Price To Income Ratio column, Numbeo Property Prices Index 2026 Mid-Year (rankings.jsp fetched 2026-07-12)"
+Shanghai,LIV-06,House-price-to-income,Liveable,Housing & Cost,ratio,lower,City,crowd,31.2,2026 Mid-Year,"Shanghai, China","Price To Income Ratio column, Numbeo Property Prices Index 2026 Mid-Year (rankings.jsp fetched 2026-07-12)"
+Beijing,LIV-06,House-price-to-income,Liveable,Housing & Cost,ratio,lower,City,crowd,29.7,2026 Mid-Year,"Beijing, China","Price To Income Ratio column, Numbeo Property Prices Index 2026 Mid-Year (rankings.jsp fetched 2026-07-12)"
+Shenzhen,LIV-06,House-price-to-income,Liveable,Housing & Cost,ratio,lower,City,crowd,28.6,2026 Mid-Year,"Shenzhen, China","Price To Income Ratio column, Numbeo Property Prices Index 2026 Mid-Year (rankings.jsp fetched 2026-07-12)"
+Delhi,LIV-06,House-price-to-income,Liveable,Housing & Cost,ratio,lower,City,crowd,16.1,2026 Mid-Year,"Delhi, India","Price To Income Ratio column, Numbeo Property Prices Index 2026 Mid-Year (rankings.jsp fetched 2026-07-12)"
 Singapore,GRN-01,PM2.5 air pollution,Green,Air & Environment,µg/m³,lower,City,none,12,2021,Singapore/SGP,"pm25_tempcov=NA; version V6.0 (2023), n=1 station; no data newer than 2021 in v8 — identical to project's v6.1 value (12.0, 2021)"
 Tokyo,GRN-01,PM2.5 air pollution,Green,Air & Environment,µg/m³,lower,City,none,10.8,2019,Tokyo/JPN,"pm25_tempcov=99; version V6.0 (2023), n=18 stations; no data newer than 2019 in v8 (v6.1 had 10.8, 2019)"
 Copenhagen,GRN-01,PM2.5 air pollution,Green,Air & Environment,µg/m³,lower,City,none,6.9,2024,Kobenhavn/DNK,"pm25_tempcov=98; version V8.0 (2026), n=4 stations, EEA source (v6.1: 8.3, 2020)"
