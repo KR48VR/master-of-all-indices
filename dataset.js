@@ -71,32 +71,32 @@ window.INDEX_DATA = {
 "Barcelona":{"LIV-01": 0.69, "LIV-04": 84.2, "LIV-05": 4.47, "LIV-06": 13.8, "GRN-01": 10.9, "GRN-02": null, "GRN-05": 42.1, "SMT-01": 338.8, "SMT-03": null, "SMT-05": 95.8, "CMP-01": 52064, "CMP-04": 28.5, "CMP-06": 222, "TAL-01": 46.9, "TAL-02": 5, "TAL-06": 27.3, "CON-01": 202, "CON-03": 66.9, "CON-05": 41.1},
 "Dubai":{"LIV-01": 0.69, "LIV-04": 83.1, "LIV-05": 3.35, "LIV-06": 7.8, "GRN-01": 35.0, "GRN-02": 40.6, "GRN-05": null, "SMT-01": 359.0, "SMT-03": 90.63, "SMT-05": 100.0, "CMP-01": null, "CMP-04": null, "CMP-06": 661, "TAL-01": 41.0, "TAL-02": 0, "TAL-06": null, "CON-01": 310, "CON-03": 24.8, "CON-05": 42.7},
 "San Francisco":{"LIV-01": 5.76, "LIV-04": 79.0, "LIV-05": 3.02, "LIV-06": 6.5, "GRN-01": 7.4, "GRN-02": null, "GRN-05": 53.1, "SMT-01": 367.7, "SMT-03": null, "SMT-05": 94.7, "CMP-01": 146853, "CMP-04": 320.8, "CMP-06": 20260, "TAL-01": 46.9, "TAL-02": 0, "TAL-06": 32.4, "CON-01": 60, "CON-03": 29.6, "CON-05": 49.7},
-"Stockholm":{"SMT-01": 302.2, "CMP-01": 81394, "LIV-04": 85.0, "TAL-01": 60.0, "LIV-05": 4.91, "LIV-01": 1.15},
-"Oslo":{"SMT-01": 281.9, "CMP-01": 63394, "LIV-04": 83.3, "TAL-01": 56.5, "LIV-05": 6.8, "LIV-01": 0.72},
-"Helsinki":{"SMT-01": 238.8, "CMP-01": 66107, "LIV-04": 81.9, "TAL-01": 48.1, "LIV-05": 3.72, "LIV-01": 0.98},
-"Madrid":{"SMT-01": 382.3, "CMP-01": 59768, "LIV-04": 85.4, "TAL-01": 50.0, "LIV-05": 6.18, "LIV-01": 0.69},
-"Milan":{"SMT-01": 429.2, "CMP-01": 82014, "LIV-04": 84.7, "TAL-01": 23.6, "LIV-05": 5.59, "LIV-01": 0.57},
-"Rome":{"SMT-01": 376.5, "CMP-01": 65690, "LIV-04": 83.6, "TAL-01": 28.5, "LIV-05": 6.77, "LIV-01": 0.57},
-"Munich":{"SMT-01": 221.7, "CMP-01": 102244, "LIV-04": 83.1, "TAL-01": 38.6, "LIV-05": 4.56, "LIV-01": 0.91},
-"Frankfurt":{"SMT-01": 232.1, "CMP-01": 82688, "LIV-04": 81.9, "TAL-01": 35.6, "LIV-05": 4.27, "LIV-01": 0.91},
-"Hamburg":{"SMT-01": 196.7, "CMP-01": 77768, "LIV-04": 80.9, "TAL-01": 43.0, "LIV-05": 6.4, "LIV-01": 0.91},
-"Brussels":{"SMT-01": 266.9, "CMP-01": 78040, "LIV-04": 82.2, "TAL-01": 56.9, "LIV-05": 4.44, "LIV-01": 1.08},
-"Dublin":{"SMT-01": 337.0, "CMP-01": 141694, "LIV-04": 83.3, "TAL-01": 61.0, "LIV-05": null, "LIV-01": 0.65},
-"Lisbon":{"SMT-01": 354.4, "CMP-01": 50408, "LIV-04": 81.2, "TAL-01": 43.3, "LIV-05": 8.37, "LIV-01": 0.72},
-"Prague":{"SMT-01": 258.9, "CMP-01": 83056, "LIV-04": 81.1, "TAL-01": 54.8, "LIV-05": 8.24, "LIV-01": 0.77},
-"Warsaw":{"SMT-01": 362.9, "CMP-01": 81920, "LIV-04": 81.0, "TAL-01": 65.3, "LIV-05": 6.3, "LIV-01": 0.8},
-"Istanbul":{"SMT-01": 251.2, "CMP-01": 56428, "LIV-04": 77.1, "TAL-01": 31.8, "LIV-05": 2.96, "LIV-01": 3.23},
-"Montreal":{"SMT-01": 334.2, "CMP-01": 38730, "LIV-04": 82.5, "TAL-01": 59.0, "LIV-05": 2.6, "LIV-01": 1.98},
-"Vancouver":{"SMT-01": 374.2, "CMP-01": 45902, "LIV-04": 81.5, "TAL-01": 64.0, "LIV-05": 2.71, "LIV-01": 1.98},
-"Chicago":{"SMT-01": 392.9, "CMP-01": 75524, "LIV-04": 76.8, "TAL-01": 50.9, "LIV-05": 3.7, "LIV-01": 5.76},
-"Boston":{"SMT-01": 361.6, "CMP-01": 101761, "LIV-04": 79.0, "TAL-01": 58.2, "LIV-05": 5.52, "LIV-01": 5.76},
-"Los Angeles":{"SMT-01": 392.1, "CMP-01": 70646, "LIV-04": 79.0, "TAL-01": 46.9, "LIV-05": 3.02, "LIV-01": 5.76},
-"Seattle":{"SMT-01": 410.0, "CMP-01": 111516, "LIV-04": 79.2, "TAL-01": 52.9, "LIV-05": 2.98, "LIV-01": 5.76},
-"Washington DC":{"SMT-01": 362.5, "CMP-01": 83988, "LIV-04": 78.0, "TAL-01": 70.7, "LIV-05": 12.02, "LIV-01": 5.76},
-"Sydney":{"SMT-01": 239.5, "CMP-01": 45152, "LIV-04": 84.1, "TAL-01": 52.5, "LIV-05": 4.58, "LIV-01": 0.85},
-"Auckland":{"SMT-01": 283.4, "CMP-01": 55906, "LIV-04": 82.7, "TAL-01": 45.5, "LIV-05": 3.47, "LIV-01": 1.46},
-"Osaka":{"SMT-01": 295.1, "CMP-01": 41497, "LIV-04": 84.2, "TAL-01": 56.9, "LIV-05": 2.92, "LIV-01": 0.23},
-"Tel Aviv":{"SMT-01": 366.9, "CMP-01": null, "LIV-04": 83.1, "TAL-01": 60.4, "LIV-05": 4.9, "LIV-01": 1.63}
+"Stockholm":{"SMT-01": 302.2, "CMP-01": 81394, "LIV-04": 85.0, "TAL-01": 60.0, "LIV-05": 4.91, "LIV-01": 1.15, "SMT-05": 95.8},
+"Oslo":{"SMT-01": 281.9, "CMP-01": 63394, "LIV-04": 83.3, "TAL-01": 56.5, "LIV-05": 6.8, "LIV-01": 0.72, "SMT-05": 99.0},
+"Helsinki":{"SMT-01": 238.8, "CMP-01": 66107, "LIV-04": 81.9, "TAL-01": 48.1, "LIV-05": 3.72, "LIV-01": 0.98, "SMT-05": 93.7},
+"Madrid":{"SMT-01": 382.3, "CMP-01": 59768, "LIV-04": 85.4, "TAL-01": 50.0, "LIV-05": 6.18, "LIV-01": 0.69, "SMT-05": 95.8},
+"Milan":{"SMT-01": 429.2, "CMP-01": 82014, "LIV-04": 84.7, "TAL-01": 23.6, "LIV-05": 5.59, "LIV-01": 0.57, "SMT-05": 89.2},
+"Rome":{"SMT-01": 376.5, "CMP-01": 65690, "LIV-04": 83.6, "TAL-01": 28.5, "LIV-05": 6.77, "LIV-01": 0.57, "SMT-05": 89.2},
+"Munich":{"SMT-01": 221.7, "CMP-01": 102244, "LIV-04": 83.1, "TAL-01": 38.6, "LIV-05": 4.56, "LIV-01": 0.91, "SMT-05": 93.5},
+"Frankfurt":{"SMT-01": 232.1, "CMP-01": 82688, "LIV-04": 81.9, "TAL-01": 35.6, "LIV-05": 4.27, "LIV-01": 0.91, "SMT-05": 93.5},
+"Hamburg":{"SMT-01": 196.7, "CMP-01": 77768, "LIV-04": 80.9, "TAL-01": 43.0, "LIV-05": 6.4, "LIV-01": 0.91, "SMT-05": 93.5},
+"Brussels":{"SMT-01": 266.9, "CMP-01": 78040, "LIV-04": 82.2, "TAL-01": 56.9, "LIV-05": 4.44, "LIV-01": 1.08, "SMT-05": 95.8},
+"Dublin":{"SMT-01": 337.0, "CMP-01": 141694, "LIV-04": 83.3, "TAL-01": 61.0, "LIV-05": null, "LIV-01": 0.65, "SMT-05": 97.2},
+"Lisbon":{"SMT-01": 354.4, "CMP-01": 50408, "LIV-04": 81.2, "TAL-01": 43.3, "LIV-05": 8.37, "LIV-01": 0.72, "SMT-05": 88.5},
+"Prague":{"SMT-01": 258.9, "CMP-01": 83056, "LIV-04": 81.1, "TAL-01": 54.8, "LIV-05": 8.24, "LIV-01": 0.77, "SMT-05": 87.7},
+"Warsaw":{"SMT-01": 362.9, "CMP-01": 81920, "LIV-04": 81.0, "TAL-01": 65.3, "LIV-05": 6.3, "LIV-01": 0.8, "SMT-05": 88.6},
+"Istanbul":{"SMT-01": 251.2, "CMP-01": 56428, "LIV-04": 77.1, "TAL-01": 31.8, "LIV-05": 2.96, "LIV-01": 3.23, "SMT-05": 89.8},
+"Montreal":{"SMT-01": 334.2, "CMP-01": 38730, "LIV-04": 82.5, "TAL-01": 59.0, "LIV-05": 2.6, "LIV-01": 1.98, "SMT-05": 94.4},
+"Vancouver":{"SMT-01": 374.2, "CMP-01": 45902, "LIV-04": 81.5, "TAL-01": 64.0, "LIV-05": 2.71, "LIV-01": 1.98, "SMT-05": 94.4},
+"Chicago":{"SMT-01": 392.9, "CMP-01": 75524, "LIV-04": 76.8, "TAL-01": 50.9, "LIV-05": 3.7, "LIV-01": 5.76, "SMT-05": 94.7},
+"Boston":{"SMT-01": 361.6, "CMP-01": 101761, "LIV-04": 79.0, "TAL-01": 58.2, "LIV-05": 5.52, "LIV-01": 5.76, "SMT-05": 94.7},
+"Los Angeles":{"SMT-01": 392.1, "CMP-01": 70646, "LIV-04": 79.0, "TAL-01": 46.9, "LIV-05": 3.02, "LIV-01": 5.76, "SMT-05": 94.7},
+"Seattle":{"SMT-01": 410.0, "CMP-01": 111516, "LIV-04": 79.2, "TAL-01": 52.9, "LIV-05": 2.98, "LIV-01": 5.76, "SMT-05": 94.7},
+"Washington DC":{"SMT-01": 362.5, "CMP-01": 83988, "LIV-04": 78.0, "TAL-01": 70.7, "LIV-05": 12.02, "LIV-01": 5.76, "SMT-05": 94.7},
+"Sydney":{"SMT-01": 239.5, "CMP-01": 45152, "LIV-04": 84.1, "TAL-01": 52.5, "LIV-05": 4.58, "LIV-01": 0.85, "SMT-05": 96.1},
+"Auckland":{"SMT-01": 283.4, "CMP-01": 55906, "LIV-04": 82.7, "TAL-01": 45.5, "LIV-05": 3.47, "LIV-01": 1.46, "SMT-05": 93.5},
+"Osaka":{"SMT-01": 295.1, "CMP-01": 41497, "LIV-04": 84.2, "TAL-01": 56.9, "LIV-05": 2.92, "LIV-01": 0.23, "SMT-05": 85.5},
+"Tel Aviv":{"SMT-01": 366.9, "CMP-01": null, "LIV-04": 83.1, "TAL-01": 60.4, "LIV-05": 4.9, "LIV-01": 1.63, "SMT-05": 88.2}
 },
 "provenance":{
  "LIV-01": {
@@ -2119,6 +2119,162 @@ window.INDEX_DATA = {
     "year": "2024",
     "source": "USA / United States, IT.NET.USER.ZS, date 2024, value 94.69380188",
     "note": "Same USA country value shared with New York."
+   },
+   "Stockholm": {
+    "value": 95.8,
+    "year": "2025",
+    "source": "Sweden (SWE) — country proxy",
+    "note": "World Bank WDI IT.NET.USER.ZS (individuals using the Internet, % of population), mrnev=1; API lastupdated 2026-07-01"
+   },
+   "Oslo": {
+    "value": 99.0,
+    "year": "2024",
+    "source": "Norway (NOR) — country proxy",
+    "note": "World Bank WDI IT.NET.USER.ZS (individuals using the Internet, % of population), mrnev=1; API lastupdated 2026-07-01"
+   },
+   "Helsinki": {
+    "value": 93.7,
+    "year": "2024",
+    "source": "Finland (FIN) — country proxy",
+    "note": "World Bank WDI IT.NET.USER.ZS (individuals using the Internet, % of population), mrnev=1; API lastupdated 2026-07-01"
+   },
+   "Madrid": {
+    "value": 95.8,
+    "year": "2024",
+    "source": "Spain (ESP) — country proxy",
+    "note": "World Bank WDI IT.NET.USER.ZS (individuals using the Internet, % of population), mrnev=1; API lastupdated 2026-07-01"
+   },
+   "Milan": {
+    "value": 89.2,
+    "year": "2024",
+    "source": "Italy (ITA) — country proxy",
+    "note": "World Bank WDI IT.NET.USER.ZS (individuals using the Internet, % of population), mrnev=1; API lastupdated 2026-07-01"
+   },
+   "Rome": {
+    "value": 89.2,
+    "year": "2024",
+    "source": "Italy (ITA) — country proxy",
+    "note": "World Bank WDI IT.NET.USER.ZS (individuals using the Internet, % of population), mrnev=1; API lastupdated 2026-07-01"
+   },
+   "Munich": {
+    "value": 93.5,
+    "year": "2024",
+    "source": "Germany (DEU) — country proxy",
+    "note": "World Bank WDI IT.NET.USER.ZS (individuals using the Internet, % of population), mrnev=1; API lastupdated 2026-07-01"
+   },
+   "Frankfurt": {
+    "value": 93.5,
+    "year": "2024",
+    "source": "Germany (DEU) — country proxy",
+    "note": "World Bank WDI IT.NET.USER.ZS (individuals using the Internet, % of population), mrnev=1; API lastupdated 2026-07-01"
+   },
+   "Hamburg": {
+    "value": 93.5,
+    "year": "2024",
+    "source": "Germany (DEU) — country proxy",
+    "note": "World Bank WDI IT.NET.USER.ZS (individuals using the Internet, % of population), mrnev=1; API lastupdated 2026-07-01"
+   },
+   "Brussels": {
+    "value": 95.8,
+    "year": "2024",
+    "source": "Belgium (BEL) — country proxy",
+    "note": "World Bank WDI IT.NET.USER.ZS (individuals using the Internet, % of population), mrnev=1; API lastupdated 2026-07-01"
+   },
+   "Dublin": {
+    "value": 97.2,
+    "year": "2024",
+    "source": "Ireland (IRL) — country proxy",
+    "note": "World Bank WDI IT.NET.USER.ZS (individuals using the Internet, % of population), mrnev=1; API lastupdated 2026-07-01"
+   },
+   "Lisbon": {
+    "value": 88.5,
+    "year": "2024",
+    "source": "Portugal (PRT) — country proxy",
+    "note": "World Bank WDI IT.NET.USER.ZS (individuals using the Internet, % of population), mrnev=1; API lastupdated 2026-07-01"
+   },
+   "Prague": {
+    "value": 87.7,
+    "year": "2024",
+    "source": "Czechia (CZE) — country proxy",
+    "note": "World Bank WDI IT.NET.USER.ZS (individuals using the Internet, % of population), mrnev=1; API lastupdated 2026-07-01"
+   },
+   "Warsaw": {
+    "value": 88.6,
+    "year": "2024",
+    "source": "Poland (POL) — country proxy",
+    "note": "World Bank WDI IT.NET.USER.ZS (individuals using the Internet, % of population), mrnev=1; API lastupdated 2026-07-01"
+   },
+   "Istanbul": {
+    "value": 89.8,
+    "year": "2025",
+    "source": "Turkiye (TUR) — country proxy",
+    "note": "World Bank WDI IT.NET.USER.ZS (individuals using the Internet, % of population), mrnev=1; API lastupdated 2026-07-01"
+   },
+   "Montreal": {
+    "value": 94.4,
+    "year": "2024",
+    "source": "Canada (CAN) — country proxy",
+    "note": "World Bank WDI IT.NET.USER.ZS (individuals using the Internet, % of population), mrnev=1; API lastupdated 2026-07-01"
+   },
+   "Vancouver": {
+    "value": 94.4,
+    "year": "2024",
+    "source": "Canada (CAN) — country proxy",
+    "note": "World Bank WDI IT.NET.USER.ZS (individuals using the Internet, % of population), mrnev=1; API lastupdated 2026-07-01"
+   },
+   "Chicago": {
+    "value": 94.7,
+    "year": "2024",
+    "source": "United States (USA) — country proxy",
+    "note": "World Bank WDI IT.NET.USER.ZS (individuals using the Internet, % of population), mrnev=1; API lastupdated 2026-07-01"
+   },
+   "Boston": {
+    "value": 94.7,
+    "year": "2024",
+    "source": "United States (USA) — country proxy",
+    "note": "World Bank WDI IT.NET.USER.ZS (individuals using the Internet, % of population), mrnev=1; API lastupdated 2026-07-01"
+   },
+   "Los Angeles": {
+    "value": 94.7,
+    "year": "2024",
+    "source": "United States (USA) — country proxy",
+    "note": "World Bank WDI IT.NET.USER.ZS (individuals using the Internet, % of population), mrnev=1; API lastupdated 2026-07-01"
+   },
+   "Seattle": {
+    "value": 94.7,
+    "year": "2024",
+    "source": "United States (USA) — country proxy",
+    "note": "World Bank WDI IT.NET.USER.ZS (individuals using the Internet, % of population), mrnev=1; API lastupdated 2026-07-01"
+   },
+   "Washington DC": {
+    "value": 94.7,
+    "year": "2024",
+    "source": "United States (USA) — country proxy",
+    "note": "World Bank WDI IT.NET.USER.ZS (individuals using the Internet, % of population), mrnev=1; API lastupdated 2026-07-01"
+   },
+   "Sydney": {
+    "value": 96.1,
+    "year": "2024",
+    "source": "Australia (AUS) — country proxy",
+    "note": "World Bank WDI IT.NET.USER.ZS (individuals using the Internet, % of population), mrnev=1; API lastupdated 2026-07-01"
+   },
+   "Auckland": {
+    "value": 93.5,
+    "year": "2024",
+    "source": "New Zealand (NZL) — country proxy",
+    "note": "World Bank WDI IT.NET.USER.ZS (individuals using the Internet, % of population), mrnev=1; API lastupdated 2026-07-01"
+   },
+   "Osaka": {
+    "value": 85.5,
+    "year": "2024",
+    "source": "Japan (JPN) — country proxy",
+    "note": "World Bank WDI IT.NET.USER.ZS (individuals using the Internet, % of population), mrnev=1; API lastupdated 2026-07-01"
+   },
+   "Tel Aviv": {
+    "value": 88.2,
+    "year": "2024",
+    "source": "Israel (ISR) — country proxy",
+    "note": "World Bank WDI IT.NET.USER.ZS (individuals using the Internet, % of population), mrnev=1; API lastupdated 2026-07-01"
    }
   }
  },
