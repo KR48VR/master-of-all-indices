@@ -46,7 +46,7 @@ window.INDEX_DATA = {
 {"id": "TAL-03", "domain": "Talent", "subtheme": "Skills & Workforce", "name": "Knowledge workers", "measures": "% employed in knowledge-intensive jobs", "unit": "%", "direction": "higher", "dataLevel": "Metro", "source": "Eurostat / OECD", "appearsIn": "—", "pilot": 0, "caveat": "", "contestable": 0, "approx": "none"},
 {"id": "TAL-04", "domain": "Talent", "subtheme": "Skills & Workforce", "name": "Researchers per capita", "measures": "R&D personnel per 1,000", "unit": "per 1k", "direction": "higher", "dataLevel": "Metro", "source": "OECD", "appearsIn": "GPCI (R&D)", "pilot": 0, "caveat": "", "contestable": 0, "approx": "none"},
 {"id": "TAL-05", "domain": "Talent", "subtheme": "Attractiveness", "name": "Talent inflow", "measures": "Net migration of working-age people", "unit": "%", "direction": "higher", "dataLevel": "Metro", "source": "National statistics", "appearsIn": "—", "pilot": 0, "caveat": "Hard to standardise across countries.", "contestable": 0, "approx": "none"},
-{"id": "TAL-06", "domain": "Talent", "subtheme": "Attractiveness", "name": "International openness", "measures": "Foreign-born population share", "unit": "%", "direction": "higher", "dataLevel": "Metro", "source": "OECD FUA / national censuses / UN DESA", "appearsIn": "GPCI", "pilot": 1, "caveat": "Mixes concepts and boundaries, disclosed per value: census/register foreign-born for most cities; foreign NATIONALS (not foreign-born) for Tokyo and Seoul; UN migrant-stock estimate for Singapore; city boundaries for the OECD-city rows, metro for the census rows; years 2021-2026. Dubai publishes no foreign-born statistic (blank). A proxy for openness — contestable as \"better\".", "contestable": 1, "approx": "none"},
+{"id": "TAL-06", "domain": "Talent", "subtheme": "Attractiveness", "name": "International openness", "measures": "Foreign-born population share", "unit": "%", "direction": "higher", "dataLevel": "Metro", "source": "OECD FUA / national censuses / UN DESA", "appearsIn": "GPCI", "pilot": 1, "caveat": "Mixes concepts and boundaries, disclosed per value: census/register foreign-born for most; foreign NATIONALS for Tokyo, Seoul, Osaka, Taipei; non-citizens for Kuala Lumpur; Hong Kong counts everyone born outside HK INCLUDING mainland China (29.9 of its 38.3 points). City vs metro boundaries and years 2021-2026 vary. Many Asian cities publish nothing honest here - blanks explain themselves. A proxy for openness - contestable as \"better\".", "contestable": 1, "approx": "none"},
 {"id": "CON-01", "domain": "Connected", "subtheme": "Global Connectivity", "name": "Airport connectivity", "measures": "Direct international destinations served", "unit": "count", "direction": "higher", "dataLevel": "City", "source": "Wikipedia airport destination tables", "appearsIn": "GPCI (Accessibility)", "pilot": 1, "caveat": "Counted from Wikipedia \"Airlines and destinations\" tables (July 2026 snapshots): distinct international destination airports with scheduled or announced passenger service (charter/cargo excluded; suspended-annotated routes retained), union across each city's airport system, Wikidata-verified country classification. Crowd-maintained lists - completeness varies by page: Tokyo and Osaka are blank because their articles are known-pruned. Snapshot, not an official OAG count.", "contestable": 0, "approx": "crowd"},
 {"id": "CON-02", "domain": "Connected", "subtheme": "Global Connectivity", "name": "Global accessibility", "measures": "Travel time to major world hubs", "unit": "hours", "direction": "lower", "dataLevel": "City", "source": "GPCI", "appearsIn": "GPCI (Accessibility)", "pilot": 0, "caveat": "", "contestable": 0, "approx": "none"},
 {"id": "CON-03", "domain": "Connected", "subtheme": "Urban Mobility", "name": "Transit access", "measures": "% residents within 500 m of frequent transit (ITDP PNFT)", "unit": "%", "direction": "higher", "dataLevel": "Metro", "source": "ITDP Atlas (People Near Frequent Transit)", "appearsIn": "—", "pilot": 1, "caveat": "Share of the GHSL urban agglomeration within 500 m of a stop served at least every ~10 min (7am-9pm), GIS-computed by ITDP from open GTFS feeds; latest RELIABLE year per city (2023-2025 - one-cycle feed collapses are treated as artifacts, disclosed per value). Cities without usable open feeds are blank, NOT zero (Tokyo, London, Zurich, Melbourne, Amsterdam, Seoul, Oslo, Frankfurt, Istanbul, Osaka).", "contestable": 0, "approx": "modelled"},
@@ -97,19 +97,19 @@ window.INDEX_DATA = {
 "Auckland":{"SMT-01": 283.4, "CMP-01": 55906, "LIV-04": 82.7, "TAL-01": 45.5, "LIV-05": 3.47, "LIV-01": 1.46, "SMT-05": 93.5, "GRN-01": 5.5, "GRN-02": 88.4, "LIV-06": 10.5, "CON-05": 42.2, "CON-03": 37.6, "SMT-03": 80.21, "TAL-02": 2, "CON-01": 46, "TAL-06": 42.5, "GRN-05": null, "CMP-04": null, "CMP-06": 166},
 "Osaka":{"SMT-01": 295.1, "CMP-01": 41497, "LIV-04": 84.2, "TAL-01": 56.9, "LIV-05": 2.92, "LIV-01": 0.23, "SMT-05": 85.5, "GRN-01": 9.4, "GRN-02": 72.2, "LIV-06": 10.6, "CON-05": 42.9, "CON-03": null, "SMT-03": null, "TAL-02": 1, "CON-01": null, "TAL-06": 6.8, "GRN-05": null, "CMP-04": 3.7, "CMP-06": 21},
 "Tel Aviv":{"SMT-01": 366.9, "CMP-01": null, "LIV-04": 83.1, "TAL-01": 60.4, "LIV-05": 4.9, "LIV-01": 1.63, "SMT-05": 88.2, "GRN-01": 17.4, "GRN-02": 65.7, "LIV-06": 20.0, "CON-05": null, "CON-03": 87.9, "SMT-03": null, "TAL-02": 1, "CON-01": 114, "TAL-06": 23.5, "GRN-05": null, "CMP-04": null, "CMP-06": 2111},
-"Hong Kong":{"SMT-01": 431.6, "TAL-02": 5, "CON-03": 52.2, "CON-05": 47.7, "CMP-01": 66154, "LIV-01": 0.38, "SMT-05": 95.8, "GRN-01": 19.8, "GRN-02": 95.7},
-"Taipei":{"SMT-01": 258.2, "TAL-02": 4, "CON-03": null, "CON-05": 43.6, "CMP-01": null, "LIV-01": 0.32, "SMT-05": 88.8, "GRN-01": 15.0, "GRN-02": null},
-"Bangkok":{"SMT-01": 375.6, "TAL-02": 1, "CON-03": null, "CON-05": 67.9, "CMP-01": null, "LIV-01": 4.79, "SMT-05": 90.9, "GRN-01": 23.4, "GRN-02": 11.8},
-"Kuala Lumpur":{"SMT-01": 272.1, "TAL-02": 4, "CON-03": null, "CON-05": 39.1, "CMP-01": null, "LIV-01": 0.73, "SMT-05": 98.0, "GRN-01": 28.3, "GRN-02": 46.1},
-"Jakarta":{"SMT-01": 97.7, "TAL-02": 0, "CON-03": 22.6, "CON-05": 59.8, "CMP-01": null, "LIV-01": 0.3, "SMT-05": 72.8, "GRN-01": 33.8, "GRN-02": 24.2},
-"Manila":{"SMT-01": 198.9, "TAL-02": 0, "CON-03": null, "CON-05": 57.3, "CMP-01": null, "LIV-01": 4.35, "SMT-05": 67.3, "GRN-01": 15.4, "GRN-02": 28.7},
-"Ho Chi Minh City":{"SMT-01": 269.6, "TAL-02": 0, "CON-03": null, "CON-05": 40.3, "CMP-01": null, "LIV-01": 1.54, "SMT-05": 84.2, "GRN-01": 23.5, "GRN-02": 30.4},
-"Mumbai":{"SMT-01": 93.4, "TAL-02": 1, "CON-03": null, "CON-05": 61.5, "CMP-01": null, "LIV-01": 2.82, "SMT-05": 70.0, "GRN-01": 49.5, "GRN-02": 35.3},
-"Abu Dhabi":{"SMT-01": 348.1, "TAL-02": 1, "CON-03": 60.8, "CON-05": 25.5, "CMP-01": null, "LIV-01": 0.69, "SMT-05": 100.0, "GRN-01": 30.9, "GRN-02": 37.6},
-"Shanghai":{"SMT-01": 458.1, "TAL-02": 5, "CON-03": null, "CON-05": null, "CMP-01": null, "LIV-01": 0.5, "SMT-05": 91.6, "GRN-01": 28.4, "GRN-02": 29.9},
-"Beijing":{"SMT-01": 331.9, "TAL-02": 7, "CON-03": null, "CON-05": null, "CMP-01": null, "LIV-01": 0.5, "SMT-05": 91.6, "GRN-01": 31.0, "GRN-02": null},
-"Shenzhen":{"SMT-01": 314.9, "TAL-02": 2, "CON-03": null, "CON-05": null, "CMP-01": null, "LIV-01": 0.5, "SMT-05": 91.6, "GRN-01": 17.3, "GRN-02": 21.9},
-"Delhi":{"SMT-01": 120.5, "TAL-02": 2, "CON-03": null, "CON-05": 55.4, "CMP-01": null, "LIV-01": 2.82, "SMT-05": 70.0, "GRN-01": 107.0, "GRN-02": 43.6}
+"Hong Kong":{"SMT-01": 431.6, "TAL-02": 5, "CON-03": 52.2, "CON-05": 47.7, "CMP-01": 66154, "LIV-01": 0.38, "SMT-05": 95.8, "GRN-01": 19.8, "GRN-02": 95.7, "SMT-03": null, "TAL-06": 38.3},
+"Taipei":{"SMT-01": 258.2, "TAL-02": 4, "CON-03": null, "CON-05": 43.6, "CMP-01": null, "LIV-01": 0.32, "SMT-05": 88.8, "GRN-01": 15.0, "GRN-02": null, "SMT-03": null, "TAL-06": 3.3},
+"Bangkok":{"SMT-01": 375.6, "TAL-02": 1, "CON-03": null, "CON-05": 67.9, "CMP-01": null, "LIV-01": 4.79, "SMT-05": 90.9, "GRN-01": 23.4, "GRN-02": 11.8, "SMT-03": 66.67, "TAL-06": null},
+"Kuala Lumpur":{"SMT-01": 272.1, "TAL-02": 4, "CON-03": null, "CON-05": 39.1, "CMP-01": null, "LIV-01": 0.73, "SMT-05": 98.0, "GRN-01": 28.3, "GRN-02": 46.1, "SMT-03": 59.38, "TAL-06": 13.1},
+"Jakarta":{"SMT-01": 97.7, "TAL-02": 0, "CON-03": 22.6, "CON-05": 59.8, "CMP-01": null, "LIV-01": 0.3, "SMT-05": 72.8, "GRN-01": 33.8, "GRN-02": 24.2, "SMT-03": 68.75, "TAL-06": null},
+"Manila":{"SMT-01": 198.9, "TAL-02": 0, "CON-03": null, "CON-05": 57.3, "CMP-01": null, "LIV-01": 4.35, "SMT-05": 67.3, "GRN-01": 15.4, "GRN-02": 28.7, "SMT-03": 60.42, "TAL-06": null},
+"Ho Chi Minh City":{"SMT-01": 269.6, "TAL-02": 0, "CON-03": null, "CON-05": 40.3, "CMP-01": null, "LIV-01": 1.54, "SMT-05": 84.2, "GRN-01": 23.5, "GRN-02": 30.4, "SMT-03": 63.54, "TAL-06": null},
+"Mumbai":{"SMT-01": 93.4, "TAL-02": 1, "CON-03": null, "CON-05": 61.5, "CMP-01": null, "LIV-01": 2.82, "SMT-05": 70.0, "GRN-01": 49.5, "GRN-02": 35.3, "SMT-03": 56.25, "TAL-06": null},
+"Abu Dhabi":{"SMT-01": 348.1, "TAL-02": 1, "CON-03": 60.8, "CON-05": 25.5, "CMP-01": null, "LIV-01": 0.69, "SMT-05": 100.0, "GRN-01": 30.9, "GRN-02": 37.6, "SMT-03": null, "TAL-06": null},
+"Shanghai":{"SMT-01": 458.1, "TAL-02": 5, "CON-03": null, "CON-05": null, "CMP-01": null, "LIV-01": 0.5, "SMT-05": 91.6, "GRN-01": 28.4, "GRN-02": 29.9, "SMT-03": 86.46, "TAL-06": null},
+"Beijing":{"SMT-01": 331.9, "TAL-02": 7, "CON-03": null, "CON-05": null, "CMP-01": null, "LIV-01": 0.5, "SMT-05": 91.6, "GRN-01": 31.0, "GRN-02": null, "SMT-03": null, "TAL-06": null},
+"Shenzhen":{"SMT-01": 314.9, "TAL-02": 2, "CON-03": null, "CON-05": null, "CMP-01": null, "LIV-01": 0.5, "SMT-05": 91.6, "GRN-01": 17.3, "GRN-02": 21.9, "SMT-03": null, "TAL-06": null},
+"Delhi":{"SMT-01": 120.5, "TAL-02": 2, "CON-03": null, "CON-05": 55.4, "CMP-01": null, "LIV-01": 2.82, "SMT-05": 70.0, "GRN-01": 107.0, "GRN-02": 43.6, "SMT-03": null, "TAL-06": null}
 },
 "provenance":{
  "LIV-01": {
@@ -3136,6 +3136,78 @@ window.INDEX_DATA = {
     "value": null,
     "year": "2024",
     "note": "not assessed (not the country's most populous city)"
+   },
+   "Hong Kong": {
+    "value": null,
+    "year": "2024",
+    "note": "UN LOSI 2024 assesses one city per UN member state (the most populous); China's assessed city is Shanghai. Hong Kong SAR not assessed."
+   },
+   "Taipei": {
+    "value": null,
+    "year": "2024",
+    "note": "Taiwan is not covered by the UN E-Government Survey; no LOSI assessment."
+   },
+   "Bangkok": {
+    "value": 66.67,
+    "year": "2024",
+    "source": "UN LOSI 2024 (raw 0.6667, rank 51)",
+    "note": "UN E-Government Survey 2024 Technical Appendix Table 12; cross-checked against eGovKB city page id/73-Bangkok/dataYear/2024 (0.6667, rank 51). Stored as raw x100."
+   },
+   "Kuala Lumpur": {
+    "value": 59.38,
+    "year": "2024",
+    "source": "UN LOSI 2024 (raw 0.5938, rank 62)",
+    "note": "Malaysia's assessed LOSI city confirmed as Kuala Lumpur. Table 12 + eGovKB id/48-Kuala-Lumpur (0.5938, rank 62 match). Stored as raw x100."
+   },
+   "Jakarta": {
+    "value": 68.75,
+    "year": "2024",
+    "source": "UN LOSI 2024 (raw 0.6875, rank 47)",
+    "note": "Table 12 + eGovKB id/38-Jakarta (0.6875, rank 47 match). Stored as raw x100."
+   },
+   "Manila": {
+    "value": 60.42,
+    "year": "2024",
+    "source": "UN LOSI 2024 — assessed city: Quezon City (raw 0.6042, rank 59)",
+    "note": "WITHIN-METRO NOTE: the UN assessed Quezon City (the Philippines' most populous city, within Metro Manila), not the City of Manila; recorded under Manila per v1.0 precedent. Table 12 + eGovKB id/164-Quezon (0.6042, rank 5"
+   },
+   "Ho Chi Minh City": {
+    "value": 63.54,
+    "year": "2024",
+    "source": "UN LOSI 2024 (raw 0.6354, rank 53)",
+    "note": "Viet Nam's assessed LOSI city confirmed as Ho Chi Minh City. Table 12 + eGovKB id/84-Ho-Chi-Minh (0.6354, rank 53 match). Stored as raw x100."
+   },
+   "Mumbai": {
+    "value": 56.25,
+    "year": "2024",
+    "source": "UN LOSI 2024 (raw 0.5625, rank 70)",
+    "note": "India's assessed LOSI city confirmed as Mumbai (not Delhi). Table 12 + eGovKB id/37-Mumbai (0.5625, rank 70 match). Stored as raw x100."
+   },
+   "Abu Dhabi": {
+    "value": null,
+    "year": "2024",
+    "note": "UAE's assessed LOSI city is Dubai (already in dataset); Abu Dhabi not assessed."
+   },
+   "Shanghai": {
+    "value": 86.46,
+    "year": "2024",
+    "source": "UN LOSI 2024 (raw 0.8646, rank 12)",
+    "note": "China's assessed LOSI city. Table 12 + eGovKB id/19-Shanghai (0.8646, rank 12 match). Stored as raw x100."
+   },
+   "Beijing": {
+    "value": null,
+    "year": "2024",
+    "note": "China's assessed LOSI city is Shanghai (most populous city rule); Beijing not assessed."
+   },
+   "Shenzhen": {
+    "value": null,
+    "year": "2024",
+    "note": "China's assessed LOSI city is Shanghai; Shenzhen not assessed."
+   },
+   "Delhi": {
+    "value": null,
+    "year": "2024",
+    "note": "India's assessed LOSI city is Mumbai (confirmed in Table 12); Delhi not assessed."
    }
   }
  },
@@ -5358,6 +5430,74 @@ window.INDEX_DATA = {
     "year": "2022",
     "source": "OECD DSD_FUA_DEMO@DF_ORIGIN v1.2 (OECD.CFE.EDS), CITY level — Tel Aviv-Yafo (ISR10C)",
     "note": "CONCEPT: foreign-born share of population (OECD ORIGIN=FB, PT_POP); city-level; FUA 2022 = 21.5"
+   },
+   "Hong Kong": {
+    "value": 38.3,
+    "year": "2021",
+    "source": "Born outside Hong Kong, 2021 Population Census (C&SD)",
+    "note": "CONCEPT: place of birth — includes persons born in mainland China/Macao/Taiwan (29.9pp of the 38.3%); born elsewhere only 8.4pp. Main Results Table 3.6: (2,213,862+624,374)/7,413,070 = 38.29%. Interpretation differs shar"
+   },
+   "Taipei": {
+    "value": 3.3,
+    "year": "2025",
+    "source": "Foreign residents share, NIA valid-ARC holders in Taiwan, Dec 2025",
+    "note": "CONCEPT: foreign NATIONALS with residence permits (like Tokyo/Seoul), not foreign-born. NIA 外僑居留人數統計表 11412: Taipei City 84,362 currently-in-Taiwan valid ARC holders; ÷ (2,439,507 household-registered population end-Dec "
+   },
+   "Bangkok": {
+    "value": null,
+    "year": "n/a",
+    "note": "Thailand NSO's 2020 census counted non-Thai nationals but no verifiable official Bangkok-level share was fetchable; left null rather than estimated."
+   },
+   "Kuala Lumpur": {
+    "value": 13.1,
+    "year": "2025",
+    "source": "Non-citizens share of population, DOSM current population estimates 2025",
+    "note": "CONCEPT: NON-CITIZENS (nationality), not foreign-born. OpenDOSM population_state: W.P. Kuala Lumpur 2025 non-citizens 270.7k / 2,074.1k = 13.05% -> 13.1. Note DOSM rebased non-citizen estimates in the 2024/2025 vintages "
+   },
+   "Jakarta": {
+    "value": null,
+    "year": "n/a",
+    "note": "BPS publishes no city-level foreign-born or registered-foreigner share for Jakarta; left null."
+   },
+   "Manila": {
+    "value": null,
+    "year": "n/a",
+    "note": "PSA census does not publish a usable city/metro foreign-born share; left null."
+   },
+   "Ho Chi Minh City": {
+    "value": null,
+    "year": "n/a",
+    "note": "Viet Nam's census does not publish a city-level foreign-born/registered-foreigner share; left null."
+   },
+   "Mumbai": {
+    "value": null,
+    "year": "n/a",
+    "note": "India's last published born-abroad data is Census 2011; too stale to mix with 2021-2026 values. Null pending Census 2027."
+   },
+   "Abu Dhabi": {
+    "value": null,
+    "year": "n/a",
+    "note": "SCAD publishes only a citizens/non-citizens nationality split for the emirate — a different concept, not used (consistent with Dubai's blank in v1.0). No foreign-born stat."
+   },
+   "Shanghai": {
+    "value": null,
+    "year": "n/a",
+    "note": "2020 census: NBS Communique No.8 gives only COMBINED HK/Macao/Taiwan residents + foreigners per province (Shanghai 163,954, ~0.7% incl. HMT Chinese nationals — wrong concept); foreigners-only exists only as national tota"
+   },
+   "Beijing": {
+    "value": null,
+    "year": "n/a",
+    "note": "Same as Shanghai: only combined HMT+foreigners published (Beijing 62,812, ~0.3% incl. HMT). Foreigners-only per city not published. Null."
+   },
+   "Shenzhen": {
+    "value": null,
+    "year": "n/a",
+    "note": "2020 census publishes HMT+foreigners only to province level (Guangdong 418,509); Shenzhen bulletin excludes them from resident population and gives no count. Null."
+   },
+   "Delhi": {
+    "value": null,
+    "year": "n/a",
+    "note": "Same as Mumbai: Census 2011 born-abroad is 15 years stale. Null pending Census 2027."
    }
   }
  },
