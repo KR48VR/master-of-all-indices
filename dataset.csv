@@ -264,19 +264,19 @@ Sydney,GRN-01,PM2.5 air pollution,Green,Air & Environment,µg/m³,lower,City,non
 Auckland,GRN-01,PM2.5 air pollution,Green,Air & Environment,µg/m³,lower,City,none,5.5,2021,Auckland/NZL,"pm25_concentration raw 5.5; pm25_tempcov NA; 'Auckland CBD/NZL' (2023, 9.0) exists but is a sub-district label, not the city — not used"
 Osaka,GRN-01,PM2.5 air pollution,Green,Air & Environment,µg/m³,lower,City,none,9.4,2022,Osaka/JPN,pm25_concentration raw 9.4; pm25_tempcov 97
 Tel Aviv,GRN-01,PM2.5 air pollution,Green,Air & Environment,µg/m³,lower,City,none,17.4,2024,Tel Aviv/ISR,pm25_concentration raw 17.364; pm25_tempcov 88
-Hong Kong,GRN-01,PM2.5 air pollution,Green,Air & Environment,µg/m³,lower,City,none,,,WHO Ambient Air Quality Database V8.0,
-Taipei,GRN-01,PM2.5 air pollution,Green,Air & Environment,µg/m³,lower,City,none,,,WHO Ambient Air Quality Database V8.0,
-Bangkok,GRN-01,PM2.5 air pollution,Green,Air & Environment,µg/m³,lower,City,none,,,WHO Ambient Air Quality Database V8.0,
-Kuala Lumpur,GRN-01,PM2.5 air pollution,Green,Air & Environment,µg/m³,lower,City,none,,,WHO Ambient Air Quality Database V8.0,
-Jakarta,GRN-01,PM2.5 air pollution,Green,Air & Environment,µg/m³,lower,City,none,,,WHO Ambient Air Quality Database V8.0,
-Manila,GRN-01,PM2.5 air pollution,Green,Air & Environment,µg/m³,lower,City,none,,,WHO Ambient Air Quality Database V8.0,
-Ho Chi Minh City,GRN-01,PM2.5 air pollution,Green,Air & Environment,µg/m³,lower,City,none,,,WHO Ambient Air Quality Database V8.0,
-Mumbai,GRN-01,PM2.5 air pollution,Green,Air & Environment,µg/m³,lower,City,none,,,WHO Ambient Air Quality Database V8.0,
-Abu Dhabi,GRN-01,PM2.5 air pollution,Green,Air & Environment,µg/m³,lower,City,none,,,WHO Ambient Air Quality Database V8.0,
-Shanghai,GRN-01,PM2.5 air pollution,Green,Air & Environment,µg/m³,lower,City,none,,,WHO Ambient Air Quality Database V8.0,
-Beijing,GRN-01,PM2.5 air pollution,Green,Air & Environment,µg/m³,lower,City,none,,,WHO Ambient Air Quality Database V8.0,
-Shenzhen,GRN-01,PM2.5 air pollution,Green,Air & Environment,µg/m³,lower,City,none,,,WHO Ambient Air Quality Database V8.0,
-Delhi,GRN-01,PM2.5 air pollution,Green,Air & Environment,µg/m³,lower,City,none,,,WHO Ambient Air Quality Database V8.0,
+Hong Kong,GRN-01,PM2.5 air pollution,Green,Air & Environment,µg/m³,lower,City,none,19.8,2019,Hong Kong/CHN,"WHO AAQ DB v8.0 (2026); pm25 19.833, tempcov 97; latest non-null pm25 year is 2019 (stuck like Tokyo/Seoul/London)"
+Taipei,GRN-01,PM2.5 air pollution,Green,Air & Environment,µg/m³,lower,City,none,15,2018,Taipei/CHN,"WHO AAQ DB v8.0; pm25 15.0, tempcov 99, n=2 stations. Candidates listed: Taipei/CHN (2014,2018), Taipei City/CHN (2017 only); New Taipei rows excluded (different city). Latest non-null = Taipei/CHN 2018"
+Bangkok,GRN-01,PM2.5 air pollution,Green,Air & Environment,µg/m³,lower,City,none,23.4,2021,Bangkok/THA,"WHO AAQ DB v8.0; pm25 23.417, tempcov 99"
+Kuala Lumpur,GRN-01,PM2.5 air pollution,Green,Air & Environment,µg/m³,lower,City,none,28.3,2019,Kuala Lumpur/MYS,"WHO AAQ DB v8.0; pm25 28.27, tempcov NA"
+Jakarta,GRN-01,PM2.5 air pollution,Green,Air & Environment,µg/m³,lower,City,none,33.8,2021,DKI Jakarta/IDN,"WHO AAQ DB v8.0; pm25 33.84, tempcov 100. Candidates: DKI Jakarta/IDN (2018-2021) and Jakarta/IDN (2015-2016); latest is DKI Jakarta 2021"
+Manila,GRN-01,PM2.5 air pollution,Green,Air & Environment,µg/m³,lower,City,none,15.4,2020,Manila/PHL,"WHO AAQ DB v8.0; pm25 15.43, tempcov only 50 (low temporal coverage); City of Manila, not Metro Manila"
+Ho Chi Minh City,GRN-01,PM2.5 air pollution,Green,Air & Environment,µg/m³,lower,City,none,23.5,2020,Ho Chi Minh/VNM,"WHO AAQ DB v8.0; pm25 23.5, tempcov NA"
+Mumbai,GRN-01,PM2.5 air pollution,Green,Air & Environment,µg/m³,lower,City,none,49.5,2021,Mumbai/IND,"WHO AAQ DB v8.0; pm25 49.5, tempcov NA, n=2 stations"
+Abu Dhabi,GRN-01,PM2.5 air pollution,Green,Air & Environment,µg/m³,lower,City,none,30.9,2024,Abu Dhabi /ARE,"WHO AAQ DB v8.0; pm25 30.937, tempcov 98, n=13 (label has trailing space in source); older 'Abu Dhabi/ARE' label ends 2021"
+Shanghai,GRN-01,PM2.5 air pollution,Green,Air & Environment,µg/m³,lower,City,none,28.4,2024,Shanghai/CHN,"WHO AAQ DB v8.0; pm25 28.434, tempcov 98, n=19"
+Beijing,GRN-01,PM2.5 air pollution,Green,Air & Environment,µg/m³,lower,City,none,31,2024,Beijing/CHN,"WHO AAQ DB v8.0; pm25 30.98, tempcov 98, n=23; 'Beijing Shi/CHN' label ends 2019"
+Shenzhen,GRN-01,PM2.5 air pollution,Green,Air & Environment,µg/m³,lower,City,none,17.3,2024,Shenzhen/CHN,"WHO AAQ DB v8.0; pm25 17.256, tempcov 98, n=15; 'Shenzhen Shi/CHN' label ends 2019"
+Delhi,GRN-01,PM2.5 air pollution,Green,Air & Environment,µg/m³,lower,City,none,107,2021,Delhi/IND,"WHO AAQ DB v8.0; pm25 107.0, tempcov NA, n=1 station (V7.0 vintage)"
 Singapore,GRN-02,Open space access,Green,Air & Environment,%,higher,City,modelled,70.3,2020,"City Code SG_SINGAPORE / City Name 'Singapore' (Singapore), col [b]",Not in green-areas companion file.
 Tokyo,GRN-02,Open space access,Green,Air & Environment,%,higher,City,modelled,74.8,2020,"City Code JP_TOKYO / City Name 'Tokyo' (Japan), col [b]","Green-areas file 2020: green share 9.026259%, 12.838383 m2/person."
 Copenhagen,GRN-02,Open space access,Green,Air & Environment,%,higher,City,modelled,83.7,2020,"City Code DK_KOBENHAVN / City Name 'København (Copenhagen)' (Denmark), col [b]","Green-areas file 2020: green share 22.293090%, 58.758074 m2/person."

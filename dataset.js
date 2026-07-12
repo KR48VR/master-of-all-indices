@@ -97,19 +97,19 @@ window.INDEX_DATA = {
 "Auckland":{"SMT-01": 283.4, "CMP-01": 55906, "LIV-04": 82.7, "TAL-01": 45.5, "LIV-05": 3.47, "LIV-01": 1.46, "SMT-05": 93.5, "GRN-01": 5.5, "GRN-02": 88.4, "LIV-06": 10.5, "CON-05": 42.2, "CON-03": 37.6, "SMT-03": 80.21, "TAL-02": 2, "CON-01": 46, "TAL-06": 42.5, "GRN-05": null, "CMP-04": null, "CMP-06": 166},
 "Osaka":{"SMT-01": 295.1, "CMP-01": 41497, "LIV-04": 84.2, "TAL-01": 56.9, "LIV-05": 2.92, "LIV-01": 0.23, "SMT-05": 85.5, "GRN-01": 9.4, "GRN-02": 72.2, "LIV-06": 10.6, "CON-05": 42.9, "CON-03": null, "SMT-03": null, "TAL-02": 1, "CON-01": null, "TAL-06": 6.8, "GRN-05": null, "CMP-04": 3.7, "CMP-06": 21},
 "Tel Aviv":{"SMT-01": 366.9, "CMP-01": null, "LIV-04": 83.1, "TAL-01": 60.4, "LIV-05": 4.9, "LIV-01": 1.63, "SMT-05": 88.2, "GRN-01": 17.4, "GRN-02": 65.7, "LIV-06": 20.0, "CON-05": null, "CON-03": 87.9, "SMT-03": null, "TAL-02": 1, "CON-01": 114, "TAL-06": 23.5, "GRN-05": null, "CMP-04": null, "CMP-06": 2111},
-"Hong Kong":{"SMT-01": 431.6, "TAL-02": 5, "CON-03": 52.2, "CON-05": 47.7, "CMP-01": 66154, "LIV-01": 0.38, "SMT-05": 95.8},
-"Taipei":{"SMT-01": 258.2, "TAL-02": 4, "CON-03": null, "CON-05": 43.6, "CMP-01": null, "LIV-01": 0.32, "SMT-05": 88.8},
-"Bangkok":{"SMT-01": 375.6, "TAL-02": 1, "CON-03": null, "CON-05": 67.9, "CMP-01": null, "LIV-01": 4.79, "SMT-05": 90.9},
-"Kuala Lumpur":{"SMT-01": 272.1, "TAL-02": 4, "CON-03": null, "CON-05": 39.1, "CMP-01": null, "LIV-01": 0.73, "SMT-05": 98.0},
-"Jakarta":{"SMT-01": 97.7, "TAL-02": 0, "CON-03": 22.6, "CON-05": 59.8, "CMP-01": null, "LIV-01": 0.3, "SMT-05": 72.8},
-"Manila":{"SMT-01": 198.9, "TAL-02": 0, "CON-03": null, "CON-05": 57.3, "CMP-01": null, "LIV-01": 4.35, "SMT-05": 67.3},
-"Ho Chi Minh City":{"SMT-01": 269.6, "TAL-02": 0, "CON-03": null, "CON-05": 40.3, "CMP-01": null, "LIV-01": 1.54, "SMT-05": 84.2},
-"Mumbai":{"SMT-01": 93.4, "TAL-02": 1, "CON-03": null, "CON-05": 61.5, "CMP-01": null, "LIV-01": 2.82, "SMT-05": 70.0},
-"Abu Dhabi":{"SMT-01": 348.1, "TAL-02": 1, "CON-03": 60.8, "CON-05": 25.5, "CMP-01": null, "LIV-01": 0.69, "SMT-05": 100.0},
-"Shanghai":{"SMT-01": 458.1, "TAL-02": 5, "CON-03": null, "CON-05": null, "CMP-01": null, "LIV-01": 0.5, "SMT-05": 91.6},
-"Beijing":{"SMT-01": 331.9, "TAL-02": 7, "CON-03": null, "CON-05": null, "CMP-01": null, "LIV-01": 0.5, "SMT-05": 91.6},
-"Shenzhen":{"SMT-01": 314.9, "TAL-02": 2, "CON-03": null, "CON-05": null, "CMP-01": null, "LIV-01": 0.5, "SMT-05": 91.6},
-"Delhi":{"SMT-01": 120.5, "TAL-02": 2, "CON-03": null, "CON-05": 55.4, "CMP-01": null, "LIV-01": 2.82, "SMT-05": 70.0}
+"Hong Kong":{"SMT-01": 431.6, "TAL-02": 5, "CON-03": 52.2, "CON-05": 47.7, "CMP-01": 66154, "LIV-01": 0.38, "SMT-05": 95.8, "GRN-01": 19.8},
+"Taipei":{"SMT-01": 258.2, "TAL-02": 4, "CON-03": null, "CON-05": 43.6, "CMP-01": null, "LIV-01": 0.32, "SMT-05": 88.8, "GRN-01": 15.0},
+"Bangkok":{"SMT-01": 375.6, "TAL-02": 1, "CON-03": null, "CON-05": 67.9, "CMP-01": null, "LIV-01": 4.79, "SMT-05": 90.9, "GRN-01": 23.4},
+"Kuala Lumpur":{"SMT-01": 272.1, "TAL-02": 4, "CON-03": null, "CON-05": 39.1, "CMP-01": null, "LIV-01": 0.73, "SMT-05": 98.0, "GRN-01": 28.3},
+"Jakarta":{"SMT-01": 97.7, "TAL-02": 0, "CON-03": 22.6, "CON-05": 59.8, "CMP-01": null, "LIV-01": 0.3, "SMT-05": 72.8, "GRN-01": 33.8},
+"Manila":{"SMT-01": 198.9, "TAL-02": 0, "CON-03": null, "CON-05": 57.3, "CMP-01": null, "LIV-01": 4.35, "SMT-05": 67.3, "GRN-01": 15.4},
+"Ho Chi Minh City":{"SMT-01": 269.6, "TAL-02": 0, "CON-03": null, "CON-05": 40.3, "CMP-01": null, "LIV-01": 1.54, "SMT-05": 84.2, "GRN-01": 23.5},
+"Mumbai":{"SMT-01": 93.4, "TAL-02": 1, "CON-03": null, "CON-05": 61.5, "CMP-01": null, "LIV-01": 2.82, "SMT-05": 70.0, "GRN-01": 49.5},
+"Abu Dhabi":{"SMT-01": 348.1, "TAL-02": 1, "CON-03": 60.8, "CON-05": 25.5, "CMP-01": null, "LIV-01": 0.69, "SMT-05": 100.0, "GRN-01": 30.9},
+"Shanghai":{"SMT-01": 458.1, "TAL-02": 5, "CON-03": null, "CON-05": null, "CMP-01": null, "LIV-01": 0.5, "SMT-05": 91.6, "GRN-01": 28.4},
+"Beijing":{"SMT-01": 331.9, "TAL-02": 7, "CON-03": null, "CON-05": null, "CMP-01": null, "LIV-01": 0.5, "SMT-05": 91.6, "GRN-01": 31.0},
+"Shenzhen":{"SMT-01": 314.9, "TAL-02": 2, "CON-03": null, "CON-05": null, "CMP-01": null, "LIV-01": 0.5, "SMT-05": 91.6, "GRN-01": 17.3},
+"Delhi":{"SMT-01": 120.5, "TAL-02": 2, "CON-03": null, "CON-05": 55.4, "CMP-01": null, "LIV-01": 2.82, "SMT-05": 70.0, "GRN-01": 107.0}
 },
 "provenance":{
  "LIV-01": {
@@ -710,6 +710,84 @@ window.INDEX_DATA = {
     "year": "2024",
     "source": "Tel Aviv/ISR",
     "note": "pm25_concentration raw 17.364; pm25_tempcov 88"
+   },
+   "Hong Kong": {
+    "value": 19.8,
+    "year": "2019",
+    "source": "Hong Kong/CHN",
+    "note": "WHO AAQ DB v8.0 (2026); pm25 19.833, tempcov 97; latest non-null pm25 year is 2019 (stuck like Tokyo/Seoul/London)"
+   },
+   "Taipei": {
+    "value": 15.0,
+    "year": "2018",
+    "source": "Taipei/CHN",
+    "note": "WHO AAQ DB v8.0; pm25 15.0, tempcov 99, n=2 stations. Candidates listed: Taipei/CHN (2014,2018), Taipei City/CHN (2017 only); New Taipei rows excluded (different city). Latest non-null = Taipei/CHN 2018"
+   },
+   "Bangkok": {
+    "value": 23.4,
+    "year": "2021",
+    "source": "Bangkok/THA",
+    "note": "WHO AAQ DB v8.0; pm25 23.417, tempcov 99"
+   },
+   "Kuala Lumpur": {
+    "value": 28.3,
+    "year": "2019",
+    "source": "Kuala Lumpur/MYS",
+    "note": "WHO AAQ DB v8.0; pm25 28.27, tempcov NA"
+   },
+   "Jakarta": {
+    "value": 33.8,
+    "year": "2021",
+    "source": "DKI Jakarta/IDN",
+    "note": "WHO AAQ DB v8.0; pm25 33.84, tempcov 100. Candidates: DKI Jakarta/IDN (2018-2021) and Jakarta/IDN (2015-2016); latest is DKI Jakarta 2021"
+   },
+   "Manila": {
+    "value": 15.4,
+    "year": "2020",
+    "source": "Manila/PHL",
+    "note": "WHO AAQ DB v8.0; pm25 15.43, tempcov only 50 (low temporal coverage); City of Manila, not Metro Manila"
+   },
+   "Ho Chi Minh City": {
+    "value": 23.5,
+    "year": "2020",
+    "source": "Ho Chi Minh/VNM",
+    "note": "WHO AAQ DB v8.0; pm25 23.5, tempcov NA"
+   },
+   "Mumbai": {
+    "value": 49.5,
+    "year": "2021",
+    "source": "Mumbai/IND",
+    "note": "WHO AAQ DB v8.0; pm25 49.5, tempcov NA, n=2 stations"
+   },
+   "Abu Dhabi": {
+    "value": 30.9,
+    "year": "2024",
+    "source": "Abu Dhabi /ARE",
+    "note": "WHO AAQ DB v8.0; pm25 30.937, tempcov 98, n=13 (label has trailing space in source); older 'Abu Dhabi/ARE' label ends 2021"
+   },
+   "Shanghai": {
+    "value": 28.4,
+    "year": "2024",
+    "source": "Shanghai/CHN",
+    "note": "WHO AAQ DB v8.0; pm25 28.434, tempcov 98, n=19"
+   },
+   "Beijing": {
+    "value": 31.0,
+    "year": "2024",
+    "source": "Beijing/CHN",
+    "note": "WHO AAQ DB v8.0; pm25 30.98, tempcov 98, n=23; 'Beijing Shi/CHN' label ends 2019"
+   },
+   "Shenzhen": {
+    "value": 17.3,
+    "year": "2024",
+    "source": "Shenzhen/CHN",
+    "note": "WHO AAQ DB v8.0; pm25 17.256, tempcov 98, n=15; 'Shenzhen Shi/CHN' label ends 2019"
+   },
+   "Delhi": {
+    "value": 107.0,
+    "year": "2021",
+    "source": "Delhi/IND",
+    "note": "WHO AAQ DB v8.0; pm25 107.0, tempcov NA, n=1 station (V7.0 vintage)"
    }
   }
  },
