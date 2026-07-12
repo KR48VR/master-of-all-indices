@@ -144,32 +144,32 @@ Berlin,LIV-06,House-price-to-income,Liveable,Housing & Cost,ratio,lower,City,cro
 Barcelona,LIV-06,House-price-to-income,Liveable,Housing & Cost,ratio,lower,City,crowd,13.8,2026 Mid-Year,"Barcelona, Spain",
 Dubai,LIV-06,House-price-to-income,Liveable,Housing & Cost,ratio,lower,City,crowd,7.8,2026 Mid-Year,"Dubai, United Arab Emirates",
 San Francisco,LIV-06,House-price-to-income,Liveable,Housing & Cost,ratio,lower,City,crowd,6.5,2026 Mid-Year,"San Francisco, CA, United States",Individual city page currently shows 6.38 (live data drifts from the mid-year edition snapshot); the 6.5 edition value is used. Column parse verified against raw row HTML.
-Stockholm,LIV-06,House-price-to-income,Liveable,Housing & Cost,ratio,lower,City,crowd,,,Numbeo Property Prices Index (Price To Income Ratio),
-Oslo,LIV-06,House-price-to-income,Liveable,Housing & Cost,ratio,lower,City,crowd,,,Numbeo Property Prices Index (Price To Income Ratio),
-Helsinki,LIV-06,House-price-to-income,Liveable,Housing & Cost,ratio,lower,City,crowd,,,Numbeo Property Prices Index (Price To Income Ratio),
-Madrid,LIV-06,House-price-to-income,Liveable,Housing & Cost,ratio,lower,City,crowd,,,Numbeo Property Prices Index (Price To Income Ratio),
-Milan,LIV-06,House-price-to-income,Liveable,Housing & Cost,ratio,lower,City,crowd,,,Numbeo Property Prices Index (Price To Income Ratio),
-Rome,LIV-06,House-price-to-income,Liveable,Housing & Cost,ratio,lower,City,crowd,,,Numbeo Property Prices Index (Price To Income Ratio),
-Munich,LIV-06,House-price-to-income,Liveable,Housing & Cost,ratio,lower,City,crowd,,,Numbeo Property Prices Index (Price To Income Ratio),
-Frankfurt,LIV-06,House-price-to-income,Liveable,Housing & Cost,ratio,lower,City,crowd,,,Numbeo Property Prices Index (Price To Income Ratio),
-Hamburg,LIV-06,House-price-to-income,Liveable,Housing & Cost,ratio,lower,City,crowd,,,Numbeo Property Prices Index (Price To Income Ratio),
-Brussels,LIV-06,House-price-to-income,Liveable,Housing & Cost,ratio,lower,City,crowd,,,Numbeo Property Prices Index (Price To Income Ratio),
-Dublin,LIV-06,House-price-to-income,Liveable,Housing & Cost,ratio,lower,City,crowd,,,Numbeo Property Prices Index (Price To Income Ratio),
-Lisbon,LIV-06,House-price-to-income,Liveable,Housing & Cost,ratio,lower,City,crowd,,,Numbeo Property Prices Index (Price To Income Ratio),
-Prague,LIV-06,House-price-to-income,Liveable,Housing & Cost,ratio,lower,City,crowd,,,Numbeo Property Prices Index (Price To Income Ratio),
-Warsaw,LIV-06,House-price-to-income,Liveable,Housing & Cost,ratio,lower,City,crowd,,,Numbeo Property Prices Index (Price To Income Ratio),
-Istanbul,LIV-06,House-price-to-income,Liveable,Housing & Cost,ratio,lower,City,crowd,,,Numbeo Property Prices Index (Price To Income Ratio),
-Montreal,LIV-06,House-price-to-income,Liveable,Housing & Cost,ratio,lower,City,crowd,,,Numbeo Property Prices Index (Price To Income Ratio),
-Vancouver,LIV-06,House-price-to-income,Liveable,Housing & Cost,ratio,lower,City,crowd,,,Numbeo Property Prices Index (Price To Income Ratio),
-Chicago,LIV-06,House-price-to-income,Liveable,Housing & Cost,ratio,lower,City,crowd,,,Numbeo Property Prices Index (Price To Income Ratio),
-Boston,LIV-06,House-price-to-income,Liveable,Housing & Cost,ratio,lower,City,crowd,,,Numbeo Property Prices Index (Price To Income Ratio),
-Los Angeles,LIV-06,House-price-to-income,Liveable,Housing & Cost,ratio,lower,City,crowd,,,Numbeo Property Prices Index (Price To Income Ratio),
-Seattle,LIV-06,House-price-to-income,Liveable,Housing & Cost,ratio,lower,City,crowd,,,Numbeo Property Prices Index (Price To Income Ratio),
-Washington DC,LIV-06,House-price-to-income,Liveable,Housing & Cost,ratio,lower,City,crowd,,,Numbeo Property Prices Index (Price To Income Ratio),
-Sydney,LIV-06,House-price-to-income,Liveable,Housing & Cost,ratio,lower,City,crowd,,,Numbeo Property Prices Index (Price To Income Ratio),
-Auckland,LIV-06,House-price-to-income,Liveable,Housing & Cost,ratio,lower,City,crowd,,,Numbeo Property Prices Index (Price To Income Ratio),
-Osaka,LIV-06,House-price-to-income,Liveable,Housing & Cost,ratio,lower,City,crowd,,,Numbeo Property Prices Index (Price To Income Ratio),
-Tel Aviv,LIV-06,House-price-to-income,Liveable,Housing & Cost,ratio,lower,City,crowd,,,Numbeo Property Prices Index (Price To Income Ratio),
+Stockholm,LIV-06,House-price-to-income,Liveable,Housing & Cost,ratio,lower,City,crowd,12.5,2026 Mid-Year,"Stockholm, Sweden","Price To Income Ratio column, Numbeo Property Prices Index 2026 Mid-Year (rankings.jsp fetched 2026-07-12)"
+Oslo,LIV-06,House-price-to-income,Liveable,Housing & Cost,ratio,lower,City,crowd,11,2026 Mid-Year,"Oslo, Norway","Price To Income Ratio column, Numbeo Property Prices Index 2026 Mid-Year (rankings.jsp fetched 2026-07-12)"
+Helsinki,LIV-06,House-price-to-income,Liveable,Housing & Cost,ratio,lower,City,crowd,11.4,2026 Mid-Year,"Helsinki, Finland","Price To Income Ratio column, Numbeo Property Prices Index 2026 Mid-Year (rankings.jsp fetched 2026-07-12)"
+Madrid,LIV-06,House-price-to-income,Liveable,Housing & Cost,ratio,lower,City,crowd,13.2,2026 Mid-Year,"Madrid, Spain","Price To Income Ratio column, Numbeo Property Prices Index 2026 Mid-Year (rankings.jsp fetched 2026-07-12)"
+Milan,LIV-06,House-price-to-income,Liveable,Housing & Cost,ratio,lower,City,crowd,18.2,2026 Mid-Year,"Milan, Italy","Price To Income Ratio column, Numbeo Property Prices Index 2026 Mid-Year (rankings.jsp fetched 2026-07-12)"
+Rome,LIV-06,House-price-to-income,Liveable,Housing & Cost,ratio,lower,City,crowd,14.9,2026 Mid-Year,"Rome, Italy","Price To Income Ratio column, Numbeo Property Prices Index 2026 Mid-Year (rankings.jsp fetched 2026-07-12)"
+Munich,LIV-06,House-price-to-income,Liveable,Housing & Cost,ratio,lower,City,crowd,13.1,2026 Mid-Year,"Munich, Germany","Price To Income Ratio column, Numbeo Property Prices Index 2026 Mid-Year (rankings.jsp fetched 2026-07-12)"
+Frankfurt,LIV-06,House-price-to-income,Liveable,Housing & Cost,ratio,lower,City,crowd,7.7,2026 Mid-Year,"Frankfurt, Germany","Price To Income Ratio column, Numbeo Property Prices Index 2026 Mid-Year (rankings.jsp fetched 2026-07-12)"
+Hamburg,LIV-06,House-price-to-income,Liveable,Housing & Cost,ratio,lower,City,crowd,11.1,2026 Mid-Year,"Hamburg, Germany","Price To Income Ratio column, Numbeo Property Prices Index 2026 Mid-Year (rankings.jsp fetched 2026-07-12)"
+Brussels,LIV-06,House-price-to-income,Liveable,Housing & Cost,ratio,lower,City,crowd,7.2,2026 Mid-Year,"Brussels, Belgium","Price To Income Ratio column, Numbeo Property Prices Index 2026 Mid-Year (rankings.jsp fetched 2026-07-12)"
+Dublin,LIV-06,House-price-to-income,Liveable,Housing & Cost,ratio,lower,City,crowd,9,2026 Mid-Year,"Dublin, Ireland","Price To Income Ratio column, Numbeo Property Prices Index 2026 Mid-Year (rankings.jsp fetched 2026-07-12)"
+Lisbon,LIV-06,House-price-to-income,Liveable,Housing & Cost,ratio,lower,City,crowd,18.7,2026 Mid-Year,"Lisbon, Portugal","Price To Income Ratio column, Numbeo Property Prices Index 2026 Mid-Year (rankings.jsp fetched 2026-07-12)"
+Prague,LIV-06,House-price-to-income,Liveable,Housing & Cost,ratio,lower,City,crowd,18.2,2026 Mid-Year,"Prague, Czech Republic","Price To Income Ratio column, Numbeo Property Prices Index 2026 Mid-Year (rankings.jsp fetched 2026-07-12)"
+Warsaw,LIV-06,House-price-to-income,Liveable,Housing & Cost,ratio,lower,City,crowd,11.7,2026 Mid-Year,"Warsaw, Poland","Price To Income Ratio column, Numbeo Property Prices Index 2026 Mid-Year (rankings.jsp fetched 2026-07-12)"
+Istanbul,LIV-06,House-price-to-income,Liveable,Housing & Cost,ratio,lower,City,crowd,10.1,2026 Mid-Year,"Istanbul, Turkey","Price To Income Ratio column, Numbeo Property Prices Index 2026 Mid-Year (rankings.jsp fetched 2026-07-12)"
+Montreal,LIV-06,House-price-to-income,Liveable,Housing & Cost,ratio,lower,City,crowd,7.6,2026 Mid-Year,"Montreal, Canada","Price To Income Ratio column, Numbeo Property Prices Index 2026 Mid-Year (rankings.jsp fetched 2026-07-12)"
+Vancouver,LIV-06,House-price-to-income,Liveable,Housing & Cost,ratio,lower,City,crowd,11.7,2026 Mid-Year,"Vancouver, Canada","Price To Income Ratio column, Numbeo Property Prices Index 2026 Mid-Year (rankings.jsp fetched 2026-07-12)"
+Chicago,LIV-06,House-price-to-income,Liveable,Housing & Cost,ratio,lower,City,crowd,3.2,2026 Mid-Year,"Chicago, IL, United States","Price To Income Ratio column, Numbeo Property Prices Index 2026 Mid-Year (rankings.jsp fetched 2026-07-12)"
+Boston,LIV-06,House-price-to-income,Liveable,Housing & Cost,ratio,lower,City,crowd,7.9,2026 Mid-Year,"Boston, MA, United States","Price To Income Ratio column, Numbeo Property Prices Index 2026 Mid-Year (rankings.jsp fetched 2026-07-12)"
+Los Angeles,LIV-06,House-price-to-income,Liveable,Housing & Cost,ratio,lower,City,crowd,8.2,2026 Mid-Year,"Los Angeles, CA, United States","Price To Income Ratio column, Numbeo Property Prices Index 2026 Mid-Year (rankings.jsp fetched 2026-07-12)"
+Seattle,LIV-06,House-price-to-income,Liveable,Housing & Cost,ratio,lower,City,crowd,4.8,2026 Mid-Year,"Seattle, WA, United States","Price To Income Ratio column, Numbeo Property Prices Index 2026 Mid-Year (rankings.jsp fetched 2026-07-12)"
+Washington DC,LIV-06,House-price-to-income,Liveable,Housing & Cost,ratio,lower,City,crowd,4.3,2026 Mid-Year,"Washington, DC, United States","Price To Income Ratio column, Numbeo Property Prices Index 2026 Mid-Year (rankings.jsp fetched 2026-07-12)"
+Sydney,LIV-06,House-price-to-income,Liveable,Housing & Cost,ratio,lower,City,crowd,12.5,2026 Mid-Year,"Sydney, Australia","Price To Income Ratio column, Numbeo Property Prices Index 2026 Mid-Year (rankings.jsp fetched 2026-07-12)"
+Auckland,LIV-06,House-price-to-income,Liveable,Housing & Cost,ratio,lower,City,crowd,10.5,2026 Mid-Year,"Auckland, New Zealand","Price To Income Ratio column, Numbeo Property Prices Index 2026 Mid-Year (rankings.jsp fetched 2026-07-12)"
+Osaka,LIV-06,House-price-to-income,Liveable,Housing & Cost,ratio,lower,City,crowd,10.6,current (last update 2026-06-19),"Osaka, Japan (city page)","Absent from 2026 Mid-Year rankings table; taken from numbeo.com/property-investment/in/Osaka current view: Price to Income Ratio 10.59 (80 entries, 16 contributors, past 18 months)."
+Tel Aviv,LIV-06,House-price-to-income,Liveable,Housing & Cost,ratio,lower,City,crowd,20,2026 Mid-Year,"Tel Aviv-Yafo, Israel","Price To Income Ratio column, Numbeo Property Prices Index 2026 Mid-Year (rankings.jsp fetched 2026-07-12)"
 Singapore,GRN-01,PM2.5 air pollution,Green,Air & Environment,µg/m³,lower,City,none,12,2021,Singapore/SGP,"pm25_tempcov=NA; version V6.0 (2023), n=1 station; no data newer than 2021 in v8 — identical to project's v6.1 value (12.0, 2021)"
 Tokyo,GRN-01,PM2.5 air pollution,Green,Air & Environment,µg/m³,lower,City,none,10.8,2019,Tokyo/JPN,"pm25_tempcov=99; version V6.0 (2023), n=18 stations; no data newer than 2019 in v8 (v6.1 had 10.8, 2019)"
 Copenhagen,GRN-01,PM2.5 air pollution,Green,Air & Environment,µg/m³,lower,City,none,6.9,2024,Kobenhavn/DNK,"pm25_tempcov=98; version V8.0 (2026), n=4 stations, EEA source (v6.1: 8.3, 2020)"
