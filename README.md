@@ -67,7 +67,9 @@ section. Target: ~50 cities × ~35 measures with ≥85% coverage, 100% provenanc
 
 See `CITATION.cff` (GitHub's "Cite this repository" button uses it). Please
 state the version: adding cities re-scales all scores, so scores are comparable
-within a version, not across versions.
+within a version, not across versions. The live site may run ahead of the last
+tagged release (e.g. a `2.0.0-beta` during expansion waves) — cite the tagged
+release you used, or the beta version shown on the site together with its date.
 
 ## License
 
