@@ -97,19 +97,19 @@ window.INDEX_DATA = {
 "Auckland":{"SMT-01": 283.4, "CMP-01": 55906, "LIV-04": 82.7, "TAL-01": 45.5, "LIV-05": 3.47, "LIV-01": 1.46, "SMT-05": 93.5, "GRN-01": 5.5, "GRN-02": 88.4, "LIV-06": 10.5, "CON-05": 42.2, "CON-03": 37.6, "SMT-03": 80.21, "TAL-02": 2, "CON-01": 46, "TAL-06": 42.5, "GRN-05": null, "CMP-04": null, "CMP-06": 166},
 "Osaka":{"SMT-01": 295.1, "CMP-01": 41497, "LIV-04": 84.2, "TAL-01": 56.9, "LIV-05": 2.92, "LIV-01": 0.23, "SMT-05": 85.5, "GRN-01": 9.4, "GRN-02": 72.2, "LIV-06": 10.6, "CON-05": 42.9, "CON-03": null, "SMT-03": null, "TAL-02": 1, "CON-01": null, "TAL-06": 6.8, "GRN-05": null, "CMP-04": 3.7, "CMP-06": 21},
 "Tel Aviv":{"SMT-01": 366.9, "CMP-01": null, "LIV-04": 83.1, "TAL-01": 60.4, "LIV-05": 4.9, "LIV-01": 1.63, "SMT-05": 88.2, "GRN-01": 17.4, "GRN-02": 65.7, "LIV-06": 20.0, "CON-05": null, "CON-03": 87.9, "SMT-03": null, "TAL-02": 1, "CON-01": 114, "TAL-06": 23.5, "GRN-05": null, "CMP-04": null, "CMP-06": 2111},
-"Hong Kong":{"SMT-01": 431.6, "TAL-02": 5, "CON-03": 52.2, "CON-05": 47.7, "CMP-01": 66154, "LIV-01": 0.38},
-"Taipei":{"SMT-01": 258.2, "TAL-02": 4, "CON-03": null, "CON-05": 43.6, "CMP-01": null, "LIV-01": 0.32},
-"Bangkok":{"SMT-01": 375.6, "TAL-02": 1, "CON-03": null, "CON-05": 67.9, "CMP-01": null, "LIV-01": 4.79},
-"Kuala Lumpur":{"SMT-01": 272.1, "TAL-02": 4, "CON-03": null, "CON-05": 39.1, "CMP-01": null, "LIV-01": 0.73},
-"Jakarta":{"SMT-01": 97.7, "TAL-02": 0, "CON-03": 22.6, "CON-05": 59.8, "CMP-01": null, "LIV-01": 0.3},
-"Manila":{"SMT-01": 198.9, "TAL-02": 0, "CON-03": null, "CON-05": 57.3, "CMP-01": null, "LIV-01": 4.35},
-"Ho Chi Minh City":{"SMT-01": 269.6, "TAL-02": 0, "CON-03": null, "CON-05": 40.3, "CMP-01": null, "LIV-01": 1.54},
-"Mumbai":{"SMT-01": 93.4, "TAL-02": 1, "CON-03": null, "CON-05": 61.5, "CMP-01": null, "LIV-01": 2.82},
-"Abu Dhabi":{"SMT-01": 348.1, "TAL-02": 1, "CON-03": 60.8, "CON-05": 25.5, "CMP-01": null, "LIV-01": 0.69},
-"Shanghai":{"SMT-01": 458.1, "TAL-02": 5, "CON-03": null, "CON-05": null, "CMP-01": null, "LIV-01": 0.5},
-"Beijing":{"SMT-01": 331.9, "TAL-02": 7, "CON-03": null, "CON-05": null, "CMP-01": null, "LIV-01": 0.5},
-"Shenzhen":{"SMT-01": 314.9, "TAL-02": 2, "CON-03": null, "CON-05": null, "CMP-01": null, "LIV-01": 0.5},
-"Delhi":{"SMT-01": 120.5, "TAL-02": 2, "CON-03": null, "CON-05": 55.4, "CMP-01": null, "LIV-01": 2.82}
+"Hong Kong":{"SMT-01": 431.6, "TAL-02": 5, "CON-03": 52.2, "CON-05": 47.7, "CMP-01": 66154, "LIV-01": 0.38, "SMT-05": 95.8},
+"Taipei":{"SMT-01": 258.2, "TAL-02": 4, "CON-03": null, "CON-05": 43.6, "CMP-01": null, "LIV-01": 0.32, "SMT-05": 88.8},
+"Bangkok":{"SMT-01": 375.6, "TAL-02": 1, "CON-03": null, "CON-05": 67.9, "CMP-01": null, "LIV-01": 4.79, "SMT-05": 90.9},
+"Kuala Lumpur":{"SMT-01": 272.1, "TAL-02": 4, "CON-03": null, "CON-05": 39.1, "CMP-01": null, "LIV-01": 0.73, "SMT-05": 98.0},
+"Jakarta":{"SMT-01": 97.7, "TAL-02": 0, "CON-03": 22.6, "CON-05": 59.8, "CMP-01": null, "LIV-01": 0.3, "SMT-05": 72.8},
+"Manila":{"SMT-01": 198.9, "TAL-02": 0, "CON-03": null, "CON-05": 57.3, "CMP-01": null, "LIV-01": 4.35, "SMT-05": 67.3},
+"Ho Chi Minh City":{"SMT-01": 269.6, "TAL-02": 0, "CON-03": null, "CON-05": 40.3, "CMP-01": null, "LIV-01": 1.54, "SMT-05": 84.2},
+"Mumbai":{"SMT-01": 93.4, "TAL-02": 1, "CON-03": null, "CON-05": 61.5, "CMP-01": null, "LIV-01": 2.82, "SMT-05": 70.0},
+"Abu Dhabi":{"SMT-01": 348.1, "TAL-02": 1, "CON-03": 60.8, "CON-05": 25.5, "CMP-01": null, "LIV-01": 0.69, "SMT-05": 100.0},
+"Shanghai":{"SMT-01": 458.1, "TAL-02": 5, "CON-03": null, "CON-05": null, "CMP-01": null, "LIV-01": 0.5, "SMT-05": 91.6},
+"Beijing":{"SMT-01": 331.9, "TAL-02": 7, "CON-03": null, "CON-05": null, "CMP-01": null, "LIV-01": 0.5, "SMT-05": 91.6},
+"Shenzhen":{"SMT-01": 314.9, "TAL-02": 2, "CON-03": null, "CON-05": null, "CMP-01": null, "LIV-01": 0.5, "SMT-05": 91.6},
+"Delhi":{"SMT-01": 120.5, "TAL-02": 2, "CON-03": null, "CON-05": 55.4, "CMP-01": null, "LIV-01": 2.82, "SMT-05": 70.0}
 },
 "provenance":{
  "LIV-01": {
@@ -3260,6 +3260,84 @@ window.INDEX_DATA = {
     "year": "2024",
     "source": "Israel (ISR) — country proxy",
     "note": "World Bank WDI IT.NET.USER.ZS (individuals using the Internet, % of population), mrnev=1; API lastupdated 2026-07-01"
+   },
+   "Hong Kong": {
+    "value": 95.8,
+    "year": "2024",
+    "source": "Hong Kong SAR, China (HKG)",
+    "note": "World Bank API IT.NET.USER.ZS mrnev=1; raw 95.75536971"
+   },
+   "Taipei": {
+    "value": 88.8,
+    "year": "2025",
+    "source": "Taiwan - TWNIC 2025 Taiwan Internet Report",
+    "note": "Taiwan not in World Bank WDI. TWNIC 2025 Taiwan Internet Report (report.twnic.tw/2025/en): 'Internet access rate 88.75%'; survey conducted Jul 28-Sep 1 2025 among people aged 18+, weighted, n=2,142. Methodology differs f"
+   },
+   "Bangkok": {
+    "value": 90.9,
+    "year": "2024",
+    "source": "Thailand (THA)",
+    "note": "World Bank API; raw 90.86718789"
+   },
+   "Kuala Lumpur": {
+    "value": 98.0,
+    "year": "2024",
+    "source": "Malaysia (MYS)",
+    "note": "World Bank API; raw 98.0206059"
+   },
+   "Jakarta": {
+    "value": 72.8,
+    "year": "2024",
+    "source": "Indonesia (IDN)",
+    "note": "World Bank API; raw 72.78075544"
+   },
+   "Manila": {
+    "value": 67.3,
+    "year": "2024",
+    "source": "Philippines (PHL)",
+    "note": "World Bank API; raw 67.26300914"
+   },
+   "Ho Chi Minh City": {
+    "value": 84.2,
+    "year": "2024",
+    "source": "Viet Nam (VNM)",
+    "note": "World Bank API; raw 84.15 (rounds half-up to 84.2)"
+   },
+   "Mumbai": {
+    "value": 70.0,
+    "year": "2025",
+    "source": "India (IND)",
+    "note": "World Bank API; reported as integer 70; shared with Delhi (country proxy)"
+   },
+   "Abu Dhabi": {
+    "value": 100.0,
+    "year": "2024",
+    "source": "United Arab Emirates (ARE)",
+    "note": "World Bank API; source records exactly 100 (same UAE value as Dubai in dataset)"
+   },
+   "Shanghai": {
+    "value": 91.6,
+    "year": "2025",
+    "source": "China (CHN)",
+    "note": "World Bank API; raw 91.6; shared with Beijing and Shenzhen (country proxy)"
+   },
+   "Beijing": {
+    "value": 91.6,
+    "year": "2025",
+    "source": "China (CHN)",
+    "note": "Same China national value (country proxy)"
+   },
+   "Shenzhen": {
+    "value": 91.6,
+    "year": "2025",
+    "source": "China (CHN)",
+    "note": "Same China national value (country proxy)"
+   },
+   "Delhi": {
+    "value": 70.0,
+    "year": "2025",
+    "source": "India (IND)",
+    "note": "Same India national value as Mumbai (country proxy)"
    }
   }
  },
