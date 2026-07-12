@@ -18,7 +18,7 @@ window.INDEX_DATA = {
 {"id": "LIV-02", "domain": "Liveable", "subtheme": "Safety & Stability", "name": "Perceived safety", "measures": "Resident-reported feeling of safety", "unit": "index 0-100", "direction": "higher", "dataLevel": "City", "source": "Numbeo Safety Index", "appearsIn": "—", "pilot": 0, "caveat": "Crowd-sourced — treat as a soft signal.", "contestable": 0, "approx": "crowd"},
 {"id": "LIV-03", "domain": "Liveable", "subtheme": "Safety & Stability", "name": "Political stability", "measures": "Absence of violence / terrorism", "unit": "index", "direction": "higher", "dataLevel": "Country proxy", "source": "World Bank WGI", "appearsIn": "EIU (Stability)", "pilot": 0, "caveat": "Country-level stand-in, not city-specific.", "contestable": 0, "approx": "proxy"},
 {"id": "LIV-04", "domain": "Liveable", "subtheme": "Health", "name": "Life expectancy", "measures": "Average life expectancy at birth", "unit": "years", "direction": "higher", "dataLevel": "Metro", "source": "OECD Regions / SingStat / World Bank", "appearsIn": "GPCI (Livability)", "pilot": 1, "caveat": "OECD regional data at the finest level published: city or metro for most European cities; state/province proxies for the US, Canadian and Australian cities (named per value); Dubai is a UAE national figure. Years mix 2019-2025 — US values are 2020 (COVID-depressed, DC 2019), Japanese life tables are quinquennial (2020).", "contestable": 0, "approx": "none"},
-{"id": "LIV-05", "domain": "Liveable", "subtheme": "Health", "name": "Physicians per capita", "measures": "Doctors per 1,000 residents", "unit": "per 1k", "direction": "higher", "dataLevel": "Metro", "source": "OECD Regional health / data.gov.sg / DHA", "appearsIn": "EIU (Healthcare)", "pilot": 1, "caveat": "OECD regional physician density: province/state values for Amsterdam (N-Holland), Toronto (Ontario), New York (NY State), San Francisco (California), Barcelona (Catalonia); Paris is the dense core departement and reads high. Berlin is 2019 vintage. London computed from NHS + ONS files replicating OECD's documented UK method (NHS staff only). Singapore from MOH via data.gov.sg; Dubai from DHA statistical book 2022.", "contestable": 0, "approx": "none"},
+{"id": "LIV-05", "domain": "Liveable", "subtheme": "Health", "name": "Physicians per capita", "measures": "Doctors per 1,000 residents", "unit": "per 1k", "direction": "higher", "dataLevel": "Metro", "source": "OECD Regional health / data.gov.sg / DHA", "appearsIn": "EIU (Healthcare)", "pilot": 1, "caveat": "OECD regional physician density, finest comparable level: city/metro for many European cities, state/province/region proxies for US, Canadian, Italian and German cities (German Laender end 2019). Core districts read high (Paris, Warsaw-core rejected for a reporting break, Washington DC extreme - physicians counted at workplace). Dublin and London-style gaps filled or left blank per value; Singapore from MOH, Dubai from DHA 2022. Years mix 2019-2025.", "contestable": 0, "approx": "none"},
 {"id": "LIV-06", "domain": "Liveable", "subtheme": "Housing & Cost", "name": "House-price-to-income", "measures": "Median home price / median income", "unit": "ratio", "direction": "lower", "dataLevel": "City", "source": "Numbeo Property Prices Index", "appearsIn": "—", "pilot": 1, "caveat": "Numbeo 2026 Mid-Year edition: crowd-sourced median apartment price over median familial disposable income (years). Core affordability signal — treat as a soft, crowd-sourced estimate.", "contestable": 0, "approx": "crowd"},
 {"id": "LIV-07", "domain": "Liveable", "subtheme": "Housing & Cost", "name": "Cost of living", "measures": "Standard basket cost vs a benchmark city", "unit": "index", "direction": "lower", "dataLevel": "City", "source": "Numbeo", "appearsIn": "Mercer", "pilot": 0, "caveat": "Direction is contestable — a rich city having high costs isn't necessarily 'bad'.", "contestable": 1, "approx": "crowd"},
 {"id": "LIV-08", "domain": "Liveable", "subtheme": "Culture & Amenities", "name": "Cultural venues", "measures": "Museums / theatres / venues per 100,000", "unit": "per 100k", "direction": "higher", "dataLevel": "City", "source": "City open data / GPCI", "appearsIn": "GPCI (Cultural Interaction)", "pilot": 0, "caveat": "Sourcing and definitions vary widely.", "contestable": 0, "approx": "none"},
@@ -71,32 +71,32 @@ window.INDEX_DATA = {
 "Barcelona":{"LIV-01": 0.69, "LIV-04": 84.2, "LIV-05": 4.47, "LIV-06": 13.8, "GRN-01": 10.9, "GRN-02": null, "GRN-05": 42.1, "SMT-01": 338.8, "SMT-03": null, "SMT-05": 95.8, "CMP-01": 52064, "CMP-04": 28.5, "CMP-06": 222, "TAL-01": 46.9, "TAL-02": 5, "TAL-06": 27.3, "CON-01": 202, "CON-03": 66.9, "CON-05": 41.1},
 "Dubai":{"LIV-01": 0.69, "LIV-04": 83.1, "LIV-05": 3.35, "LIV-06": 7.8, "GRN-01": 35.0, "GRN-02": 40.6, "GRN-05": null, "SMT-01": 359.0, "SMT-03": 90.63, "SMT-05": 100.0, "CMP-01": null, "CMP-04": null, "CMP-06": 661, "TAL-01": 41.0, "TAL-02": 0, "TAL-06": null, "CON-01": 310, "CON-03": 24.8, "CON-05": 42.7},
 "San Francisco":{"LIV-01": 5.76, "LIV-04": 79.0, "LIV-05": 3.02, "LIV-06": 6.5, "GRN-01": 7.4, "GRN-02": null, "GRN-05": 53.1, "SMT-01": 367.7, "SMT-03": null, "SMT-05": 94.7, "CMP-01": 146853, "CMP-04": 320.8, "CMP-06": 20260, "TAL-01": 46.9, "TAL-02": 0, "TAL-06": 32.4, "CON-01": 60, "CON-03": 29.6, "CON-05": 49.7},
-"Stockholm":{"SMT-01": 302.2, "CMP-01": 81394, "LIV-04": 85.0, "TAL-01": 60.0},
-"Oslo":{"SMT-01": 281.9, "CMP-01": 63394, "LIV-04": 83.3, "TAL-01": 56.5},
-"Helsinki":{"SMT-01": 238.8, "CMP-01": 66107, "LIV-04": 81.9, "TAL-01": 48.1},
-"Madrid":{"SMT-01": 382.3, "CMP-01": 59768, "LIV-04": 85.4, "TAL-01": 50.0},
-"Milan":{"SMT-01": 429.2, "CMP-01": 82014, "LIV-04": 84.7, "TAL-01": 23.6},
-"Rome":{"SMT-01": 376.5, "CMP-01": 65690, "LIV-04": 83.6, "TAL-01": 28.5},
-"Munich":{"SMT-01": 221.7, "CMP-01": 102244, "LIV-04": 83.1, "TAL-01": 38.6},
-"Frankfurt":{"SMT-01": 232.1, "CMP-01": 82688, "LIV-04": 81.9, "TAL-01": 35.6},
-"Hamburg":{"SMT-01": 196.7, "CMP-01": 77768, "LIV-04": 80.9, "TAL-01": 43.0},
-"Brussels":{"SMT-01": 266.9, "CMP-01": 78040, "LIV-04": 82.2, "TAL-01": 56.9},
-"Dublin":{"SMT-01": 337.0, "CMP-01": 141694, "LIV-04": 83.3, "TAL-01": 61.0},
-"Lisbon":{"SMT-01": 354.4, "CMP-01": 50408, "LIV-04": 81.2, "TAL-01": 43.3},
-"Prague":{"SMT-01": 258.9, "CMP-01": 83056, "LIV-04": 81.1, "TAL-01": 54.8},
-"Warsaw":{"SMT-01": 362.9, "CMP-01": 81920, "LIV-04": 81.0, "TAL-01": 65.3},
-"Istanbul":{"SMT-01": 251.2, "CMP-01": 56428, "LIV-04": 77.1, "TAL-01": 31.8},
-"Montreal":{"SMT-01": 334.2, "CMP-01": 38730, "LIV-04": 82.5, "TAL-01": 59.0},
-"Vancouver":{"SMT-01": 374.2, "CMP-01": 45902, "LIV-04": 81.5, "TAL-01": 64.0},
-"Chicago":{"SMT-01": 392.9, "CMP-01": 75524, "LIV-04": 76.8, "TAL-01": 50.9},
-"Boston":{"SMT-01": 361.6, "CMP-01": 101761, "LIV-04": 79.0, "TAL-01": 58.2},
-"Los Angeles":{"SMT-01": 392.1, "CMP-01": 70646, "LIV-04": 79.0, "TAL-01": 46.9},
-"Seattle":{"SMT-01": 410.0, "CMP-01": 111516, "LIV-04": 79.2, "TAL-01": 52.9},
-"Washington DC":{"SMT-01": 362.5, "CMP-01": 83988, "LIV-04": 78.0, "TAL-01": 70.7},
-"Sydney":{"SMT-01": 239.5, "CMP-01": 45152, "LIV-04": 84.1, "TAL-01": 52.5},
-"Auckland":{"SMT-01": 283.4, "CMP-01": 55906, "LIV-04": 82.7, "TAL-01": 45.5},
-"Osaka":{"SMT-01": 295.1, "CMP-01": 41497, "LIV-04": 84.2, "TAL-01": 56.9},
-"Tel Aviv":{"SMT-01": 366.9, "CMP-01": null, "LIV-04": 83.1, "TAL-01": 60.4}
+"Stockholm":{"SMT-01": 302.2, "CMP-01": 81394, "LIV-04": 85.0, "TAL-01": 60.0, "LIV-05": 4.91},
+"Oslo":{"SMT-01": 281.9, "CMP-01": 63394, "LIV-04": 83.3, "TAL-01": 56.5, "LIV-05": 6.8},
+"Helsinki":{"SMT-01": 238.8, "CMP-01": 66107, "LIV-04": 81.9, "TAL-01": 48.1, "LIV-05": 3.72},
+"Madrid":{"SMT-01": 382.3, "CMP-01": 59768, "LIV-04": 85.4, "TAL-01": 50.0, "LIV-05": 6.18},
+"Milan":{"SMT-01": 429.2, "CMP-01": 82014, "LIV-04": 84.7, "TAL-01": 23.6, "LIV-05": 5.59},
+"Rome":{"SMT-01": 376.5, "CMP-01": 65690, "LIV-04": 83.6, "TAL-01": 28.5, "LIV-05": 6.77},
+"Munich":{"SMT-01": 221.7, "CMP-01": 102244, "LIV-04": 83.1, "TAL-01": 38.6, "LIV-05": 4.56},
+"Frankfurt":{"SMT-01": 232.1, "CMP-01": 82688, "LIV-04": 81.9, "TAL-01": 35.6, "LIV-05": 4.27},
+"Hamburg":{"SMT-01": 196.7, "CMP-01": 77768, "LIV-04": 80.9, "TAL-01": 43.0, "LIV-05": 6.4},
+"Brussels":{"SMT-01": 266.9, "CMP-01": 78040, "LIV-04": 82.2, "TAL-01": 56.9, "LIV-05": 4.44},
+"Dublin":{"SMT-01": 337.0, "CMP-01": 141694, "LIV-04": 83.3, "TAL-01": 61.0, "LIV-05": null},
+"Lisbon":{"SMT-01": 354.4, "CMP-01": 50408, "LIV-04": 81.2, "TAL-01": 43.3, "LIV-05": 8.37},
+"Prague":{"SMT-01": 258.9, "CMP-01": 83056, "LIV-04": 81.1, "TAL-01": 54.8, "LIV-05": 8.24},
+"Warsaw":{"SMT-01": 362.9, "CMP-01": 81920, "LIV-04": 81.0, "TAL-01": 65.3, "LIV-05": 6.3},
+"Istanbul":{"SMT-01": 251.2, "CMP-01": 56428, "LIV-04": 77.1, "TAL-01": 31.8, "LIV-05": 2.96},
+"Montreal":{"SMT-01": 334.2, "CMP-01": 38730, "LIV-04": 82.5, "TAL-01": 59.0, "LIV-05": 2.6},
+"Vancouver":{"SMT-01": 374.2, "CMP-01": 45902, "LIV-04": 81.5, "TAL-01": 64.0, "LIV-05": 2.71},
+"Chicago":{"SMT-01": 392.9, "CMP-01": 75524, "LIV-04": 76.8, "TAL-01": 50.9, "LIV-05": 3.7},
+"Boston":{"SMT-01": 361.6, "CMP-01": 101761, "LIV-04": 79.0, "TAL-01": 58.2, "LIV-05": 5.52},
+"Los Angeles":{"SMT-01": 392.1, "CMP-01": 70646, "LIV-04": 79.0, "TAL-01": 46.9, "LIV-05": 3.02},
+"Seattle":{"SMT-01": 410.0, "CMP-01": 111516, "LIV-04": 79.2, "TAL-01": 52.9, "LIV-05": 2.98},
+"Washington DC":{"SMT-01": 362.5, "CMP-01": 83988, "LIV-04": 78.0, "TAL-01": 70.7, "LIV-05": 12.02},
+"Sydney":{"SMT-01": 239.5, "CMP-01": 45152, "LIV-04": 84.1, "TAL-01": 52.5, "LIV-05": 4.58},
+"Auckland":{"SMT-01": 283.4, "CMP-01": 55906, "LIV-04": 82.7, "TAL-01": 45.5, "LIV-05": 3.47},
+"Osaka":{"SMT-01": 295.1, "CMP-01": 41497, "LIV-04": 84.2, "TAL-01": 56.9, "LIV-05": 2.92},
+"Tel Aviv":{"SMT-01": 366.9, "CMP-01": null, "LIV-04": 83.1, "TAL-01": 60.4, "LIV-05": 4.9}
 },
 "provenance":{
  "LIV-01": {
@@ -1224,6 +1224,161 @@ window.INDEX_DATA = {
     "year": "2022",
     "source": "OECD DF_HEALTH, REF_AREA US06 'California' (TL2, state), DOC per 1,000 inhabitants, 2022",
     "note": "California state proxy, not San Francisco; no finer OECD geography with data. Same 2019 level break as other US states (2018=2.60, 2019=3.15)."
+   },
+   "Stockholm": {
+    "value": 4.91,
+    "year": "2023",
+    "source": "OECD SE110 Stockholm County (TL3)",
+    "note": "TL2 SE11 identical (4.91, 2023). County = metro proxy."
+   },
+   "Oslo": {
+    "value": 6.8,
+    "year": "2024",
+    "source": "OECD NO081 Oslo (TL3)",
+    "note": "Oslo municipality/county = city proper; core density reads high (parent TL2 NO08 Oslo and Viken = 5.22 in 2024), same pattern as Paris FR101 in v1.0. Series dipped 7.59 (2022) to 6.67 (2023) then 6.80 (2024)."
+   },
+   "Helsinki": {
+    "value": 3.72,
+    "year": "2021",
+    "source": "OECD FI1B1 Helsinki-Uusimaa (TL3)",
+    "note": "TL3 = TL2 FI1B (same region, whole Uusimaa). Finnish series ends 2021 - older vintage than most cities in this wave."
+   },
+   "Madrid": {
+    "value": 6.18,
+    "year": "2024",
+    "source": "OECD ES30 Madrid (TL2)",
+    "note": "Community of Madrid. TL3 ES300 exists but ends 2011 - rejected as stale (same rule v1.0 applied to Barcelona ES511). Spanish series volatile recently (2022=5.11, 2023=5.45, 2024=6.18); Catalonia shows the same pattern an"
+   },
+   "Milan": {
+    "value": 5.59,
+    "year": "2023",
+    "source": "OECD ITC4 Lombardy (TL2)",
+    "note": "Region proxy - Italy has no TL3 physician data in this flow."
+   },
+   "Rome": {
+    "value": 6.77,
+    "year": "2023",
+    "source": "OECD ITI4 Lazio (TL2)",
+    "note": "Region proxy - Italy has no TL3 physician data in this flow."
+   },
+   "Munich": {
+    "value": 4.56,
+    "year": "2019",
+    "source": "OECD DE2 Bavaria (TL2)",
+    "note": "German TL2 in this flow = the 16 Laender only (no Oberbayern DE21), so Bavaria is the finest comparable geography; a large-state proxy. TL2 series ends 2019 (same vintage as v1.0 Berlin). TL3 DE212 Muenchen Kreisfreie St"
+   },
+   "Frankfurt": {
+    "value": 4.27,
+    "year": "2019",
+    "source": "OECD DE7 Hesse (TL2)",
+    "note": "Land proxy; TL2 series ends 2019. TL3 DE712 Frankfurt am Main Kreisfreie Stadt (1.83, 2024) rejected as non-comparable subset series (see Munich note)."
+   },
+   "Hamburg": {
+    "value": 6.4,
+    "year": "2019",
+    "source": "OECD DE6 Hamburg (TL2)",
+    "note": "City-state = true city level, but 2019 vintage (German TL2 series ends 2019, as with v1.0 Berlin). TL3 DE600 (1.86, 2024) rejected as non-comparable subset series."
+   },
+   "Brussels": {
+    "value": 4.44,
+    "year": "2023",
+    "source": "OECD BE100 Arr. Brussels-Capital (TL3)",
+    "note": "TL3 = TL2 BE1 Brussels Capital Region (identical, 4.44 in 2023). City-region, true city level."
+   },
+   "Dublin": {
+    "value": null,
+    "year": "n/a",
+    "note": "Ireland has NO TL2/TL3 physician data in this flow - only country level (CTRY IRL: 4.09 in 2025). Left null per the TL3/TL2 convention; using the national figure would require a Country-proxy dataLevel decision by the ma"
+   },
+   "Lisbon": {
+    "value": 8.37,
+    "year": "2024",
+    "source": "OECD PT1A0 Greater Lisbon (TL3)",
+    "note": "TL3 = TL2 PT1A (identical). NUTS2024 Grande Lisboa geography; series only spans 2021-2024. Reads high - capital-region concentration."
+   },
+   "Prague": {
+    "value": 8.24,
+    "year": "2024",
+    "source": "OECD CZ010 Prague (TL3)",
+    "note": "City = region (TL2 CZ01 identical). True city level; capital core density reads high, like Paris/Vienna in v1.0."
+   },
+   "Warsaw": {
+    "value": 6.3,
+    "year": "2024",
+    "source": "OECD PL91 Warsaw Capital Region (TL2)",
+    "note": "Metro region chosen over city-core PL911 (11.12, 2023), which sits on a source-side 2023 reporting-definition break (Eurostat-confirmed jump 8.36->11.12); PL91 2024 has no break and matches the Metro data level."
+   },
+   "Istanbul": {
+    "value": 2.96,
+    "year": "2023",
+    "source": "OECD TR100 Istanbul (TL3)",
+    "note": "Istanbul province = TL2 TR10 (identical). Province is close to the metro."
+   },
+   "Montreal": {
+    "value": 2.6,
+    "year": "2024",
+    "source": "OECD CA24 Quebec (TL2)",
+    "note": "Province proxy, not Montreal - Canada has no TL3 in this flow (same convention as v1.0 Toronto = Ontario CA35)."
+   },
+   "Vancouver": {
+    "value": 2.71,
+    "year": "2024",
+    "source": "OECD CA59 British Columbia (TL2)",
+    "note": "Province proxy, not Vancouver - Canada has no TL3 in this flow."
+   },
+   "Chicago": {
+    "value": 3.7,
+    "year": "2022",
+    "source": "OECD US17 Illinois (TL2)",
+    "note": "State proxy per v1.0 US convention (no finer OECD geography). US series has a level break around 2019 (2018=2.68, 2019=3.36) noted in v1.0."
+   },
+   "Boston": {
+    "value": 5.52,
+    "year": "2022",
+    "source": "OECD US25 Massachusetts (TL2)",
+    "note": "State proxy per v1.0 US convention. Same 2019 level break (2018=4.24, 2019=5.39)."
+   },
+   "Los Angeles": {
+    "value": 3.02,
+    "year": "2022",
+    "source": "OECD US06 California (TL2)",
+    "note": "State proxy per v1.0 US convention - identical series and value as v1.0 San Francisco (California 2022=3.02)."
+   },
+   "Seattle": {
+    "value": 2.98,
+    "year": "2022",
+    "source": "OECD US53 Washington (TL2)",
+    "note": "Washington state proxy per v1.0 US convention. Same 2019 level break (2018=2.54, 2019=3.05)."
+   },
+   "Washington DC": {
+    "value": 12.02,
+    "year": "2022",
+    "source": "OECD US11 District of Columbia (TL2)",
+    "note": "DC is its own TL2 'state' - a small urban core district, so density reads extremely high (physicians counted at workplace serving the whole metro), like Paris FR101 in v1.0 but stronger. Series breaks: 9.07 (2009) to 6.8"
+   },
+   "Sydney": {
+    "value": 4.58,
+    "year": "2024",
+    "source": "OECD AU1GS Greater Sydney (TL3)",
+    "note": "Greater Sydney metro (TL3), exactly matching v1.0 Melbourne convention (AU2GM). Parent TL2 AU1 New South Wales = 4.32 in 2024."
+   },
+   "Auckland": {
+    "value": 3.47,
+    "year": "2019",
+    "source": "OECD NZ012 Auckland (TL3)",
+    "note": "Auckland region; TL3 = TL2 NZ12 (identical). New Zealand series ends 2019 - oldest vintage in this wave alongside German Laender."
+   },
+   "Osaka": {
+    "value": 2.92,
+    "year": "2024",
+    "source": "OECD JPG27 Osaka (TL3)",
+    "note": "Osaka prefecture (TL3), matching v1.0 Tokyo convention (JPD13). Parent TL2 JPG Kansai region = 2.96 in 2024. Japanese physician survey is biennial (2020, 2022, 2024)."
+   },
+   "Tel Aviv": {
+    "value": 4.9,
+    "year": "2023",
+    "source": "OECD IL05 Tel Aviv District (TL2)",
+    "note": "Tel Aviv District - Israel has TL2 districts only in this flow (no TL3). District is a reasonable metro-core proxy; national ISR = 3.50 in 2023."
    }
   }
  },
