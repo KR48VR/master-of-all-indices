@@ -401,6 +401,9 @@ function recompute(reorder){
 function renderControls_light(){ // update counts + approx without rebuilding sliders focus
   document.querySelectorAll('.dcard').forEach((card,i)=>{
     const d=P.domains[i]; const cnt=card.querySelector('.dcount'); if(cnt) cnt.textContent=`${domVarCount(d.id)}/${domTotal(d.id)}`;
+    const on=!!state.domOn[d.id];
+    card.classList.toggle('off', !on);
+    const t=card.querySelector('.toggle'); if(t) t.classList.toggle('on', on);
   });
   renderApprox();
 }
