@@ -60,32 +60,32 @@ Berlin,LIV-04,Life expectancy,Liveable,Health,years,higher,Metro,none,81.2,2023,
 Barcelona,LIV-04,Life expectancy,Liveable,Health,years,higher,Metro,none,84.2,2023,OECD TL3 ES511 — Barcelona,"Barcelona province (TL3), slightly wider than the city."
 Dubai,LIV-04,Life expectancy,Liveable,Health,years,higher,Metro,none,83.1,2024,World Bank SP.DYN.LE00.IN — United Arab Emirates,COUNTRY proxy (UAE national figure). dataLevel = Country proxy.
 San Francisco,LIV-04,Life expectancy,Liveable,Health,years,higher,Metro,none,79,2020,OECD TL2 US06 — California,California STATE proxy (no US TL3 in dataset). 2020 is latest and is COVID-depressed (2019 = 80.9). dataLevel = state proxy.
-Stockholm,LIV-04,Life expectancy,Liveable,Health,years,higher,Metro,none,,,OECD Regional Demography — Life expectancy (DSD_REG_DEMO@DF_LIFE_EXP v2.0); SingStat table M810501 (Singapore); World Bank SP.DYN.LE00.IN (Dubai/UAE),
-Oslo,LIV-04,Life expectancy,Liveable,Health,years,higher,Metro,none,,,OECD Regional Demography — Life expectancy (DSD_REG_DEMO@DF_LIFE_EXP v2.0); SingStat table M810501 (Singapore); World Bank SP.DYN.LE00.IN (Dubai/UAE),
-Helsinki,LIV-04,Life expectancy,Liveable,Health,years,higher,Metro,none,,,OECD Regional Demography — Life expectancy (DSD_REG_DEMO@DF_LIFE_EXP v2.0); SingStat table M810501 (Singapore); World Bank SP.DYN.LE00.IN (Dubai/UAE),
-Madrid,LIV-04,Life expectancy,Liveable,Health,years,higher,Metro,none,,,OECD Regional Demography — Life expectancy (DSD_REG_DEMO@DF_LIFE_EXP v2.0); SingStat table M810501 (Singapore); World Bank SP.DYN.LE00.IN (Dubai/UAE),
-Milan,LIV-04,Life expectancy,Liveable,Health,years,higher,Metro,none,,,OECD Regional Demography — Life expectancy (DSD_REG_DEMO@DF_LIFE_EXP v2.0); SingStat table M810501 (Singapore); World Bank SP.DYN.LE00.IN (Dubai/UAE),
-Rome,LIV-04,Life expectancy,Liveable,Health,years,higher,Metro,none,,,OECD Regional Demography — Life expectancy (DSD_REG_DEMO@DF_LIFE_EXP v2.0); SingStat table M810501 (Singapore); World Bank SP.DYN.LE00.IN (Dubai/UAE),
-Munich,LIV-04,Life expectancy,Liveable,Health,years,higher,Metro,none,,,OECD Regional Demography — Life expectancy (DSD_REG_DEMO@DF_LIFE_EXP v2.0); SingStat table M810501 (Singapore); World Bank SP.DYN.LE00.IN (Dubai/UAE),
-Frankfurt,LIV-04,Life expectancy,Liveable,Health,years,higher,Metro,none,,,OECD Regional Demography — Life expectancy (DSD_REG_DEMO@DF_LIFE_EXP v2.0); SingStat table M810501 (Singapore); World Bank SP.DYN.LE00.IN (Dubai/UAE),
-Hamburg,LIV-04,Life expectancy,Liveable,Health,years,higher,Metro,none,,,OECD Regional Demography — Life expectancy (DSD_REG_DEMO@DF_LIFE_EXP v2.0); SingStat table M810501 (Singapore); World Bank SP.DYN.LE00.IN (Dubai/UAE),
-Brussels,LIV-04,Life expectancy,Liveable,Health,years,higher,Metro,none,,,OECD Regional Demography — Life expectancy (DSD_REG_DEMO@DF_LIFE_EXP v2.0); SingStat table M810501 (Singapore); World Bank SP.DYN.LE00.IN (Dubai/UAE),
-Dublin,LIV-04,Life expectancy,Liveable,Health,years,higher,Metro,none,,,OECD Regional Demography — Life expectancy (DSD_REG_DEMO@DF_LIFE_EXP v2.0); SingStat table M810501 (Singapore); World Bank SP.DYN.LE00.IN (Dubai/UAE),
-Lisbon,LIV-04,Life expectancy,Liveable,Health,years,higher,Metro,none,,,OECD Regional Demography — Life expectancy (DSD_REG_DEMO@DF_LIFE_EXP v2.0); SingStat table M810501 (Singapore); World Bank SP.DYN.LE00.IN (Dubai/UAE),
-Prague,LIV-04,Life expectancy,Liveable,Health,years,higher,Metro,none,,,OECD Regional Demography — Life expectancy (DSD_REG_DEMO@DF_LIFE_EXP v2.0); SingStat table M810501 (Singapore); World Bank SP.DYN.LE00.IN (Dubai/UAE),
-Warsaw,LIV-04,Life expectancy,Liveable,Health,years,higher,Metro,none,,,OECD Regional Demography — Life expectancy (DSD_REG_DEMO@DF_LIFE_EXP v2.0); SingStat table M810501 (Singapore); World Bank SP.DYN.LE00.IN (Dubai/UAE),
-Istanbul,LIV-04,Life expectancy,Liveable,Health,years,higher,Metro,none,,,OECD Regional Demography — Life expectancy (DSD_REG_DEMO@DF_LIFE_EXP v2.0); SingStat table M810501 (Singapore); World Bank SP.DYN.LE00.IN (Dubai/UAE),
-Montreal,LIV-04,Life expectancy,Liveable,Health,years,higher,Metro,none,,,OECD Regional Demography — Life expectancy (DSD_REG_DEMO@DF_LIFE_EXP v2.0); SingStat table M810501 (Singapore); World Bank SP.DYN.LE00.IN (Dubai/UAE),
-Vancouver,LIV-04,Life expectancy,Liveable,Health,years,higher,Metro,none,,,OECD Regional Demography — Life expectancy (DSD_REG_DEMO@DF_LIFE_EXP v2.0); SingStat table M810501 (Singapore); World Bank SP.DYN.LE00.IN (Dubai/UAE),
-Chicago,LIV-04,Life expectancy,Liveable,Health,years,higher,Metro,none,,,OECD Regional Demography — Life expectancy (DSD_REG_DEMO@DF_LIFE_EXP v2.0); SingStat table M810501 (Singapore); World Bank SP.DYN.LE00.IN (Dubai/UAE),
-Boston,LIV-04,Life expectancy,Liveable,Health,years,higher,Metro,none,,,OECD Regional Demography — Life expectancy (DSD_REG_DEMO@DF_LIFE_EXP v2.0); SingStat table M810501 (Singapore); World Bank SP.DYN.LE00.IN (Dubai/UAE),
-Los Angeles,LIV-04,Life expectancy,Liveable,Health,years,higher,Metro,none,,,OECD Regional Demography — Life expectancy (DSD_REG_DEMO@DF_LIFE_EXP v2.0); SingStat table M810501 (Singapore); World Bank SP.DYN.LE00.IN (Dubai/UAE),
-Seattle,LIV-04,Life expectancy,Liveable,Health,years,higher,Metro,none,,,OECD Regional Demography — Life expectancy (DSD_REG_DEMO@DF_LIFE_EXP v2.0); SingStat table M810501 (Singapore); World Bank SP.DYN.LE00.IN (Dubai/UAE),
-Washington DC,LIV-04,Life expectancy,Liveable,Health,years,higher,Metro,none,,,OECD Regional Demography — Life expectancy (DSD_REG_DEMO@DF_LIFE_EXP v2.0); SingStat table M810501 (Singapore); World Bank SP.DYN.LE00.IN (Dubai/UAE),
-Sydney,LIV-04,Life expectancy,Liveable,Health,years,higher,Metro,none,,,OECD Regional Demography — Life expectancy (DSD_REG_DEMO@DF_LIFE_EXP v2.0); SingStat table M810501 (Singapore); World Bank SP.DYN.LE00.IN (Dubai/UAE),
-Auckland,LIV-04,Life expectancy,Liveable,Health,years,higher,Metro,none,,,OECD Regional Demography — Life expectancy (DSD_REG_DEMO@DF_LIFE_EXP v2.0); SingStat table M810501 (Singapore); World Bank SP.DYN.LE00.IN (Dubai/UAE),
-Osaka,LIV-04,Life expectancy,Liveable,Health,years,higher,Metro,none,,,OECD Regional Demography — Life expectancy (DSD_REG_DEMO@DF_LIFE_EXP v2.0); SingStat table M810501 (Singapore); World Bank SP.DYN.LE00.IN (Dubai/UAE),
-Tel Aviv,LIV-04,Life expectancy,Liveable,Health,years,higher,Metro,none,,,OECD Regional Demography — Life expectancy (DSD_REG_DEMO@DF_LIFE_EXP v2.0); SingStat table M810501 (Singapore); World Bank SP.DYN.LE00.IN (Dubai/UAE),
+Stockholm,LIV-04,Life expectancy,Liveable,Health,years,higher,Metro,none,85,2024,OECD SE11 Stockholm (TL2),"TL2 Stockholm = Stockholm County (same boundary as TL3 SE110, which only runs to 2022); county-level"
+Oslo,LIV-04,Life expectancy,Liveable,Health,years,higher,Metro,none,83.3,2022,OECD NO081 Oslo (TL3),Oslo county/municipality — city-level
+Helsinki,LIV-04,Life expectancy,Liveable,Health,years,higher,Metro,none,81.9,2023,OECD FI1B1 Helsinki-Uusimaa (TL3),Uusimaa region containing Helsinki — region proxy
+Madrid,LIV-04,Life expectancy,Liveable,Health,years,higher,Metro,none,85.4,2023,OECD ES300 Madrid (TL3),Madrid province = Comunidad de Madrid; region-level
+Milan,LIV-04,Life expectancy,Liveable,Health,years,higher,Metro,none,84.7,2024,OECD ITC4C Milan (TL3),Metropolitan City of Milan — metro-level
+Rome,LIV-04,Life expectancy,Liveable,Health,years,higher,Metro,none,83.6,2024,OECD ITI43 Rome (TL3),Metropolitan City of Rome — metro-level
+Munich,LIV-04,Life expectancy,Liveable,Health,years,higher,Metro,none,83.1,2020,"OECD DE212 München, Kreisfreie Stadt (TL3)",City proper; latest year published at German TL3 is 2020
+Frankfurt,LIV-04,Life expectancy,Liveable,Health,years,higher,Metro,none,81.9,2020,"OECD DE712 Frankfurt am Main, Kreisfreie Stadt (TL3)",City proper; latest year published at German TL3 is 2020
+Hamburg,LIV-04,Life expectancy,Liveable,Health,years,higher,Metro,none,80.9,2023,OECD DE6 Hamburg (TL2),City-state = city boundary (TL3 DE600 identical but only to 2020)
+Brussels,LIV-04,Life expectancy,Liveable,Health,years,higher,Metro,none,82.2,2023,OECD BE1 Brussels-Capital Region (TL2),Brussels-Capital Region — city-region
+Dublin,LIV-04,Life expectancy,Liveable,Health,years,higher,Metro,none,83.3,2023,OECD IE06 Eastern and Midland (TL2),Region proxy containing Dublin; no Dublin TL3 in this dataflow
+Lisbon,LIV-04,Life expectancy,Liveable,Health,years,higher,Metro,none,81.2,2023,OECD PT1A Greater Lisbon (TL2),Grande Lisboa (NUTS2024) — metro-level
+Prague,LIV-04,Life expectancy,Liveable,Health,years,higher,Metro,none,81.1,2023,OECD CZ010 Prague (TL3),Praha = city boundary
+Warsaw,LIV-04,Life expectancy,Liveable,Health,years,higher,Metro,none,81,2024,OECD PL911 City of Warsaw (TL3),City proper
+Istanbul,LIV-04,Life expectancy,Liveable,Health,years,higher,Metro,none,77.1,2023,OECD TR10 Istanbul (TL2),Istanbul province = greater city (TL3 TR100 identical but only to 2019)
+Montreal,LIV-04,Life expectancy,Liveable,Health,years,higher,Metro,none,82.5,2022,OECD CA24 Quebec (TL2),Province proxy — no Montreal TL3 in this dataflow (v1.0 convention for Canada)
+Vancouver,LIV-04,Life expectancy,Liveable,Health,years,higher,Metro,none,81.5,2022,OECD CA59 British Columbia (TL2),Province proxy (v1.0 convention for Canada)
+Chicago,LIV-04,Life expectancy,Liveable,Health,years,higher,Metro,none,76.8,2020,OECD US17 Illinois (TL2),State proxy (v1.0 convention for US); latest US state year is 2020
+Boston,LIV-04,Life expectancy,Liveable,Health,years,higher,Metro,none,79,2020,OECD US25 Massachusetts (TL2),State proxy (v1.0 convention for US)
+Los Angeles,LIV-04,Life expectancy,Liveable,Health,years,higher,Metro,none,79,2020,OECD US06 California (TL2),State proxy (v1.0 convention for US)
+Seattle,LIV-04,Life expectancy,Liveable,Health,years,higher,Metro,none,79.2,2020,OECD US53 Washington (TL2),Washington State proxy (v1.0 convention for US)
+Washington DC,LIV-04,Life expectancy,Liveable,Health,years,higher,Metro,none,78,2019,OECD US11 District of Columbia (TL2),DC is a TL2 unit = the city itself; latest published year 2019 (no 2020 row for DC)
+Sydney,LIV-04,Life expectancy,Liveable,Health,years,higher,Metro,none,84.1,2022,OECD AU1GS Sydney (TL3),Greater Sydney — metro-level
+Auckland,LIV-04,Life expectancy,Liveable,Health,years,higher,Metro,none,82.7,2023,OECD NZ12 Auckland (TL2),Auckland region = same boundary as TL3 NZ012 (which only runs to 2018)
+Osaka,LIV-04,Life expectancy,Liveable,Health,years,higher,Metro,none,84.2,2020,OECD JPG27 Osaka (TL3),Osaka prefecture; Japanese regional life tables published every 5 years — 2020 is latest
+Tel Aviv,LIV-04,Life expectancy,Liveable,Health,years,higher,Metro,none,83.1,2022,OECD IL050 Tel Aviv District (TL3),Tel Aviv District containing the city — district-level
 Singapore,LIV-05,Physicians per capita,Liveable,Health,per 1k,higher,Metro,none,2.9,2024,"data.gov.sg d_5257cff1ee5e6a16db6a9606a983efa4, DataSeries 'Doctors Per 10,000 Total Population', 2024 = 29","Derived: 29 per 10,000 / 10 = 2.9 per 1,000. Source series is integer-rounded (29), so derived value carries ~±0.05 rounding. Whole-country value; Singapore is a city-state."
 Tokyo,LIV-05,Physicians per capita,Liveable,Health,per 1k,higher,Metro,none,3.26,2024,"OECD DF_HEALTH, REF_AREA JPD13 'Tokyo' (TL3), DOC per 1,000 inhabitants, 2024",Tokyo prefecture (TL3). Parent Southern-Kanto TL2 (JPD) = 2.58 in 2024.
 Copenhagen,LIV-05,Physicians per capita,Liveable,Health,per 1k,higher,Metro,none,5.79,2023,"OECD DF_HEALTH, REF_AREA DK01 'Capital Region of Denmark' (TL2), DOC per 1,000 inhabitants, 2023","Metro/region proxy (Hovedstaden), not city proper. Cross-checked exactly vs Eurostat hlth_rs_physreg DK01 2023 = 578.71 per 100k."
@@ -564,32 +564,32 @@ Berlin,TAL-01,Tertiary attainment,Talent,Education,%,higher,Metro,none,48.1,2025
 Barcelona,TAL-01,Tertiary attainment,Talent,Education,%,higher,Metro,none,46.9,2025,"OECD DSD_REG_EDU@DF_ATTAIN, ES51 Catalonia (TL2), ISCED11_5T8, Y25T64, SEX=_T",Catalonia region
 Dubai,TAL-01,Tertiary attainment,Talent,Education,%,higher,Metro,none,41,2023,"Dubai Statistics Center, Statistical Yearbook 2023, Table 01-07 Population (10+) by Educational Status: University and Post Graduate 1,302,272 / Total 3,179,347",DIFFERENT BASIS: university degree AND ABOVE only (excludes sub-degree diplomas) as % of population aged 10+ (not 25-64). Computed from official counts. Read with care.
 San Francisco,TAL-01,Tertiary attainment,Talent,Education,%,higher,Metro,none,46.9,2024,"OECD DSD_REG_EDU@DF_ATTAIN, US06 California (TL2), ISCED11_5T8, Y25T64, SEX=_T",California STATE proxy
-Stockholm,TAL-01,Tertiary attainment,Talent,Education,%,higher,Metro,none,,,OECD Regional education (DSD_REG_EDU@DF_ATTAIN) / data.gov.sg (SingStat) / Dubai Statistics Center yearbook,
-Oslo,TAL-01,Tertiary attainment,Talent,Education,%,higher,Metro,none,,,OECD Regional education (DSD_REG_EDU@DF_ATTAIN) / data.gov.sg (SingStat) / Dubai Statistics Center yearbook,
-Helsinki,TAL-01,Tertiary attainment,Talent,Education,%,higher,Metro,none,,,OECD Regional education (DSD_REG_EDU@DF_ATTAIN) / data.gov.sg (SingStat) / Dubai Statistics Center yearbook,
-Madrid,TAL-01,Tertiary attainment,Talent,Education,%,higher,Metro,none,,,OECD Regional education (DSD_REG_EDU@DF_ATTAIN) / data.gov.sg (SingStat) / Dubai Statistics Center yearbook,
-Milan,TAL-01,Tertiary attainment,Talent,Education,%,higher,Metro,none,,,OECD Regional education (DSD_REG_EDU@DF_ATTAIN) / data.gov.sg (SingStat) / Dubai Statistics Center yearbook,
-Rome,TAL-01,Tertiary attainment,Talent,Education,%,higher,Metro,none,,,OECD Regional education (DSD_REG_EDU@DF_ATTAIN) / data.gov.sg (SingStat) / Dubai Statistics Center yearbook,
-Munich,TAL-01,Tertiary attainment,Talent,Education,%,higher,Metro,none,,,OECD Regional education (DSD_REG_EDU@DF_ATTAIN) / data.gov.sg (SingStat) / Dubai Statistics Center yearbook,
-Frankfurt,TAL-01,Tertiary attainment,Talent,Education,%,higher,Metro,none,,,OECD Regional education (DSD_REG_EDU@DF_ATTAIN) / data.gov.sg (SingStat) / Dubai Statistics Center yearbook,
-Hamburg,TAL-01,Tertiary attainment,Talent,Education,%,higher,Metro,none,,,OECD Regional education (DSD_REG_EDU@DF_ATTAIN) / data.gov.sg (SingStat) / Dubai Statistics Center yearbook,
-Brussels,TAL-01,Tertiary attainment,Talent,Education,%,higher,Metro,none,,,OECD Regional education (DSD_REG_EDU@DF_ATTAIN) / data.gov.sg (SingStat) / Dubai Statistics Center yearbook,
-Dublin,TAL-01,Tertiary attainment,Talent,Education,%,higher,Metro,none,,,OECD Regional education (DSD_REG_EDU@DF_ATTAIN) / data.gov.sg (SingStat) / Dubai Statistics Center yearbook,
-Lisbon,TAL-01,Tertiary attainment,Talent,Education,%,higher,Metro,none,,,OECD Regional education (DSD_REG_EDU@DF_ATTAIN) / data.gov.sg (SingStat) / Dubai Statistics Center yearbook,
-Prague,TAL-01,Tertiary attainment,Talent,Education,%,higher,Metro,none,,,OECD Regional education (DSD_REG_EDU@DF_ATTAIN) / data.gov.sg (SingStat) / Dubai Statistics Center yearbook,
-Warsaw,TAL-01,Tertiary attainment,Talent,Education,%,higher,Metro,none,,,OECD Regional education (DSD_REG_EDU@DF_ATTAIN) / data.gov.sg (SingStat) / Dubai Statistics Center yearbook,
-Istanbul,TAL-01,Tertiary attainment,Talent,Education,%,higher,Metro,none,,,OECD Regional education (DSD_REG_EDU@DF_ATTAIN) / data.gov.sg (SingStat) / Dubai Statistics Center yearbook,
-Montreal,TAL-01,Tertiary attainment,Talent,Education,%,higher,Metro,none,,,OECD Regional education (DSD_REG_EDU@DF_ATTAIN) / data.gov.sg (SingStat) / Dubai Statistics Center yearbook,
-Vancouver,TAL-01,Tertiary attainment,Talent,Education,%,higher,Metro,none,,,OECD Regional education (DSD_REG_EDU@DF_ATTAIN) / data.gov.sg (SingStat) / Dubai Statistics Center yearbook,
-Chicago,TAL-01,Tertiary attainment,Talent,Education,%,higher,Metro,none,,,OECD Regional education (DSD_REG_EDU@DF_ATTAIN) / data.gov.sg (SingStat) / Dubai Statistics Center yearbook,
-Boston,TAL-01,Tertiary attainment,Talent,Education,%,higher,Metro,none,,,OECD Regional education (DSD_REG_EDU@DF_ATTAIN) / data.gov.sg (SingStat) / Dubai Statistics Center yearbook,
-Los Angeles,TAL-01,Tertiary attainment,Talent,Education,%,higher,Metro,none,,,OECD Regional education (DSD_REG_EDU@DF_ATTAIN) / data.gov.sg (SingStat) / Dubai Statistics Center yearbook,
-Seattle,TAL-01,Tertiary attainment,Talent,Education,%,higher,Metro,none,,,OECD Regional education (DSD_REG_EDU@DF_ATTAIN) / data.gov.sg (SingStat) / Dubai Statistics Center yearbook,
-Washington DC,TAL-01,Tertiary attainment,Talent,Education,%,higher,Metro,none,,,OECD Regional education (DSD_REG_EDU@DF_ATTAIN) / data.gov.sg (SingStat) / Dubai Statistics Center yearbook,
-Sydney,TAL-01,Tertiary attainment,Talent,Education,%,higher,Metro,none,,,OECD Regional education (DSD_REG_EDU@DF_ATTAIN) / data.gov.sg (SingStat) / Dubai Statistics Center yearbook,
-Auckland,TAL-01,Tertiary attainment,Talent,Education,%,higher,Metro,none,,,OECD Regional education (DSD_REG_EDU@DF_ATTAIN) / data.gov.sg (SingStat) / Dubai Statistics Center yearbook,
-Osaka,TAL-01,Tertiary attainment,Talent,Education,%,higher,Metro,none,,,OECD Regional education (DSD_REG_EDU@DF_ATTAIN) / data.gov.sg (SingStat) / Dubai Statistics Center yearbook,
-Tel Aviv,TAL-01,Tertiary attainment,Talent,Education,%,higher,Metro,none,,,OECD Regional education (DSD_REG_EDU@DF_ATTAIN) / data.gov.sg (SingStat) / Dubai Statistics Center yearbook,
+Stockholm,TAL-01,Tertiary attainment,Talent,Education,%,higher,Metro,none,60,2025,OECD SE11 Stockholm (TL2),Stockholm County — county-level
+Oslo,TAL-01,Tertiary attainment,Talent,Education,%,higher,Metro,none,56.5,2025,OECD NO08 Oslo and Viken (TL2),Broader region proxy (Oslo + former Viken); no Oslo-only unit in this dataflow
+Helsinki,TAL-01,Tertiary attainment,Talent,Education,%,higher,Metro,none,48.1,2025,OECD FI1B Helsinki-Uusimaa (TL2),Uusimaa region containing Helsinki — region proxy
+Madrid,TAL-01,Tertiary attainment,Talent,Education,%,higher,Metro,none,50,2025,OECD ES30 Madrid (TL2),Comunidad de Madrid — region-level
+Milan,TAL-01,Tertiary attainment,Talent,Education,%,higher,Metro,none,23.6,2025,OECD ITC4 Lombardy (TL2),Region proxy — Italy has no TL3 in this dataflow; Lombardy is much wider than Milan
+Rome,TAL-01,Tertiary attainment,Talent,Education,%,higher,Metro,none,28.5,2025,OECD ITI4 Lazio (TL2),Region proxy — Lazio is wider than Rome
+Munich,TAL-01,Tertiary attainment,Talent,Education,%,higher,Metro,none,38.6,2025,OECD DE2 Bavaria (TL2),State (Land) proxy — no German TL3 in this dataflow
+Frankfurt,TAL-01,Tertiary attainment,Talent,Education,%,higher,Metro,none,35.6,2025,OECD DE7 Hesse (TL2),State (Land) proxy
+Hamburg,TAL-01,Tertiary attainment,Talent,Education,%,higher,Metro,none,43,2025,OECD DE6 Hamburg (TL2),City-state = city boundary
+Brussels,TAL-01,Tertiary attainment,Talent,Education,%,higher,Metro,none,56.9,2025,OECD BE1 Brussels Capital Region (TL2),Brussels-Capital Region — city-region
+Dublin,TAL-01,Tertiary attainment,Talent,Education,%,higher,Metro,none,61,2021,OECD IE061 Dublin (TL3),"Dublin TL3 (city+county), latest TL3 year 2021; coarser IE06 Eastern & Midland has 2025 (63.0)"
+Lisbon,TAL-01,Tertiary attainment,Talent,Education,%,higher,Metro,none,43.3,2025,OECD PT1A Greater Lisbon (TL2),Grande Lisboa (NUTS2024) — metro-level
+Prague,TAL-01,Tertiary attainment,Talent,Education,%,higher,Metro,none,54.8,2025,OECD CZ01 Prague (TL2),Praha = city boundary
+Warsaw,TAL-01,Tertiary attainment,Talent,Education,%,higher,Metro,none,65.3,2025,OECD PL91 Warsaw Capital Region (TL2),Warszawski stoleczny — Warsaw + surrounding metro belt
+Istanbul,TAL-01,Tertiary attainment,Talent,Education,%,higher,Metro,none,31.8,2025,OECD TR10 Istanbul (TL2),Istanbul province = greater city
+Montreal,TAL-01,Tertiary attainment,Talent,Education,%,higher,Metro,none,59,2024,OECD CA24 Quebec (TL2),Province proxy (v1.0 convention for Canada)
+Vancouver,TAL-01,Tertiary attainment,Talent,Education,%,higher,Metro,none,64,2024,OECD CA59 British Columbia (TL2),Province proxy (v1.0 convention for Canada)
+Chicago,TAL-01,Tertiary attainment,Talent,Education,%,higher,Metro,none,50.9,2024,OECD US17 Illinois (TL2),State proxy (v1.0 convention for US)
+Boston,TAL-01,Tertiary attainment,Talent,Education,%,higher,Metro,none,58.2,2024,OECD US25 Massachusetts (TL2),State proxy (v1.0 convention for US)
+Los Angeles,TAL-01,Tertiary attainment,Talent,Education,%,higher,Metro,none,46.9,2024,OECD US06 California (TL2),State proxy (v1.0 convention for US)
+Seattle,TAL-01,Tertiary attainment,Talent,Education,%,higher,Metro,none,52.9,2024,OECD US53 Washington (TL2),Washington State proxy (v1.0 convention for US)
+Washington DC,TAL-01,Tertiary attainment,Talent,Education,%,higher,Metro,none,70.7,2024,OECD US11 District of Columbia (TL2),DC is a TL2 unit = the city itself
+Sydney,TAL-01,Tertiary attainment,Talent,Education,%,higher,Metro,none,52.5,2021,OECD AU1 New South Wales (TL2),State proxy (v1.0 convention for Australia); Greater Sydney TL3 (AU1GS) exists but latest is 2016 (52.8)
+Auckland,TAL-01,Tertiary attainment,Talent,Education,%,higher,Metro,none,45.5,2020,OECD NZ12 Auckland (TL2),Auckland region; latest published year 2020
+Osaka,TAL-01,Tertiary attainment,Talent,Education,%,higher,Metro,none,56.9,2020,OECD JPG Kansai region (TL2),"Wide-region proxy: Osaka TL3 (JPG27) rows are all 'Missing value' in OECD; Kansai (Osaka+Kyoto+Hyogo+Shiga+Nara+Wakayama) census-based, decennial — 2020 latest"
+Tel Aviv,TAL-01,Tertiary attainment,Talent,Education,%,higher,Metro,none,60.4,2022,OECD IL050 Tel Aviv District (TL3),Tel Aviv District containing the city — district-level
 Singapore,TAL-02,Top universities,Talent,Education,count,higher,City,none,2,2026,QS city='Singapore',"NUS (8), NTU Singapore (12). Equals country total for Singapore (2)."
 Tokyo,TAL-02,Top universities,Talent,Education,count,higher,City,none,4,2026,QS city='Tokyo',"University of Tokyo (37), Tokyo Institute of Technology (85), Waseda (196), Keio (217)."
 Copenhagen,TAL-02,Top universities,Talent,Education,count,higher,City,none,1,2026,QS city='Copenhagen',"University of Copenhagen (101). DTU carries QS city 'Kongens Lyngby', not counted."

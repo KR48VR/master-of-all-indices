@@ -17,7 +17,7 @@ window.INDEX_DATA = {
 {"id": "LIV-01", "domain": "Liveable", "subtheme": "Safety & Stability", "name": "Homicide rate", "measures": "Intentional homicides per 100,000 residents", "unit": "per 100k", "direction": "lower", "dataLevel": "Country proxy", "source": "UNODC CTS (national rates)", "appearsIn": "EIU (Stability)", "pilot": 1, "caveat": "UNODC discontinued its city-level series, so these are NATIONAL rates standing in for cities (Singapore is a city-state, so national = city; London uses England & Wales). Crime definitions vary by country. City-level upgrade from national police statistics planned.", "contestable": 0, "approx": "proxy"},
 {"id": "LIV-02", "domain": "Liveable", "subtheme": "Safety & Stability", "name": "Perceived safety", "measures": "Resident-reported feeling of safety", "unit": "index 0-100", "direction": "higher", "dataLevel": "City", "source": "Numbeo Safety Index", "appearsIn": "—", "pilot": 0, "caveat": "Crowd-sourced — treat as a soft signal.", "contestable": 0, "approx": "crowd"},
 {"id": "LIV-03", "domain": "Liveable", "subtheme": "Safety & Stability", "name": "Political stability", "measures": "Absence of violence / terrorism", "unit": "index", "direction": "higher", "dataLevel": "Country proxy", "source": "World Bank WGI", "appearsIn": "EIU (Stability)", "pilot": 0, "caveat": "Country-level stand-in, not city-specific.", "contestable": 0, "approx": "proxy"},
-{"id": "LIV-04", "domain": "Liveable", "subtheme": "Health", "name": "Life expectancy", "measures": "Average life expectancy at birth", "unit": "years", "direction": "higher", "dataLevel": "Metro", "source": "OECD Regions / SingStat / World Bank", "appearsIn": "GPCI (Livability)", "pilot": 1, "caveat": "OECD regional data at the finest level published: city/metro for most, but state or province values for New York (NY State), San Francisco (California), Toronto (Ontario) and Amsterdam (North Holland); Dubai is a UAE national figure (country proxy). Years mix 2020-2025 — the US and Tokyo values are 2020, depressed by COVID.", "contestable": 0, "approx": "none"},
+{"id": "LIV-04", "domain": "Liveable", "subtheme": "Health", "name": "Life expectancy", "measures": "Average life expectancy at birth", "unit": "years", "direction": "higher", "dataLevel": "Metro", "source": "OECD Regions / SingStat / World Bank", "appearsIn": "GPCI (Livability)", "pilot": 1, "caveat": "OECD regional data at the finest level published: city or metro for most European cities; state/province proxies for the US, Canadian and Australian cities (named per value); Dubai is a UAE national figure. Years mix 2019-2025 — US values are 2020 (COVID-depressed, DC 2019), Japanese life tables are quinquennial (2020).", "contestable": 0, "approx": "none"},
 {"id": "LIV-05", "domain": "Liveable", "subtheme": "Health", "name": "Physicians per capita", "measures": "Doctors per 1,000 residents", "unit": "per 1k", "direction": "higher", "dataLevel": "Metro", "source": "OECD Regional health / data.gov.sg / DHA", "appearsIn": "EIU (Healthcare)", "pilot": 1, "caveat": "OECD regional physician density: province/state values for Amsterdam (N-Holland), Toronto (Ontario), New York (NY State), San Francisco (California), Barcelona (Catalonia); Paris is the dense core departement and reads high. Berlin is 2019 vintage. London computed from NHS + ONS files replicating OECD's documented UK method (NHS staff only). Singapore from MOH via data.gov.sg; Dubai from DHA statistical book 2022.", "contestable": 0, "approx": "none"},
 {"id": "LIV-06", "domain": "Liveable", "subtheme": "Housing & Cost", "name": "House-price-to-income", "measures": "Median home price / median income", "unit": "ratio", "direction": "lower", "dataLevel": "City", "source": "Numbeo Property Prices Index", "appearsIn": "—", "pilot": 1, "caveat": "Numbeo 2026 Mid-Year edition: crowd-sourced median apartment price over median familial disposable income (years). Core affordability signal — treat as a soft, crowd-sourced estimate.", "contestable": 0, "approx": "crowd"},
 {"id": "LIV-07", "domain": "Liveable", "subtheme": "Housing & Cost", "name": "Cost of living", "measures": "Standard basket cost vs a benchmark city", "unit": "index", "direction": "lower", "dataLevel": "City", "source": "Numbeo", "appearsIn": "Mercer", "pilot": 0, "caveat": "Direction is contestable — a rich city having high costs isn't necessarily 'bad'.", "contestable": 1, "approx": "crowd"},
@@ -41,7 +41,7 @@ window.INDEX_DATA = {
 {"id": "CMP-04", "domain": "Competitive", "subtheme": "Business Environment", "name": "Startup density", "measures": "Dealroom-tracked startups per 100,000 metro residents", "unit": "per 100k", "direction": "higher", "dataLevel": "Metro", "source": "Dealroom (public hub pages)", "appearsIn": "GPCI-Startup", "pilot": 1, "caveat": "Dealroom \"tracked startups\" per hub / page-shown metro population (captured 11 Jul 2026). Hubs are metros: SF = Bay Area, Toronto = Toronto-Waterloo, Berlin = Berlin/Brandenburg. Copenhagen, Vienna, Seoul, Dubai show no count and Amsterdam no population (blank). Database coverage varies by region — deepest in Europe/US.", "contestable": 0, "approx": "modelled"},
 {"id": "CMP-05", "domain": "Competitive", "subtheme": "Dynamism", "name": "Employment growth", "measures": "5-year change in metro employment", "unit": "%", "direction": "higher", "dataLevel": "Metro", "source": "OECD", "appearsIn": "—", "pilot": 0, "caveat": "", "contestable": 0, "approx": "none"},
 {"id": "CMP-06", "domain": "Competitive", "subtheme": "Dynamism", "name": "VC funding", "measures": "Dealroom \"VC invested\" per resident (metro hub)", "unit": "USD", "direction": "higher", "dataLevel": "Metro", "source": "Dealroom (public hub pages)", "appearsIn": "Startup Genome", "pilot": 1, "caveat": "Dealroom hub \"VC invested\" / page-shown metro population (captured 11 Jul 2026). The source page does not state the time window of \"VC invested\" — compare across cities, not against external annual figures. Amsterdam blank (no population shown).", "contestable": 0, "approx": "none"},
-{"id": "TAL-01", "domain": "Talent", "subtheme": "Education", "name": "Tertiary attainment", "measures": "% of adults with tertiary education", "unit": "%", "direction": "higher", "dataLevel": "Metro", "source": "OECD Regions / SingStat / Dubai Statistics Center", "appearsIn": "—", "pilot": 1, "caveat": "OECD regional shares (25-64, ISCED 5-8): state/province values for Melbourne (Victoria), Toronto (Ontario), New York (NY State), San Francisco (California); Tokyo is greater-Tokyo Southern-Kanto; Japan/Korea are 2020 census. Singapore counts residents 25+ (not 25-64). Dubai is on a DIFFERENT basis — university degree and above as % of population 10+ (DSC yearbook 2023) — read with care.", "contestable": 0, "approx": "none"},
+{"id": "TAL-01", "domain": "Talent", "subtheme": "Education", "name": "Tertiary attainment", "measures": "% of adults with tertiary education", "unit": "%", "direction": "higher", "dataLevel": "Metro", "source": "OECD Regions / SingStat / Dubai Statistics Center", "appearsIn": "—", "pilot": 1, "caveat": "OECD regional shares (25-64, ISCED 5-8), finest level published: city-level for some, but state/province/region proxies for the US, Canadian, Australian, Italian, German and Japanese cities (named per value; Milan reads as Lombardy, Osaka as Kansai). Singapore counts residents 25+. Dubai is on a DIFFERENT basis — university-and-above as % of population 10+ (DSC 2023). Years mix 2020-2025.", "contestable": 0, "approx": "none"},
 {"id": "TAL-02", "domain": "Talent", "subtheme": "Education", "name": "Top universities", "measures": "Universities in the global top 500", "unit": "count", "direction": "higher", "dataLevel": "City", "source": "QS World University Rankings 2026", "appearsIn": "GPCI (R&D)", "pilot": 1, "caveat": "QS 2026 edition, counted with QS’s own city labels, city-proper rule: Stanford and Berkeley fall outside San Francisco (a real 0), the Saclay cluster outside Paris — counts are boundary-sensitive for SF, NY and Paris. Dubai’s 0 is real: all six UAE top-500 universities are in other emirates.", "contestable": 0, "approx": "none"},
 {"id": "TAL-03", "domain": "Talent", "subtheme": "Skills & Workforce", "name": "Knowledge workers", "measures": "% employed in knowledge-intensive jobs", "unit": "%", "direction": "higher", "dataLevel": "Metro", "source": "Eurostat / OECD", "appearsIn": "—", "pilot": 0, "caveat": "", "contestable": 0, "approx": "none"},
 {"id": "TAL-04", "domain": "Talent", "subtheme": "Skills & Workforce", "name": "Researchers per capita", "measures": "R&D personnel per 1,000", "unit": "per 1k", "direction": "higher", "dataLevel": "Metro", "source": "OECD", "appearsIn": "GPCI (R&D)", "pilot": 0, "caveat": "", "contestable": 0, "approx": "none"},
@@ -71,32 +71,32 @@ window.INDEX_DATA = {
 "Barcelona":{"LIV-01": 0.69, "LIV-04": 84.2, "LIV-05": 4.47, "LIV-06": 13.8, "GRN-01": 10.9, "GRN-02": null, "GRN-05": 42.1, "SMT-01": 338.8, "SMT-03": null, "SMT-05": 95.8, "CMP-01": 52064, "CMP-04": 28.5, "CMP-06": 222, "TAL-01": 46.9, "TAL-02": 5, "TAL-06": 27.3, "CON-01": 202, "CON-03": 66.9, "CON-05": 41.1},
 "Dubai":{"LIV-01": 0.69, "LIV-04": 83.1, "LIV-05": 3.35, "LIV-06": 7.8, "GRN-01": 35.0, "GRN-02": 40.6, "GRN-05": null, "SMT-01": 359.0, "SMT-03": 90.63, "SMT-05": 100.0, "CMP-01": null, "CMP-04": null, "CMP-06": 661, "TAL-01": 41.0, "TAL-02": 0, "TAL-06": null, "CON-01": 310, "CON-03": 24.8, "CON-05": 42.7},
 "San Francisco":{"LIV-01": 5.76, "LIV-04": 79.0, "LIV-05": 3.02, "LIV-06": 6.5, "GRN-01": 7.4, "GRN-02": null, "GRN-05": 53.1, "SMT-01": 367.7, "SMT-03": null, "SMT-05": 94.7, "CMP-01": 146853, "CMP-04": 320.8, "CMP-06": 20260, "TAL-01": 46.9, "TAL-02": 0, "TAL-06": 32.4, "CON-01": 60, "CON-03": 29.6, "CON-05": 49.7},
-"Stockholm":{"SMT-01": 302.2, "CMP-01": 81394},
-"Oslo":{"SMT-01": 281.9, "CMP-01": 63394},
-"Helsinki":{"SMT-01": 238.8, "CMP-01": 66107},
-"Madrid":{"SMT-01": 382.3, "CMP-01": 59768},
-"Milan":{"SMT-01": 429.2, "CMP-01": 82014},
-"Rome":{"SMT-01": 376.5, "CMP-01": 65690},
-"Munich":{"SMT-01": 221.7, "CMP-01": 102244},
-"Frankfurt":{"SMT-01": 232.1, "CMP-01": 82688},
-"Hamburg":{"SMT-01": 196.7, "CMP-01": 77768},
-"Brussels":{"SMT-01": 266.9, "CMP-01": 78040},
-"Dublin":{"SMT-01": 337.0, "CMP-01": 141694},
-"Lisbon":{"SMT-01": 354.4, "CMP-01": 50408},
-"Prague":{"SMT-01": 258.9, "CMP-01": 83056},
-"Warsaw":{"SMT-01": 362.9, "CMP-01": 81920},
-"Istanbul":{"SMT-01": 251.2, "CMP-01": 56428},
-"Montreal":{"SMT-01": 334.2, "CMP-01": 38730},
-"Vancouver":{"SMT-01": 374.2, "CMP-01": 45902},
-"Chicago":{"SMT-01": 392.9, "CMP-01": 75524},
-"Boston":{"SMT-01": 361.6, "CMP-01": 101761},
-"Los Angeles":{"SMT-01": 392.1, "CMP-01": 70646},
-"Seattle":{"SMT-01": 410.0, "CMP-01": 111516},
-"Washington DC":{"SMT-01": 362.5, "CMP-01": 83988},
-"Sydney":{"SMT-01": 239.5, "CMP-01": 45152},
-"Auckland":{"SMT-01": 283.4, "CMP-01": 55906},
-"Osaka":{"SMT-01": 295.1, "CMP-01": 41497},
-"Tel Aviv":{"SMT-01": 366.9, "CMP-01": null}
+"Stockholm":{"SMT-01": 302.2, "CMP-01": 81394, "LIV-04": 85.0, "TAL-01": 60.0},
+"Oslo":{"SMT-01": 281.9, "CMP-01": 63394, "LIV-04": 83.3, "TAL-01": 56.5},
+"Helsinki":{"SMT-01": 238.8, "CMP-01": 66107, "LIV-04": 81.9, "TAL-01": 48.1},
+"Madrid":{"SMT-01": 382.3, "CMP-01": 59768, "LIV-04": 85.4, "TAL-01": 50.0},
+"Milan":{"SMT-01": 429.2, "CMP-01": 82014, "LIV-04": 84.7, "TAL-01": 23.6},
+"Rome":{"SMT-01": 376.5, "CMP-01": 65690, "LIV-04": 83.6, "TAL-01": 28.5},
+"Munich":{"SMT-01": 221.7, "CMP-01": 102244, "LIV-04": 83.1, "TAL-01": 38.6},
+"Frankfurt":{"SMT-01": 232.1, "CMP-01": 82688, "LIV-04": 81.9, "TAL-01": 35.6},
+"Hamburg":{"SMT-01": 196.7, "CMP-01": 77768, "LIV-04": 80.9, "TAL-01": 43.0},
+"Brussels":{"SMT-01": 266.9, "CMP-01": 78040, "LIV-04": 82.2, "TAL-01": 56.9},
+"Dublin":{"SMT-01": 337.0, "CMP-01": 141694, "LIV-04": 83.3, "TAL-01": 61.0},
+"Lisbon":{"SMT-01": 354.4, "CMP-01": 50408, "LIV-04": 81.2, "TAL-01": 43.3},
+"Prague":{"SMT-01": 258.9, "CMP-01": 83056, "LIV-04": 81.1, "TAL-01": 54.8},
+"Warsaw":{"SMT-01": 362.9, "CMP-01": 81920, "LIV-04": 81.0, "TAL-01": 65.3},
+"Istanbul":{"SMT-01": 251.2, "CMP-01": 56428, "LIV-04": 77.1, "TAL-01": 31.8},
+"Montreal":{"SMT-01": 334.2, "CMP-01": 38730, "LIV-04": 82.5, "TAL-01": 59.0},
+"Vancouver":{"SMT-01": 374.2, "CMP-01": 45902, "LIV-04": 81.5, "TAL-01": 64.0},
+"Chicago":{"SMT-01": 392.9, "CMP-01": 75524, "LIV-04": 76.8, "TAL-01": 50.9},
+"Boston":{"SMT-01": 361.6, "CMP-01": 101761, "LIV-04": 79.0, "TAL-01": 58.2},
+"Los Angeles":{"SMT-01": 392.1, "CMP-01": 70646, "LIV-04": 79.0, "TAL-01": 46.9},
+"Seattle":{"SMT-01": 410.0, "CMP-01": 111516, "LIV-04": 79.2, "TAL-01": 52.9},
+"Washington DC":{"SMT-01": 362.5, "CMP-01": 83988, "LIV-04": 78.0, "TAL-01": 70.7},
+"Sydney":{"SMT-01": 239.5, "CMP-01": 45152, "LIV-04": 84.1, "TAL-01": 52.5},
+"Auckland":{"SMT-01": 283.4, "CMP-01": 55906, "LIV-04": 82.7, "TAL-01": 45.5},
+"Osaka":{"SMT-01": 295.1, "CMP-01": 41497, "LIV-04": 84.2, "TAL-01": 56.9},
+"Tel Aviv":{"SMT-01": 366.9, "CMP-01": null, "LIV-04": 83.1, "TAL-01": 60.4}
 },
 "provenance":{
  "LIV-01": {
@@ -946,6 +946,162 @@ window.INDEX_DATA = {
     "year": "2020",
     "source": "OECD TL2 US06 — California",
     "note": "California STATE proxy (no US TL3 in dataset). 2020 is latest and is COVID-depressed (2019 = 80.9). dataLevel = state proxy."
+   },
+   "Stockholm": {
+    "value": 85.0,
+    "year": "2024",
+    "source": "OECD SE11 Stockholm (TL2)",
+    "note": "TL2 Stockholm = Stockholm County (same boundary as TL3 SE110, which only runs to 2022); county-level"
+   },
+   "Oslo": {
+    "value": 83.3,
+    "year": "2022",
+    "source": "OECD NO081 Oslo (TL3)",
+    "note": "Oslo county/municipality — city-level"
+   },
+   "Helsinki": {
+    "value": 81.9,
+    "year": "2023",
+    "source": "OECD FI1B1 Helsinki-Uusimaa (TL3)",
+    "note": "Uusimaa region containing Helsinki — region proxy"
+   },
+   "Madrid": {
+    "value": 85.4,
+    "year": "2023",
+    "source": "OECD ES300 Madrid (TL3)",
+    "note": "Madrid province = Comunidad de Madrid; region-level"
+   },
+   "Milan": {
+    "value": 84.7,
+    "year": "2024",
+    "source": "OECD ITC4C Milan (TL3)",
+    "note": "Metropolitan City of Milan — metro-level"
+   },
+   "Rome": {
+    "value": 83.6,
+    "year": "2024",
+    "source": "OECD ITI43 Rome (TL3)",
+    "note": "Metropolitan City of Rome — metro-level"
+   },
+   "Munich": {
+    "value": 83.1,
+    "year": "2020",
+    "source": "OECD DE212 München, Kreisfreie Stadt (TL3)",
+    "note": "City proper; latest year published at German TL3 is 2020"
+   },
+   "Frankfurt": {
+    "value": 81.9,
+    "year": "2020",
+    "source": "OECD DE712 Frankfurt am Main, Kreisfreie Stadt (TL3)",
+    "note": "City proper; latest year published at German TL3 is 2020"
+   },
+   "Hamburg": {
+    "value": 80.9,
+    "year": "2023",
+    "source": "OECD DE6 Hamburg (TL2)",
+    "note": "City-state = city boundary (TL3 DE600 identical but only to 2020)"
+   },
+   "Brussels": {
+    "value": 82.2,
+    "year": "2023",
+    "source": "OECD BE1 Brussels-Capital Region (TL2)",
+    "note": "Brussels-Capital Region — city-region"
+   },
+   "Dublin": {
+    "value": 83.3,
+    "year": "2023",
+    "source": "OECD IE06 Eastern and Midland (TL2)",
+    "note": "Region proxy containing Dublin; no Dublin TL3 in this dataflow"
+   },
+   "Lisbon": {
+    "value": 81.2,
+    "year": "2023",
+    "source": "OECD PT1A Greater Lisbon (TL2)",
+    "note": "Grande Lisboa (NUTS2024) — metro-level"
+   },
+   "Prague": {
+    "value": 81.1,
+    "year": "2023",
+    "source": "OECD CZ010 Prague (TL3)",
+    "note": "Praha = city boundary"
+   },
+   "Warsaw": {
+    "value": 81.0,
+    "year": "2024",
+    "source": "OECD PL911 City of Warsaw (TL3)",
+    "note": "City proper"
+   },
+   "Istanbul": {
+    "value": 77.1,
+    "year": "2023",
+    "source": "OECD TR10 Istanbul (TL2)",
+    "note": "Istanbul province = greater city (TL3 TR100 identical but only to 2019)"
+   },
+   "Montreal": {
+    "value": 82.5,
+    "year": "2022",
+    "source": "OECD CA24 Quebec (TL2)",
+    "note": "Province proxy — no Montreal TL3 in this dataflow (v1.0 convention for Canada)"
+   },
+   "Vancouver": {
+    "value": 81.5,
+    "year": "2022",
+    "source": "OECD CA59 British Columbia (TL2)",
+    "note": "Province proxy (v1.0 convention for Canada)"
+   },
+   "Chicago": {
+    "value": 76.8,
+    "year": "2020",
+    "source": "OECD US17 Illinois (TL2)",
+    "note": "State proxy (v1.0 convention for US); latest US state year is 2020"
+   },
+   "Boston": {
+    "value": 79.0,
+    "year": "2020",
+    "source": "OECD US25 Massachusetts (TL2)",
+    "note": "State proxy (v1.0 convention for US)"
+   },
+   "Los Angeles": {
+    "value": 79.0,
+    "year": "2020",
+    "source": "OECD US06 California (TL2)",
+    "note": "State proxy (v1.0 convention for US)"
+   },
+   "Seattle": {
+    "value": 79.2,
+    "year": "2020",
+    "source": "OECD US53 Washington (TL2)",
+    "note": "Washington State proxy (v1.0 convention for US)"
+   },
+   "Washington DC": {
+    "value": 78.0,
+    "year": "2019",
+    "source": "OECD US11 District of Columbia (TL2)",
+    "note": "DC is a TL2 unit = the city itself; latest published year 2019 (no 2020 row for DC)"
+   },
+   "Sydney": {
+    "value": 84.1,
+    "year": "2022",
+    "source": "OECD AU1GS Sydney (TL3)",
+    "note": "Greater Sydney — metro-level"
+   },
+   "Auckland": {
+    "value": 82.7,
+    "year": "2023",
+    "source": "OECD NZ12 Auckland (TL2)",
+    "note": "Auckland region = same boundary as TL3 NZ012 (which only runs to 2018)"
+   },
+   "Osaka": {
+    "value": 84.2,
+    "year": "2020",
+    "source": "OECD JPG27 Osaka (TL3)",
+    "note": "Osaka prefecture; Japanese regional life tables published every 5 years — 2020 is latest"
+   },
+   "Tel Aviv": {
+    "value": 83.1,
+    "year": "2022",
+    "source": "OECD IL050 Tel Aviv District (TL3)",
+    "note": "Tel Aviv District containing the city — district-level"
    }
   }
  },
@@ -2299,6 +2455,162 @@ window.INDEX_DATA = {
     "year": "2023",
     "source": "Dubai Statistics Center, Statistical Yearbook 2023, Table 01-07 Population (10+) by Educational Status: University and Post Graduate 1,302,272 / Total 3,179,347",
     "note": "DIFFERENT BASIS: university degree AND ABOVE only (excludes sub-degree diplomas) as % of population aged 10+ (not 25-64). Computed from official counts. Read with care."
+   },
+   "Stockholm": {
+    "value": 60.0,
+    "year": "2025",
+    "source": "OECD SE11 Stockholm (TL2)",
+    "note": "Stockholm County — county-level"
+   },
+   "Oslo": {
+    "value": 56.5,
+    "year": "2025",
+    "source": "OECD NO08 Oslo and Viken (TL2)",
+    "note": "Broader region proxy (Oslo + former Viken); no Oslo-only unit in this dataflow"
+   },
+   "Helsinki": {
+    "value": 48.1,
+    "year": "2025",
+    "source": "OECD FI1B Helsinki-Uusimaa (TL2)",
+    "note": "Uusimaa region containing Helsinki — region proxy"
+   },
+   "Madrid": {
+    "value": 50.0,
+    "year": "2025",
+    "source": "OECD ES30 Madrid (TL2)",
+    "note": "Comunidad de Madrid — region-level"
+   },
+   "Milan": {
+    "value": 23.6,
+    "year": "2025",
+    "source": "OECD ITC4 Lombardy (TL2)",
+    "note": "Region proxy — Italy has no TL3 in this dataflow; Lombardy is much wider than Milan"
+   },
+   "Rome": {
+    "value": 28.5,
+    "year": "2025",
+    "source": "OECD ITI4 Lazio (TL2)",
+    "note": "Region proxy — Lazio is wider than Rome"
+   },
+   "Munich": {
+    "value": 38.6,
+    "year": "2025",
+    "source": "OECD DE2 Bavaria (TL2)",
+    "note": "State (Land) proxy — no German TL3 in this dataflow"
+   },
+   "Frankfurt": {
+    "value": 35.6,
+    "year": "2025",
+    "source": "OECD DE7 Hesse (TL2)",
+    "note": "State (Land) proxy"
+   },
+   "Hamburg": {
+    "value": 43.0,
+    "year": "2025",
+    "source": "OECD DE6 Hamburg (TL2)",
+    "note": "City-state = city boundary"
+   },
+   "Brussels": {
+    "value": 56.9,
+    "year": "2025",
+    "source": "OECD BE1 Brussels Capital Region (TL2)",
+    "note": "Brussels-Capital Region — city-region"
+   },
+   "Dublin": {
+    "value": 61.0,
+    "year": "2021",
+    "source": "OECD IE061 Dublin (TL3)",
+    "note": "Dublin TL3 (city+county), latest TL3 year 2021; coarser IE06 Eastern & Midland has 2025 (63.0)"
+   },
+   "Lisbon": {
+    "value": 43.3,
+    "year": "2025",
+    "source": "OECD PT1A Greater Lisbon (TL2)",
+    "note": "Grande Lisboa (NUTS2024) — metro-level"
+   },
+   "Prague": {
+    "value": 54.8,
+    "year": "2025",
+    "source": "OECD CZ01 Prague (TL2)",
+    "note": "Praha = city boundary"
+   },
+   "Warsaw": {
+    "value": 65.3,
+    "year": "2025",
+    "source": "OECD PL91 Warsaw Capital Region (TL2)",
+    "note": "Warszawski stoleczny — Warsaw + surrounding metro belt"
+   },
+   "Istanbul": {
+    "value": 31.8,
+    "year": "2025",
+    "source": "OECD TR10 Istanbul (TL2)",
+    "note": "Istanbul province = greater city"
+   },
+   "Montreal": {
+    "value": 59.0,
+    "year": "2024",
+    "source": "OECD CA24 Quebec (TL2)",
+    "note": "Province proxy (v1.0 convention for Canada)"
+   },
+   "Vancouver": {
+    "value": 64.0,
+    "year": "2024",
+    "source": "OECD CA59 British Columbia (TL2)",
+    "note": "Province proxy (v1.0 convention for Canada)"
+   },
+   "Chicago": {
+    "value": 50.9,
+    "year": "2024",
+    "source": "OECD US17 Illinois (TL2)",
+    "note": "State proxy (v1.0 convention for US)"
+   },
+   "Boston": {
+    "value": 58.2,
+    "year": "2024",
+    "source": "OECD US25 Massachusetts (TL2)",
+    "note": "State proxy (v1.0 convention for US)"
+   },
+   "Los Angeles": {
+    "value": 46.9,
+    "year": "2024",
+    "source": "OECD US06 California (TL2)",
+    "note": "State proxy (v1.0 convention for US)"
+   },
+   "Seattle": {
+    "value": 52.9,
+    "year": "2024",
+    "source": "OECD US53 Washington (TL2)",
+    "note": "Washington State proxy (v1.0 convention for US)"
+   },
+   "Washington DC": {
+    "value": 70.7,
+    "year": "2024",
+    "source": "OECD US11 District of Columbia (TL2)",
+    "note": "DC is a TL2 unit = the city itself"
+   },
+   "Sydney": {
+    "value": 52.5,
+    "year": "2021",
+    "source": "OECD AU1 New South Wales (TL2)",
+    "note": "State proxy (v1.0 convention for Australia); Greater Sydney TL3 (AU1GS) exists but latest is 2016 (52.8)"
+   },
+   "Auckland": {
+    "value": 45.5,
+    "year": "2020",
+    "source": "OECD NZ12 Auckland (TL2)",
+    "note": "Auckland region; latest published year 2020"
+   },
+   "Osaka": {
+    "value": 56.9,
+    "year": "2020",
+    "source": "OECD JPG Kansai region (TL2)",
+    "note": "Wide-region proxy: Osaka TL3 (JPG27) rows are all 'Missing value' in OECD; Kansai (Osaka+Kyoto+Hyogo+Shiga+Nara+Wakayama) census-based, decennial — 2020 latest"
+   },
+   "Tel Aviv": {
+    "value": 60.4,
+    "year": "2022",
+    "source": "OECD IL050 Tel Aviv District (TL3)",
+    "note": "Tel Aviv District containing the city — district-level"
    }
   }
  },
