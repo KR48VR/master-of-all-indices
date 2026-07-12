@@ -4,7 +4,7 @@
 // CLAUDE.md rule 3). A null/absent value is honest missing data — never
 // fill one with a guess. The 19 non-pilot measures have no data yet.
 window.INDEX_DATA = {
-"meta":{"name": "Master Index Workbench", "version": "2.0.0-beta.1", "released": "2026-07-12", "dataLicense": "CC BY-NC-SA 4.0 (compilation); individual values inherit source terms recorded in provenance", "codeLicense": "MIT", "url": "https://kr48vr.github.io/master-of-all-indices/"},
+"meta":{"name": "Master Index Workbench", "version": "2.0.0", "released": "2026-07-12", "dataLicense": "CC BY-NC-SA 4.0 (compilation); individual values inherit source terms recorded in provenance", "codeLicense": "MIT", "url": "https://kr48vr.github.io/master-of-all-indices/"},
 "domains":[
 {"id": "Liveable", "tint": "#F6C99A", "ink": "#8a4b12"},
 {"id": "Green", "tint": "#A9CE9C", "ink": "#2f5d29"},
@@ -17,8 +17,8 @@ window.INDEX_DATA = {
 {"id": "LIV-01", "domain": "Liveable", "subtheme": "Safety & Stability", "name": "Homicide rate", "measures": "Intentional homicides per 100,000 residents", "unit": "per 100k", "direction": "lower", "dataLevel": "Country proxy", "source": "UNODC CTS (national rates)", "appearsIn": "EIU (Stability)", "pilot": 1, "caveat": "UNODC discontinued its city-level series, so these are NATIONAL rates standing in for cities (Singapore is a city-state, so national = city; London uses England & Wales). Crime definitions vary by country. City-level upgrade from national police statistics planned.", "contestable": 0, "approx": "proxy"},
 {"id": "LIV-02", "domain": "Liveable", "subtheme": "Safety & Stability", "name": "Perceived safety", "measures": "Resident-reported feeling of safety", "unit": "index 0-100", "direction": "higher", "dataLevel": "City", "source": "Numbeo Safety Index", "appearsIn": "—", "pilot": 0, "caveat": "Crowd-sourced — treat as a soft signal.", "contestable": 0, "approx": "crowd"},
 {"id": "LIV-03", "domain": "Liveable", "subtheme": "Safety & Stability", "name": "Political stability", "measures": "Absence of violence / terrorism", "unit": "index", "direction": "higher", "dataLevel": "Country proxy", "source": "World Bank WGI", "appearsIn": "EIU (Stability)", "pilot": 0, "caveat": "Country-level stand-in, not city-specific.", "contestable": 0, "approx": "proxy"},
-{"id": "LIV-04", "domain": "Liveable", "subtheme": "Health", "name": "Life expectancy", "measures": "Average life expectancy at birth", "unit": "years", "direction": "higher", "dataLevel": "Metro", "source": "OECD Regions / SingStat / World Bank", "appearsIn": "GPCI (Livability)", "pilot": 1, "caveat": "OECD regional data at the finest level published: city or metro for most European cities; state/province proxies for the US, Canadian and Australian cities (named per value); Dubai is a UAE national figure. Years mix 2019-2025 — US values are 2020 (COVID-depressed, DC 2019), Japanese life tables are quinquennial (2020).", "contestable": 0, "approx": "none"},
-{"id": "LIV-05", "domain": "Liveable", "subtheme": "Health", "name": "Physicians per capita", "measures": "Doctors per 1,000 residents", "unit": "per 1k", "direction": "higher", "dataLevel": "Metro", "source": "OECD Regional health / data.gov.sg / DHA", "appearsIn": "EIU (Healthcare)", "pilot": 1, "caveat": "OECD regional physician density, finest comparable level: city/metro for many European cities, state/province/region proxies for US, Canadian, Italian and German cities (German Laender end 2019). Core districts read high (Paris, Warsaw-core rejected for a reporting break, Washington DC extreme - physicians counted at workplace). Dublin and London-style gaps filled or left blank per value; Singapore from MOH, Dubai from DHA 2022. Years mix 2019-2025.", "contestable": 0, "approx": "none"},
+{"id": "LIV-04", "domain": "Liveable", "subtheme": "Health", "name": "Life expectancy", "measures": "Average life expectancy at birth", "unit": "years", "direction": "higher", "dataLevel": "Metro", "source": "OECD Regions / SingStat / World Bank", "appearsIn": "GPCI (Livability)", "pilot": 1, "caveat": "OECD regional data at the finest level published: city or metro for most European cities; state/province proxies for the US, Canadian and Australian cities (named per value); Dubai is a UAE national figure. Years mix 2019-2025 — US values are 2020 (COVID-depressed, DC 2019), Japanese life tables are quinquennial (2020). 2026 Asian additions mix levels (named per value): Bangkok, Manila and Abu Dhabi are national proxies; Jakarta and Ho Chi Minh City are province-level; Mumbai reads as Maharashtra; Delhi and Kuala Lumpur are their own city-territories; mainland-Chinese figures are municipal official statistics on varying bases (Shanghai is hukou-based 2022, COVID-depressed). Hong Kong is blank — its statistics office publishes life expectancy by sex only.", "contestable": 0, "approx": "none"},
+{"id": "LIV-05", "domain": "Liveable", "subtheme": "Health", "name": "Physicians per capita", "measures": "Doctors per 1,000 residents", "unit": "per 1k", "direction": "higher", "dataLevel": "Metro", "source": "OECD Regional health / data.gov.sg / DHA", "appearsIn": "EIU (Healthcare)", "pilot": 1, "caveat": "OECD regional physician density, finest comparable level: city/metro for many European cities, state/province/region proxies for US, Canadian, Italian and German cities (German Laender end 2019). Core districts read high (Paris, Warsaw-core rejected for a reporting break, Washington DC extreme - physicians counted at workplace). Dublin and London-style gaps filled or left blank per value; Singapore from MOH, Dubai from DHA 2022. Years mix 2019-2025. 2026 Asian additions: mostly WHO national densities (country proxy, named per value); Bangkok is a city-level health-ministry figure. Definitions differ: mainland-Chinese counts include TCM, dental and public-health physicians; Hong Kong counts registered (not necessarily practising) doctors; Taipei counts practising Western-medicine physicians at place of practice; Beijing reads high (national hospitals serve all of China).", "contestable": 0, "approx": "none"},
 {"id": "LIV-06", "domain": "Liveable", "subtheme": "Housing & Cost", "name": "House-price-to-income", "measures": "Median home price / median income", "unit": "ratio", "direction": "lower", "dataLevel": "City", "source": "Numbeo Property Prices Index", "appearsIn": "—", "pilot": 1, "caveat": "Numbeo 2026 Mid-Year edition: crowd-sourced median apartment price over median familial disposable income (years). Core affordability signal — treat as a soft, crowd-sourced estimate.", "contestable": 0, "approx": "crowd"},
 {"id": "LIV-07", "domain": "Liveable", "subtheme": "Housing & Cost", "name": "Cost of living", "measures": "Standard basket cost vs a benchmark city", "unit": "index", "direction": "lower", "dataLevel": "City", "source": "Numbeo", "appearsIn": "Mercer", "pilot": 0, "caveat": "Direction is contestable — a rich city having high costs isn't necessarily 'bad'.", "contestable": 1, "approx": "crowd"},
 {"id": "LIV-08", "domain": "Liveable", "subtheme": "Culture & Amenities", "name": "Cultural venues", "measures": "Museums / theatres / venues per 100,000", "unit": "per 100k", "direction": "higher", "dataLevel": "City", "source": "City open data / GPCI", "appearsIn": "GPCI (Cultural Interaction)", "pilot": 0, "caveat": "Sourcing and definitions vary widely.", "contestable": 0, "approx": "none"},
@@ -26,7 +26,7 @@ window.INDEX_DATA = {
 {"id": "GRN-02", "domain": "Green", "subtheme": "Air & Environment", "name": "Open space access", "measures": "% of residents within 400 m walk of an open public space", "unit": "%", "direction": "higher", "dataLevel": "City", "source": "UN-Habitat SDG 11.7.1", "appearsIn": "—", "pilot": 1, "caveat": "SDG 11.7.1 access measure (2020): \"open public space\" includes plazas and squares, not only green areas, and the share is computed from OpenStreetMap public-space mapping plus a modelled population grid — not a survey. Replaces the original \"within 300 m of green space\" definition, which no global source publishes. Barcelona and San Francisco are outside UN-Habitat’s city sample (blank).", "contestable": 0, "approx": "modelled"},
 {"id": "GRN-03", "domain": "Green", "subtheme": "Climate & Emissions", "name": "CO2 per capita", "measures": "Territorial emissions per resident", "unit": "tonnes", "direction": "lower", "dataLevel": "City", "source": "Global Covenant of Mayors", "appearsIn": "—", "pilot": 0, "caveat": "Self-reported by cities; has gaps.", "contestable": 0, "approx": "self-reported"},
 {"id": "GRN-04", "domain": "Green", "subtheme": "Climate & Emissions", "name": "Renewable share", "measures": "% of city energy from renewables", "unit": "%", "direction": "higher", "dataLevel": "City", "source": "WCCD (ISO 37120)", "appearsIn": "—", "pilot": 0, "caveat": "Only for cities that report to WCCD.", "contestable": 0, "approx": "self-reported"},
-{"id": "GRN-05", "domain": "Green", "subtheme": "Resource Efficiency", "name": "Waste recycled", "measures": "% of municipal waste recycled", "unit": "%", "direction": "higher", "dataLevel": "City", "source": "Official city/national waste statistics", "appearsIn": "—", "pilot": 1, "caveat": "Compiled city-by-city from official sources — definitions are NOT directly comparable: mixes recycling, separate-collection and diversion rates; household-only vs all municipal waste (Singapore’s 52% overall vs ~12% domestic); Vienna computed from official tonnages (no official rate published); San Francisco/Toronto report diversion. Years 2023-2025. Dubai publishes no rate (blank).", "contestable": 0, "approx": "self-reported"},
+{"id": "GRN-05", "domain": "Green", "subtheme": "Resource Efficiency", "name": "Waste recycled", "measures": "% of municipal waste recycled", "unit": "%", "direction": "higher", "dataLevel": "City", "source": "Official city/national waste statistics", "appearsIn": "—", "pilot": 1, "caveat": "Compiled city-by-city from official sources — definitions are NOT directly comparable: mixes true recycling rates, separate-collection shares (Milan, Rome, Madrid, Prague, Frankfurt, Stockholm) and landfill-diversion rates (San Francisco, Toronto, Montreal, Washington DC, Sydney, Chicago, Auckland, Manila, Abu Dhabi; Tel Aviv's includes waste-to-energy); scopes differ (Singapore's 52% overall vs ~12% domestic; Chicago and Osaka structurally low from narrow administrative scope; Vancouver metro-wide all sectors incl. construction). Kuala Lumpur and Dublin are NATIONAL rates (country proxy); Abu Dhabi is the emirate; Vienna and Frankfurt are computed from official tonnages (no rate published). Years mostly 2023-2025 — Boston 2019, Hamburg 2020 and Manila 2015 are those cities' latest official rates. Cities publishing no genuine rate are blank, each with the reason recorded.", "contestable": 0, "approx": "self-reported"},
 {"id": "GRN-06", "domain": "Green", "subtheme": "Resource Efficiency", "name": "Water use per capita", "measures": "Daily water consumption per resident", "unit": "litres/day", "direction": "lower", "dataLevel": "City", "source": "WCCD", "appearsIn": "—", "pilot": 0, "caveat": "", "contestable": 0, "approx": "self-reported"},
 {"id": "GRN-07", "domain": "Green", "subtheme": "Climate Risk", "name": "Hazard exposure", "measures": "Modelled exposure to flood / extreme heat", "unit": "index", "direction": "lower", "dataLevel": "City", "source": "WRI / modelled", "appearsIn": "—", "pilot": 0, "caveat": "Modelled estimate, not observed.", "contestable": 0, "approx": "modelled"},
 {"id": "SMT-01", "domain": "Smart", "subtheme": "Connectivity", "name": "Broadband speed", "measures": "Test-weighted mean fixed download speed (Ookla open-data tiles)", "unit": "Mbps", "direction": "higher", "dataLevel": "City", "source": "Ookla Open Data (Speedtest tiles)", "appearsIn": "IMD Smart City", "pilot": 1, "caveat": "Computed from Ookla Q1 2026 open-data tiles aggregated over a documented city-core bounding box per city (recorded in provenance) — a test-weighted mean, not the median in Ookla’s consumer pages, and the boundary choice affects the value. © Ookla, CC BY-NC-SA 4.0.", "contestable": 0, "approx": "modelled"},
@@ -38,22 +38,22 @@ window.INDEX_DATA = {
 {"id": "CMP-01", "domain": "Competitive", "subtheme": "Economic Output", "name": "GDP per capita", "measures": "Metro GDP / population", "unit": "USD PPP", "direction": "higher", "dataLevel": "Metro", "source": "OECD Metro (FUA) / World Bank", "appearsIn": "GPCI (Economy)", "pilot": 1, "caveat": "OECD metropolitan (FUA) GDP per head in constant-2015-PPP USD; years 2020-2023. London and the archived-vintage metros (Melbourne, Toronto, Montreal, Vancouver, Sydney) are 2020 COVID-dip values. Dublin reads high (multinational profit-shifting). Singapore is a national World Bank figure on a 2021 PPP base. Dubai and Tel Aviv: no honest metro PPP figure exists (blank).", "contestable": 0, "approx": "none"},
 {"id": "CMP-02", "domain": "Competitive", "subtheme": "Economic Output", "name": "Labour productivity", "measures": "Gross value added per worker", "unit": "USD", "direction": "higher", "dataLevel": "Metro", "source": "OECD", "appearsIn": "—", "pilot": 0, "caveat": "", "contestable": 0, "approx": "none"},
 {"id": "CMP-03", "domain": "Competitive", "subtheme": "Business Environment", "name": "Global firm presence", "measures": "Number of major global-firm HQs", "unit": "count", "direction": "higher", "dataLevel": "City", "source": "GPCI / Fortune", "appearsIn": "GPCI (Economy)", "pilot": 0, "caveat": "", "contestable": 0, "approx": "none"},
-{"id": "CMP-04", "domain": "Competitive", "subtheme": "Business Environment", "name": "Startup density", "measures": "Dealroom-tracked startups per 100,000 metro residents", "unit": "per 100k", "direction": "higher", "dataLevel": "Metro", "source": "Dealroom (public hub pages)", "appearsIn": "GPCI-Startup", "pilot": 1, "caveat": "Dealroom \"tracked startups\" per hub / page-shown metro population (captured 11 Jul 2026). Hubs are metros: SF = Bay Area, Toronto = Toronto-Waterloo, Berlin = Berlin/Brandenburg. Copenhagen, Vienna, Seoul, Dubai show no count and Amsterdam no population (blank). Database coverage varies by region — deepest in Europe/US.", "contestable": 0, "approx": "modelled"},
+{"id": "CMP-04", "domain": "Competitive", "subtheme": "Business Environment", "name": "Startup density", "measures": "Dealroom-tracked startups per 100,000 metro residents", "unit": "per 100k", "direction": "higher", "dataLevel": "Metro", "source": "Dealroom (public hub pages)", "appearsIn": "GPCI-Startup", "pilot": 1, "caveat": "Dealroom \"tracked startups\" per hub / page-shown metro population (captured 11-12 Jul 2026). Hubs are metros: SF = Bay Area, Toronto = Toronto-Waterloo, Berlin = Berlin/Brandenburg. Hubs whose pages render no startup count are blank (Copenhagen, Vienna, Seoul, Dubai and most hubs added in the 2026 expansion outside the largest ecosystems); Amsterdam shows no population (blank). Database coverage varies by region — deepest in Europe/US.", "contestable": 0, "approx": "modelled"},
 {"id": "CMP-05", "domain": "Competitive", "subtheme": "Dynamism", "name": "Employment growth", "measures": "5-year change in metro employment", "unit": "%", "direction": "higher", "dataLevel": "Metro", "source": "OECD", "appearsIn": "—", "pilot": 0, "caveat": "", "contestable": 0, "approx": "none"},
-{"id": "CMP-06", "domain": "Competitive", "subtheme": "Dynamism", "name": "VC funding", "measures": "Dealroom \"VC invested\" per resident (metro hub)", "unit": "USD", "direction": "higher", "dataLevel": "Metro", "source": "Dealroom (public hub pages)", "appearsIn": "Startup Genome", "pilot": 1, "caveat": "Dealroom hub \"VC invested\" / page-shown metro population (captured 11 Jul 2026). The source page does not state the time window of \"VC invested\" — compare across cities, not against external annual figures. Amsterdam blank (no population shown).", "contestable": 0, "approx": "none"},
-{"id": "TAL-01", "domain": "Talent", "subtheme": "Education", "name": "Tertiary attainment", "measures": "% of adults with tertiary education", "unit": "%", "direction": "higher", "dataLevel": "Metro", "source": "OECD Regions / SingStat / Dubai Statistics Center", "appearsIn": "—", "pilot": 1, "caveat": "OECD regional shares (25-64, ISCED 5-8), finest level published: city-level for some, but state/province/region proxies for the US, Canadian, Australian, Italian, German and Japanese cities (named per value; Milan reads as Lombardy, Osaka as Kansai). Singapore counts residents 25+. Dubai is on a DIFFERENT basis — university-and-above as % of population 10+ (DSC 2023). Years mix 2020-2025.", "contestable": 0, "approx": "none"},
+{"id": "CMP-06", "domain": "Competitive", "subtheme": "Dynamism", "name": "VC funding", "measures": "Dealroom \"VC invested\" per resident (metro hub)", "unit": "USD", "direction": "higher", "dataLevel": "Metro", "source": "Dealroom (public hub pages)", "appearsIn": "Startup Genome", "pilot": 1, "caveat": "Dealroom hub \"VC invested\" / page-shown metro population (captured 11-12 Jul 2026). The source page does not state the time window of \"VC invested\" — compare across cities, not against external annual figures. Amsterdam blank (no population shown).", "contestable": 0, "approx": "none"},
+{"id": "TAL-01", "domain": "Talent", "subtheme": "Education", "name": "Tertiary attainment", "measures": "% of adults with tertiary education", "unit": "%", "direction": "higher", "dataLevel": "Metro", "source": "OECD Regions / SingStat / Dubai Statistics Center", "appearsIn": "—", "pilot": 1, "caveat": "OECD regional shares (25-64, ISCED 5-8), finest level published: city-level for some, but state/province/region proxies for the US, Canadian, Australian, Italian, German and Japanese cities (named per value; Milan reads as Lombardy, Osaka as Kansai). Singapore counts residents 25+. Dubai is on a DIFFERENT basis — university-and-above as % of population 10+ (DSC 2023). Years mix 2020-2025. 2026 Asian additions vary in basis (named per value): mainland-Chinese cities are 2020-census shares of the TOTAL population of all ages; Hong Kong and Taipei are 15+ attended/registered shares; Bangkok and Jakarta are national bachelor's-and-above; Kuala Lumpur is a national employed-persons share; Manila is NCR 25+ completed, Ho Chi Minh City is a 2020 labour-force share, Mumbai and Delhi are 15+ state shares.", "contestable": 0, "approx": "none"},
 {"id": "TAL-02", "domain": "Talent", "subtheme": "Education", "name": "Top universities", "measures": "Universities in the global top 500", "unit": "count", "direction": "higher", "dataLevel": "City", "source": "QS World University Rankings 2026", "appearsIn": "GPCI (R&D)", "pilot": 1, "caveat": "QS 2026 edition, counted with QS’s own city labels, city-proper rule: Stanford and Berkeley fall outside San Francisco (a real 0), the Saclay cluster outside Paris — counts are boundary-sensitive for SF, NY and Paris. Dubai’s 0 is real: all six UAE top-500 universities are in other emirates.", "contestable": 0, "approx": "none"},
 {"id": "TAL-03", "domain": "Talent", "subtheme": "Skills & Workforce", "name": "Knowledge workers", "measures": "% employed in knowledge-intensive jobs", "unit": "%", "direction": "higher", "dataLevel": "Metro", "source": "Eurostat / OECD", "appearsIn": "—", "pilot": 0, "caveat": "", "contestable": 0, "approx": "none"},
 {"id": "TAL-04", "domain": "Talent", "subtheme": "Skills & Workforce", "name": "Researchers per capita", "measures": "R&D personnel per 1,000", "unit": "per 1k", "direction": "higher", "dataLevel": "Metro", "source": "OECD", "appearsIn": "GPCI (R&D)", "pilot": 0, "caveat": "", "contestable": 0, "approx": "none"},
 {"id": "TAL-05", "domain": "Talent", "subtheme": "Attractiveness", "name": "Talent inflow", "measures": "Net migration of working-age people", "unit": "%", "direction": "higher", "dataLevel": "Metro", "source": "National statistics", "appearsIn": "—", "pilot": 0, "caveat": "Hard to standardise across countries.", "contestable": 0, "approx": "none"},
-{"id": "TAL-06", "domain": "Talent", "subtheme": "Attractiveness", "name": "International openness", "measures": "Foreign-born population share", "unit": "%", "direction": "higher", "dataLevel": "Metro", "source": "OECD FUA / national censuses / UN DESA", "appearsIn": "GPCI", "pilot": 1, "caveat": "Mixes concepts and boundaries, disclosed per value: census/register foreign-born for most cities; foreign NATIONALS (not foreign-born) for Tokyo and Seoul; UN migrant-stock estimate for Singapore; city boundaries for the OECD-city rows, metro for the census rows; years 2021-2026. Dubai publishes no foreign-born statistic (blank). A proxy for openness — contestable as \"better\".", "contestable": 1, "approx": "none"},
-{"id": "CON-01", "domain": "Connected", "subtheme": "Global Connectivity", "name": "Airport connectivity", "measures": "Direct international destinations served", "unit": "count", "direction": "higher", "dataLevel": "City", "source": "Wikipedia airport destination tables", "appearsIn": "GPCI (Accessibility)", "pilot": 1, "caveat": "Counted from Wikipedia \"Airlines and destinations\" tables (July 2026 snapshots): distinct international destination airports with scheduled or announced passenger service (charter/cargo excluded; suspended-annotated routes retained), union across each city's airport system, Wikidata-verified country classification. Crowd-maintained lists - completeness varies by page: Tokyo and Osaka are blank because their articles are known-pruned. Snapshot, not an official OAG count.", "contestable": 0, "approx": "crowd"},
+{"id": "TAL-06", "domain": "Talent", "subtheme": "Attractiveness", "name": "International openness", "measures": "Foreign-born population share", "unit": "%", "direction": "higher", "dataLevel": "Metro", "source": "OECD FUA / national censuses / UN DESA", "appearsIn": "GPCI", "pilot": 1, "caveat": "Mixes concepts and boundaries, disclosed per value: census/register foreign-born for most; foreign NATIONALS for Tokyo, Seoul, Osaka, Taipei; non-citizens for Kuala Lumpur; Hong Kong counts everyone born outside HK INCLUDING mainland China (29.9 of its 38.3 points). City vs metro boundaries and years 2021-2026 vary. Many Asian cities publish nothing honest here - blanks explain themselves. A proxy for openness - contestable as \"better\".", "contestable": 1, "approx": "none"},
+{"id": "CON-01", "domain": "Connected", "subtheme": "Global Connectivity", "name": "Airport connectivity", "measures": "Direct international destinations served", "unit": "count", "direction": "higher", "dataLevel": "City", "source": "Wikipedia airport destination tables", "appearsIn": "GPCI (Accessibility)", "pilot": 1, "caveat": "Counted from Wikipedia \"Airlines and destinations\" tables (July 2026 snapshots): distinct international destination airports with scheduled or announced passenger service (charter/cargo excluded; suspended-annotated routes retained), union across each city's airport system, Wikidata-verified country classification. Crowd-maintained lists - completeness varies by page: Tokyo, Osaka and Taipei are blank because their articles are known-pruned. Mainland China / Hong Kong / Macau / Taiwan routes are counted as international throughout (separate customs territories). Snapshot, not an official OAG count.", "contestable": 0, "approx": "crowd"},
 {"id": "CON-02", "domain": "Connected", "subtheme": "Global Connectivity", "name": "Global accessibility", "measures": "Travel time to major world hubs", "unit": "hours", "direction": "lower", "dataLevel": "City", "source": "GPCI", "appearsIn": "GPCI (Accessibility)", "pilot": 0, "caveat": "", "contestable": 0, "approx": "none"},
 {"id": "CON-03", "domain": "Connected", "subtheme": "Urban Mobility", "name": "Transit access", "measures": "% residents within 500 m of frequent transit (ITDP PNFT)", "unit": "%", "direction": "higher", "dataLevel": "Metro", "source": "ITDP Atlas (People Near Frequent Transit)", "appearsIn": "—", "pilot": 1, "caveat": "Share of the GHSL urban agglomeration within 500 m of a stop served at least every ~10 min (7am-9pm), GIS-computed by ITDP from open GTFS feeds; latest RELIABLE year per city (2023-2025 - one-cycle feed collapses are treated as artifacts, disclosed per value). Cities without usable open feeds are blank, NOT zero (Tokyo, London, Zurich, Melbourne, Amsterdam, Seoul, Oslo, Frankfurt, Istanbul, Osaka).", "contestable": 0, "approx": "modelled"},
 {"id": "CON-04", "domain": "Connected", "subtheme": "Urban Mobility", "name": "Commute time", "measures": "Average one-way commute", "unit": "minutes", "direction": "lower", "dataLevel": "City", "source": "Numbeo / Moovit", "appearsIn": "—", "pilot": 0, "caveat": "Crowd-sourced component.", "contestable": 0, "approx": "crowd"},
 {"id": "CON-05", "domain": "Connected", "subtheme": "Urban Mobility", "name": "Traffic congestion", "measures": "Extra travel time caused by congestion", "unit": "%", "direction": "lower", "dataLevel": "City", "source": "TomTom Traffic Index", "appearsIn": "—", "pilot": 1, "caveat": "TomTom Traffic Index \"Ranking 2025\" (full-year 2025, city-center definition): average extra travel time vs free-flow. Seoul is not covered by TomTom — INRIX also excludes Korea (blank).", "contestable": 0, "approx": "none"}
 ],
-"cities":["Singapore", "Tokyo", "Copenhagen", "Zurich", "Vienna", "Seoul", "Melbourne", "Amsterdam", "London", "New York", "Paris", "Toronto", "Berlin", "Barcelona", "Dubai", "San Francisco", "Stockholm", "Oslo", "Helsinki", "Madrid", "Milan", "Rome", "Munich", "Frankfurt", "Hamburg", "Brussels", "Dublin", "Lisbon", "Prague", "Warsaw", "Istanbul", "Montreal", "Vancouver", "Chicago", "Boston", "Los Angeles", "Seattle", "Washington DC", "Sydney", "Auckland", "Osaka", "Tel Aviv"],
+"cities":["Singapore", "Tokyo", "Copenhagen", "Zurich", "Vienna", "Seoul", "Melbourne", "Amsterdam", "London", "New York", "Paris", "Toronto", "Berlin", "Barcelona", "Dubai", "San Francisco", "Stockholm", "Oslo", "Helsinki", "Madrid", "Milan", "Rome", "Munich", "Frankfurt", "Hamburg", "Brussels", "Dublin", "Lisbon", "Prague", "Warsaw", "Istanbul", "Montreal", "Vancouver", "Chicago", "Boston", "Los Angeles", "Seattle", "Washington DC", "Sydney", "Auckland", "Osaka", "Tel Aviv", "Hong Kong", "Taipei", "Bangkok", "Kuala Lumpur", "Jakarta", "Manila", "Ho Chi Minh City", "Mumbai", "Abu Dhabi", "Shanghai", "Beijing", "Shenzhen", "Delhi"],
 "data":{
 "Singapore":{"LIV-01": 0.07, "LIV-04": 83.9, "LIV-05": 2.9, "LIV-06": 24.7, "GRN-01": 12.0, "GRN-02": 70.3, "GRN-05": 52.0, "SMT-01": 567.1, "SMT-03": 87.5, "SMT-05": 94.4, "CMP-01": 132570, "CMP-04": 68.1, "CMP-06": 690, "TAL-01": 54.1, "TAL-02": 2, "TAL-06": 48.7, "CON-01": 175, "CON-03": 28.0, "CON-05": 43.9},
 "Tokyo":{"LIV-01": 0.23, "LIV-04": 84.9, "LIV-05": 3.26, "LIV-06": 16.0, "GRN-01": 10.8, "GRN-02": 74.8, "GRN-05": 21.4, "SMT-01": 313.7, "SMT-03": 85.42, "SMT-05": 85.5, "CMP-01": 50287, "CMP-04": 14.8, "CMP-06": 81, "TAL-01": 64.2, "TAL-02": 4, "TAL-06": 5.6, "CON-01": null, "CON-03": null, "CON-05": 44.1},
@@ -71,32 +71,45 @@ window.INDEX_DATA = {
 "Barcelona":{"LIV-01": 0.69, "LIV-04": 84.2, "LIV-05": 4.47, "LIV-06": 13.8, "GRN-01": 10.9, "GRN-02": null, "GRN-05": 42.1, "SMT-01": 338.8, "SMT-03": null, "SMT-05": 95.8, "CMP-01": 52064, "CMP-04": 28.5, "CMP-06": 222, "TAL-01": 46.9, "TAL-02": 5, "TAL-06": 27.3, "CON-01": 202, "CON-03": 66.9, "CON-05": 41.1},
 "Dubai":{"LIV-01": 0.69, "LIV-04": 83.1, "LIV-05": 3.35, "LIV-06": 7.8, "GRN-01": 35.0, "GRN-02": 40.6, "GRN-05": null, "SMT-01": 359.0, "SMT-03": 90.63, "SMT-05": 100.0, "CMP-01": null, "CMP-04": null, "CMP-06": 661, "TAL-01": 41.0, "TAL-02": 0, "TAL-06": null, "CON-01": 310, "CON-03": 24.8, "CON-05": 42.7},
 "San Francisco":{"LIV-01": 5.76, "LIV-04": 79.0, "LIV-05": 3.02, "LIV-06": 6.5, "GRN-01": 7.4, "GRN-02": null, "GRN-05": 53.1, "SMT-01": 367.7, "SMT-03": null, "SMT-05": 94.7, "CMP-01": 146853, "CMP-04": 320.8, "CMP-06": 20260, "TAL-01": 46.9, "TAL-02": 0, "TAL-06": 32.4, "CON-01": 60, "CON-03": 29.6, "CON-05": 49.7},
-"Stockholm":{"SMT-01": 302.2, "CMP-01": 81394, "LIV-04": 85.0, "TAL-01": 60.0, "LIV-05": 4.91, "LIV-01": 1.15, "SMT-05": 95.8, "GRN-01": 4.9, "GRN-02": 86.0, "LIV-06": 12.5, "CON-05": 42.8, "CON-03": 70.1, "SMT-03": 80.21, "TAL-02": 2, "CON-01": 142, "TAL-06": 27.2, "GRN-05": null, "CMP-04": null, "CMP-06": 1167},
-"Oslo":{"SMT-01": 281.9, "CMP-01": 63394, "LIV-04": 83.3, "TAL-01": 56.5, "LIV-05": 6.8, "LIV-01": 0.72, "SMT-05": 99.0, "GRN-01": 8.5, "GRN-02": 56.0, "LIV-06": 11.0, "CON-05": 33.2, "CON-03": null, "SMT-03": 78.13, "TAL-02": 1, "CON-01": 125, "TAL-06": 28.1, "GRN-05": null, "CMP-04": null, "CMP-06": 297},
-"Helsinki":{"SMT-01": 238.8, "CMP-01": 66107, "LIV-04": 81.9, "TAL-01": 48.1, "LIV-05": 3.72, "LIV-01": 0.98, "SMT-05": 93.7, "GRN-01": 5.4, "GRN-02": null, "LIV-06": 11.4, "CON-05": 51.9, "CON-03": 78.0, "SMT-03": 81.25, "TAL-02": 1, "CON-01": 118, "TAL-06": 17.5, "GRN-05": null, "CMP-04": null, "CMP-06": 688},
-"Madrid":{"SMT-01": 382.3, "CMP-01": 59768, "LIV-04": 85.4, "TAL-01": 50.0, "LIV-05": 6.18, "LIV-01": 0.69, "SMT-05": 95.8, "GRN-01": 10.3, "GRN-02": 63.1, "LIV-06": 13.2, "CON-05": 38.0, "CON-03": 68.8, "SMT-03": 92.71, "TAL-02": 4, "CON-01": 197, "TAL-06": 22.7, "GRN-05": null, "CMP-04": 21.0, "CMP-06": 179},
-"Milan":{"SMT-01": 429.2, "CMP-01": 82014, "LIV-04": 84.7, "TAL-01": 23.6, "LIV-05": 5.59, "LIV-01": 0.57, "SMT-05": 89.2, "GRN-01": 20.4, "GRN-02": 76.2, "LIV-06": 18.2, "CON-05": 49.4, "CON-03": 50.4, "SMT-03": null, "TAL-02": 4, "CON-01": 244, "TAL-06": 15.0, "GRN-05": null, "CMP-04": null, "CMP-06": 344},
-"Rome":{"SMT-01": 376.5, "CMP-01": 65690, "LIV-04": 83.6, "TAL-01": 28.5, "LIV-05": 6.77, "LIV-01": 0.57, "SMT-05": 89.2, "GRN-01": 11.8, "GRN-02": 80.0, "LIV-06": 14.9, "CON-05": 45.2, "CON-03": 71.7, "SMT-03": 81.25, "TAL-02": 2, "CON-01": 219, "TAL-06": 13.6, "GRN-05": null, "CMP-04": null, "CMP-06": 58},
-"Munich":{"SMT-01": 221.7, "CMP-01": 102244, "LIV-04": 83.1, "TAL-01": 38.6, "LIV-05": 4.56, "LIV-01": 0.91, "SMT-05": 93.5, "GRN-01": 7.9, "GRN-02": null, "LIV-06": 13.1, "CON-05": 43.7, "CON-03": 81.9, "SMT-03": null, "TAL-02": 2, "CON-01": 202, "TAL-06": 31.9, "GRN-05": null, "CMP-04": 52.5, "CMP-06": 1280},
-"Frankfurt":{"SMT-01": 232.1, "CMP-01": 82688, "LIV-04": 81.9, "TAL-01": 35.6, "LIV-05": 4.27, "LIV-01": 0.91, "SMT-05": 93.5, "GRN-01": 8.7, "GRN-02": null, "LIV-06": 7.7, "CON-05": 42.3, "CON-03": null, "SMT-03": null, "TAL-02": 1, "CON-01": 284, "TAL-06": 35.5, "GRN-05": null, "CMP-04": 7.8, "CMP-06": 18},
-"Hamburg":{"SMT-01": 196.7, "CMP-01": 77768, "LIV-04": 80.9, "TAL-01": 43.0, "LIV-05": 6.4, "LIV-01": 0.91, "SMT-05": 93.5, "GRN-01": 9.1, "GRN-02": 78.2, "LIV-06": 11.1, "CON-05": 49.3, "CON-03": 68.8, "SMT-03": null, "TAL-02": 1, "CON-01": 117, "TAL-06": 24.6, "GRN-05": null, "CMP-04": 13.6, "CMP-06": 34},
-"Brussels":{"SMT-01": 266.9, "CMP-01": 78040, "LIV-04": 82.2, "TAL-01": 56.9, "LIV-05": 4.44, "LIV-01": 1.08, "SMT-05": 95.8, "GRN-01": 7.6, "GRN-02": 85.8, "LIV-06": 7.2, "CON-05": 46.2, "CON-03": 89.0, "SMT-03": 73.96, "TAL-02": 2, "CON-01": 249, "TAL-06": 43.5, "GRN-05": null, "CMP-04": 15.3, "CMP-06": 55},
-"Dublin":{"SMT-01": 337.0, "CMP-01": 141694, "LIV-04": 83.3, "TAL-01": 61.0, "LIV-05": null, "LIV-01": 0.65, "SMT-05": 97.2, "GRN-01": 7.3, "GRN-02": 84.2, "LIV-06": 9.0, "CON-05": 72.9, "CON-03": 66.3, "SMT-03": 68.75, "TAL-02": 3, "CON-01": 199, "TAL-06": 26.6, "GRN-05": null, "CMP-04": null, "CMP-06": 456},
-"Lisbon":{"SMT-01": 354.4, "CMP-01": 50408, "LIV-04": 81.2, "TAL-01": 43.3, "LIV-05": 8.37, "LIV-01": 0.72, "SMT-05": 88.5, "GRN-01": 7.6, "GRN-02": 87.4, "LIV-06": 18.7, "CON-05": 39.0, "CON-03": 43.6, "SMT-03": 70.83, "TAL-02": 2, "CON-01": 146, "TAL-06": 17.3, "GRN-05": null, "CMP-04": null, "CMP-06": 82},
-"Prague":{"SMT-01": 258.9, "CMP-01": 83056, "LIV-04": 81.1, "TAL-01": 54.8, "LIV-05": 8.24, "LIV-01": 0.77, "SMT-05": 87.7, "GRN-01": 13.4, "GRN-02": 83.5, "LIV-06": 18.2, "CON-05": 53.5, "CON-03": 89.2, "SMT-03": 67.71, "TAL-02": 2, "CON-01": 165, "TAL-06": 15.5, "GRN-05": null, "CMP-04": null, "CMP-06": 69},
-"Warsaw":{"SMT-01": 362.9, "CMP-01": 81920, "LIV-04": 81.0, "TAL-01": 65.3, "LIV-05": 6.3, "LIV-01": 0.8, "SMT-05": 88.6, "GRN-01": 14.7, "GRN-02": 88.0, "LIV-06": 11.7, "CON-05": 51.3, "CON-03": 70.1, "SMT-03": 77.08, "TAL-02": 2, "CON-01": 152, "TAL-06": 5.7, "GRN-05": null, "CMP-04": null, "CMP-06": 91},
+"Stockholm":{"SMT-01": 302.2, "CMP-01": 81394, "LIV-04": 85.0, "TAL-01": 60.0, "LIV-05": 4.91, "LIV-01": 1.15, "SMT-05": 95.8, "GRN-01": 4.9, "GRN-02": 86.0, "LIV-06": 12.5, "CON-05": 42.8, "CON-03": 70.1, "SMT-03": 80.21, "TAL-02": 2, "CON-01": 142, "TAL-06": 27.2, "GRN-05": 31.0, "CMP-04": null, "CMP-06": 1167},
+"Oslo":{"SMT-01": 281.9, "CMP-01": 63394, "LIV-04": 83.3, "TAL-01": 56.5, "LIV-05": 6.8, "LIV-01": 0.72, "SMT-05": 99.0, "GRN-01": 8.5, "GRN-02": 56.0, "LIV-06": 11.0, "CON-05": 33.2, "CON-03": null, "SMT-03": 78.13, "TAL-02": 1, "CON-01": 125, "TAL-06": 28.1, "GRN-05": 43.4, "CMP-04": null, "CMP-06": 297},
+"Helsinki":{"SMT-01": 238.8, "CMP-01": 66107, "LIV-04": 81.9, "TAL-01": 48.1, "LIV-05": 3.72, "LIV-01": 0.98, "SMT-05": 93.7, "GRN-01": 5.4, "GRN-02": null, "LIV-06": 11.4, "CON-05": 51.9, "CON-03": 78.0, "SMT-03": 81.25, "TAL-02": 1, "CON-01": 118, "TAL-06": 17.5, "GRN-05": 45.0, "CMP-04": null, "CMP-06": 688},
+"Madrid":{"SMT-01": 382.3, "CMP-01": 59768, "LIV-04": 85.4, "TAL-01": 50.0, "LIV-05": 6.18, "LIV-01": 0.69, "SMT-05": 95.8, "GRN-01": 10.3, "GRN-02": 63.1, "LIV-06": 13.2, "CON-05": 38.0, "CON-03": 68.8, "SMT-03": 92.71, "TAL-02": 4, "CON-01": 197, "TAL-06": 22.7, "GRN-05": 47.7, "CMP-04": 21.0, "CMP-06": 179},
+"Milan":{"SMT-01": 429.2, "CMP-01": 82014, "LIV-04": 84.7, "TAL-01": 23.6, "LIV-05": 5.59, "LIV-01": 0.57, "SMT-05": 89.2, "GRN-01": 20.4, "GRN-02": 76.2, "LIV-06": 18.2, "CON-05": 49.4, "CON-03": 50.4, "SMT-03": null, "TAL-02": 4, "CON-01": 244, "TAL-06": 15.0, "GRN-05": 63.33, "CMP-04": null, "CMP-06": 344},
+"Rome":{"SMT-01": 376.5, "CMP-01": 65690, "LIV-04": 83.6, "TAL-01": 28.5, "LIV-05": 6.77, "LIV-01": 0.57, "SMT-05": 89.2, "GRN-01": 11.8, "GRN-02": 80.0, "LIV-06": 14.9, "CON-05": 45.2, "CON-03": 71.7, "SMT-03": 81.25, "TAL-02": 2, "CON-01": 219, "TAL-06": 13.6, "GRN-05": 48.03, "CMP-04": null, "CMP-06": 58},
+"Munich":{"SMT-01": 221.7, "CMP-01": 102244, "LIV-04": 83.1, "TAL-01": 38.6, "LIV-05": 4.56, "LIV-01": 0.91, "SMT-05": 93.5, "GRN-01": 7.9, "GRN-02": null, "LIV-06": 13.1, "CON-05": 43.7, "CON-03": 81.9, "SMT-03": null, "TAL-02": 2, "CON-01": 202, "TAL-06": 31.9, "GRN-05": 55.3, "CMP-04": 52.5, "CMP-06": 1280},
+"Frankfurt":{"SMT-01": 232.1, "CMP-01": 82688, "LIV-04": 81.9, "TAL-01": 35.6, "LIV-05": 4.27, "LIV-01": 0.91, "SMT-05": 93.5, "GRN-01": 8.7, "GRN-02": null, "LIV-06": 7.7, "CON-05": 42.3, "CON-03": null, "SMT-03": null, "TAL-02": 1, "CON-01": 284, "TAL-06": 35.5, "GRN-05": 37.6, "CMP-04": 7.8, "CMP-06": 18},
+"Hamburg":{"SMT-01": 196.7, "CMP-01": 77768, "LIV-04": 80.9, "TAL-01": 43.0, "LIV-05": 6.4, "LIV-01": 0.91, "SMT-05": 93.5, "GRN-01": 9.1, "GRN-02": 78.2, "LIV-06": 11.1, "CON-05": 49.3, "CON-03": 68.8, "SMT-03": null, "TAL-02": 1, "CON-01": 117, "TAL-06": 24.6, "GRN-05": 45.8, "CMP-04": 13.6, "CMP-06": 34},
+"Brussels":{"SMT-01": 266.9, "CMP-01": 78040, "LIV-04": 82.2, "TAL-01": 56.9, "LIV-05": 4.44, "LIV-01": 1.08, "SMT-05": 95.8, "GRN-01": 7.6, "GRN-02": 85.8, "LIV-06": 7.2, "CON-05": 46.2, "CON-03": 89.0, "SMT-03": 73.96, "TAL-02": 2, "CON-01": 249, "TAL-06": 43.5, "GRN-05": 35.0, "CMP-04": 15.3, "CMP-06": 55},
+"Dublin":{"SMT-01": 337.0, "CMP-01": 141694, "LIV-04": 83.3, "TAL-01": 61.0, "LIV-05": null, "LIV-01": 0.65, "SMT-05": 97.2, "GRN-01": 7.3, "GRN-02": 84.2, "LIV-06": 9.0, "CON-05": 72.9, "CON-03": 66.3, "SMT-03": 68.75, "TAL-02": 3, "CON-01": 199, "TAL-06": 26.6, "GRN-05": 42.0, "CMP-04": null, "CMP-06": 456},
+"Lisbon":{"SMT-01": 354.4, "CMP-01": 50408, "LIV-04": 81.2, "TAL-01": 43.3, "LIV-05": 8.37, "LIV-01": 0.72, "SMT-05": 88.5, "GRN-01": 7.6, "GRN-02": 87.4, "LIV-06": 18.7, "CON-05": 39.0, "CON-03": 43.6, "SMT-03": 70.83, "TAL-02": 2, "CON-01": 146, "TAL-06": 17.3, "GRN-05": 26.0, "CMP-04": null, "CMP-06": 82},
+"Prague":{"SMT-01": 258.9, "CMP-01": 83056, "LIV-04": 81.1, "TAL-01": 54.8, "LIV-05": 8.24, "LIV-01": 0.77, "SMT-05": 87.7, "GRN-01": 13.4, "GRN-02": 83.5, "LIV-06": 18.2, "CON-05": 53.5, "CON-03": 89.2, "SMT-03": 67.71, "TAL-02": 2, "CON-01": 165, "TAL-06": 15.5, "GRN-05": 32.3, "CMP-04": null, "CMP-06": 69},
+"Warsaw":{"SMT-01": 362.9, "CMP-01": 81920, "LIV-04": 81.0, "TAL-01": 65.3, "LIV-05": 6.3, "LIV-01": 0.8, "SMT-05": 88.6, "GRN-01": 14.7, "GRN-02": 88.0, "LIV-06": 11.7, "CON-05": 51.3, "CON-03": 70.1, "SMT-03": 77.08, "TAL-02": 2, "CON-01": 152, "TAL-06": 5.7, "GRN-05": 28.5, "CMP-04": null, "CMP-06": 91},
 "Istanbul":{"SMT-01": 251.2, "CMP-01": 56428, "LIV-04": 77.1, "TAL-01": 31.8, "LIV-05": 2.96, "LIV-01": 3.23, "SMT-05": 89.8, "GRN-01": 50.5, "GRN-02": 59.8, "LIV-06": 10.1, "CON-05": 62.0, "CON-03": null, "SMT-03": 89.58, "TAL-02": 4, "CON-01": 322, "TAL-06": null, "GRN-05": null, "CMP-04": null, "CMP-06": 40},
-"Montreal":{"SMT-01": 334.2, "CMP-01": 38730, "LIV-04": 82.5, "TAL-01": 59.0, "LIV-05": 2.6, "LIV-01": 1.98, "SMT-05": 94.4, "GRN-01": 8.6, "GRN-02": 91.8, "LIV-06": 7.6, "CON-05": 41.3, "CON-03": 52.7, "SMT-03": null, "TAL-02": 3, "CON-01": 139, "TAL-06": 24.3, "GRN-05": null, "CMP-04": 24.4, "CMP-06": 226},
-"Vancouver":{"SMT-01": 374.2, "CMP-01": 45902, "LIV-04": 81.5, "TAL-01": 64.0, "LIV-05": 2.71, "LIV-01": 1.98, "SMT-05": 94.4, "GRN-01": 6.0, "GRN-02": null, "LIV-06": 11.7, "CON-05": 56.5, "CON-03": 53.7, "SMT-03": null, "TAL-02": 1, "CON-01": 74, "TAL-06": 41.8, "GRN-05": null, "CMP-04": 56.4, "CMP-06": 600},
-"Chicago":{"SMT-01": 392.9, "CMP-01": 75524, "LIV-04": 76.8, "TAL-01": 50.9, "LIV-05": 3.7, "LIV-01": 5.76, "SMT-05": 94.7, "GRN-01": 8.7, "GRN-02": 47.8, "LIV-06": 3.2, "CON-05": 46.1, "CON-03": 43.2, "SMT-03": null, "TAL-02": 2, "CON-01": 81, "TAL-06": 19.4, "GRN-05": null, "CMP-04": 29.4, "CMP-06": 210},
-"Boston":{"SMT-01": 361.6, "CMP-01": 101761, "LIV-04": 79.0, "TAL-01": 58.2, "LIV-05": 5.52, "LIV-01": 5.76, "SMT-05": 94.7, "GRN-01": 6.4, "GRN-02": 68.2, "LIV-06": 7.9, "CON-05": 42.1, "CON-03": 47.6, "SMT-03": null, "TAL-02": 2, "CON-01": 63, "TAL-06": 20.7, "GRN-05": null, "CMP-04": 126.9, "CMP-06": 2714},
+"Montreal":{"SMT-01": 334.2, "CMP-01": 38730, "LIV-04": 82.5, "TAL-01": 59.0, "LIV-05": 2.6, "LIV-01": 1.98, "SMT-05": 94.4, "GRN-01": 8.6, "GRN-02": 91.8, "LIV-06": 7.6, "CON-05": 41.3, "CON-03": 52.7, "SMT-03": null, "TAL-02": 3, "CON-01": 139, "TAL-06": 24.3, "GRN-05": 49.0, "CMP-04": 24.4, "CMP-06": 226},
+"Vancouver":{"SMT-01": 374.2, "CMP-01": 45902, "LIV-04": 81.5, "TAL-01": 64.0, "LIV-05": 2.71, "LIV-01": 1.98, "SMT-05": 94.4, "GRN-01": 6.0, "GRN-02": null, "LIV-06": 11.7, "CON-05": 56.5, "CON-03": 53.7, "SMT-03": null, "TAL-02": 1, "CON-01": 74, "TAL-06": 41.8, "GRN-05": 65.0, "CMP-04": 56.4, "CMP-06": 600},
+"Chicago":{"SMT-01": 392.9, "CMP-01": 75524, "LIV-04": 76.8, "TAL-01": 50.9, "LIV-05": 3.7, "LIV-01": 5.76, "SMT-05": 94.7, "GRN-01": 8.7, "GRN-02": 47.8, "LIV-06": 3.2, "CON-05": 46.1, "CON-03": 43.2, "SMT-03": null, "TAL-02": 2, "CON-01": 81, "TAL-06": 19.4, "GRN-05": 9.0, "CMP-04": 29.4, "CMP-06": 210},
+"Boston":{"SMT-01": 361.6, "CMP-01": 101761, "LIV-04": 79.0, "TAL-01": 58.2, "LIV-05": 5.52, "LIV-01": 5.76, "SMT-05": 94.7, "GRN-01": 6.4, "GRN-02": 68.2, "LIV-06": 7.9, "CON-05": 42.1, "CON-03": 47.6, "SMT-03": null, "TAL-02": 2, "CON-01": 63, "TAL-06": 20.7, "GRN-05": 25.0, "CMP-04": 126.9, "CMP-06": 2714},
 "Los Angeles":{"SMT-01": 392.1, "CMP-01": 70646, "LIV-04": 79.0, "TAL-01": 46.9, "LIV-05": 3.02, "LIV-01": 5.76, "SMT-05": 94.7, "GRN-01": 10.5, "GRN-02": null, "LIV-06": 8.2, "CON-05": 59.8, "CON-03": 5.7, "SMT-03": null, "TAL-02": 2, "CON-01": 81, "TAL-06": 33.4, "GRN-05": null, "CMP-04": 45.6, "CMP-06": 876},
-"Seattle":{"SMT-01": 410.0, "CMP-01": 111516, "LIV-04": 79.2, "TAL-01": 52.9, "LIV-05": 2.98, "LIV-01": 5.76, "SMT-05": 94.7, "GRN-01": 6.1, "GRN-02": 63.5, "LIV-06": 4.8, "CON-05": 44.9, "CON-03": 26.1, "SMT-03": null, "TAL-02": 1, "CON-01": 38, "TAL-06": 22.1, "GRN-05": null, "CMP-04": 73.8, "CMP-06": 1650},
-"Washington DC":{"SMT-01": 362.5, "CMP-01": 83988, "LIV-04": 78.0, "TAL-01": 70.7, "LIV-05": 12.02, "LIV-01": 5.76, "SMT-05": 94.7, "GRN-01": 6.3, "GRN-02": 52.8, "LIV-06": 4.3, "CON-05": 37.3, "CON-03": 33.1, "SMT-03": null, "TAL-02": 2, "CON-01": 70, "TAL-06": 24.7, "GRN-05": null, "CMP-04": 36.9, "CMP-06": 556},
-"Sydney":{"SMT-01": 239.5, "CMP-01": 45152, "LIV-04": 84.1, "TAL-01": 52.5, "LIV-05": 4.58, "LIV-01": 0.85, "SMT-05": 96.1, "GRN-01": null, "GRN-02": 33.4, "LIV-06": 12.5, "CON-05": 43.7, "CON-03": 49.2, "SMT-03": 77.08, "TAL-02": 4, "CON-01": 65, "TAL-06": 38.6, "GRN-05": null, "CMP-04": 40.1, "CMP-06": 250},
-"Auckland":{"SMT-01": 283.4, "CMP-01": 55906, "LIV-04": 82.7, "TAL-01": 45.5, "LIV-05": 3.47, "LIV-01": 1.46, "SMT-05": 93.5, "GRN-01": 5.5, "GRN-02": 88.4, "LIV-06": 10.5, "CON-05": 42.2, "CON-03": 37.6, "SMT-03": 80.21, "TAL-02": 2, "CON-01": 46, "TAL-06": 42.5, "GRN-05": null, "CMP-04": null, "CMP-06": 166},
-"Osaka":{"SMT-01": 295.1, "CMP-01": 41497, "LIV-04": 84.2, "TAL-01": 56.9, "LIV-05": 2.92, "LIV-01": 0.23, "SMT-05": 85.5, "GRN-01": 9.4, "GRN-02": 72.2, "LIV-06": 10.6, "CON-05": 42.9, "CON-03": null, "SMT-03": null, "TAL-02": 1, "CON-01": null, "TAL-06": 6.8, "GRN-05": null, "CMP-04": 3.7, "CMP-06": 21},
-"Tel Aviv":{"SMT-01": 366.9, "CMP-01": null, "LIV-04": 83.1, "TAL-01": 60.4, "LIV-05": 4.9, "LIV-01": 1.63, "SMT-05": 88.2, "GRN-01": 17.4, "GRN-02": 65.7, "LIV-06": 20.0, "CON-05": null, "CON-03": 87.9, "SMT-03": null, "TAL-02": 1, "CON-01": 114, "TAL-06": 23.5, "GRN-05": null, "CMP-04": null, "CMP-06": 2111}
+"Seattle":{"SMT-01": 410.0, "CMP-01": 111516, "LIV-04": 79.2, "TAL-01": 52.9, "LIV-05": 2.98, "LIV-01": 5.76, "SMT-05": 94.7, "GRN-01": 6.1, "GRN-02": 63.5, "LIV-06": 4.8, "CON-05": 44.9, "CON-03": 26.1, "SMT-03": null, "TAL-02": 1, "CON-01": 38, "TAL-06": 22.1, "GRN-05": 53.4, "CMP-04": 73.8, "CMP-06": 1650},
+"Washington DC":{"SMT-01": 362.5, "CMP-01": 83988, "LIV-04": 78.0, "TAL-01": 70.7, "LIV-05": 12.02, "LIV-01": 5.76, "SMT-05": 94.7, "GRN-01": 6.3, "GRN-02": 52.8, "LIV-06": 4.3, "CON-05": 37.3, "CON-03": 33.1, "SMT-03": null, "TAL-02": 2, "CON-01": 70, "TAL-06": 24.7, "GRN-05": 27.93, "CMP-04": 36.9, "CMP-06": 556},
+"Sydney":{"SMT-01": 239.5, "CMP-01": 45152, "LIV-04": 84.1, "TAL-01": 52.5, "LIV-05": 4.58, "LIV-01": 0.85, "SMT-05": 96.1, "GRN-01": null, "GRN-02": 33.4, "LIV-06": 12.5, "CON-05": 43.7, "CON-03": 49.2, "SMT-03": 77.08, "TAL-02": 4, "CON-01": 65, "TAL-06": 38.6, "GRN-05": 52.0, "CMP-04": 40.1, "CMP-06": 250},
+"Auckland":{"SMT-01": 283.4, "CMP-01": 55906, "LIV-04": 82.7, "TAL-01": 45.5, "LIV-05": 3.47, "LIV-01": 1.46, "SMT-05": 93.5, "GRN-01": 5.5, "GRN-02": 88.4, "LIV-06": 10.5, "CON-05": 42.2, "CON-03": 37.6, "SMT-03": 80.21, "TAL-02": 2, "CON-01": 46, "TAL-06": 42.5, "GRN-05": 27.0, "CMP-04": null, "CMP-06": 166},
+"Osaka":{"SMT-01": 295.1, "CMP-01": 41497, "LIV-04": 84.2, "TAL-01": 56.9, "LIV-05": 2.92, "LIV-01": 0.23, "SMT-05": 85.5, "GRN-01": 9.4, "GRN-02": 72.2, "LIV-06": 10.6, "CON-05": 42.9, "CON-03": null, "SMT-03": null, "TAL-02": 1, "CON-01": null, "TAL-06": 6.8, "GRN-05": 9.5, "CMP-04": 3.7, "CMP-06": 21},
+"Tel Aviv":{"SMT-01": 366.9, "CMP-01": null, "LIV-04": 83.1, "TAL-01": 60.4, "LIV-05": 4.9, "LIV-01": 1.63, "SMT-05": 88.2, "GRN-01": 17.4, "GRN-02": 65.7, "LIV-06": 20.0, "CON-05": null, "CON-03": 87.9, "SMT-03": null, "TAL-02": 1, "CON-01": 114, "TAL-06": 23.5, "GRN-05": 36.0, "CMP-04": null, "CMP-06": 2111},
+"Hong Kong":{"SMT-01": 431.6, "TAL-02": 5, "CON-03": 52.2, "CON-05": 47.7, "CMP-01": 66154, "LIV-01": 0.38, "SMT-05": 95.8, "GRN-01": 19.8, "GRN-02": 95.7, "SMT-03": null, "TAL-06": 38.3, "CON-01": 149.0, "GRN-05": 34.0, "CMP-04": 16.5, "CMP-06": 413, "LIV-04": null, "LIV-05": 2.2, "TAL-01": 35.7, "LIV-06": 35.2},
+"Taipei":{"SMT-01": 258.2, "TAL-02": 4, "CON-03": null, "CON-05": 43.6, "CMP-01": null, "LIV-01": 0.32, "SMT-05": 88.8, "GRN-01": 15.0, "GRN-02": null, "SMT-03": null, "TAL-06": 3.3, "CON-01": null, "GRN-05": 70.8, "CMP-04": null, "CMP-06": 25, "LIV-04": 83.4, "LIV-05": 4.76, "TAL-01": 66.2, "LIV-06": 31.4},
+"Bangkok":{"SMT-01": 375.6, "TAL-02": 1, "CON-03": null, "CON-05": 67.9, "CMP-01": null, "LIV-01": 4.79, "SMT-05": 90.9, "GRN-01": 23.4, "GRN-02": 11.8, "SMT-03": 66.67, "TAL-06": null, "CON-01": 154.0, "GRN-05": null, "CMP-04": null, "CMP-06": 8, "LIV-04": 76.6, "LIV-05": 2.34, "TAL-01": 17.4, "LIV-06": 37.8},
+"Kuala Lumpur":{"SMT-01": 272.1, "TAL-02": 4, "CON-03": null, "CON-05": 39.1, "CMP-01": null, "LIV-01": 0.73, "SMT-05": 98.0, "GRN-01": 28.3, "GRN-02": 46.1, "SMT-03": 59.38, "TAL-06": 13.1, "CON-01": 131.0, "GRN-05": 37.9, "CMP-04": null, "CMP-06": 19, "LIV-04": 76.7, "LIV-05": 2.27, "TAL-01": 34.9, "LIV-06": 8.6},
+"Jakarta":{"SMT-01": 97.7, "TAL-02": 0, "CON-03": 22.6, "CON-05": 59.8, "CMP-01": null, "LIV-01": 0.3, "SMT-05": 72.8, "GRN-01": 33.8, "GRN-02": 24.2, "SMT-03": 68.75, "TAL-06": null, "CON-01": 50.0, "GRN-05": null, "CMP-04": null, "CMP-06": 13, "LIV-04": 76.0, "LIV-05": 0.56, "TAL-01": 9.3, "LIV-06": 24.9},
+"Manila":{"SMT-01": 198.9, "TAL-02": 0, "CON-03": null, "CON-05": 57.3, "CMP-01": null, "LIV-01": 4.35, "SMT-05": 67.3, "GRN-01": 15.4, "GRN-02": 28.7, "SMT-03": 60.42, "TAL-06": null, "CON-01": 66.0, "GRN-05": 48.0, "CMP-04": null, "CMP-06": 10, "LIV-04": 69.9, "LIV-05": 0.87, "TAL-01": 32.3, "LIV-06": 34.8},
+"Ho Chi Minh City":{"SMT-01": 269.6, "TAL-02": 0, "CON-03": null, "CON-05": 40.3, "CMP-01": null, "LIV-01": 1.54, "SMT-05": 84.2, "GRN-01": 23.5, "GRN-02": 30.4, "SMT-03": 63.54, "TAL-06": null, "CON-01": 75.0, "GRN-05": null, "CMP-04": null, "CMP-06": 9, "LIV-04": 76.6, "LIV-05": 1.11, "TAL-01": 27.9, "LIV-06": 32.4},
+"Mumbai":{"SMT-01": 93.4, "TAL-02": 1, "CON-03": null, "CON-05": 61.5, "CMP-01": null, "LIV-01": 2.82, "SMT-05": 70.0, "GRN-01": 49.5, "GRN-02": 35.3, "SMT-03": 56.25, "TAL-06": null, "CON-01": 52.0, "GRN-05": null, "CMP-04": 8.7, "CMP-06": 122, "LIV-04": 72.8, "LIV-05": 0.96, "TAL-01": 18.8, "LIV-06": 30.1},
+"Abu Dhabi":{"SMT-01": 348.1, "TAL-02": 1, "CON-03": 60.8, "CON-05": 25.5, "CMP-01": null, "LIV-01": 0.69, "SMT-05": 100.0, "GRN-01": 30.9, "GRN-02": 37.6, "SMT-03": null, "TAL-06": null, "CON-01": 165.0, "GRN-05": 32.0, "CMP-04": null, "CMP-06": 136, "LIV-04": 83.1, "LIV-05": 2.99, "TAL-01": null, "LIV-06": 7.4},
+"Shanghai":{"SMT-01": 458.1, "TAL-02": 5, "CON-03": null, "CON-05": null, "CMP-01": null, "LIV-01": 0.5, "SMT-05": 91.6, "GRN-01": 28.4, "GRN-02": 29.9, "SMT-03": 86.46, "TAL-06": null, "CON-01": 105.0, "GRN-05": 43.2, "CMP-04": 11.7, "CMP-06": 137, "LIV-04": 83.2, "LIV-05": 3.8, "TAL-01": 33.9, "LIV-06": 31.2},
+"Beijing":{"SMT-01": 331.9, "TAL-02": 7, "CON-03": null, "CON-05": null, "CMP-01": null, "LIV-01": 0.5, "SMT-05": 91.6, "GRN-01": 31.0, "GRN-02": null, "SMT-03": null, "TAL-06": null, "CON-01": 124.0, "GRN-05": 39.8, "CMP-04": 19.1, "CMP-06": 281, "LIV-04": 82.5, "LIV-05": 6.34, "TAL-01": 42.0, "LIV-06": 29.7},
+"Shenzhen":{"SMT-01": 314.9, "TAL-02": 2, "CON-03": null, "CON-05": null, "CMP-01": null, "LIV-01": 0.5, "SMT-05": 91.6, "GRN-01": 17.3, "GRN-02": 21.9, "SMT-03": null, "TAL-06": null, "CON-01": 54.0, "GRN-05": null, "CMP-04": 9.2, "CMP-06": 86, "LIV-04": 83.9, "LIV-05": 3.02, "TAL-01": 28.8, "LIV-06": 28.6},
+"Delhi":{"SMT-01": 120.5, "TAL-02": 2, "CON-03": null, "CON-05": 55.4, "CMP-01": null, "LIV-01": 2.82, "SMT-05": 70.0, "GRN-01": 107.0, "GRN-02": 43.6, "SMT-03": null, "TAL-06": null, "CON-01": 79.0, "GRN-05": null, "CMP-04": 8.4, "CMP-06": 98, "LIV-04": 74.2, "LIV-05": 0.96, "TAL-01": 24.2, "LIV-06": 16.1}
 },
 "provenance":{
  "LIV-01": {
@@ -342,6 +355,84 @@ window.INDEX_DATA = {
     "year": "2022",
     "source": "Israel (ISR) — country proxy",
     "note": "UNODC ('data_cts_intentional_homicide' sheet), victims, Total/Total/Total, rate per 100,000; source field: UNSDC/NSO/SDG/CTS"
+   },
+   "Hong Kong": {
+    "value": 0.38,
+    "year": "2023",
+    "source": "China, Hong Kong Special Administrative Region (HKG)",
+    "note": "UNODC dataUNODC CTS export (unodc_hom_faresmts.xlsx), Victims of intentional homicide, rate per 100,000; source flag GOV/SDG/CTS; raw 0.3762"
+   },
+   "Taipei": {
+    "value": 0.32,
+    "year": "2024",
+    "source": "Taiwan (computed: NPA yearbook deaths / MOI population)",
+    "note": "No UNODC row for Taiwan. Computed: 74 deaths from intentional homicide (NPA Police Statistics Yearbook 2024, Table 15 'Casualties of Crime Victims - by Classification', item 故意殺人 Murder and Nonnegligent Manslaughter, Dea"
+   },
+   "Bangkok": {
+    "value": 4.79,
+    "year": "2011",
+    "source": "Thailand (THA)",
+    "note": "UNODC CTS export; latest rate year in file is 2011 (no later THA rows exist in this UNODC export) - notably stale; source flag UNSDC/WHO Adjusted/NP; raw 4.7923"
+   },
+   "Kuala Lumpur": {
+    "value": 0.73,
+    "year": "2023",
+    "source": "Malaysia (MYS)",
+    "note": "UNODC CTS export; source flag UNSDC/WHO/NP/SDG/CTS; raw 0.7345"
+   },
+   "Jakarta": {
+    "value": 0.3,
+    "year": "2022",
+    "source": "Indonesia (IDN)",
+    "note": "UNODC CTS export; source flag UNSDC/Interpol/CTS; raw 0.3038"
+   },
+   "Manila": {
+    "value": 4.35,
+    "year": "2023",
+    "source": "Philippines (PHL)",
+    "note": "UNODC CTS export; source flag NP/UNSDC/CTS/GSH 2019 Revision; raw 4.3476"
+   },
+   "Ho Chi Minh City": {
+    "value": 1.54,
+    "year": "2011",
+    "source": "Viet Nam (VNM)",
+    "note": "UNODC CTS export; latest rate year in file is 2011 (no later VNM rows) - notably stale; source flag WHO; raw 1.5350"
+   },
+   "Mumbai": {
+    "value": 2.82,
+    "year": "2022",
+    "source": "India (IND)",
+    "note": "UNODC CTS export; source flag MoI/NCRB India; raw 2.8153; shared with Delhi (country proxy)"
+   },
+   "Abu Dhabi": {
+    "value": 0.69,
+    "year": "2022",
+    "source": "United Arab Emirates (ARE)",
+    "note": "UNODC CTS export; source flag CTS; raw 0.6932; same UAE national value as Dubai already in dataset (0.69) - consistent"
+   },
+   "Shanghai": {
+    "value": 0.5,
+    "year": "2020",
+    "source": "China (CHN)",
+    "note": "UNODC CTS export; source flag UNSDC/NSO; raw 0.5019; shared with Beijing and Shenzhen (country proxy)"
+   },
+   "Beijing": {
+    "value": 0.5,
+    "year": "2020",
+    "source": "China (CHN)",
+    "note": "Same China national value as Shanghai/Shenzhen (country proxy)"
+   },
+   "Shenzhen": {
+    "value": 0.5,
+    "year": "2020",
+    "source": "China (CHN)",
+    "note": "Same China national value as Shanghai/Beijing (country proxy)"
+   },
+   "Delhi": {
+    "value": 2.82,
+    "year": "2022",
+    "source": "India (IND)",
+    "note": "Same India national value as Mumbai (country proxy)"
    }
   }
  },
@@ -619,6 +710,84 @@ window.INDEX_DATA = {
     "year": "2024",
     "source": "Tel Aviv/ISR",
     "note": "pm25_concentration raw 17.364; pm25_tempcov 88"
+   },
+   "Hong Kong": {
+    "value": 19.8,
+    "year": "2019",
+    "source": "Hong Kong/CHN",
+    "note": "WHO AAQ DB v8.0 (2026); pm25 19.833, tempcov 97; latest non-null pm25 year is 2019 (stuck like Tokyo/Seoul/London)"
+   },
+   "Taipei": {
+    "value": 15.0,
+    "year": "2018",
+    "source": "Taipei/CHN",
+    "note": "WHO AAQ DB v8.0; pm25 15.0, tempcov 99, n=2 stations. Candidates listed: Taipei/CHN (2014,2018), Taipei City/CHN (2017 only); New Taipei rows excluded (different city). Latest non-null = Taipei/CHN 2018"
+   },
+   "Bangkok": {
+    "value": 23.4,
+    "year": "2021",
+    "source": "Bangkok/THA",
+    "note": "WHO AAQ DB v8.0; pm25 23.417, tempcov 99"
+   },
+   "Kuala Lumpur": {
+    "value": 28.3,
+    "year": "2019",
+    "source": "Kuala Lumpur/MYS",
+    "note": "WHO AAQ DB v8.0; pm25 28.27, tempcov NA"
+   },
+   "Jakarta": {
+    "value": 33.8,
+    "year": "2021",
+    "source": "DKI Jakarta/IDN",
+    "note": "WHO AAQ DB v8.0; pm25 33.84, tempcov 100. Candidates: DKI Jakarta/IDN (2018-2021) and Jakarta/IDN (2015-2016); latest is DKI Jakarta 2021"
+   },
+   "Manila": {
+    "value": 15.4,
+    "year": "2020",
+    "source": "Manila/PHL",
+    "note": "WHO AAQ DB v8.0; pm25 15.43, tempcov only 50 (low temporal coverage); City of Manila, not Metro Manila"
+   },
+   "Ho Chi Minh City": {
+    "value": 23.5,
+    "year": "2020",
+    "source": "Ho Chi Minh/VNM",
+    "note": "WHO AAQ DB v8.0; pm25 23.5, tempcov NA"
+   },
+   "Mumbai": {
+    "value": 49.5,
+    "year": "2021",
+    "source": "Mumbai/IND",
+    "note": "WHO AAQ DB v8.0; pm25 49.5, tempcov NA, n=2 stations"
+   },
+   "Abu Dhabi": {
+    "value": 30.9,
+    "year": "2024",
+    "source": "Abu Dhabi /ARE",
+    "note": "WHO AAQ DB v8.0; pm25 30.937, tempcov 98, n=13 (label has trailing space in source); older 'Abu Dhabi/ARE' label ends 2021"
+   },
+   "Shanghai": {
+    "value": 28.4,
+    "year": "2024",
+    "source": "Shanghai/CHN",
+    "note": "WHO AAQ DB v8.0; pm25 28.434, tempcov 98, n=19"
+   },
+   "Beijing": {
+    "value": 31.0,
+    "year": "2024",
+    "source": "Beijing/CHN",
+    "note": "WHO AAQ DB v8.0; pm25 30.98, tempcov 98, n=23; 'Beijing Shi/CHN' label ends 2019"
+   },
+   "Shenzhen": {
+    "value": 17.3,
+    "year": "2024",
+    "source": "Shenzhen/CHN",
+    "note": "WHO AAQ DB v8.0; pm25 17.256, tempcov 98, n=15; 'Shenzhen Shi/CHN' label ends 2019"
+   },
+   "Delhi": {
+    "value": 107.0,
+    "year": "2021",
+    "source": "Delhi/IND",
+    "note": "WHO AAQ DB v8.0; pm25 107.0, tempcov NA, n=1 station (V7.0 vintage)"
    }
   }
  },
@@ -1134,6 +1303,165 @@ window.INDEX_DATA = {
     "tiles": 456,
     "tests": 70038,
     "note": "THIN sample: 456 tiles / 70038 tests (threshold 500 tiles / 20000 tests)"
+   },
+   "Shanghai": {
+    "value": 458.1,
+    "year": "2026 Q1",
+    "bbox": [
+     121.2,
+     30.95,
+     121.8,
+     31.45
+    ],
+    "tiles": 5784,
+    "tests": 160005,
+    "note": "Mainland-China Speedtest sample may skew toward users measuring international connectivity; dense sample but interpret with care."
+   },
+   "Beijing": {
+    "value": 331.9,
+    "year": "2026 Q1",
+    "bbox": [
+     116.15,
+     39.75,
+     116.65,
+     40.1
+    ],
+    "tiles": 3870,
+    "tests": 56718,
+    "note": "Mainland-China Speedtest sample may skew toward users measuring international connectivity; dense sample but interpret with care."
+   },
+   "Shenzhen": {
+    "value": 314.9,
+    "year": "2026 Q1",
+    "bbox": [
+     113.75,
+     22.45,
+     114.35,
+     22.75
+    ],
+    "tiles": 2646,
+    "tests": 79761,
+    "note": "Mainland-China Speedtest sample may skew toward users measuring international connectivity; dense sample but interpret with care."
+   },
+   "Hong Kong": {
+    "value": 431.6,
+    "year": "2026 Q1",
+    "bbox": [
+     113.85,
+     22.15,
+     114.35,
+     22.55
+    ],
+    "tiles": 1891,
+    "tests": 384829
+   },
+   "Taipei": {
+    "value": 258.2,
+    "year": "2026 Q1",
+    "bbox": [
+     121.45,
+     24.95,
+     121.65,
+     25.15
+    ],
+    "tiles": 1077,
+    "tests": 391702
+   },
+   "Bangkok": {
+    "value": 375.6,
+    "year": "2026 Q1",
+    "bbox": [
+     100.35,
+     13.6,
+     100.75,
+     13.95
+    ],
+    "tiles": 4665,
+    "tests": 545764
+   },
+   "Kuala Lumpur": {
+    "value": 272.1,
+    "year": "2026 Q1",
+    "bbox": [
+     101.55,
+     3.0,
+     101.8,
+     3.25
+    ],
+    "tiles": 1820,
+    "tests": 314454
+   },
+   "Jakarta": {
+    "value": 97.7,
+    "year": "2026 Q1",
+    "bbox": [
+     106.7,
+     -6.35,
+     107.0,
+     -6.1
+    ],
+    "tiles": 2416,
+    "tests": 639684
+   },
+   "Manila": {
+    "value": 198.9,
+    "year": "2026 Q1",
+    "bbox": [
+     120.9,
+     14.45,
+     121.15,
+     14.75
+    ],
+    "tiles": 1826,
+    "tests": 981482
+   },
+   "Ho Chi Minh City": {
+    "value": 269.6,
+    "year": "2026 Q1",
+    "bbox": [
+     106.55,
+     10.65,
+     106.85,
+     10.9
+    ],
+    "tiles": 2033,
+    "tests": 454528
+   },
+   "Mumbai": {
+    "value": 93.4,
+    "year": "2026 Q1",
+    "bbox": [
+     72.75,
+     18.9,
+     73.05,
+     19.3
+    ],
+    "tiles": 1865,
+    "tests": 314353
+   },
+   "Delhi": {
+    "value": 120.5,
+    "year": "2026 Q1",
+    "bbox": [
+     76.95,
+     28.4,
+     77.4,
+     28.85
+    ],
+    "tiles": 5131,
+    "tests": 704262
+   },
+   "Abu Dhabi": {
+    "value": 348.1,
+    "year": "2026 Q1",
+    "bbox": [
+     54.3,
+     24.3,
+     54.65,
+     24.55
+    ],
+    "tiles": 1434,
+    "tests": 111780
    }
   },
   "edition": ""
@@ -1413,6 +1741,90 @@ window.INDEX_DATA = {
     "year": "2022",
     "source": "OECD IL050 Tel Aviv District (TL3)",
     "note": "Tel Aviv District containing the city — district-level"
+   },
+   "Shanghai": {
+    "value": 83.2,
+    "year": "2022",
+    "raw": 83.18,
+    "source": "Shanghai Statistical Yearbook 2023, Table 2.1 (Shanghai Municipal Bureau of Statistics)",
+    "note": "Registered (hukou) population basis. 2022 was depressed by Shanghai's COVID mortality spike (2021 in the same table: 84.11); later yearbook editions dropped the column and the health commission site was unreachable, so 2022 is the newest verifiable official figure. Official statistic; independent verification not possible."
+   },
+   "Beijing": {
+    "value": 82.5,
+    "year": "2023",
+    "raw": 82.51,
+    "source": "Beijing municipal government data page (2024 health white-paper figure), beijing.gov.cn",
+    "note": "Municipal figure, 82.51 in 2023. A Nov 2025 official press conference announced 83.93 for 2024, but the transcript states no population basis and the +1.4y jump suggests a series change, so the white-paper series value is recorded and the announcement noted. Official statistic; independent verification not possible."
+   },
+   "Shenzhen": {
+    "value": 83.9,
+    "year": "2022",
+    "raw": 83.93,
+    "source": "Shenzhen Residents' Health White Paper 2022 (Shenzhen Municipal Health Commission)",
+    "note": "Municipal figure (83.93). The 2023-edition white paper publishes no updated life expectancy, so 2022 remains the latest official figure. Official statistic; independent verification not possible."
+   },
+   "Hong Kong": {
+    "value": null,
+    "year": "n/a",
+    "note": "NULL: Hong Kong C&SD publishes life expectancy at birth BY SEX ONLY — 2024 provisional: male 82.8, female 88.4 (2023 final: 82.5/88.1; 'Women and Men in Hong Kong 2025', Table 2.3). No official both-sexes figure exists and combining would require a weighting assumption, i.e. estimation."
+   },
+   "Taipei": {
+    "value": 83.4,
+    "year": "2024",
+    "source": "Taiwan Ministry of the Interior abridged life tables by county/city (內政統計通報 114年第34週)",
+    "note": "Taipei City figure, registered (household-registration) population basis — highest of Taiwan's six special municipalities."
+   },
+   "Bangkok": {
+    "value": 76.6,
+    "year": "2024",
+    "raw": 76.564,
+    "source": "World Bank SP.DYN.LE00.IN — Thailand",
+    "note": "COUNTRY proxy (Thailand national figure): Thai NSO/MOPH sites were bot-blocked this session, no Bangkok-level official figure fetchable."
+   },
+   "Kuala Lumpur": {
+    "value": 76.7,
+    "year": "2024",
+    "source": "DOSM Abridged Life Tables Malaysia 2023-2025, Chart 2 (state level)",
+    "note": "W.P. Kuala Lumpur (the Federal Territory = the city proper); 2024 preliminary (2023 final: 75.4)."
+   },
+   "Jakarta": {
+    "value": 76.0,
+    "year": "2024",
+    "raw": 75.99,
+    "source": "BPS, Umur Harapan Hidup [Metode Baru, SP2020 long-form basis], statistics table 2206",
+    "note": "DKI Jakarta PROVINCE (≈ city-region). Transcribed from the official BPS table via an archived copy (bps.go.id bot-blocked this session)."
+   },
+   "Manila": {
+    "value": 69.9,
+    "year": "2024",
+    "raw": 69.946,
+    "source": "World Bank SP.DYN.LE00.IN — Philippines",
+    "note": "COUNTRY proxy (Philippines national figure): psa.gov.ph blocked this session, no official NCR-level life expectancy fetchable."
+   },
+   "Ho Chi Minh City": {
+    "value": 76.6,
+    "year": "2024",
+    "source": "GSO/NSO Statistical Yearbook of Viet Nam 2024, Table 43 (province level)",
+    "note": "TP. Ho Chi Minh PROVINCE (≈ the city), 2024 preliminary (2023: 76.5). Official PDF via archived copy (nso.gov.vn blocked this session)."
+   },
+   "Mumbai": {
+    "value": 72.8,
+    "year": "2019-23",
+    "source": "India SRS Abridged Life Tables 2019-23, Statement 3 (Office of the Registrar General)",
+    "note": "STATE proxy: Maharashtra (rural+urban, both sexes) — India publishes no city life tables."
+   },
+   "Delhi": {
+    "value": 74.2,
+    "year": "2019-23",
+    "source": "India SRS Abridged Life Tables 2019-23, Statement 3 (Office of the Registrar General)",
+    "note": "NCT of Delhi (the state IS the city-region), rural+urban, both sexes."
+   },
+   "Abu Dhabi": {
+    "value": 83.1,
+    "year": "2024",
+    "raw": 83.069,
+    "source": "World Bank SP.DYN.LE00.IN — United Arab Emirates",
+    "note": "COUNTRY proxy (UAE national figure), same treatment as Dubai; SCAD unreachable this session and archived SCAD pages carry no life-expectancy figure."
    }
   }
  },
@@ -1690,6 +2102,84 @@ window.INDEX_DATA = {
     "year": "2023",
     "source": "OECD IL05 Tel Aviv District (TL2)",
     "note": "Tel Aviv District - Israel has TL2 districts only in this flow (no TL3). District is a reasonable metro-core proxy; national ISR = 3.50 in 2023."
+   },
+   "Shanghai": {
+    "value": 3.8,
+    "year": "2024",
+    "source": "Shanghai Statistical Yearbook 2025, Table 21.1: 38 licensed (assistant) physicians per 10,000",
+    "note": "Yearbook publishes the ratio as an integer per 10,000 (coarse). Chinese 执业(助理)医师 includes clinical, TCM, stomatology and public-health physicians — broader than OECD 'practising'. Official statistic; independent verification not possible."
+   },
+   "Beijing": {
+    "value": 6.34,
+    "year": "2025",
+    "source": "2025 Beijing health development statistical communiqué (Beijing Municipal Health Commission)",
+    "note": "Per 1,000 RESIDENT population. Reads high partly because Beijing's national-level hospitals serve patients from across China (place-of-practice basis, like Washington DC). Broad Chinese physician definition (incl. TCM etc.). Official statistic; independent verification not possible."
+   },
+   "Shenzhen": {
+    "value": 3.02,
+    "year": "2024",
+    "source": "Computed: 54,296 licensed (assistant) physicians (Guangdong Statistical Yearbook 2025, Table 21-4) / 17.99M year-end resident population (Table 3-7)",
+    "note": "Exact division of two published official numbers. Cross-check: the city's own 2023 white paper states 2.86 per 1,000 at end-2023. Broad Chinese physician definition. Official statistic; independent verification not possible."
+   },
+   "Hong Kong": {
+    "value": 2.2,
+    "year": "2024",
+    "source": "Computed: 16,533 registered doctors / 7.5241M mid-2024 population, both from 'Health Facts of Hong Kong 2025' (Department of Health)",
+    "note": "Doctors ON THE REGISTER (not necessarily practising), excludes dentists and Chinese-medicine practitioners — narrower than the mainland definition. DoH's own printed ratio 1:456 ≈ 2.19 per 1,000."
+   },
+   "Taipei": {
+    "value": 4.76,
+    "year": "2024",
+    "source": "Taiwan MOHW 2024 medical-institution annual report, Table 29: 47.6 Western-medicine physicians per 10,000, Taipei City",
+    "note": "Practising WESTERN-MEDICINE physicians only (TCM and dentists published separately), counted at place of practice over registered population — inflated by patients commuting from the wider metro (like DC/Paris cores)."
+   },
+   "Bangkok": {
+    "value": 2.34,
+    "year": "2024",
+    "source": "MOPH Thailand, Report on Health Resources 2024, Table 11: population per doctor = 428 in Bangkok",
+    "note": "CITY level (all affiliations incl. private). Denominator is the registered mid-year population; Bangkok's service population is larger and its doctors serve patients nationwide. Thailand national comparator: 0.59 per 1,000 (WHO, 2023)."
+   },
+   "Kuala Lumpur": {
+    "value": 2.27,
+    "year": "2024",
+    "source": "WHO GHO HWF_0001 — Malaysia: 22.72 medical doctors per 10,000",
+    "note": "COUNTRY proxy (no state-level density published)."
+   },
+   "Jakarta": {
+    "value": 0.56,
+    "year": "2024",
+    "source": "WHO GHO HWF_0001 — Indonesia: 5.59 per 10,000",
+    "note": "COUNTRY proxy (BPS provincial health statistics not fetchable this session)."
+   },
+   "Manila": {
+    "value": 0.87,
+    "year": "2024",
+    "source": "WHO GHO HWF_0001 — Philippines: 8.69 per 10,000",
+    "note": "COUNTRY proxy."
+   },
+   "Ho Chi Minh City": {
+    "value": 1.11,
+    "year": "2021",
+    "source": "WHO GHO HWF_0001 — Viet Nam: 11.07 per 10,000 (latest)",
+    "note": "COUNTRY proxy."
+   },
+   "Mumbai": {
+    "value": 0.96,
+    "year": "2024",
+    "source": "WHO GHO HWF_0001 — India: 9.55 per 10,000",
+    "note": "COUNTRY proxy (state tables publish registered stock, not active density)."
+   },
+   "Delhi": {
+    "value": 0.96,
+    "year": "2024",
+    "source": "WHO GHO HWF_0001 — India: 9.55 per 10,000",
+    "note": "COUNTRY proxy — same national figure as Mumbai."
+   },
+   "Abu Dhabi": {
+    "value": 2.99,
+    "year": "2023",
+    "source": "WHO GHO HWF_0001 — United Arab Emirates: 29.92 per 10,000 (latest)",
+    "note": "COUNTRY proxy (SCAD emirate-level figure not fetchable this session)."
    }
   }
  },
@@ -1953,6 +2443,84 @@ window.INDEX_DATA = {
     "value": 20.0,
     "year": "2026 Mid-Year",
     "source": "Tel Aviv-Yafo, Israel",
+    "note": "Price To Income Ratio column, Numbeo Property Prices Index 2026 Mid-Year (rankings.jsp fetched 2026-07-12)"
+   },
+   "Hong Kong": {
+    "value": 35.2,
+    "year": "2026 Mid-Year",
+    "source": "Hong Kong, Hong Kong (China)",
+    "note": "Price To Income Ratio column, Numbeo Property Prices Index 2026 Mid-Year (rankings.jsp fetched 2026-07-12)"
+   },
+   "Taipei": {
+    "value": 31.4,
+    "year": "2026 Mid-Year",
+    "source": "Taipei, Taiwan",
+    "note": "Price To Income Ratio column, Numbeo Property Prices Index 2026 Mid-Year (rankings.jsp fetched 2026-07-12)"
+   },
+   "Bangkok": {
+    "value": 37.8,
+    "year": "2026 Mid-Year",
+    "source": "Bangkok, Thailand",
+    "note": "Price To Income Ratio column, Numbeo Property Prices Index 2026 Mid-Year (rankings.jsp fetched 2026-07-12)"
+   },
+   "Kuala Lumpur": {
+    "value": 8.6,
+    "year": "2026 Mid-Year",
+    "source": "Kuala Lumpur, Malaysia",
+    "note": "Price To Income Ratio column, Numbeo Property Prices Index 2026 Mid-Year (rankings.jsp fetched 2026-07-12)"
+   },
+   "Jakarta": {
+    "value": 24.9,
+    "year": "2026 Mid-Year",
+    "source": "Jakarta, Indonesia",
+    "note": "Price To Income Ratio column, Numbeo Property Prices Index 2026 Mid-Year (rankings.jsp fetched 2026-07-12)"
+   },
+   "Manila": {
+    "value": 34.8,
+    "year": "2026 Mid-Year",
+    "source": "Manila, Philippines",
+    "note": "Price To Income Ratio column, Numbeo Property Prices Index 2026 Mid-Year (rankings.jsp fetched 2026-07-12)"
+   },
+   "Ho Chi Minh City": {
+    "value": 32.4,
+    "year": "2026 Mid-Year",
+    "source": "Ho Chi Minh City, Vietnam",
+    "note": "Price To Income Ratio column, Numbeo Property Prices Index 2026 Mid-Year (rankings.jsp fetched 2026-07-12)"
+   },
+   "Mumbai": {
+    "value": 30.1,
+    "year": "2026 Mid-Year",
+    "source": "Mumbai, India",
+    "note": "Price To Income Ratio column, Numbeo Property Prices Index 2026 Mid-Year (rankings.jsp fetched 2026-07-12)"
+   },
+   "Abu Dhabi": {
+    "value": 7.4,
+    "year": "2026 Mid-Year",
+    "source": "Abu Dhabi, United Arab Emirates",
+    "note": "Price To Income Ratio column, Numbeo Property Prices Index 2026 Mid-Year (rankings.jsp fetched 2026-07-12)"
+   },
+   "Shanghai": {
+    "value": 31.2,
+    "year": "2026 Mid-Year",
+    "source": "Shanghai, China",
+    "note": "Price To Income Ratio column, Numbeo Property Prices Index 2026 Mid-Year (rankings.jsp fetched 2026-07-12)"
+   },
+   "Beijing": {
+    "value": 29.7,
+    "year": "2026 Mid-Year",
+    "source": "Beijing, China",
+    "note": "Price To Income Ratio column, Numbeo Property Prices Index 2026 Mid-Year (rankings.jsp fetched 2026-07-12)"
+   },
+   "Shenzhen": {
+    "value": 28.6,
+    "year": "2026 Mid-Year",
+    "source": "Shenzhen, China",
+    "note": "Price To Income Ratio column, Numbeo Property Prices Index 2026 Mid-Year (rankings.jsp fetched 2026-07-12)"
+   },
+   "Delhi": {
+    "value": 16.1,
+    "year": "2026 Mid-Year",
+    "source": "Delhi, India",
     "note": "Price To Income Ratio column, Numbeo Property Prices Index 2026 Mid-Year (rankings.jsp fetched 2026-07-12)"
    }
   }
@@ -2223,15 +2791,91 @@ window.INDEX_DATA = {
     "year": "2021",
     "source": "City Code IL_TEL_AVIV_YAFO / City Name 'Tel Aviv-Yafo (Tel Aviv-Jaffa)' (Israel)",
     "note": "col [b] pop. within 400m walk of open public space; raw 65.70408763024312"
+   },
+   "Hong Kong": {
+    "value": 95.7,
+    "year": "2020",
+    "source": "Hong Kong, Hong Kong (CN_HONG_KONG)",
+    "note": "UN-Habitat SDG 11.7.1, % urban population within 400m of open public space; raw 95.7067"
+   },
+   "Taipei": {
+    "value": null,
+    "year": "n/a",
+    "note": "Not in UN-Habitat SDG 11.7.1 city sample (no Taipei/Taiwan row in sdg_11-7-1.csv) - null"
+   },
+   "Bangkok": {
+    "value": 11.8,
+    "year": "2020",
+    "source": "Krung Thep (Bangkok) (TH_BANGKOK)",
+    "note": "raw 11.7699"
+   },
+   "Kuala Lumpur": {
+    "value": 46.1,
+    "year": "2020",
+    "source": "Kuala Lumpur (MY_KUALA_LUMPUR)",
+    "note": "raw 46.1299"
+   },
+   "Jakarta": {
+    "value": 24.2,
+    "year": "2020",
+    "source": "Jakarta (ID_JAKARTA)",
+    "note": "raw 24.1664"
+   },
+   "Manila": {
+    "value": 28.7,
+    "year": "2020",
+    "source": "Manila (PH_MANILA)",
+    "note": "raw 28.7472; City of Manila, not Metro Manila"
+   },
+   "Ho Chi Minh City": {
+    "value": 30.4,
+    "year": "2020",
+    "source": "Thanh Pho Ho Chi Minh (Ho Chi Minh City) (VN_THANH_PHO_HO_CHI_MINH)",
+    "note": "raw 30.3985"
+   },
+   "Mumbai": {
+    "value": 35.3,
+    "year": "2020",
+    "source": "Mumbai (Bombay) (IN_MUMBAI)",
+    "note": "raw 35.3464"
+   },
+   "Abu Dhabi": {
+    "value": 37.6,
+    "year": "2020",
+    "source": "Abu Zaby (Abu Dhabi) (AE_ABU_ZABY)",
+    "note": "raw 37.5679"
+   },
+   "Shanghai": {
+    "value": 29.9,
+    "year": "2020",
+    "source": "Shanghai (CN_SHANGHAI)",
+    "note": "raw 29.9136"
+   },
+   "Beijing": {
+    "value": null,
+    "year": "n/a",
+    "note": "Not in UN-Habitat SDG 11.7.1 city sample - checked all 35 China rows and pinyin/Peking variants; no Beijing row exists - null"
+   },
+   "Shenzhen": {
+    "value": 21.9,
+    "year": "2020",
+    "source": "Shenzhen (CN_SHENZHEN_GUANGDONG)",
+    "note": "raw 21.9394"
+   },
+   "Delhi": {
+    "value": 43.6,
+    "year": "2020",
+    "source": "Delhi (IN_DELHI)",
+    "note": "raw 43.5836"
    }
   }
  },
  "GRN-05": {
-  "source": "Official municipal/national waste statistics per city (16 sources; see perCity)",
+  "source": "Official municipal/national waste statistics per city (46 sourced cities; see perCity)",
   "url": "various — see perCity source fields",
   "license": "official statistics, various open licenses",
-  "edition": "latest available per city, 2023-2025",
-  "retrieved": "2026-07-11",
+  "edition": "latest available per city — mostly 2023-2025 (Boston 2019, Hamburg 2020, Manila 2015)",
+  "retrieved": "2026-07-11 (first 15 cities) / 2026-07-12 (40-city expansion)",
   "method": "One official source per city (city waste authority, national statistics or federal waste report); metric definition recorded per value; no cross-source estimation.",
   "perCity": {
    "Singapore": {
@@ -2334,8 +2978,8 @@ window.INDEX_DATA = {
    },
    "Dubai": {
     "value": null,
-    "year": "2025 (reviewed Feb 2026)",
-    "note": "NULL because no official municipal RECYCLING rate is fetchable this session. The only official current figure found is the quoted 62% LANDFILL-DIVERSION statement tied to the Warsan waste-to-energy plant's operational pe"
+    "year": "n/a",
+    "note": "NULL, retry-confirmed 2026-07-12: no official recycling rate exists. Only official figures are the Warsan waste-to-energy plant's 62% landfill diversion (one incineration plant, not emirate-wide, not recycling) and Circle Dubai 2041 targets (100% diversion, recycled >=56% of that) — targets, not achieved rates. Dubai Statistics Center unreachable (TLS refused)."
    },
    "San Francisco": {
     "value": 53.1,
@@ -2345,134 +2989,230 @@ window.INDEX_DATA = {
     "note": "'Recovery rate' = tons recycled+composted / total refuse (recycling+composting+trash), net of residual contamination, as reported by Recology to SF Environment. Scope: residential and small-business ('Fantastic 3') colle"
    },
    "Stockholm": {
-    "value": null,
-    "year": "n/a",
-    "note": "Pending Wave 2 manual sourcing: municipal recycling rates require one official city/agency source each (see ROSTER.md next steps). Blank, not zero."
+    "value": 31.0,
+    "year": "2024",
+    "source": "Avfall Sverige, Hushållsavfall i siffror – kommun- och länsstatistik (publ. Sept 2025), Tabell 5",
+    "note": "Share of HOUSEHOLD waste collected for material recycling incl. biological treatment, municipality of Stockholm (Avfall Sverige municipal statistics, Tabell 5). The same table's output-based rate after rejects is 26% — this is a separate-collection-style measure."
    },
    "Oslo": {
-    "value": null,
-    "year": "n/a",
-    "note": "Pending Wave 2 manual sourcing: municipal recycling rates require one official city/agency source each (see ROSTER.md next steps). Blank, not zero."
+    "value": 43.4,
+    "year": "2025",
+    "source": "Statistics Norway (SSB), StatBank table 12263 (KOSTRA), updated 2026-06-15",
+    "note": "Share of HOUSEHOLD waste sent to material recovery incl. biological treatment, municipality of Oslo, Statistics Norway KOSTRA table 12263 (2025 data); collection-based, not output-based. 2024: 42.5%."
    },
    "Helsinki": {
-    "value": null,
-    "year": "n/a",
-    "note": "Pending Wave 2 manual sourcing: municipal recycling rates require one official city/agency source each (see ROSTER.md next steps). Blank, not zero."
+    "value": 45.0,
+    "year": "2024",
+    "source": "HSY (Helsinki Region Environmental Services), Jätemäärät ja kierrätysaste",
+    "note": "HOUSEHOLD waste recycling rate for the municipality of Helsinki (HSY): true recycling with process rejects deducted; material + biological recycling, remainder to energy. Paper and WEEE inputs allocated from national data by population."
    },
    "Madrid": {
-    "value": null,
-    "year": "n/a",
-    "note": "Pending Wave 2 manual sourcing: municipal recycling rates require one official city/agency source each (see ROSTER.md next steps). Blank, not zero."
+    "value": 47.7,
+    "year": "2023",
+    "source": "Ayuntamiento de Madrid, Estrategia de prevención y gestión de residuos domésticos y comerciales de la ciudad de Madrid – 2030 (Abril 2025), Tabla 5bis",
+    "note": "SEPARATE-COLLECTION share of municipal (domestic + commercial) waste managed by city services, city of Madrid (waste strategy 2030, Tabla 5bis) — NOT a recycling output rate. City press reported 51.4% for 2024 but that page was unfetchable this session; the verified 2023 PDF value is used."
    },
    "Milan": {
-    "value": null,
-    "year": "n/a",
-    "note": "Pending Wave 2 manual sourcing: municipal recycling rates require one official city/agency source each (see ROSTER.md next steps). Blank, not zero."
+    "value": 63.33,
+    "year": "2024",
+    "source": "ISPRA Catasto Nazionale Rifiuti, produzione e raccolta comunale, Comune di Milano",
+    "note": "Raccolta differenziata = SEPARATE-COLLECTION share of municipal waste, Comune di Milano (ISPRA Catasto Rifiuti) — an upper bound on recycling, not an output rate. 2023: 62.44%."
    },
    "Rome": {
-    "value": null,
-    "year": "n/a",
-    "note": "Pending Wave 2 manual sourcing: municipal recycling rates require one official city/agency source each (see ROSTER.md next steps). Blank, not zero."
+    "value": 48.03,
+    "year": "2024",
+    "source": "ISPRA Catasto Nazionale Rifiuti, produzione e raccolta comunale, Comune di Roma",
+    "note": "Raccolta differenziata = SEPARATE-COLLECTION share of municipal waste, Comune di Roma (ISPRA Catasto Rifiuti) — an upper bound on recycling, not an output rate. 2023: 46.64%."
    },
    "Munich": {
-    "value": null,
-    "year": "n/a",
-    "note": "Pending Wave 2 manual sourcing: municipal recycling rates require one official city/agency source each (see ROSTER.md next steps). Blank, not zero."
+    "value": 55.3,
+    "year": "2023",
+    "source": "AWM Abfallwirtschaftsbetrieb München, 'Der AWM in Zahlen' (Geschäftsbericht 2023)",
+    "note": "AWM-published Recyclingquote for HOUSEHOLD waste, city of Munich ('Der AWM in Zahlen' 2023; total-recovery quota 59.0% in same sheet). Exact calculation method not detailed; Bavaria publishes no per-city quota."
    },
    "Frankfurt": {
-    "value": null,
-    "year": "n/a",
-    "note": "Pending Wave 2 manual sourcing: municipal recycling rates require one official city/agency source each (see ROSTER.md next steps). Blank, not zero."
+    "value": 37.6,
+    "year": "2024",
+    "source": "Hessisches Statistisches Landesamt, Haushaltsabfälle in Hessen 2024 (QII7-j/24, Dez. 2025), Tabelle 2",
+    "note": "SEPARATE-COLLECTION share of household waste: exact ratio of published official tonnages (separately collected organics + Wertstoffe over total household waste), Hessisches Statistisches Landesamt Tabelle 2 — Hesse publishes no per-city percentage or recycling rate (same computed-from-tonnages treatment as Vienna). 2023 edition: 38.6%."
    },
    "Hamburg": {
-    "value": null,
-    "year": "n/a",
-    "note": "Pending Wave 2 manual sourcing: municipal recycling rates require one official city/agency source each (see ROSTER.md next steps). Blank, not zero."
+    "value": 45.8,
+    "year": "2020",
+    "source": "Abfallwirtschaftsplan Siedlungsabfälle 2023, Freie und Hansestadt Hamburg (BUKEA), Tabelle 8: 'R-Quote 2', Ist 2020",
+    "note": "City's own input-based household-waste recycling quota 'R-Quote 2' (separate collection + bulky/WEEE/textiles to recovery + post-incineration metals), Abfallwirtschaftsplan 2023. STALE: 2020 is the latest published actual — newer official sheets publish tonnages only. Narrower R-Quote 1: 38.3%; wider R-Quote 3: 59.7%."
    },
    "Brussels": {
-    "value": null,
-    "year": "n/a",
-    "note": "Pending Wave 2 manual sourcing: municipal recycling rates require one official city/agency source each (see ROSTER.md next steps). Blank, not zero."
+    "value": 35.0,
+    "year": "2023",
+    "source": "Bruxelles Environnement, 'L'environnement : état des lieux' — indicateur 'Déchets préparés en vue du réemploi et du recyclage' (actualisation décembre 2025)",
+    "note": "Recycled-or-reused share of municipal waste (household + comparable business), Brussels-Capital Region (19 communes), Bruxelles Environnement état des lieux (Dec 2025 update); energy recovery excluded."
    },
    "Dublin": {
-    "value": null,
-    "year": "n/a",
-    "note": "Pending Wave 2 manual sourcing: municipal recycling rates require one official city/agency source each (see ROSTER.md next steps). Blank, not zero."
+    "value": 42.0,
+    "year": "2023",
+    "source": "EPA (Ireland), 'Municipal Waste Statistics for Ireland', latest reference year 2023 (release 24 September 2025)",
+    "note": "COUNTRY PROXY: Ireland NATIONAL municipal recycling rate (EPA, EU definition: material recycling + composting/AD + preparing for reuse over generated) — the EPA publishes no Dublin/regional split."
    },
    "Lisbon": {
-    "value": null,
-    "year": "n/a",
-    "note": "Pending Wave 2 manual sourcing: municipal recycling rates require one official city/agency source each (see ROSTER.md next steps). Blank, not zero."
+    "value": 26.0,
+    "year": "2024",
+    "source": "APA (Agência Portuguesa do Ambiente), Relatório Anual Resíduos Urbanos 2024 (setembro 2025), Tabela 17 — PRR por SGRU: VALORSUL",
+    "note": "EU 'preparing for reuse and recycling' (PRR) rate for the VALORSUL multi-municipal waste system (19 municipalities incl. Lisbon, ~1.69M residents) — no Lisbon-city-only rate exists. Volatile series: 29/38/31/26% for 2021-24 (APA annual urban-waste report, Tabela 17)."
    },
    "Prague": {
-    "value": null,
-    "year": "n/a",
-    "note": "Pending Wave 2 manual sourcing: municipal recycling rates require one official city/agency source each (see ROSTER.md next steps). Blank, not zero."
+    "value": 32.3,
+    "year": "2023",
+    "source": "MŽP ČR (Czech Ministry of the Environment), verified 2023 waste data (ISOH), press release 'Odpady v roce 2023', 20 March 2025",
+    "note": "Statutory municipal SORTING level (share of separately collected recyclables in municipal waste, Czech Act 541/2020) — separate collection, NOT final recycling output. Prague is its own region, so genuinely city-level; lowest of the 14 Czech regions (national avg 44.4%)."
    },
    "Warsaw": {
-    "value": null,
-    "year": "n/a",
-    "note": "Pending Wave 2 manual sourcing: municipal recycling rates require one official city/agency source each (see ROSTER.md next steps). Blank, not zero."
+    "value": 28.5,
+    "year": "2024",
+    "source": "Raport o stanie miasta Warszawa 2024 (City of Warsaw, June 2025), waste management chapter",
+    "note": "Statutory preparing-for-reuse-and-recycling level, City of Warsaw, EU-aligned calculation (recycled output over municipal waste generated), from the city's own Raport o stanie miasta 2024 — vs 45% legally required."
    },
    "Istanbul": {
     "value": null,
     "year": "n/a",
-    "note": "Pending Wave 2 manual sourcing: municipal recycling rates require one official city/agency source each (see ROSTER.md next steps). Blank, not zero."
+    "note": "NULL: no official recycling RATE exists — the Ministry's 2023 provincial environment report and İBB/İSTAÇ publish tonnages only (6.09Mt household waste, 5.42Mt landfilled), and TurkStat treatment splits are national. Deriving a share from incomplete flows would be estimation."
    },
    "Montreal": {
-    "value": null,
-    "year": "n/a",
-    "note": "Pending Wave 2 manual sourcing: municipal recycling rates require one official city/agency source each (see ROSTER.md next steps). Blank, not zero."
+    "value": 49.0,
+    "year": "2024",
+    "source": "Ville de Montréal — Bilan 2024 de la gestion des matières résiduelles de l'agglomération de Montréal (reddition de compte PDGMR 2020-2025)",
+    "note": "Diversion-from-disposal rate of municipal-managed (residential) streams, Agglomeration of Montreal (Island), Bilan 2024 GMR — diversion, not pure recycling; vs 70% target."
    },
    "Vancouver": {
-    "value": null,
-    "year": "n/a",
-    "note": "Pending Wave 2 manual sourcing: municipal recycling rates require one official city/agency source each (see ROSTER.md next steps). Blank, not zero."
+    "value": 65.0,
+    "year": "2023",
+    "source": "Metro Vancouver — Recycling and Solid Waste Management 2023 Report (annual summary, revised June 3 2025)",
+    "note": "METRO Vancouver regional recycling rate, ALL sectors (residential + commercial + construction/demolition, incl. EPR tonnages) — the widest scope in this column; not City of Vancouver alone. Report carries a draft banner but is the published annual summary."
    },
    "Chicago": {
-    "value": null,
-    "year": "n/a",
-    "note": "Pending Wave 2 manual sourcing: municipal recycling rates require one official city/agency source each (see ROSTER.md next steps). Blank, not zero."
+    "value": 9.0,
+    "year": "2025",
+    "source": "City of Chicago, Dept. of Streets & Sanitation — Chicago Recycles 'Recycling Rates' page, 2025 Household Waste Diversion Totals (Tons)",
+    "note": "Household waste DIVERSION rate for the ~625k city-serviced 1-4-unit households only (Blue Cart + yard + food); excludes multi-unit/commercial private haulers — structurally low scope. 2024: ~9.4%."
    },
    "Boston": {
-    "value": null,
-    "year": "n/a",
-    "note": "Pending Wave 2 manual sourcing: municipal recycling rates require one official city/agency source each (see ROSTER.md next steps). Blank, not zero."
+    "value": 25.0,
+    "year": "2019",
+    "source": "City of Boston — Zero Waste Boston: Recommendations of the Zero Waste Advisory Committee (June 2019)",
+    "note": "Citywide recycling rate (~25%: reused/recycled/composted, all generators), Zero Waste Boston 2019 (data c.2017-18). STALE: the most recent official published rate — MassDEP now publishes tonnages only and explicitly no longer calculates rates."
    },
    "Los Angeles": {
     "value": null,
     "year": "n/a",
-    "note": "Pending Wave 2 manual sourcing: municipal recycling rates require one official city/agency source each (see ROSTER.md next steps). Blank, not zero."
+    "note": "NULL: no current official rate exists — California abandoned rate-based accounting after 2013. The last published figure, 76.4% (2013, AB 939 landfill diversion incl. SOURCE-REDUCTION CREDITS for waste never generated, per the Zero Waste LA franchise board report), is 13 years stale and definitionally incomparable with this column, so it is not recorded."
    },
    "Seattle": {
-    "value": null,
-    "year": "n/a",
-    "note": "Pending Wave 2 manual sourcing: municipal recycling rates require one official city/agency source each (see ROSTER.md next steps). Blank, not zero."
+    "value": 53.4,
+    "year": "2023",
+    "source": "Seattle Public Utilities — 2023 Waste Prevention & Recycling Report",
+    "note": "Overall MSW recycling rate (recycled + composted over generated; all sectors, excl. third-party C&D), SPU 2023 Waste Prevention & Recycling Report — SPU's LAST published rate (metric retired 2024). Live PDF delisted; verified from the Internet Archive copy of the official report."
    },
    "Washington DC": {
-    "value": null,
-    "year": "n/a",
-    "note": "Pending Wave 2 manual sourcing: municipal recycling rates require one official city/agency source each (see ROSTER.md next steps). Blank, not zero."
+    "value": 27.93,
+    "year": "2022",
+    "source": "DC Dept. of Public Works, Office of Waste Diversion — Solid Waste Diversion Progress Report CY2019-2022",
+    "note": "Citywide waste DIVERSION rate, entire District stream (residential + commercial), DPW Office of Waste Diversion progress report CY2019-2022 (latest edition); residential-only 29.19%. Diversion, not pure recycling."
    },
    "Sydney": {
-    "value": null,
-    "year": "n/a",
-    "note": "Pending Wave 2 manual sourcing: municipal recycling rates require one official city/agency source each (see ROSTER.md next steps). Blank, not zero."
+    "value": 52.0,
+    "year": "2024/25",
+    "source": "City of Sydney — Green Report 2024/25 (Annual Environmental Report)",
+    "note": "Residential landfill-DIVERSION rate, City of Sydney LGA only (NOT Greater Sydney), Green Report 2024/25; source-separated recycling alone is 32% — diversion includes treatment of red-bin waste."
    },
    "Auckland": {
-    "value": null,
-    "year": "n/a",
-    "note": "Pending Wave 2 manual sourcing: municipal recycling rates require one official city/agency source each (see ROSTER.md next steps). Blank, not zero."
+    "value": 27.0,
+    "year": "2023",
+    "source": "Auckland Council — Auckland's Waste Assessment 2023 (November 2023)",
+    "note": "Domestic KERBSIDE diversion to recycling, Auckland region (Waste Assessment 2023 s7.4.3); household kerbside only, excludes commercial and private diversion; predates full food-scraps rollout."
    },
    "Osaka": {
-    "value": null,
-    "year": "n/a",
-    "note": "Pending Wave 2 manual sourcing: municipal recycling rates require one official city/agency source each (see ROSTER.md next steps). Blank, not zero."
+    "value": 9.5,
+    "year": "FY2023",
+    "source": "Japan Ministry of the Environment — 一般廃棄物処理実態調査 (Municipal Solid Waste Survey), FY2023 (令和5年度) results, Osaka Prefecture municipal file",
+    "note": "Administrative recycling rate R (MOE 一般廃棄物処理実態調査 FY2023, per-municipality file): direct recycling + post-treatment recovery + group collection over municipal general waste; excludes private independent recovery, so structurally low (national avg 19.5%)."
    },
    "Tel Aviv": {
+    "value": 36.0,
+    "year": "2024",
+    "source": "Tel Aviv-Yafo Municipality, Statistical Yearbook 2025 — 'עיקר הנתונים והמגמות' (key data and trends) presentation, sustainability page (p.39)",
+    "note": "City-reported share of all waste removed sent for recycling/recovery (Statistical Yearbook 2025) — a DIVERSION-style measure whose stream includes organics, green waste, packaging AND waste-to-energy/RDF, so broader than material recycling. National-methodology figure unverifiable this session (gov.il 403-blocked)."
+   },
+   "Shanghai": {
+    "value": 43.2,
+    "year": "2023",
+    "source": "Shanghai Municipal Bureau of Ecology and Environment, 2023 Annual Bulletin on Solid Waste Pollution Prevention (上海市2023年度固体废物污染环境防治信息公告)",
+    "note": "Household-waste recovery-and-utilisation rate (回收利用率), whole municipality: recyclables + food/wet-waste utilisation over household waste generated; broader than dry-materials recycling, excludes incineration (the 86.4% 资源化利用率 incl. WtE was NOT used). Official statistic; independent verification not possible."
+   },
+   "Beijing": {
+    "value": 39.8,
+    "year": "2023",
+    "source": "Beijing Municipal Ecology and Environment Bureau, 2023 Solid Waste Pollution Prevention Information Notice (北京市2023年固体废物污染环境防治信息通告)",
+    "note": "Household-waste recovery-and-utilisation rate (回收利用率): kitchen/food waste treated + recyclables recovered over household waste generated; excludes incineration (the 80.94% rate incl. WtE was NOT used). Official statistic; independent verification not possible."
+   },
+   "Shenzhen": {
     "value": null,
     "year": "n/a",
-    "note": "Pending Wave 2 manual sourcing: municipal recycling rates require one official city/agency source each (see ROSTER.md next steps). Blank, not zero."
+    "note": "NULL: an official figure exists (48.5% household-waste recovery rate 2023, per the city administration bureau's statistics report) but every Shenzhen government host refused connections/403'd this session and no archive snapshot exists — not recordable without fetching the official source."
+   },
+   "Hong Kong": {
+    "value": 34.0,
+    "year": "2024",
+    "source": "EPD, Monitoring of Solid Waste in Hong Kong — Waste Statistics for 2024 (published 22 Dec 2025)",
+    "note": "MSW RECOVERY rate = recyclables recovered for recycling / MSW generated, territory-wide incl. commercial & industrial; 79% of recovered material exported for recycling (recovery ≠ verified final recycling). 2023: 33%."
+   },
+   "Taipei": {
+    "value": 70.8,
+    "year": "2024",
+    "source": "Taiwan Ministry of Environment (MOENV) open-data indicator 一般廢棄物回收率 (dataset STAT_P_46), Taipei City, ROC year 113 (=2024)",
+    "note": "General (municipal household) waste recycling rate, Taipei City: recyclables + food-waste recycling + bulky-waste reuse over general waste generated; includes composting, excludes incineration. From MOENV open-data indicator STAT_P_46. 2023: 70.27%."
+   },
+   "Bangkok": {
+    "value": null,
+    "year": "n/a",
+    "note": "NULL: BMA publishes no recycling rate — only collection tonnages and a facility-level 39.18% 'returned to use' share (FY2023) that includes incineration/MBT, i.e. disposal-centre diversion, not recycling. The source-separation indicator is reported only as 'target met' with no value."
+   },
+   "Kuala Lumpur": {
+    "value": 37.9,
+    "year": "2024",
+    "source": "Statistik KPKT 2024 (Ministry of Housing and Local Government Malaysia; source SWCorp) — Kadar Kitar Semula Kebangsaan / National Recycling Rate",
+    "note": "COUNTRY PROXY: Malaysia NATIONAL household/MSW recycling rate (SWCorp via Statistik KPKT 2024) — no KL-specific rate is published (only kerbside collection tonnage). 2023: 35.38%."
+   },
+   "Jakarta": {
+    "value": null,
+    "year": "n/a",
+    "note": "NULL: the national SIPSN per-city recycling-rate table is no longer publicly reachable (old app dead, successor portal login-gated, archives empty). Jakarta's official SILIKA dashboard publishes reduction (26%) / handling (73%) shares, which are not a recycling rate."
+   },
+   "Manila": {
+    "value": 48.0,
+    "year": "2015",
+    "source": "Senate of the Philippines, Senate Economic Planning Office, 'Philippine Solid Wastes At A Glance' (AG-17-01, Nov 2017), citing DENR-NSWMC",
+    "note": "Solid-waste DIVERSION rate for Metro Manila (NCR), RA 9003 definition: reuse + recycling + composting + resource recovery (incineration is banned in the Philippines). STALE: 2015 is the latest official NCR figure (Senate SEPO 2017, citing DENR-NSWMC; verified via archived official PDF); no newer percentage published through 2018+ reports."
+   },
+   "Ho Chi Minh City": {
+    "value": null,
+    "year": "n/a",
+    "note": "NULL: official statements give only a treatment mix (~69% landfilled, remainder blending recycling with composting/incineration) — no genuine recycling share; DONRE portal unreachable this session."
+   },
+   "Mumbai": {
+    "value": null,
+    "year": "n/a",
+    "note": "NULL: CPCB publishes only 'waste processed/treated' (includes incineration, composting, RDF) — processed ≠ recycled; no city recycling rate exists for Mumbai."
+   },
+   "Delhi": {
+    "value": null,
+    "year": "n/a",
+    "note": "NULL: CPCB reports ~48% 'processed/treated', which includes Delhi's waste-to-energy incineration and composting — not a recycling/material-recovery share; no official recycling rate exists."
+   },
+   "Abu Dhabi": {
+    "value": 32.0,
+    "year": "2024",
+    "source": "Tadweer Group (Abu Dhabi government waste management company) Sustainability Report 2024, esg.tadweer.ae",
+    "note": "Landfill-DIVERSION of non-hazardous waste (recycling + composting + further treatment), Tadweer Sustainability Report 2024. Geography: the EMIRATE of Abu Dhabi (Tadweer manages the whole emirate's waste), not the city proper."
    }
   }
  },
@@ -2732,6 +3472,78 @@ window.INDEX_DATA = {
     "value": null,
     "year": "2024",
     "note": "not assessed (not the country's most populous city)"
+   },
+   "Hong Kong": {
+    "value": null,
+    "year": "2024",
+    "note": "UN LOSI 2024 assesses one city per UN member state (the most populous); China's assessed city is Shanghai. Hong Kong SAR not assessed."
+   },
+   "Taipei": {
+    "value": null,
+    "year": "2024",
+    "note": "Taiwan is not covered by the UN E-Government Survey; no LOSI assessment."
+   },
+   "Bangkok": {
+    "value": 66.67,
+    "year": "2024",
+    "source": "UN LOSI 2024 (raw 0.6667, rank 51)",
+    "note": "UN E-Government Survey 2024 Technical Appendix Table 12; cross-checked against eGovKB city page id/73-Bangkok/dataYear/2024 (0.6667, rank 51). Stored as raw x100."
+   },
+   "Kuala Lumpur": {
+    "value": 59.38,
+    "year": "2024",
+    "source": "UN LOSI 2024 (raw 0.5938, rank 62)",
+    "note": "Malaysia's assessed LOSI city confirmed as Kuala Lumpur. Table 12 + eGovKB id/48-Kuala-Lumpur (0.5938, rank 62 match). Stored as raw x100."
+   },
+   "Jakarta": {
+    "value": 68.75,
+    "year": "2024",
+    "source": "UN LOSI 2024 (raw 0.6875, rank 47)",
+    "note": "Table 12 + eGovKB id/38-Jakarta (0.6875, rank 47 match). Stored as raw x100."
+   },
+   "Manila": {
+    "value": 60.42,
+    "year": "2024",
+    "source": "UN LOSI 2024 — assessed city: Quezon City (raw 0.6042, rank 59)",
+    "note": "WITHIN-METRO NOTE: the UN assessed Quezon City (the Philippines' most populous city, within Metro Manila), not the City of Manila; recorded under Manila per v1.0 precedent. Table 12 + eGovKB id/164-Quezon (0.6042, rank 5"
+   },
+   "Ho Chi Minh City": {
+    "value": 63.54,
+    "year": "2024",
+    "source": "UN LOSI 2024 (raw 0.6354, rank 53)",
+    "note": "Viet Nam's assessed LOSI city confirmed as Ho Chi Minh City. Table 12 + eGovKB id/84-Ho-Chi-Minh (0.6354, rank 53 match). Stored as raw x100."
+   },
+   "Mumbai": {
+    "value": 56.25,
+    "year": "2024",
+    "source": "UN LOSI 2024 (raw 0.5625, rank 70)",
+    "note": "India's assessed LOSI city confirmed as Mumbai (not Delhi). Table 12 + eGovKB id/37-Mumbai (0.5625, rank 70 match). Stored as raw x100."
+   },
+   "Abu Dhabi": {
+    "value": null,
+    "year": "2024",
+    "note": "UAE's assessed LOSI city is Dubai (already in dataset); Abu Dhabi not assessed."
+   },
+   "Shanghai": {
+    "value": 86.46,
+    "year": "2024",
+    "source": "UN LOSI 2024 (raw 0.8646, rank 12)",
+    "note": "China's assessed LOSI city. Table 12 + eGovKB id/19-Shanghai (0.8646, rank 12 match). Stored as raw x100."
+   },
+   "Beijing": {
+    "value": null,
+    "year": "2024",
+    "note": "China's assessed LOSI city is Shanghai (most populous city rule); Beijing not assessed."
+   },
+   "Shenzhen": {
+    "value": null,
+    "year": "2024",
+    "note": "China's assessed LOSI city is Shanghai; Shenzhen not assessed."
+   },
+   "Delhi": {
+    "value": null,
+    "year": "2024",
+    "note": "India's assessed LOSI city is Mumbai (confirmed in Table 12); Delhi not assessed."
    }
   }
  },
@@ -3010,6 +3822,84 @@ window.INDEX_DATA = {
     "year": "2024",
     "source": "Israel (ISR) — country proxy",
     "note": "World Bank WDI IT.NET.USER.ZS (individuals using the Internet, % of population), mrnev=1; API lastupdated 2026-07-01"
+   },
+   "Hong Kong": {
+    "value": 95.8,
+    "year": "2024",
+    "source": "Hong Kong SAR, China (HKG)",
+    "note": "World Bank API IT.NET.USER.ZS mrnev=1; raw 95.75536971"
+   },
+   "Taipei": {
+    "value": 88.8,
+    "year": "2025",
+    "source": "Taiwan - TWNIC 2025 Taiwan Internet Report",
+    "note": "Taiwan not in World Bank WDI. TWNIC 2025 Taiwan Internet Report (report.twnic.tw/2025/en): 'Internet access rate 88.75%'; survey conducted Jul 28-Sep 1 2025 among people aged 18+, weighted, n=2,142. Methodology differs f"
+   },
+   "Bangkok": {
+    "value": 90.9,
+    "year": "2024",
+    "source": "Thailand (THA)",
+    "note": "World Bank API; raw 90.86718789"
+   },
+   "Kuala Lumpur": {
+    "value": 98.0,
+    "year": "2024",
+    "source": "Malaysia (MYS)",
+    "note": "World Bank API; raw 98.0206059"
+   },
+   "Jakarta": {
+    "value": 72.8,
+    "year": "2024",
+    "source": "Indonesia (IDN)",
+    "note": "World Bank API; raw 72.78075544"
+   },
+   "Manila": {
+    "value": 67.3,
+    "year": "2024",
+    "source": "Philippines (PHL)",
+    "note": "World Bank API; raw 67.26300914"
+   },
+   "Ho Chi Minh City": {
+    "value": 84.2,
+    "year": "2024",
+    "source": "Viet Nam (VNM)",
+    "note": "World Bank API; raw 84.15 (rounds half-up to 84.2)"
+   },
+   "Mumbai": {
+    "value": 70.0,
+    "year": "2025",
+    "source": "India (IND)",
+    "note": "World Bank API; reported as integer 70; shared with Delhi (country proxy)"
+   },
+   "Abu Dhabi": {
+    "value": 100.0,
+    "year": "2024",
+    "source": "United Arab Emirates (ARE)",
+    "note": "World Bank API; source records exactly 100 (same UAE value as Dubai in dataset)"
+   },
+   "Shanghai": {
+    "value": 91.6,
+    "year": "2025",
+    "source": "China (CHN)",
+    "note": "World Bank API; raw 91.6; shared with Beijing and Shenzhen (country proxy)"
+   },
+   "Beijing": {
+    "value": 91.6,
+    "year": "2025",
+    "source": "China (CHN)",
+    "note": "Same China national value (country proxy)"
+   },
+   "Shenzhen": {
+    "value": 91.6,
+    "year": "2025",
+    "source": "China (CHN)",
+    "note": "Same China national value (country proxy)"
+   },
+   "Delhi": {
+    "value": 70.0,
+    "year": "2025",
+    "source": "India (IND)",
+    "note": "Same India national value as Mumbai (country proxy)"
    }
   }
  },
@@ -3285,6 +4175,72 @@ window.INDEX_DATA = {
     "value": null,
     "year": "n/a",
     "note": "null - no GDP data exists for Tel Aviv in either source: current flow DSD_FUA_ECO@DF_ECONOMY v1.1 has only EMPW (employment) rows for ISR10F, and archived DF_CITIES has only environmental/hazard variables for ISR10 (no G"
+   },
+   "Hong Kong": {
+    "value": 66154,
+    "year": "2024",
+    "source": "World Bank NY.GDP.PCAP.PP.KD - GDP per capita, PPP (constant 2021 international $), Hong Kong SAR",
+    "note": "SAR-level figure (city-territory, Singapore treatment); constant-PPP basis close to but not identical with the OECD metros (2021 vs 2015 base) - disclosed."
+   },
+   "Taipei": {
+    "value": null,
+    "year": "n/a",
+    "note": "No honest metro PPP GDP exists: municipal GDP is published in local currency only, and converting it with our own PPP factors would be modelling (banned by rule 1)."
+   },
+   "Bangkok": {
+    "value": null,
+    "year": "n/a",
+    "note": "No honest metro PPP GDP exists: municipal GDP is published in local currency only, and converting it with our own PPP factors would be modelling (banned by rule 1)."
+   },
+   "Kuala Lumpur": {
+    "value": null,
+    "year": "n/a",
+    "note": "No honest metro PPP GDP exists: municipal GDP is published in local currency only, and converting it with our own PPP factors would be modelling (banned by rule 1)."
+   },
+   "Jakarta": {
+    "value": null,
+    "year": "n/a",
+    "note": "No honest metro PPP GDP exists: municipal GDP is published in local currency only, and converting it with our own PPP factors would be modelling (banned by rule 1)."
+   },
+   "Manila": {
+    "value": null,
+    "year": "n/a",
+    "note": "No honest metro PPP GDP exists: municipal GDP is published in local currency only, and converting it with our own PPP factors would be modelling (banned by rule 1)."
+   },
+   "Ho Chi Minh City": {
+    "value": null,
+    "year": "n/a",
+    "note": "No honest metro PPP GDP exists: municipal GDP is published in local currency only, and converting it with our own PPP factors would be modelling (banned by rule 1)."
+   },
+   "Mumbai": {
+    "value": null,
+    "year": "n/a",
+    "note": "No honest metro PPP GDP exists: municipal GDP is published in local currency only, and converting it with our own PPP factors would be modelling (banned by rule 1)."
+   },
+   "Abu Dhabi": {
+    "value": null,
+    "year": "n/a",
+    "note": "No honest metro PPP GDP exists: municipal GDP is published in local currency only, and converting it with our own PPP factors would be modelling (banned by rule 1)."
+   },
+   "Shanghai": {
+    "value": null,
+    "year": "n/a",
+    "note": "Municipal GDP published in CNY (official); no PPP metro figure exists and self-converting would be modelling - blank per rule 1."
+   },
+   "Beijing": {
+    "value": null,
+    "year": "n/a",
+    "note": "Municipal GDP published in CNY (official); no PPP metro figure exists and self-converting would be modelling - blank per rule 1."
+   },
+   "Shenzhen": {
+    "value": null,
+    "year": "n/a",
+    "note": "Municipal GDP published in CNY (official); no PPP metro figure exists and self-converting would be modelling - blank per rule 1."
+   },
+   "Delhi": {
+    "value": null,
+    "year": "n/a",
+    "note": "No honest metro PPP GDP exists: municipal GDP is published in local currency only, and converting it with our own PPP factors would be modelling (banned by rule 1)."
    }
   }
  },
@@ -3570,6 +4526,83 @@ window.INDEX_DATA = {
     "value": null,
     "year": "n/a",
     "note": "Hub page renders no startup count (no comparison table), as with Copenhagen/Vienna/Seoul/Dubai in v1.0."
+   },
+   "Hong Kong": {
+    "value": 16.5,
+    "year": "2026-07-12 (live db)",
+    "source": "web.archive.org capture 20260712080815 of https://dealroom.co/cities/hong-kong/ — peer-table self row (#15): Combined EV=$179B, 5-yr EV growth=12.4×, Unicorns=20, VC invested=$3.1B, Tracked startups=1,235; hero: 'Metro area · Asia · Pop. 7.5M · #37 city by EV'",
+    "trackedStartups": 1235,
+    "pagePopulation": 7500000
+   },
+   "Taipei": {
+    "value": null,
+    "year": "n/a",
+    "note": "Hub page renders no startup count (no comparison table), as with Copenhagen/Vienna/Seoul/Dubai in v1.0. Capture: web.archive.org capture 20260712081007 of https://dealroom.co/cities/taipei/"
+   },
+   "Bangkok": {
+    "value": null,
+    "year": "n/a",
+    "note": "Hub page renders no startup count (no comparison table), as with Copenhagen/Vienna/Seoul/Dubai in v1.0. Capture: web.archive.org capture 20260712081154 of https://dealroom.co/cities/bangkok/"
+   },
+   "Kuala Lumpur": {
+    "value": null,
+    "year": "n/a",
+    "note": "Hub page renders no startup count (no comparison table), as with Copenhagen/Vienna/Seoul/Dubai in v1.0. Capture: web.archive.org capture 20260712081400 of https://dealroom.co/cities/kuala-lumpur/"
+   },
+   "Jakarta": {
+    "value": null,
+    "year": "n/a",
+    "note": "Hub page renders no startup count (no comparison table), as with Copenhagen/Vienna/Seoul/Dubai in v1.0. Capture: web.archive.org capture 20260712081519 of https://dealroom.co/cities/jakarta/"
+   },
+   "Manila": {
+    "value": null,
+    "year": "n/a",
+    "note": "Hub page renders no startup count (no comparison table), as with Copenhagen/Vienna/Seoul/Dubai in v1.0. Capture: web.archive.org capture 20260712081718 of https://dealroom.co/cities/manila/"
+   },
+   "Ho Chi Minh City": {
+    "value": null,
+    "year": "n/a",
+    "note": "Hub page renders no startup count (no comparison table), as with Copenhagen/Vienna/Seoul/Dubai in v1.0. Capture: web.archive.org capture 20260712081817 of https://dealroom.co/cities/ho-chi-minh/"
+   },
+   "Mumbai": {
+    "value": 8.7,
+    "year": "2026-07-12 (live db)",
+    "source": "web.archive.org capture 20260712081906 of https://dealroom.co/cities/mumbai/ — peer-table self row (#2): Combined EV=$243B, 5-yr EV growth=15.3×, Unicorns=26, VC invested=$2.8B, Tracked startups=1,995; hero: 'Metro area · India · Pop. 22.9M · #25 city by EV'",
+    "trackedStartups": 1995,
+    "pagePopulation": 22900000
+   },
+   "Abu Dhabi": {
+    "value": null,
+    "year": "n/a",
+    "note": "Hub page renders no startup count (no comparison table), as with Copenhagen/Vienna/Seoul/Dubai in v1.0. Capture: web.archive.org capture 20260712081955 of https://dealroom.co/cities/abu-dhabi/"
+   },
+   "Shanghai": {
+    "value": 11.7,
+    "year": "2026-07-12 (live db)",
+    "source": "web.archive.org capture 20260712082046 of https://dealroom.co/cities/shanghai/ — peer-table self row (#5): Combined EV=$1T, 5-yr EV growth=5.3×, Unicorns=128, VC invested=$4.1B, Tracked startups=3,500; hero: 'Metro area · China · Pop. 29.9M · #12 city by EV'",
+    "trackedStartups": 3500,
+    "pagePopulation": 29900000
+   },
+   "Beijing": {
+    "value": 19.1,
+    "year": "2026-07-12 (live db)",
+    "source": "web.archive.org capture 20260712082234 of https://dealroom.co/cities/beijing/ — peer-table self row (#3): Combined EV=$1.6T, 5-yr EV growth=3.6×, Unicorns=169, VC invested=$6.3B, Tracked startups=4,278; hero: 'Metro area · China · Pop. 22.4M · #8 city by EV'",
+    "trackedStartups": 4278,
+    "pagePopulation": 22400000
+   },
+   "Shenzhen": {
+    "value": 9.2,
+    "year": "2026-07-12 (live db)",
+    "source": "web.archive.org capture 20260712082325 of https://dealroom.co/cities/shenzhen/ — peer-table self row (#4): Combined EV=$1T, 5-yr EV growth=1.9×, Unicorns=49, VC invested=$2B, Tracked startups=2,152; hero: 'Metro area · China · Pop. 23.3M · #11 city by EV'",
+    "trackedStartups": 2152,
+    "pagePopulation": 23300000
+   },
+   "Delhi": {
+    "value": 8.4,
+    "year": "2026-07-12 (live db)",
+    "source": "web.archive.org capture 20260712082414 of https://dealroom.co/cities/delhi/ — peer-table self row (#3): Combined EV=$228B, 5-yr EV growth=6.1×, Unicorns=30, VC invested=$2.8B, Tracked startups=2,403; hero: 'Metro area · India · Pop. 28.5M · #27 city by EV'",
+    "trackedStartups": 2403,
+    "pagePopulation": 28500000
    }
   }
  },
@@ -3917,6 +4950,110 @@ window.INDEX_DATA = {
     "vcInvestedUsd": 9500000000,
     "vcWindow": "not stated on page",
     "pagePopulation": 4500000
+   },
+   "Hong Kong": {
+    "value": 413,
+    "year": "2026-07-12 (live db)",
+    "source": "web.archive.org capture 20260712080815 of https://dealroom.co/cities/hong-kong/ — peer-table self row (#15): Combined EV=$179B, 5-yr EV growth=12.4×, Unicorns=20, VC invested=$3.1B, Tracked startups=1,235; hero: 'Metro area · Asia · Pop. 7.5M · #37 city by EV'",
+    "vcInvestedUsd": 3100000000,
+    "vcWindow": "not stated on page (label 'VC invested', no time window shown)",
+    "pagePopulation": 7500000
+   },
+   "Taipei": {
+    "value": 25,
+    "year": "2026-07-12 (live db)",
+    "source": "web.archive.org capture 20260712081007 of https://dealroom.co/cities/taipei/ — no peer table rendered; VC invested from the page's own meta description; hero: 'Metro area · Taiwan · Pop. 7M'",
+    "vcInvestedUsd": 172100000,
+    "vcWindow": "not stated on page (label 'VC invested', no time window shown)",
+    "pagePopulation": 7000000
+   },
+   "Bangkok": {
+    "value": 8,
+    "year": "2026-07-12 (live db)",
+    "source": "web.archive.org capture 20260712081154 of https://dealroom.co/cities/bangkok/ — no peer table rendered; VC invested from the page's own meta description; hero: 'Metro area · Thailand · Pop. 14.6M'",
+    "vcInvestedUsd": 120700000,
+    "vcWindow": "not stated on page (label 'VC invested', no time window shown)",
+    "pagePopulation": 14600000
+   },
+   "Kuala Lumpur": {
+    "value": 19,
+    "year": "2026-07-12 (live db)",
+    "source": "web.archive.org capture 20260712081400 of https://dealroom.co/cities/kuala-lumpur/ — no peer table rendered; VC invested from the page's own meta description; hero: 'Metro area · Malaysia · Pop. 8.5M'",
+    "vcInvestedUsd": 163700000,
+    "vcWindow": "not stated on page (label 'VC invested', no time window shown)",
+    "pagePopulation": 8500000
+   },
+   "Jakarta": {
+    "value": 13,
+    "year": "2026-07-12 (live db)",
+    "source": "web.archive.org capture 20260712081519 of https://dealroom.co/cities/jakarta/ — no peer table rendered; VC invested from the page's own meta description; hero: 'Metro area · Indonesia · Pop. 31.7M'",
+    "vcInvestedUsd": 407800000,
+    "vcWindow": "not stated on page (label 'VC invested', no time window shown)",
+    "pagePopulation": 31700000
+   },
+   "Manila": {
+    "value": 10,
+    "year": "2026-07-12 (live db)",
+    "source": "web.archive.org capture 20260712081718 of https://dealroom.co/cities/manila/ — no peer table rendered; VC invested from the page's own meta description; hero: 'Metro area · Philippines · Pop. 13.5M'",
+    "vcInvestedUsd": 129100000,
+    "vcWindow": "not stated on page (label 'VC invested', no time window shown)",
+    "pagePopulation": 13500000
+   },
+   "Ho Chi Minh City": {
+    "value": 9,
+    "year": "2026-07-12 (live db)",
+    "source": "web.archive.org capture 20260712081817 of https://dealroom.co/cities/ho-chi-minh/ — no peer table rendered; VC invested from the page's own meta description; hero: 'Metro area · Vietnam · Pop. 21.3M'",
+    "vcInvestedUsd": 200300000,
+    "vcWindow": "not stated on page (label 'VC invested', no time window shown)",
+    "pagePopulation": 21300000
+   },
+   "Mumbai": {
+    "value": 122,
+    "year": "2026-07-12 (live db)",
+    "source": "web.archive.org capture 20260712081906 of https://dealroom.co/cities/mumbai/ — peer-table self row (#2): Combined EV=$243B, 5-yr EV growth=15.3×, Unicorns=26, VC invested=$2.8B, Tracked startups=1,995; hero: 'Metro area · India · Pop. 22.9M · #25 city by EV'",
+    "vcInvestedUsd": 2800000000,
+    "vcWindow": "not stated on page (label 'VC invested', no time window shown)",
+    "pagePopulation": 22900000
+   },
+   "Abu Dhabi": {
+    "value": 136,
+    "year": "2026-07-12 (live db)",
+    "source": "web.archive.org capture 20260712081955 of https://dealroom.co/cities/abu-dhabi/ — no peer table rendered; VC invested from the page's own meta description; hero: 'Metro area · United Arab Emirates · Pop. 1.6M'",
+    "vcInvestedUsd": 218000000,
+    "vcWindow": "not stated on page (label 'VC invested', no time window shown)",
+    "pagePopulation": 1600000
+   },
+   "Shanghai": {
+    "value": 137,
+    "year": "2026-07-12 (live db)",
+    "source": "web.archive.org capture 20260712082046 of https://dealroom.co/cities/shanghai/ — peer-table self row (#5): Combined EV=$1T, 5-yr EV growth=5.3×, Unicorns=128, VC invested=$4.1B, Tracked startups=3,500; hero: 'Metro area · China · Pop. 29.9M · #12 city by EV'",
+    "vcInvestedUsd": 4100000000,
+    "vcWindow": "not stated on page (label 'VC invested', no time window shown)",
+    "pagePopulation": 29900000
+   },
+   "Beijing": {
+    "value": 281,
+    "year": "2026-07-12 (live db)",
+    "source": "web.archive.org capture 20260712082234 of https://dealroom.co/cities/beijing/ — peer-table self row (#3): Combined EV=$1.6T, 5-yr EV growth=3.6×, Unicorns=169, VC invested=$6.3B, Tracked startups=4,278; hero: 'Metro area · China · Pop. 22.4M · #8 city by EV'",
+    "vcInvestedUsd": 6300000000,
+    "vcWindow": "not stated on page (label 'VC invested', no time window shown)",
+    "pagePopulation": 22400000
+   },
+   "Shenzhen": {
+    "value": 86,
+    "year": "2026-07-12 (live db)",
+    "source": "web.archive.org capture 20260712082325 of https://dealroom.co/cities/shenzhen/ — peer-table self row (#4): Combined EV=$1T, 5-yr EV growth=1.9×, Unicorns=49, VC invested=$2B, Tracked startups=2,152; hero: 'Metro area · China · Pop. 23.3M · #11 city by EV'",
+    "vcInvestedUsd": 2000000000,
+    "vcWindow": "not stated on page (label 'VC invested', no time window shown)",
+    "pagePopulation": 23300000
+   },
+   "Delhi": {
+    "value": 98,
+    "year": "2026-07-12 (live db)",
+    "source": "web.archive.org capture 20260712082414 of https://dealroom.co/cities/delhi/ — peer-table self row (#3): Combined EV=$228B, 5-yr EV growth=6.1×, Unicorns=30, VC invested=$2.8B, Tracked startups=2,403; hero: 'Metro area · India · Pop. 28.5M · #27 city by EV'",
+    "vcInvestedUsd": 2800000000,
+    "vcWindow": "not stated on page (label 'VC invested', no time window shown)",
+    "pagePopulation": 28500000
    }
   }
  },
@@ -4179,6 +5316,87 @@ window.INDEX_DATA = {
     "year": "2022",
     "source": "OECD IL050 Tel Aviv District (TL3)",
     "note": "Tel Aviv District containing the city — district-level"
+   },
+   "Shanghai": {
+    "value": 33.9,
+    "year": "2020",
+    "source": "Shanghai Statistical Yearbook 2025, Table 2.13 (7th National Population Census): 33,872 per 100,000 with university education",
+    "note": "DIFFERENT BASIS: share of the TOTAL resident population of ALL AGES (not 25-64) with junior college (大专) and above, incl. non-completers and current students — like Dubai, not comparable with OECD shares. Official statistic; independent verification not possible."
+   },
+   "Beijing": {
+    "value": 42.0,
+    "year": "2020",
+    "raw": 41.98,
+    "source": "Beijing 7th National Population Census communiqué No.4: 41,980 per 100,000 with university education",
+    "note": "DIFFERENT BASIS: TOTAL population of all ages (not 25-64), junior college and above, incl. non-completers and current students. Official statistic; independent verification not possible."
+   },
+   "Shenzhen": {
+    "value": 28.8,
+    "year": "2020",
+    "raw": 28.849,
+    "source": "Guangdong 7th National Population Census communiqué No.5, Table 5-1: 28,849 per 100,000 with university education",
+    "note": "DIFFERENT BASIS: TOTAL population of all ages (not 25-64), junior college and above — highest of all 21 Guangdong cities. Official statistic; independent verification not possible."
+   },
+   "Hong Kong": {
+    "value": 35.7,
+    "year": "2024",
+    "source": "Computed from C&SD 'Women and Men in Hong Kong 2025', Table 4.1: (589,000 post-secondary non-degree + 1,794,600 degree) / 6,683,000 aged 15+",
+    "note": "DIFFERENT BASIS: population aged 15+ (not 25-64), highest level ATTENDED whether or not completed (General Household Survey). Exact division of published counts."
+   },
+   "Taipei": {
+    "value": 66.2,
+    "year": "2025",
+    "source": "Computed from Taipei Dept. of Civil Affairs / MOI household-registration table: 1,422,066 aged 15+ with junior college and above / 2,147,609 aged 15+",
+    "note": "DIFFERENT BASIS: registered population aged 15+ (not 25-64), 大專以上 per MOI grouping (incl. non-completers). National comparator on the same basis: 51.4%. Exact division of published counts."
+   },
+   "Bangkok": {
+    "value": 17.4,
+    "year": "2022",
+    "raw": 17.35,
+    "source": "World Bank/UNESCO UIS SE.TER.CUAT.BA.ZS — Thailand: population 25+ with at least a Bachelor's",
+    "note": "COUNTRY proxy AND narrower basis (bachelor's-and-above excludes short-cycle tertiary); Thai NSO Bangkok tables not fetchable this session."
+   },
+   "Kuala Lumpur": {
+    "value": 34.9,
+    "year": "2024",
+    "source": "DOSM Labour Force Survey Report Malaysia 2024: tertiary-educated share of employed persons",
+    "note": "COUNTRY proxy AND different basis: share of EMPLOYED PERSONS, Malaysia-wide (no fetchable state attainment table)."
+   },
+   "Jakarta": {
+    "value": 9.3,
+    "year": "2023",
+    "raw": 9.33,
+    "source": "World Bank/UNESCO UIS SE.TER.CUAT.BA.ZS — Indonesia: population 25+ with at least a Bachelor's",
+    "note": "COUNTRY proxy AND narrower basis (bachelor's-and-above). DKI Jakarta's true share is well above this national figure (provincial tables were unfetchable) — treat as a lower bound."
+   },
+   "Manila": {
+    "value": 32.3,
+    "year": "2020",
+    "source": "Computed from PSA 2020 Census attainment table: (162,655 short-cycle + 2,132,943 college + 70,552 post-bacc graduates) / 7,318,450 aged 25+",
+    "note": "NCR (Metro Manila) region, aged 25+, highest COMPLETED level. Exact division of published census counts (via archived copy of the official XLSX; psa.gov.ph blocked)."
+   },
+   "Ho Chi Minh City": {
+    "value": 27.9,
+    "year": "2020",
+    "source": "GSO Viet Nam Labour Force Survey 2020, Table 1.4: HCMC labour force with college (4.0%) + university and above (23.9%)",
+    "note": "DIFFERENT BASIS: share of the LABOUR FORCE (not population 25-64), 2020 — newer provincial LFS tables not fetchable. Sum of two published components."
+   },
+   "Mumbai": {
+    "value": 18.8,
+    "year": "2023-24",
+    "source": "India PLFS Annual Report 2023-24, Table 8 — Maharashtra, persons 15+: diploma 1.7 + graduate 13.5 + postgraduate+ 3.6",
+    "note": "STATE proxy (Maharashtra) AND different basis: persons aged 15+, rural+urban. Sum of published shares."
+   },
+   "Delhi": {
+    "value": 24.2,
+    "year": "2023-24",
+    "source": "India PLFS Annual Report 2023-24, Table 8 — NCT of Delhi, persons 15+: diploma 0.3 + graduate 19.1 + postgraduate+ 4.8",
+    "note": "NCT of Delhi (state = city-region), persons aged 15+. Sum of published shares."
+   },
+   "Abu Dhabi": {
+    "value": null,
+    "year": "n/a",
+    "note": "NULL: no official figure fetchable this session — SCAD unreachable, UAE stat portals 403, and the World Bank/UIS publish no tertiary-attainment series for the UAE."
    }
   }
  },
@@ -4457,6 +5675,84 @@ window.INDEX_DATA = {
     "year": "2026",
     "source": "QS WUR 2026, QS city label(s): ['Tel Aviv']",
     "note": "Tel Aviv University (223)"
+   },
+   "Hong Kong": {
+    "value": 5,
+    "year": "2026",
+    "source": "QS WUR 2026, QS city label(s): ['Hong Kong']",
+    "note": "The University of Hong Kong (11); The Chinese University of Hong Kong (CUHK) (32); The Hong Kong University of Science and Technology (44); The Hong Kong Polytechnic University (54"
+   },
+   "Taipei": {
+    "value": 4,
+    "year": "2026",
+    "source": "QS WUR 2026, QS city label(s): ['Taipei', 'Taipei City']",
+    "note": "National Taiwan University (NTU) (63); National Taiwan University of Science and Technology (Taiwan Tech) (345); National Taipei University of Technology (420); National Taiwan Nor"
+   },
+   "Bangkok": {
+    "value": 1,
+    "year": "2026",
+    "source": "QS WUR 2026, QS city label(s): ['Bangkok']",
+    "note": "Chulalongkorn University (221)"
+   },
+   "Kuala Lumpur": {
+    "value": 4,
+    "year": "2026",
+    "source": "QS WUR 2026, QS city label(s): ['Kuala Lumpur']",
+    "note": "Universiti Malaya (UM) (58); Taylor's University (253); UCSI University (269); Sunway University (410)"
+   },
+   "Jakarta": {
+    "value": 0,
+    "year": "2026",
+    "source": "QS WUR 2026, QS city label(s): []",
+    "note": "True zero: Universitas Indonesia carries QS city Depok (excluded, city-proper rule)."
+   },
+   "Manila": {
+    "value": 0,
+    "year": "2026",
+    "source": "QS WUR 2026, QS city label(s): []",
+    "note": "True zero: UP Diliman and Ateneo carry QS city Quezon City (excluded, city-proper rule); no Manila-proper top-500 entry."
+   },
+   "Ho Chi Minh City": {
+    "value": 0,
+    "year": "2026",
+    "source": "QS WUR 2026, QS city label(s): []",
+    "note": "True zero under the city-proper rule."
+   },
+   "Mumbai": {
+    "value": 1,
+    "year": "2026",
+    "source": "QS WUR 2026, QS city label(s): ['Mumbai']",
+    "note": "Indian Institute of Technology Bombay (IITB) (129)"
+   },
+   "Delhi": {
+    "value": 2,
+    "year": "2026",
+    "source": "QS WUR 2026, QS city label(s): ['New Delhi', 'Delhi']",
+    "note": "QS labels: New Delhi (within Delhi NCT, counted). Indian Institute of Technology Delhi (IITD) (123); University of Delhi (328)"
+   },
+   "Shanghai": {
+    "value": 5,
+    "year": "2026",
+    "source": "QS WUR 2026, QS city label(s): ['Shanghai']",
+    "note": "Fudan University (30); Shanghai Jiao Tong University (47); Tongji University (177); East China Normal University (433); Shanghai University (465)"
+   },
+   "Beijing": {
+    "value": 7,
+    "year": "2026",
+    "source": "QS WUR 2026, QS city label(s): ['Beijing']",
+    "note": "Peking University (14); Tsinghua University (17); Beijing Normal University (247); Beijing Institute of Technology (259); University of Chinese Academy of Sciences (UCAS) (362); Be"
+   },
+   "Shenzhen": {
+    "value": 2,
+    "year": "2026",
+    "source": "QS WUR 2026, QS city label(s): ['Shenzhen']",
+    "note": "Southern University of Science and Technology (SUSTech) (343); Shenzhen University (452)"
+   },
+   "Abu Dhabi": {
+    "value": 1,
+    "year": "2026",
+    "source": "QS WUR 2026, QS city label(s): ['Abu Dhabi']",
+    "note": "Khalifa University (177)"
    }
   }
  },
@@ -4732,6 +6028,74 @@ window.INDEX_DATA = {
     "year": "2022",
     "source": "OECD DSD_FUA_DEMO@DF_ORIGIN v1.2 (OECD.CFE.EDS), CITY level — Tel Aviv-Yafo (ISR10C)",
     "note": "CONCEPT: foreign-born share of population (OECD ORIGIN=FB, PT_POP); city-level; FUA 2022 = 21.5"
+   },
+   "Hong Kong": {
+    "value": 38.3,
+    "year": "2021",
+    "source": "Born outside Hong Kong, 2021 Population Census (C&SD)",
+    "note": "CONCEPT: place of birth — includes persons born in mainland China/Macao/Taiwan (29.9pp of the 38.3%); born elsewhere only 8.4pp. Main Results Table 3.6: (2,213,862+624,374)/7,413,070 = 38.29%. Interpretation differs shar"
+   },
+   "Taipei": {
+    "value": 3.3,
+    "year": "2025",
+    "source": "Foreign residents share, NIA valid-ARC holders in Taiwan, Dec 2025",
+    "note": "CONCEPT: foreign NATIONALS with residence permits (like Tokyo/Seoul), not foreign-born. NIA 外僑居留人數統計表 11412: Taipei City 84,362 currently-in-Taiwan valid ARC holders; ÷ (2,439,507 household-registered population end-Dec "
+   },
+   "Bangkok": {
+    "value": null,
+    "year": "n/a",
+    "note": "Thailand NSO's 2020 census counted non-Thai nationals but no verifiable official Bangkok-level share was fetchable; left null rather than estimated."
+   },
+   "Kuala Lumpur": {
+    "value": 13.1,
+    "year": "2025",
+    "source": "Non-citizens share of population, DOSM current population estimates 2025",
+    "note": "CONCEPT: NON-CITIZENS (nationality), not foreign-born. OpenDOSM population_state: W.P. Kuala Lumpur 2025 non-citizens 270.7k / 2,074.1k = 13.05% -> 13.1. Note DOSM rebased non-citizen estimates in the 2024/2025 vintages "
+   },
+   "Jakarta": {
+    "value": null,
+    "year": "n/a",
+    "note": "BPS publishes no city-level foreign-born or registered-foreigner share for Jakarta; left null."
+   },
+   "Manila": {
+    "value": null,
+    "year": "n/a",
+    "note": "PSA census does not publish a usable city/metro foreign-born share; left null."
+   },
+   "Ho Chi Minh City": {
+    "value": null,
+    "year": "n/a",
+    "note": "Viet Nam's census does not publish a city-level foreign-born/registered-foreigner share; left null."
+   },
+   "Mumbai": {
+    "value": null,
+    "year": "n/a",
+    "note": "India's last published born-abroad data is Census 2011; too stale to mix with 2021-2026 values. Null pending Census 2027."
+   },
+   "Abu Dhabi": {
+    "value": null,
+    "year": "n/a",
+    "note": "SCAD publishes only a citizens/non-citizens nationality split for the emirate — a different concept, not used (consistent with Dubai's blank in v1.0). No foreign-born stat."
+   },
+   "Shanghai": {
+    "value": null,
+    "year": "n/a",
+    "note": "2020 census: NBS Communique No.8 gives only COMBINED HK/Macao/Taiwan residents + foreigners per province (Shanghai 163,954, ~0.7% incl. HMT Chinese nationals — wrong concept); foreigners-only exists only as national tota"
+   },
+   "Beijing": {
+    "value": null,
+    "year": "n/a",
+    "note": "Same as Shanghai: only combined HMT+foreigners published (Beijing 62,812, ~0.3% incl. HMT). Foreigners-only per city not published. Null."
+   },
+   "Shenzhen": {
+    "value": null,
+    "year": "n/a",
+    "note": "2020 census publishes HMT+foreigners only to province level (Guangdong 418,509); Shenzhen bulletin excludes them from resident population and gives no count. Null."
+   },
+   "Delhi": {
+    "value": null,
+    "year": "n/a",
+    "note": "Same as Mumbai: Census 2011 born-abroad is 15 years stale. Null pending Census 2027."
    }
   }
  },
@@ -4992,6 +6356,74 @@ window.INDEX_DATA = {
     "year": "2025",
     "source": "The Tel Aviv / Rishon LeZion / Petah Tikva area",
     "note": "transit_pnft_2025=0.8785; stable series (87.8/86.6/87.9); Israel has comprehensive national GTFS."
+   },
+   "Hong Kong": {
+    "value": 52.2,
+    "year": "2025",
+    "source": "ITDP Atlas PNFT, The Hong Kong / Kowloon area",
+    "note": "series [('2023', 26.3), ('2024', 50.4), ('2025', 52.2)]; 244 qualifying stops - LIKELY PARTIAL FEED for an agglomeration this size; treat as a lower bound."
+   },
+   "Taipei": {
+    "value": null,
+    "year": "n/a",
+    "note": "The New Taipei / Taipei / Taoyuan area: only zero/artifact values [('2023', 0.0), ('2024', 0.0), ('2025', 0.0)]"
+   },
+   "Bangkok": {
+    "value": null,
+    "year": "n/a",
+    "note": "The Bangkok / Nonthaburi / Pak Kret area: only zero/artifact values [('2023', 0.0), ('2024', 0.0), ('2025', 0.0)]"
+   },
+   "Kuala Lumpur": {
+    "value": null,
+    "year": "n/a",
+    "note": "The Kuala Lumpur / Kajang / Klang area: no PNFT value (no usable open GTFS feed)"
+   },
+   "Jakarta": {
+    "value": 22.6,
+    "year": "2025",
+    "source": "ITDP Atlas PNFT, The Jakarta / Bekasi / Tangerang area",
+    "note": "series [('2023', 24.3), ('2024', 22.9), ('2025', 22.6)]; 6514 qualifying stops"
+   },
+   "Manila": {
+    "value": null,
+    "year": "n/a",
+    "note": "The Quezon City / Manila / Caloocan area: only zero/artifact values [('2023', 0.0), ('2024', 0.0), ('2025', 0.0)]"
+   },
+   "Ho Chi Minh City": {
+    "value": null,
+    "year": "n/a",
+    "note": "The Ho Chi Minh City / Thủ Đức / Thủ Dầu Một area: no PNFT value (no usable open GTFS feed)"
+   },
+   "Mumbai": {
+    "value": null,
+    "year": "n/a",
+    "note": "The Mumbai / Thane / Navi Mumbai area: no PNFT value (no usable open GTFS feed)"
+   },
+   "Abu Dhabi": {
+    "value": 60.8,
+    "year": "2023",
+    "source": "ITDP Atlas PNFT, The Abu Dhabi area",
+    "note": "series [('2023', 60.8), ('2024', 61.4), ('2025', 0.0)]; 239 qualifying stops"
+   },
+   "Shanghai": {
+    "value": null,
+    "year": "n/a",
+    "note": "The Shanghai / Pudong / Taicang area: no PNFT value (no usable open GTFS feed)"
+   },
+   "Beijing": {
+    "value": null,
+    "year": "n/a",
+    "note": "The Beijing / Shunyi / Mentougou area: no PNFT value (no usable open GTFS feed)"
+   },
+   "Shenzhen": {
+    "value": null,
+    "year": "n/a",
+    "note": "The Shenzhen / Guangzhou / Foshan area: only zero/artifact values [('2023', 0.0), ('2024', 0.0), ('2025', 0.0)]"
+   },
+   "Delhi": {
+    "value": null,
+    "year": "n/a",
+    "note": "agglomeration: no PNFT value (no usable open GTFS feed)"
    }
   }
  },
@@ -5267,16 +6699,91 @@ window.INDEX_DATA = {
     "value": null,
     "year": "2025",
     "note": "Not in TomTom Traffic Index 2025 city table (no Israel entries in the 492-city decoded ranking data)."
+   },
+   "Hong Kong": {
+    "value": 47.7,
+    "year": "2025",
+    "source": "TomTom Traffic Index Ranking 2025 - Hong Kong, HK",
+    "note": "city-tab rank 114"
+   },
+   "Taipei": {
+    "value": 43.6,
+    "year": "2025",
+    "source": "TomTom Traffic Index Ranking 2025 - Taipei City, TW",
+    "note": "city-tab rank 70"
+   },
+   "Bangkok": {
+    "value": 67.9,
+    "year": "2025",
+    "source": "TomTom Traffic Index Ranking 2025 - Bangkok, TH",
+    "note": "city-tab rank 10"
+   },
+   "Kuala Lumpur": {
+    "value": 39.1,
+    "year": "2025",
+    "source": "TomTom Traffic Index Ranking 2025 - Kuala Lumpur, MY",
+    "note": "city-tab rank 128"
+   },
+   "Jakarta": {
+    "value": 59.8,
+    "year": "2025",
+    "source": "TomTom Traffic Index Ranking 2025 - Jakarta, ID",
+    "note": "city-tab rank 24"
+   },
+   "Manila": {
+    "value": 57.3,
+    "year": "2025",
+    "source": "TomTom Traffic Index Ranking 2025 - Manila, PH",
+    "note": "city-tab rank 14"
+   },
+   "Ho Chi Minh City": {
+    "value": 40.3,
+    "year": "2025",
+    "source": "TomTom Traffic Index Ranking 2025 - Ho Chi Minh, VN",
+    "note": "city-tab rank 104"
+   },
+   "Mumbai": {
+    "value": 61.5,
+    "year": "2025",
+    "source": "TomTom Traffic Index Ranking 2025 - Mumbai, IN",
+    "note": "city-tab rank 3"
+   },
+   "Delhi": {
+    "value": 55.4,
+    "year": "2025",
+    "source": "TomTom Traffic Index Ranking 2025 - New Delhi, IN",
+    "note": "city-tab rank 17"
+   },
+   "Abu Dhabi": {
+    "value": 25.5,
+    "year": "2025",
+    "source": "TomTom Traffic Index Ranking 2025 - Abu Dhabi, AE",
+    "note": "city-tab rank 375"
+   },
+   "Shanghai": {
+    "value": null,
+    "year": "n/a",
+    "note": "Not in the TomTom 2025 table (TomTom does not cover this market - mainland China and some others excluded)."
+   },
+   "Beijing": {
+    "value": null,
+    "year": "n/a",
+    "note": "Not in the TomTom 2025 table (TomTom does not cover this market - mainland China and some others excluded)."
+   },
+   "Shenzhen": {
+    "value": null,
+    "year": "n/a",
+    "note": "Not in the TomTom 2025 table (TomTom does not cover this market - mainland China and some others excluded)."
    }
   }
  },
  "CON-01": {
   "source": "English Wikipedia per-airport \"Airlines and destinations\" tables (passenger sections only)",
-  "url": "https://en.wikipedia.org/wiki/ (26 airport articles; raw HTML + per-city destination lists archived in session evidence)",
+  "url": "https://en.wikipedia.org/wiki/ (one article per airport in each city's system; raw wikitext/HTML + per-city destination lists archived in session evidence)",
   "license": "CC BY-SA 4.0 (Wikipedia)",
   "edition": "live tables as of 2026-07-12",
   "retrieved": "2026-07-12",
-  "method": "Per airport: parse passenger destination table; include year-round, seasonal and announced routes; exclude charter-only and cargo. Per city: union of INTERNATIONAL (non-domestic) destinations across its airports, deduplicated by wikilink target/normalized name. Counted by 4 parallel agents with a shared rule set; judgment calls recorded per city.",
+  "method": "Per airport: parse passenger destination table; include year-round, seasonal and announced routes; exclude charter-only and cargo. Per city: union of INTERNATIONAL (non-domestic) destinations across its airports, deduplicated by wikilink target/normalized name. Counted by parallel agents with a shared rule set; judgment calls recorded per city.",
   "perCity": {
    "Singapore": {
     "value": 175,
@@ -5518,6 +7025,84 @@ window.INDEX_DATA = {
     "year": "2026-07-12",
     "airports": "TLV",
     "note": "10 routes annotated suspended (war-related, most with stated resume dates, e.g. Amsterdam, Madrid, Copenhagen, Moscow-Domodedovo) RETAINED per strip-annotations rule; only domestic destination is Eilat-Ramon."
+   },
+   "Hong Kong": {
+    "value": 149.0,
+    "year": "2026-07-12",
+    "airports": "HKG",
+    "note": "149 unique passenger destinations, ALL counted international: by the separate-customs-territory convention, mainland China, Macau and Taiwan are international from Hong Kong; HK has no domestic air destinations. Table intact (Apr 2026 purge removed only 2 destinations)."
+   },
+   "Taipei": {
+    "value": null,
+    "year": "n/a",
+    "airports": "TPE+TSA",
+    "note": "NULL - artifact risk: the TPE 'Airlines and destinations' table was gutted 2026-06-30 ('remove unsourced', -27.9 kB): 21 airline rows deleted incl. operating majors (JAL, KLM, Turkish, China Eastern/Southern, Philippine, Etihad...), losing >=14 destinations. Current tables give 99 intl, pre-purge 109; neither reliable, so no value - same treatment as Tokyo/Osaka."
+   },
+   "Bangkok": {
+    "value": 154.0,
+    "year": "2026-07-12",
+    "airports": "BKK+DMK",
+    "note": "Union BKK+DMK: 154 international, domestic = Thailand. Unsourced-row purges (BKK Oct 2025 & 2026-07-05, DMK 2026-05-20) removed small-carrier rows; pre-purge union ~160, so 154 may slightly understate. All major carriers present."
+   },
+   "Kuala Lumpur": {
+    "value": 131.0,
+    "year": "2026-07-12",
+    "airports": "KUL+SZB",
+    "note": "Union KUL (128 intl) + SZB (9 intl) = 131 unique international, domestic = Malaysia. KUL had unsourced-row trims (Jan/Jun 2026) but net destination count unchanged vs pre-purge revision and all major carriers present, so the count is treated as sound."
+   },
+   "Jakarta": {
+    "value": 50.0,
+    "year": "2026-07-12",
+    "airports": "CGK+HLP",
+    "note": "CGK 50 international; HLP passenger table is domestic-only, contributes 0. 6 charter-only destinations excluded at CGK. Dedup by redirect-resolved wikilink; international = Wikidata P17 != Indonesia."
+   },
+   "Manila": {
+    "value": 66.0,
+    "year": "2026-07-12",
+    "airports": "MNL+CRK",
+    "note": "Metro-system definition: MNL (main gateway, 65 intl) + Clark CRK (80 km NW, secondary gateway, 10 intl; 9 overlap, adds only Cheongju) = 66 unique. Charter-only excluded (Ulaanbaatar, Madinah)."
+   },
+   "Ho Chi Minh City": {
+    "value": 75.0,
+    "year": "2026-07-12",
+    "airports": "SGN",
+    "note": "Tan Son Nhat (SGN) passenger table: 75 unique international destinations (20 domestic); no charter-only entries; includes announced 2026-27 routes."
+   },
+   "Mumbai": {
+    "value": 52.0,
+    "year": "2026-07-12",
+    "airports": "BOM",
+    "note": "BOM passenger table: 52 international. A 2026-06-26 unsourced-content cleanup removed 5 international destinations (Male, Tehran, Najaf, Baghdad, Aden); pre-cleanup revision yields 57. Table NOT gutted (45 airline rows remain), so the as-published count is reported but likely slightly undercounts."
+   },
+   "Abu Dhabi": {
+    "value": 165.0,
+    "year": "2026-07-12",
+    "airports": "AUH",
+    "note": "AUH: 165 unique international destinations; 0 domestic (UAE has no scheduled domestic passenger service). 3 charter-only destinations excluded. Includes announced 2026-27 routes."
+   },
+   "Shanghai": {
+    "value": 105.0,
+    "year": "2026-07-12",
+    "airports": "PVG+SHA",
+    "note": "HK/Macau/Taiwan destinations counted international (separate customs territories). PVG table purged of unsourced rows 2025-10-05 and re-sourced since; pre-purge revision yields 112, so 105 may modestly understate (losses mostly secondary Japanese/regional seasonal routes). All major carriers present."
+   },
+   "Beijing": {
+    "value": 124.0,
+    "year": "2026-07-12",
+    "airports": "PEK+PKX",
+    "note": "Union PEK (101 intl) + PKX (55 intl) = 124 unique international. HK/Macau/Taiwan counted international. No purge-scale deletions in either article's history back to late 2023; China Southern absent from PEK genuinely (moved to Daxing 2019)."
+   },
+   "Shenzhen": {
+    "value": 54.0,
+    "year": "2026-07-12",
+    "airports": "SZX",
+    "note": "182 unique destinations, 54 international. HK/Macau/Taiwan counted international; includes Macau scheduled helicopter shuttle (a passenger-table row). History clean back to 2023-07."
+   },
+   "Delhi": {
+    "value": 79.0,
+    "year": "2026-07-12",
+    "airports": "DEL",
+    "note": "DEL passenger table: 79 international, 75 domestic. A 2026-06-18 cleanup was checked against the pre-cleanup revision: destinations table not reduced, no adjustment needed."
    }
   }
  }

@@ -29,15 +29,19 @@ Live at: https://kr48vr.github.io/master-of-all-indices/
   Bump `meta.version` in dataset.js AND `CITATION.cff` together on release.
 
 ## Current status
-The engine works and is published. Phase 2 (real data) is largely done for the
-PILOT set: 18 of the 19 pilot measures now hold verified, sourced values, with
-source/year/method recorded per value in the `provenance` block of `dataset.js`
-(the app ignores that block; it exists to satisfy rule 3). CON-01 (airport
-connectivity) is deliberately all-null pending manual sourcing — its former
-placeholders were removed. The 19 NON-pilot measures have never had data values
-(the app shows them as "no data"); sourcing them would be Phase 3. Any value
-present in `dataset.js` is real and has a `provenance` entry. `SOURCING.md`
-documents the source plan and verdict per pilot measure.
+v2.0.0: the roster expansion is complete — 55 cities × 19 sourced pilot
+measures, ~88% of cells filled, every value with a per-value `provenance`
+entry (source/year/method) and every blank explained (CI-enforced, including
+missing-key detection). Expansion happened in two waves on top of the 16-city
+v1.0.0: Wave 1 added 26 OECD-country cities, Wave 2 the final 13 Asian/Gulf
+cities plus a 40-city waste-recycling dig. Some measures are structurally
+thin outside the OECD (Dealroom counts, UN LOSI, ITDP transit, OECD metro
+GDP, foreign-born stats) — those blanks are principled, with reasons recorded
+per city. Scores re-scale with the city set: v2 ranks are NOT comparable to
+v1.x (state the version when citing). The 19 NON-pilot measures have never
+had data values (the app shows them as "no data"); sourcing them is Phase 3.
+`SOURCING.md` documents the source plan per pilot measure; `ROSTER.md` the
+city-selection rules, named floor exceptions and Wave-2 actuals.
 
 ## How the engine works — do not change it
 For the selected measures: rescale each to 0–100 across the shown cities, flip
@@ -49,9 +53,15 @@ data lowers a city's "coverage %".
 ## Data model (inside dataset.js)
 - 6 areas: Liveable, Green, Smart, Competitive, Talent, Connected.
 - 38 measures total; 19 are the "pilot" set (best data coverage) — start there.
-- 16 cities: Singapore, Tokyo, Copenhagen, Zurich, Vienna, Seoul, Melbourne,
-  Amsterdam, London, New York, Paris, Toronto, Berlin, Barcelona, Dubai,
-  San Francisco.
+- 55 cities: the 16 v1.0 cities (Singapore, Tokyo, Copenhagen, Zurich, Vienna,
+  Seoul, Melbourne, Amsterdam, London, New York, Paris, Toronto, Berlin,
+  Barcelona, Dubai, San Francisco) plus the v2.0 roster from ROSTER.md —
+  Europe (Stockholm, Oslo, Helsinki, Madrid, Milan, Rome, Munich, Frankfurt,
+  Hamburg, Brussels, Dublin, Lisbon, Prague, Warsaw, Istanbul), Americas &
+  Oceania (Montreal, Vancouver, Chicago, Boston, Los Angeles, Seattle,
+  Washington DC, Sydney, Auckland), Asia & Gulf (Osaka, Tel Aviv, Hong Kong,
+  Taipei, Bangkok, Kuala Lumpur, Jakarta, Manila, Ho Chi Minh City, Mumbai,
+  Abu Dhabi, Shanghai, Beijing, Shenzhen, Delhi).
 - Each measure carries honesty flags: `dataLevel` (City / Metro / Country proxy),
   `direction` (higher / lower), `approx` (crowd / perception / self-reported /
   modelled / none), and a `caveat`. These flags drive the badges in the app, so

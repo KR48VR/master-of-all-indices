@@ -57,13 +57,13 @@ them. If you need to check the receipts, you're in the right place.
 | `city_index_blueprint.xlsx` | The measure catalog (reference, not read by the app). |
 | `scripts/` | Integrity checker and CSV generator (plain Node, no deps). |
 
-Current scale: 16 cities × 19 sourced measures (of a 38-measure catalog), 93%
+Current scale: 55 cities × 19 sourced measures (of a 38-measure catalog), 88%
 of cells filled — live figures are computed on the site's *Methods & choices*
-section. Target: ~50 cities × ~35 measures with ≥85% coverage, 100% provenance.
+section. Next: growing the measure set toward ~35 (Phase 3), same bar per cell.
 
 ## Cite
 
-> Poon, K. W. Master Index Workbench, v1.0.0 (2026). https://kr48vr.github.io/master-of-all-indices/
+> Poon, K. W. Master Index Workbench, v2.0.0 (2026). https://kr48vr.github.io/master-of-all-indices/
 
 See `CITATION.cff` (GitHub's "Cite this repository" button uses it). Please
 state the version: adding cities re-scales all scores, so scores are comparable
