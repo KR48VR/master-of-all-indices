@@ -71,32 +71,32 @@ window.INDEX_DATA = {
 "Barcelona":{"LIV-01": 0.69, "LIV-04": 84.2, "LIV-05": 4.47, "LIV-06": 13.8, "GRN-01": 10.9, "GRN-02": null, "GRN-05": 42.1, "SMT-01": 338.8, "SMT-03": null, "SMT-05": 95.8, "CMP-01": 52064, "CMP-04": 28.5, "CMP-06": 222, "TAL-01": 46.9, "TAL-02": 5, "TAL-06": 27.3, "CON-01": 202, "CON-03": 66.9, "CON-05": 41.1},
 "Dubai":{"LIV-01": 0.69, "LIV-04": 83.1, "LIV-05": 3.35, "LIV-06": 7.8, "GRN-01": 35.0, "GRN-02": 40.6, "GRN-05": null, "SMT-01": 359.0, "SMT-03": 90.63, "SMT-05": 100.0, "CMP-01": null, "CMP-04": null, "CMP-06": 661, "TAL-01": 41.0, "TAL-02": 0, "TAL-06": null, "CON-01": 310, "CON-03": 24.8, "CON-05": 42.7},
 "San Francisco":{"LIV-01": 5.76, "LIV-04": 79.0, "LIV-05": 3.02, "LIV-06": 6.5, "GRN-01": 7.4, "GRN-02": null, "GRN-05": 53.1, "SMT-01": 367.7, "SMT-03": null, "SMT-05": 94.7, "CMP-01": 146853, "CMP-04": 320.8, "CMP-06": 20260, "TAL-01": 46.9, "TAL-02": 0, "TAL-06": 32.4, "CON-01": 60, "CON-03": 29.6, "CON-05": 49.7},
-"Stockholm":{"SMT-01": 302.2, "CMP-01": 81394, "LIV-04": 85.0, "TAL-01": 60.0, "LIV-05": 4.91, "LIV-01": 1.15, "SMT-05": 95.8, "GRN-01": 4.9},
-"Oslo":{"SMT-01": 281.9, "CMP-01": 63394, "LIV-04": 83.3, "TAL-01": 56.5, "LIV-05": 6.8, "LIV-01": 0.72, "SMT-05": 99.0, "GRN-01": 8.5},
-"Helsinki":{"SMT-01": 238.8, "CMP-01": 66107, "LIV-04": 81.9, "TAL-01": 48.1, "LIV-05": 3.72, "LIV-01": 0.98, "SMT-05": 93.7, "GRN-01": 5.4},
-"Madrid":{"SMT-01": 382.3, "CMP-01": 59768, "LIV-04": 85.4, "TAL-01": 50.0, "LIV-05": 6.18, "LIV-01": 0.69, "SMT-05": 95.8, "GRN-01": 10.3},
-"Milan":{"SMT-01": 429.2, "CMP-01": 82014, "LIV-04": 84.7, "TAL-01": 23.6, "LIV-05": 5.59, "LIV-01": 0.57, "SMT-05": 89.2, "GRN-01": 20.4},
-"Rome":{"SMT-01": 376.5, "CMP-01": 65690, "LIV-04": 83.6, "TAL-01": 28.5, "LIV-05": 6.77, "LIV-01": 0.57, "SMT-05": 89.2, "GRN-01": 11.8},
-"Munich":{"SMT-01": 221.7, "CMP-01": 102244, "LIV-04": 83.1, "TAL-01": 38.6, "LIV-05": 4.56, "LIV-01": 0.91, "SMT-05": 93.5, "GRN-01": 7.9},
-"Frankfurt":{"SMT-01": 232.1, "CMP-01": 82688, "LIV-04": 81.9, "TAL-01": 35.6, "LIV-05": 4.27, "LIV-01": 0.91, "SMT-05": 93.5, "GRN-01": 8.7},
-"Hamburg":{"SMT-01": 196.7, "CMP-01": 77768, "LIV-04": 80.9, "TAL-01": 43.0, "LIV-05": 6.4, "LIV-01": 0.91, "SMT-05": 93.5, "GRN-01": 9.1},
-"Brussels":{"SMT-01": 266.9, "CMP-01": 78040, "LIV-04": 82.2, "TAL-01": 56.9, "LIV-05": 4.44, "LIV-01": 1.08, "SMT-05": 95.8, "GRN-01": 7.6},
-"Dublin":{"SMT-01": 337.0, "CMP-01": 141694, "LIV-04": 83.3, "TAL-01": 61.0, "LIV-05": null, "LIV-01": 0.65, "SMT-05": 97.2, "GRN-01": 7.3},
-"Lisbon":{"SMT-01": 354.4, "CMP-01": 50408, "LIV-04": 81.2, "TAL-01": 43.3, "LIV-05": 8.37, "LIV-01": 0.72, "SMT-05": 88.5, "GRN-01": 7.6},
-"Prague":{"SMT-01": 258.9, "CMP-01": 83056, "LIV-04": 81.1, "TAL-01": 54.8, "LIV-05": 8.24, "LIV-01": 0.77, "SMT-05": 87.7, "GRN-01": 13.4},
-"Warsaw":{"SMT-01": 362.9, "CMP-01": 81920, "LIV-04": 81.0, "TAL-01": 65.3, "LIV-05": 6.3, "LIV-01": 0.8, "SMT-05": 88.6, "GRN-01": 14.7},
-"Istanbul":{"SMT-01": 251.2, "CMP-01": 56428, "LIV-04": 77.1, "TAL-01": 31.8, "LIV-05": 2.96, "LIV-01": 3.23, "SMT-05": 89.8, "GRN-01": 50.5},
-"Montreal":{"SMT-01": 334.2, "CMP-01": 38730, "LIV-04": 82.5, "TAL-01": 59.0, "LIV-05": 2.6, "LIV-01": 1.98, "SMT-05": 94.4, "GRN-01": 8.6},
-"Vancouver":{"SMT-01": 374.2, "CMP-01": 45902, "LIV-04": 81.5, "TAL-01": 64.0, "LIV-05": 2.71, "LIV-01": 1.98, "SMT-05": 94.4, "GRN-01": 6.0},
-"Chicago":{"SMT-01": 392.9, "CMP-01": 75524, "LIV-04": 76.8, "TAL-01": 50.9, "LIV-05": 3.7, "LIV-01": 5.76, "SMT-05": 94.7, "GRN-01": 8.7},
-"Boston":{"SMT-01": 361.6, "CMP-01": 101761, "LIV-04": 79.0, "TAL-01": 58.2, "LIV-05": 5.52, "LIV-01": 5.76, "SMT-05": 94.7, "GRN-01": 6.4},
-"Los Angeles":{"SMT-01": 392.1, "CMP-01": 70646, "LIV-04": 79.0, "TAL-01": 46.9, "LIV-05": 3.02, "LIV-01": 5.76, "SMT-05": 94.7, "GRN-01": 10.5},
-"Seattle":{"SMT-01": 410.0, "CMP-01": 111516, "LIV-04": 79.2, "TAL-01": 52.9, "LIV-05": 2.98, "LIV-01": 5.76, "SMT-05": 94.7, "GRN-01": 6.1},
-"Washington DC":{"SMT-01": 362.5, "CMP-01": 83988, "LIV-04": 78.0, "TAL-01": 70.7, "LIV-05": 12.02, "LIV-01": 5.76, "SMT-05": 94.7, "GRN-01": 6.3},
-"Sydney":{"SMT-01": 239.5, "CMP-01": 45152, "LIV-04": 84.1, "TAL-01": 52.5, "LIV-05": 4.58, "LIV-01": 0.85, "SMT-05": 96.1, "GRN-01": null},
-"Auckland":{"SMT-01": 283.4, "CMP-01": 55906, "LIV-04": 82.7, "TAL-01": 45.5, "LIV-05": 3.47, "LIV-01": 1.46, "SMT-05": 93.5, "GRN-01": 5.5},
-"Osaka":{"SMT-01": 295.1, "CMP-01": 41497, "LIV-04": 84.2, "TAL-01": 56.9, "LIV-05": 2.92, "LIV-01": 0.23, "SMT-05": 85.5, "GRN-01": 9.4},
-"Tel Aviv":{"SMT-01": 366.9, "CMP-01": null, "LIV-04": 83.1, "TAL-01": 60.4, "LIV-05": 4.9, "LIV-01": 1.63, "SMT-05": 88.2, "GRN-01": 17.4}
+"Stockholm":{"SMT-01": 302.2, "CMP-01": 81394, "LIV-04": 85.0, "TAL-01": 60.0, "LIV-05": 4.91, "LIV-01": 1.15, "SMT-05": 95.8, "GRN-01": 4.9, "GRN-02": 86.0},
+"Oslo":{"SMT-01": 281.9, "CMP-01": 63394, "LIV-04": 83.3, "TAL-01": 56.5, "LIV-05": 6.8, "LIV-01": 0.72, "SMT-05": 99.0, "GRN-01": 8.5, "GRN-02": 56.0},
+"Helsinki":{"SMT-01": 238.8, "CMP-01": 66107, "LIV-04": 81.9, "TAL-01": 48.1, "LIV-05": 3.72, "LIV-01": 0.98, "SMT-05": 93.7, "GRN-01": 5.4, "GRN-02": null},
+"Madrid":{"SMT-01": 382.3, "CMP-01": 59768, "LIV-04": 85.4, "TAL-01": 50.0, "LIV-05": 6.18, "LIV-01": 0.69, "SMT-05": 95.8, "GRN-01": 10.3, "GRN-02": 63.1},
+"Milan":{"SMT-01": 429.2, "CMP-01": 82014, "LIV-04": 84.7, "TAL-01": 23.6, "LIV-05": 5.59, "LIV-01": 0.57, "SMT-05": 89.2, "GRN-01": 20.4, "GRN-02": 76.2},
+"Rome":{"SMT-01": 376.5, "CMP-01": 65690, "LIV-04": 83.6, "TAL-01": 28.5, "LIV-05": 6.77, "LIV-01": 0.57, "SMT-05": 89.2, "GRN-01": 11.8, "GRN-02": 80.0},
+"Munich":{"SMT-01": 221.7, "CMP-01": 102244, "LIV-04": 83.1, "TAL-01": 38.6, "LIV-05": 4.56, "LIV-01": 0.91, "SMT-05": 93.5, "GRN-01": 7.9, "GRN-02": null},
+"Frankfurt":{"SMT-01": 232.1, "CMP-01": 82688, "LIV-04": 81.9, "TAL-01": 35.6, "LIV-05": 4.27, "LIV-01": 0.91, "SMT-05": 93.5, "GRN-01": 8.7, "GRN-02": null},
+"Hamburg":{"SMT-01": 196.7, "CMP-01": 77768, "LIV-04": 80.9, "TAL-01": 43.0, "LIV-05": 6.4, "LIV-01": 0.91, "SMT-05": 93.5, "GRN-01": 9.1, "GRN-02": 78.2},
+"Brussels":{"SMT-01": 266.9, "CMP-01": 78040, "LIV-04": 82.2, "TAL-01": 56.9, "LIV-05": 4.44, "LIV-01": 1.08, "SMT-05": 95.8, "GRN-01": 7.6, "GRN-02": 85.8},
+"Dublin":{"SMT-01": 337.0, "CMP-01": 141694, "LIV-04": 83.3, "TAL-01": 61.0, "LIV-05": null, "LIV-01": 0.65, "SMT-05": 97.2, "GRN-01": 7.3, "GRN-02": 84.2},
+"Lisbon":{"SMT-01": 354.4, "CMP-01": 50408, "LIV-04": 81.2, "TAL-01": 43.3, "LIV-05": 8.37, "LIV-01": 0.72, "SMT-05": 88.5, "GRN-01": 7.6, "GRN-02": 87.4},
+"Prague":{"SMT-01": 258.9, "CMP-01": 83056, "LIV-04": 81.1, "TAL-01": 54.8, "LIV-05": 8.24, "LIV-01": 0.77, "SMT-05": 87.7, "GRN-01": 13.4, "GRN-02": 83.5},
+"Warsaw":{"SMT-01": 362.9, "CMP-01": 81920, "LIV-04": 81.0, "TAL-01": 65.3, "LIV-05": 6.3, "LIV-01": 0.8, "SMT-05": 88.6, "GRN-01": 14.7, "GRN-02": 88.0},
+"Istanbul":{"SMT-01": 251.2, "CMP-01": 56428, "LIV-04": 77.1, "TAL-01": 31.8, "LIV-05": 2.96, "LIV-01": 3.23, "SMT-05": 89.8, "GRN-01": 50.5, "GRN-02": 59.8},
+"Montreal":{"SMT-01": 334.2, "CMP-01": 38730, "LIV-04": 82.5, "TAL-01": 59.0, "LIV-05": 2.6, "LIV-01": 1.98, "SMT-05": 94.4, "GRN-01": 8.6, "GRN-02": 91.8},
+"Vancouver":{"SMT-01": 374.2, "CMP-01": 45902, "LIV-04": 81.5, "TAL-01": 64.0, "LIV-05": 2.71, "LIV-01": 1.98, "SMT-05": 94.4, "GRN-01": 6.0, "GRN-02": null},
+"Chicago":{"SMT-01": 392.9, "CMP-01": 75524, "LIV-04": 76.8, "TAL-01": 50.9, "LIV-05": 3.7, "LIV-01": 5.76, "SMT-05": 94.7, "GRN-01": 8.7, "GRN-02": 47.8},
+"Boston":{"SMT-01": 361.6, "CMP-01": 101761, "LIV-04": 79.0, "TAL-01": 58.2, "LIV-05": 5.52, "LIV-01": 5.76, "SMT-05": 94.7, "GRN-01": 6.4, "GRN-02": 68.2},
+"Los Angeles":{"SMT-01": 392.1, "CMP-01": 70646, "LIV-04": 79.0, "TAL-01": 46.9, "LIV-05": 3.02, "LIV-01": 5.76, "SMT-05": 94.7, "GRN-01": 10.5, "GRN-02": null},
+"Seattle":{"SMT-01": 410.0, "CMP-01": 111516, "LIV-04": 79.2, "TAL-01": 52.9, "LIV-05": 2.98, "LIV-01": 5.76, "SMT-05": 94.7, "GRN-01": 6.1, "GRN-02": 63.5},
+"Washington DC":{"SMT-01": 362.5, "CMP-01": 83988, "LIV-04": 78.0, "TAL-01": 70.7, "LIV-05": 12.02, "LIV-01": 5.76, "SMT-05": 94.7, "GRN-01": 6.3, "GRN-02": 52.8},
+"Sydney":{"SMT-01": 239.5, "CMP-01": 45152, "LIV-04": 84.1, "TAL-01": 52.5, "LIV-05": 4.58, "LIV-01": 0.85, "SMT-05": 96.1, "GRN-01": null, "GRN-02": 33.4},
+"Auckland":{"SMT-01": 283.4, "CMP-01": 55906, "LIV-04": 82.7, "TAL-01": 45.5, "LIV-05": 3.47, "LIV-01": 1.46, "SMT-05": 93.5, "GRN-01": 5.5, "GRN-02": 88.4},
+"Osaka":{"SMT-01": 295.1, "CMP-01": 41497, "LIV-04": 84.2, "TAL-01": 56.9, "LIV-05": 2.92, "LIV-01": 0.23, "SMT-05": 85.5, "GRN-01": 9.4, "GRN-02": 72.2},
+"Tel Aviv":{"SMT-01": 366.9, "CMP-01": null, "LIV-04": 83.1, "TAL-01": 60.4, "LIV-05": 4.9, "LIV-01": 1.63, "SMT-05": 88.2, "GRN-01": 17.4, "GRN-02": 65.7}
 },
 "provenance":{
  "LIV-01": {
@@ -1916,6 +1916,157 @@ window.INDEX_DATA = {
     "value": null,
     "year": "2020",
     "note": "Null per rules: UN-Habitat's national-sample construction omits San Francisco CA; nearby San Jose exists in the file but is a different city and was not substituted. Also absent from the green-areas companion file."
+   },
+   "Stockholm": {
+    "value": 86.0,
+    "year": "2020",
+    "source": "City Code SE_STOCKHOLM / City Name 'Stockholm' (Sweden)",
+    "note": "col [b] pop. within 400m walk of open public space; raw 85.96437964029612"
+   },
+   "Oslo": {
+    "value": 56.0,
+    "year": "2022",
+    "source": "City Code NO_OSLO / City Name 'Oslo' (Norway)",
+    "note": "col [b] pop. within 400m walk of open public space; raw 56.000037585683614; latest of 2 non-blank rows (others: [('2018', '56')])"
+   },
+   "Helsinki": {
+    "value": null,
+    "year": "n/a",
+    "note": "City not present in UN-Habitat SDG 11.7.1 table (sdg_11-7-1.csv, 1711 rows) — confirmed by accent-normalized substring search; left null."
+   },
+   "Madrid": {
+    "value": 63.1,
+    "year": "2020",
+    "source": "City Code ES_MADRID / City Name 'Madrid' (Spain)",
+    "note": "col [b] pop. within 400m walk of open public space; raw 63.12604019448668"
+   },
+   "Milan": {
+    "value": 76.2,
+    "year": "2020",
+    "source": "City Code IT_MILANO / City Name 'Milano (Milan)' (Italy)",
+    "note": "col [b] pop. within 400m walk of open public space; raw 76.21590965651872"
+   },
+   "Rome": {
+    "value": 80.0,
+    "year": "2020",
+    "source": "City Code IT_ROMA / City Name 'Roma (Rome)' (Italy)",
+    "note": "col [b] pop. within 400m walk of open public space; raw 80.04956961629782"
+   },
+   "Munich": {
+    "value": null,
+    "year": "n/a",
+    "note": "City not present in UN-Habitat SDG 11.7.1 table (sdg_11-7-1.csv, 1711 rows) — confirmed by accent-normalized substring search; left null."
+   },
+   "Frankfurt": {
+    "value": null,
+    "year": "n/a",
+    "note": "City not present in UN-Habitat SDG 11.7.1 table (sdg_11-7-1.csv, 1711 rows) — confirmed by accent-normalized substring search; left null."
+   },
+   "Hamburg": {
+    "value": 78.2,
+    "year": "2020",
+    "source": "City Code DE_HAMBURG / City Name 'Hamburg' (Germany)",
+    "note": "col [b] pop. within 400m walk of open public space; raw 78.20667555518477"
+   },
+   "Brussels": {
+    "value": 85.8,
+    "year": "2020",
+    "source": "City Code BE_BRUXELLES / City Name 'Bruxelles-Brussel' (Belgium)",
+    "note": "col [b] pop. within 400m walk of open public space; raw 85.81047593478537"
+   },
+   "Dublin": {
+    "value": 84.2,
+    "year": "2020",
+    "source": "City Code IE_DUBLIN / City Name 'Dublin' (Ireland)",
+    "note": "col [b] pop. within 400m walk of open public space; raw 84.24154094300785"
+   },
+   "Lisbon": {
+    "value": 87.4,
+    "year": "2020",
+    "source": "City Code PT_LISBOA / City Name 'Lisboa (Lisbon)' (Portugal)",
+    "note": "col [b] pop. within 400m walk of open public space; raw 87.42410412082377"
+   },
+   "Prague": {
+    "value": 83.5,
+    "year": "2020",
+    "source": "City Code CZ_PRAHA / City Name 'Praha (Prague)' (Czechia)",
+    "note": "col [b] pop. within 400m walk of open public space; raw 83.54677682853324"
+   },
+   "Warsaw": {
+    "value": 88.0,
+    "year": "2020",
+    "source": "City Code PL_WARSZAWA / City Name 'Warszawa (Warsaw)' (Poland)",
+    "note": "col [b] pop. within 400m walk of open public space; raw 87.9503102113149"
+   },
+   "Istanbul": {
+    "value": 59.8,
+    "year": "2020",
+    "source": "City Code TR_ISTANBUL / City Name 'Istanbul' (Türkiye)",
+    "note": "col [b] pop. within 400m walk of open public space; raw 59.78115215902099; 1 blank-value duplicate row(s) ignored"
+   },
+   "Montreal": {
+    "value": 91.8,
+    "year": "2020",
+    "source": "City Code CA_MONTREAL_QUE / City Name 'Montréal' (Canada)",
+    "note": "col [b] pop. within 400m walk of open public space; raw 91.80630156189909"
+   },
+   "Vancouver": {
+    "value": null,
+    "year": "n/a",
+    "note": "City not present in UN-Habitat SDG 11.7.1 table (sdg_11-7-1.csv, 1711 rows) — confirmed by accent-normalized substring search; left null."
+   },
+   "Chicago": {
+    "value": 47.8,
+    "year": "2020",
+    "source": "City Code US_CHICAGO_IL / City Name 'Chicago' (United States of America)",
+    "note": "col [b] pop. within 400m walk of open public space; raw 47.84582347745486"
+   },
+   "Boston": {
+    "value": 68.2,
+    "year": "2020",
+    "source": "City Code US_BOSTON / City Name 'Boston' (United States of America)",
+    "note": "col [b] pop. within 400m walk of open public space; raw 68.16232443542638"
+   },
+   "Los Angeles": {
+    "value": null,
+    "year": "n/a",
+    "note": "City not present in UN-Habitat SDG 11.7.1 table (sdg_11-7-1.csv, 1711 rows) — confirmed by accent-normalized substring search; left null."
+   },
+   "Seattle": {
+    "value": 63.5,
+    "year": "2020",
+    "source": "City Code US_SEATTLE / City Name 'Seattle' (United States of America)",
+    "note": "col [b] pop. within 400m walk of open public space; raw 63.46851224746973"
+   },
+   "Washington DC": {
+    "value": 52.8,
+    "year": "2020",
+    "source": "City Code US_WASHINGTON_D_C / City Name 'Washington, D.C.' (United States of America)",
+    "note": "col [b] pop. within 400m walk of open public space; raw 52.80240014132506"
+   },
+   "Sydney": {
+    "value": 33.4,
+    "year": "2020",
+    "source": "City Code AU_SYDNEY / City Name 'Sydney' (Australia)",
+    "note": "col [b] pop. within 400m walk of open public space; raw 33.378630658442155"
+   },
+   "Auckland": {
+    "value": 88.4,
+    "year": "2020",
+    "source": "City Code NZ_AUCKLAND / City Name 'Auckland' (New Zealand)",
+    "note": "col [b] pop. within 400m walk of open public space; raw 88.44423455352216"
+   },
+   "Osaka": {
+    "value": 72.2,
+    "year": "2020",
+    "source": "City Code JP_OSAKA / City Name 'Osaka' (Japan)",
+    "note": "col [b] pop. within 400m walk of open public space; raw 72.21445774289073"
+   },
+   "Tel Aviv": {
+    "value": 65.7,
+    "year": "2021",
+    "source": "City Code IL_TEL_AVIV_YAFO / City Name 'Tel Aviv-Yafo (Tel Aviv-Jaffa)' (Israel)",
+    "note": "col [b] pop. within 400m walk of open public space; raw 65.70408763024312"
    }
   }
  },
