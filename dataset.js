@@ -53,7 +53,7 @@ window.INDEX_DATA = {
 {"id": "CON-04", "domain": "Connected", "subtheme": "Urban Mobility", "name": "Commute time", "measures": "Average one-way commute", "unit": "minutes", "direction": "lower", "dataLevel": "City", "source": "Numbeo / Moovit", "appearsIn": "—", "pilot": 0, "caveat": "Crowd-sourced component.", "contestable": 0, "approx": "crowd"},
 {"id": "CON-05", "domain": "Connected", "subtheme": "Urban Mobility", "name": "Traffic congestion", "measures": "Extra travel time caused by congestion", "unit": "%", "direction": "lower", "dataLevel": "City", "source": "TomTom Traffic Index", "appearsIn": "—", "pilot": 1, "caveat": "TomTom Traffic Index \"Ranking 2025\" (full-year 2025, city-center definition): average extra travel time vs free-flow. Seoul is not covered by TomTom — INRIX also excludes Korea (blank).", "contestable": 0, "approx": "none"}
 ],
-"cities":["Singapore", "Tokyo", "Copenhagen", "Zurich", "Vienna", "Seoul", "Melbourne", "Amsterdam", "London", "New York", "Paris", "Toronto", "Berlin", "Barcelona", "Dubai", "San Francisco", "Stockholm", "Oslo", "Helsinki", "Madrid", "Milan", "Rome", "Munich", "Frankfurt", "Hamburg", "Brussels", "Dublin", "Lisbon", "Prague", "Warsaw", "Istanbul", "Montreal", "Vancouver", "Chicago", "Boston", "Los Angeles", "Seattle", "Washington DC", "Sydney", "Auckland", "Osaka", "Tel Aviv"],
+"cities":["Singapore", "Tokyo", "Copenhagen", "Zurich", "Vienna", "Seoul", "Melbourne", "Amsterdam", "London", "New York", "Paris", "Toronto", "Berlin", "Barcelona", "Dubai", "San Francisco", "Stockholm", "Oslo", "Helsinki", "Madrid", "Milan", "Rome", "Munich", "Frankfurt", "Hamburg", "Brussels", "Dublin", "Lisbon", "Prague", "Warsaw", "Istanbul", "Montreal", "Vancouver", "Chicago", "Boston", "Los Angeles", "Seattle", "Washington DC", "Sydney", "Auckland", "Osaka", "Tel Aviv", "Hong Kong", "Taipei", "Bangkok", "Kuala Lumpur", "Jakarta", "Manila", "Ho Chi Minh City", "Mumbai", "Abu Dhabi", "Shanghai", "Beijing", "Shenzhen", "Delhi"],
 "data":{
 "Singapore":{"LIV-01": 0.07, "LIV-04": 83.9, "LIV-05": 2.9, "LIV-06": 24.7, "GRN-01": 12.0, "GRN-02": 70.3, "GRN-05": 52.0, "SMT-01": 567.1, "SMT-03": 87.5, "SMT-05": 94.4, "CMP-01": 132570, "CMP-04": 68.1, "CMP-06": 690, "TAL-01": 54.1, "TAL-02": 2, "TAL-06": 48.7, "CON-01": 175, "CON-03": 28.0, "CON-05": 43.9},
 "Tokyo":{"LIV-01": 0.23, "LIV-04": 84.9, "LIV-05": 3.26, "LIV-06": 16.0, "GRN-01": 10.8, "GRN-02": 74.8, "GRN-05": 21.4, "SMT-01": 313.7, "SMT-03": 85.42, "SMT-05": 85.5, "CMP-01": 50287, "CMP-04": 14.8, "CMP-06": 81, "TAL-01": 64.2, "TAL-02": 4, "TAL-06": 5.6, "CON-01": null, "CON-03": null, "CON-05": 44.1},
@@ -96,7 +96,20 @@ window.INDEX_DATA = {
 "Sydney":{"SMT-01": 239.5, "CMP-01": 45152, "LIV-04": 84.1, "TAL-01": 52.5, "LIV-05": 4.58, "LIV-01": 0.85, "SMT-05": 96.1, "GRN-01": null, "GRN-02": 33.4, "LIV-06": 12.5, "CON-05": 43.7, "CON-03": 49.2, "SMT-03": 77.08, "TAL-02": 4, "CON-01": 65, "TAL-06": 38.6, "GRN-05": null, "CMP-04": 40.1, "CMP-06": 250},
 "Auckland":{"SMT-01": 283.4, "CMP-01": 55906, "LIV-04": 82.7, "TAL-01": 45.5, "LIV-05": 3.47, "LIV-01": 1.46, "SMT-05": 93.5, "GRN-01": 5.5, "GRN-02": 88.4, "LIV-06": 10.5, "CON-05": 42.2, "CON-03": 37.6, "SMT-03": 80.21, "TAL-02": 2, "CON-01": 46, "TAL-06": 42.5, "GRN-05": null, "CMP-04": null, "CMP-06": 166},
 "Osaka":{"SMT-01": 295.1, "CMP-01": 41497, "LIV-04": 84.2, "TAL-01": 56.9, "LIV-05": 2.92, "LIV-01": 0.23, "SMT-05": 85.5, "GRN-01": 9.4, "GRN-02": 72.2, "LIV-06": 10.6, "CON-05": 42.9, "CON-03": null, "SMT-03": null, "TAL-02": 1, "CON-01": null, "TAL-06": 6.8, "GRN-05": null, "CMP-04": 3.7, "CMP-06": 21},
-"Tel Aviv":{"SMT-01": 366.9, "CMP-01": null, "LIV-04": 83.1, "TAL-01": 60.4, "LIV-05": 4.9, "LIV-01": 1.63, "SMT-05": 88.2, "GRN-01": 17.4, "GRN-02": 65.7, "LIV-06": 20.0, "CON-05": null, "CON-03": 87.9, "SMT-03": null, "TAL-02": 1, "CON-01": 114, "TAL-06": 23.5, "GRN-05": null, "CMP-04": null, "CMP-06": 2111}
+"Tel Aviv":{"SMT-01": 366.9, "CMP-01": null, "LIV-04": 83.1, "TAL-01": 60.4, "LIV-05": 4.9, "LIV-01": 1.63, "SMT-05": 88.2, "GRN-01": 17.4, "GRN-02": 65.7, "LIV-06": 20.0, "CON-05": null, "CON-03": 87.9, "SMT-03": null, "TAL-02": 1, "CON-01": 114, "TAL-06": 23.5, "GRN-05": null, "CMP-04": null, "CMP-06": 2111},
+"Hong Kong":{"SMT-01": 431.6},
+"Taipei":{"SMT-01": 258.2},
+"Bangkok":{"SMT-01": 375.6},
+"Kuala Lumpur":{"SMT-01": 272.1},
+"Jakarta":{"SMT-01": 97.7},
+"Manila":{"SMT-01": 198.9},
+"Ho Chi Minh City":{"SMT-01": 269.6},
+"Mumbai":{"SMT-01": 93.4},
+"Abu Dhabi":{"SMT-01": 348.1},
+"Shanghai":{"SMT-01": 458.1},
+"Beijing":{"SMT-01": 331.9},
+"Shenzhen":{"SMT-01": 314.9},
+"Delhi":{"SMT-01": 120.5}
 },
 "provenance":{
  "LIV-01": {
@@ -1134,6 +1147,165 @@ window.INDEX_DATA = {
     "tiles": 456,
     "tests": 70038,
     "note": "THIN sample: 456 tiles / 70038 tests (threshold 500 tiles / 20000 tests)"
+   },
+   "Shanghai": {
+    "value": 458.1,
+    "year": "2026 Q1",
+    "bbox": [
+     121.2,
+     30.95,
+     121.8,
+     31.45
+    ],
+    "tiles": 5784,
+    "tests": 160005,
+    "note": "Mainland-China Speedtest sample may skew toward users measuring international connectivity; dense sample but interpret with care."
+   },
+   "Beijing": {
+    "value": 331.9,
+    "year": "2026 Q1",
+    "bbox": [
+     116.15,
+     39.75,
+     116.65,
+     40.1
+    ],
+    "tiles": 3870,
+    "tests": 56718,
+    "note": "Mainland-China Speedtest sample may skew toward users measuring international connectivity; dense sample but interpret with care."
+   },
+   "Shenzhen": {
+    "value": 314.9,
+    "year": "2026 Q1",
+    "bbox": [
+     113.75,
+     22.45,
+     114.35,
+     22.75
+    ],
+    "tiles": 2646,
+    "tests": 79761,
+    "note": "Mainland-China Speedtest sample may skew toward users measuring international connectivity; dense sample but interpret with care."
+   },
+   "Hong Kong": {
+    "value": 431.6,
+    "year": "2026 Q1",
+    "bbox": [
+     113.85,
+     22.15,
+     114.35,
+     22.55
+    ],
+    "tiles": 1891,
+    "tests": 384829
+   },
+   "Taipei": {
+    "value": 258.2,
+    "year": "2026 Q1",
+    "bbox": [
+     121.45,
+     24.95,
+     121.65,
+     25.15
+    ],
+    "tiles": 1077,
+    "tests": 391702
+   },
+   "Bangkok": {
+    "value": 375.6,
+    "year": "2026 Q1",
+    "bbox": [
+     100.35,
+     13.6,
+     100.75,
+     13.95
+    ],
+    "tiles": 4665,
+    "tests": 545764
+   },
+   "Kuala Lumpur": {
+    "value": 272.1,
+    "year": "2026 Q1",
+    "bbox": [
+     101.55,
+     3.0,
+     101.8,
+     3.25
+    ],
+    "tiles": 1820,
+    "tests": 314454
+   },
+   "Jakarta": {
+    "value": 97.7,
+    "year": "2026 Q1",
+    "bbox": [
+     106.7,
+     -6.35,
+     107.0,
+     -6.1
+    ],
+    "tiles": 2416,
+    "tests": 639684
+   },
+   "Manila": {
+    "value": 198.9,
+    "year": "2026 Q1",
+    "bbox": [
+     120.9,
+     14.45,
+     121.15,
+     14.75
+    ],
+    "tiles": 1826,
+    "tests": 981482
+   },
+   "Ho Chi Minh City": {
+    "value": 269.6,
+    "year": "2026 Q1",
+    "bbox": [
+     106.55,
+     10.65,
+     106.85,
+     10.9
+    ],
+    "tiles": 2033,
+    "tests": 454528
+   },
+   "Mumbai": {
+    "value": 93.4,
+    "year": "2026 Q1",
+    "bbox": [
+     72.75,
+     18.9,
+     73.05,
+     19.3
+    ],
+    "tiles": 1865,
+    "tests": 314353
+   },
+   "Delhi": {
+    "value": 120.5,
+    "year": "2026 Q1",
+    "bbox": [
+     76.95,
+     28.4,
+     77.4,
+     28.85
+    ],
+    "tiles": 5131,
+    "tests": 704262
+   },
+   "Abu Dhabi": {
+    "value": 348.1,
+    "year": "2026 Q1",
+    "bbox": [
+     54.3,
+     24.3,
+     54.65,
+     24.55
+    ],
+    "tiles": 1434,
+    "tests": 111780
    }
   },
   "edition": ""
