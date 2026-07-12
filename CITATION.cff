@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: >-
+  If you use the Master Index Workbench or its dataset, please cite it as below
+  and state the version you used — scores are comparable within a version, not
+  across versions.
+title: "Master Index Workbench"
+type: dataset
+version: 1.0.0
+date-released: 2026-07-12
+url: "https://kr48vr.github.io/master-of-all-indices/"
+repository-code: "https://github.com/KR48VR/master-of-all-indices"
+abstract: >-
+  A build-your-own city index with a provenance-first dataset: 16 cities, 19
+  sourced measures across six areas (Liveable, Green, Smart, Competitive,
+  Talent, Connected). Every value records its source, reference year, method
+  and caveats; missing data is left blank and explained, never estimated.
+authors:
+  - name: "KR48VR"
+    website: "https://github.com/KR48VR"
+keywords:
+  - cities
+  - composite-index
+  - liveability
+  - open-data
+  - data-provenance
