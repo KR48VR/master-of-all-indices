@@ -44,7 +44,7 @@ section. Target: ~50 cities × ~35 measures with ≥85% coverage, 100% provenanc
 
 ## Cite
 
-> Master Index Workbench, v1.0.0 (2026). https://kr48vr.github.io/master-of-all-indices/
+> Poon, K. W. Master Index Workbench, v1.0.0 (2026). https://kr48vr.github.io/master-of-all-indices/
 
 See `CITATION.cff` (GitHub's "Cite this repository" button uses it). Please
 state the version: adding cities re-scales all scores, so scores are comparable

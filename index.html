@@ -323,7 +323,7 @@ button{font-family:inherit}
       <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> &mdash; chosen because some
       upstream sources (WHO, Ookla) share their data on those terms and we cannot grant more rights than we have.
       Each value's own source license is recorded in its provenance; check it before commercial reuse.</p>
-      <p><b>Cite as:</b> <span class="mono" style="font-size:11.5px">Master Index Workbench, v<span id="m-ver2">1.0.0</span>
+      <p><b>Cite as:</b> <span class="mono" style="font-size:11.5px">Poon, K. W. Master Index Workbench, v<span id="m-ver2">1.0.0</span>
       (2026). https://kr48vr.github.io/master-of-all-indices/</span> &mdash; and please cite the version you used.</p>
 
       <p style="margin-top:16px">Full sourcing plan and per-measure verdicts:
@@ -520,6 +520,7 @@ function renderControls_light(){ // update counts + approx without rebuilding sl
     card.classList.toggle('off', !on);
     const t=card.querySelector('.toggle'); if(t) t.classList.toggle('on', on);
   });
+  document.querySelectorAll('#method .mbtn').forEach(b=>b.classList.toggle('act', b.dataset.m===state.method));
   renderApprox();
 }
 
