@@ -182,6 +182,26 @@ button{font-family:inherit}
 .provpop dd a{color:var(--amber); text-decoration:underline dotted; overflow-wrap:anywhere;}
 .provpop .pnull{color:var(--amber); font-style:italic}
 .provhint{color:var(--ink3)}
+
+/* methods & choices */
+.mlink{display:inline-block; margin-top:10px; font-size:12px; color:var(--amber);
+  text-decoration:underline dotted; text-underline-offset:3px;}
+.mlink:hover{color:var(--ink)}
+.methods{margin-top:30px; padding:26px 30px 30px; border:1px solid var(--line); border-radius:12px;
+  background:var(--panel); scroll-margin-top:20px;}
+.methods h3{font-family:"IBM Plex Mono",monospace; font-size:11px; letter-spacing:.14em;
+  text-transform:uppercase; color:var(--ink3); margin:0 0 14px; font-weight:600}
+.methods h4{font-family:"Fraunces",serif; font-size:17px; font-weight:600; margin:26px 0 8px; color:var(--ink)}
+.methods h4:first-of-type{margin-top:6px}
+.methods p, .methods li{font-size:13px; color:var(--ink2); line-height:1.6; max-width:76ch;}
+.methods p{margin:0 0 10px}
+.methods ul{margin:0 0 10px; padding-left:20px}
+.methods b{color:var(--ink); font-weight:600}
+.methods a{color:var(--amber); text-decoration:underline dotted; text-underline-offset:2px;}
+.mstats{display:flex; flex-wrap:wrap; gap:10px; margin:14px 0 6px;}
+.mstat{border:1px solid var(--line); border-radius:10px; padding:10px 14px; background:var(--paper); min-width:118px;}
+.mstat .n{font-family:"IBM Plex Mono",monospace; font-size:19px; font-weight:600; color:var(--ink);}
+.mstat .l{font-size:10.5px; color:var(--ink3); letter-spacing:.04em; margin-top:2px;}
 </style>
 </head>
 <body>
@@ -190,6 +210,7 @@ button{font-family:inherit}
     <div class="kick">Modular City Index &middot; Phase 3 prototype</div>
     <h1>The Index Workbench</h1>
     <p>Pick the big areas, mix them, add or drop any measure &mdash; and watch the ranking rebuild live. Every approximation stays visible.</p>
+    <a class="mlink" href="#methods">Why trust this? Methods &amp; choices &darr;</a>
   </div>
   <div class="flag" role="note">
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 3 2 20h20L12 3Z" stroke="#B4740E" stroke-width="1.7" stroke-linejoin="round"/><path d="M12 9v5" stroke="#B4740E" stroke-width="1.7" stroke-linecap="round"/><circle cx="12" cy="17" r="1" fill="#B4740E"/></svg>
@@ -236,6 +257,67 @@ button{font-family:inherit}
       </div>
       <div class="foot">Engine defaults: measures rescaled 0&ndash;100 across the shown cities, "lower is better" measures flipped automatically, then rolled up measure &rarr; sub-theme &rarr; area &rarr; composite. Weights are equal unless you change them. A measure with no data for a city is dropped from that city's score, and the drop shows up in coverage.</div>
     </div>
+
+    <section class="methods" id="methods">
+      <h3>Methods &amp; choices</h3>
+
+      <h4>Why this exists</h4>
+      <p>City indices keep multiplying &mdash; liveability, green, smart, competitive &mdash; until the labels stop
+      meaning anything. This workbench takes the opposite bet: <b>one honest engine, one shared pool of measures</b>,
+      and you decide what to blend. Its only claim to authority is that every number can prove where it came from.</p>
+
+      <h4>The rules we hold ourselves to</h4>
+      <ul>
+        <li><b>No number is ever invented, estimated or interpolated.</b> If a value can't be verified from a real
+        source, the cell stays blank &mdash; and the blank is explained (click it).</li>
+        <li><b>Every value carries its receipt.</b> Source, reference year, extraction method and caveats are recorded
+        per value and shown in the click-through popover. Reference years differ across cities within a measure;
+        we show the year rather than pretend otherwise.</li>
+        <li><b>Compromises are flagged, never hidden.</b> Metro-level stand-ins, country proxies, crowd-sourced and
+        modelled figures are all badged in the table, and the amber line above the ranking counts them.</li>
+        <li><b>Missing data costs visibility, not rank.</b> A city missing a measure has that measure dropped from its
+        own score and its coverage % reduced &mdash; it is never punished with an assumed zero.</li>
+      </ul>
+
+      <h4>Where the index stands today</h4>
+      <div class="mstats">
+        <div class="mstat"><div class="n" id="m-cities">&ndash;</div><div class="l">cities</div></div>
+        <div class="mstat"><div class="n" id="m-sourced">&ndash;</div><div class="l">measures with sourced data</div></div>
+        <div class="mstat"><div class="n" id="m-cells">&ndash;</div><div class="l">values, all with provenance</div></div>
+        <div class="mstat"><div class="n" id="m-cov">&ndash;</div><div class="l">cell coverage</div></div>
+        <div class="mstat"><div class="n" id="m-blanks">&ndash;</div><div class="l">explained blanks</div></div>
+      </div>
+      <p>These figures are computed live from the dataset, so this page cannot drift out of date with the data.
+      The catalog defines <span id="m-catalog">38</span> measures in six areas; those not yet sourced show as
+      "no data" until real values exist for them.</p>
+
+      <h4>How big should this get?</h4>
+      <p>Our target is roughly <b>50 cities and ~35 measures</b> &mdash; deliberately not more. The reasoning:</p>
+      <ul>
+        <li><b>Cities.</b> Below ~30, the 0&ndash;100 rescaling is twitchy &mdash; one outlier stretches everyone's scale.
+        Around 50, we cover essentially every city people actually compare, while staying inside the geography where
+        verifiable public sources exist. At 100+, honesty breaks: new cells would be mostly country proxies and
+        blanks, trading integrity for the appearance of breadth. (GPCI, the most methodologically serious comparable
+        index, covers 48 cities &mdash; not a coincidence.)</li>
+        <li><b>Measures.</b> Below ~4 per area, one bad source can swing an entire area score. Above ~40 in total,
+        look-alike measures (income, GDP, venture capital&hellip;) start silently over-weighting a single idea, and
+        every extra measure is another source to keep fresh, forever. Established indices sit in the same band:
+        EIU ~30, Mercer 39.</li>
+        <li><b>The bar that matters is not the counts</b> but: at least 85% of cells filled, 100% of filled cells with
+        provenance, and every blank explained. We would rather be the reference for 50 cities than a rumour about 200.</li>
+      </ul>
+
+      <h4>Known limits</h4>
+      <p>Reference years are mixed within measures (each value shows its own). Some cities carry state- or
+      province-level stand-ins where nothing finer is published. A few sources are crowd-maintained or modelled and
+      are flagged as such. Definitions genuinely differ for waste recycling across cities &mdash; the caveats say so
+      bluntly. When a better source appears, the value is upgraded and the provenance updated.</p>
+
+      <p style="margin-top:16px">Full sourcing plan and per-measure verdicts:
+      <a href="https://github.com/KR48VR/master-of-all-indices/blob/main/SOURCING.md">SOURCING.md</a> &middot;
+      raw data with provenance: <a href="https://github.com/KR48VR/master-of-all-indices/blob/main/dataset.js">dataset.js</a> &middot;
+      engine &amp; data are open on <a href="https://github.com/KR48VR/master-of-all-indices">GitHub</a>.</p>
+    </section>
   </main>
 </div>
 
@@ -557,6 +639,25 @@ function showProv(vid, city, anchor){
   pop.style.left=left+'px'; pop.style.top=top+'px';
   provEl=pop;
 }
+
+// ---- methods section: stats computed live from the dataset ----
+(function(){
+  const prov = P.provenance||{};
+  const sourced = P.variables.filter(v => P.cities.some(c => P.data[c][v.id]!==null && P.data[c][v.id]!==undefined) || prov[v.id]);
+  let filled=0, withProv=0;
+  sourced.forEach(v => P.cities.forEach(c => {
+    const val = P.data[c][v.id];
+    if(val!==null && val!==undefined){ filled++; if(prov[v.id]) withProv++; }
+  }));
+  const total = sourced.length * P.cities.length;
+  const set=(id,txt)=>{ const el=document.getElementById(id); if(el) el.textContent=txt; };
+  set('m-cities', P.cities.length);
+  set('m-sourced', sourced.length);
+  set('m-cells', withProv===filled ? filled : `${withProv}/${filled}`);
+  set('m-cov', total? Math.round(filled/total*100)+'%' : '—');
+  set('m-blanks', total-filled);
+  set('m-catalog', P.variables.length);
+})();
 
 renderControls();
 recompute(true);
