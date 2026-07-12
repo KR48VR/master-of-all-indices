@@ -97,19 +97,19 @@ window.INDEX_DATA = {
 "Auckland":{"SMT-01": 283.4, "CMP-01": 55906, "LIV-04": 82.7, "TAL-01": 45.5, "LIV-05": 3.47, "LIV-01": 1.46, "SMT-05": 93.5, "GRN-01": 5.5, "GRN-02": 88.4, "LIV-06": 10.5, "CON-05": 42.2, "CON-03": 37.6, "SMT-03": 80.21, "TAL-02": 2, "CON-01": 46, "TAL-06": 42.5, "GRN-05": null, "CMP-04": null, "CMP-06": 166},
 "Osaka":{"SMT-01": 295.1, "CMP-01": 41497, "LIV-04": 84.2, "TAL-01": 56.9, "LIV-05": 2.92, "LIV-01": 0.23, "SMT-05": 85.5, "GRN-01": 9.4, "GRN-02": 72.2, "LIV-06": 10.6, "CON-05": 42.9, "CON-03": null, "SMT-03": null, "TAL-02": 1, "CON-01": null, "TAL-06": 6.8, "GRN-05": null, "CMP-04": 3.7, "CMP-06": 21},
 "Tel Aviv":{"SMT-01": 366.9, "CMP-01": null, "LIV-04": 83.1, "TAL-01": 60.4, "LIV-05": 4.9, "LIV-01": 1.63, "SMT-05": 88.2, "GRN-01": 17.4, "GRN-02": 65.7, "LIV-06": 20.0, "CON-05": null, "CON-03": 87.9, "SMT-03": null, "TAL-02": 1, "CON-01": 114, "TAL-06": 23.5, "GRN-05": null, "CMP-04": null, "CMP-06": 2111},
-"Hong Kong":{"SMT-01": 431.6},
-"Taipei":{"SMT-01": 258.2},
-"Bangkok":{"SMT-01": 375.6},
-"Kuala Lumpur":{"SMT-01": 272.1},
-"Jakarta":{"SMT-01": 97.7},
-"Manila":{"SMT-01": 198.9},
-"Ho Chi Minh City":{"SMT-01": 269.6},
-"Mumbai":{"SMT-01": 93.4},
-"Abu Dhabi":{"SMT-01": 348.1},
-"Shanghai":{"SMT-01": 458.1},
-"Beijing":{"SMT-01": 331.9},
-"Shenzhen":{"SMT-01": 314.9},
-"Delhi":{"SMT-01": 120.5}
+"Hong Kong":{"SMT-01": 431.6, "TAL-02": 5, "CON-03": 52.2, "CON-05": 47.7, "CMP-01": 66154},
+"Taipei":{"SMT-01": 258.2, "TAL-02": 4, "CON-03": null, "CON-05": 43.6, "CMP-01": null},
+"Bangkok":{"SMT-01": 375.6, "TAL-02": 1, "CON-03": null, "CON-05": 67.9, "CMP-01": null},
+"Kuala Lumpur":{"SMT-01": 272.1, "TAL-02": 4, "CON-03": null, "CON-05": 39.1, "CMP-01": null},
+"Jakarta":{"SMT-01": 97.7, "TAL-02": 0, "CON-03": 22.6, "CON-05": 59.8, "CMP-01": null},
+"Manila":{"SMT-01": 198.9, "TAL-02": 0, "CON-03": null, "CON-05": 57.3, "CMP-01": null},
+"Ho Chi Minh City":{"SMT-01": 269.6, "TAL-02": 0, "CON-03": null, "CON-05": 40.3, "CMP-01": null},
+"Mumbai":{"SMT-01": 93.4, "TAL-02": 1, "CON-03": null, "CON-05": 61.5, "CMP-01": null},
+"Abu Dhabi":{"SMT-01": 348.1, "TAL-02": 1, "CON-03": 60.8, "CON-05": 25.5, "CMP-01": null},
+"Shanghai":{"SMT-01": 458.1, "TAL-02": 5, "CON-03": null, "CON-05": null, "CMP-01": null},
+"Beijing":{"SMT-01": 331.9, "TAL-02": 7, "CON-03": null, "CON-05": null, "CMP-01": null},
+"Shenzhen":{"SMT-01": 314.9, "TAL-02": 2, "CON-03": null, "CON-05": null, "CMP-01": null},
+"Delhi":{"SMT-01": 120.5, "TAL-02": 2, "CON-03": null, "CON-05": 55.4, "CMP-01": null}
 },
 "provenance":{
  "LIV-01": {
@@ -3457,6 +3457,72 @@ window.INDEX_DATA = {
     "value": null,
     "year": "n/a",
     "note": "null - no GDP data exists for Tel Aviv in either source: current flow DSD_FUA_ECO@DF_ECONOMY v1.1 has only EMPW (employment) rows for ISR10F, and archived DF_CITIES has only environmental/hazard variables for ISR10 (no G"
+   },
+   "Hong Kong": {
+    "value": 66154,
+    "year": "2024",
+    "source": "World Bank NY.GDP.PCAP.PP.KD - GDP per capita, PPP (constant 2021 international $), Hong Kong SAR",
+    "note": "SAR-level figure (city-territory, Singapore treatment); constant-PPP basis close to but not identical with the OECD metros (2021 vs 2015 base) - disclosed."
+   },
+   "Taipei": {
+    "value": null,
+    "year": "n/a",
+    "note": "No honest metro PPP GDP exists: municipal GDP is published in local currency only, and converting it with our own PPP factors would be modelling (banned by rule 1)."
+   },
+   "Bangkok": {
+    "value": null,
+    "year": "n/a",
+    "note": "No honest metro PPP GDP exists: municipal GDP is published in local currency only, and converting it with our own PPP factors would be modelling (banned by rule 1)."
+   },
+   "Kuala Lumpur": {
+    "value": null,
+    "year": "n/a",
+    "note": "No honest metro PPP GDP exists: municipal GDP is published in local currency only, and converting it with our own PPP factors would be modelling (banned by rule 1)."
+   },
+   "Jakarta": {
+    "value": null,
+    "year": "n/a",
+    "note": "No honest metro PPP GDP exists: municipal GDP is published in local currency only, and converting it with our own PPP factors would be modelling (banned by rule 1)."
+   },
+   "Manila": {
+    "value": null,
+    "year": "n/a",
+    "note": "No honest metro PPP GDP exists: municipal GDP is published in local currency only, and converting it with our own PPP factors would be modelling (banned by rule 1)."
+   },
+   "Ho Chi Minh City": {
+    "value": null,
+    "year": "n/a",
+    "note": "No honest metro PPP GDP exists: municipal GDP is published in local currency only, and converting it with our own PPP factors would be modelling (banned by rule 1)."
+   },
+   "Mumbai": {
+    "value": null,
+    "year": "n/a",
+    "note": "No honest metro PPP GDP exists: municipal GDP is published in local currency only, and converting it with our own PPP factors would be modelling (banned by rule 1)."
+   },
+   "Abu Dhabi": {
+    "value": null,
+    "year": "n/a",
+    "note": "No honest metro PPP GDP exists: municipal GDP is published in local currency only, and converting it with our own PPP factors would be modelling (banned by rule 1)."
+   },
+   "Shanghai": {
+    "value": null,
+    "year": "n/a",
+    "note": "Municipal GDP published in CNY (official); no PPP metro figure exists and self-converting would be modelling - blank per rule 1."
+   },
+   "Beijing": {
+    "value": null,
+    "year": "n/a",
+    "note": "Municipal GDP published in CNY (official); no PPP metro figure exists and self-converting would be modelling - blank per rule 1."
+   },
+   "Shenzhen": {
+    "value": null,
+    "year": "n/a",
+    "note": "Municipal GDP published in CNY (official); no PPP metro figure exists and self-converting would be modelling - blank per rule 1."
+   },
+   "Delhi": {
+    "value": null,
+    "year": "n/a",
+    "note": "No honest metro PPP GDP exists: municipal GDP is published in local currency only, and converting it with our own PPP factors would be modelling (banned by rule 1)."
    }
   }
  },
@@ -4629,6 +4695,84 @@ window.INDEX_DATA = {
     "year": "2026",
     "source": "QS WUR 2026, QS city label(s): ['Tel Aviv']",
     "note": "Tel Aviv University (223)"
+   },
+   "Hong Kong": {
+    "value": 5,
+    "year": "2026",
+    "source": "QS WUR 2026, QS city label(s): ['Hong Kong']",
+    "note": "The University of Hong Kong (11); The Chinese University of Hong Kong (CUHK) (32); The Hong Kong University of Science and Technology (44); The Hong Kong Polytechnic University (54"
+   },
+   "Taipei": {
+    "value": 4,
+    "year": "2026",
+    "source": "QS WUR 2026, QS city label(s): ['Taipei', 'Taipei City']",
+    "note": "National Taiwan University (NTU) (63); National Taiwan University of Science and Technology (Taiwan Tech) (345); National Taipei University of Technology (420); National Taiwan Nor"
+   },
+   "Bangkok": {
+    "value": 1,
+    "year": "2026",
+    "source": "QS WUR 2026, QS city label(s): ['Bangkok']",
+    "note": "Chulalongkorn University (221)"
+   },
+   "Kuala Lumpur": {
+    "value": 4,
+    "year": "2026",
+    "source": "QS WUR 2026, QS city label(s): ['Kuala Lumpur']",
+    "note": "Universiti Malaya (UM) (58); Taylor's University (253); UCSI University (269); Sunway University (410)"
+   },
+   "Jakarta": {
+    "value": 0,
+    "year": "2026",
+    "source": "QS WUR 2026, QS city label(s): []",
+    "note": "True zero: Universitas Indonesia carries QS city Depok (excluded, city-proper rule)."
+   },
+   "Manila": {
+    "value": 0,
+    "year": "2026",
+    "source": "QS WUR 2026, QS city label(s): []",
+    "note": "True zero: UP Diliman and Ateneo carry QS city Quezon City (excluded, city-proper rule); no Manila-proper top-500 entry."
+   },
+   "Ho Chi Minh City": {
+    "value": 0,
+    "year": "2026",
+    "source": "QS WUR 2026, QS city label(s): []",
+    "note": "True zero under the city-proper rule."
+   },
+   "Mumbai": {
+    "value": 1,
+    "year": "2026",
+    "source": "QS WUR 2026, QS city label(s): ['Mumbai']",
+    "note": "Indian Institute of Technology Bombay (IITB) (129)"
+   },
+   "Delhi": {
+    "value": 2,
+    "year": "2026",
+    "source": "QS WUR 2026, QS city label(s): ['New Delhi', 'Delhi']",
+    "note": "QS labels: New Delhi (within Delhi NCT, counted). Indian Institute of Technology Delhi (IITD) (123); University of Delhi (328)"
+   },
+   "Shanghai": {
+    "value": 5,
+    "year": "2026",
+    "source": "QS WUR 2026, QS city label(s): ['Shanghai']",
+    "note": "Fudan University (30); Shanghai Jiao Tong University (47); Tongji University (177); East China Normal University (433); Shanghai University (465)"
+   },
+   "Beijing": {
+    "value": 7,
+    "year": "2026",
+    "source": "QS WUR 2026, QS city label(s): ['Beijing']",
+    "note": "Peking University (14); Tsinghua University (17); Beijing Normal University (247); Beijing Institute of Technology (259); University of Chinese Academy of Sciences (UCAS) (362); Be"
+   },
+   "Shenzhen": {
+    "value": 2,
+    "year": "2026",
+    "source": "QS WUR 2026, QS city label(s): ['Shenzhen']",
+    "note": "Southern University of Science and Technology (SUSTech) (343); Shenzhen University (452)"
+   },
+   "Abu Dhabi": {
+    "value": 1,
+    "year": "2026",
+    "source": "QS WUR 2026, QS city label(s): ['Abu Dhabi']",
+    "note": "Khalifa University (177)"
    }
   }
  },
@@ -5164,6 +5308,74 @@ window.INDEX_DATA = {
     "year": "2025",
     "source": "The Tel Aviv / Rishon LeZion / Petah Tikva area",
     "note": "transit_pnft_2025=0.8785; stable series (87.8/86.6/87.9); Israel has comprehensive national GTFS."
+   },
+   "Hong Kong": {
+    "value": 52.2,
+    "year": "2025",
+    "source": "ITDP Atlas PNFT, The Hong Kong / Kowloon area",
+    "note": "series [('2023', 26.3), ('2024', 50.4), ('2025', 52.2)]; 244 qualifying stops - LIKELY PARTIAL FEED for an agglomeration this size; treat as a lower bound."
+   },
+   "Taipei": {
+    "value": null,
+    "year": "n/a",
+    "note": "The New Taipei / Taipei / Taoyuan area: only zero/artifact values [('2023', 0.0), ('2024', 0.0), ('2025', 0.0)]"
+   },
+   "Bangkok": {
+    "value": null,
+    "year": "n/a",
+    "note": "The Bangkok / Nonthaburi / Pak Kret area: only zero/artifact values [('2023', 0.0), ('2024', 0.0), ('2025', 0.0)]"
+   },
+   "Kuala Lumpur": {
+    "value": null,
+    "year": "n/a",
+    "note": "The Kuala Lumpur / Kajang / Klang area: no PNFT value (no usable open GTFS feed)"
+   },
+   "Jakarta": {
+    "value": 22.6,
+    "year": "2025",
+    "source": "ITDP Atlas PNFT, The Jakarta / Bekasi / Tangerang area",
+    "note": "series [('2023', 24.3), ('2024', 22.9), ('2025', 22.6)]; 6514 qualifying stops"
+   },
+   "Manila": {
+    "value": null,
+    "year": "n/a",
+    "note": "The Quezon City / Manila / Caloocan area: only zero/artifact values [('2023', 0.0), ('2024', 0.0), ('2025', 0.0)]"
+   },
+   "Ho Chi Minh City": {
+    "value": null,
+    "year": "n/a",
+    "note": "The Ho Chi Minh City / Thủ Đức / Thủ Dầu Một area: no PNFT value (no usable open GTFS feed)"
+   },
+   "Mumbai": {
+    "value": null,
+    "year": "n/a",
+    "note": "The Mumbai / Thane / Navi Mumbai area: no PNFT value (no usable open GTFS feed)"
+   },
+   "Abu Dhabi": {
+    "value": 60.8,
+    "year": "2023",
+    "source": "ITDP Atlas PNFT, The Abu Dhabi area",
+    "note": "series [('2023', 60.8), ('2024', 61.4), ('2025', 0.0)]; 239 qualifying stops"
+   },
+   "Shanghai": {
+    "value": null,
+    "year": "n/a",
+    "note": "The Shanghai / Pudong / Taicang area: no PNFT value (no usable open GTFS feed)"
+   },
+   "Beijing": {
+    "value": null,
+    "year": "n/a",
+    "note": "The Beijing / Shunyi / Mentougou area: no PNFT value (no usable open GTFS feed)"
+   },
+   "Shenzhen": {
+    "value": null,
+    "year": "n/a",
+    "note": "The Shenzhen / Guangzhou / Foshan area: only zero/artifact values [('2023', 0.0), ('2024', 0.0), ('2025', 0.0)]"
+   },
+   "Delhi": {
+    "value": null,
+    "year": "n/a",
+    "note": "agglomeration: no PNFT value (no usable open GTFS feed)"
    }
   }
  },
@@ -5439,6 +5651,81 @@ window.INDEX_DATA = {
     "value": null,
     "year": "2025",
     "note": "Not in TomTom Traffic Index 2025 city table (no Israel entries in the 492-city decoded ranking data)."
+   },
+   "Hong Kong": {
+    "value": 47.7,
+    "year": "2025",
+    "source": "TomTom Traffic Index Ranking 2025 - Hong Kong, HK",
+    "note": "city-tab rank 114"
+   },
+   "Taipei": {
+    "value": 43.6,
+    "year": "2025",
+    "source": "TomTom Traffic Index Ranking 2025 - Taipei City, TW",
+    "note": "city-tab rank 70"
+   },
+   "Bangkok": {
+    "value": 67.9,
+    "year": "2025",
+    "source": "TomTom Traffic Index Ranking 2025 - Bangkok, TH",
+    "note": "city-tab rank 10"
+   },
+   "Kuala Lumpur": {
+    "value": 39.1,
+    "year": "2025",
+    "source": "TomTom Traffic Index Ranking 2025 - Kuala Lumpur, MY",
+    "note": "city-tab rank 128"
+   },
+   "Jakarta": {
+    "value": 59.8,
+    "year": "2025",
+    "source": "TomTom Traffic Index Ranking 2025 - Jakarta, ID",
+    "note": "city-tab rank 24"
+   },
+   "Manila": {
+    "value": 57.3,
+    "year": "2025",
+    "source": "TomTom Traffic Index Ranking 2025 - Manila, PH",
+    "note": "city-tab rank 14"
+   },
+   "Ho Chi Minh City": {
+    "value": 40.3,
+    "year": "2025",
+    "source": "TomTom Traffic Index Ranking 2025 - Ho Chi Minh, VN",
+    "note": "city-tab rank 104"
+   },
+   "Mumbai": {
+    "value": 61.5,
+    "year": "2025",
+    "source": "TomTom Traffic Index Ranking 2025 - Mumbai, IN",
+    "note": "city-tab rank 3"
+   },
+   "Delhi": {
+    "value": 55.4,
+    "year": "2025",
+    "source": "TomTom Traffic Index Ranking 2025 - New Delhi, IN",
+    "note": "city-tab rank 17"
+   },
+   "Abu Dhabi": {
+    "value": 25.5,
+    "year": "2025",
+    "source": "TomTom Traffic Index Ranking 2025 - Abu Dhabi, AE",
+    "note": "city-tab rank 375"
+   },
+   "Shanghai": {
+    "value": null,
+    "year": "n/a",
+    "note": "Not in the TomTom 2025 table (TomTom does not cover this market - mainland China and some others excluded)."
+   },
+   "Beijing": {
+    "value": null,
+    "year": "n/a",
+    "note": "Not in the TomTom 2025 table (TomTom does not cover this market - mainland China and some others excluded)."
+   },
+   "Shenzhen": {
+    "value": null,
+    "year": "n/a",
+    "note": "Not in the TomTom 2025 table (TomTom does not cover this market - mainland China and some others excluded)."
    }
   }
  },
