@@ -163,3 +163,42 @@ set grows, so v2.0 ranks are not comparable to v1.x.
 
 Working data for this study (per-city, per-measure marks and the raw artifact checks)
 is preserved in the session records; the matrices above are the decision-relevant summary.
+
+## Wave 2 outcome — projection vs. actual (recorded at v2.0.0, 2026-07-12)
+
+The floor above was applied on *projected* coverage. After sourcing everything,
+actual coverage came in lower for the non-OECD additions, because five measures
+turned out structurally thinner outside the OECD than projected: CMP-04
+(Dealroom shows no startup count for smaller hubs — 24 of 55 cities blank),
+SMT-03 (UN LOSI scores ~1 city per country — 22 blank), CON-03 (ITDP transit
+feeds absent/artifactual — 20 blank), CMP-01 (OECD-only metro GDP — 14 blank),
+TAL-06 (foreign-born rarely published in Asia — 12 blank).
+
+**Cities over the 3-blank floor at v2.0.0** (blanks of 19; all blanks are
+explained per value):
+
+| City | Blanks | Named exception? |
+|---|---|---|
+| Taipei | 6 | no |
+| Shenzhen | 6 | yes |
+| Beijing | 6 | yes |
+| Ho Chi Minh City | 5 | no |
+| Delhi | 5 | yes |
+| Bangkok | 5 | no |
+| Abu Dhabi | 5 | no |
+| Tel Aviv | 4 | no |
+| Shanghai | 4 | yes |
+| Mumbai | 4 | no |
+| Manila | 4 | no |
+| Jakarta | 4 | no |
+| Istanbul | 4 | no |
+| Dubai | 4 | yes |
+
+Nine cities breach the floor without being named exceptions. They were kept in
+v2.0.0 because their gaps are the same *structural* kind the exceptions were
+named for (source-coverage geography, not informational poverty), dropping them
+would undo the roster's purpose (closing the Asia gap), and the app already
+prices blanks honestly via each city's visible coverage %. This is a standing
+policy question: either these nine join the exception list, or Phase 3 must
+prefer measures with genuinely global sources so the floor becomes attainable
+outside the OECD.
