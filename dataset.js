@@ -26,7 +26,7 @@ window.INDEX_DATA = {
 {"id": "GRN-02", "domain": "Green", "subtheme": "Air & Environment", "name": "Open space access", "measures": "% of residents within 400 m walk of an open public space", "unit": "%", "direction": "higher", "dataLevel": "City", "source": "UN-Habitat SDG 11.7.1", "appearsIn": "—", "pilot": 1, "caveat": "SDG 11.7.1 access measure (2020): \"open public space\" includes plazas and squares, not only green areas, and the share is computed from OpenStreetMap public-space mapping plus a modelled population grid — not a survey. Replaces the original \"within 300 m of green space\" definition, which no global source publishes. Barcelona and San Francisco are outside UN-Habitat’s city sample (blank).", "contestable": 0, "approx": "modelled"},
 {"id": "GRN-03", "domain": "Green", "subtheme": "Climate & Emissions", "name": "CO2 per capita", "measures": "Territorial emissions per resident", "unit": "tonnes", "direction": "lower", "dataLevel": "City", "source": "Global Covenant of Mayors", "appearsIn": "—", "pilot": 0, "caveat": "Self-reported by cities; has gaps.", "contestable": 0, "approx": "self-reported"},
 {"id": "GRN-04", "domain": "Green", "subtheme": "Climate & Emissions", "name": "Renewable share", "measures": "% of city energy from renewables", "unit": "%", "direction": "higher", "dataLevel": "City", "source": "WCCD (ISO 37120)", "appearsIn": "—", "pilot": 0, "caveat": "Only for cities that report to WCCD.", "contestable": 0, "approx": "self-reported"},
-{"id": "GRN-05", "domain": "Green", "subtheme": "Resource Efficiency", "name": "Waste recycled", "measures": "% of municipal waste recycled", "unit": "%", "direction": "higher", "dataLevel": "City", "source": "Official city/national waste statistics", "appearsIn": "—", "pilot": 1, "caveat": "Compiled city-by-city from official sources — definitions are NOT directly comparable: mixes recycling, separate-collection and diversion rates; household-only vs all municipal waste (Singapore’s 52% overall vs ~12% domestic); Vienna computed from official tonnages (no official rate published); San Francisco/Toronto report diversion. Years 2023-2025. Dubai publishes no rate (blank).", "contestable": 0, "approx": "self-reported"},
+{"id": "GRN-05", "domain": "Green", "subtheme": "Resource Efficiency", "name": "Waste recycled", "measures": "% of municipal waste recycled", "unit": "%", "direction": "higher", "dataLevel": "City", "source": "Official city/national waste statistics", "appearsIn": "—", "pilot": 1, "caveat": "Compiled city-by-city from official sources — definitions are NOT directly comparable: mixes true recycling rates, separate-collection shares (Milan, Rome, Madrid, Prague, Frankfurt, Stockholm) and landfill-diversion rates (San Francisco, Toronto, Montreal, Washington DC, Sydney, Chicago, Auckland, Manila, Abu Dhabi; Tel Aviv's includes waste-to-energy); scopes differ (Singapore's 52% overall vs ~12% domestic; Chicago and Osaka structurally low from narrow administrative scope; Vancouver metro-wide all sectors incl. construction). Kuala Lumpur and Dublin are NATIONAL rates (country proxy); Abu Dhabi is the emirate; Vienna and Frankfurt are computed from official tonnages (no rate published). Years mostly 2023-2025 — Boston 2019, Hamburg 2020 and Manila 2015 are those cities' latest official rates. Cities publishing no genuine rate are blank, each with the reason recorded.", "contestable": 0, "approx": "self-reported"},
 {"id": "GRN-06", "domain": "Green", "subtheme": "Resource Efficiency", "name": "Water use per capita", "measures": "Daily water consumption per resident", "unit": "litres/day", "direction": "lower", "dataLevel": "City", "source": "WCCD", "appearsIn": "—", "pilot": 0, "caveat": "", "contestable": 0, "approx": "self-reported"},
 {"id": "GRN-07", "domain": "Green", "subtheme": "Climate Risk", "name": "Hazard exposure", "measures": "Modelled exposure to flood / extreme heat", "unit": "index", "direction": "lower", "dataLevel": "City", "source": "WRI / modelled", "appearsIn": "—", "pilot": 0, "caveat": "Modelled estimate, not observed.", "contestable": 0, "approx": "modelled"},
 {"id": "SMT-01", "domain": "Smart", "subtheme": "Connectivity", "name": "Broadband speed", "measures": "Test-weighted mean fixed download speed (Ookla open-data tiles)", "unit": "Mbps", "direction": "higher", "dataLevel": "City", "source": "Ookla Open Data (Speedtest tiles)", "appearsIn": "IMD Smart City", "pilot": 1, "caveat": "Computed from Ookla Q1 2026 open-data tiles aggregated over a documented city-core bounding box per city (recorded in provenance) — a test-weighted mean, not the median in Ookla’s consumer pages, and the boundary choice affects the value. © Ookla, CC BY-NC-SA 4.0.", "contestable": 0, "approx": "modelled"},
@@ -71,45 +71,45 @@ window.INDEX_DATA = {
 "Barcelona":{"LIV-01": 0.69, "LIV-04": 84.2, "LIV-05": 4.47, "LIV-06": 13.8, "GRN-01": 10.9, "GRN-02": null, "GRN-05": 42.1, "SMT-01": 338.8, "SMT-03": null, "SMT-05": 95.8, "CMP-01": 52064, "CMP-04": 28.5, "CMP-06": 222, "TAL-01": 46.9, "TAL-02": 5, "TAL-06": 27.3, "CON-01": 202, "CON-03": 66.9, "CON-05": 41.1},
 "Dubai":{"LIV-01": 0.69, "LIV-04": 83.1, "LIV-05": 3.35, "LIV-06": 7.8, "GRN-01": 35.0, "GRN-02": 40.6, "GRN-05": null, "SMT-01": 359.0, "SMT-03": 90.63, "SMT-05": 100.0, "CMP-01": null, "CMP-04": null, "CMP-06": 661, "TAL-01": 41.0, "TAL-02": 0, "TAL-06": null, "CON-01": 310, "CON-03": 24.8, "CON-05": 42.7},
 "San Francisco":{"LIV-01": 5.76, "LIV-04": 79.0, "LIV-05": 3.02, "LIV-06": 6.5, "GRN-01": 7.4, "GRN-02": null, "GRN-05": 53.1, "SMT-01": 367.7, "SMT-03": null, "SMT-05": 94.7, "CMP-01": 146853, "CMP-04": 320.8, "CMP-06": 20260, "TAL-01": 46.9, "TAL-02": 0, "TAL-06": 32.4, "CON-01": 60, "CON-03": 29.6, "CON-05": 49.7},
-"Stockholm":{"SMT-01": 302.2, "CMP-01": 81394, "LIV-04": 85.0, "TAL-01": 60.0, "LIV-05": 4.91, "LIV-01": 1.15, "SMT-05": 95.8, "GRN-01": 4.9, "GRN-02": 86.0, "LIV-06": 12.5, "CON-05": 42.8, "CON-03": 70.1, "SMT-03": 80.21, "TAL-02": 2, "CON-01": 142, "TAL-06": 27.2, "GRN-05": null, "CMP-04": null, "CMP-06": 1167},
-"Oslo":{"SMT-01": 281.9, "CMP-01": 63394, "LIV-04": 83.3, "TAL-01": 56.5, "LIV-05": 6.8, "LIV-01": 0.72, "SMT-05": 99.0, "GRN-01": 8.5, "GRN-02": 56.0, "LIV-06": 11.0, "CON-05": 33.2, "CON-03": null, "SMT-03": 78.13, "TAL-02": 1, "CON-01": 125, "TAL-06": 28.1, "GRN-05": null, "CMP-04": null, "CMP-06": 297},
-"Helsinki":{"SMT-01": 238.8, "CMP-01": 66107, "LIV-04": 81.9, "TAL-01": 48.1, "LIV-05": 3.72, "LIV-01": 0.98, "SMT-05": 93.7, "GRN-01": 5.4, "GRN-02": null, "LIV-06": 11.4, "CON-05": 51.9, "CON-03": 78.0, "SMT-03": 81.25, "TAL-02": 1, "CON-01": 118, "TAL-06": 17.5, "GRN-05": null, "CMP-04": null, "CMP-06": 688},
-"Madrid":{"SMT-01": 382.3, "CMP-01": 59768, "LIV-04": 85.4, "TAL-01": 50.0, "LIV-05": 6.18, "LIV-01": 0.69, "SMT-05": 95.8, "GRN-01": 10.3, "GRN-02": 63.1, "LIV-06": 13.2, "CON-05": 38.0, "CON-03": 68.8, "SMT-03": 92.71, "TAL-02": 4, "CON-01": 197, "TAL-06": 22.7, "GRN-05": null, "CMP-04": 21.0, "CMP-06": 179},
-"Milan":{"SMT-01": 429.2, "CMP-01": 82014, "LIV-04": 84.7, "TAL-01": 23.6, "LIV-05": 5.59, "LIV-01": 0.57, "SMT-05": 89.2, "GRN-01": 20.4, "GRN-02": 76.2, "LIV-06": 18.2, "CON-05": 49.4, "CON-03": 50.4, "SMT-03": null, "TAL-02": 4, "CON-01": 244, "TAL-06": 15.0, "GRN-05": null, "CMP-04": null, "CMP-06": 344},
-"Rome":{"SMT-01": 376.5, "CMP-01": 65690, "LIV-04": 83.6, "TAL-01": 28.5, "LIV-05": 6.77, "LIV-01": 0.57, "SMT-05": 89.2, "GRN-01": 11.8, "GRN-02": 80.0, "LIV-06": 14.9, "CON-05": 45.2, "CON-03": 71.7, "SMT-03": 81.25, "TAL-02": 2, "CON-01": 219, "TAL-06": 13.6, "GRN-05": null, "CMP-04": null, "CMP-06": 58},
-"Munich":{"SMT-01": 221.7, "CMP-01": 102244, "LIV-04": 83.1, "TAL-01": 38.6, "LIV-05": 4.56, "LIV-01": 0.91, "SMT-05": 93.5, "GRN-01": 7.9, "GRN-02": null, "LIV-06": 13.1, "CON-05": 43.7, "CON-03": 81.9, "SMT-03": null, "TAL-02": 2, "CON-01": 202, "TAL-06": 31.9, "GRN-05": null, "CMP-04": 52.5, "CMP-06": 1280},
-"Frankfurt":{"SMT-01": 232.1, "CMP-01": 82688, "LIV-04": 81.9, "TAL-01": 35.6, "LIV-05": 4.27, "LIV-01": 0.91, "SMT-05": 93.5, "GRN-01": 8.7, "GRN-02": null, "LIV-06": 7.7, "CON-05": 42.3, "CON-03": null, "SMT-03": null, "TAL-02": 1, "CON-01": 284, "TAL-06": 35.5, "GRN-05": null, "CMP-04": 7.8, "CMP-06": 18},
-"Hamburg":{"SMT-01": 196.7, "CMP-01": 77768, "LIV-04": 80.9, "TAL-01": 43.0, "LIV-05": 6.4, "LIV-01": 0.91, "SMT-05": 93.5, "GRN-01": 9.1, "GRN-02": 78.2, "LIV-06": 11.1, "CON-05": 49.3, "CON-03": 68.8, "SMT-03": null, "TAL-02": 1, "CON-01": 117, "TAL-06": 24.6, "GRN-05": null, "CMP-04": 13.6, "CMP-06": 34},
-"Brussels":{"SMT-01": 266.9, "CMP-01": 78040, "LIV-04": 82.2, "TAL-01": 56.9, "LIV-05": 4.44, "LIV-01": 1.08, "SMT-05": 95.8, "GRN-01": 7.6, "GRN-02": 85.8, "LIV-06": 7.2, "CON-05": 46.2, "CON-03": 89.0, "SMT-03": 73.96, "TAL-02": 2, "CON-01": 249, "TAL-06": 43.5, "GRN-05": null, "CMP-04": 15.3, "CMP-06": 55},
-"Dublin":{"SMT-01": 337.0, "CMP-01": 141694, "LIV-04": 83.3, "TAL-01": 61.0, "LIV-05": null, "LIV-01": 0.65, "SMT-05": 97.2, "GRN-01": 7.3, "GRN-02": 84.2, "LIV-06": 9.0, "CON-05": 72.9, "CON-03": 66.3, "SMT-03": 68.75, "TAL-02": 3, "CON-01": 199, "TAL-06": 26.6, "GRN-05": null, "CMP-04": null, "CMP-06": 456},
-"Lisbon":{"SMT-01": 354.4, "CMP-01": 50408, "LIV-04": 81.2, "TAL-01": 43.3, "LIV-05": 8.37, "LIV-01": 0.72, "SMT-05": 88.5, "GRN-01": 7.6, "GRN-02": 87.4, "LIV-06": 18.7, "CON-05": 39.0, "CON-03": 43.6, "SMT-03": 70.83, "TAL-02": 2, "CON-01": 146, "TAL-06": 17.3, "GRN-05": null, "CMP-04": null, "CMP-06": 82},
-"Prague":{"SMT-01": 258.9, "CMP-01": 83056, "LIV-04": 81.1, "TAL-01": 54.8, "LIV-05": 8.24, "LIV-01": 0.77, "SMT-05": 87.7, "GRN-01": 13.4, "GRN-02": 83.5, "LIV-06": 18.2, "CON-05": 53.5, "CON-03": 89.2, "SMT-03": 67.71, "TAL-02": 2, "CON-01": 165, "TAL-06": 15.5, "GRN-05": null, "CMP-04": null, "CMP-06": 69},
-"Warsaw":{"SMT-01": 362.9, "CMP-01": 81920, "LIV-04": 81.0, "TAL-01": 65.3, "LIV-05": 6.3, "LIV-01": 0.8, "SMT-05": 88.6, "GRN-01": 14.7, "GRN-02": 88.0, "LIV-06": 11.7, "CON-05": 51.3, "CON-03": 70.1, "SMT-03": 77.08, "TAL-02": 2, "CON-01": 152, "TAL-06": 5.7, "GRN-05": null, "CMP-04": null, "CMP-06": 91},
+"Stockholm":{"SMT-01": 302.2, "CMP-01": 81394, "LIV-04": 85.0, "TAL-01": 60.0, "LIV-05": 4.91, "LIV-01": 1.15, "SMT-05": 95.8, "GRN-01": 4.9, "GRN-02": 86.0, "LIV-06": 12.5, "CON-05": 42.8, "CON-03": 70.1, "SMT-03": 80.21, "TAL-02": 2, "CON-01": 142, "TAL-06": 27.2, "GRN-05": 31.0, "CMP-04": null, "CMP-06": 1167},
+"Oslo":{"SMT-01": 281.9, "CMP-01": 63394, "LIV-04": 83.3, "TAL-01": 56.5, "LIV-05": 6.8, "LIV-01": 0.72, "SMT-05": 99.0, "GRN-01": 8.5, "GRN-02": 56.0, "LIV-06": 11.0, "CON-05": 33.2, "CON-03": null, "SMT-03": 78.13, "TAL-02": 1, "CON-01": 125, "TAL-06": 28.1, "GRN-05": 43.4, "CMP-04": null, "CMP-06": 297},
+"Helsinki":{"SMT-01": 238.8, "CMP-01": 66107, "LIV-04": 81.9, "TAL-01": 48.1, "LIV-05": 3.72, "LIV-01": 0.98, "SMT-05": 93.7, "GRN-01": 5.4, "GRN-02": null, "LIV-06": 11.4, "CON-05": 51.9, "CON-03": 78.0, "SMT-03": 81.25, "TAL-02": 1, "CON-01": 118, "TAL-06": 17.5, "GRN-05": 45.0, "CMP-04": null, "CMP-06": 688},
+"Madrid":{"SMT-01": 382.3, "CMP-01": 59768, "LIV-04": 85.4, "TAL-01": 50.0, "LIV-05": 6.18, "LIV-01": 0.69, "SMT-05": 95.8, "GRN-01": 10.3, "GRN-02": 63.1, "LIV-06": 13.2, "CON-05": 38.0, "CON-03": 68.8, "SMT-03": 92.71, "TAL-02": 4, "CON-01": 197, "TAL-06": 22.7, "GRN-05": 47.7, "CMP-04": 21.0, "CMP-06": 179},
+"Milan":{"SMT-01": 429.2, "CMP-01": 82014, "LIV-04": 84.7, "TAL-01": 23.6, "LIV-05": 5.59, "LIV-01": 0.57, "SMT-05": 89.2, "GRN-01": 20.4, "GRN-02": 76.2, "LIV-06": 18.2, "CON-05": 49.4, "CON-03": 50.4, "SMT-03": null, "TAL-02": 4, "CON-01": 244, "TAL-06": 15.0, "GRN-05": 63.33, "CMP-04": null, "CMP-06": 344},
+"Rome":{"SMT-01": 376.5, "CMP-01": 65690, "LIV-04": 83.6, "TAL-01": 28.5, "LIV-05": 6.77, "LIV-01": 0.57, "SMT-05": 89.2, "GRN-01": 11.8, "GRN-02": 80.0, "LIV-06": 14.9, "CON-05": 45.2, "CON-03": 71.7, "SMT-03": 81.25, "TAL-02": 2, "CON-01": 219, "TAL-06": 13.6, "GRN-05": 48.03, "CMP-04": null, "CMP-06": 58},
+"Munich":{"SMT-01": 221.7, "CMP-01": 102244, "LIV-04": 83.1, "TAL-01": 38.6, "LIV-05": 4.56, "LIV-01": 0.91, "SMT-05": 93.5, "GRN-01": 7.9, "GRN-02": null, "LIV-06": 13.1, "CON-05": 43.7, "CON-03": 81.9, "SMT-03": null, "TAL-02": 2, "CON-01": 202, "TAL-06": 31.9, "GRN-05": 55.3, "CMP-04": 52.5, "CMP-06": 1280},
+"Frankfurt":{"SMT-01": 232.1, "CMP-01": 82688, "LIV-04": 81.9, "TAL-01": 35.6, "LIV-05": 4.27, "LIV-01": 0.91, "SMT-05": 93.5, "GRN-01": 8.7, "GRN-02": null, "LIV-06": 7.7, "CON-05": 42.3, "CON-03": null, "SMT-03": null, "TAL-02": 1, "CON-01": 284, "TAL-06": 35.5, "GRN-05": 37.6, "CMP-04": 7.8, "CMP-06": 18},
+"Hamburg":{"SMT-01": 196.7, "CMP-01": 77768, "LIV-04": 80.9, "TAL-01": 43.0, "LIV-05": 6.4, "LIV-01": 0.91, "SMT-05": 93.5, "GRN-01": 9.1, "GRN-02": 78.2, "LIV-06": 11.1, "CON-05": 49.3, "CON-03": 68.8, "SMT-03": null, "TAL-02": 1, "CON-01": 117, "TAL-06": 24.6, "GRN-05": 45.8, "CMP-04": 13.6, "CMP-06": 34},
+"Brussels":{"SMT-01": 266.9, "CMP-01": 78040, "LIV-04": 82.2, "TAL-01": 56.9, "LIV-05": 4.44, "LIV-01": 1.08, "SMT-05": 95.8, "GRN-01": 7.6, "GRN-02": 85.8, "LIV-06": 7.2, "CON-05": 46.2, "CON-03": 89.0, "SMT-03": 73.96, "TAL-02": 2, "CON-01": 249, "TAL-06": 43.5, "GRN-05": 35.0, "CMP-04": 15.3, "CMP-06": 55},
+"Dublin":{"SMT-01": 337.0, "CMP-01": 141694, "LIV-04": 83.3, "TAL-01": 61.0, "LIV-05": null, "LIV-01": 0.65, "SMT-05": 97.2, "GRN-01": 7.3, "GRN-02": 84.2, "LIV-06": 9.0, "CON-05": 72.9, "CON-03": 66.3, "SMT-03": 68.75, "TAL-02": 3, "CON-01": 199, "TAL-06": 26.6, "GRN-05": 42.0, "CMP-04": null, "CMP-06": 456},
+"Lisbon":{"SMT-01": 354.4, "CMP-01": 50408, "LIV-04": 81.2, "TAL-01": 43.3, "LIV-05": 8.37, "LIV-01": 0.72, "SMT-05": 88.5, "GRN-01": 7.6, "GRN-02": 87.4, "LIV-06": 18.7, "CON-05": 39.0, "CON-03": 43.6, "SMT-03": 70.83, "TAL-02": 2, "CON-01": 146, "TAL-06": 17.3, "GRN-05": 26.0, "CMP-04": null, "CMP-06": 82},
+"Prague":{"SMT-01": 258.9, "CMP-01": 83056, "LIV-04": 81.1, "TAL-01": 54.8, "LIV-05": 8.24, "LIV-01": 0.77, "SMT-05": 87.7, "GRN-01": 13.4, "GRN-02": 83.5, "LIV-06": 18.2, "CON-05": 53.5, "CON-03": 89.2, "SMT-03": 67.71, "TAL-02": 2, "CON-01": 165, "TAL-06": 15.5, "GRN-05": 32.3, "CMP-04": null, "CMP-06": 69},
+"Warsaw":{"SMT-01": 362.9, "CMP-01": 81920, "LIV-04": 81.0, "TAL-01": 65.3, "LIV-05": 6.3, "LIV-01": 0.8, "SMT-05": 88.6, "GRN-01": 14.7, "GRN-02": 88.0, "LIV-06": 11.7, "CON-05": 51.3, "CON-03": 70.1, "SMT-03": 77.08, "TAL-02": 2, "CON-01": 152, "TAL-06": 5.7, "GRN-05": 28.5, "CMP-04": null, "CMP-06": 91},
 "Istanbul":{"SMT-01": 251.2, "CMP-01": 56428, "LIV-04": 77.1, "TAL-01": 31.8, "LIV-05": 2.96, "LIV-01": 3.23, "SMT-05": 89.8, "GRN-01": 50.5, "GRN-02": 59.8, "LIV-06": 10.1, "CON-05": 62.0, "CON-03": null, "SMT-03": 89.58, "TAL-02": 4, "CON-01": 322, "TAL-06": null, "GRN-05": null, "CMP-04": null, "CMP-06": 40},
-"Montreal":{"SMT-01": 334.2, "CMP-01": 38730, "LIV-04": 82.5, "TAL-01": 59.0, "LIV-05": 2.6, "LIV-01": 1.98, "SMT-05": 94.4, "GRN-01": 8.6, "GRN-02": 91.8, "LIV-06": 7.6, "CON-05": 41.3, "CON-03": 52.7, "SMT-03": null, "TAL-02": 3, "CON-01": 139, "TAL-06": 24.3, "GRN-05": null, "CMP-04": 24.4, "CMP-06": 226},
-"Vancouver":{"SMT-01": 374.2, "CMP-01": 45902, "LIV-04": 81.5, "TAL-01": 64.0, "LIV-05": 2.71, "LIV-01": 1.98, "SMT-05": 94.4, "GRN-01": 6.0, "GRN-02": null, "LIV-06": 11.7, "CON-05": 56.5, "CON-03": 53.7, "SMT-03": null, "TAL-02": 1, "CON-01": 74, "TAL-06": 41.8, "GRN-05": null, "CMP-04": 56.4, "CMP-06": 600},
-"Chicago":{"SMT-01": 392.9, "CMP-01": 75524, "LIV-04": 76.8, "TAL-01": 50.9, "LIV-05": 3.7, "LIV-01": 5.76, "SMT-05": 94.7, "GRN-01": 8.7, "GRN-02": 47.8, "LIV-06": 3.2, "CON-05": 46.1, "CON-03": 43.2, "SMT-03": null, "TAL-02": 2, "CON-01": 81, "TAL-06": 19.4, "GRN-05": null, "CMP-04": 29.4, "CMP-06": 210},
-"Boston":{"SMT-01": 361.6, "CMP-01": 101761, "LIV-04": 79.0, "TAL-01": 58.2, "LIV-05": 5.52, "LIV-01": 5.76, "SMT-05": 94.7, "GRN-01": 6.4, "GRN-02": 68.2, "LIV-06": 7.9, "CON-05": 42.1, "CON-03": 47.6, "SMT-03": null, "TAL-02": 2, "CON-01": 63, "TAL-06": 20.7, "GRN-05": null, "CMP-04": 126.9, "CMP-06": 2714},
+"Montreal":{"SMT-01": 334.2, "CMP-01": 38730, "LIV-04": 82.5, "TAL-01": 59.0, "LIV-05": 2.6, "LIV-01": 1.98, "SMT-05": 94.4, "GRN-01": 8.6, "GRN-02": 91.8, "LIV-06": 7.6, "CON-05": 41.3, "CON-03": 52.7, "SMT-03": null, "TAL-02": 3, "CON-01": 139, "TAL-06": 24.3, "GRN-05": 49.0, "CMP-04": 24.4, "CMP-06": 226},
+"Vancouver":{"SMT-01": 374.2, "CMP-01": 45902, "LIV-04": 81.5, "TAL-01": 64.0, "LIV-05": 2.71, "LIV-01": 1.98, "SMT-05": 94.4, "GRN-01": 6.0, "GRN-02": null, "LIV-06": 11.7, "CON-05": 56.5, "CON-03": 53.7, "SMT-03": null, "TAL-02": 1, "CON-01": 74, "TAL-06": 41.8, "GRN-05": 65.0, "CMP-04": 56.4, "CMP-06": 600},
+"Chicago":{"SMT-01": 392.9, "CMP-01": 75524, "LIV-04": 76.8, "TAL-01": 50.9, "LIV-05": 3.7, "LIV-01": 5.76, "SMT-05": 94.7, "GRN-01": 8.7, "GRN-02": 47.8, "LIV-06": 3.2, "CON-05": 46.1, "CON-03": 43.2, "SMT-03": null, "TAL-02": 2, "CON-01": 81, "TAL-06": 19.4, "GRN-05": 9.0, "CMP-04": 29.4, "CMP-06": 210},
+"Boston":{"SMT-01": 361.6, "CMP-01": 101761, "LIV-04": 79.0, "TAL-01": 58.2, "LIV-05": 5.52, "LIV-01": 5.76, "SMT-05": 94.7, "GRN-01": 6.4, "GRN-02": 68.2, "LIV-06": 7.9, "CON-05": 42.1, "CON-03": 47.6, "SMT-03": null, "TAL-02": 2, "CON-01": 63, "TAL-06": 20.7, "GRN-05": 25.0, "CMP-04": 126.9, "CMP-06": 2714},
 "Los Angeles":{"SMT-01": 392.1, "CMP-01": 70646, "LIV-04": 79.0, "TAL-01": 46.9, "LIV-05": 3.02, "LIV-01": 5.76, "SMT-05": 94.7, "GRN-01": 10.5, "GRN-02": null, "LIV-06": 8.2, "CON-05": 59.8, "CON-03": 5.7, "SMT-03": null, "TAL-02": 2, "CON-01": 81, "TAL-06": 33.4, "GRN-05": null, "CMP-04": 45.6, "CMP-06": 876},
-"Seattle":{"SMT-01": 410.0, "CMP-01": 111516, "LIV-04": 79.2, "TAL-01": 52.9, "LIV-05": 2.98, "LIV-01": 5.76, "SMT-05": 94.7, "GRN-01": 6.1, "GRN-02": 63.5, "LIV-06": 4.8, "CON-05": 44.9, "CON-03": 26.1, "SMT-03": null, "TAL-02": 1, "CON-01": 38, "TAL-06": 22.1, "GRN-05": null, "CMP-04": 73.8, "CMP-06": 1650},
-"Washington DC":{"SMT-01": 362.5, "CMP-01": 83988, "LIV-04": 78.0, "TAL-01": 70.7, "LIV-05": 12.02, "LIV-01": 5.76, "SMT-05": 94.7, "GRN-01": 6.3, "GRN-02": 52.8, "LIV-06": 4.3, "CON-05": 37.3, "CON-03": 33.1, "SMT-03": null, "TAL-02": 2, "CON-01": 70, "TAL-06": 24.7, "GRN-05": null, "CMP-04": 36.9, "CMP-06": 556},
-"Sydney":{"SMT-01": 239.5, "CMP-01": 45152, "LIV-04": 84.1, "TAL-01": 52.5, "LIV-05": 4.58, "LIV-01": 0.85, "SMT-05": 96.1, "GRN-01": null, "GRN-02": 33.4, "LIV-06": 12.5, "CON-05": 43.7, "CON-03": 49.2, "SMT-03": 77.08, "TAL-02": 4, "CON-01": 65, "TAL-06": 38.6, "GRN-05": null, "CMP-04": 40.1, "CMP-06": 250},
-"Auckland":{"SMT-01": 283.4, "CMP-01": 55906, "LIV-04": 82.7, "TAL-01": 45.5, "LIV-05": 3.47, "LIV-01": 1.46, "SMT-05": 93.5, "GRN-01": 5.5, "GRN-02": 88.4, "LIV-06": 10.5, "CON-05": 42.2, "CON-03": 37.6, "SMT-03": 80.21, "TAL-02": 2, "CON-01": 46, "TAL-06": 42.5, "GRN-05": null, "CMP-04": null, "CMP-06": 166},
-"Osaka":{"SMT-01": 295.1, "CMP-01": 41497, "LIV-04": 84.2, "TAL-01": 56.9, "LIV-05": 2.92, "LIV-01": 0.23, "SMT-05": 85.5, "GRN-01": 9.4, "GRN-02": 72.2, "LIV-06": 10.6, "CON-05": 42.9, "CON-03": null, "SMT-03": null, "TAL-02": 1, "CON-01": null, "TAL-06": 6.8, "GRN-05": null, "CMP-04": 3.7, "CMP-06": 21},
-"Tel Aviv":{"SMT-01": 366.9, "CMP-01": null, "LIV-04": 83.1, "TAL-01": 60.4, "LIV-05": 4.9, "LIV-01": 1.63, "SMT-05": 88.2, "GRN-01": 17.4, "GRN-02": 65.7, "LIV-06": 20.0, "CON-05": null, "CON-03": 87.9, "SMT-03": null, "TAL-02": 1, "CON-01": 114, "TAL-06": 23.5, "GRN-05": null, "CMP-04": null, "CMP-06": 2111},
-"Hong Kong":{"SMT-01": 431.6, "TAL-02": 5, "CON-03": 52.2, "CON-05": 47.7, "CMP-01": 66154, "LIV-01": 0.38, "SMT-05": 95.8, "GRN-01": 19.8, "GRN-02": 95.7, "SMT-03": null, "TAL-06": 38.3, "CON-01": 149.0},
-"Taipei":{"SMT-01": 258.2, "TAL-02": 4, "CON-03": null, "CON-05": 43.6, "CMP-01": null, "LIV-01": 0.32, "SMT-05": 88.8, "GRN-01": 15.0, "GRN-02": null, "SMT-03": null, "TAL-06": 3.3, "CON-01": null},
-"Bangkok":{"SMT-01": 375.6, "TAL-02": 1, "CON-03": null, "CON-05": 67.9, "CMP-01": null, "LIV-01": 4.79, "SMT-05": 90.9, "GRN-01": 23.4, "GRN-02": 11.8, "SMT-03": 66.67, "TAL-06": null, "CON-01": 154.0},
-"Kuala Lumpur":{"SMT-01": 272.1, "TAL-02": 4, "CON-03": null, "CON-05": 39.1, "CMP-01": null, "LIV-01": 0.73, "SMT-05": 98.0, "GRN-01": 28.3, "GRN-02": 46.1, "SMT-03": 59.38, "TAL-06": 13.1, "CON-01": 131.0},
-"Jakarta":{"SMT-01": 97.7, "TAL-02": 0, "CON-03": 22.6, "CON-05": 59.8, "CMP-01": null, "LIV-01": 0.3, "SMT-05": 72.8, "GRN-01": 33.8, "GRN-02": 24.2, "SMT-03": 68.75, "TAL-06": null, "CON-01": 50.0},
-"Manila":{"SMT-01": 198.9, "TAL-02": 0, "CON-03": null, "CON-05": 57.3, "CMP-01": null, "LIV-01": 4.35, "SMT-05": 67.3, "GRN-01": 15.4, "GRN-02": 28.7, "SMT-03": 60.42, "TAL-06": null, "CON-01": 66.0},
-"Ho Chi Minh City":{"SMT-01": 269.6, "TAL-02": 0, "CON-03": null, "CON-05": 40.3, "CMP-01": null, "LIV-01": 1.54, "SMT-05": 84.2, "GRN-01": 23.5, "GRN-02": 30.4, "SMT-03": 63.54, "TAL-06": null, "CON-01": 75.0},
-"Mumbai":{"SMT-01": 93.4, "TAL-02": 1, "CON-03": null, "CON-05": 61.5, "CMP-01": null, "LIV-01": 2.82, "SMT-05": 70.0, "GRN-01": 49.5, "GRN-02": 35.3, "SMT-03": 56.25, "TAL-06": null, "CON-01": 52.0},
-"Abu Dhabi":{"SMT-01": 348.1, "TAL-02": 1, "CON-03": 60.8, "CON-05": 25.5, "CMP-01": null, "LIV-01": 0.69, "SMT-05": 100.0, "GRN-01": 30.9, "GRN-02": 37.6, "SMT-03": null, "TAL-06": null, "CON-01": 165.0},
-"Shanghai":{"SMT-01": 458.1, "TAL-02": 5, "CON-03": null, "CON-05": null, "CMP-01": null, "LIV-01": 0.5, "SMT-05": 91.6, "GRN-01": 28.4, "GRN-02": 29.9, "SMT-03": 86.46, "TAL-06": null, "CON-01": 105.0},
-"Beijing":{"SMT-01": 331.9, "TAL-02": 7, "CON-03": null, "CON-05": null, "CMP-01": null, "LIV-01": 0.5, "SMT-05": 91.6, "GRN-01": 31.0, "GRN-02": null, "SMT-03": null, "TAL-06": null, "CON-01": 124.0},
-"Shenzhen":{"SMT-01": 314.9, "TAL-02": 2, "CON-03": null, "CON-05": null, "CMP-01": null, "LIV-01": 0.5, "SMT-05": 91.6, "GRN-01": 17.3, "GRN-02": 21.9, "SMT-03": null, "TAL-06": null, "CON-01": 54.0},
-"Delhi":{"SMT-01": 120.5, "TAL-02": 2, "CON-03": null, "CON-05": 55.4, "CMP-01": null, "LIV-01": 2.82, "SMT-05": 70.0, "GRN-01": 107.0, "GRN-02": 43.6, "SMT-03": null, "TAL-06": null, "CON-01": 79.0}
+"Seattle":{"SMT-01": 410.0, "CMP-01": 111516, "LIV-04": 79.2, "TAL-01": 52.9, "LIV-05": 2.98, "LIV-01": 5.76, "SMT-05": 94.7, "GRN-01": 6.1, "GRN-02": 63.5, "LIV-06": 4.8, "CON-05": 44.9, "CON-03": 26.1, "SMT-03": null, "TAL-02": 1, "CON-01": 38, "TAL-06": 22.1, "GRN-05": 53.4, "CMP-04": 73.8, "CMP-06": 1650},
+"Washington DC":{"SMT-01": 362.5, "CMP-01": 83988, "LIV-04": 78.0, "TAL-01": 70.7, "LIV-05": 12.02, "LIV-01": 5.76, "SMT-05": 94.7, "GRN-01": 6.3, "GRN-02": 52.8, "LIV-06": 4.3, "CON-05": 37.3, "CON-03": 33.1, "SMT-03": null, "TAL-02": 2, "CON-01": 70, "TAL-06": 24.7, "GRN-05": 27.93, "CMP-04": 36.9, "CMP-06": 556},
+"Sydney":{"SMT-01": 239.5, "CMP-01": 45152, "LIV-04": 84.1, "TAL-01": 52.5, "LIV-05": 4.58, "LIV-01": 0.85, "SMT-05": 96.1, "GRN-01": null, "GRN-02": 33.4, "LIV-06": 12.5, "CON-05": 43.7, "CON-03": 49.2, "SMT-03": 77.08, "TAL-02": 4, "CON-01": 65, "TAL-06": 38.6, "GRN-05": 52.0, "CMP-04": 40.1, "CMP-06": 250},
+"Auckland":{"SMT-01": 283.4, "CMP-01": 55906, "LIV-04": 82.7, "TAL-01": 45.5, "LIV-05": 3.47, "LIV-01": 1.46, "SMT-05": 93.5, "GRN-01": 5.5, "GRN-02": 88.4, "LIV-06": 10.5, "CON-05": 42.2, "CON-03": 37.6, "SMT-03": 80.21, "TAL-02": 2, "CON-01": 46, "TAL-06": 42.5, "GRN-05": 27.0, "CMP-04": null, "CMP-06": 166},
+"Osaka":{"SMT-01": 295.1, "CMP-01": 41497, "LIV-04": 84.2, "TAL-01": 56.9, "LIV-05": 2.92, "LIV-01": 0.23, "SMT-05": 85.5, "GRN-01": 9.4, "GRN-02": 72.2, "LIV-06": 10.6, "CON-05": 42.9, "CON-03": null, "SMT-03": null, "TAL-02": 1, "CON-01": null, "TAL-06": 6.8, "GRN-05": 9.5, "CMP-04": 3.7, "CMP-06": 21},
+"Tel Aviv":{"SMT-01": 366.9, "CMP-01": null, "LIV-04": 83.1, "TAL-01": 60.4, "LIV-05": 4.9, "LIV-01": 1.63, "SMT-05": 88.2, "GRN-01": 17.4, "GRN-02": 65.7, "LIV-06": 20.0, "CON-05": null, "CON-03": 87.9, "SMT-03": null, "TAL-02": 1, "CON-01": 114, "TAL-06": 23.5, "GRN-05": 36.0, "CMP-04": null, "CMP-06": 2111},
+"Hong Kong":{"SMT-01": 431.6, "TAL-02": 5, "CON-03": 52.2, "CON-05": 47.7, "CMP-01": 66154, "LIV-01": 0.38, "SMT-05": 95.8, "GRN-01": 19.8, "GRN-02": 95.7, "SMT-03": null, "TAL-06": 38.3, "CON-01": 149.0, "GRN-05": 34.0},
+"Taipei":{"SMT-01": 258.2, "TAL-02": 4, "CON-03": null, "CON-05": 43.6, "CMP-01": null, "LIV-01": 0.32, "SMT-05": 88.8, "GRN-01": 15.0, "GRN-02": null, "SMT-03": null, "TAL-06": 3.3, "CON-01": null, "GRN-05": 70.8},
+"Bangkok":{"SMT-01": 375.6, "TAL-02": 1, "CON-03": null, "CON-05": 67.9, "CMP-01": null, "LIV-01": 4.79, "SMT-05": 90.9, "GRN-01": 23.4, "GRN-02": 11.8, "SMT-03": 66.67, "TAL-06": null, "CON-01": 154.0, "GRN-05": null},
+"Kuala Lumpur":{"SMT-01": 272.1, "TAL-02": 4, "CON-03": null, "CON-05": 39.1, "CMP-01": null, "LIV-01": 0.73, "SMT-05": 98.0, "GRN-01": 28.3, "GRN-02": 46.1, "SMT-03": 59.38, "TAL-06": 13.1, "CON-01": 131.0, "GRN-05": 37.9},
+"Jakarta":{"SMT-01": 97.7, "TAL-02": 0, "CON-03": 22.6, "CON-05": 59.8, "CMP-01": null, "LIV-01": 0.3, "SMT-05": 72.8, "GRN-01": 33.8, "GRN-02": 24.2, "SMT-03": 68.75, "TAL-06": null, "CON-01": 50.0, "GRN-05": null},
+"Manila":{"SMT-01": 198.9, "TAL-02": 0, "CON-03": null, "CON-05": 57.3, "CMP-01": null, "LIV-01": 4.35, "SMT-05": 67.3, "GRN-01": 15.4, "GRN-02": 28.7, "SMT-03": 60.42, "TAL-06": null, "CON-01": 66.0, "GRN-05": 48.0},
+"Ho Chi Minh City":{"SMT-01": 269.6, "TAL-02": 0, "CON-03": null, "CON-05": 40.3, "CMP-01": null, "LIV-01": 1.54, "SMT-05": 84.2, "GRN-01": 23.5, "GRN-02": 30.4, "SMT-03": 63.54, "TAL-06": null, "CON-01": 75.0, "GRN-05": null},
+"Mumbai":{"SMT-01": 93.4, "TAL-02": 1, "CON-03": null, "CON-05": 61.5, "CMP-01": null, "LIV-01": 2.82, "SMT-05": 70.0, "GRN-01": 49.5, "GRN-02": 35.3, "SMT-03": 56.25, "TAL-06": null, "CON-01": 52.0, "GRN-05": null},
+"Abu Dhabi":{"SMT-01": 348.1, "TAL-02": 1, "CON-03": 60.8, "CON-05": 25.5, "CMP-01": null, "LIV-01": 0.69, "SMT-05": 100.0, "GRN-01": 30.9, "GRN-02": 37.6, "SMT-03": null, "TAL-06": null, "CON-01": 165.0, "GRN-05": 32.0},
+"Shanghai":{"SMT-01": 458.1, "TAL-02": 5, "CON-03": null, "CON-05": null, "CMP-01": null, "LIV-01": 0.5, "SMT-05": 91.6, "GRN-01": 28.4, "GRN-02": 29.9, "SMT-03": 86.46, "TAL-06": null, "CON-01": 105.0, "GRN-05": 43.2},
+"Beijing":{"SMT-01": 331.9, "TAL-02": 7, "CON-03": null, "CON-05": null, "CMP-01": null, "LIV-01": 0.5, "SMT-05": 91.6, "GRN-01": 31.0, "GRN-02": null, "SMT-03": null, "TAL-06": null, "CON-01": 124.0, "GRN-05": 39.8},
+"Shenzhen":{"SMT-01": 314.9, "TAL-02": 2, "CON-03": null, "CON-05": null, "CMP-01": null, "LIV-01": 0.5, "SMT-05": 91.6, "GRN-01": 17.3, "GRN-02": 21.9, "SMT-03": null, "TAL-06": null, "CON-01": 54.0, "GRN-05": null},
+"Delhi":{"SMT-01": 120.5, "TAL-02": 2, "CON-03": null, "CON-05": 55.4, "CMP-01": null, "LIV-01": 2.82, "SMT-05": 70.0, "GRN-01": 107.0, "GRN-02": 43.6, "SMT-03": null, "TAL-06": null, "CON-01": 79.0, "GRN-05": null}
 },
 "provenance":{
  "LIV-01": {
@@ -2631,11 +2631,11 @@ window.INDEX_DATA = {
   }
  },
  "GRN-05": {
-  "source": "Official municipal/national waste statistics per city (16 sources; see perCity)",
+  "source": "Official municipal/national waste statistics per city (46 sourced cities; see perCity)",
   "url": "various — see perCity source fields",
   "license": "official statistics, various open licenses",
-  "edition": "latest available per city, 2023-2025",
-  "retrieved": "2026-07-11",
+  "edition": "latest available per city — mostly 2023-2025 (Boston 2019, Hamburg 2020, Manila 2015)",
+  "retrieved": "2026-07-11 (first 15 cities) / 2026-07-12 (40-city expansion)",
   "method": "One official source per city (city waste authority, national statistics or federal waste report); metric definition recorded per value; no cross-source estimation.",
   "perCity": {
    "Singapore": {
@@ -2738,8 +2738,8 @@ window.INDEX_DATA = {
    },
    "Dubai": {
     "value": null,
-    "year": "2025 (reviewed Feb 2026)",
-    "note": "NULL because no official municipal RECYCLING rate is fetchable this session. The only official current figure found is the quoted 62% LANDFILL-DIVERSION statement tied to the Warsan waste-to-energy plant's operational pe"
+    "year": "n/a",
+    "note": "NULL, retry-confirmed 2026-07-12: no official recycling rate exists. Only official figures are the Warsan waste-to-energy plant's 62% landfill diversion (one incineration plant, not emirate-wide, not recycling) and Circle Dubai 2041 targets (100% diversion, recycled >=56% of that) — targets, not achieved rates. Dubai Statistics Center unreachable (TLS refused)."
    },
    "San Francisco": {
     "value": 53.1,
@@ -2749,134 +2749,230 @@ window.INDEX_DATA = {
     "note": "'Recovery rate' = tons recycled+composted / total refuse (recycling+composting+trash), net of residual contamination, as reported by Recology to SF Environment. Scope: residential and small-business ('Fantastic 3') colle"
    },
    "Stockholm": {
-    "value": null,
-    "year": "n/a",
-    "note": "Pending Wave 2 manual sourcing: municipal recycling rates require one official city/agency source each (see ROSTER.md next steps). Blank, not zero."
+    "value": 31.0,
+    "year": "2024",
+    "source": "Avfall Sverige, Hushållsavfall i siffror – kommun- och länsstatistik (publ. Sept 2025), Tabell 5",
+    "note": "Share of HOUSEHOLD waste collected for material recycling incl. biological treatment, municipality of Stockholm (Avfall Sverige municipal statistics, Tabell 5). The same table's output-based rate after rejects is 26% — this is a separate-collection-style measure."
    },
    "Oslo": {
-    "value": null,
-    "year": "n/a",
-    "note": "Pending Wave 2 manual sourcing: municipal recycling rates require one official city/agency source each (see ROSTER.md next steps). Blank, not zero."
+    "value": 43.4,
+    "year": "2025",
+    "source": "Statistics Norway (SSB), StatBank table 12263 (KOSTRA), updated 2026-06-15",
+    "note": "Share of HOUSEHOLD waste sent to material recovery incl. biological treatment, municipality of Oslo, Statistics Norway KOSTRA table 12263 (2025 data); collection-based, not output-based. 2024: 42.5%."
    },
    "Helsinki": {
-    "value": null,
-    "year": "n/a",
-    "note": "Pending Wave 2 manual sourcing: municipal recycling rates require one official city/agency source each (see ROSTER.md next steps). Blank, not zero."
+    "value": 45.0,
+    "year": "2024",
+    "source": "HSY (Helsinki Region Environmental Services), Jätemäärät ja kierrätysaste",
+    "note": "HOUSEHOLD waste recycling rate for the municipality of Helsinki (HSY): true recycling with process rejects deducted; material + biological recycling, remainder to energy. Paper and WEEE inputs allocated from national data by population."
    },
    "Madrid": {
-    "value": null,
-    "year": "n/a",
-    "note": "Pending Wave 2 manual sourcing: municipal recycling rates require one official city/agency source each (see ROSTER.md next steps). Blank, not zero."
+    "value": 47.7,
+    "year": "2023",
+    "source": "Ayuntamiento de Madrid, Estrategia de prevención y gestión de residuos domésticos y comerciales de la ciudad de Madrid – 2030 (Abril 2025), Tabla 5bis",
+    "note": "SEPARATE-COLLECTION share of municipal (domestic + commercial) waste managed by city services, city of Madrid (waste strategy 2030, Tabla 5bis) — NOT a recycling output rate. City press reported 51.4% for 2024 but that page was unfetchable this session; the verified 2023 PDF value is used."
    },
    "Milan": {
-    "value": null,
-    "year": "n/a",
-    "note": "Pending Wave 2 manual sourcing: municipal recycling rates require one official city/agency source each (see ROSTER.md next steps). Blank, not zero."
+    "value": 63.33,
+    "year": "2024",
+    "source": "ISPRA Catasto Nazionale Rifiuti, produzione e raccolta comunale, Comune di Milano",
+    "note": "Raccolta differenziata = SEPARATE-COLLECTION share of municipal waste, Comune di Milano (ISPRA Catasto Rifiuti) — an upper bound on recycling, not an output rate. 2023: 62.44%."
    },
    "Rome": {
-    "value": null,
-    "year": "n/a",
-    "note": "Pending Wave 2 manual sourcing: municipal recycling rates require one official city/agency source each (see ROSTER.md next steps). Blank, not zero."
+    "value": 48.03,
+    "year": "2024",
+    "source": "ISPRA Catasto Nazionale Rifiuti, produzione e raccolta comunale, Comune di Roma",
+    "note": "Raccolta differenziata = SEPARATE-COLLECTION share of municipal waste, Comune di Roma (ISPRA Catasto Rifiuti) — an upper bound on recycling, not an output rate. 2023: 46.64%."
    },
    "Munich": {
-    "value": null,
-    "year": "n/a",
-    "note": "Pending Wave 2 manual sourcing: municipal recycling rates require one official city/agency source each (see ROSTER.md next steps). Blank, not zero."
+    "value": 55.3,
+    "year": "2023",
+    "source": "AWM Abfallwirtschaftsbetrieb München, 'Der AWM in Zahlen' (Geschäftsbericht 2023)",
+    "note": "AWM-published Recyclingquote for HOUSEHOLD waste, city of Munich ('Der AWM in Zahlen' 2023; total-recovery quota 59.0% in same sheet). Exact calculation method not detailed; Bavaria publishes no per-city quota."
    },
    "Frankfurt": {
-    "value": null,
-    "year": "n/a",
-    "note": "Pending Wave 2 manual sourcing: municipal recycling rates require one official city/agency source each (see ROSTER.md next steps). Blank, not zero."
+    "value": 37.6,
+    "year": "2024",
+    "source": "Hessisches Statistisches Landesamt, Haushaltsabfälle in Hessen 2024 (QII7-j/24, Dez. 2025), Tabelle 2",
+    "note": "SEPARATE-COLLECTION share of household waste: exact ratio of published official tonnages (separately collected organics + Wertstoffe over total household waste), Hessisches Statistisches Landesamt Tabelle 2 — Hesse publishes no per-city percentage or recycling rate (same computed-from-tonnages treatment as Vienna). 2023 edition: 38.6%."
    },
    "Hamburg": {
-    "value": null,
-    "year": "n/a",
-    "note": "Pending Wave 2 manual sourcing: municipal recycling rates require one official city/agency source each (see ROSTER.md next steps). Blank, not zero."
+    "value": 45.8,
+    "year": "2020",
+    "source": "Abfallwirtschaftsplan Siedlungsabfälle 2023, Freie und Hansestadt Hamburg (BUKEA), Tabelle 8: 'R-Quote 2', Ist 2020",
+    "note": "City's own input-based household-waste recycling quota 'R-Quote 2' (separate collection + bulky/WEEE/textiles to recovery + post-incineration metals), Abfallwirtschaftsplan 2023. STALE: 2020 is the latest published actual — newer official sheets publish tonnages only. Narrower R-Quote 1: 38.3%; wider R-Quote 3: 59.7%."
    },
    "Brussels": {
-    "value": null,
-    "year": "n/a",
-    "note": "Pending Wave 2 manual sourcing: municipal recycling rates require one official city/agency source each (see ROSTER.md next steps). Blank, not zero."
+    "value": 35.0,
+    "year": "2023",
+    "source": "Bruxelles Environnement, 'L'environnement : état des lieux' — indicateur 'Déchets préparés en vue du réemploi et du recyclage' (actualisation décembre 2025)",
+    "note": "Recycled-or-reused share of municipal waste (household + comparable business), Brussels-Capital Region (19 communes), Bruxelles Environnement état des lieux (Dec 2025 update); energy recovery excluded."
    },
    "Dublin": {
-    "value": null,
-    "year": "n/a",
-    "note": "Pending Wave 2 manual sourcing: municipal recycling rates require one official city/agency source each (see ROSTER.md next steps). Blank, not zero."
+    "value": 42.0,
+    "year": "2023",
+    "source": "EPA (Ireland), 'Municipal Waste Statistics for Ireland', latest reference year 2023 (release 24 September 2025)",
+    "note": "COUNTRY PROXY: Ireland NATIONAL municipal recycling rate (EPA, EU definition: material recycling + composting/AD + preparing for reuse over generated) — the EPA publishes no Dublin/regional split."
    },
    "Lisbon": {
-    "value": null,
-    "year": "n/a",
-    "note": "Pending Wave 2 manual sourcing: municipal recycling rates require one official city/agency source each (see ROSTER.md next steps). Blank, not zero."
+    "value": 26.0,
+    "year": "2024",
+    "source": "APA (Agência Portuguesa do Ambiente), Relatório Anual Resíduos Urbanos 2024 (setembro 2025), Tabela 17 — PRR por SGRU: VALORSUL",
+    "note": "EU 'preparing for reuse and recycling' (PRR) rate for the VALORSUL multi-municipal waste system (19 municipalities incl. Lisbon, ~1.69M residents) — no Lisbon-city-only rate exists. Volatile series: 29/38/31/26% for 2021-24 (APA annual urban-waste report, Tabela 17)."
    },
    "Prague": {
-    "value": null,
-    "year": "n/a",
-    "note": "Pending Wave 2 manual sourcing: municipal recycling rates require one official city/agency source each (see ROSTER.md next steps). Blank, not zero."
+    "value": 32.3,
+    "year": "2023",
+    "source": "MŽP ČR (Czech Ministry of the Environment), verified 2023 waste data (ISOH), press release 'Odpady v roce 2023', 20 March 2025",
+    "note": "Statutory municipal SORTING level (share of separately collected recyclables in municipal waste, Czech Act 541/2020) — separate collection, NOT final recycling output. Prague is its own region, so genuinely city-level; lowest of the 14 Czech regions (national avg 44.4%)."
    },
    "Warsaw": {
-    "value": null,
-    "year": "n/a",
-    "note": "Pending Wave 2 manual sourcing: municipal recycling rates require one official city/agency source each (see ROSTER.md next steps). Blank, not zero."
+    "value": 28.5,
+    "year": "2024",
+    "source": "Raport o stanie miasta Warszawa 2024 (City of Warsaw, June 2025), waste management chapter",
+    "note": "Statutory preparing-for-reuse-and-recycling level, City of Warsaw, EU-aligned calculation (recycled output over municipal waste generated), from the city's own Raport o stanie miasta 2024 — vs 45% legally required."
    },
    "Istanbul": {
     "value": null,
     "year": "n/a",
-    "note": "Pending Wave 2 manual sourcing: municipal recycling rates require one official city/agency source each (see ROSTER.md next steps). Blank, not zero."
+    "note": "NULL: no official recycling RATE exists — the Ministry's 2023 provincial environment report and İBB/İSTAÇ publish tonnages only (6.09Mt household waste, 5.42Mt landfilled), and TurkStat treatment splits are national. Deriving a share from incomplete flows would be estimation."
    },
    "Montreal": {
-    "value": null,
-    "year": "n/a",
-    "note": "Pending Wave 2 manual sourcing: municipal recycling rates require one official city/agency source each (see ROSTER.md next steps). Blank, not zero."
+    "value": 49.0,
+    "year": "2024",
+    "source": "Ville de Montréal — Bilan 2024 de la gestion des matières résiduelles de l'agglomération de Montréal (reddition de compte PDGMR 2020-2025)",
+    "note": "Diversion-from-disposal rate of municipal-managed (residential) streams, Agglomeration of Montreal (Island), Bilan 2024 GMR — diversion, not pure recycling; vs 70% target."
    },
    "Vancouver": {
-    "value": null,
-    "year": "n/a",
-    "note": "Pending Wave 2 manual sourcing: municipal recycling rates require one official city/agency source each (see ROSTER.md next steps). Blank, not zero."
+    "value": 65.0,
+    "year": "2023",
+    "source": "Metro Vancouver — Recycling and Solid Waste Management 2023 Report (annual summary, revised June 3 2025)",
+    "note": "METRO Vancouver regional recycling rate, ALL sectors (residential + commercial + construction/demolition, incl. EPR tonnages) — the widest scope in this column; not City of Vancouver alone. Report carries a draft banner but is the published annual summary."
    },
    "Chicago": {
-    "value": null,
-    "year": "n/a",
-    "note": "Pending Wave 2 manual sourcing: municipal recycling rates require one official city/agency source each (see ROSTER.md next steps). Blank, not zero."
+    "value": 9.0,
+    "year": "2025",
+    "source": "City of Chicago, Dept. of Streets & Sanitation — Chicago Recycles 'Recycling Rates' page, 2025 Household Waste Diversion Totals (Tons)",
+    "note": "Household waste DIVERSION rate for the ~625k city-serviced 1-4-unit households only (Blue Cart + yard + food); excludes multi-unit/commercial private haulers — structurally low scope. 2024: ~9.4%."
    },
    "Boston": {
-    "value": null,
-    "year": "n/a",
-    "note": "Pending Wave 2 manual sourcing: municipal recycling rates require one official city/agency source each (see ROSTER.md next steps). Blank, not zero."
+    "value": 25.0,
+    "year": "2019",
+    "source": "City of Boston — Zero Waste Boston: Recommendations of the Zero Waste Advisory Committee (June 2019)",
+    "note": "Citywide recycling rate (~25%: reused/recycled/composted, all generators), Zero Waste Boston 2019 (data c.2017-18). STALE: the most recent official published rate — MassDEP now publishes tonnages only and explicitly no longer calculates rates."
    },
    "Los Angeles": {
     "value": null,
     "year": "n/a",
-    "note": "Pending Wave 2 manual sourcing: municipal recycling rates require one official city/agency source each (see ROSTER.md next steps). Blank, not zero."
+    "note": "NULL: no current official rate exists — California abandoned rate-based accounting after 2013. The last published figure, 76.4% (2013, AB 939 landfill diversion incl. SOURCE-REDUCTION CREDITS for waste never generated, per the Zero Waste LA franchise board report), is 13 years stale and definitionally incomparable with this column, so it is not recorded."
    },
    "Seattle": {
-    "value": null,
-    "year": "n/a",
-    "note": "Pending Wave 2 manual sourcing: municipal recycling rates require one official city/agency source each (see ROSTER.md next steps). Blank, not zero."
+    "value": 53.4,
+    "year": "2023",
+    "source": "Seattle Public Utilities — 2023 Waste Prevention & Recycling Report",
+    "note": "Overall MSW recycling rate (recycled + composted over generated; all sectors, excl. third-party C&D), SPU 2023 Waste Prevention & Recycling Report — SPU's LAST published rate (metric retired 2024). Live PDF delisted; verified from the Internet Archive copy of the official report."
    },
    "Washington DC": {
-    "value": null,
-    "year": "n/a",
-    "note": "Pending Wave 2 manual sourcing: municipal recycling rates require one official city/agency source each (see ROSTER.md next steps). Blank, not zero."
+    "value": 27.93,
+    "year": "2022",
+    "source": "DC Dept. of Public Works, Office of Waste Diversion — Solid Waste Diversion Progress Report CY2019-2022",
+    "note": "Citywide waste DIVERSION rate, entire District stream (residential + commercial), DPW Office of Waste Diversion progress report CY2019-2022 (latest edition); residential-only 29.19%. Diversion, not pure recycling."
    },
    "Sydney": {
-    "value": null,
-    "year": "n/a",
-    "note": "Pending Wave 2 manual sourcing: municipal recycling rates require one official city/agency source each (see ROSTER.md next steps). Blank, not zero."
+    "value": 52.0,
+    "year": "2024/25",
+    "source": "City of Sydney — Green Report 2024/25 (Annual Environmental Report)",
+    "note": "Residential landfill-DIVERSION rate, City of Sydney LGA only (NOT Greater Sydney), Green Report 2024/25; source-separated recycling alone is 32% — diversion includes treatment of red-bin waste."
    },
    "Auckland": {
-    "value": null,
-    "year": "n/a",
-    "note": "Pending Wave 2 manual sourcing: municipal recycling rates require one official city/agency source each (see ROSTER.md next steps). Blank, not zero."
+    "value": 27.0,
+    "year": "2023",
+    "source": "Auckland Council — Auckland's Waste Assessment 2023 (November 2023)",
+    "note": "Domestic KERBSIDE diversion to recycling, Auckland region (Waste Assessment 2023 s7.4.3); household kerbside only, excludes commercial and private diversion; predates full food-scraps rollout."
    },
    "Osaka": {
-    "value": null,
-    "year": "n/a",
-    "note": "Pending Wave 2 manual sourcing: municipal recycling rates require one official city/agency source each (see ROSTER.md next steps). Blank, not zero."
+    "value": 9.5,
+    "year": "FY2023",
+    "source": "Japan Ministry of the Environment — 一般廃棄物処理実態調査 (Municipal Solid Waste Survey), FY2023 (令和5年度) results, Osaka Prefecture municipal file",
+    "note": "Administrative recycling rate R (MOE 一般廃棄物処理実態調査 FY2023, per-municipality file): direct recycling + post-treatment recovery + group collection over municipal general waste; excludes private independent recovery, so structurally low (national avg 19.5%)."
    },
    "Tel Aviv": {
+    "value": 36.0,
+    "year": "2024",
+    "source": "Tel Aviv-Yafo Municipality, Statistical Yearbook 2025 — 'עיקר הנתונים והמגמות' (key data and trends) presentation, sustainability page (p.39)",
+    "note": "City-reported share of all waste removed sent for recycling/recovery (Statistical Yearbook 2025) — a DIVERSION-style measure whose stream includes organics, green waste, packaging AND waste-to-energy/RDF, so broader than material recycling. National-methodology figure unverifiable this session (gov.il 403-blocked)."
+   },
+   "Shanghai": {
+    "value": 43.2,
+    "year": "2023",
+    "source": "Shanghai Municipal Bureau of Ecology and Environment, 2023 Annual Bulletin on Solid Waste Pollution Prevention (上海市2023年度固体废物污染环境防治信息公告)",
+    "note": "Household-waste recovery-and-utilisation rate (回收利用率), whole municipality: recyclables + food/wet-waste utilisation over household waste generated; broader than dry-materials recycling, excludes incineration (the 86.4% 资源化利用率 incl. WtE was NOT used). Official statistic; independent verification not possible."
+   },
+   "Beijing": {
+    "value": 39.8,
+    "year": "2023",
+    "source": "Beijing Municipal Ecology and Environment Bureau, 2023 Solid Waste Pollution Prevention Information Notice (北京市2023年固体废物污染环境防治信息通告)",
+    "note": "Household-waste recovery-and-utilisation rate (回收利用率): kitchen/food waste treated + recyclables recovered over household waste generated; excludes incineration (the 80.94% rate incl. WtE was NOT used). Official statistic; independent verification not possible."
+   },
+   "Shenzhen": {
     "value": null,
     "year": "n/a",
-    "note": "Pending Wave 2 manual sourcing: municipal recycling rates require one official city/agency source each (see ROSTER.md next steps). Blank, not zero."
+    "note": "NULL: an official figure exists (48.5% household-waste recovery rate 2023, per the city administration bureau's statistics report) but every Shenzhen government host refused connections/403'd this session and no archive snapshot exists — not recordable without fetching the official source."
+   },
+   "Hong Kong": {
+    "value": 34.0,
+    "year": "2024",
+    "source": "EPD, Monitoring of Solid Waste in Hong Kong — Waste Statistics for 2024 (published 22 Dec 2025)",
+    "note": "MSW RECOVERY rate = recyclables recovered for recycling / MSW generated, territory-wide incl. commercial & industrial; 79% of recovered material exported for recycling (recovery ≠ verified final recycling). 2023: 33%."
+   },
+   "Taipei": {
+    "value": 70.8,
+    "year": "2024",
+    "source": "Taiwan Ministry of Environment (MOENV) open-data indicator 一般廢棄物回收率 (dataset STAT_P_46), Taipei City, ROC year 113 (=2024)",
+    "note": "General (municipal household) waste recycling rate, Taipei City: recyclables + food-waste recycling + bulky-waste reuse over general waste generated; includes composting, excludes incineration. From MOENV open-data indicator STAT_P_46. 2023: 70.27%."
+   },
+   "Bangkok": {
+    "value": null,
+    "year": "n/a",
+    "note": "NULL: BMA publishes no recycling rate — only collection tonnages and a facility-level 39.18% 'returned to use' share (FY2023) that includes incineration/MBT, i.e. disposal-centre diversion, not recycling. The source-separation indicator is reported only as 'target met' with no value."
+   },
+   "Kuala Lumpur": {
+    "value": 37.9,
+    "year": "2024",
+    "source": "Statistik KPKT 2024 (Ministry of Housing and Local Government Malaysia; source SWCorp) — Kadar Kitar Semula Kebangsaan / National Recycling Rate",
+    "note": "COUNTRY PROXY: Malaysia NATIONAL household/MSW recycling rate (SWCorp via Statistik KPKT 2024) — no KL-specific rate is published (only kerbside collection tonnage). 2023: 35.38%."
+   },
+   "Jakarta": {
+    "value": null,
+    "year": "n/a",
+    "note": "NULL: the national SIPSN per-city recycling-rate table is no longer publicly reachable (old app dead, successor portal login-gated, archives empty). Jakarta's official SILIKA dashboard publishes reduction (26%) / handling (73%) shares, which are not a recycling rate."
+   },
+   "Manila": {
+    "value": 48.0,
+    "year": "2015",
+    "source": "Senate of the Philippines, Senate Economic Planning Office, 'Philippine Solid Wastes At A Glance' (AG-17-01, Nov 2017), citing DENR-NSWMC",
+    "note": "Solid-waste DIVERSION rate for Metro Manila (NCR), RA 9003 definition: reuse + recycling + composting + resource recovery (incineration is banned in the Philippines). STALE: 2015 is the latest official NCR figure (Senate SEPO 2017, citing DENR-NSWMC; verified via archived official PDF); no newer percentage published through 2018+ reports."
+   },
+   "Ho Chi Minh City": {
+    "value": null,
+    "year": "n/a",
+    "note": "NULL: official statements give only a treatment mix (~69% landfilled, remainder blending recycling with composting/incineration) — no genuine recycling share; DONRE portal unreachable this session."
+   },
+   "Mumbai": {
+    "value": null,
+    "year": "n/a",
+    "note": "NULL: CPCB publishes only 'waste processed/treated' (includes incineration, composting, RDF) — processed ≠ recycled; no city recycling rate exists for Mumbai."
+   },
+   "Delhi": {
+    "value": null,
+    "year": "n/a",
+    "note": "NULL: CPCB reports ~48% 'processed/treated', which includes Delhi's waste-to-energy incineration and composting — not a recycling/material-recovery share; no official recycling rate exists."
+   },
+   "Abu Dhabi": {
+    "value": 32.0,
+    "year": "2024",
+    "source": "Tadweer Group (Abu Dhabi government waste management company) Sustainability Report 2024, esg.tadweer.ae",
+    "note": "Landfill-DIVERSION of non-hazardous waste (recycling + composting + further treatment), Tadweer Sustainability Report 2024. Geography: the EMIRATE of Abu Dhabi (Tadweer manages the whole emirate's waste), not the city proper."
    }
   }
  },
