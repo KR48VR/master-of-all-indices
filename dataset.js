@@ -47,7 +47,7 @@ window.INDEX_DATA = {
 {"id": "TAL-04", "domain": "Talent", "subtheme": "Skills & Workforce", "name": "Researchers per capita", "measures": "R&D personnel per 1,000", "unit": "per 1k", "direction": "higher", "dataLevel": "Metro", "source": "OECD", "appearsIn": "GPCI (R&D)", "pilot": 0, "caveat": "", "contestable": 0, "approx": "none"},
 {"id": "TAL-05", "domain": "Talent", "subtheme": "Attractiveness", "name": "Talent inflow", "measures": "Net migration of working-age people", "unit": "%", "direction": "higher", "dataLevel": "Metro", "source": "National statistics", "appearsIn": "—", "pilot": 0, "caveat": "Hard to standardise across countries.", "contestable": 0, "approx": "none"},
 {"id": "TAL-06", "domain": "Talent", "subtheme": "Attractiveness", "name": "International openness", "measures": "Foreign-born population share", "unit": "%", "direction": "higher", "dataLevel": "Metro", "source": "OECD FUA / national censuses / UN DESA", "appearsIn": "GPCI", "pilot": 1, "caveat": "Mixes concepts and boundaries, disclosed per value: census/register foreign-born for most; foreign NATIONALS for Tokyo, Seoul, Osaka, Taipei; non-citizens for Kuala Lumpur; Hong Kong counts everyone born outside HK INCLUDING mainland China (29.9 of its 38.3 points). City vs metro boundaries and years 2021-2026 vary. Many Asian cities publish nothing honest here - blanks explain themselves. A proxy for openness - contestable as \"better\".", "contestable": 1, "approx": "none"},
-{"id": "CON-01", "domain": "Connected", "subtheme": "Global Connectivity", "name": "Airport connectivity", "measures": "Direct international destinations served", "unit": "count", "direction": "higher", "dataLevel": "City", "source": "Wikipedia airport destination tables", "appearsIn": "GPCI (Accessibility)", "pilot": 1, "caveat": "Counted from Wikipedia \"Airlines and destinations\" tables (July 2026 snapshots): distinct international destination airports with scheduled or announced passenger service (charter/cargo excluded; suspended-annotated routes retained), union across each city's airport system, Wikidata-verified country classification. Crowd-maintained lists - completeness varies by page: Tokyo and Osaka are blank because their articles are known-pruned. Snapshot, not an official OAG count.", "contestable": 0, "approx": "crowd"},
+{"id": "CON-01", "domain": "Connected", "subtheme": "Global Connectivity", "name": "Airport connectivity", "measures": "Direct international destinations served", "unit": "count", "direction": "higher", "dataLevel": "City", "source": "Wikipedia airport destination tables", "appearsIn": "GPCI (Accessibility)", "pilot": 1, "caveat": "Counted from Wikipedia \"Airlines and destinations\" tables (July 2026 snapshots): distinct international destination airports with scheduled or announced passenger service (charter/cargo excluded; suspended-annotated routes retained), union across each city's airport system, Wikidata-verified country classification. Crowd-maintained lists - completeness varies by page: Tokyo, Osaka and Taipei are blank because their articles are known-pruned. Mainland China / Hong Kong / Macau / Taiwan routes are counted as international throughout (separate customs territories). Snapshot, not an official OAG count.", "contestable": 0, "approx": "crowd"},
 {"id": "CON-02", "domain": "Connected", "subtheme": "Global Connectivity", "name": "Global accessibility", "measures": "Travel time to major world hubs", "unit": "hours", "direction": "lower", "dataLevel": "City", "source": "GPCI", "appearsIn": "GPCI (Accessibility)", "pilot": 0, "caveat": "", "contestable": 0, "approx": "none"},
 {"id": "CON-03", "domain": "Connected", "subtheme": "Urban Mobility", "name": "Transit access", "measures": "% residents within 500 m of frequent transit (ITDP PNFT)", "unit": "%", "direction": "higher", "dataLevel": "Metro", "source": "ITDP Atlas (People Near Frequent Transit)", "appearsIn": "—", "pilot": 1, "caveat": "Share of the GHSL urban agglomeration within 500 m of a stop served at least every ~10 min (7am-9pm), GIS-computed by ITDP from open GTFS feeds; latest RELIABLE year per city (2023-2025 - one-cycle feed collapses are treated as artifacts, disclosed per value). Cities without usable open feeds are blank, NOT zero (Tokyo, London, Zurich, Melbourne, Amsterdam, Seoul, Oslo, Frankfurt, Istanbul, Osaka).", "contestable": 0, "approx": "modelled"},
 {"id": "CON-04", "domain": "Connected", "subtheme": "Urban Mobility", "name": "Commute time", "measures": "Average one-way commute", "unit": "minutes", "direction": "lower", "dataLevel": "City", "source": "Numbeo / Moovit", "appearsIn": "—", "pilot": 0, "caveat": "Crowd-sourced component.", "contestable": 0, "approx": "crowd"},
@@ -97,19 +97,19 @@ window.INDEX_DATA = {
 "Auckland":{"SMT-01": 283.4, "CMP-01": 55906, "LIV-04": 82.7, "TAL-01": 45.5, "LIV-05": 3.47, "LIV-01": 1.46, "SMT-05": 93.5, "GRN-01": 5.5, "GRN-02": 88.4, "LIV-06": 10.5, "CON-05": 42.2, "CON-03": 37.6, "SMT-03": 80.21, "TAL-02": 2, "CON-01": 46, "TAL-06": 42.5, "GRN-05": null, "CMP-04": null, "CMP-06": 166},
 "Osaka":{"SMT-01": 295.1, "CMP-01": 41497, "LIV-04": 84.2, "TAL-01": 56.9, "LIV-05": 2.92, "LIV-01": 0.23, "SMT-05": 85.5, "GRN-01": 9.4, "GRN-02": 72.2, "LIV-06": 10.6, "CON-05": 42.9, "CON-03": null, "SMT-03": null, "TAL-02": 1, "CON-01": null, "TAL-06": 6.8, "GRN-05": null, "CMP-04": 3.7, "CMP-06": 21},
 "Tel Aviv":{"SMT-01": 366.9, "CMP-01": null, "LIV-04": 83.1, "TAL-01": 60.4, "LIV-05": 4.9, "LIV-01": 1.63, "SMT-05": 88.2, "GRN-01": 17.4, "GRN-02": 65.7, "LIV-06": 20.0, "CON-05": null, "CON-03": 87.9, "SMT-03": null, "TAL-02": 1, "CON-01": 114, "TAL-06": 23.5, "GRN-05": null, "CMP-04": null, "CMP-06": 2111},
-"Hong Kong":{"SMT-01": 431.6, "TAL-02": 5, "CON-03": 52.2, "CON-05": 47.7, "CMP-01": 66154, "LIV-01": 0.38, "SMT-05": 95.8, "GRN-01": 19.8, "GRN-02": 95.7, "SMT-03": null, "TAL-06": 38.3},
-"Taipei":{"SMT-01": 258.2, "TAL-02": 4, "CON-03": null, "CON-05": 43.6, "CMP-01": null, "LIV-01": 0.32, "SMT-05": 88.8, "GRN-01": 15.0, "GRN-02": null, "SMT-03": null, "TAL-06": 3.3},
-"Bangkok":{"SMT-01": 375.6, "TAL-02": 1, "CON-03": null, "CON-05": 67.9, "CMP-01": null, "LIV-01": 4.79, "SMT-05": 90.9, "GRN-01": 23.4, "GRN-02": 11.8, "SMT-03": 66.67, "TAL-06": null},
-"Kuala Lumpur":{"SMT-01": 272.1, "TAL-02": 4, "CON-03": null, "CON-05": 39.1, "CMP-01": null, "LIV-01": 0.73, "SMT-05": 98.0, "GRN-01": 28.3, "GRN-02": 46.1, "SMT-03": 59.38, "TAL-06": 13.1},
-"Jakarta":{"SMT-01": 97.7, "TAL-02": 0, "CON-03": 22.6, "CON-05": 59.8, "CMP-01": null, "LIV-01": 0.3, "SMT-05": 72.8, "GRN-01": 33.8, "GRN-02": 24.2, "SMT-03": 68.75, "TAL-06": null},
-"Manila":{"SMT-01": 198.9, "TAL-02": 0, "CON-03": null, "CON-05": 57.3, "CMP-01": null, "LIV-01": 4.35, "SMT-05": 67.3, "GRN-01": 15.4, "GRN-02": 28.7, "SMT-03": 60.42, "TAL-06": null},
-"Ho Chi Minh City":{"SMT-01": 269.6, "TAL-02": 0, "CON-03": null, "CON-05": 40.3, "CMP-01": null, "LIV-01": 1.54, "SMT-05": 84.2, "GRN-01": 23.5, "GRN-02": 30.4, "SMT-03": 63.54, "TAL-06": null},
-"Mumbai":{"SMT-01": 93.4, "TAL-02": 1, "CON-03": null, "CON-05": 61.5, "CMP-01": null, "LIV-01": 2.82, "SMT-05": 70.0, "GRN-01": 49.5, "GRN-02": 35.3, "SMT-03": 56.25, "TAL-06": null},
-"Abu Dhabi":{"SMT-01": 348.1, "TAL-02": 1, "CON-03": 60.8, "CON-05": 25.5, "CMP-01": null, "LIV-01": 0.69, "SMT-05": 100.0, "GRN-01": 30.9, "GRN-02": 37.6, "SMT-03": null, "TAL-06": null},
-"Shanghai":{"SMT-01": 458.1, "TAL-02": 5, "CON-03": null, "CON-05": null, "CMP-01": null, "LIV-01": 0.5, "SMT-05": 91.6, "GRN-01": 28.4, "GRN-02": 29.9, "SMT-03": 86.46, "TAL-06": null},
-"Beijing":{"SMT-01": 331.9, "TAL-02": 7, "CON-03": null, "CON-05": null, "CMP-01": null, "LIV-01": 0.5, "SMT-05": 91.6, "GRN-01": 31.0, "GRN-02": null, "SMT-03": null, "TAL-06": null},
-"Shenzhen":{"SMT-01": 314.9, "TAL-02": 2, "CON-03": null, "CON-05": null, "CMP-01": null, "LIV-01": 0.5, "SMT-05": 91.6, "GRN-01": 17.3, "GRN-02": 21.9, "SMT-03": null, "TAL-06": null},
-"Delhi":{"SMT-01": 120.5, "TAL-02": 2, "CON-03": null, "CON-05": 55.4, "CMP-01": null, "LIV-01": 2.82, "SMT-05": 70.0, "GRN-01": 107.0, "GRN-02": 43.6, "SMT-03": null, "TAL-06": null}
+"Hong Kong":{"SMT-01": 431.6, "TAL-02": 5, "CON-03": 52.2, "CON-05": 47.7, "CMP-01": 66154, "LIV-01": 0.38, "SMT-05": 95.8, "GRN-01": 19.8, "GRN-02": 95.7, "SMT-03": null, "TAL-06": 38.3, "CON-01": 149.0},
+"Taipei":{"SMT-01": 258.2, "TAL-02": 4, "CON-03": null, "CON-05": 43.6, "CMP-01": null, "LIV-01": 0.32, "SMT-05": 88.8, "GRN-01": 15.0, "GRN-02": null, "SMT-03": null, "TAL-06": 3.3, "CON-01": null},
+"Bangkok":{"SMT-01": 375.6, "TAL-02": 1, "CON-03": null, "CON-05": 67.9, "CMP-01": null, "LIV-01": 4.79, "SMT-05": 90.9, "GRN-01": 23.4, "GRN-02": 11.8, "SMT-03": 66.67, "TAL-06": null, "CON-01": 154.0},
+"Kuala Lumpur":{"SMT-01": 272.1, "TAL-02": 4, "CON-03": null, "CON-05": 39.1, "CMP-01": null, "LIV-01": 0.73, "SMT-05": 98.0, "GRN-01": 28.3, "GRN-02": 46.1, "SMT-03": 59.38, "TAL-06": 13.1, "CON-01": 131.0},
+"Jakarta":{"SMT-01": 97.7, "TAL-02": 0, "CON-03": 22.6, "CON-05": 59.8, "CMP-01": null, "LIV-01": 0.3, "SMT-05": 72.8, "GRN-01": 33.8, "GRN-02": 24.2, "SMT-03": 68.75, "TAL-06": null, "CON-01": 50.0},
+"Manila":{"SMT-01": 198.9, "TAL-02": 0, "CON-03": null, "CON-05": 57.3, "CMP-01": null, "LIV-01": 4.35, "SMT-05": 67.3, "GRN-01": 15.4, "GRN-02": 28.7, "SMT-03": 60.42, "TAL-06": null, "CON-01": 66.0},
+"Ho Chi Minh City":{"SMT-01": 269.6, "TAL-02": 0, "CON-03": null, "CON-05": 40.3, "CMP-01": null, "LIV-01": 1.54, "SMT-05": 84.2, "GRN-01": 23.5, "GRN-02": 30.4, "SMT-03": 63.54, "TAL-06": null, "CON-01": 75.0},
+"Mumbai":{"SMT-01": 93.4, "TAL-02": 1, "CON-03": null, "CON-05": 61.5, "CMP-01": null, "LIV-01": 2.82, "SMT-05": 70.0, "GRN-01": 49.5, "GRN-02": 35.3, "SMT-03": 56.25, "TAL-06": null, "CON-01": 52.0},
+"Abu Dhabi":{"SMT-01": 348.1, "TAL-02": 1, "CON-03": 60.8, "CON-05": 25.5, "CMP-01": null, "LIV-01": 0.69, "SMT-05": 100.0, "GRN-01": 30.9, "GRN-02": 37.6, "SMT-03": null, "TAL-06": null, "CON-01": 165.0},
+"Shanghai":{"SMT-01": 458.1, "TAL-02": 5, "CON-03": null, "CON-05": null, "CMP-01": null, "LIV-01": 0.5, "SMT-05": 91.6, "GRN-01": 28.4, "GRN-02": 29.9, "SMT-03": 86.46, "TAL-06": null, "CON-01": 105.0},
+"Beijing":{"SMT-01": 331.9, "TAL-02": 7, "CON-03": null, "CON-05": null, "CMP-01": null, "LIV-01": 0.5, "SMT-05": 91.6, "GRN-01": 31.0, "GRN-02": null, "SMT-03": null, "TAL-06": null, "CON-01": 124.0},
+"Shenzhen":{"SMT-01": 314.9, "TAL-02": 2, "CON-03": null, "CON-05": null, "CMP-01": null, "LIV-01": 0.5, "SMT-05": 91.6, "GRN-01": 17.3, "GRN-02": 21.9, "SMT-03": null, "TAL-06": null, "CON-01": 54.0},
+"Delhi":{"SMT-01": 120.5, "TAL-02": 2, "CON-03": null, "CON-05": 55.4, "CMP-01": null, "LIV-01": 2.82, "SMT-05": 70.0, "GRN-01": 107.0, "GRN-02": 43.6, "SMT-03": null, "TAL-06": null, "CON-01": 79.0}
 },
 "provenance":{
  "LIV-01": {
@@ -6181,11 +6181,11 @@ window.INDEX_DATA = {
  },
  "CON-01": {
   "source": "English Wikipedia per-airport \"Airlines and destinations\" tables (passenger sections only)",
-  "url": "https://en.wikipedia.org/wiki/ (26 airport articles; raw HTML + per-city destination lists archived in session evidence)",
+  "url": "https://en.wikipedia.org/wiki/ (one article per airport in each city's system; raw wikitext/HTML + per-city destination lists archived in session evidence)",
   "license": "CC BY-SA 4.0 (Wikipedia)",
   "edition": "live tables as of 2026-07-12",
   "retrieved": "2026-07-12",
-  "method": "Per airport: parse passenger destination table; include year-round, seasonal and announced routes; exclude charter-only and cargo. Per city: union of INTERNATIONAL (non-domestic) destinations across its airports, deduplicated by wikilink target/normalized name. Counted by 4 parallel agents with a shared rule set; judgment calls recorded per city.",
+  "method": "Per airport: parse passenger destination table; include year-round, seasonal and announced routes; exclude charter-only and cargo. Per city: union of INTERNATIONAL (non-domestic) destinations across its airports, deduplicated by wikilink target/normalized name. Counted by parallel agents with a shared rule set; judgment calls recorded per city.",
   "perCity": {
    "Singapore": {
     "value": 175,
@@ -6427,6 +6427,84 @@ window.INDEX_DATA = {
     "year": "2026-07-12",
     "airports": "TLV",
     "note": "10 routes annotated suspended (war-related, most with stated resume dates, e.g. Amsterdam, Madrid, Copenhagen, Moscow-Domodedovo) RETAINED per strip-annotations rule; only domestic destination is Eilat-Ramon."
+   },
+   "Hong Kong": {
+    "value": 149.0,
+    "year": "2026-07-12",
+    "airports": "HKG",
+    "note": "149 unique passenger destinations, ALL counted international: by the separate-customs-territory convention, mainland China, Macau and Taiwan are international from Hong Kong; HK has no domestic air destinations. Table intact (Apr 2026 purge removed only 2 destinations)."
+   },
+   "Taipei": {
+    "value": null,
+    "year": "n/a",
+    "airports": "TPE+TSA",
+    "note": "NULL - artifact risk: the TPE 'Airlines and destinations' table was gutted 2026-06-30 ('remove unsourced', -27.9 kB): 21 airline rows deleted incl. operating majors (JAL, KLM, Turkish, China Eastern/Southern, Philippine, Etihad...), losing >=14 destinations. Current tables give 99 intl, pre-purge 109; neither reliable, so no value - same treatment as Tokyo/Osaka."
+   },
+   "Bangkok": {
+    "value": 154.0,
+    "year": "2026-07-12",
+    "airports": "BKK+DMK",
+    "note": "Union BKK+DMK: 154 international, domestic = Thailand. Unsourced-row purges (BKK Oct 2025 & 2026-07-05, DMK 2026-05-20) removed small-carrier rows; pre-purge union ~160, so 154 may slightly understate. All major carriers present."
+   },
+   "Kuala Lumpur": {
+    "value": 131.0,
+    "year": "2026-07-12",
+    "airports": "KUL+SZB",
+    "note": "Union KUL (128 intl) + SZB (9 intl) = 131 unique international, domestic = Malaysia. KUL had unsourced-row trims (Jan/Jun 2026) but net destination count unchanged vs pre-purge revision and all major carriers present, so the count is treated as sound."
+   },
+   "Jakarta": {
+    "value": 50.0,
+    "year": "2026-07-12",
+    "airports": "CGK+HLP",
+    "note": "CGK 50 international; HLP passenger table is domestic-only, contributes 0. 6 charter-only destinations excluded at CGK. Dedup by redirect-resolved wikilink; international = Wikidata P17 != Indonesia."
+   },
+   "Manila": {
+    "value": 66.0,
+    "year": "2026-07-12",
+    "airports": "MNL+CRK",
+    "note": "Metro-system definition: MNL (main gateway, 65 intl) + Clark CRK (80 km NW, secondary gateway, 10 intl; 9 overlap, adds only Cheongju) = 66 unique. Charter-only excluded (Ulaanbaatar, Madinah)."
+   },
+   "Ho Chi Minh City": {
+    "value": 75.0,
+    "year": "2026-07-12",
+    "airports": "SGN",
+    "note": "Tan Son Nhat (SGN) passenger table: 75 unique international destinations (20 domestic); no charter-only entries; includes announced 2026-27 routes."
+   },
+   "Mumbai": {
+    "value": 52.0,
+    "year": "2026-07-12",
+    "airports": "BOM",
+    "note": "BOM passenger table: 52 international. A 2026-06-26 unsourced-content cleanup removed 5 international destinations (Male, Tehran, Najaf, Baghdad, Aden); pre-cleanup revision yields 57. Table NOT gutted (45 airline rows remain), so the as-published count is reported but likely slightly undercounts."
+   },
+   "Abu Dhabi": {
+    "value": 165.0,
+    "year": "2026-07-12",
+    "airports": "AUH",
+    "note": "AUH: 165 unique international destinations; 0 domestic (UAE has no scheduled domestic passenger service). 3 charter-only destinations excluded. Includes announced 2026-27 routes."
+   },
+   "Shanghai": {
+    "value": 105.0,
+    "year": "2026-07-12",
+    "airports": "PVG+SHA",
+    "note": "HK/Macau/Taiwan destinations counted international (separate customs territories). PVG table purged of unsourced rows 2025-10-05 and re-sourced since; pre-purge revision yields 112, so 105 may modestly understate (losses mostly secondary Japanese/regional seasonal routes). All major carriers present."
+   },
+   "Beijing": {
+    "value": 124.0,
+    "year": "2026-07-12",
+    "airports": "PEK+PKX",
+    "note": "Union PEK (101 intl) + PKX (55 intl) = 124 unique international. HK/Macau/Taiwan counted international. No purge-scale deletions in either article's history back to late 2023; China Southern absent from PEK genuinely (moved to Daxing 2019)."
+   },
+   "Shenzhen": {
+    "value": 54.0,
+    "year": "2026-07-12",
+    "airports": "SZX",
+    "note": "182 unique destinations, 54 international. HK/Macau/Taiwan counted international; includes Macau scheduled helicopter shuttle (a passenger-table row). History clean back to 2023-07."
+   },
+   "Delhi": {
+    "value": 79.0,
+    "year": "2026-07-12",
+    "airports": "DEL",
+    "note": "DEL passenger table: 79 international, 75 domestic. A 2026-06-18 cleanup was checked against the pre-cleanup revision: destinations table not reduced, no adjustment needed."
    }
   }
  }
