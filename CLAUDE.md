@@ -19,9 +19,15 @@ Live at: https://kr48vr.github.io/master-of-all-indices/
   read it; it is the reference. READ IT to understand any measure.
 
 ## Current status
-The engine works and is published. BUT every value in `dataset.js` is an
-ILLUSTRATIVE PLACEHOLDER — none are real. The remaining work (Phase 2) is
-replacing them with verified, sourced numbers.
+The engine works and is published. Phase 2 (real data) is largely done for the
+PILOT set: 18 of the 19 pilot measures now hold verified, sourced values, with
+source/year/method recorded per value in the `provenance` block of `dataset.js`
+(the app ignores that block; it exists to satisfy rule 3). CON-01 (airport
+connectivity) is deliberately all-null pending manual sourcing — its former
+placeholders were removed. The 19 NON-pilot measures have never had data values
+(the app shows them as "no data"); sourcing them would be Phase 3. Any value
+present in `dataset.js` is real and has a `provenance` entry. `SOURCING.md`
+documents the source plan and verdict per pilot measure.
 
 ## How the engine works — do not change it
 For the selected measures: rescale each to 0–100 across the shown cities, flip
