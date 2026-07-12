@@ -774,29 +774,29 @@ Berlin,CON-05,Traffic congestion,Connected,Urban Mobility,%,lower,City,none,44.6
 Barcelona,CON-05,Traffic congestion,Connected,Urban Mobility,%,lower,City,none,41.1,2025,"Barcelona, ES (key: barcelona, City tab, rank 209)","Average congestion, city-center definition"
 Dubai,CON-05,Traffic congestion,Connected,Urban Mobility,%,lower,City,none,42.7,2025,"Dubai, AE (key: dubai, City tab, rank 184)","Average congestion, city-center definition"
 San Francisco,CON-05,Traffic congestion,Connected,Urban Mobility,%,lower,City,none,49.7,2025,"San Francisco, CA, US (key: san-francisco-ca, City tab, rank 89)","Average congestion, city-center definition"
-Stockholm,CON-05,Traffic congestion,Connected,Urban Mobility,%,lower,City,none,,,TomTom Traffic Index — Ranking,
-Oslo,CON-05,Traffic congestion,Connected,Urban Mobility,%,lower,City,none,,,TomTom Traffic Index — Ranking,
-Helsinki,CON-05,Traffic congestion,Connected,Urban Mobility,%,lower,City,none,,,TomTom Traffic Index — Ranking,
-Madrid,CON-05,Traffic congestion,Connected,Urban Mobility,%,lower,City,none,,,TomTom Traffic Index — Ranking,
-Milan,CON-05,Traffic congestion,Connected,Urban Mobility,%,lower,City,none,,,TomTom Traffic Index — Ranking,
-Rome,CON-05,Traffic congestion,Connected,Urban Mobility,%,lower,City,none,,,TomTom Traffic Index — Ranking,
-Munich,CON-05,Traffic congestion,Connected,Urban Mobility,%,lower,City,none,,,TomTom Traffic Index — Ranking,
-Frankfurt,CON-05,Traffic congestion,Connected,Urban Mobility,%,lower,City,none,,,TomTom Traffic Index — Ranking,
-Hamburg,CON-05,Traffic congestion,Connected,Urban Mobility,%,lower,City,none,,,TomTom Traffic Index — Ranking,
-Brussels,CON-05,Traffic congestion,Connected,Urban Mobility,%,lower,City,none,,,TomTom Traffic Index — Ranking,
-Dublin,CON-05,Traffic congestion,Connected,Urban Mobility,%,lower,City,none,,,TomTom Traffic Index — Ranking,
-Lisbon,CON-05,Traffic congestion,Connected,Urban Mobility,%,lower,City,none,,,TomTom Traffic Index — Ranking,
-Prague,CON-05,Traffic congestion,Connected,Urban Mobility,%,lower,City,none,,,TomTom Traffic Index — Ranking,
-Warsaw,CON-05,Traffic congestion,Connected,Urban Mobility,%,lower,City,none,,,TomTom Traffic Index — Ranking,
-Istanbul,CON-05,Traffic congestion,Connected,Urban Mobility,%,lower,City,none,,,TomTom Traffic Index — Ranking,
-Montreal,CON-05,Traffic congestion,Connected,Urban Mobility,%,lower,City,none,,,TomTom Traffic Index — Ranking,
-Vancouver,CON-05,Traffic congestion,Connected,Urban Mobility,%,lower,City,none,,,TomTom Traffic Index — Ranking,
-Chicago,CON-05,Traffic congestion,Connected,Urban Mobility,%,lower,City,none,,,TomTom Traffic Index — Ranking,
-Boston,CON-05,Traffic congestion,Connected,Urban Mobility,%,lower,City,none,,,TomTom Traffic Index — Ranking,
-Los Angeles,CON-05,Traffic congestion,Connected,Urban Mobility,%,lower,City,none,,,TomTom Traffic Index — Ranking,
-Seattle,CON-05,Traffic congestion,Connected,Urban Mobility,%,lower,City,none,,,TomTom Traffic Index — Ranking,
-Washington DC,CON-05,Traffic congestion,Connected,Urban Mobility,%,lower,City,none,,,TomTom Traffic Index — Ranking,
-Sydney,CON-05,Traffic congestion,Connected,Urban Mobility,%,lower,City,none,,,TomTom Traffic Index — Ranking,
-Auckland,CON-05,Traffic congestion,Connected,Urban Mobility,%,lower,City,none,,,TomTom Traffic Index — Ranking,
-Osaka,CON-05,Traffic congestion,Connected,Urban Mobility,%,lower,City,none,,,TomTom Traffic Index — Ranking,
-Tel Aviv,CON-05,Traffic congestion,Connected,Urban Mobility,%,lower,City,none,,,TomTom Traffic Index — Ranking,
+Stockholm,CON-05,Traffic congestion,Connected,Urban Mobility,%,lower,City,none,42.8,2025,"Stockholm, SE","TomTom Traffic Index 2025 full-year congestion level, City (center) tab; country verified via country field."
+Oslo,CON-05,Traffic congestion,Connected,Urban Mobility,%,lower,City,none,33.2,2025,"Oslo, NO","TomTom Traffic Index 2025 full-year congestion level, City (center) tab; country verified via country field."
+Helsinki,CON-05,Traffic congestion,Connected,Urban Mobility,%,lower,City,none,51.9,2025,"Helsinki, FI","TomTom Traffic Index 2025 full-year congestion level, City (center) tab; country verified via country field."
+Madrid,CON-05,Traffic congestion,Connected,Urban Mobility,%,lower,City,none,38,2025,"Madrid, ES","TomTom Traffic Index 2025 full-year congestion level, City (center) tab; country verified via country field."
+Milan,CON-05,Traffic congestion,Connected,Urban Mobility,%,lower,City,none,49.4,2025,"Milan, IT","TomTom Traffic Index 2025 full-year congestion level, City (center) tab; country verified via country field."
+Rome,CON-05,Traffic congestion,Connected,Urban Mobility,%,lower,City,none,45.2,2025,"Rome, IT","TomTom Traffic Index 2025 full-year congestion level, City (center) tab; country verified via country field."
+Munich,CON-05,Traffic congestion,Connected,Urban Mobility,%,lower,City,none,43.7,2025,"Munich, DE","TomTom Traffic Index 2025 full-year congestion level, City (center) tab; country verified via country field."
+Frankfurt,CON-05,Traffic congestion,Connected,Urban Mobility,%,lower,City,none,42.3,2025,"Frankfurt am Main, DE","TomTom Traffic Index 2025 full-year congestion level, City (center) tab; country verified via country field."
+Hamburg,CON-05,Traffic congestion,Connected,Urban Mobility,%,lower,City,none,49.3,2025,"Hamburg, DE","TomTom Traffic Index 2025 full-year congestion level, City (center) tab; country verified via country field."
+Brussels,CON-05,Traffic congestion,Connected,Urban Mobility,%,lower,City,none,46.2,2025,"Brussels, BE","TomTom Traffic Index 2025 full-year congestion level, City (center) tab; country verified via country field."
+Dublin,CON-05,Traffic congestion,Connected,Urban Mobility,%,lower,City,none,72.9,2025,"Dublin, IE","TomTom Traffic Index 2025 full-year congestion level, City (center) tab; country verified via country field."
+Lisbon,CON-05,Traffic congestion,Connected,Urban Mobility,%,lower,City,none,39,2025,"Lisboa, PT","TomTom Traffic Index 2025 full-year congestion level, City (center) tab; country verified via country field. Listed as 'Lisboa'."
+Prague,CON-05,Traffic congestion,Connected,Urban Mobility,%,lower,City,none,53.5,2025,"Prague, CZ","TomTom Traffic Index 2025 full-year congestion level, City (center) tab; country verified via country field."
+Warsaw,CON-05,Traffic congestion,Connected,Urban Mobility,%,lower,City,none,51.3,2025,"Warsaw, PL","TomTom Traffic Index 2025 full-year congestion level, City (center) tab; country verified via country field."
+Istanbul,CON-05,Traffic congestion,Connected,Urban Mobility,%,lower,City,none,62,2025,"Istanbul, TR","TomTom Traffic Index 2025 full-year congestion level, City (center) tab; country verified via country field."
+Montreal,CON-05,Traffic congestion,Connected,Urban Mobility,%,lower,City,none,41.3,2025,"Montreal, CA","TomTom Traffic Index 2025 full-year congestion level, City (center) tab; country verified via country field."
+Vancouver,CON-05,Traffic congestion,Connected,Urban Mobility,%,lower,City,none,56.5,2025,"Vancouver, CA","TomTom Traffic Index 2025 full-year congestion level, City (center) tab; country verified via country field. Canada entry (no Vancouver WA/USA in table)."
+Chicago,CON-05,Traffic congestion,Connected,Urban Mobility,%,lower,City,none,46.1,2025,"Chicago, IL, US","TomTom Traffic Index 2025 full-year congestion level, City (center) tab; country verified via country field."
+Boston,CON-05,Traffic congestion,Connected,Urban Mobility,%,lower,City,none,42.1,2025,"Boston, MA, US","TomTom Traffic Index 2025 full-year congestion level, City (center) tab; country verified via country field."
+Los Angeles,CON-05,Traffic congestion,Connected,Urban Mobility,%,lower,City,none,59.8,2025,"Los Angeles, CA, US","TomTom Traffic Index 2025 full-year congestion level, City (center) tab; country verified via country field."
+Seattle,CON-05,Traffic congestion,Connected,Urban Mobility,%,lower,City,none,44.9,2025,"Seattle, WA, US","TomTom Traffic Index 2025 full-year congestion level, City (center) tab; country verified via country field."
+Washington DC,CON-05,Traffic congestion,Connected,Urban Mobility,%,lower,City,none,37.3,2025,"Washington, DC, US","TomTom Traffic Index 2025 full-year congestion level, City (center) tab; country verified via country field. Entry 'Washington, DC', country US."
+Sydney,CON-05,Traffic congestion,Connected,Urban Mobility,%,lower,City,none,43.7,2025,"Sydney, AU","TomTom Traffic Index 2025 full-year congestion level, City (center) tab; country verified via country field."
+Auckland,CON-05,Traffic congestion,Connected,Urban Mobility,%,lower,City,none,42.2,2025,"Auckland, NZ","TomTom Traffic Index 2025 full-year congestion level, City (center) tab; country verified via country field."
+Osaka,CON-05,Traffic congestion,Connected,Urban Mobility,%,lower,City,none,42.9,2025,"Osaka, JP","TomTom Traffic Index 2025 full-year congestion level, City (center) tab; country verified via country field."
+Tel Aviv,CON-05,Traffic congestion,Connected,Urban Mobility,%,lower,City,none,,2025,TomTom Traffic Index — Ranking,Not in TomTom Traffic Index 2025 city table (no Israel entries in the 492-city decoded ranking data).
