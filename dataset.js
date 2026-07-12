@@ -1,7 +1,8 @@
 // City Index — data file. Edit values here; the app reads this.
-// Values are real & sourced where 'provenance' has an entry for the measure;
-// all other values are ILLUSTRATIVE placeholders awaiting replacement.
-// A null is honest missing data — never fill it with a guess (see CLAUDE.md).
+// Every value present is REAL and SOURCED — see the 'provenance' block for
+// source/year/method per value (the app ignores that block; it satisfies
+// CLAUDE.md rule 3). A null/absent value is honest missing data — never
+// fill one with a guess. The 19 non-pilot measures have no data yet.
 window.INDEX_DATA = {
 "domains":[
 {"id": "Liveable", "tint": "#F6C99A", "ink": "#8a4b12"},

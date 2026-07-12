@@ -24,9 +24,10 @@ PILOT set: 18 of the 19 pilot measures now hold verified, sourced values, with
 source/year/method recorded per value in the `provenance` block of `dataset.js`
 (the app ignores that block; it exists to satisfy rule 3). CON-01 (airport
 connectivity) is deliberately all-null pending manual sourcing — its former
-placeholders were removed. The 19 NON-pilot measures still carry ILLUSTRATIVE
-PLACEHOLDERS — do not trust any value for a measure without a `provenance`
-entry. `SOURCING.md` documents the source plan and verdict per pilot measure.
+placeholders were removed. The 19 NON-pilot measures have never had data values
+(the app shows them as "no data"); sourcing them would be Phase 3. Any value
+present in `dataset.js` is real and has a `provenance` entry. `SOURCING.md`
+documents the source plan and verdict per pilot measure.
 
 ## How the engine works — do not change it
 For the selected measures: rescale each to 0–100 across the shown cities, flip
