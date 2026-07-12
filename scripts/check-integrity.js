@@ -19,7 +19,7 @@ const ok = (cond, msg) => { if (!cond) errs.push(msg); };
 // structure & meta
 ok(P && Array.isArray(P.domains) && Array.isArray(P.variables) && Array.isArray(P.cities) && P.data,
   'INDEX_DATA missing a core block (domains/variables/cities/data)');
-ok(P.meta && /^\d+\.\d+\.\d+$/.test(P.meta.version || ''), 'meta.version missing or not semver');
+ok(P.meta && /^\d+\.\d+\.\d+(-[0-9A-Za-z.-]+)?$/.test(P.meta.version || ''), 'meta.version missing or not semver');
 ok(P.meta && P.meta.released, 'meta.released missing');
 
 const domainIds = new Set(P.domains.map(d => d.id));

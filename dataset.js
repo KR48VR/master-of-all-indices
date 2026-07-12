@@ -4,7 +4,7 @@
 // CLAUDE.md rule 3). A null/absent value is honest missing data — never
 // fill one with a guess. The 19 non-pilot measures have no data yet.
 window.INDEX_DATA = {
-"meta":{"name": "Master Index Workbench", "version": "1.0.0", "released": "2026-07-12", "dataLicense": "CC BY-NC-SA 4.0 (compilation); individual values inherit source terms recorded in provenance", "codeLicense": "MIT", "url": "https://kr48vr.github.io/master-of-all-indices/"},
+"meta":{"name": "Master Index Workbench", "version": "2.0.0-beta.1", "released": "2026-07-12", "dataLicense": "CC BY-NC-SA 4.0 (compilation); individual values inherit source terms recorded in provenance", "codeLicense": "MIT", "url": "https://kr48vr.github.io/master-of-all-indices/"},
 "domains":[
 {"id": "Liveable", "tint": "#F6C99A", "ink": "#8a4b12"},
 {"id": "Green", "tint": "#A9CE9C", "ink": "#2f5d29"},
@@ -17,8 +17,8 @@ window.INDEX_DATA = {
 {"id": "LIV-01", "domain": "Liveable", "subtheme": "Safety & Stability", "name": "Homicide rate", "measures": "Intentional homicides per 100,000 residents", "unit": "per 100k", "direction": "lower", "dataLevel": "Country proxy", "source": "UNODC CTS (national rates)", "appearsIn": "EIU (Stability)", "pilot": 1, "caveat": "UNODC discontinued its city-level series, so these are NATIONAL rates standing in for cities (Singapore is a city-state, so national = city; London uses England & Wales). Crime definitions vary by country. City-level upgrade from national police statistics planned.", "contestable": 0, "approx": "proxy"},
 {"id": "LIV-02", "domain": "Liveable", "subtheme": "Safety & Stability", "name": "Perceived safety", "measures": "Resident-reported feeling of safety", "unit": "index 0-100", "direction": "higher", "dataLevel": "City", "source": "Numbeo Safety Index", "appearsIn": "—", "pilot": 0, "caveat": "Crowd-sourced — treat as a soft signal.", "contestable": 0, "approx": "crowd"},
 {"id": "LIV-03", "domain": "Liveable", "subtheme": "Safety & Stability", "name": "Political stability", "measures": "Absence of violence / terrorism", "unit": "index", "direction": "higher", "dataLevel": "Country proxy", "source": "World Bank WGI", "appearsIn": "EIU (Stability)", "pilot": 0, "caveat": "Country-level stand-in, not city-specific.", "contestable": 0, "approx": "proxy"},
-{"id": "LIV-04", "domain": "Liveable", "subtheme": "Health", "name": "Life expectancy", "measures": "Average life expectancy at birth", "unit": "years", "direction": "higher", "dataLevel": "Metro", "source": "OECD Regions / SingStat / World Bank", "appearsIn": "GPCI (Livability)", "pilot": 1, "caveat": "OECD regional data at the finest level published: city/metro for most, but state or province values for New York (NY State), San Francisco (California), Toronto (Ontario) and Amsterdam (North Holland); Dubai is a UAE national figure (country proxy). Years mix 2020-2025 — the US and Tokyo values are 2020, depressed by COVID.", "contestable": 0, "approx": "none"},
-{"id": "LIV-05", "domain": "Liveable", "subtheme": "Health", "name": "Physicians per capita", "measures": "Doctors per 1,000 residents", "unit": "per 1k", "direction": "higher", "dataLevel": "Metro", "source": "OECD Regional health / data.gov.sg / DHA", "appearsIn": "EIU (Healthcare)", "pilot": 1, "caveat": "OECD regional physician density: province/state values for Amsterdam (N-Holland), Toronto (Ontario), New York (NY State), San Francisco (California), Barcelona (Catalonia); Paris is the dense core departement and reads high. Berlin is 2019 vintage. London computed from NHS + ONS files replicating OECD's documented UK method (NHS staff only). Singapore from MOH via data.gov.sg; Dubai from DHA statistical book 2022.", "contestable": 0, "approx": "none"},
+{"id": "LIV-04", "domain": "Liveable", "subtheme": "Health", "name": "Life expectancy", "measures": "Average life expectancy at birth", "unit": "years", "direction": "higher", "dataLevel": "Metro", "source": "OECD Regions / SingStat / World Bank", "appearsIn": "GPCI (Livability)", "pilot": 1, "caveat": "OECD regional data at the finest level published: city or metro for most European cities; state/province proxies for the US, Canadian and Australian cities (named per value); Dubai is a UAE national figure. Years mix 2019-2025 — US values are 2020 (COVID-depressed, DC 2019), Japanese life tables are quinquennial (2020).", "contestable": 0, "approx": "none"},
+{"id": "LIV-05", "domain": "Liveable", "subtheme": "Health", "name": "Physicians per capita", "measures": "Doctors per 1,000 residents", "unit": "per 1k", "direction": "higher", "dataLevel": "Metro", "source": "OECD Regional health / data.gov.sg / DHA", "appearsIn": "EIU (Healthcare)", "pilot": 1, "caveat": "OECD regional physician density, finest comparable level: city/metro for many European cities, state/province/region proxies for US, Canadian, Italian and German cities (German Laender end 2019). Core districts read high (Paris, Warsaw-core rejected for a reporting break, Washington DC extreme - physicians counted at workplace). Dublin and London-style gaps filled or left blank per value; Singapore from MOH, Dubai from DHA 2022. Years mix 2019-2025.", "contestable": 0, "approx": "none"},
 {"id": "LIV-06", "domain": "Liveable", "subtheme": "Housing & Cost", "name": "House-price-to-income", "measures": "Median home price / median income", "unit": "ratio", "direction": "lower", "dataLevel": "City", "source": "Numbeo Property Prices Index", "appearsIn": "—", "pilot": 1, "caveat": "Numbeo 2026 Mid-Year edition: crowd-sourced median apartment price over median familial disposable income (years). Core affordability signal — treat as a soft, crowd-sourced estimate.", "contestable": 0, "approx": "crowd"},
 {"id": "LIV-07", "domain": "Liveable", "subtheme": "Housing & Cost", "name": "Cost of living", "measures": "Standard basket cost vs a benchmark city", "unit": "index", "direction": "lower", "dataLevel": "City", "source": "Numbeo", "appearsIn": "Mercer", "pilot": 0, "caveat": "Direction is contestable — a rich city having high costs isn't necessarily 'bad'.", "contestable": 1, "approx": "crowd"},
 {"id": "LIV-08", "domain": "Liveable", "subtheme": "Culture & Amenities", "name": "Cultural venues", "measures": "Museums / theatres / venues per 100,000", "unit": "per 100k", "direction": "higher", "dataLevel": "City", "source": "City open data / GPCI", "appearsIn": "GPCI (Cultural Interaction)", "pilot": 0, "caveat": "Sourcing and definitions vary widely.", "contestable": 0, "approx": "none"},
@@ -35,25 +35,25 @@ window.INDEX_DATA = {
 {"id": "SMT-04", "domain": "Smart", "subtheme": "Digital Governance", "name": "Open data", "measures": "Maturity of public open-data provision", "unit": "index", "direction": "higher", "dataLevel": "City", "source": "Open Data Barometer", "appearsIn": "—", "pilot": 0, "caveat": "", "contestable": 0, "approx": "none"},
 {"id": "SMT-05", "domain": "Smart", "subtheme": "Digital Adoption", "name": "Population online", "measures": "% of residents using the internet", "unit": "%", "direction": "higher", "dataLevel": "Country proxy", "source": "World Bank WDI (ITU series)", "appearsIn": "—", "pilot": 1, "caveat": "Country-level series (ITU via World Bank WDI); reference year mostly 2024, Switzerland and Austria 2025. New York and San Francisco share the single US value; the UAE source records exactly 100.", "contestable": 0, "approx": "proxy"},
 {"id": "SMT-06", "domain": "Smart", "subtheme": "Smart Services", "name": "Smart mobility", "measures": "Real-time transit info / app availability", "unit": "index", "direction": "higher", "dataLevel": "City", "source": "IMD Smart City survey", "appearsIn": "IMD Smart City", "pilot": 0, "caveat": "Perception-based (resident survey).", "contestable": 0, "approx": "perception"},
-{"id": "CMP-01", "domain": "Competitive", "subtheme": "Economic Output", "name": "GDP per capita", "measures": "Metro GDP / population", "unit": "USD PPP", "direction": "higher", "dataLevel": "Metro", "source": "OECD Metro (FUA) / World Bank", "appearsIn": "GPCI (Economy)", "pilot": 1, "caveat": "OECD metropolitan (FUA) GDP per head in constant-2015-PPP USD; years 2020-2023 (London, Melbourne and Toronto are 2020 COVID-dip values, the latter two from an archived vintage). Singapore is a national World Bank figure on a 2021 PPP base — close but not identical basis. Dubai: no free PPP metro figure exists (blank).", "contestable": 0, "approx": "none"},
+{"id": "CMP-01", "domain": "Competitive", "subtheme": "Economic Output", "name": "GDP per capita", "measures": "Metro GDP / population", "unit": "USD PPP", "direction": "higher", "dataLevel": "Metro", "source": "OECD Metro (FUA) / World Bank", "appearsIn": "GPCI (Economy)", "pilot": 1, "caveat": "OECD metropolitan (FUA) GDP per head in constant-2015-PPP USD; years 2020-2023. London and the archived-vintage metros (Melbourne, Toronto, Montreal, Vancouver, Sydney) are 2020 COVID-dip values. Dublin reads high (multinational profit-shifting). Singapore is a national World Bank figure on a 2021 PPP base. Dubai and Tel Aviv: no honest metro PPP figure exists (blank).", "contestable": 0, "approx": "none"},
 {"id": "CMP-02", "domain": "Competitive", "subtheme": "Economic Output", "name": "Labour productivity", "measures": "Gross value added per worker", "unit": "USD", "direction": "higher", "dataLevel": "Metro", "source": "OECD", "appearsIn": "—", "pilot": 0, "caveat": "", "contestable": 0, "approx": "none"},
 {"id": "CMP-03", "domain": "Competitive", "subtheme": "Business Environment", "name": "Global firm presence", "measures": "Number of major global-firm HQs", "unit": "count", "direction": "higher", "dataLevel": "City", "source": "GPCI / Fortune", "appearsIn": "GPCI (Economy)", "pilot": 0, "caveat": "", "contestable": 0, "approx": "none"},
 {"id": "CMP-04", "domain": "Competitive", "subtheme": "Business Environment", "name": "Startup density", "measures": "Dealroom-tracked startups per 100,000 metro residents", "unit": "per 100k", "direction": "higher", "dataLevel": "Metro", "source": "Dealroom (public hub pages)", "appearsIn": "GPCI-Startup", "pilot": 1, "caveat": "Dealroom \"tracked startups\" per hub / page-shown metro population (captured 11 Jul 2026). Hubs are metros: SF = Bay Area, Toronto = Toronto-Waterloo, Berlin = Berlin/Brandenburg. Copenhagen, Vienna, Seoul, Dubai show no count and Amsterdam no population (blank). Database coverage varies by region — deepest in Europe/US.", "contestable": 0, "approx": "modelled"},
 {"id": "CMP-05", "domain": "Competitive", "subtheme": "Dynamism", "name": "Employment growth", "measures": "5-year change in metro employment", "unit": "%", "direction": "higher", "dataLevel": "Metro", "source": "OECD", "appearsIn": "—", "pilot": 0, "caveat": "", "contestable": 0, "approx": "none"},
 {"id": "CMP-06", "domain": "Competitive", "subtheme": "Dynamism", "name": "VC funding", "measures": "Dealroom \"VC invested\" per resident (metro hub)", "unit": "USD", "direction": "higher", "dataLevel": "Metro", "source": "Dealroom (public hub pages)", "appearsIn": "Startup Genome", "pilot": 1, "caveat": "Dealroom hub \"VC invested\" / page-shown metro population (captured 11 Jul 2026). The source page does not state the time window of \"VC invested\" — compare across cities, not against external annual figures. Amsterdam blank (no population shown).", "contestable": 0, "approx": "none"},
-{"id": "TAL-01", "domain": "Talent", "subtheme": "Education", "name": "Tertiary attainment", "measures": "% of adults with tertiary education", "unit": "%", "direction": "higher", "dataLevel": "Metro", "source": "OECD Regions / SingStat / Dubai Statistics Center", "appearsIn": "—", "pilot": 1, "caveat": "OECD regional shares (25-64, ISCED 5-8): state/province values for Melbourne (Victoria), Toronto (Ontario), New York (NY State), San Francisco (California); Tokyo is greater-Tokyo Southern-Kanto; Japan/Korea are 2020 census. Singapore counts residents 25+ (not 25-64). Dubai is on a DIFFERENT basis — university degree and above as % of population 10+ (DSC yearbook 2023) — read with care.", "contestable": 0, "approx": "none"},
+{"id": "TAL-01", "domain": "Talent", "subtheme": "Education", "name": "Tertiary attainment", "measures": "% of adults with tertiary education", "unit": "%", "direction": "higher", "dataLevel": "Metro", "source": "OECD Regions / SingStat / Dubai Statistics Center", "appearsIn": "—", "pilot": 1, "caveat": "OECD regional shares (25-64, ISCED 5-8), finest level published: city-level for some, but state/province/region proxies for the US, Canadian, Australian, Italian, German and Japanese cities (named per value; Milan reads as Lombardy, Osaka as Kansai). Singapore counts residents 25+. Dubai is on a DIFFERENT basis — university-and-above as % of population 10+ (DSC 2023). Years mix 2020-2025.", "contestable": 0, "approx": "none"},
 {"id": "TAL-02", "domain": "Talent", "subtheme": "Education", "name": "Top universities", "measures": "Universities in the global top 500", "unit": "count", "direction": "higher", "dataLevel": "City", "source": "QS World University Rankings 2026", "appearsIn": "GPCI (R&D)", "pilot": 1, "caveat": "QS 2026 edition, counted with QS’s own city labels, city-proper rule: Stanford and Berkeley fall outside San Francisco (a real 0), the Saclay cluster outside Paris — counts are boundary-sensitive for SF, NY and Paris. Dubai’s 0 is real: all six UAE top-500 universities are in other emirates.", "contestable": 0, "approx": "none"},
 {"id": "TAL-03", "domain": "Talent", "subtheme": "Skills & Workforce", "name": "Knowledge workers", "measures": "% employed in knowledge-intensive jobs", "unit": "%", "direction": "higher", "dataLevel": "Metro", "source": "Eurostat / OECD", "appearsIn": "—", "pilot": 0, "caveat": "", "contestable": 0, "approx": "none"},
 {"id": "TAL-04", "domain": "Talent", "subtheme": "Skills & Workforce", "name": "Researchers per capita", "measures": "R&D personnel per 1,000", "unit": "per 1k", "direction": "higher", "dataLevel": "Metro", "source": "OECD", "appearsIn": "GPCI (R&D)", "pilot": 0, "caveat": "", "contestable": 0, "approx": "none"},
 {"id": "TAL-05", "domain": "Talent", "subtheme": "Attractiveness", "name": "Talent inflow", "measures": "Net migration of working-age people", "unit": "%", "direction": "higher", "dataLevel": "Metro", "source": "National statistics", "appearsIn": "—", "pilot": 0, "caveat": "Hard to standardise across countries.", "contestable": 0, "approx": "none"},
 {"id": "TAL-06", "domain": "Talent", "subtheme": "Attractiveness", "name": "International openness", "measures": "Foreign-born population share", "unit": "%", "direction": "higher", "dataLevel": "Metro", "source": "OECD FUA / national censuses / UN DESA", "appearsIn": "GPCI", "pilot": 1, "caveat": "Mixes concepts and boundaries, disclosed per value: census/register foreign-born for most cities; foreign NATIONALS (not foreign-born) for Tokyo and Seoul; UN migrant-stock estimate for Singapore; city boundaries for the OECD-city rows, metro for the census rows; years 2021-2026. Dubai publishes no foreign-born statistic (blank). A proxy for openness — contestable as \"better\".", "contestable": 1, "approx": "none"},
-{"id": "CON-01", "domain": "Connected", "subtheme": "Global Connectivity", "name": "Airport connectivity", "measures": "Direct international destinations served", "unit": "count", "direction": "higher", "dataLevel": "City", "source": "Wikipedia airport destination tables", "appearsIn": "GPCI (Accessibility)", "pilot": 1, "caveat": "Counted from Wikipedia \"Airlines and destinations\" tables (12 Jul 2026): distinct international destination airports with scheduled or announced passenger service (charter/cargo excluded), union across each city's airports. Crowd-maintained lists — completeness varies by page: Tokyo is blank because Haneda's table is known-pruned; Dubai includes suspended routes as listed. Snapshot, not an official OAG count.", "contestable": 0, "approx": "crowd"},
+{"id": "CON-01", "domain": "Connected", "subtheme": "Global Connectivity", "name": "Airport connectivity", "measures": "Direct international destinations served", "unit": "count", "direction": "higher", "dataLevel": "City", "source": "Wikipedia airport destination tables", "appearsIn": "GPCI (Accessibility)", "pilot": 1, "caveat": "Counted from Wikipedia \"Airlines and destinations\" tables (July 2026 snapshots): distinct international destination airports with scheduled or announced passenger service (charter/cargo excluded; suspended-annotated routes retained), union across each city's airport system, Wikidata-verified country classification. Crowd-maintained lists - completeness varies by page: Tokyo and Osaka are blank because their articles are known-pruned. Snapshot, not an official OAG count.", "contestable": 0, "approx": "crowd"},
 {"id": "CON-02", "domain": "Connected", "subtheme": "Global Connectivity", "name": "Global accessibility", "measures": "Travel time to major world hubs", "unit": "hours", "direction": "lower", "dataLevel": "City", "source": "GPCI", "appearsIn": "GPCI (Accessibility)", "pilot": 0, "caveat": "", "contestable": 0, "approx": "none"},
-{"id": "CON-03", "domain": "Connected", "subtheme": "Urban Mobility", "name": "Transit access", "measures": "% residents within 500 m of frequent transit (ITDP PNFT)", "unit": "%", "direction": "higher", "dataLevel": "Metro", "source": "ITDP Atlas (People Near Frequent Transit)", "appearsIn": "—", "pilot": 1, "caveat": "Share of the GHSL urban agglomeration within 500 m of a stop served at least every ~10 min (7am-9pm), GIS-computed by ITDP from open GTFS feeds (2025 network). Where cities publish no usable open feed the Atlas reports zeros — Tokyo, London, Zurich, Melbourne, Amsterdam and Seoul are therefore blank here, NOT zero. San Francisco is the combined San Jose/SF/Oakland area.", "contestable": 0, "approx": "modelled"},
+{"id": "CON-03", "domain": "Connected", "subtheme": "Urban Mobility", "name": "Transit access", "measures": "% residents within 500 m of frequent transit (ITDP PNFT)", "unit": "%", "direction": "higher", "dataLevel": "Metro", "source": "ITDP Atlas (People Near Frequent Transit)", "appearsIn": "—", "pilot": 1, "caveat": "Share of the GHSL urban agglomeration within 500 m of a stop served at least every ~10 min (7am-9pm), GIS-computed by ITDP from open GTFS feeds; latest RELIABLE year per city (2023-2025 - one-cycle feed collapses are treated as artifacts, disclosed per value). Cities without usable open feeds are blank, NOT zero (Tokyo, London, Zurich, Melbourne, Amsterdam, Seoul, Oslo, Frankfurt, Istanbul, Osaka).", "contestable": 0, "approx": "modelled"},
 {"id": "CON-04", "domain": "Connected", "subtheme": "Urban Mobility", "name": "Commute time", "measures": "Average one-way commute", "unit": "minutes", "direction": "lower", "dataLevel": "City", "source": "Numbeo / Moovit", "appearsIn": "—", "pilot": 0, "caveat": "Crowd-sourced component.", "contestable": 0, "approx": "crowd"},
 {"id": "CON-05", "domain": "Connected", "subtheme": "Urban Mobility", "name": "Traffic congestion", "measures": "Extra travel time caused by congestion", "unit": "%", "direction": "lower", "dataLevel": "City", "source": "TomTom Traffic Index", "appearsIn": "—", "pilot": 1, "caveat": "TomTom Traffic Index \"Ranking 2025\" (full-year 2025, city-center definition): average extra travel time vs free-flow. Seoul is not covered by TomTom — INRIX also excludes Korea (blank).", "contestable": 0, "approx": "none"}
 ],
-"cities":["Singapore", "Tokyo", "Copenhagen", "Zurich", "Vienna", "Seoul", "Melbourne", "Amsterdam", "London", "New York", "Paris", "Toronto", "Berlin", "Barcelona", "Dubai", "San Francisco"],
+"cities":["Singapore", "Tokyo", "Copenhagen", "Zurich", "Vienna", "Seoul", "Melbourne", "Amsterdam", "London", "New York", "Paris", "Toronto", "Berlin", "Barcelona", "Dubai", "San Francisco", "Stockholm", "Oslo", "Helsinki", "Madrid", "Milan", "Rome", "Munich", "Frankfurt", "Hamburg", "Brussels", "Dublin", "Lisbon", "Prague", "Warsaw", "Istanbul", "Montreal", "Vancouver", "Chicago", "Boston", "Los Angeles", "Seattle", "Washington DC", "Sydney", "Auckland", "Osaka", "Tel Aviv"],
 "data":{
 "Singapore":{"LIV-01": 0.07, "LIV-04": 83.9, "LIV-05": 2.9, "LIV-06": 24.7, "GRN-01": 12.0, "GRN-02": 70.3, "GRN-05": 52.0, "SMT-01": 567.1, "SMT-03": 87.5, "SMT-05": 94.4, "CMP-01": 132570, "CMP-04": 68.1, "CMP-06": 690, "TAL-01": 54.1, "TAL-02": 2, "TAL-06": 48.7, "CON-01": 175, "CON-03": 28.0, "CON-05": 43.9},
 "Tokyo":{"LIV-01": 0.23, "LIV-04": 84.9, "LIV-05": 3.26, "LIV-06": 16.0, "GRN-01": 10.8, "GRN-02": 74.8, "GRN-05": 21.4, "SMT-01": 313.7, "SMT-03": 85.42, "SMT-05": 85.5, "CMP-01": 50287, "CMP-04": 14.8, "CMP-06": 81, "TAL-01": 64.2, "TAL-02": 4, "TAL-06": 5.6, "CON-01": null, "CON-03": null, "CON-05": 44.1},
@@ -70,7 +70,33 @@ window.INDEX_DATA = {
 "Berlin":{"LIV-01": 0.91, "LIV-04": 81.2, "LIV-05": 5.51, "LIV-06": 11.1, "GRN-01": 11.3, "GRN-02": 68.2, "GRN-05": 30.8, "SMT-01": 212.6, "SMT-03": 88.54, "SMT-05": 93.5, "CMP-01": 59205, "CMP-04": 49.4, "CMP-06": 452, "TAL-01": 48.1, "TAL-02": 3, "TAL-06": 24.9, "CON-01": 161, "CON-03": 70.5, "CON-05": 44.6},
 "Barcelona":{"LIV-01": 0.69, "LIV-04": 84.2, "LIV-05": 4.47, "LIV-06": 13.8, "GRN-01": 10.9, "GRN-02": null, "GRN-05": 42.1, "SMT-01": 338.8, "SMT-03": null, "SMT-05": 95.8, "CMP-01": 52064, "CMP-04": 28.5, "CMP-06": 222, "TAL-01": 46.9, "TAL-02": 5, "TAL-06": 27.3, "CON-01": 202, "CON-03": 66.9, "CON-05": 41.1},
 "Dubai":{"LIV-01": 0.69, "LIV-04": 83.1, "LIV-05": 3.35, "LIV-06": 7.8, "GRN-01": 35.0, "GRN-02": 40.6, "GRN-05": null, "SMT-01": 359.0, "SMT-03": 90.63, "SMT-05": 100.0, "CMP-01": null, "CMP-04": null, "CMP-06": 661, "TAL-01": 41.0, "TAL-02": 0, "TAL-06": null, "CON-01": 310, "CON-03": 24.8, "CON-05": 42.7},
-"San Francisco":{"LIV-01": 5.76, "LIV-04": 79.0, "LIV-05": 3.02, "LIV-06": 6.5, "GRN-01": 7.4, "GRN-02": null, "GRN-05": 53.1, "SMT-01": 367.7, "SMT-03": null, "SMT-05": 94.7, "CMP-01": 146853, "CMP-04": 320.8, "CMP-06": 20260, "TAL-01": 46.9, "TAL-02": 0, "TAL-06": 32.4, "CON-01": 60, "CON-03": 29.6, "CON-05": 49.7}
+"San Francisco":{"LIV-01": 5.76, "LIV-04": 79.0, "LIV-05": 3.02, "LIV-06": 6.5, "GRN-01": 7.4, "GRN-02": null, "GRN-05": 53.1, "SMT-01": 367.7, "SMT-03": null, "SMT-05": 94.7, "CMP-01": 146853, "CMP-04": 320.8, "CMP-06": 20260, "TAL-01": 46.9, "TAL-02": 0, "TAL-06": 32.4, "CON-01": 60, "CON-03": 29.6, "CON-05": 49.7},
+"Stockholm":{"SMT-01": 302.2, "CMP-01": 81394, "LIV-04": 85.0, "TAL-01": 60.0, "LIV-05": 4.91, "LIV-01": 1.15, "SMT-05": 95.8, "GRN-01": 4.9, "GRN-02": 86.0, "LIV-06": 12.5, "CON-05": 42.8, "CON-03": 70.1, "SMT-03": 80.21, "TAL-02": 2, "CON-01": 142, "TAL-06": 27.2, "GRN-05": null, "CMP-04": null, "CMP-06": 1167},
+"Oslo":{"SMT-01": 281.9, "CMP-01": 63394, "LIV-04": 83.3, "TAL-01": 56.5, "LIV-05": 6.8, "LIV-01": 0.72, "SMT-05": 99.0, "GRN-01": 8.5, "GRN-02": 56.0, "LIV-06": 11.0, "CON-05": 33.2, "CON-03": null, "SMT-03": 78.13, "TAL-02": 1, "CON-01": 125, "TAL-06": 28.1, "GRN-05": null, "CMP-04": null, "CMP-06": 297},
+"Helsinki":{"SMT-01": 238.8, "CMP-01": 66107, "LIV-04": 81.9, "TAL-01": 48.1, "LIV-05": 3.72, "LIV-01": 0.98, "SMT-05": 93.7, "GRN-01": 5.4, "GRN-02": null, "LIV-06": 11.4, "CON-05": 51.9, "CON-03": 78.0, "SMT-03": 81.25, "TAL-02": 1, "CON-01": 118, "TAL-06": 17.5, "GRN-05": null, "CMP-04": null, "CMP-06": 688},
+"Madrid":{"SMT-01": 382.3, "CMP-01": 59768, "LIV-04": 85.4, "TAL-01": 50.0, "LIV-05": 6.18, "LIV-01": 0.69, "SMT-05": 95.8, "GRN-01": 10.3, "GRN-02": 63.1, "LIV-06": 13.2, "CON-05": 38.0, "CON-03": 68.8, "SMT-03": 92.71, "TAL-02": 4, "CON-01": 197, "TAL-06": 22.7, "GRN-05": null, "CMP-04": 21.0, "CMP-06": 179},
+"Milan":{"SMT-01": 429.2, "CMP-01": 82014, "LIV-04": 84.7, "TAL-01": 23.6, "LIV-05": 5.59, "LIV-01": 0.57, "SMT-05": 89.2, "GRN-01": 20.4, "GRN-02": 76.2, "LIV-06": 18.2, "CON-05": 49.4, "CON-03": 50.4, "SMT-03": null, "TAL-02": 4, "CON-01": 244, "TAL-06": 15.0, "GRN-05": null, "CMP-04": null, "CMP-06": 344},
+"Rome":{"SMT-01": 376.5, "CMP-01": 65690, "LIV-04": 83.6, "TAL-01": 28.5, "LIV-05": 6.77, "LIV-01": 0.57, "SMT-05": 89.2, "GRN-01": 11.8, "GRN-02": 80.0, "LIV-06": 14.9, "CON-05": 45.2, "CON-03": 71.7, "SMT-03": 81.25, "TAL-02": 2, "CON-01": 219, "TAL-06": 13.6, "GRN-05": null, "CMP-04": null, "CMP-06": 58},
+"Munich":{"SMT-01": 221.7, "CMP-01": 102244, "LIV-04": 83.1, "TAL-01": 38.6, "LIV-05": 4.56, "LIV-01": 0.91, "SMT-05": 93.5, "GRN-01": 7.9, "GRN-02": null, "LIV-06": 13.1, "CON-05": 43.7, "CON-03": 81.9, "SMT-03": null, "TAL-02": 2, "CON-01": 202, "TAL-06": 31.9, "GRN-05": null, "CMP-04": 52.5, "CMP-06": 1280},
+"Frankfurt":{"SMT-01": 232.1, "CMP-01": 82688, "LIV-04": 81.9, "TAL-01": 35.6, "LIV-05": 4.27, "LIV-01": 0.91, "SMT-05": 93.5, "GRN-01": 8.7, "GRN-02": null, "LIV-06": 7.7, "CON-05": 42.3, "CON-03": null, "SMT-03": null, "TAL-02": 1, "CON-01": 284, "TAL-06": 35.5, "GRN-05": null, "CMP-04": 7.8, "CMP-06": 18},
+"Hamburg":{"SMT-01": 196.7, "CMP-01": 77768, "LIV-04": 80.9, "TAL-01": 43.0, "LIV-05": 6.4, "LIV-01": 0.91, "SMT-05": 93.5, "GRN-01": 9.1, "GRN-02": 78.2, "LIV-06": 11.1, "CON-05": 49.3, "CON-03": 68.8, "SMT-03": null, "TAL-02": 1, "CON-01": 117, "TAL-06": 24.6, "GRN-05": null, "CMP-04": 13.6, "CMP-06": 34},
+"Brussels":{"SMT-01": 266.9, "CMP-01": 78040, "LIV-04": 82.2, "TAL-01": 56.9, "LIV-05": 4.44, "LIV-01": 1.08, "SMT-05": 95.8, "GRN-01": 7.6, "GRN-02": 85.8, "LIV-06": 7.2, "CON-05": 46.2, "CON-03": 89.0, "SMT-03": 73.96, "TAL-02": 2, "CON-01": 249, "TAL-06": 43.5, "GRN-05": null, "CMP-04": 15.3, "CMP-06": 55},
+"Dublin":{"SMT-01": 337.0, "CMP-01": 141694, "LIV-04": 83.3, "TAL-01": 61.0, "LIV-05": null, "LIV-01": 0.65, "SMT-05": 97.2, "GRN-01": 7.3, "GRN-02": 84.2, "LIV-06": 9.0, "CON-05": 72.9, "CON-03": 66.3, "SMT-03": 68.75, "TAL-02": 3, "CON-01": 199, "TAL-06": 26.6, "GRN-05": null, "CMP-04": null, "CMP-06": 456},
+"Lisbon":{"SMT-01": 354.4, "CMP-01": 50408, "LIV-04": 81.2, "TAL-01": 43.3, "LIV-05": 8.37, "LIV-01": 0.72, "SMT-05": 88.5, "GRN-01": 7.6, "GRN-02": 87.4, "LIV-06": 18.7, "CON-05": 39.0, "CON-03": 43.6, "SMT-03": 70.83, "TAL-02": 2, "CON-01": 146, "TAL-06": 17.3, "GRN-05": null, "CMP-04": null, "CMP-06": 82},
+"Prague":{"SMT-01": 258.9, "CMP-01": 83056, "LIV-04": 81.1, "TAL-01": 54.8, "LIV-05": 8.24, "LIV-01": 0.77, "SMT-05": 87.7, "GRN-01": 13.4, "GRN-02": 83.5, "LIV-06": 18.2, "CON-05": 53.5, "CON-03": 89.2, "SMT-03": 67.71, "TAL-02": 2, "CON-01": 165, "TAL-06": 15.5, "GRN-05": null, "CMP-04": null, "CMP-06": 69},
+"Warsaw":{"SMT-01": 362.9, "CMP-01": 81920, "LIV-04": 81.0, "TAL-01": 65.3, "LIV-05": 6.3, "LIV-01": 0.8, "SMT-05": 88.6, "GRN-01": 14.7, "GRN-02": 88.0, "LIV-06": 11.7, "CON-05": 51.3, "CON-03": 70.1, "SMT-03": 77.08, "TAL-02": 2, "CON-01": 152, "TAL-06": 5.7, "GRN-05": null, "CMP-04": null, "CMP-06": 91},
+"Istanbul":{"SMT-01": 251.2, "CMP-01": 56428, "LIV-04": 77.1, "TAL-01": 31.8, "LIV-05": 2.96, "LIV-01": 3.23, "SMT-05": 89.8, "GRN-01": 50.5, "GRN-02": 59.8, "LIV-06": 10.1, "CON-05": 62.0, "CON-03": null, "SMT-03": 89.58, "TAL-02": 4, "CON-01": 322, "TAL-06": null, "GRN-05": null, "CMP-04": null, "CMP-06": 40},
+"Montreal":{"SMT-01": 334.2, "CMP-01": 38730, "LIV-04": 82.5, "TAL-01": 59.0, "LIV-05": 2.6, "LIV-01": 1.98, "SMT-05": 94.4, "GRN-01": 8.6, "GRN-02": 91.8, "LIV-06": 7.6, "CON-05": 41.3, "CON-03": 52.7, "SMT-03": null, "TAL-02": 3, "CON-01": 139, "TAL-06": 24.3, "GRN-05": null, "CMP-04": 24.4, "CMP-06": 226},
+"Vancouver":{"SMT-01": 374.2, "CMP-01": 45902, "LIV-04": 81.5, "TAL-01": 64.0, "LIV-05": 2.71, "LIV-01": 1.98, "SMT-05": 94.4, "GRN-01": 6.0, "GRN-02": null, "LIV-06": 11.7, "CON-05": 56.5, "CON-03": 53.7, "SMT-03": null, "TAL-02": 1, "CON-01": 74, "TAL-06": 41.8, "GRN-05": null, "CMP-04": 56.4, "CMP-06": 600},
+"Chicago":{"SMT-01": 392.9, "CMP-01": 75524, "LIV-04": 76.8, "TAL-01": 50.9, "LIV-05": 3.7, "LIV-01": 5.76, "SMT-05": 94.7, "GRN-01": 8.7, "GRN-02": 47.8, "LIV-06": 3.2, "CON-05": 46.1, "CON-03": 43.2, "SMT-03": null, "TAL-02": 2, "CON-01": 81, "TAL-06": 19.4, "GRN-05": null, "CMP-04": 29.4, "CMP-06": 210},
+"Boston":{"SMT-01": 361.6, "CMP-01": 101761, "LIV-04": 79.0, "TAL-01": 58.2, "LIV-05": 5.52, "LIV-01": 5.76, "SMT-05": 94.7, "GRN-01": 6.4, "GRN-02": 68.2, "LIV-06": 7.9, "CON-05": 42.1, "CON-03": 47.6, "SMT-03": null, "TAL-02": 2, "CON-01": 63, "TAL-06": 20.7, "GRN-05": null, "CMP-04": 126.9, "CMP-06": 2714},
+"Los Angeles":{"SMT-01": 392.1, "CMP-01": 70646, "LIV-04": 79.0, "TAL-01": 46.9, "LIV-05": 3.02, "LIV-01": 5.76, "SMT-05": 94.7, "GRN-01": 10.5, "GRN-02": null, "LIV-06": 8.2, "CON-05": 59.8, "CON-03": 5.7, "SMT-03": null, "TAL-02": 2, "CON-01": 81, "TAL-06": 33.4, "GRN-05": null, "CMP-04": 45.6, "CMP-06": 876},
+"Seattle":{"SMT-01": 410.0, "CMP-01": 111516, "LIV-04": 79.2, "TAL-01": 52.9, "LIV-05": 2.98, "LIV-01": 5.76, "SMT-05": 94.7, "GRN-01": 6.1, "GRN-02": 63.5, "LIV-06": 4.8, "CON-05": 44.9, "CON-03": 26.1, "SMT-03": null, "TAL-02": 1, "CON-01": 38, "TAL-06": 22.1, "GRN-05": null, "CMP-04": 73.8, "CMP-06": 1650},
+"Washington DC":{"SMT-01": 362.5, "CMP-01": 83988, "LIV-04": 78.0, "TAL-01": 70.7, "LIV-05": 12.02, "LIV-01": 5.76, "SMT-05": 94.7, "GRN-01": 6.3, "GRN-02": 52.8, "LIV-06": 4.3, "CON-05": 37.3, "CON-03": 33.1, "SMT-03": null, "TAL-02": 2, "CON-01": 70, "TAL-06": 24.7, "GRN-05": null, "CMP-04": 36.9, "CMP-06": 556},
+"Sydney":{"SMT-01": 239.5, "CMP-01": 45152, "LIV-04": 84.1, "TAL-01": 52.5, "LIV-05": 4.58, "LIV-01": 0.85, "SMT-05": 96.1, "GRN-01": null, "GRN-02": 33.4, "LIV-06": 12.5, "CON-05": 43.7, "CON-03": 49.2, "SMT-03": 77.08, "TAL-02": 4, "CON-01": 65, "TAL-06": 38.6, "GRN-05": null, "CMP-04": 40.1, "CMP-06": 250},
+"Auckland":{"SMT-01": 283.4, "CMP-01": 55906, "LIV-04": 82.7, "TAL-01": 45.5, "LIV-05": 3.47, "LIV-01": 1.46, "SMT-05": 93.5, "GRN-01": 5.5, "GRN-02": 88.4, "LIV-06": 10.5, "CON-05": 42.2, "CON-03": 37.6, "SMT-03": 80.21, "TAL-02": 2, "CON-01": 46, "TAL-06": 42.5, "GRN-05": null, "CMP-04": null, "CMP-06": 166},
+"Osaka":{"SMT-01": 295.1, "CMP-01": 41497, "LIV-04": 84.2, "TAL-01": 56.9, "LIV-05": 2.92, "LIV-01": 0.23, "SMT-05": 85.5, "GRN-01": 9.4, "GRN-02": 72.2, "LIV-06": 10.6, "CON-05": 42.9, "CON-03": null, "SMT-03": null, "TAL-02": 1, "CON-01": null, "TAL-06": 6.8, "GRN-05": null, "CMP-04": 3.7, "CMP-06": 21},
+"Tel Aviv":{"SMT-01": 366.9, "CMP-01": null, "LIV-04": 83.1, "TAL-01": 60.4, "LIV-05": 4.9, "LIV-01": 1.63, "SMT-05": 88.2, "GRN-01": 17.4, "GRN-02": 65.7, "LIV-06": 20.0, "CON-05": null, "CON-03": 87.9, "SMT-03": null, "TAL-02": 1, "CON-01": 114, "TAL-06": 23.5, "GRN-05": null, "CMP-04": null, "CMP-06": 2111}
 },
 "provenance":{
  "LIV-01": {
@@ -160,6 +186,162 @@ window.INDEX_DATA = {
     "value": 0.69,
     "year": 2022,
     "series": "United Arab Emirates"
+   },
+   "Stockholm": {
+    "value": 1.15,
+    "year": "2023",
+    "source": "Sweden (SWE) — country proxy",
+    "note": "UNODC ('data_cts_intentional_homicide' sheet), victims, Total/Total/Total, rate per 100,000; source field: NCCP/CTS"
+   },
+   "Oslo": {
+    "value": 0.72,
+    "year": "2023",
+    "source": "Norway (NOR) — country proxy",
+    "note": "UNODC ('data_cts_intentional_homicide' sheet), victims, Total/Total/Total, rate per 100,000; source field: UNSDC/GSH 2019 Revision/SDG/Eurostat/CTS/NP"
+   },
+   "Helsinki": {
+    "value": 0.98,
+    "year": "2023",
+    "source": "Finland (FIN) — country proxy",
+    "note": "UNODC ('data_cts_intentional_homicide' sheet), victims, Total/Total/Total, rate per 100,000; source field: UNSDC/CTS/SDG"
+   },
+   "Madrid": {
+    "value": 0.69,
+    "year": "2023",
+    "source": "Spain (ESP) — country proxy",
+    "note": "UNODC ('data_cts_intentional_homicide' sheet), victims, Total/Total/Total, rate per 100,000; source field: WHO Adjusted/Eurostat/CTS/SDG"
+   },
+   "Milan": {
+    "value": 0.57,
+    "year": "2023",
+    "source": "Italy (ITA) — country proxy",
+    "note": "UNODC ('data_cts_intentional_homicide' sheet), victims, Total/Total/Total, rate per 100,000; source field: UNSDC/CTS/SDG"
+   },
+   "Rome": {
+    "value": 0.57,
+    "year": "2023",
+    "source": "Italy (ITA) — country proxy",
+    "note": "UNODC ('data_cts_intentional_homicide' sheet), victims, Total/Total/Total, rate per 100,000; source field: UNSDC/CTS/SDG"
+   },
+   "Munich": {
+    "value": 0.91,
+    "year": "2023",
+    "source": "Germany (DEU) — country proxy",
+    "note": "UNODC ('data_cts_intentional_homicide' sheet), victims, Total/Total/Total, rate per 100,000; source field: SDG/CTS/NP"
+   },
+   "Frankfurt": {
+    "value": 0.91,
+    "year": "2023",
+    "source": "Germany (DEU) — country proxy",
+    "note": "UNODC ('data_cts_intentional_homicide' sheet), victims, Total/Total/Total, rate per 100,000; source field: SDG/CTS/NP"
+   },
+   "Hamburg": {
+    "value": 0.91,
+    "year": "2023",
+    "source": "Germany (DEU) — country proxy",
+    "note": "UNODC ('data_cts_intentional_homicide' sheet), victims, Total/Total/Total, rate per 100,000; source field: SDG/CTS/NP"
+   },
+   "Brussels": {
+    "value": 1.08,
+    "year": "2021",
+    "source": "Belgium (BEL) — country proxy",
+    "note": "UNODC ('data_cts_intentional_homicide' sheet), victims, Total/Total/Total, rate per 100,000; source field: WHO Adjusted/UNSDC/Eurostat/MoI"
+   },
+   "Dublin": {
+    "value": 0.65,
+    "year": "2023",
+    "source": "Ireland (IRL) — country proxy",
+    "note": "UNODC ('data_cts_intentional_homicide' sheet), victims, Total/Total/Total, rate per 100,000; source field: UNSDC/NP/NSO/CTS/SDG"
+   },
+   "Lisbon": {
+    "value": 0.72,
+    "year": "2022",
+    "source": "Portugal (PRT) — country proxy",
+    "note": "UNODC ('data_cts_intentional_homicide' sheet), victims, Total/Total/Total, rate per 100,000; source field: MD Adjusted/Eurostat/SDG/GSH 2023 Revision/CTS"
+   },
+   "Prague": {
+    "value": 0.77,
+    "year": "2023",
+    "source": "Czechia (CZE) — country proxy",
+    "note": "UNODC ('data_cts_intentional_homicide' sheet), victims, Total/Total/Total, rate per 100,000; source field: Eurostat/UNSDC/GSH 2019 Revision/CTS/SDG"
+   },
+   "Warsaw": {
+    "value": 0.8,
+    "year": "2023",
+    "source": "Poland (POL) — country proxy",
+    "note": "UNODC ('data_cts_intentional_homicide' sheet), victims, Total/Total/Total, rate per 100,000; source field: UNSDC/Eurostat/CTS/SDG"
+   },
+   "Istanbul": {
+    "value": 3.23,
+    "year": "2023",
+    "source": "Türkiye (TUR) — country proxy",
+    "note": "UNODC ('data_cts_intentional_homicide' sheet), victims, Total/Total/Total, rate per 100,000; source field: CTS"
+   },
+   "Montreal": {
+    "value": 1.98,
+    "year": "2023",
+    "source": "Canada (CAN) — country proxy",
+    "note": "UNODC ('data_cts_intentional_homicide' sheet), victims, Total/Total/Total, rate per 100,000; source field: NSO/OAS/CTS/SDG/GSH 2023 Revision"
+   },
+   "Vancouver": {
+    "value": 1.98,
+    "year": "2023",
+    "source": "Canada (CAN) — country proxy",
+    "note": "UNODC ('data_cts_intentional_homicide' sheet), victims, Total/Total/Total, rate per 100,000; source field: NSO/OAS/CTS/SDG/GSH 2023 Revision"
+   },
+   "Chicago": {
+    "value": 5.76,
+    "year": "2023",
+    "source": "United States of America (USA) — country proxy",
+    "note": "UNODC ('data_cts_intentional_homicide' sheet), victims, Total/Total/Total, rate per 100,000; source field: NP/UNSDC/CTS/GSH 2019 Revision"
+   },
+   "Boston": {
+    "value": 5.76,
+    "year": "2023",
+    "source": "United States of America (USA) — country proxy",
+    "note": "UNODC ('data_cts_intentional_homicide' sheet), victims, Total/Total/Total, rate per 100,000; source field: NP/UNSDC/CTS/GSH 2019 Revision"
+   },
+   "Los Angeles": {
+    "value": 5.76,
+    "year": "2023",
+    "source": "United States of America (USA) — country proxy",
+    "note": "UNODC ('data_cts_intentional_homicide' sheet), victims, Total/Total/Total, rate per 100,000; source field: NP/UNSDC/CTS/GSH 2019 Revision"
+   },
+   "Seattle": {
+    "value": 5.76,
+    "year": "2023",
+    "source": "United States of America (USA) — country proxy",
+    "note": "UNODC ('data_cts_intentional_homicide' sheet), victims, Total/Total/Total, rate per 100,000; source field: NP/UNSDC/CTS/GSH 2019 Revision"
+   },
+   "Washington DC": {
+    "value": 5.76,
+    "year": "2023",
+    "source": "United States of America (USA) — country proxy",
+    "note": "UNODC ('data_cts_intentional_homicide' sheet), victims, Total/Total/Total, rate per 100,000; source field: NP/UNSDC/CTS/GSH 2019 Revision"
+   },
+   "Sydney": {
+    "value": 0.85,
+    "year": "2023",
+    "source": "Australia (AUS) — country proxy",
+    "note": "UNODC ('data_cts_intentional_homicide' sheet), victims, Total/Total/Total, rate per 100,000; source field: MD/Eurostat/GSH 2019 Revision/CTS"
+   },
+   "Auckland": {
+    "value": 1.46,
+    "year": "2022",
+    "source": "New Zealand (NZL) — country proxy",
+    "note": "UNODC ('data_cts_intentional_homicide' sheet), victims, Total/Total/Total, rate per 100,000; source field: WHO Adjusted/UNSDC/NP/CTS"
+   },
+   "Osaka": {
+    "value": 0.23,
+    "year": "2023",
+    "source": "Japan (JPN) — country proxy",
+    "note": "UNODC ('data_cts_intentional_homicide' sheet), victims, Total/Total/Total, rate per 100,000; source field: GSH 2019 Revision/SDG/CTS/MoI"
+   },
+   "Tel Aviv": {
+    "value": 1.63,
+    "year": "2022",
+    "source": "Israel (ISR) — country proxy",
+    "note": "UNODC ('data_cts_intentional_homicide' sheet), victims, Total/Total/Total, rate per 100,000; source field: UNSDC/NSO/SDG/CTS"
    }
   }
  },
@@ -282,6 +464,161 @@ window.INDEX_DATA = {
     "year": "2021",
     "source": "San Francisco Oakland Hayward CA/USA",
     "note": "CBSA metro area — v8 label dropped '(CBSA)' suffix. pm25_tempcov=NA; version V6.0 (2023), n=10 stations; no data newer than 2021 in v8 (v6.1: 7.4, 2021)"
+   },
+   "Stockholm": {
+    "value": 4.9,
+    "year": "2024",
+    "source": "Stockholm Greater City/SWE",
+    "note": "pm25_concentration raw 4.883; pm25_tempcov 88"
+   },
+   "Oslo": {
+    "value": 8.5,
+    "year": "2024",
+    "source": "Oslo/NOR",
+    "note": "pm25_concentration raw 8.477; pm25_tempcov 86"
+   },
+   "Helsinki": {
+    "value": 5.4,
+    "year": "2024",
+    "source": "Helsinki Helsingfors Greater City/FIN",
+    "note": "pm25_concentration raw 5.363; pm25_tempcov 99"
+   },
+   "Madrid": {
+    "value": 10.3,
+    "year": "2024",
+    "source": "Madrid/ESP",
+    "note": "pm25_concentration raw 10.272; pm25_tempcov 86"
+   },
+   "Milan": {
+    "value": 20.4,
+    "year": "2024",
+    "source": "Milano Greater City/ITA",
+    "note": "pm25_concentration raw 20.448; pm25_tempcov 94"
+   },
+   "Rome": {
+    "value": 11.8,
+    "year": "2024",
+    "source": "Roma/ITA",
+    "note": "pm25_concentration raw 11.793; pm25_tempcov 95"
+   },
+   "Munich": {
+    "value": 7.9,
+    "year": "2024",
+    "source": "Munchen/DEU",
+    "note": "pm25_concentration raw 7.87; pm25_tempcov 98"
+   },
+   "Frankfurt": {
+    "value": 8.7,
+    "year": "2024",
+    "source": "Frankfurt Am Main/DEU",
+    "note": "pm25_concentration raw 8.698; pm25_tempcov 100"
+   },
+   "Hamburg": {
+    "value": 9.1,
+    "year": "2024",
+    "source": "Hamburg/DEU",
+    "note": "pm25_concentration raw 9.07; pm25_tempcov 84"
+   },
+   "Brussels": {
+    "value": 7.6,
+    "year": "2024",
+    "source": "Bruxelles Brussel/BEL",
+    "note": "pm25_concentration raw 7.597; pm25_tempcov 98"
+   },
+   "Dublin": {
+    "value": 7.3,
+    "year": "2024",
+    "source": "Dublin/IRL",
+    "note": "pm25_concentration raw 7.318; pm25_tempcov 94"
+   },
+   "Lisbon": {
+    "value": 7.6,
+    "year": "2024",
+    "source": "Lisboa Greater City/PRT",
+    "note": "pm25_concentration raw 7.604; pm25_tempcov 84"
+   },
+   "Prague": {
+    "value": 13.4,
+    "year": "2024",
+    "source": "Praha/CZE",
+    "note": "pm25_concentration raw 13.404; pm25_tempcov 98"
+   },
+   "Warsaw": {
+    "value": 14.7,
+    "year": "2024",
+    "source": "Warszawa/POL",
+    "note": "pm25_concentration raw 14.703; pm25_tempcov 99"
+   },
+   "Istanbul": {
+    "value": 50.5,
+    "year": "2025",
+    "source": "Istanbul/TUR",
+    "note": "pm25_concentration raw 50.45; pm25_tempcov NA"
+   },
+   "Montreal": {
+    "value": 8.6,
+    "year": "2023",
+    "source": "Montreal/CAN",
+    "note": "pm25_concentration raw 8.625; pm25_tempcov 98"
+   },
+   "Vancouver": {
+    "value": 6.0,
+    "year": "2023",
+    "source": "Vancouver/CAN",
+    "note": "pm25_concentration raw 6.0; pm25_tempcov 98"
+   },
+   "Chicago": {
+    "value": 8.7,
+    "year": "2022",
+    "source": "Chicago Naperville Elgin IL IN WI/USA",
+    "note": "pm25_concentration raw 8.671; pm25_tempcov 63"
+   },
+   "Boston": {
+    "value": 6.4,
+    "year": "2022",
+    "source": "Boston Cambridge Newton MA NH/USA",
+    "note": "pm25_concentration raw 6.432; pm25_tempcov 46"
+   },
+   "Los Angeles": {
+    "value": 10.5,
+    "year": "2022",
+    "source": "Los Angeles Long Beach Anaheim CA/USA",
+    "note": "pm25_concentration raw 10.53; pm25_tempcov 44"
+   },
+   "Seattle": {
+    "value": 6.1,
+    "year": "2022",
+    "source": "Seattle Tacoma Bellevue WA/USA",
+    "note": "pm25_concentration raw 6.085; pm25_tempcov 25"
+   },
+   "Washington DC": {
+    "value": 6.3,
+    "year": "2022",
+    "source": "Washington Arlington Alexandria DC VA MD WV/USA",
+    "note": "pm25_concentration raw 6.322; pm25_tempcov 64"
+   },
+   "Sydney": {
+    "value": null,
+    "year": "n/a",
+    "note": "Sydney absent from WHO Ambient Air Quality Database V8.0 (2026): no Sydney label among the 41 AUS city entries (only state-level 'New South Wales/AUS', not used). Left null."
+   },
+   "Auckland": {
+    "value": 5.5,
+    "year": "2021",
+    "source": "Auckland/NZL",
+    "note": "pm25_concentration raw 5.5; pm25_tempcov NA; 'Auckland CBD/NZL' (2023, 9.0) exists but is a sub-district label, not the city — not used"
+   },
+   "Osaka": {
+    "value": 9.4,
+    "year": "2022",
+    "source": "Osaka/JPN",
+    "note": "pm25_concentration raw 9.4; pm25_tempcov 97"
+   },
+   "Tel Aviv": {
+    "value": 17.4,
+    "year": "2024",
+    "source": "Tel Aviv/ISR",
+    "note": "pm25_concentration raw 17.364; pm25_tempcov 88"
    }
   }
  },
@@ -483,8 +820,323 @@ window.INDEX_DATA = {
     ],
     "tiles": 542,
     "tests": 64515
+   },
+   "Stockholm": {
+    "value": 302.2,
+    "year": "2026 Q1",
+    "bbox": [
+     17.95,
+     59.25,
+     18.2,
+     59.4
+    ],
+    "tiles": 1191,
+    "tests": 15924,
+    "note": "THIN sample: 1191 tiles / 15924 tests (threshold 500 tiles / 20000 tests)"
+   },
+   "Oslo": {
+    "value": 281.9,
+    "year": "2026 Q1",
+    "bbox": [
+     10.6,
+     59.85,
+     10.9,
+     60.0
+    ],
+    "tiles": 1384,
+    "tests": 31268
+   },
+   "Helsinki": {
+    "value": 238.8,
+    "year": "2026 Q1",
+    "bbox": [
+     24.8,
+     60.13,
+     25.1,
+     60.3
+    ],
+    "tiles": 1709,
+    "tests": 26211
+   },
+   "Madrid": {
+    "value": 382.3,
+    "year": "2026 Q1",
+    "bbox": [
+     -3.85,
+     40.3,
+     -3.55,
+     40.55
+    ],
+    "tiles": 1627,
+    "tests": 72940
+   },
+   "Milan": {
+    "value": 429.2,
+    "year": "2026 Q1",
+    "bbox": [
+     9.05,
+     45.4,
+     9.3,
+     45.55
+    ],
+    "tiles": 1395,
+    "tests": 89027
+   },
+   "Rome": {
+    "value": 376.5,
+    "year": "2026 Q1",
+    "bbox": [
+     12.35,
+     41.8,
+     12.65,
+     42.0
+    ],
+    "tiles": 1964,
+    "tests": 163732
+   },
+   "Munich": {
+    "value": 221.7,
+    "year": "2026 Q1",
+    "bbox": [
+     11.4,
+     48.05,
+     11.7,
+     48.25
+    ],
+    "tiles": 1746,
+    "tests": 57386
+   },
+   "Frankfurt": {
+    "value": 232.1,
+    "year": "2026 Q1",
+    "bbox": [
+     8.55,
+     50.05,
+     8.8,
+     50.2
+    ],
+    "tiles": 1070,
+    "tests": 32538
+   },
+   "Hamburg": {
+    "value": 196.7,
+    "year": "2026 Q1",
+    "bbox": [
+     9.85,
+     53.45,
+     10.15,
+     53.65
+    ],
+    "tiles": 2034,
+    "tests": 45610
+   },
+   "Brussels": {
+    "value": 266.9,
+    "year": "2026 Q1",
+    "bbox": [
+     4.25,
+     50.75,
+     4.5,
+     50.92
+    ],
+    "tiles": 1520,
+    "tests": 49458
+   },
+   "Dublin": {
+    "value": 337.0,
+    "year": "2026 Q1",
+    "bbox": [
+     -6.4,
+     53.25,
+     -6.1,
+     53.42
+    ],
+    "tiles": 1849,
+    "tests": 58932
+   },
+   "Lisbon": {
+    "value": 354.4,
+    "year": "2026 Q1",
+    "bbox": [
+     -9.25,
+     38.68,
+     -9.05,
+     38.82
+    ],
+    "tiles": 722,
+    "tests": 60212
+   },
+   "Prague": {
+    "value": 258.9,
+    "year": "2026 Q1",
+    "bbox": [
+     14.3,
+     49.98,
+     14.6,
+     50.15
+    ],
+    "tiles": 1624,
+    "tests": 53154
+   },
+   "Warsaw": {
+    "value": 362.9,
+    "year": "2026 Q1",
+    "bbox": [
+     20.85,
+     52.1,
+     21.15,
+     52.35
+    ],
+    "tiles": 2432,
+    "tests": 66840
+   },
+   "Istanbul": {
+    "value": 251.2,
+    "year": "2026 Q1",
+    "bbox": [
+     28.75,
+     40.95,
+     29.25,
+     41.15
+    ],
+    "tiles": 2737,
+    "tests": 288219
+   },
+   "Montreal": {
+    "value": 334.2,
+    "year": "2026 Q1",
+    "bbox": [
+     -73.75,
+     45.4,
+     -73.45,
+     45.6
+    ],
+    "tiles": 2009,
+    "tests": 74946
+   },
+   "Vancouver": {
+    "value": 374.2,
+    "year": "2026 Q1",
+    "bbox": [
+     -123.25,
+     49.2,
+     -123.0,
+     49.32
+    ],
+    "tiles": 945,
+    "tests": 45783
+   },
+   "Chicago": {
+    "value": 392.9,
+    "year": "2026 Q1",
+    "bbox": [
+     -87.85,
+     41.7,
+     -87.55,
+     42.0
+    ],
+    "tiles": 2791,
+    "tests": 83677
+   },
+   "Boston": {
+    "value": 361.6,
+    "year": "2026 Q1",
+    "bbox": [
+     -71.2,
+     42.25,
+     -70.95,
+     42.42
+    ],
+    "tiles": 1340,
+    "tests": 38615
+   },
+   "Los Angeles": {
+    "value": 392.1,
+    "year": "2026 Q1",
+    "bbox": [
+     -118.5,
+     33.9,
+     -118.15,
+     34.15
+    ],
+    "tiles": 3045,
+    "tests": 166002
+   },
+   "Seattle": {
+    "value": 410.0,
+    "year": "2026 Q1",
+    "bbox": [
+     -122.45,
+     47.48,
+     -122.2,
+     47.75
+    ],
+    "tiles": 1907,
+    "tests": 52618
+   },
+   "Washington DC": {
+    "value": 362.5,
+    "year": "2026 Q1",
+    "bbox": [
+     -77.15,
+     38.8,
+     -76.9,
+     39.0
+    ],
+    "tiles": 1697,
+    "tests": 45242
+   },
+   "Sydney": {
+    "value": 239.5,
+    "year": "2026 Q1",
+    "bbox": [
+     151.0,
+     -34.0,
+     151.3,
+     -33.75
+    ],
+    "tiles": 2399,
+    "tests": 200325
+   },
+   "Auckland": {
+    "value": 283.4,
+    "year": "2026 Q1",
+    "bbox": [
+     174.65,
+     -37.0,
+     174.9,
+     -36.75
+    ],
+    "tiles": 1395,
+    "tests": 34112
+   },
+   "Osaka": {
+    "value": 295.1,
+    "year": "2026 Q1",
+    "bbox": [
+     135.35,
+     34.55,
+     135.65,
+     34.75
+    ],
+    "tiles": 1643,
+    "tests": 42868
+   },
+   "Tel Aviv": {
+    "value": 366.9,
+    "year": "2026 Q1",
+    "bbox": [
+     34.72,
+     32.0,
+     34.85,
+     32.15
+    ],
+    "tiles": 456,
+    "tests": 70038,
+    "note": "THIN sample: 456 tiles / 70038 tests (threshold 500 tiles / 20000 tests)"
    }
-  }
+  },
+  "edition": ""
  },
  "LIV-04": {
   "source": "OECD Regional Demography — Life expectancy (DSD_REG_DEMO@DF_LIFE_EXP v2.0); SingStat table M810501 (Singapore); World Bank SP.DYN.LE00.IN (Dubai/UAE)",
@@ -605,6 +1257,162 @@ window.INDEX_DATA = {
     "year": "2020",
     "source": "OECD TL2 US06 — California",
     "note": "California STATE proxy (no US TL3 in dataset). 2020 is latest and is COVID-depressed (2019 = 80.9). dataLevel = state proxy."
+   },
+   "Stockholm": {
+    "value": 85.0,
+    "year": "2024",
+    "source": "OECD SE11 Stockholm (TL2)",
+    "note": "TL2 Stockholm = Stockholm County (same boundary as TL3 SE110, which only runs to 2022); county-level"
+   },
+   "Oslo": {
+    "value": 83.3,
+    "year": "2022",
+    "source": "OECD NO081 Oslo (TL3)",
+    "note": "Oslo county/municipality — city-level"
+   },
+   "Helsinki": {
+    "value": 81.9,
+    "year": "2023",
+    "source": "OECD FI1B1 Helsinki-Uusimaa (TL3)",
+    "note": "Uusimaa region containing Helsinki — region proxy"
+   },
+   "Madrid": {
+    "value": 85.4,
+    "year": "2023",
+    "source": "OECD ES300 Madrid (TL3)",
+    "note": "Madrid province = Comunidad de Madrid; region-level"
+   },
+   "Milan": {
+    "value": 84.7,
+    "year": "2024",
+    "source": "OECD ITC4C Milan (TL3)",
+    "note": "Metropolitan City of Milan — metro-level"
+   },
+   "Rome": {
+    "value": 83.6,
+    "year": "2024",
+    "source": "OECD ITI43 Rome (TL3)",
+    "note": "Metropolitan City of Rome — metro-level"
+   },
+   "Munich": {
+    "value": 83.1,
+    "year": "2020",
+    "source": "OECD DE212 München, Kreisfreie Stadt (TL3)",
+    "note": "City proper; latest year published at German TL3 is 2020"
+   },
+   "Frankfurt": {
+    "value": 81.9,
+    "year": "2020",
+    "source": "OECD DE712 Frankfurt am Main, Kreisfreie Stadt (TL3)",
+    "note": "City proper; latest year published at German TL3 is 2020"
+   },
+   "Hamburg": {
+    "value": 80.9,
+    "year": "2023",
+    "source": "OECD DE6 Hamburg (TL2)",
+    "note": "City-state = city boundary (TL3 DE600 identical but only to 2020)"
+   },
+   "Brussels": {
+    "value": 82.2,
+    "year": "2023",
+    "source": "OECD BE1 Brussels-Capital Region (TL2)",
+    "note": "Brussels-Capital Region — city-region"
+   },
+   "Dublin": {
+    "value": 83.3,
+    "year": "2023",
+    "source": "OECD IE06 Eastern and Midland (TL2)",
+    "note": "Region proxy containing Dublin; no Dublin TL3 in this dataflow"
+   },
+   "Lisbon": {
+    "value": 81.2,
+    "year": "2023",
+    "source": "OECD PT1A Greater Lisbon (TL2)",
+    "note": "Grande Lisboa (NUTS2024) — metro-level"
+   },
+   "Prague": {
+    "value": 81.1,
+    "year": "2023",
+    "source": "OECD CZ010 Prague (TL3)",
+    "note": "Praha = city boundary"
+   },
+   "Warsaw": {
+    "value": 81.0,
+    "year": "2024",
+    "source": "OECD PL911 City of Warsaw (TL3)",
+    "note": "City proper"
+   },
+   "Istanbul": {
+    "value": 77.1,
+    "year": "2023",
+    "source": "OECD TR10 Istanbul (TL2)",
+    "note": "Istanbul province = greater city (TL3 TR100 identical but only to 2019)"
+   },
+   "Montreal": {
+    "value": 82.5,
+    "year": "2022",
+    "source": "OECD CA24 Quebec (TL2)",
+    "note": "Province proxy — no Montreal TL3 in this dataflow (v1.0 convention for Canada)"
+   },
+   "Vancouver": {
+    "value": 81.5,
+    "year": "2022",
+    "source": "OECD CA59 British Columbia (TL2)",
+    "note": "Province proxy (v1.0 convention for Canada)"
+   },
+   "Chicago": {
+    "value": 76.8,
+    "year": "2020",
+    "source": "OECD US17 Illinois (TL2)",
+    "note": "State proxy (v1.0 convention for US); latest US state year is 2020"
+   },
+   "Boston": {
+    "value": 79.0,
+    "year": "2020",
+    "source": "OECD US25 Massachusetts (TL2)",
+    "note": "State proxy (v1.0 convention for US)"
+   },
+   "Los Angeles": {
+    "value": 79.0,
+    "year": "2020",
+    "source": "OECD US06 California (TL2)",
+    "note": "State proxy (v1.0 convention for US)"
+   },
+   "Seattle": {
+    "value": 79.2,
+    "year": "2020",
+    "source": "OECD US53 Washington (TL2)",
+    "note": "Washington State proxy (v1.0 convention for US)"
+   },
+   "Washington DC": {
+    "value": 78.0,
+    "year": "2019",
+    "source": "OECD US11 District of Columbia (TL2)",
+    "note": "DC is a TL2 unit = the city itself; latest published year 2019 (no 2020 row for DC)"
+   },
+   "Sydney": {
+    "value": 84.1,
+    "year": "2022",
+    "source": "OECD AU1GS Sydney (TL3)",
+    "note": "Greater Sydney — metro-level"
+   },
+   "Auckland": {
+    "value": 82.7,
+    "year": "2023",
+    "source": "OECD NZ12 Auckland (TL2)",
+    "note": "Auckland region = same boundary as TL3 NZ012 (which only runs to 2018)"
+   },
+   "Osaka": {
+    "value": 84.2,
+    "year": "2020",
+    "source": "OECD JPG27 Osaka (TL3)",
+    "note": "Osaka prefecture; Japanese regional life tables published every 5 years — 2020 is latest"
+   },
+   "Tel Aviv": {
+    "value": 83.1,
+    "year": "2022",
+    "source": "OECD IL050 Tel Aviv District (TL3)",
+    "note": "Tel Aviv District containing the city — district-level"
    }
   }
  },
@@ -727,6 +1535,161 @@ window.INDEX_DATA = {
     "year": "2022",
     "source": "OECD DF_HEALTH, REF_AREA US06 'California' (TL2, state), DOC per 1,000 inhabitants, 2022",
     "note": "California state proxy, not San Francisco; no finer OECD geography with data. Same 2019 level break as other US states (2018=2.60, 2019=3.15)."
+   },
+   "Stockholm": {
+    "value": 4.91,
+    "year": "2023",
+    "source": "OECD SE110 Stockholm County (TL3)",
+    "note": "TL2 SE11 identical (4.91, 2023). County = metro proxy."
+   },
+   "Oslo": {
+    "value": 6.8,
+    "year": "2024",
+    "source": "OECD NO081 Oslo (TL3)",
+    "note": "Oslo municipality/county = city proper; core density reads high (parent TL2 NO08 Oslo and Viken = 5.22 in 2024), same pattern as Paris FR101 in v1.0. Series dipped 7.59 (2022) to 6.67 (2023) then 6.80 (2024)."
+   },
+   "Helsinki": {
+    "value": 3.72,
+    "year": "2021",
+    "source": "OECD FI1B1 Helsinki-Uusimaa (TL3)",
+    "note": "TL3 = TL2 FI1B (same region, whole Uusimaa). Finnish series ends 2021 - older vintage than most cities in this wave."
+   },
+   "Madrid": {
+    "value": 6.18,
+    "year": "2024",
+    "source": "OECD ES30 Madrid (TL2)",
+    "note": "Community of Madrid. TL3 ES300 exists but ends 2011 - rejected as stale (same rule v1.0 applied to Barcelona ES511). Spanish series volatile recently (2022=5.11, 2023=5.45, 2024=6.18); Catalonia shows the same pattern an"
+   },
+   "Milan": {
+    "value": 5.59,
+    "year": "2023",
+    "source": "OECD ITC4 Lombardy (TL2)",
+    "note": "Region proxy - Italy has no TL3 physician data in this flow."
+   },
+   "Rome": {
+    "value": 6.77,
+    "year": "2023",
+    "source": "OECD ITI4 Lazio (TL2)",
+    "note": "Region proxy - Italy has no TL3 physician data in this flow."
+   },
+   "Munich": {
+    "value": 4.56,
+    "year": "2019",
+    "source": "OECD DE2 Bavaria (TL2)",
+    "note": "German TL2 in this flow = the 16 Laender only (no Oberbayern DE21), so Bavaria is the finest comparable geography; a large-state proxy. TL2 series ends 2019 (same vintage as v1.0 Berlin). TL3 DE212 Muenchen Kreisfreie St"
+   },
+   "Frankfurt": {
+    "value": 4.27,
+    "year": "2019",
+    "source": "OECD DE7 Hesse (TL2)",
+    "note": "Land proxy; TL2 series ends 2019. TL3 DE712 Frankfurt am Main Kreisfreie Stadt (1.83, 2024) rejected as non-comparable subset series (see Munich note)."
+   },
+   "Hamburg": {
+    "value": 6.4,
+    "year": "2019",
+    "source": "OECD DE6 Hamburg (TL2)",
+    "note": "City-state = true city level, but 2019 vintage (German TL2 series ends 2019, as with v1.0 Berlin). TL3 DE600 (1.86, 2024) rejected as non-comparable subset series."
+   },
+   "Brussels": {
+    "value": 4.44,
+    "year": "2023",
+    "source": "OECD BE100 Arr. Brussels-Capital (TL3)",
+    "note": "TL3 = TL2 BE1 Brussels Capital Region (identical, 4.44 in 2023). City-region, true city level."
+   },
+   "Dublin": {
+    "value": null,
+    "year": "n/a",
+    "note": "Ireland has NO TL2/TL3 physician data in this flow - only country level (CTRY IRL: 4.09 in 2025). Left null per the TL3/TL2 convention; using the national figure would require a Country-proxy dataLevel decision by the ma"
+   },
+   "Lisbon": {
+    "value": 8.37,
+    "year": "2024",
+    "source": "OECD PT1A0 Greater Lisbon (TL3)",
+    "note": "TL3 = TL2 PT1A (identical). NUTS2024 Grande Lisboa geography; series only spans 2021-2024. Reads high - capital-region concentration."
+   },
+   "Prague": {
+    "value": 8.24,
+    "year": "2024",
+    "source": "OECD CZ010 Prague (TL3)",
+    "note": "City = region (TL2 CZ01 identical). True city level; capital core density reads high, like Paris/Vienna in v1.0."
+   },
+   "Warsaw": {
+    "value": 6.3,
+    "year": "2024",
+    "source": "OECD PL91 Warsaw Capital Region (TL2)",
+    "note": "Metro region chosen over city-core PL911 (11.12, 2023), which sits on a source-side 2023 reporting-definition break (Eurostat-confirmed jump 8.36->11.12); PL91 2024 has no break and matches the Metro data level."
+   },
+   "Istanbul": {
+    "value": 2.96,
+    "year": "2023",
+    "source": "OECD TR100 Istanbul (TL3)",
+    "note": "Istanbul province = TL2 TR10 (identical). Province is close to the metro."
+   },
+   "Montreal": {
+    "value": 2.6,
+    "year": "2024",
+    "source": "OECD CA24 Quebec (TL2)",
+    "note": "Province proxy, not Montreal - Canada has no TL3 in this flow (same convention as v1.0 Toronto = Ontario CA35)."
+   },
+   "Vancouver": {
+    "value": 2.71,
+    "year": "2024",
+    "source": "OECD CA59 British Columbia (TL2)",
+    "note": "Province proxy, not Vancouver - Canada has no TL3 in this flow."
+   },
+   "Chicago": {
+    "value": 3.7,
+    "year": "2022",
+    "source": "OECD US17 Illinois (TL2)",
+    "note": "State proxy per v1.0 US convention (no finer OECD geography). US series has a level break around 2019 (2018=2.68, 2019=3.36) noted in v1.0."
+   },
+   "Boston": {
+    "value": 5.52,
+    "year": "2022",
+    "source": "OECD US25 Massachusetts (TL2)",
+    "note": "State proxy per v1.0 US convention. Same 2019 level break (2018=4.24, 2019=5.39)."
+   },
+   "Los Angeles": {
+    "value": 3.02,
+    "year": "2022",
+    "source": "OECD US06 California (TL2)",
+    "note": "State proxy per v1.0 US convention - identical series and value as v1.0 San Francisco (California 2022=3.02)."
+   },
+   "Seattle": {
+    "value": 2.98,
+    "year": "2022",
+    "source": "OECD US53 Washington (TL2)",
+    "note": "Washington state proxy per v1.0 US convention. Same 2019 level break (2018=2.54, 2019=3.05)."
+   },
+   "Washington DC": {
+    "value": 12.02,
+    "year": "2022",
+    "source": "OECD US11 District of Columbia (TL2)",
+    "note": "DC is its own TL2 'state' - a small urban core district, so density reads extremely high (physicians counted at workplace serving the whole metro), like Paris FR101 in v1.0 but stronger. Series breaks: 9.07 (2009) to 6.8"
+   },
+   "Sydney": {
+    "value": 4.58,
+    "year": "2024",
+    "source": "OECD AU1GS Greater Sydney (TL3)",
+    "note": "Greater Sydney metro (TL3), exactly matching v1.0 Melbourne convention (AU2GM). Parent TL2 AU1 New South Wales = 4.32 in 2024."
+   },
+   "Auckland": {
+    "value": 3.47,
+    "year": "2019",
+    "source": "OECD NZ012 Auckland (TL3)",
+    "note": "Auckland region; TL3 = TL2 NZ12 (identical). New Zealand series ends 2019 - oldest vintage in this wave alongside German Laender."
+   },
+   "Osaka": {
+    "value": 2.92,
+    "year": "2024",
+    "source": "OECD JPG27 Osaka (TL3)",
+    "note": "Osaka prefecture (TL3), matching v1.0 Tokyo convention (JPD13). Parent TL2 JPG Kansai region = 2.96 in 2024. Japanese physician survey is biennial (2020, 2022, 2024)."
+   },
+   "Tel Aviv": {
+    "value": 4.9,
+    "year": "2023",
+    "source": "OECD IL05 Tel Aviv District (TL2)",
+    "note": "Tel Aviv District - Israel has TL2 districts only in this flow (no TL3). District is a reasonable metro-core proxy; national ISR = 3.50 in 2023."
    }
   }
  },
@@ -835,6 +1798,162 @@ window.INDEX_DATA = {
     "year": "2026 Mid-Year",
     "source": "San Francisco, CA, United States",
     "note": "Individual city page currently shows 6.38 (live data drifts from the mid-year edition snapshot); the 6.5 edition value is used. Column parse verified against raw row HTML."
+   },
+   "Stockholm": {
+    "value": 12.5,
+    "year": "2026 Mid-Year",
+    "source": "Stockholm, Sweden",
+    "note": "Price To Income Ratio column, Numbeo Property Prices Index 2026 Mid-Year (rankings.jsp fetched 2026-07-12)"
+   },
+   "Oslo": {
+    "value": 11.0,
+    "year": "2026 Mid-Year",
+    "source": "Oslo, Norway",
+    "note": "Price To Income Ratio column, Numbeo Property Prices Index 2026 Mid-Year (rankings.jsp fetched 2026-07-12)"
+   },
+   "Helsinki": {
+    "value": 11.4,
+    "year": "2026 Mid-Year",
+    "source": "Helsinki, Finland",
+    "note": "Price To Income Ratio column, Numbeo Property Prices Index 2026 Mid-Year (rankings.jsp fetched 2026-07-12)"
+   },
+   "Madrid": {
+    "value": 13.2,
+    "year": "2026 Mid-Year",
+    "source": "Madrid, Spain",
+    "note": "Price To Income Ratio column, Numbeo Property Prices Index 2026 Mid-Year (rankings.jsp fetched 2026-07-12)"
+   },
+   "Milan": {
+    "value": 18.2,
+    "year": "2026 Mid-Year",
+    "source": "Milan, Italy",
+    "note": "Price To Income Ratio column, Numbeo Property Prices Index 2026 Mid-Year (rankings.jsp fetched 2026-07-12)"
+   },
+   "Rome": {
+    "value": 14.9,
+    "year": "2026 Mid-Year",
+    "source": "Rome, Italy",
+    "note": "Price To Income Ratio column, Numbeo Property Prices Index 2026 Mid-Year (rankings.jsp fetched 2026-07-12)"
+   },
+   "Munich": {
+    "value": 13.1,
+    "year": "2026 Mid-Year",
+    "source": "Munich, Germany",
+    "note": "Price To Income Ratio column, Numbeo Property Prices Index 2026 Mid-Year (rankings.jsp fetched 2026-07-12)"
+   },
+   "Frankfurt": {
+    "value": 7.7,
+    "year": "2026 Mid-Year",
+    "source": "Frankfurt, Germany",
+    "note": "Price To Income Ratio column, Numbeo Property Prices Index 2026 Mid-Year (rankings.jsp fetched 2026-07-12)"
+   },
+   "Hamburg": {
+    "value": 11.1,
+    "year": "2026 Mid-Year",
+    "source": "Hamburg, Germany",
+    "note": "Price To Income Ratio column, Numbeo Property Prices Index 2026 Mid-Year (rankings.jsp fetched 2026-07-12)"
+   },
+   "Brussels": {
+    "value": 7.2,
+    "year": "2026 Mid-Year",
+    "source": "Brussels, Belgium",
+    "note": "Price To Income Ratio column, Numbeo Property Prices Index 2026 Mid-Year (rankings.jsp fetched 2026-07-12)"
+   },
+   "Dublin": {
+    "value": 9.0,
+    "year": "2026 Mid-Year",
+    "source": "Dublin, Ireland",
+    "note": "Price To Income Ratio column, Numbeo Property Prices Index 2026 Mid-Year (rankings.jsp fetched 2026-07-12)"
+   },
+   "Lisbon": {
+    "value": 18.7,
+    "year": "2026 Mid-Year",
+    "source": "Lisbon, Portugal",
+    "note": "Price To Income Ratio column, Numbeo Property Prices Index 2026 Mid-Year (rankings.jsp fetched 2026-07-12)"
+   },
+   "Prague": {
+    "value": 18.2,
+    "year": "2026 Mid-Year",
+    "source": "Prague, Czech Republic",
+    "note": "Price To Income Ratio column, Numbeo Property Prices Index 2026 Mid-Year (rankings.jsp fetched 2026-07-12)"
+   },
+   "Warsaw": {
+    "value": 11.7,
+    "year": "2026 Mid-Year",
+    "source": "Warsaw, Poland",
+    "note": "Price To Income Ratio column, Numbeo Property Prices Index 2026 Mid-Year (rankings.jsp fetched 2026-07-12)"
+   },
+   "Istanbul": {
+    "value": 10.1,
+    "year": "2026 Mid-Year",
+    "source": "Istanbul, Turkey",
+    "note": "Price To Income Ratio column, Numbeo Property Prices Index 2026 Mid-Year (rankings.jsp fetched 2026-07-12)"
+   },
+   "Montreal": {
+    "value": 7.6,
+    "year": "2026 Mid-Year",
+    "source": "Montreal, Canada",
+    "note": "Price To Income Ratio column, Numbeo Property Prices Index 2026 Mid-Year (rankings.jsp fetched 2026-07-12)"
+   },
+   "Vancouver": {
+    "value": 11.7,
+    "year": "2026 Mid-Year",
+    "source": "Vancouver, Canada",
+    "note": "Price To Income Ratio column, Numbeo Property Prices Index 2026 Mid-Year (rankings.jsp fetched 2026-07-12)"
+   },
+   "Chicago": {
+    "value": 3.2,
+    "year": "2026 Mid-Year",
+    "source": "Chicago, IL, United States",
+    "note": "Price To Income Ratio column, Numbeo Property Prices Index 2026 Mid-Year (rankings.jsp fetched 2026-07-12)"
+   },
+   "Boston": {
+    "value": 7.9,
+    "year": "2026 Mid-Year",
+    "source": "Boston, MA, United States",
+    "note": "Price To Income Ratio column, Numbeo Property Prices Index 2026 Mid-Year (rankings.jsp fetched 2026-07-12)"
+   },
+   "Los Angeles": {
+    "value": 8.2,
+    "year": "2026 Mid-Year",
+    "source": "Los Angeles, CA, United States",
+    "note": "Price To Income Ratio column, Numbeo Property Prices Index 2026 Mid-Year (rankings.jsp fetched 2026-07-12)"
+   },
+   "Seattle": {
+    "value": 4.8,
+    "year": "2026 Mid-Year",
+    "source": "Seattle, WA, United States",
+    "note": "Price To Income Ratio column, Numbeo Property Prices Index 2026 Mid-Year (rankings.jsp fetched 2026-07-12)"
+   },
+   "Washington DC": {
+    "value": 4.3,
+    "year": "2026 Mid-Year",
+    "source": "Washington, DC, United States",
+    "note": "Price To Income Ratio column, Numbeo Property Prices Index 2026 Mid-Year (rankings.jsp fetched 2026-07-12)"
+   },
+   "Sydney": {
+    "value": 12.5,
+    "year": "2026 Mid-Year",
+    "source": "Sydney, Australia",
+    "note": "Price To Income Ratio column, Numbeo Property Prices Index 2026 Mid-Year (rankings.jsp fetched 2026-07-12)"
+   },
+   "Auckland": {
+    "value": 10.5,
+    "year": "2026 Mid-Year",
+    "source": "Auckland, New Zealand",
+    "note": "Price To Income Ratio column, Numbeo Property Prices Index 2026 Mid-Year (rankings.jsp fetched 2026-07-12)"
+   },
+   "Osaka": {
+    "value": 10.6,
+    "year": "current (last update 2026-06-19)",
+    "source": "Osaka, Japan (city page)",
+    "note": "Absent from 2026 Mid-Year rankings table; taken from numbeo.com/property-investment/in/Osaka current view: Price to Income Ratio 10.59 (80 entries, 16 contributors, past 18 months)."
+   },
+   "Tel Aviv": {
+    "value": 20.0,
+    "year": "2026 Mid-Year",
+    "source": "Tel Aviv-Yafo, Israel",
+    "note": "Price To Income Ratio column, Numbeo Property Prices Index 2026 Mid-Year (rankings.jsp fetched 2026-07-12)"
    }
   }
  },
@@ -953,6 +2072,157 @@ window.INDEX_DATA = {
     "value": null,
     "year": "2020",
     "note": "Null per rules: UN-Habitat's national-sample construction omits San Francisco CA; nearby San Jose exists in the file but is a different city and was not substituted. Also absent from the green-areas companion file."
+   },
+   "Stockholm": {
+    "value": 86.0,
+    "year": "2020",
+    "source": "City Code SE_STOCKHOLM / City Name 'Stockholm' (Sweden)",
+    "note": "col [b] pop. within 400m walk of open public space; raw 85.96437964029612"
+   },
+   "Oslo": {
+    "value": 56.0,
+    "year": "2022",
+    "source": "City Code NO_OSLO / City Name 'Oslo' (Norway)",
+    "note": "col [b] pop. within 400m walk of open public space; raw 56.000037585683614; latest of 2 non-blank rows (others: [('2018', '56')])"
+   },
+   "Helsinki": {
+    "value": null,
+    "year": "n/a",
+    "note": "City not present in UN-Habitat SDG 11.7.1 table (sdg_11-7-1.csv, 1711 rows) — confirmed by accent-normalized substring search; left null."
+   },
+   "Madrid": {
+    "value": 63.1,
+    "year": "2020",
+    "source": "City Code ES_MADRID / City Name 'Madrid' (Spain)",
+    "note": "col [b] pop. within 400m walk of open public space; raw 63.12604019448668"
+   },
+   "Milan": {
+    "value": 76.2,
+    "year": "2020",
+    "source": "City Code IT_MILANO / City Name 'Milano (Milan)' (Italy)",
+    "note": "col [b] pop. within 400m walk of open public space; raw 76.21590965651872"
+   },
+   "Rome": {
+    "value": 80.0,
+    "year": "2020",
+    "source": "City Code IT_ROMA / City Name 'Roma (Rome)' (Italy)",
+    "note": "col [b] pop. within 400m walk of open public space; raw 80.04956961629782"
+   },
+   "Munich": {
+    "value": null,
+    "year": "n/a",
+    "note": "City not present in UN-Habitat SDG 11.7.1 table (sdg_11-7-1.csv, 1711 rows) — confirmed by accent-normalized substring search; left null."
+   },
+   "Frankfurt": {
+    "value": null,
+    "year": "n/a",
+    "note": "City not present in UN-Habitat SDG 11.7.1 table (sdg_11-7-1.csv, 1711 rows) — confirmed by accent-normalized substring search; left null."
+   },
+   "Hamburg": {
+    "value": 78.2,
+    "year": "2020",
+    "source": "City Code DE_HAMBURG / City Name 'Hamburg' (Germany)",
+    "note": "col [b] pop. within 400m walk of open public space; raw 78.20667555518477"
+   },
+   "Brussels": {
+    "value": 85.8,
+    "year": "2020",
+    "source": "City Code BE_BRUXELLES / City Name 'Bruxelles-Brussel' (Belgium)",
+    "note": "col [b] pop. within 400m walk of open public space; raw 85.81047593478537"
+   },
+   "Dublin": {
+    "value": 84.2,
+    "year": "2020",
+    "source": "City Code IE_DUBLIN / City Name 'Dublin' (Ireland)",
+    "note": "col [b] pop. within 400m walk of open public space; raw 84.24154094300785"
+   },
+   "Lisbon": {
+    "value": 87.4,
+    "year": "2020",
+    "source": "City Code PT_LISBOA / City Name 'Lisboa (Lisbon)' (Portugal)",
+    "note": "col [b] pop. within 400m walk of open public space; raw 87.42410412082377"
+   },
+   "Prague": {
+    "value": 83.5,
+    "year": "2020",
+    "source": "City Code CZ_PRAHA / City Name 'Praha (Prague)' (Czechia)",
+    "note": "col [b] pop. within 400m walk of open public space; raw 83.54677682853324"
+   },
+   "Warsaw": {
+    "value": 88.0,
+    "year": "2020",
+    "source": "City Code PL_WARSZAWA / City Name 'Warszawa (Warsaw)' (Poland)",
+    "note": "col [b] pop. within 400m walk of open public space; raw 87.9503102113149"
+   },
+   "Istanbul": {
+    "value": 59.8,
+    "year": "2020",
+    "source": "City Code TR_ISTANBUL / City Name 'Istanbul' (Türkiye)",
+    "note": "col [b] pop. within 400m walk of open public space; raw 59.78115215902099; 1 blank-value duplicate row(s) ignored"
+   },
+   "Montreal": {
+    "value": 91.8,
+    "year": "2020",
+    "source": "City Code CA_MONTREAL_QUE / City Name 'Montréal' (Canada)",
+    "note": "col [b] pop. within 400m walk of open public space; raw 91.80630156189909"
+   },
+   "Vancouver": {
+    "value": null,
+    "year": "n/a",
+    "note": "City not present in UN-Habitat SDG 11.7.1 table (sdg_11-7-1.csv, 1711 rows) — confirmed by accent-normalized substring search; left null."
+   },
+   "Chicago": {
+    "value": 47.8,
+    "year": "2020",
+    "source": "City Code US_CHICAGO_IL / City Name 'Chicago' (United States of America)",
+    "note": "col [b] pop. within 400m walk of open public space; raw 47.84582347745486"
+   },
+   "Boston": {
+    "value": 68.2,
+    "year": "2020",
+    "source": "City Code US_BOSTON / City Name 'Boston' (United States of America)",
+    "note": "col [b] pop. within 400m walk of open public space; raw 68.16232443542638"
+   },
+   "Los Angeles": {
+    "value": null,
+    "year": "n/a",
+    "note": "City not present in UN-Habitat SDG 11.7.1 table (sdg_11-7-1.csv, 1711 rows) — confirmed by accent-normalized substring search; left null."
+   },
+   "Seattle": {
+    "value": 63.5,
+    "year": "2020",
+    "source": "City Code US_SEATTLE / City Name 'Seattle' (United States of America)",
+    "note": "col [b] pop. within 400m walk of open public space; raw 63.46851224746973"
+   },
+   "Washington DC": {
+    "value": 52.8,
+    "year": "2020",
+    "source": "City Code US_WASHINGTON_D_C / City Name 'Washington, D.C.' (United States of America)",
+    "note": "col [b] pop. within 400m walk of open public space; raw 52.80240014132506"
+   },
+   "Sydney": {
+    "value": 33.4,
+    "year": "2020",
+    "source": "City Code AU_SYDNEY / City Name 'Sydney' (Australia)",
+    "note": "col [b] pop. within 400m walk of open public space; raw 33.378630658442155"
+   },
+   "Auckland": {
+    "value": 88.4,
+    "year": "2020",
+    "source": "City Code NZ_AUCKLAND / City Name 'Auckland' (New Zealand)",
+    "note": "col [b] pop. within 400m walk of open public space; raw 88.44423455352216"
+   },
+   "Osaka": {
+    "value": 72.2,
+    "year": "2020",
+    "source": "City Code JP_OSAKA / City Name 'Osaka' (Japan)",
+    "note": "col [b] pop. within 400m walk of open public space; raw 72.21445774289073"
+   },
+   "Tel Aviv": {
+    "value": 65.7,
+    "year": "2021",
+    "source": "City Code IL_TEL_AVIV_YAFO / City Name 'Tel Aviv-Yafo (Tel Aviv-Jaffa)' (Israel)",
+    "note": "col [b] pop. within 400m walk of open public space; raw 65.70408763024312"
    }
   }
  },
@@ -1073,6 +2343,136 @@ window.INDEX_DATA = {
     "year": "FY2025 (Jul 2024-Jun 2025)",
     "source": "SF Controller City Performance Scorecard measure 382 'Percentage of residential and commercial refuse recovered through recycling and composting', FY2025 average of 12 official monthly actuals = 0.530",
     "note": "'Recovery rate' = tons recycled+composted / total refuse (recycling+composting+trash), net of residual contamination, as reported by Recology to SF Environment. Scope: residential and small-business ('Fantastic 3') colle"
+   },
+   "Stockholm": {
+    "value": null,
+    "year": "n/a",
+    "note": "Pending Wave 2 manual sourcing: municipal recycling rates require one official city/agency source each (see ROSTER.md next steps). Blank, not zero."
+   },
+   "Oslo": {
+    "value": null,
+    "year": "n/a",
+    "note": "Pending Wave 2 manual sourcing: municipal recycling rates require one official city/agency source each (see ROSTER.md next steps). Blank, not zero."
+   },
+   "Helsinki": {
+    "value": null,
+    "year": "n/a",
+    "note": "Pending Wave 2 manual sourcing: municipal recycling rates require one official city/agency source each (see ROSTER.md next steps). Blank, not zero."
+   },
+   "Madrid": {
+    "value": null,
+    "year": "n/a",
+    "note": "Pending Wave 2 manual sourcing: municipal recycling rates require one official city/agency source each (see ROSTER.md next steps). Blank, not zero."
+   },
+   "Milan": {
+    "value": null,
+    "year": "n/a",
+    "note": "Pending Wave 2 manual sourcing: municipal recycling rates require one official city/agency source each (see ROSTER.md next steps). Blank, not zero."
+   },
+   "Rome": {
+    "value": null,
+    "year": "n/a",
+    "note": "Pending Wave 2 manual sourcing: municipal recycling rates require one official city/agency source each (see ROSTER.md next steps). Blank, not zero."
+   },
+   "Munich": {
+    "value": null,
+    "year": "n/a",
+    "note": "Pending Wave 2 manual sourcing: municipal recycling rates require one official city/agency source each (see ROSTER.md next steps). Blank, not zero."
+   },
+   "Frankfurt": {
+    "value": null,
+    "year": "n/a",
+    "note": "Pending Wave 2 manual sourcing: municipal recycling rates require one official city/agency source each (see ROSTER.md next steps). Blank, not zero."
+   },
+   "Hamburg": {
+    "value": null,
+    "year": "n/a",
+    "note": "Pending Wave 2 manual sourcing: municipal recycling rates require one official city/agency source each (see ROSTER.md next steps). Blank, not zero."
+   },
+   "Brussels": {
+    "value": null,
+    "year": "n/a",
+    "note": "Pending Wave 2 manual sourcing: municipal recycling rates require one official city/agency source each (see ROSTER.md next steps). Blank, not zero."
+   },
+   "Dublin": {
+    "value": null,
+    "year": "n/a",
+    "note": "Pending Wave 2 manual sourcing: municipal recycling rates require one official city/agency source each (see ROSTER.md next steps). Blank, not zero."
+   },
+   "Lisbon": {
+    "value": null,
+    "year": "n/a",
+    "note": "Pending Wave 2 manual sourcing: municipal recycling rates require one official city/agency source each (see ROSTER.md next steps). Blank, not zero."
+   },
+   "Prague": {
+    "value": null,
+    "year": "n/a",
+    "note": "Pending Wave 2 manual sourcing: municipal recycling rates require one official city/agency source each (see ROSTER.md next steps). Blank, not zero."
+   },
+   "Warsaw": {
+    "value": null,
+    "year": "n/a",
+    "note": "Pending Wave 2 manual sourcing: municipal recycling rates require one official city/agency source each (see ROSTER.md next steps). Blank, not zero."
+   },
+   "Istanbul": {
+    "value": null,
+    "year": "n/a",
+    "note": "Pending Wave 2 manual sourcing: municipal recycling rates require one official city/agency source each (see ROSTER.md next steps). Blank, not zero."
+   },
+   "Montreal": {
+    "value": null,
+    "year": "n/a",
+    "note": "Pending Wave 2 manual sourcing: municipal recycling rates require one official city/agency source each (see ROSTER.md next steps). Blank, not zero."
+   },
+   "Vancouver": {
+    "value": null,
+    "year": "n/a",
+    "note": "Pending Wave 2 manual sourcing: municipal recycling rates require one official city/agency source each (see ROSTER.md next steps). Blank, not zero."
+   },
+   "Chicago": {
+    "value": null,
+    "year": "n/a",
+    "note": "Pending Wave 2 manual sourcing: municipal recycling rates require one official city/agency source each (see ROSTER.md next steps). Blank, not zero."
+   },
+   "Boston": {
+    "value": null,
+    "year": "n/a",
+    "note": "Pending Wave 2 manual sourcing: municipal recycling rates require one official city/agency source each (see ROSTER.md next steps). Blank, not zero."
+   },
+   "Los Angeles": {
+    "value": null,
+    "year": "n/a",
+    "note": "Pending Wave 2 manual sourcing: municipal recycling rates require one official city/agency source each (see ROSTER.md next steps). Blank, not zero."
+   },
+   "Seattle": {
+    "value": null,
+    "year": "n/a",
+    "note": "Pending Wave 2 manual sourcing: municipal recycling rates require one official city/agency source each (see ROSTER.md next steps). Blank, not zero."
+   },
+   "Washington DC": {
+    "value": null,
+    "year": "n/a",
+    "note": "Pending Wave 2 manual sourcing: municipal recycling rates require one official city/agency source each (see ROSTER.md next steps). Blank, not zero."
+   },
+   "Sydney": {
+    "value": null,
+    "year": "n/a",
+    "note": "Pending Wave 2 manual sourcing: municipal recycling rates require one official city/agency source each (see ROSTER.md next steps). Blank, not zero."
+   },
+   "Auckland": {
+    "value": null,
+    "year": "n/a",
+    "note": "Pending Wave 2 manual sourcing: municipal recycling rates require one official city/agency source each (see ROSTER.md next steps). Blank, not zero."
+   },
+   "Osaka": {
+    "value": null,
+    "year": "n/a",
+    "note": "Pending Wave 2 manual sourcing: municipal recycling rates require one official city/agency source each (see ROSTER.md next steps). Blank, not zero."
+   },
+   "Tel Aviv": {
+    "value": null,
+    "year": "n/a",
+    "note": "Pending Wave 2 manual sourcing: municipal recycling rates require one official city/agency source each (see ROSTER.md next steps). Blank, not zero."
    }
   }
  },
@@ -1189,6 +2589,149 @@ window.INDEX_DATA = {
     "value": null,
     "year": "2024",
     "note": "LOSI covers only the most populous city per UN member state; San Francisco absent from both PDF Table 12 and the eGovKB 193-city list. Null is correct."
+   },
+   "Stockholm": {
+    "value": 80.21,
+    "year": "2024",
+    "source": "Stockholm (eGovKB id 70)",
+    "note": "raw LOSI 0.8021, rank 27; verified identical in Technical Appendix Table 12 (UN E-Government Survey 2024) AND eGovKB city page dataYear/2024."
+   },
+   "Oslo": {
+    "value": 78.13,
+    "year": "2024",
+    "source": "Oslo (eGovKB id 153)",
+    "note": "raw LOSI 0.7813, rank 35; verified identical in Technical Appendix Table 12 (UN E-Government Survey 2024) AND eGovKB city page dataYear/2024."
+   },
+   "Helsinki": {
+    "value": 81.25,
+    "year": "2024",
+    "source": "Helsinki (eGovKB id 29)",
+    "note": "raw LOSI 0.8125, rank 21; verified identical in Technical Appendix Table 12 (UN E-Government Survey 2024) AND eGovKB city page dataYear/2024."
+   },
+   "Madrid": {
+    "value": 92.71,
+    "year": "2024",
+    "source": "Madrid (eGovKB id 68)",
+    "note": "raw LOSI 0.9271, rank 1; verified identical in Technical Appendix Table 12 (UN E-Government Survey 2024) AND eGovKB city page dataYear/2024."
+   },
+   "Milan": {
+    "value": null,
+    "year": "2024",
+    "note": "not assessed (not the country's most populous city)"
+   },
+   "Rome": {
+    "value": 81.25,
+    "year": "2024",
+    "source": "Roma (eGovKB id 41)",
+    "note": "raw LOSI 0.8125, rank 21; verified identical in Technical Appendix Table 12 (UN E-Government Survey 2024) AND eGovKB city page dataYear/2024."
+   },
+   "Munich": {
+    "value": null,
+    "year": "2024",
+    "note": "not assessed (not the country's most populous city)"
+   },
+   "Frankfurt": {
+    "value": null,
+    "year": "2024",
+    "note": "not assessed (not the country's most populous city)"
+   },
+   "Hamburg": {
+    "value": null,
+    "year": "2024",
+    "note": "not assessed (not the country's most populous city)"
+   },
+   "Brussels": {
+    "value": 73.96,
+    "year": "2024",
+    "source": "Brussels (eGovKB id 10)",
+    "note": "raw LOSI 0.7396, rank 43; verified identical in Technical Appendix Table 12 (UN E-Government Survey 2024) AND eGovKB city page dataYear/2024."
+   },
+   "Dublin": {
+    "value": 68.75,
+    "year": "2024",
+    "source": "Dublin (eGovKB id 116)",
+    "note": "raw LOSI 0.6875, rank 47; verified identical in Technical Appendix Table 12 (UN E-Government Survey 2024) AND eGovKB city page dataYear/2024."
+   },
+   "Lisbon": {
+    "value": 70.83,
+    "year": "2024",
+    "source": "Lisbon (eGovKB id 60)",
+    "note": "raw LOSI 0.7083, rank 45; verified identical in Technical Appendix Table 12 (UN E-Government Survey 2024) AND eGovKB city page dataYear/2024."
+   },
+   "Prague": {
+    "value": 67.71,
+    "year": "2024",
+    "source": "Prague (eGovKB id 23)",
+    "note": "raw LOSI 0.6771, rank 49; verified identical in Technical Appendix Table 12 (UN E-Government Survey 2024) AND eGovKB city page dataYear/2024."
+   },
+   "Warsaw": {
+    "value": 77.08,
+    "year": "2024",
+    "source": "Warsaw (eGovKB id 59)",
+    "note": "raw LOSI 0.7708, rank 37; verified identical in Technical Appendix Table 12 (UN E-Government Survey 2024) AND eGovKB city page dataYear/2024."
+   },
+   "Istanbul": {
+    "value": 89.58,
+    "year": "2024",
+    "source": "Istanbul (eGovKB id 75)",
+    "note": "raw LOSI 0.8958, rank 7; verified identical in Technical Appendix Table 12 (UN E-Government Survey 2024) AND eGovKB city page dataYear/2024."
+   },
+   "Montreal": {
+    "value": null,
+    "year": "2024",
+    "note": "not assessed (not the country's most populous city)"
+   },
+   "Vancouver": {
+    "value": null,
+    "year": "2024",
+    "note": "not assessed (not the country's most populous city)"
+   },
+   "Chicago": {
+    "value": null,
+    "year": "2024",
+    "note": "not assessed (not the country's most populous city)"
+   },
+   "Boston": {
+    "value": null,
+    "year": "2024",
+    "note": "not assessed (not the country's most populous city)"
+   },
+   "Los Angeles": {
+    "value": null,
+    "year": "2024",
+    "note": "not assessed (not the country's most populous city)"
+   },
+   "Seattle": {
+    "value": null,
+    "year": "2024",
+    "note": "not assessed (not the country's most populous city)"
+   },
+   "Washington DC": {
+    "value": null,
+    "year": "2024",
+    "note": "not assessed (not the country's most populous city)"
+   },
+   "Sydney": {
+    "value": 77.08,
+    "year": "2024",
+    "source": "Sydney (eGovKB id 5)",
+    "note": "raw LOSI 0.7708, rank 37; verified identical in Technical Appendix Table 12 (UN E-Government Survey 2024) AND eGovKB city page dataYear/2024."
+   },
+   "Auckland": {
+    "value": 80.21,
+    "year": "2024",
+    "source": "Auckland (eGovKB id 95)",
+    "note": "raw LOSI 0.8021, rank 27; verified identical in Technical Appendix Table 12 (UN E-Government Survey 2024) AND eGovKB city page dataYear/2024."
+   },
+   "Osaka": {
+    "value": null,
+    "year": "2024",
+    "note": "not assessed (not the country's most populous city)"
+   },
+   "Tel Aviv": {
+    "value": null,
+    "year": "2024",
+    "note": "not assessed (not the country's most populous city)"
    }
   }
  },
@@ -1311,6 +2854,162 @@ window.INDEX_DATA = {
     "year": "2024",
     "source": "USA / United States, IT.NET.USER.ZS, date 2024, value 94.69380188",
     "note": "Same USA country value shared with New York."
+   },
+   "Stockholm": {
+    "value": 95.8,
+    "year": "2025",
+    "source": "Sweden (SWE) — country proxy",
+    "note": "World Bank WDI IT.NET.USER.ZS (individuals using the Internet, % of population), mrnev=1; API lastupdated 2026-07-01"
+   },
+   "Oslo": {
+    "value": 99.0,
+    "year": "2024",
+    "source": "Norway (NOR) — country proxy",
+    "note": "World Bank WDI IT.NET.USER.ZS (individuals using the Internet, % of population), mrnev=1; API lastupdated 2026-07-01"
+   },
+   "Helsinki": {
+    "value": 93.7,
+    "year": "2024",
+    "source": "Finland (FIN) — country proxy",
+    "note": "World Bank WDI IT.NET.USER.ZS (individuals using the Internet, % of population), mrnev=1; API lastupdated 2026-07-01"
+   },
+   "Madrid": {
+    "value": 95.8,
+    "year": "2024",
+    "source": "Spain (ESP) — country proxy",
+    "note": "World Bank WDI IT.NET.USER.ZS (individuals using the Internet, % of population), mrnev=1; API lastupdated 2026-07-01"
+   },
+   "Milan": {
+    "value": 89.2,
+    "year": "2024",
+    "source": "Italy (ITA) — country proxy",
+    "note": "World Bank WDI IT.NET.USER.ZS (individuals using the Internet, % of population), mrnev=1; API lastupdated 2026-07-01"
+   },
+   "Rome": {
+    "value": 89.2,
+    "year": "2024",
+    "source": "Italy (ITA) — country proxy",
+    "note": "World Bank WDI IT.NET.USER.ZS (individuals using the Internet, % of population), mrnev=1; API lastupdated 2026-07-01"
+   },
+   "Munich": {
+    "value": 93.5,
+    "year": "2024",
+    "source": "Germany (DEU) — country proxy",
+    "note": "World Bank WDI IT.NET.USER.ZS (individuals using the Internet, % of population), mrnev=1; API lastupdated 2026-07-01"
+   },
+   "Frankfurt": {
+    "value": 93.5,
+    "year": "2024",
+    "source": "Germany (DEU) — country proxy",
+    "note": "World Bank WDI IT.NET.USER.ZS (individuals using the Internet, % of population), mrnev=1; API lastupdated 2026-07-01"
+   },
+   "Hamburg": {
+    "value": 93.5,
+    "year": "2024",
+    "source": "Germany (DEU) — country proxy",
+    "note": "World Bank WDI IT.NET.USER.ZS (individuals using the Internet, % of population), mrnev=1; API lastupdated 2026-07-01"
+   },
+   "Brussels": {
+    "value": 95.8,
+    "year": "2024",
+    "source": "Belgium (BEL) — country proxy",
+    "note": "World Bank WDI IT.NET.USER.ZS (individuals using the Internet, % of population), mrnev=1; API lastupdated 2026-07-01"
+   },
+   "Dublin": {
+    "value": 97.2,
+    "year": "2024",
+    "source": "Ireland (IRL) — country proxy",
+    "note": "World Bank WDI IT.NET.USER.ZS (individuals using the Internet, % of population), mrnev=1; API lastupdated 2026-07-01"
+   },
+   "Lisbon": {
+    "value": 88.5,
+    "year": "2024",
+    "source": "Portugal (PRT) — country proxy",
+    "note": "World Bank WDI IT.NET.USER.ZS (individuals using the Internet, % of population), mrnev=1; API lastupdated 2026-07-01"
+   },
+   "Prague": {
+    "value": 87.7,
+    "year": "2024",
+    "source": "Czechia (CZE) — country proxy",
+    "note": "World Bank WDI IT.NET.USER.ZS (individuals using the Internet, % of population), mrnev=1; API lastupdated 2026-07-01"
+   },
+   "Warsaw": {
+    "value": 88.6,
+    "year": "2024",
+    "source": "Poland (POL) — country proxy",
+    "note": "World Bank WDI IT.NET.USER.ZS (individuals using the Internet, % of population), mrnev=1; API lastupdated 2026-07-01"
+   },
+   "Istanbul": {
+    "value": 89.8,
+    "year": "2025",
+    "source": "Turkiye (TUR) — country proxy",
+    "note": "World Bank WDI IT.NET.USER.ZS (individuals using the Internet, % of population), mrnev=1; API lastupdated 2026-07-01"
+   },
+   "Montreal": {
+    "value": 94.4,
+    "year": "2024",
+    "source": "Canada (CAN) — country proxy",
+    "note": "World Bank WDI IT.NET.USER.ZS (individuals using the Internet, % of population), mrnev=1; API lastupdated 2026-07-01"
+   },
+   "Vancouver": {
+    "value": 94.4,
+    "year": "2024",
+    "source": "Canada (CAN) — country proxy",
+    "note": "World Bank WDI IT.NET.USER.ZS (individuals using the Internet, % of population), mrnev=1; API lastupdated 2026-07-01"
+   },
+   "Chicago": {
+    "value": 94.7,
+    "year": "2024",
+    "source": "United States (USA) — country proxy",
+    "note": "World Bank WDI IT.NET.USER.ZS (individuals using the Internet, % of population), mrnev=1; API lastupdated 2026-07-01"
+   },
+   "Boston": {
+    "value": 94.7,
+    "year": "2024",
+    "source": "United States (USA) — country proxy",
+    "note": "World Bank WDI IT.NET.USER.ZS (individuals using the Internet, % of population), mrnev=1; API lastupdated 2026-07-01"
+   },
+   "Los Angeles": {
+    "value": 94.7,
+    "year": "2024",
+    "source": "United States (USA) — country proxy",
+    "note": "World Bank WDI IT.NET.USER.ZS (individuals using the Internet, % of population), mrnev=1; API lastupdated 2026-07-01"
+   },
+   "Seattle": {
+    "value": 94.7,
+    "year": "2024",
+    "source": "United States (USA) — country proxy",
+    "note": "World Bank WDI IT.NET.USER.ZS (individuals using the Internet, % of population), mrnev=1; API lastupdated 2026-07-01"
+   },
+   "Washington DC": {
+    "value": 94.7,
+    "year": "2024",
+    "source": "United States (USA) — country proxy",
+    "note": "World Bank WDI IT.NET.USER.ZS (individuals using the Internet, % of population), mrnev=1; API lastupdated 2026-07-01"
+   },
+   "Sydney": {
+    "value": 96.1,
+    "year": "2024",
+    "source": "Australia (AUS) — country proxy",
+    "note": "World Bank WDI IT.NET.USER.ZS (individuals using the Internet, % of population), mrnev=1; API lastupdated 2026-07-01"
+   },
+   "Auckland": {
+    "value": 93.5,
+    "year": "2024",
+    "source": "New Zealand (NZL) — country proxy",
+    "note": "World Bank WDI IT.NET.USER.ZS (individuals using the Internet, % of population), mrnev=1; API lastupdated 2026-07-01"
+   },
+   "Osaka": {
+    "value": 85.5,
+    "year": "2024",
+    "source": "Japan (JPN) — country proxy",
+    "note": "World Bank WDI IT.NET.USER.ZS (individuals using the Internet, % of population), mrnev=1; API lastupdated 2026-07-01"
+   },
+   "Tel Aviv": {
+    "value": 88.2,
+    "year": "2024",
+    "source": "Israel (ISR) — country proxy",
+    "note": "World Bank WDI IT.NET.USER.ZS (individuals using the Internet, % of population), mrnev=1; API lastupdated 2026-07-01"
    }
   }
  },
@@ -1431,6 +3130,161 @@ window.INDEX_DATA = {
     "year": "2023",
     "source": "USA05F | San Francisco (Greater) | FUA | GDP | USD_PPP_PS | 2023",
     "note": "OECD FUA (metro), constant-PPP real USD per person. 'San Francisco (Greater)' FUA is the wider Bay Area delineation; aggregated from BEA county-level GDP."
+   },
+   "Stockholm": {
+    "value": 81394,
+    "year": "2023",
+    "source": "SE001F | Stockholm | FUA | USD_PPP_PS",
+    "note": "OECD FUA (metro), USD per person PPP, constant prices/constant PPP (real). Modelled estimate per OECD FUA methodology. 2020 was a COVID-dip year in this series (79724 vs 2019=81785); latest 2023 value is post-dip."
+   },
+   "Oslo": {
+    "value": 63394,
+    "year": "2021",
+    "source": "NO001F | Oslo | FUA | USD_PPP_PS",
+    "note": "OECD FUA (metro), USD per person PPP, constant prices/constant PPP (real). Modelled estimate per OECD FUA methodology. Latest is 2021; series shows a sharp drop 2020=73788 to 2021=63394 (OBS_STATUS=A for both) - likely P"
+   },
+   "Helsinki": {
+    "value": 66107,
+    "year": "2023",
+    "source": "FI001F | Helsinki/Helsingfors | FUA | USD_PPP_PS",
+    "note": "OECD FUA (metro), USD per person PPP, constant prices/constant PPP (real). Modelled estimate per OECD FUA methodology. 2020 was a COVID-dip year in this series (67861 vs 2019=70878); latest 2023 value is post-dip."
+   },
+   "Madrid": {
+    "value": 59768,
+    "year": "2022",
+    "source": "ES001F | Madrid | FUA | USD_PPP_PS",
+    "note": "OECD FUA (metro), USD per person PPP, constant prices/constant PPP (real). Modelled estimate per OECD FUA methodology. 2020 was a COVID-dip year in this series (52853 vs 2019=59996); latest 2022 value is post-dip."
+   },
+   "Milan": {
+    "value": 82014,
+    "year": "2022",
+    "source": "IT002F | Milano | FUA | USD_PPP_PS",
+    "note": "OECD FUA (metro), USD per person PPP, constant prices/constant PPP (real). Modelled estimate per OECD FUA methodology. 2020 was a COVID-dip year in this series (70127 vs 2019=75533); latest 2022 value is post-dip."
+   },
+   "Rome": {
+    "value": 65690,
+    "year": "2022",
+    "source": "IT001F | Roma | FUA | USD_PPP_PS",
+    "note": "OECD FUA (metro), USD per person PPP, constant prices/constant PPP (real). Modelled estimate per OECD FUA methodology. 2020 was a COVID-dip year in this series (55988 vs 2019=61814); latest 2022 value is post-dip."
+   },
+   "Munich": {
+    "value": 102244,
+    "year": "2022",
+    "source": "DE003F | München | FUA | USD_PPP_PS",
+    "note": "OECD FUA (metro), USD per person PPP, constant prices/constant PPP (real). Modelled estimate per OECD FUA methodology. 2020 was a COVID-dip year in this series (96323 vs 2019=102253); latest 2022 value is post-dip."
+   },
+   "Frankfurt": {
+    "value": 82688,
+    "year": "2022",
+    "source": "DE005F | Frankfurt am Main | FUA | USD_PPP_PS",
+    "note": "OECD FUA (metro), USD per person PPP, constant prices/constant PPP (real). Modelled estimate per OECD FUA methodology. 2020 was a COVID-dip year in this series (79678 vs 2019=84554); latest 2022 value is post-dip."
+   },
+   "Hamburg": {
+    "value": 77768,
+    "year": "2022",
+    "source": "DE002F | Hamburg | FUA | USD_PPP_PS",
+    "note": "OECD FUA (metro), USD per person PPP, constant prices/constant PPP (real). Modelled estimate per OECD FUA methodology. 2020 was a COVID-dip year in this series (70709 vs 2019=74563); latest 2022 value is post-dip."
+   },
+   "Brussels": {
+    "value": 78040,
+    "year": "2023",
+    "source": "BE001F | Bruxelles/Brussel/Leuven | FUA | USD_PPP_PS",
+    "note": "OECD FUA (metro), USD per person PPP, constant prices/constant PPP (real). Modelled estimate per OECD FUA methodology. 2020 was a COVID-dip year in this series (71470 vs 2019=76045); latest 2023 value is post-dip. FUA is"
+   },
+   "Dublin": {
+    "value": 141694,
+    "year": "2023",
+    "source": "IE001F | Dublin | FUA | USD_PPP_PS",
+    "note": "OECD FUA (metro), USD per person PPP, constant prices/constant PPP (real). Modelled estimate per OECD FUA methodology. Caution: Irish GDP is inflated by multinational profit-shifting; per-capita GDP overstates local inco"
+   },
+   "Lisbon": {
+    "value": 50408,
+    "year": "2022",
+    "source": "PT001F | Lisboa | FUA | USD_PPP_PS",
+    "note": "OECD FUA (metro), USD per person PPP, constant prices/constant PPP (real). Modelled estimate per OECD FUA methodology. 2020 was a COVID-dip year in this series (44950 vs 2019=49536); latest 2022 value is post-dip."
+   },
+   "Prague": {
+    "value": 83056,
+    "year": "2022",
+    "source": "CZ001F | Praha | FUA | USD_PPP_PS",
+    "note": "OECD FUA (metro), USD per person PPP, constant prices/constant PPP (real). Modelled estimate per OECD FUA methodology. 2020 was a COVID-dip year in this series (74036 vs 2019=80076); latest 2022 value is post-dip."
+   },
+   "Warsaw": {
+    "value": 81920,
+    "year": "2022",
+    "source": "PL001F | Warszawa | FUA | USD_PPP_PS",
+    "note": "OECD FUA (metro), USD per person PPP, constant prices/constant PPP (real). Modelled estimate per OECD FUA methodology. 2020 was a COVID-dip year in this series (73598 vs 2019=78295); latest 2022 value is post-dip."
+   },
+   "Istanbul": {
+    "value": 56428,
+    "year": "2023",
+    "source": "TR012F | Istanbul | FUA | USD_PPP_PS",
+    "note": "OECD FUA (metro), USD per person PPP, constant prices/constant PPP (real). Modelled estimate per OECD FUA methodology. 2023 value; no 2020 dip in this series (2019=47823, 2020=46353, 2021=52370)."
+   },
+   "Montreal": {
+    "value": 38730,
+    "year": "2020",
+    "source": "CAN02 | Montreal | METRO (archived DF_CITIES) | GDP_PC_REAL_PPP",
+    "note": "From ARCHIVED OECD Metropolitan areas dataset (OECD:DF_CITIES v1.0, tenant=archive) - current FUA dataflow DF_ECONOMY v1.1 has no GDP rows for this metro. USD, constant prices, constant PPP, base year 2015 (same basis as"
+   },
+   "Vancouver": {
+    "value": 45902,
+    "year": "2020",
+    "source": "CAN03 | Vancouver | METRO (archived DF_CITIES) | GDP_PC_REAL_PPP",
+    "note": "From ARCHIVED OECD Metropolitan areas dataset (OECD:DF_CITIES v1.0, tenant=archive) - current FUA dataflow DF_ECONOMY v1.1 has no GDP rows for this metro. USD, constant prices, constant PPP, base year 2015 (same basis as"
+   },
+   "Chicago": {
+    "value": 75524,
+    "year": "2023",
+    "source": "USA03F | Chicago | FUA | USD_PPP_PS",
+    "note": "OECD FUA (metro), USD per person PPP, constant prices/constant PPP (real). Modelled estimate per OECD FUA methodology. 2020 was a COVID-dip year in this series (68589 vs 2019=72110); latest 2023 value is post-dip."
+   },
+   "Boston": {
+    "value": 101761,
+    "year": "2023",
+    "source": "USA11F | Boston | FUA | USD_PPP_PS",
+    "note": "OECD FUA (metro), USD per person PPP, constant prices/constant PPP (real). Modelled estimate per OECD FUA methodology. 2020 was a COVID-dip year in this series (95573 vs 2019=95945); latest 2023 value is post-dip."
+   },
+   "Los Angeles": {
+    "value": 70646,
+    "year": "2023",
+    "source": "USA02F | Los Angeles (Greater) | FUA | USD_PPP_PS",
+    "note": "OECD FUA (metro), USD per person PPP, constant prices/constant PPP (real). Modelled estimate per OECD FUA methodology. 2020 was a COVID-dip year in this series (63941 vs 2019=66132); latest 2023 value is post-dip. Used U"
+   },
+   "Seattle": {
+    "value": 111516,
+    "year": "2023",
+    "source": "USA14F | Seattle | FUA | USD_PPP_PS",
+    "note": "OECD FUA (metro), USD per person PPP, constant prices/constant PPP (real). Modelled estimate per OECD FUA methodology. 2020 was a COVID-dip year in this series (101014 vs 2019=101024); latest 2023 value is post-dip."
+   },
+   "Washington DC": {
+    "value": 83988,
+    "year": "2023",
+    "source": "USA04F | Washington (Greater) | FUA | USD_PPP_PS",
+    "note": "OECD FUA (metro), USD per person PPP, constant prices/constant PPP (real). Modelled estimate per OECD FUA methodology. 2020 was a COVID-dip year in this series (79173 vs 2019=80601); latest 2023 value is post-dip. Used U"
+   },
+   "Sydney": {
+    "value": 45152,
+    "year": "2020",
+    "source": "AUS01 | Greater Sydney | METRO (archived DF_CITIES) | GDP_PC_REAL_PPP",
+    "note": "From ARCHIVED OECD Metropolitan areas dataset (OECD:DF_CITIES v1.0, tenant=archive) - current FUA dataflow DF_ECONOMY v1.1 has no GDP rows for this metro. USD, constant prices, constant PPP, base year 2015 (same basis as"
+   },
+   "Auckland": {
+    "value": 55906,
+    "year": "2022",
+    "source": "NZL01F | Auckland | FUA | USD_PPP_PS",
+    "note": "OECD FUA (metro), USD per person PPP, constant prices/constant PPP (real). Modelled estimate per OECD FUA methodology. 2020 was a COVID-dip year in this series (50555 vs 2019=51431); latest 2022 value is post-dip."
+   },
+   "Osaka": {
+    "value": 41497,
+    "year": "2021",
+    "source": "JPN02F | Osaka | FUA | USD_PPP_PS",
+    "note": "OECD FUA (metro), USD per person PPP, constant prices/constant PPP (real). Modelled estimate per OECD FUA methodology. 2020 was a COVID-dip year in this series (40063 vs 2019=41719); latest 2021 value is post-dip. Latest"
+   },
+   "Tel Aviv": {
+    "value": null,
+    "year": "n/a",
+    "note": "null - no GDP data exists for Tel Aviv in either source: current flow DSD_FUA_ECO@DF_ECONOMY v1.1 has only EMPW (employment) rows for ISR10F, and archived DF_CITIES has only environmental/hazard variables for ISR10 (no G"
    }
   }
  },
@@ -1558,6 +3412,164 @@ window.INDEX_DATA = {
     "source": "dealroom.co/countries/singapore/ (country page, city-state) — Asia peer-table self row (#5): Combined EV=$321B, EV growth=8.6×, Unicorns=40, VC invested=$4B, Tracked startups=3,951",
     "trackedStartups": 3951,
     "pagePopulation": 5800000
+   },
+   "Stockholm": {
+    "value": null,
+    "year": "n/a",
+    "note": "Hub page renders no startup count (no comparison table), as with Copenhagen/Vienna/Seoul/Dubai in v1.0."
+   },
+   "Oslo": {
+    "value": null,
+    "year": "n/a",
+    "note": "Hub page renders no startup count (no comparison table), as with Copenhagen/Vienna/Seoul/Dubai in v1.0."
+   },
+   "Helsinki": {
+    "value": null,
+    "year": "n/a",
+    "note": "Hub page renders no startup count (no comparison table), as with Copenhagen/Vienna/Seoul/Dubai in v1.0."
+   },
+   "Madrid": {
+    "value": 21.0,
+    "year": "2026-07-12 (live db)",
+    "source": "web.archive.org capture 20260712 of dealroom.co hub page",
+    "trackedStartups": 1407,
+    "pagePopulation": 6700000
+   },
+   "Milan": {
+    "value": null,
+    "year": "n/a",
+    "note": "Hub page renders no startup count (no comparison table), as with Copenhagen/Vienna/Seoul/Dubai in v1.0."
+   },
+   "Rome": {
+    "value": null,
+    "year": "n/a",
+    "note": "Hub page renders no startup count (no comparison table), as with Copenhagen/Vienna/Seoul/Dubai in v1.0."
+   },
+   "Munich": {
+    "value": 52.5,
+    "year": "2026-07-12 (live db)",
+    "source": "web.archive.org capture 20260712 of dealroom.co hub page",
+    "trackedStartups": 1313,
+    "pagePopulation": 2500000
+   },
+   "Frankfurt": {
+    "value": 7.8,
+    "year": "2026-07-12 (live db)",
+    "source": "web.archive.org capture 20260712 of dealroom.co hub page",
+    "trackedStartups": 452,
+    "pagePopulation": 5800000
+   },
+   "Hamburg": {
+    "value": 13.6,
+    "year": "2026-07-12 (live db)",
+    "source": "web.archive.org capture 20260712 of dealroom.co hub page",
+    "trackedStartups": 694,
+    "pagePopulation": 5100000
+   },
+   "Brussels": {
+    "value": 15.3,
+    "year": "2026-07-12 (live db)",
+    "source": "web.archive.org capture 20260712 of dealroom.co hub page",
+    "trackedStartups": 383,
+    "pagePopulation": 2500000
+   },
+   "Dublin": {
+    "value": null,
+    "year": "n/a",
+    "note": "Hub page renders no startup count (no comparison table), as with Copenhagen/Vienna/Seoul/Dubai in v1.0."
+   },
+   "Lisbon": {
+    "value": null,
+    "year": "n/a",
+    "note": "Hub page renders no startup count (no comparison table), as with Copenhagen/Vienna/Seoul/Dubai in v1.0."
+   },
+   "Prague": {
+    "value": null,
+    "year": "n/a",
+    "note": "Hub page renders no startup count (no comparison table), as with Copenhagen/Vienna/Seoul/Dubai in v1.0."
+   },
+   "Warsaw": {
+    "value": null,
+    "year": "n/a",
+    "note": "Hub page renders no startup count (no comparison table), as with Copenhagen/Vienna/Seoul/Dubai in v1.0."
+   },
+   "Istanbul": {
+    "value": null,
+    "year": "n/a",
+    "note": "Hub page renders no startup count (no comparison table), as with Copenhagen/Vienna/Seoul/Dubai in v1.0."
+   },
+   "Montreal": {
+    "value": 24.4,
+    "year": "2026-07-12 (live db)",
+    "source": "web.archive.org capture 20260712 of dealroom.co hub page",
+    "trackedStartups": 1050,
+    "pagePopulation": 4300000
+   },
+   "Vancouver": {
+    "value": 56.4,
+    "year": "2026-07-12 (live db)",
+    "source": "web.archive.org capture 20260712 of dealroom.co hub page",
+    "trackedStartups": 1691,
+    "pagePopulation": 3000000
+   },
+   "Chicago": {
+    "value": 29.4,
+    "year": "2026-07-12 (live db)",
+    "source": "web.archive.org capture 20260712 of dealroom.co hub page",
+    "trackedStartups": 2936,
+    "pagePopulation": 10000000
+   },
+   "Boston": {
+    "value": 126.9,
+    "year": "2026-07-12 (live db)",
+    "source": "web.archive.org capture 20260712 of dealroom.co hub page",
+    "trackedStartups": 6217,
+    "pagePopulation": 4900000
+   },
+   "Los Angeles": {
+    "value": 45.6,
+    "year": "2026-07-12 (live db)",
+    "source": "web.archive.org capture 20260712 of dealroom.co hub page",
+    "trackedStartups": 8475,
+    "pagePopulation": 18600000
+   },
+   "Seattle": {
+    "value": 73.8,
+    "year": "2026-07-12 (live db)",
+    "source": "web.archive.org capture 20260712 of dealroom.co hub page",
+    "trackedStartups": 2951,
+    "pagePopulation": 4000000
+   },
+   "Washington DC": {
+    "value": 36.9,
+    "year": "2026-07-12 (live db)",
+    "source": "web.archive.org capture 20260712 of dealroom.co hub page",
+    "trackedStartups": 2323,
+    "pagePopulation": 6300000
+   },
+   "Sydney": {
+    "value": 40.1,
+    "year": "2026-07-12 (live db)",
+    "source": "web.archive.org capture 20260712 of dealroom.co hub page",
+    "trackedStartups": 2087,
+    "pagePopulation": 5200000
+   },
+   "Auckland": {
+    "value": null,
+    "year": "n/a",
+    "note": "Hub page renders no startup count (no comparison table), as with Copenhagen/Vienna/Seoul/Dubai in v1.0."
+   },
+   "Osaka": {
+    "value": 3.7,
+    "year": "2026-07-12 (live db)",
+    "source": "web.archive.org capture 20260712 of dealroom.co hub page",
+    "trackedStartups": 720,
+    "pagePopulation": 19300000
+   },
+   "Tel Aviv": {
+    "value": null,
+    "year": "n/a",
+    "note": "Hub page renders no startup count (no comparison table), as with Copenhagen/Vienna/Seoul/Dubai in v1.0."
    }
   }
  },
@@ -1697,6 +3709,214 @@ window.INDEX_DATA = {
     "vcInvestedUsd": 4000000000,
     "vcWindow": "not stated on page (label 'VC invested', no time window shown)",
     "pagePopulation": 5800000
+   },
+   "Stockholm": {
+    "value": 1167,
+    "year": "2026-07-12 (live db)",
+    "source": "web.archive.org capture 20260712 of dealroom.co hub page",
+    "vcInvestedUsd": 2800000000,
+    "vcWindow": "not stated on page",
+    "pagePopulation": 2400000
+   },
+   "Oslo": {
+    "value": 297,
+    "year": "2026-07-12 (live db)",
+    "source": "web.archive.org capture 20260712 of dealroom.co hub page",
+    "vcInvestedUsd": 564900000,
+    "vcWindow": "not stated on page",
+    "pagePopulation": 1900000
+   },
+   "Helsinki": {
+    "value": 688,
+    "year": "2026-07-12 (live db)",
+    "source": "web.archive.org capture 20260712 of dealroom.co hub page",
+    "vcInvestedUsd": 1100000000,
+    "vcWindow": "not stated on page",
+    "pagePopulation": 1600000
+   },
+   "Madrid": {
+    "value": 179,
+    "year": "2026-07-12 (live db)",
+    "source": "web.archive.org capture 20260712 of dealroom.co hub page",
+    "vcInvestedUsd": 1200000000,
+    "vcWindow": "not stated on page",
+    "pagePopulation": 6700000
+   },
+   "Milan": {
+    "value": 344,
+    "year": "2026-07-12 (live db)",
+    "source": "web.archive.org capture 20260712 of dealroom.co hub page",
+    "vcInvestedUsd": 1100000000,
+    "vcWindow": "not stated on page",
+    "pagePopulation": 3200000
+   },
+   "Rome": {
+    "value": 58,
+    "year": "2026-07-12 (live db)",
+    "source": "web.archive.org capture 20260712 of dealroom.co hub page",
+    "vcInvestedUsd": 254700000,
+    "vcWindow": "not stated on page",
+    "pagePopulation": 4400000
+   },
+   "Munich": {
+    "value": 1280,
+    "year": "2026-07-12 (live db)",
+    "source": "web.archive.org capture 20260712 of dealroom.co hub page",
+    "vcInvestedUsd": 3200000000,
+    "vcWindow": "not stated on page",
+    "pagePopulation": 2500000
+   },
+   "Frankfurt": {
+    "value": 18,
+    "year": "2026-07-12 (live db)",
+    "source": "web.archive.org capture 20260712 of dealroom.co hub page",
+    "vcInvestedUsd": 105300000,
+    "vcWindow": "not stated on page",
+    "pagePopulation": 5800000
+   },
+   "Hamburg": {
+    "value": 34,
+    "year": "2026-07-12 (live db)",
+    "source": "web.archive.org capture 20260712 of dealroom.co hub page",
+    "vcInvestedUsd": 175200000,
+    "vcWindow": "not stated on page",
+    "pagePopulation": 5100000
+   },
+   "Brussels": {
+    "value": 55,
+    "year": "2026-07-12 (live db)",
+    "source": "web.archive.org capture 20260712 of dealroom.co hub page",
+    "vcInvestedUsd": 138500000,
+    "vcWindow": "not stated on page",
+    "pagePopulation": 2500000
+   },
+   "Dublin": {
+    "value": 456,
+    "year": "2026-07-12 (live db)",
+    "source": "web.archive.org capture 20260712 of dealroom.co hub page",
+    "vcInvestedUsd": 958400000,
+    "vcWindow": "not stated on page",
+    "pagePopulation": 2100000
+   },
+   "Lisbon": {
+    "value": 82,
+    "year": "2026-07-12 (live db)",
+    "source": "web.archive.org capture 20260712 of dealroom.co hub page",
+    "vcInvestedUsd": 237200000,
+    "vcWindow": "not stated on page",
+    "pagePopulation": 2900000
+   },
+   "Prague": {
+    "value": 69,
+    "year": "2026-07-12 (live db)",
+    "source": "web.archive.org capture 20260712 of dealroom.co hub page",
+    "vcInvestedUsd": 185500000,
+    "vcWindow": "not stated on page",
+    "pagePopulation": 2700000
+   },
+   "Warsaw": {
+    "value": 91,
+    "year": "2026-07-12 (live db)",
+    "source": "web.archive.org capture 20260712 of dealroom.co hub page",
+    "vcInvestedUsd": 281400000,
+    "vcWindow": "not stated on page",
+    "pagePopulation": 3100000
+   },
+   "Istanbul": {
+    "value": 40,
+    "year": "2026-07-12 (live db)",
+    "source": "web.archive.org capture 20260712 of dealroom.co hub page",
+    "vcInvestedUsd": 636900000,
+    "vcWindow": "not stated on page",
+    "pagePopulation": 15800000
+   },
+   "Montreal": {
+    "value": 226,
+    "year": "2026-07-12 (live db)",
+    "source": "web.archive.org capture 20260712 of dealroom.co hub page",
+    "vcInvestedUsd": 971400000,
+    "vcWindow": "not stated on page",
+    "pagePopulation": 4300000
+   },
+   "Vancouver": {
+    "value": 600,
+    "year": "2026-07-12 (live db)",
+    "source": "web.archive.org capture 20260712 of dealroom.co hub page",
+    "vcInvestedUsd": 1800000000,
+    "vcWindow": "not stated on page",
+    "pagePopulation": 3000000
+   },
+   "Chicago": {
+    "value": 210,
+    "year": "2026-07-12 (live db)",
+    "source": "web.archive.org capture 20260712 of dealroom.co hub page",
+    "vcInvestedUsd": 2100000000,
+    "vcWindow": "not stated on page",
+    "pagePopulation": 10000000
+   },
+   "Boston": {
+    "value": 2714,
+    "year": "2026-07-12 (live db)",
+    "source": "web.archive.org capture 20260712 of dealroom.co hub page",
+    "vcInvestedUsd": 13300000000,
+    "vcWindow": "not stated on page",
+    "pagePopulation": 4900000
+   },
+   "Los Angeles": {
+    "value": 876,
+    "year": "2026-07-12 (live db)",
+    "source": "web.archive.org capture 20260712 of dealroom.co hub page",
+    "vcInvestedUsd": 16300000000,
+    "vcWindow": "not stated on page",
+    "pagePopulation": 18600000
+   },
+   "Seattle": {
+    "value": 1650,
+    "year": "2026-07-12 (live db)",
+    "source": "web.archive.org capture 20260712 of dealroom.co hub page",
+    "vcInvestedUsd": 6600000000,
+    "vcWindow": "not stated on page",
+    "pagePopulation": 4000000
+   },
+   "Washington DC": {
+    "value": 556,
+    "year": "2026-07-12 (live db)",
+    "source": "web.archive.org capture 20260712 of dealroom.co hub page",
+    "vcInvestedUsd": 3500000000,
+    "vcWindow": "not stated on page",
+    "pagePopulation": 6300000
+   },
+   "Sydney": {
+    "value": 250,
+    "year": "2026-07-12 (live db)",
+    "source": "web.archive.org capture 20260712 of dealroom.co hub page",
+    "vcInvestedUsd": 1300000000,
+    "vcWindow": "not stated on page",
+    "pagePopulation": 5200000
+   },
+   "Auckland": {
+    "value": 166,
+    "year": "2026-07-12 (live db)",
+    "source": "web.archive.org capture 20260712 of dealroom.co hub page",
+    "vcInvestedUsd": 281400000,
+    "vcWindow": "not stated on page",
+    "pagePopulation": 1700000
+   },
+   "Osaka": {
+    "value": 21,
+    "year": "2026-07-12 (live db)",
+    "source": "web.archive.org capture 20260712 of dealroom.co hub page",
+    "vcInvestedUsd": 406500000,
+    "vcWindow": "not stated on page",
+    "pagePopulation": 19300000
+   },
+   "Tel Aviv": {
+    "value": 2111,
+    "year": "2026-07-12 (live db)",
+    "source": "web.archive.org capture 20260712 of dealroom.co hub page",
+    "vcInvestedUsd": 9500000000,
+    "vcWindow": "not stated on page",
+    "pagePopulation": 4500000
    }
   }
  },
@@ -1803,6 +4023,162 @@ window.INDEX_DATA = {
     "year": "2023",
     "source": "Dubai Statistics Center, Statistical Yearbook 2023, Table 01-07 Population (10+) by Educational Status: University and Post Graduate 1,302,272 / Total 3,179,347",
     "note": "DIFFERENT BASIS: university degree AND ABOVE only (excludes sub-degree diplomas) as % of population aged 10+ (not 25-64). Computed from official counts. Read with care."
+   },
+   "Stockholm": {
+    "value": 60.0,
+    "year": "2025",
+    "source": "OECD SE11 Stockholm (TL2)",
+    "note": "Stockholm County — county-level"
+   },
+   "Oslo": {
+    "value": 56.5,
+    "year": "2025",
+    "source": "OECD NO08 Oslo and Viken (TL2)",
+    "note": "Broader region proxy (Oslo + former Viken); no Oslo-only unit in this dataflow"
+   },
+   "Helsinki": {
+    "value": 48.1,
+    "year": "2025",
+    "source": "OECD FI1B Helsinki-Uusimaa (TL2)",
+    "note": "Uusimaa region containing Helsinki — region proxy"
+   },
+   "Madrid": {
+    "value": 50.0,
+    "year": "2025",
+    "source": "OECD ES30 Madrid (TL2)",
+    "note": "Comunidad de Madrid — region-level"
+   },
+   "Milan": {
+    "value": 23.6,
+    "year": "2025",
+    "source": "OECD ITC4 Lombardy (TL2)",
+    "note": "Region proxy — Italy has no TL3 in this dataflow; Lombardy is much wider than Milan"
+   },
+   "Rome": {
+    "value": 28.5,
+    "year": "2025",
+    "source": "OECD ITI4 Lazio (TL2)",
+    "note": "Region proxy — Lazio is wider than Rome"
+   },
+   "Munich": {
+    "value": 38.6,
+    "year": "2025",
+    "source": "OECD DE2 Bavaria (TL2)",
+    "note": "State (Land) proxy — no German TL3 in this dataflow"
+   },
+   "Frankfurt": {
+    "value": 35.6,
+    "year": "2025",
+    "source": "OECD DE7 Hesse (TL2)",
+    "note": "State (Land) proxy"
+   },
+   "Hamburg": {
+    "value": 43.0,
+    "year": "2025",
+    "source": "OECD DE6 Hamburg (TL2)",
+    "note": "City-state = city boundary"
+   },
+   "Brussels": {
+    "value": 56.9,
+    "year": "2025",
+    "source": "OECD BE1 Brussels Capital Region (TL2)",
+    "note": "Brussels-Capital Region — city-region"
+   },
+   "Dublin": {
+    "value": 61.0,
+    "year": "2021",
+    "source": "OECD IE061 Dublin (TL3)",
+    "note": "Dublin TL3 (city+county), latest TL3 year 2021; coarser IE06 Eastern & Midland has 2025 (63.0)"
+   },
+   "Lisbon": {
+    "value": 43.3,
+    "year": "2025",
+    "source": "OECD PT1A Greater Lisbon (TL2)",
+    "note": "Grande Lisboa (NUTS2024) — metro-level"
+   },
+   "Prague": {
+    "value": 54.8,
+    "year": "2025",
+    "source": "OECD CZ01 Prague (TL2)",
+    "note": "Praha = city boundary"
+   },
+   "Warsaw": {
+    "value": 65.3,
+    "year": "2025",
+    "source": "OECD PL91 Warsaw Capital Region (TL2)",
+    "note": "Warszawski stoleczny — Warsaw + surrounding metro belt"
+   },
+   "Istanbul": {
+    "value": 31.8,
+    "year": "2025",
+    "source": "OECD TR10 Istanbul (TL2)",
+    "note": "Istanbul province = greater city"
+   },
+   "Montreal": {
+    "value": 59.0,
+    "year": "2024",
+    "source": "OECD CA24 Quebec (TL2)",
+    "note": "Province proxy (v1.0 convention for Canada)"
+   },
+   "Vancouver": {
+    "value": 64.0,
+    "year": "2024",
+    "source": "OECD CA59 British Columbia (TL2)",
+    "note": "Province proxy (v1.0 convention for Canada)"
+   },
+   "Chicago": {
+    "value": 50.9,
+    "year": "2024",
+    "source": "OECD US17 Illinois (TL2)",
+    "note": "State proxy (v1.0 convention for US)"
+   },
+   "Boston": {
+    "value": 58.2,
+    "year": "2024",
+    "source": "OECD US25 Massachusetts (TL2)",
+    "note": "State proxy (v1.0 convention for US)"
+   },
+   "Los Angeles": {
+    "value": 46.9,
+    "year": "2024",
+    "source": "OECD US06 California (TL2)",
+    "note": "State proxy (v1.0 convention for US)"
+   },
+   "Seattle": {
+    "value": 52.9,
+    "year": "2024",
+    "source": "OECD US53 Washington (TL2)",
+    "note": "Washington State proxy (v1.0 convention for US)"
+   },
+   "Washington DC": {
+    "value": 70.7,
+    "year": "2024",
+    "source": "OECD US11 District of Columbia (TL2)",
+    "note": "DC is a TL2 unit = the city itself"
+   },
+   "Sydney": {
+    "value": 52.5,
+    "year": "2021",
+    "source": "OECD AU1 New South Wales (TL2)",
+    "note": "State proxy (v1.0 convention for Australia); Greater Sydney TL3 (AU1GS) exists but latest is 2016 (52.8)"
+   },
+   "Auckland": {
+    "value": 45.5,
+    "year": "2020",
+    "source": "OECD NZ12 Auckland (TL2)",
+    "note": "Auckland region; latest published year 2020"
+   },
+   "Osaka": {
+    "value": 56.9,
+    "year": "2020",
+    "source": "OECD JPG Kansai region (TL2)",
+    "note": "Wide-region proxy: Osaka TL3 (JPG27) rows are all 'Missing value' in OECD; Kansai (Osaka+Kyoto+Hyogo+Shiga+Nara+Wakayama) census-based, decennial — 2020 latest"
+   },
+   "Tel Aviv": {
+    "value": 60.4,
+    "year": "2022",
+    "source": "OECD IL050 Tel Aviv District (TL3)",
+    "note": "Tel Aviv District containing the city — district-level"
    }
   }
  },
@@ -1925,6 +4301,162 @@ window.INDEX_DATA = {
     "year": "2026",
     "source": "QS city='San Francisco' (no matches)",
     "note": "True zero per city-proper rule: no top-500 entry carries QS city 'San Francisco'. Stanford (QS city 'Stanford') and UC Berkeley (QS city 'Berkeley') are separate QS cities and excluded."
+   },
+   "Stockholm": {
+    "value": 2,
+    "year": "2026",
+    "source": "QS WUR 2026, QS city label(s): ['Stockholm']",
+    "note": "KTH Royal Institute of Technology (78); Stockholm University (147)"
+   },
+   "Oslo": {
+    "value": 1,
+    "year": "2026",
+    "source": "QS WUR 2026, QS city label(s): ['Oslo']",
+    "note": "University of Oslo (119)"
+   },
+   "Helsinki": {
+    "value": 1,
+    "year": "2026",
+    "source": "QS WUR 2026, QS city label(s): ['Helsinki']",
+    "note": "University of Helsinki (116) Aalto is in Espoo (excluded, city-proper rule)."
+   },
+   "Madrid": {
+    "value": 4,
+    "year": "2026",
+    "source": "QS WUR 2026, QS city label(s): ['Madrid']",
+    "note": "Complutense University of Madrid (187); Universidad Autónoma de Madrid (206); Universidad Carlos III de Madrid (UC3M) (301); Universidad Politécnica de Madrid (UPM) (334)"
+   },
+   "Milan": {
+    "value": 4,
+    "year": "2026",
+    "source": "QS WUR 2026, QS city label(s): ['Milan', 'Milan,']",
+    "note": "Politecnico di Milano (98); University of Milan (276); Università Cattolica del Sacro Cuore (409); Università Vita-Salute San Raffaele (461)"
+   },
+   "Rome": {
+    "value": 2,
+    "year": "2026",
+    "source": "QS WUR 2026, QS city label(s): ['Rome']",
+    "note": "Sapienza University of Rome (128); University of Rome \"Tor Vergata\" (355)"
+   },
+   "Munich": {
+    "value": 2,
+    "year": "2026",
+    "source": "QS WUR 2026, QS city label(s): ['Munich']",
+    "note": "Technical University of Munich (22); Ludwig-Maximilians-Universität München (58)"
+   },
+   "Frankfurt": {
+    "value": 1,
+    "year": "2026",
+    "source": "QS WUR 2026, QS city label(s): ['Frankfurt am Main']",
+    "note": "Goethe-University Frankfurt am Main (316)"
+   },
+   "Hamburg": {
+    "value": 1,
+    "year": "2026",
+    "source": "QS WUR 2026, QS city label(s): ['Hamburg']",
+    "note": "Universität Hamburg (193)"
+   },
+   "Brussels": {
+    "value": 2,
+    "year": "2026",
+    "source": "QS WUR 2026, QS city label(s): ['Brussels']",
+    "note": "Universite libre de Bruxelles (227); Vrije Universiteit Brussel (VUB) (294)"
+   },
+   "Dublin": {
+    "value": 3,
+    "year": "2026",
+    "source": "QS WUR 2026, QS city label(s): ['Dublin']",
+    "note": "Trinity College Dublin, The University of Dublin (75); University College Dublin (118); Dublin City University (410)"
+   },
+   "Lisbon": {
+    "value": 2,
+    "year": "2026",
+    "source": "QS WUR 2026, QS city label(s): ['Lisbon']",
+    "note": "University of Lisbon (230); Universidade Nova de Lisboa (327)"
+   },
+   "Prague": {
+    "value": 2,
+    "year": "2026",
+    "source": "QS WUR 2026, QS city label(s): ['Prague']",
+    "note": "Charles University (265); Czech Technical University in Prague (416)"
+   },
+   "Warsaw": {
+    "value": 2,
+    "year": "2026",
+    "source": "QS WUR 2026, QS city label(s): ['Warsaw']",
+    "note": "University of Warsaw (271); Warsaw University of Technology (487)"
+   },
+   "Istanbul": {
+    "value": 4,
+    "year": "2026",
+    "source": "QS WUR 2026, QS city label(s): ['Istanbul']",
+    "note": "Istanbul Technical University (298); Koç University (323); Boğaziçi University (371); Sabanci University (404)"
+   },
+   "Montreal": {
+    "value": 3,
+    "year": "2026",
+    "source": "QS WUR 2026, QS city label(s): ['Montreal']",
+    "note": "McGill University (27); Université de Montréal (168); Concordia University (465)"
+   },
+   "Vancouver": {
+    "value": 1,
+    "year": "2026",
+    "source": "QS WUR 2026, QS city label(s): ['Vancouver']",
+    "note": "University of British Columbia (40)"
+   },
+   "Chicago": {
+    "value": 2,
+    "year": "2026",
+    "source": "QS WUR 2026, QS city label(s): ['Chicago']",
+    "note": "University of Chicago (13); University of Illinois Chicago (UIC) (334)"
+   },
+   "Boston": {
+    "value": 2,
+    "year": "2026",
+    "source": "QS WUR 2026, QS city label(s): ['Boston']",
+    "note": "Boston University (88); Northeastern University (384) Harvard/MIT are in Cambridge (excluded, city-proper rule)."
+   },
+   "Los Angeles": {
+    "value": 2,
+    "year": "2026",
+    "source": "QS WUR 2026, QS city label(s): ['Los Angeles']",
+    "note": "University of California, Los Angeles (UCLA) (46); University of Southern California (146)"
+   },
+   "Seattle": {
+    "value": 1,
+    "year": "2026",
+    "source": "QS WUR 2026, QS city label(s): ['Seattle']",
+    "note": "University of Washington (81)"
+   },
+   "Washington DC": {
+    "value": 2,
+    "year": "2026",
+    "source": "QS WUR 2026, QS city label(s): ['Washington D.C.']",
+    "note": "Georgetown University (285); George Washington University (358)"
+   },
+   "Sydney": {
+    "value": 4,
+    "year": "2026",
+    "source": "QS WUR 2026, QS city label(s): ['Sydney']",
+    "note": "The University of New South Wales (UNSW Sydney) (20); The University of Sydney (25); The University of Technology Sydney (UTS) (96); Macquarie University (Sydney, Australia) (138)"
+   },
+   "Auckland": {
+    "value": 2,
+    "year": "2026",
+    "source": "QS WUR 2026, QS city label(s): ['Auckland']",
+    "note": "The University of Auckland (65); Auckland University of Technology (AUT) (410)"
+   },
+   "Osaka": {
+    "value": 1,
+    "year": "2026",
+    "source": "QS WUR 2026, QS city label(s): ['Osaka City', 'Osaka']",
+    "note": "The University of Osaka (91) QS label 'Osaka City'."
+   },
+   "Tel Aviv": {
+    "value": 1,
+    "year": "2026",
+    "source": "QS WUR 2026, QS city label(s): ['Tel Aviv']",
+    "note": "Tel Aviv University (223)"
    }
   }
  },
@@ -2045,6 +4577,161 @@ window.INDEX_DATA = {
     "year": "2024",
     "source": "US Census Bureau ACS 2024 1-year, table B05012, San Francisco-Oakland-Fremont, CA Metro Area (MSA 41860, GEO_ID 310M700US41860): B05012_003E (foreign-born) 1,506,259 / B05012_001E (total) 4,648,486 = ",
     "note": "CONCEPT: foreign-born. Geography: metropolitan statistical area (Metro level; 2023 OMB delineation 'SF-Oakland-Fremont'). OECD USA05 2023: CITY 34.9 / FUA 34.2 — difference reflects boundary/vintage, ACS 2024 MSA used pe"
+   },
+   "Stockholm": {
+    "value": 27.2,
+    "year": "2024",
+    "source": "OECD DSD_FUA_DEMO@DF_ORIGIN v1.2 (OECD.CFE.EDS), CITY level — Stockholm (SE001C)",
+    "note": "CONCEPT: foreign-born share of population (OECD ORIGIN=FB, PT_POP)"
+   },
+   "Oslo": {
+    "value": 28.1,
+    "year": "2025",
+    "source": "OECD DSD_FUA_DEMO@DF_ORIGIN v1.2 (OECD.CFE.EDS), CITY level — Oslo (NO001C)",
+    "note": "CONCEPT: foreign-born share of population (OECD ORIGIN=FB, PT_POP)"
+   },
+   "Helsinki": {
+    "value": 17.5,
+    "year": "2024",
+    "source": "OECD DSD_FUA_DEMO@DF_ORIGIN v1.2 (OECD.CFE.EDS), CITY level — Helsinki (FI001C)",
+    "note": "CONCEPT: foreign-born share of population (OECD ORIGIN=FB, PT_POP)"
+   },
+   "Madrid": {
+    "value": 22.7,
+    "year": "2022",
+    "source": "OECD DSD_FUA_DEMO@DF_ORIGIN v1.2 (OECD.CFE.EDS), CITY level — Madrid (ES001C)",
+    "note": "CONCEPT: foreign-born share of population (OECD ORIGIN=FB, PT_POP)"
+   },
+   "Milan": {
+    "value": 15.0,
+    "year": "2021",
+    "source": "OECD DSD_FUA_DEMO@DF_ORIGIN v1.2 (OECD.CFE.EDS), CITY level — Milano (IT002C)",
+    "note": "CONCEPT: foreign-born share of population (OECD ORIGIN=FB, PT_POP)"
+   },
+   "Rome": {
+    "value": 13.6,
+    "year": "2021",
+    "source": "OECD DSD_FUA_DEMO@DF_ORIGIN v1.2 (OECD.CFE.EDS), CITY level — Roma (IT001C)",
+    "note": "CONCEPT: foreign-born share of population (OECD ORIGIN=FB, PT_POP)"
+   },
+   "Munich": {
+    "value": 31.9,
+    "year": "2022",
+    "source": "OECD DSD_FUA_DEMO@DF_ORIGIN v1.2 (OECD.CFE.EDS), CITY level — Muenchen (DE003C)",
+    "note": "CONCEPT: foreign-born share of population (OECD ORIGIN=FB, PT_POP)"
+   },
+   "Frankfurt": {
+    "value": 35.5,
+    "year": "2022",
+    "source": "OECD DSD_FUA_DEMO@DF_ORIGIN v1.2 (OECD.CFE.EDS), CITY level — Frankfurt am Main (DE005C)",
+    "note": "CONCEPT: foreign-born share of population (OECD ORIGIN=FB, PT_POP)"
+   },
+   "Hamburg": {
+    "value": 24.6,
+    "year": "2022",
+    "source": "OECD DSD_FUA_DEMO@DF_ORIGIN v1.2 (OECD.CFE.EDS), CITY level — Hamburg (DE002C)",
+    "note": "CONCEPT: foreign-born share of population (OECD ORIGIN=FB, PT_POP)"
+   },
+   "Brussels": {
+    "value": 43.5,
+    "year": "2021",
+    "source": "OECD DSD_FUA_DEMO@DF_ORIGIN v1.2 (OECD.CFE.EDS), CITY level — Bruxelles/Brussel (BE001C)",
+    "note": "CONCEPT: foreign-born share of population (OECD ORIGIN=FB, PT_POP); city-level (Brussels-Capital area per OECD city definition); FUA 2021 = 25.2"
+   },
+   "Dublin": {
+    "value": 26.6,
+    "year": "2022",
+    "source": "CSO Census 2022 PxStat F1046 — Dublin city and suburbs settlement",
+    "note": "CONCEPT: born outside Ireland (foreign-born). 336,021 / 1,263,219 usual residents; CSO-published share 26.6%. OECD DF_ORIGIN has no FB data for IE001C, so national census used (city+suburbs settlement geography)"
+   },
+   "Lisbon": {
+    "value": 17.3,
+    "year": "2021",
+    "source": "OECD DSD_FUA_DEMO@DF_ORIGIN v1.2 (OECD.CFE.EDS), CITY level — Lisboa (PT001C)",
+    "note": "CONCEPT: foreign-born share of population (OECD ORIGIN=FB, PT_POP)"
+   },
+   "Prague": {
+    "value": 15.5,
+    "year": "2021",
+    "source": "OECD DSD_FUA_DEMO@DF_ORIGIN v1.2 (OECD.CFE.EDS), CITY level — Praha (CZ001C)",
+    "note": "CONCEPT: foreign-born share of population (OECD ORIGIN=FB, PT_POP)"
+   },
+   "Warsaw": {
+    "value": 5.7,
+    "year": "2021",
+    "source": "OECD DSD_FUA_DEMO@DF_ORIGIN v1.2 (OECD.CFE.EDS), CITY level — Warszawa (PL001C)",
+    "note": "CONCEPT: foreign-born share of population (OECD ORIGIN=FB, PT_POP)"
+   },
+   "Istanbul": {
+    "value": null,
+    "year": "n/a",
+    "note": "CONCEPT: null. OECD DF_ORIGIN has no FB rows for TR012C/F. TurkStat publishes no foreign-BORN statistic by province; its ADNKS 'foreign population' is foreign NATIONALS and explicitly excludes people under temporary protection (mo"
+   },
+   "Montreal": {
+    "value": 24.3,
+    "year": "2021",
+    "source": "Statistics Canada Census 2021 Profile SDMX (STC_CP,DF_CMACA v1.3) — Montreal CMA (2021S0503462)",
+    "note": "CONCEPT: immigrants (foreign-born landed immigrants; excludes non-permanent residents). 1,022,940 / 4,206,455 = 24.32%; same method as v1.0 Toronto"
+   },
+   "Vancouver": {
+    "value": 41.8,
+    "year": "2021",
+    "source": "Statistics Canada Census 2021 Profile SDMX (STC_CP,DF_CMACA v1.3) — Vancouver CMA (2021S0503933)",
+    "note": "CONCEPT: immigrants (foreign-born landed immigrants; excludes non-permanent residents). 1,089,185 / 2,607,015 = 41.78%; same method as v1.0 Toronto"
+   },
+   "Chicago": {
+    "value": 19.4,
+    "year": "2024",
+    "source": "US Census Bureau ACS 2024 1-year B05012 — Chicago-Naperville-Elgin, IL-IN Metro Area (MSA 16980)",
+    "note": "CONCEPT: foreign-born (B05012_003E/B05012_001E). 1,825,700 / 9,406,924 = 19.41%; metro geography"
+   },
+   "Boston": {
+    "value": 20.7,
+    "year": "2024",
+    "source": "US Census Bureau ACS 2024 1-year B05012 — Boston-Cambridge-Newton, MA-NH Metro Area (MSA 14460)",
+    "note": "CONCEPT: foreign-born (B05012_003E/B05012_001E). 1,037,969 / 5,025,517 = 20.65%; metro geography"
+   },
+   "Los Angeles": {
+    "value": 33.4,
+    "year": "2024",
+    "source": "US Census Bureau ACS 2024 1-year B05012 — Los Angeles-Long Beach-Anaheim, CA Metro Area (MSA 31080)",
+    "note": "CONCEPT: foreign-born (B05012_003E/B05012_001E). 4,318,347 / 12,927,614 = 33.40%; metro geography"
+   },
+   "Seattle": {
+    "value": 22.1,
+    "year": "2024",
+    "source": "US Census Bureau ACS 2024 1-year B05012 — Seattle-Tacoma-Bellevue, WA Metro Area (MSA 42660)",
+    "note": "CONCEPT: foreign-born (B05012_003E/B05012_001E). 917,149 / 4,145,494 = 22.12%; metro geography"
+   },
+   "Washington DC": {
+    "value": 24.7,
+    "year": "2024",
+    "source": "US Census Bureau ACS 2024 1-year B05012 — Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area (MSA 47900)",
+    "note": "CONCEPT: foreign-born (B05012_003E/B05012_001E). 1,589,838 / 6,437,907 = 24.69%; metro geography"
+   },
+   "Sydney": {
+    "value": 38.6,
+    "year": "2021",
+    "source": "ABS Census 2021 General Community Profile G01 — Greater Sydney (GCCSA 1GSYD)",
+    "note": "CONCEPT: born overseas (Birthplace: Elsewhere, excl. not stated) / total persons incl. not stated. 2,021,079 / 5,231,147 = 38.64%; same method as v1.0 Melbourne. OECD CITY value for comparison: 41.7 (2021)"
+   },
+   "Auckland": {
+    "value": 42.5,
+    "year": "2023",
+    "source": "Stats NZ 2023 Census totals by topic (SA2, StatsNZGeospatial ArcGIS) aggregated to Auckland Region (Regional Council 2023)",
+    "note": "CONCEPT: overseas-born / birthplace total incl. not-elsewhere-included. 703,416 / 1,656,468 = 42.46% (633 SA2s; 6 tiny suppressed cells). Cross-checked against Stats NZ place-summary category counts (sum 703,419) and tot"
+   },
+   "Osaka": {
+    "value": 6.8,
+    "year": "2025",
+    "source": "Osaka Prefecture, Basic Resident Register (Jumin Kihon Daicho) as of 2025-01-01 — Osaka City (Osaka-shi)",
+    "note": "CONCEPT: foreign NATIONALS (registered residents), NOT foreign-born — same registry concept as v1.0 Tokyo. 189,281 (93,953 M + 95,328 F) / 2,778,917 = 6.81%; city-proper geography"
+   },
+   "Tel Aviv": {
+    "value": 23.5,
+    "year": "2022",
+    "source": "OECD DSD_FUA_DEMO@DF_ORIGIN v1.2 (OECD.CFE.EDS), CITY level — Tel Aviv-Yafo (ISR10C)",
+    "note": "CONCEPT: foreign-born share of population (OECD ORIGIN=FB, PT_POP); city-level; FUA 2022 = 21.5"
    }
   }
  },
@@ -2153,6 +4840,158 @@ window.INDEX_DATA = {
     "year": "2025",
     "source": "hdc=01461, name='The San Jose / San Francisco / Oakland area', United States, column transit_pnft_2025=0.295899140902484",
     "note": "Agglomeration merges San Jose, San Francisco and Oakland; the share is diluted by lower-frequency South Bay areas, so it understates SF proper."
+   },
+   "Stockholm": {
+    "value": 70.1,
+    "year": "2025",
+    "source": "The Stockholm area",
+    "note": "transit_pnft_2025=0.7013; stable series (72.1/70.8/70.1)."
+   },
+   "Oslo": {
+    "value": null,
+    "year": "2025",
+    "note": "NA in all years 2023-2025 - agglomeration present in atlas but no PNFT value (no usable GTFS feed); matches v1.0 projection."
+   },
+   "Helsinki": {
+    "value": 78.0,
+    "year": "2025",
+    "source": "The Helsinki / Vantaa area",
+    "note": "transit_pnft_2025=0.7802; stable series."
+   },
+   "Madrid": {
+    "value": 68.8,
+    "year": "2025",
+    "source": "The Madrid / Móstoles / Leganés area",
+    "note": "transit_pnft_2025=0.6880 (62.2/62.0/68.8)."
+   },
+   "Milan": {
+    "value": 50.4,
+    "year": "2025",
+    "source": "The Milan / Monza area",
+    "note": "transit_pnft_2025=0.5038; stable series."
+   },
+   "Rome": {
+    "value": 71.7,
+    "year": "2025",
+    "source": "The Rome area",
+    "note": "transit_pnft_2025=0.7170; 2024 value (7.5%) was a single-year feed artifact, 2023 (71.5%) and 2025 agree."
+   },
+   "Munich": {
+    "value": 81.9,
+    "year": "2025",
+    "source": "The Munich area",
+    "note": "transit_pnft_2025=0.8190; 2023 (14.1%) was a feed artifact, 2024/2025 agree at ~81.9%."
+   },
+   "Frankfurt": {
+    "value": null,
+    "year": "2025",
+    "note": "NA in all years 2023-2025 - no PNFT value in atlas feed; matches v1.0 projection."
+   },
+   "Hamburg": {
+    "value": 68.8,
+    "year": "2024",
+    "source": "The Hamburg area",
+    "note": "2025 value (9.8%) is an implausible one-year collapse from 68.6/68.8% - treated as GTFS feed-lapse artifact; using last plausible year 2024 (transit_pnft_2024=0.6879). FLAGGED for review."
+   },
+   "Brussels": {
+    "value": 89.0,
+    "year": "2024",
+    "source": "The Brussels area",
+    "note": "2025 value (40.9%) is an implausible one-year halving vs 83.8/89.0% in 2023/24 - treated as partial-feed artifact; using 2024 (transit_pnft_2024=0.8905). FLAGGED for review."
+   },
+   "Dublin": {
+    "value": 66.3,
+    "year": "2025",
+    "source": "The Dublin area",
+    "note": "transit_pnft_2025=0.6629 (62.9/71.3/66.3)."
+   },
+   "Lisbon": {
+    "value": 43.6,
+    "year": "2025",
+    "source": "The Lisbon / Amadora / Agualva-Cacém area",
+    "note": "transit_pnft_2025=0.4365; 2024 (44.1%) agrees, but 2023 was 74.8% - unexplained persistent drop, possibly a feed-coverage change. Latest retained; treat with caution."
+   },
+   "Prague": {
+    "value": 89.2,
+    "year": "2023",
+    "source": "The Prague area",
+    "note": "2024 (7.7%) and 2025 (6.7%) are implausible collapses from 89.2% - treated as GTFS feed-lapse artifacts; using last plausible year 2023 (transit_pnft_2023=0.8916). FLAGGED for review."
+   },
+   "Warsaw": {
+    "value": 70.1,
+    "year": "2025",
+    "source": "The Warsaw area",
+    "note": "transit_pnft_2025=0.7009; 2024 (69.2%) agrees, 2023 was 81.8%."
+   },
+   "Istanbul": {
+    "value": null,
+    "year": "2025",
+    "note": "2025=0.2% is a near-zero feed artifact per v1.0 rule; 2023/24 (~3.1%) are also implausibly low for Istanbul's network (partial Turkish GTFS coverage in Mobility Database) - excluded as unreliable. FLAGGED: strict rule ap"
+   },
+   "Montreal": {
+    "value": 52.7,
+    "year": "2024",
+    "source": "The Montreal / Laval / Longueuil area",
+    "note": "2025 value (11.1%) is an implausible one-year collapse from 51.9/52.7% - treated as feed artifact; using 2024 (transit_pnft_2024=0.5271). FLAGGED for review."
+   },
+   "Vancouver": {
+    "value": 53.7,
+    "year": "2025",
+    "source": "The Vancouver / Surrey / Burnaby area",
+    "note": "transit_pnft_2025=0.5370; Canada agglomeration (not 'The Portland / Vancouver / Gresham area', US)."
+   },
+   "Chicago": {
+    "value": 43.2,
+    "year": "2025",
+    "source": "The Chicago / Evanston / Elmhurst area",
+    "note": "transit_pnft_2025=0.4323 (35.4/40.5/43.2)."
+   },
+   "Boston": {
+    "value": 47.6,
+    "year": "2025",
+    "source": "The Boston / Cambridge / Quincy area",
+    "note": "transit_pnft_2025=0.4756; stable series."
+   },
+   "Los Angeles": {
+    "value": 5.7,
+    "year": "2025",
+    "source": "The Los Angeles / Long Beach / Anaheim area",
+    "note": "transit_pnft_2025=0.0570; 2024 (6.9%) agrees, but 2023 was 18.5% - persistent drop, possibly partial feed. Latest retained; treat with caution."
+   },
+   "Seattle": {
+    "value": 26.1,
+    "year": "2025",
+    "source": "The Seattle / Bellevue area",
+    "note": "transit_pnft_2025=0.2607; stable series."
+   },
+   "Washington DC": {
+    "value": 33.1,
+    "year": "2025",
+    "source": "The Washington / Arlington / Alexandria area",
+    "note": "transit_pnft_2025=0.3311; 2024 (33.0%) agrees; 2023 (14.0%) was an artifact year."
+   },
+   "Sydney": {
+    "value": 49.2,
+    "year": "2025",
+    "source": "The Sydney area",
+    "note": "transit_pnft_2025=0.4917; stable series."
+   },
+   "Auckland": {
+    "value": 37.6,
+    "year": "2025",
+    "source": "The Auckland area",
+    "note": "transit_pnft_2025=0.3755; stable series."
+   },
+   "Osaka": {
+    "value": null,
+    "year": "2025",
+    "note": "All years near-zero (0.9/0.9/0.07%) - feed artifact, Japanese GTFS largely absent from Mobility Database (same pattern as Tokyo 0.12% nulled in v1.0)."
+   },
+   "Tel Aviv": {
+    "value": 87.9,
+    "year": "2025",
+    "source": "The Tel Aviv / Rishon LeZion / Petah Tikva area",
+    "note": "transit_pnft_2025=0.8785; stable series (87.8/86.6/87.9); Israel has comprehensive national GTFS."
    }
   }
  },
@@ -2273,6 +5112,161 @@ window.INDEX_DATA = {
     "year": "2025",
     "source": "San Francisco, CA, US (key: san-francisco-ca, City tab, rank 89)",
     "note": "Average congestion, city-center definition"
+   },
+   "Stockholm": {
+    "value": 42.8,
+    "year": "2025",
+    "source": "Stockholm, SE",
+    "note": "TomTom Traffic Index 2025 full-year congestion level, City (center) tab; country verified via country field."
+   },
+   "Oslo": {
+    "value": 33.2,
+    "year": "2025",
+    "source": "Oslo, NO",
+    "note": "TomTom Traffic Index 2025 full-year congestion level, City (center) tab; country verified via country field."
+   },
+   "Helsinki": {
+    "value": 51.9,
+    "year": "2025",
+    "source": "Helsinki, FI",
+    "note": "TomTom Traffic Index 2025 full-year congestion level, City (center) tab; country verified via country field."
+   },
+   "Madrid": {
+    "value": 38.0,
+    "year": "2025",
+    "source": "Madrid, ES",
+    "note": "TomTom Traffic Index 2025 full-year congestion level, City (center) tab; country verified via country field."
+   },
+   "Milan": {
+    "value": 49.4,
+    "year": "2025",
+    "source": "Milan, IT",
+    "note": "TomTom Traffic Index 2025 full-year congestion level, City (center) tab; country verified via country field."
+   },
+   "Rome": {
+    "value": 45.2,
+    "year": "2025",
+    "source": "Rome, IT",
+    "note": "TomTom Traffic Index 2025 full-year congestion level, City (center) tab; country verified via country field."
+   },
+   "Munich": {
+    "value": 43.7,
+    "year": "2025",
+    "source": "Munich, DE",
+    "note": "TomTom Traffic Index 2025 full-year congestion level, City (center) tab; country verified via country field."
+   },
+   "Frankfurt": {
+    "value": 42.3,
+    "year": "2025",
+    "source": "Frankfurt am Main, DE",
+    "note": "TomTom Traffic Index 2025 full-year congestion level, City (center) tab; country verified via country field."
+   },
+   "Hamburg": {
+    "value": 49.3,
+    "year": "2025",
+    "source": "Hamburg, DE",
+    "note": "TomTom Traffic Index 2025 full-year congestion level, City (center) tab; country verified via country field."
+   },
+   "Brussels": {
+    "value": 46.2,
+    "year": "2025",
+    "source": "Brussels, BE",
+    "note": "TomTom Traffic Index 2025 full-year congestion level, City (center) tab; country verified via country field."
+   },
+   "Dublin": {
+    "value": 72.9,
+    "year": "2025",
+    "source": "Dublin, IE",
+    "note": "TomTom Traffic Index 2025 full-year congestion level, City (center) tab; country verified via country field."
+   },
+   "Lisbon": {
+    "value": 39.0,
+    "year": "2025",
+    "source": "Lisboa, PT",
+    "note": "TomTom Traffic Index 2025 full-year congestion level, City (center) tab; country verified via country field. Listed as 'Lisboa'."
+   },
+   "Prague": {
+    "value": 53.5,
+    "year": "2025",
+    "source": "Prague, CZ",
+    "note": "TomTom Traffic Index 2025 full-year congestion level, City (center) tab; country verified via country field."
+   },
+   "Warsaw": {
+    "value": 51.3,
+    "year": "2025",
+    "source": "Warsaw, PL",
+    "note": "TomTom Traffic Index 2025 full-year congestion level, City (center) tab; country verified via country field."
+   },
+   "Istanbul": {
+    "value": 62.0,
+    "year": "2025",
+    "source": "Istanbul, TR",
+    "note": "TomTom Traffic Index 2025 full-year congestion level, City (center) tab; country verified via country field."
+   },
+   "Montreal": {
+    "value": 41.3,
+    "year": "2025",
+    "source": "Montreal, CA",
+    "note": "TomTom Traffic Index 2025 full-year congestion level, City (center) tab; country verified via country field."
+   },
+   "Vancouver": {
+    "value": 56.5,
+    "year": "2025",
+    "source": "Vancouver, CA",
+    "note": "TomTom Traffic Index 2025 full-year congestion level, City (center) tab; country verified via country field. Canada entry (no Vancouver WA/USA in table)."
+   },
+   "Chicago": {
+    "value": 46.1,
+    "year": "2025",
+    "source": "Chicago, IL, US",
+    "note": "TomTom Traffic Index 2025 full-year congestion level, City (center) tab; country verified via country field."
+   },
+   "Boston": {
+    "value": 42.1,
+    "year": "2025",
+    "source": "Boston, MA, US",
+    "note": "TomTom Traffic Index 2025 full-year congestion level, City (center) tab; country verified via country field."
+   },
+   "Los Angeles": {
+    "value": 59.8,
+    "year": "2025",
+    "source": "Los Angeles, CA, US",
+    "note": "TomTom Traffic Index 2025 full-year congestion level, City (center) tab; country verified via country field."
+   },
+   "Seattle": {
+    "value": 44.9,
+    "year": "2025",
+    "source": "Seattle, WA, US",
+    "note": "TomTom Traffic Index 2025 full-year congestion level, City (center) tab; country verified via country field."
+   },
+   "Washington DC": {
+    "value": 37.3,
+    "year": "2025",
+    "source": "Washington, DC, US",
+    "note": "TomTom Traffic Index 2025 full-year congestion level, City (center) tab; country verified via country field. Entry 'Washington, DC', country US."
+   },
+   "Sydney": {
+    "value": 43.7,
+    "year": "2025",
+    "source": "Sydney, AU",
+    "note": "TomTom Traffic Index 2025 full-year congestion level, City (center) tab; country verified via country field."
+   },
+   "Auckland": {
+    "value": 42.2,
+    "year": "2025",
+    "source": "Auckland, NZ",
+    "note": "TomTom Traffic Index 2025 full-year congestion level, City (center) tab; country verified via country field."
+   },
+   "Osaka": {
+    "value": 42.9,
+    "year": "2025",
+    "source": "Osaka, JP",
+    "note": "TomTom Traffic Index 2025 full-year congestion level, City (center) tab; country verified via country field."
+   },
+   "Tel Aviv": {
+    "value": null,
+    "year": "2025",
+    "note": "Not in TomTom Traffic Index 2025 city table (no Israel entries in the 492-city decoded ranking data)."
    }
   }
  },
@@ -2370,6 +5364,160 @@ window.INDEX_DATA = {
     "year": "2026-07-12",
     "airports": "SFO",
     "note": "US territories (San Juan etc.) counted domestic."
+   },
+   "Stockholm": {
+    "value": 142,
+    "year": "2026-07-12",
+    "airports": "ARN+BMA+NYO",
+    "note": "BMA adds only 2 Swedish domestic routes; Salen/Scandinavian Mtns counted domestic (in Sweden per Wikidata P17); 12 charter-only excluded"
+   },
+   "Oslo": {
+    "value": 125,
+    "year": "2026-07-12",
+    "airports": "OSL+TRF",
+    "note": "Svalbard/Longyearbyen counted domestic (Norway); 1 charter-only excluded"
+   },
+   "Helsinki": {
+    "value": 118,
+    "year": "2026-07-12",
+    "airports": "HEL",
+    "note": "Mariehamn (Aland) counted domestic (Finland); 2 charter-only excluded"
+   },
+   "Madrid": {
+    "value": 197,
+    "year": "2026-07-12",
+    "airports": "MAD",
+    "note": "Canaries+Balearics counted domestic per method note; 5 charter-only excluded"
+   },
+   "Milan": {
+    "value": 244,
+    "year": "2026-07-12",
+    "airports": "MXP+LIN+BGY",
+    "note": "Red Sea Intl (Saudi) excluded as suspended indefinitely (BeOnd); Male retained via another scheduled listing; 1 charter-only excluded"
+   },
+   "Rome": {
+    "value": 219,
+    "year": "2026-07-12",
+    "airports": "FCO+CIA",
+    "note": "FCO table has Refs column (handled); 1 charter-only excluded"
+   },
+   "Munich": {
+    "value": 202,
+    "year": "2026-07-12",
+    "airports": "MUC",
+    "note": "Ben Gurion included: article says suspended until 1 Jul 2026, before retrieval date; EuroAirport Basel counted international (France); 1 charter-only excluded"
+   },
+   "Frankfurt": {
+    "value": 284,
+    "year": "2026-07-12",
+    "airports": "FRA",
+    "note": "EuroAirport Basel counted international (France, though Wikidata also lists Germany); 2 charter-only excluded"
+   },
+   "Hamburg": {
+    "value": 117,
+    "year": "2026-07-12",
+    "airports": "HAM",
+    "note": "EuroAirport Basel counted international (France); no charter-only rows"
+   },
+   "Brussels": {
+    "value": 249,
+    "year": "2026-07-12",
+    "airports": "BRU+CRL",
+    "note": "No Belgian domestic destinations at either airport; 1 charter-only excluded"
+   },
+   "Dublin": {
+    "value": 199,
+    "year": "2026-07-12",
+    "airports": "DUB",
+    "note": "Only Donegal+Kerry domestic; Belfast (UK) counted international; 17 charter entries -> 2 charter-only destinations excluded"
+   },
+   "Lisbon": {
+    "value": 146,
+    "year": "2026-07-12",
+    "airports": "LIS",
+    "note": "Madeira+Azores counted domestic (Portugal); Ben Gurion included (suspension ended 1 Jul 2026); 5 charter-only excluded"
+   },
+   "Prague": {
+    "value": 165,
+    "year": "2026-07-12",
+    "airports": "PRG",
+    "note": "21 charter-only destinations excluded (largest charter market in set); no Czech domestic routes"
+   },
+   "Warsaw": {
+    "value": 152,
+    "year": "2026-07-12",
+    "airports": "WAW+WMI",
+    "note": "53 charter-only entries excluded at WAW (bold Charter/Seasonal charter labels)."
+   },
+   "Istanbul": {
+    "value": 322,
+    "year": "2026-07-12",
+    "airports": "IST+SAW",
+    "note": "Nicosia-Ercan (Wikidata: Northern Cyprus/Cyprus) counted international; 4 Iran routes annotated temporarily-suspended retained per strip-annotations rule."
+   },
+   "Montreal": {
+    "value": 139,
+    "year": "2026-07-12",
+    "airports": "YUL",
+    "note": "1 suspended-annotated route (Tel Aviv) retained per strip-annotations rule."
+   },
+   "Vancouver": {
+    "value": 74,
+    "year": "2026-07-12",
+    "airports": "YVR"
+   },
+   "Chicago": {
+    "value": 81,
+    "year": "2026-07-12",
+    "airports": "ORD+MDW",
+    "note": "US territories (e.g. San Juan PR) counted domestic per method."
+   },
+   "Boston": {
+    "value": 63,
+    "year": "2026-07-12",
+    "airports": "BOS"
+   },
+   "Los Angeles": {
+    "value": 81,
+    "year": "2026-07-12",
+    "airports": "LAX+BUR+LGB+ONT+SNA (Greater LA airport system)",
+    "note": "US territories counted domestic; LGB currently lists only 5 destinations (all domestic)."
+   },
+   "Seattle": {
+    "value": 38,
+    "year": "2026-07-12",
+    "airports": "SEA+PAE",
+    "note": "PAE all-domestic, contributes 0 international; suspended-annotated Kelowna retained."
+   },
+   "Washington DC": {
+    "value": 70,
+    "year": "2026-07-12",
+    "airports": "IAD+DCA+BWI (Washington–Baltimore airport system)",
+    "note": "US territories counted domestic; 1 suspended-annotated route (Tel Aviv from IAD) retained."
+   },
+   "Sydney": {
+    "value": 65,
+    "year": "2026-07-12",
+    "airports": "SYD",
+    "note": "Norfolk Island counted DOMESTIC (Australian external territory); 2 suspended-annotated routes retained."
+   },
+   "Auckland": {
+    "value": 46,
+    "year": "2026-07-12",
+    "airports": "AKL",
+    "note": "Rarotonga (Cook Islands) and Niue counted INTERNATIONAL (separate Wikidata P17 countries in NZ realm)."
+   },
+   "Osaka": {
+    "value": null,
+    "year": "n/a",
+    "airports": "KIX+ITM+UKB",
+    "note": "NULL: the Kansai (KIX) Wikipedia article was purged of unsourced destination rows on 2026-07-02 (ANA/JAL and most China/US/Europe routes deleted), so a count would be a serious artifact undercount - same treatment as Tokyo in v1.0"
+   },
+   "Tel Aviv": {
+    "value": 114,
+    "year": "2026-07-12",
+    "airports": "TLV",
+    "note": "10 routes annotated suspended (war-related, most with stated resume dates, e.g. Amsterdam, Madrid, Copenhagen, Moscow-Domodedovo) RETAINED per strip-annotations rule; only domestic destination is Eilat-Ramon."
    }
   }
  }
