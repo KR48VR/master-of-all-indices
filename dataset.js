@@ -17,8 +17,8 @@ window.INDEX_DATA = {
 {"id": "LIV-01", "domain": "Liveable", "subtheme": "Safety & Stability", "name": "Homicide rate", "measures": "Intentional homicides per 100,000 residents", "unit": "per 100k", "direction": "lower", "dataLevel": "Country proxy", "source": "UNODC CTS (national rates)", "appearsIn": "EIU (Stability)", "pilot": 1, "caveat": "UNODC discontinued its city-level series, so these are NATIONAL rates standing in for cities (Singapore is a city-state, so national = city; London uses England & Wales). Crime definitions vary by country. City-level upgrade from national police statistics planned.", "contestable": 0, "approx": "proxy"},
 {"id": "LIV-02", "domain": "Liveable", "subtheme": "Safety & Stability", "name": "Perceived safety", "measures": "Resident-reported feeling of safety", "unit": "index 0-100", "direction": "higher", "dataLevel": "City", "source": "Numbeo Safety Index", "appearsIn": "—", "pilot": 0, "caveat": "Crowd-sourced — treat as a soft signal.", "contestable": 0, "approx": "crowd"},
 {"id": "LIV-03", "domain": "Liveable", "subtheme": "Safety & Stability", "name": "Political stability", "measures": "Absence of violence / terrorism", "unit": "index", "direction": "higher", "dataLevel": "Country proxy", "source": "World Bank WGI", "appearsIn": "EIU (Stability)", "pilot": 0, "caveat": "Country-level stand-in, not city-specific.", "contestable": 0, "approx": "proxy"},
-{"id": "LIV-04", "domain": "Liveable", "subtheme": "Health", "name": "Life expectancy", "measures": "Average life expectancy at birth", "unit": "years", "direction": "higher", "dataLevel": "Metro", "source": "OECD Regions / SingStat / World Bank", "appearsIn": "GPCI (Livability)", "pilot": 1, "caveat": "OECD regional data at the finest level published: city or metro for most European cities; state/province proxies for the US, Canadian and Australian cities (named per value); Dubai is a UAE national figure. Years mix 2019-2025 — US values are 2020 (COVID-depressed, DC 2019), Japanese life tables are quinquennial (2020).", "contestable": 0, "approx": "none"},
-{"id": "LIV-05", "domain": "Liveable", "subtheme": "Health", "name": "Physicians per capita", "measures": "Doctors per 1,000 residents", "unit": "per 1k", "direction": "higher", "dataLevel": "Metro", "source": "OECD Regional health / data.gov.sg / DHA", "appearsIn": "EIU (Healthcare)", "pilot": 1, "caveat": "OECD regional physician density, finest comparable level: city/metro for many European cities, state/province/region proxies for US, Canadian, Italian and German cities (German Laender end 2019). Core districts read high (Paris, Warsaw-core rejected for a reporting break, Washington DC extreme - physicians counted at workplace). Dublin and London-style gaps filled or left blank per value; Singapore from MOH, Dubai from DHA 2022. Years mix 2019-2025.", "contestable": 0, "approx": "none"},
+{"id": "LIV-04", "domain": "Liveable", "subtheme": "Health", "name": "Life expectancy", "measures": "Average life expectancy at birth", "unit": "years", "direction": "higher", "dataLevel": "Metro", "source": "OECD Regions / SingStat / World Bank", "appearsIn": "GPCI (Livability)", "pilot": 1, "caveat": "OECD regional data at the finest level published: city or metro for most European cities; state/province proxies for the US, Canadian and Australian cities (named per value); Dubai is a UAE national figure. Years mix 2019-2025 — US values are 2020 (COVID-depressed, DC 2019), Japanese life tables are quinquennial (2020). 2026 Asian additions mix levels (named per value): Bangkok, Manila and Abu Dhabi are national proxies; Jakarta and Ho Chi Minh City are province-level; Mumbai reads as Maharashtra; Delhi and Kuala Lumpur are their own city-territories; mainland-Chinese figures are municipal official statistics on varying bases (Shanghai is hukou-based 2022, COVID-depressed). Hong Kong is blank — its statistics office publishes life expectancy by sex only.", "contestable": 0, "approx": "none"},
+{"id": "LIV-05", "domain": "Liveable", "subtheme": "Health", "name": "Physicians per capita", "measures": "Doctors per 1,000 residents", "unit": "per 1k", "direction": "higher", "dataLevel": "Metro", "source": "OECD Regional health / data.gov.sg / DHA", "appearsIn": "EIU (Healthcare)", "pilot": 1, "caveat": "OECD regional physician density, finest comparable level: city/metro for many European cities, state/province/region proxies for US, Canadian, Italian and German cities (German Laender end 2019). Core districts read high (Paris, Warsaw-core rejected for a reporting break, Washington DC extreme - physicians counted at workplace). Dublin and London-style gaps filled or left blank per value; Singapore from MOH, Dubai from DHA 2022. Years mix 2019-2025. 2026 Asian additions: mostly WHO national densities (country proxy, named per value); Bangkok is a city-level health-ministry figure. Definitions differ: mainland-Chinese counts include TCM, dental and public-health physicians; Hong Kong counts registered (not necessarily practising) doctors; Taipei counts practising Western-medicine physicians at place of practice; Beijing reads high (national hospitals serve all of China).", "contestable": 0, "approx": "none"},
 {"id": "LIV-06", "domain": "Liveable", "subtheme": "Housing & Cost", "name": "House-price-to-income", "measures": "Median home price / median income", "unit": "ratio", "direction": "lower", "dataLevel": "City", "source": "Numbeo Property Prices Index", "appearsIn": "—", "pilot": 1, "caveat": "Numbeo 2026 Mid-Year edition: crowd-sourced median apartment price over median familial disposable income (years). Core affordability signal — treat as a soft, crowd-sourced estimate.", "contestable": 0, "approx": "crowd"},
 {"id": "LIV-07", "domain": "Liveable", "subtheme": "Housing & Cost", "name": "Cost of living", "measures": "Standard basket cost vs a benchmark city", "unit": "index", "direction": "lower", "dataLevel": "City", "source": "Numbeo", "appearsIn": "Mercer", "pilot": 0, "caveat": "Direction is contestable — a rich city having high costs isn't necessarily 'bad'.", "contestable": 1, "approx": "crowd"},
 {"id": "LIV-08", "domain": "Liveable", "subtheme": "Culture & Amenities", "name": "Cultural venues", "measures": "Museums / theatres / venues per 100,000", "unit": "per 100k", "direction": "higher", "dataLevel": "City", "source": "City open data / GPCI", "appearsIn": "GPCI (Cultural Interaction)", "pilot": 0, "caveat": "Sourcing and definitions vary widely.", "contestable": 0, "approx": "none"},
@@ -41,7 +41,7 @@ window.INDEX_DATA = {
 {"id": "CMP-04", "domain": "Competitive", "subtheme": "Business Environment", "name": "Startup density", "measures": "Dealroom-tracked startups per 100,000 metro residents", "unit": "per 100k", "direction": "higher", "dataLevel": "Metro", "source": "Dealroom (public hub pages)", "appearsIn": "GPCI-Startup", "pilot": 1, "caveat": "Dealroom \"tracked startups\" per hub / page-shown metro population (captured 11-12 Jul 2026). Hubs are metros: SF = Bay Area, Toronto = Toronto-Waterloo, Berlin = Berlin/Brandenburg. Hubs whose pages render no startup count are blank (Copenhagen, Vienna, Seoul, Dubai and most hubs added in the 2026 expansion outside the largest ecosystems); Amsterdam shows no population (blank). Database coverage varies by region — deepest in Europe/US.", "contestable": 0, "approx": "modelled"},
 {"id": "CMP-05", "domain": "Competitive", "subtheme": "Dynamism", "name": "Employment growth", "measures": "5-year change in metro employment", "unit": "%", "direction": "higher", "dataLevel": "Metro", "source": "OECD", "appearsIn": "—", "pilot": 0, "caveat": "", "contestable": 0, "approx": "none"},
 {"id": "CMP-06", "domain": "Competitive", "subtheme": "Dynamism", "name": "VC funding", "measures": "Dealroom \"VC invested\" per resident (metro hub)", "unit": "USD", "direction": "higher", "dataLevel": "Metro", "source": "Dealroom (public hub pages)", "appearsIn": "Startup Genome", "pilot": 1, "caveat": "Dealroom hub \"VC invested\" / page-shown metro population (captured 11-12 Jul 2026). The source page does not state the time window of \"VC invested\" — compare across cities, not against external annual figures. Amsterdam blank (no population shown).", "contestable": 0, "approx": "none"},
-{"id": "TAL-01", "domain": "Talent", "subtheme": "Education", "name": "Tertiary attainment", "measures": "% of adults with tertiary education", "unit": "%", "direction": "higher", "dataLevel": "Metro", "source": "OECD Regions / SingStat / Dubai Statistics Center", "appearsIn": "—", "pilot": 1, "caveat": "OECD regional shares (25-64, ISCED 5-8), finest level published: city-level for some, but state/province/region proxies for the US, Canadian, Australian, Italian, German and Japanese cities (named per value; Milan reads as Lombardy, Osaka as Kansai). Singapore counts residents 25+. Dubai is on a DIFFERENT basis — university-and-above as % of population 10+ (DSC 2023). Years mix 2020-2025.", "contestable": 0, "approx": "none"},
+{"id": "TAL-01", "domain": "Talent", "subtheme": "Education", "name": "Tertiary attainment", "measures": "% of adults with tertiary education", "unit": "%", "direction": "higher", "dataLevel": "Metro", "source": "OECD Regions / SingStat / Dubai Statistics Center", "appearsIn": "—", "pilot": 1, "caveat": "OECD regional shares (25-64, ISCED 5-8), finest level published: city-level for some, but state/province/region proxies for the US, Canadian, Australian, Italian, German and Japanese cities (named per value; Milan reads as Lombardy, Osaka as Kansai). Singapore counts residents 25+. Dubai is on a DIFFERENT basis — university-and-above as % of population 10+ (DSC 2023). Years mix 2020-2025. 2026 Asian additions vary in basis (named per value): mainland-Chinese cities are 2020-census shares of the TOTAL population of all ages; Hong Kong and Taipei are 15+ attended/registered shares; Bangkok and Jakarta are national bachelor's-and-above; Kuala Lumpur is a national employed-persons share; Manila is NCR 25+ completed, Ho Chi Minh City is a 2020 labour-force share, Mumbai and Delhi are 15+ state shares.", "contestable": 0, "approx": "none"},
 {"id": "TAL-02", "domain": "Talent", "subtheme": "Education", "name": "Top universities", "measures": "Universities in the global top 500", "unit": "count", "direction": "higher", "dataLevel": "City", "source": "QS World University Rankings 2026", "appearsIn": "GPCI (R&D)", "pilot": 1, "caveat": "QS 2026 edition, counted with QS’s own city labels, city-proper rule: Stanford and Berkeley fall outside San Francisco (a real 0), the Saclay cluster outside Paris — counts are boundary-sensitive for SF, NY and Paris. Dubai’s 0 is real: all six UAE top-500 universities are in other emirates.", "contestable": 0, "approx": "none"},
 {"id": "TAL-03", "domain": "Talent", "subtheme": "Skills & Workforce", "name": "Knowledge workers", "measures": "% employed in knowledge-intensive jobs", "unit": "%", "direction": "higher", "dataLevel": "Metro", "source": "Eurostat / OECD", "appearsIn": "—", "pilot": 0, "caveat": "", "contestable": 0, "approx": "none"},
 {"id": "TAL-04", "domain": "Talent", "subtheme": "Skills & Workforce", "name": "Researchers per capita", "measures": "R&D personnel per 1,000", "unit": "per 1k", "direction": "higher", "dataLevel": "Metro", "source": "OECD", "appearsIn": "GPCI (R&D)", "pilot": 0, "caveat": "", "contestable": 0, "approx": "none"},
@@ -97,19 +97,19 @@ window.INDEX_DATA = {
 "Auckland":{"SMT-01": 283.4, "CMP-01": 55906, "LIV-04": 82.7, "TAL-01": 45.5, "LIV-05": 3.47, "LIV-01": 1.46, "SMT-05": 93.5, "GRN-01": 5.5, "GRN-02": 88.4, "LIV-06": 10.5, "CON-05": 42.2, "CON-03": 37.6, "SMT-03": 80.21, "TAL-02": 2, "CON-01": 46, "TAL-06": 42.5, "GRN-05": 27.0, "CMP-04": null, "CMP-06": 166},
 "Osaka":{"SMT-01": 295.1, "CMP-01": 41497, "LIV-04": 84.2, "TAL-01": 56.9, "LIV-05": 2.92, "LIV-01": 0.23, "SMT-05": 85.5, "GRN-01": 9.4, "GRN-02": 72.2, "LIV-06": 10.6, "CON-05": 42.9, "CON-03": null, "SMT-03": null, "TAL-02": 1, "CON-01": null, "TAL-06": 6.8, "GRN-05": 9.5, "CMP-04": 3.7, "CMP-06": 21},
 "Tel Aviv":{"SMT-01": 366.9, "CMP-01": null, "LIV-04": 83.1, "TAL-01": 60.4, "LIV-05": 4.9, "LIV-01": 1.63, "SMT-05": 88.2, "GRN-01": 17.4, "GRN-02": 65.7, "LIV-06": 20.0, "CON-05": null, "CON-03": 87.9, "SMT-03": null, "TAL-02": 1, "CON-01": 114, "TAL-06": 23.5, "GRN-05": 36.0, "CMP-04": null, "CMP-06": 2111},
-"Hong Kong":{"SMT-01": 431.6, "TAL-02": 5, "CON-03": 52.2, "CON-05": 47.7, "CMP-01": 66154, "LIV-01": 0.38, "SMT-05": 95.8, "GRN-01": 19.8, "GRN-02": 95.7, "SMT-03": null, "TAL-06": 38.3, "CON-01": 149.0, "GRN-05": 34.0, "CMP-04": 16.5, "CMP-06": 413},
-"Taipei":{"SMT-01": 258.2, "TAL-02": 4, "CON-03": null, "CON-05": 43.6, "CMP-01": null, "LIV-01": 0.32, "SMT-05": 88.8, "GRN-01": 15.0, "GRN-02": null, "SMT-03": null, "TAL-06": 3.3, "CON-01": null, "GRN-05": 70.8, "CMP-04": null, "CMP-06": 25},
-"Bangkok":{"SMT-01": 375.6, "TAL-02": 1, "CON-03": null, "CON-05": 67.9, "CMP-01": null, "LIV-01": 4.79, "SMT-05": 90.9, "GRN-01": 23.4, "GRN-02": 11.8, "SMT-03": 66.67, "TAL-06": null, "CON-01": 154.0, "GRN-05": null, "CMP-04": null, "CMP-06": 8},
-"Kuala Lumpur":{"SMT-01": 272.1, "TAL-02": 4, "CON-03": null, "CON-05": 39.1, "CMP-01": null, "LIV-01": 0.73, "SMT-05": 98.0, "GRN-01": 28.3, "GRN-02": 46.1, "SMT-03": 59.38, "TAL-06": 13.1, "CON-01": 131.0, "GRN-05": 37.9, "CMP-04": null, "CMP-06": 19},
-"Jakarta":{"SMT-01": 97.7, "TAL-02": 0, "CON-03": 22.6, "CON-05": 59.8, "CMP-01": null, "LIV-01": 0.3, "SMT-05": 72.8, "GRN-01": 33.8, "GRN-02": 24.2, "SMT-03": 68.75, "TAL-06": null, "CON-01": 50.0, "GRN-05": null, "CMP-04": null, "CMP-06": 13},
-"Manila":{"SMT-01": 198.9, "TAL-02": 0, "CON-03": null, "CON-05": 57.3, "CMP-01": null, "LIV-01": 4.35, "SMT-05": 67.3, "GRN-01": 15.4, "GRN-02": 28.7, "SMT-03": 60.42, "TAL-06": null, "CON-01": 66.0, "GRN-05": 48.0, "CMP-04": null, "CMP-06": 10},
-"Ho Chi Minh City":{"SMT-01": 269.6, "TAL-02": 0, "CON-03": null, "CON-05": 40.3, "CMP-01": null, "LIV-01": 1.54, "SMT-05": 84.2, "GRN-01": 23.5, "GRN-02": 30.4, "SMT-03": 63.54, "TAL-06": null, "CON-01": 75.0, "GRN-05": null, "CMP-04": null, "CMP-06": 9},
-"Mumbai":{"SMT-01": 93.4, "TAL-02": 1, "CON-03": null, "CON-05": 61.5, "CMP-01": null, "LIV-01": 2.82, "SMT-05": 70.0, "GRN-01": 49.5, "GRN-02": 35.3, "SMT-03": 56.25, "TAL-06": null, "CON-01": 52.0, "GRN-05": null, "CMP-04": 8.7, "CMP-06": 122},
-"Abu Dhabi":{"SMT-01": 348.1, "TAL-02": 1, "CON-03": 60.8, "CON-05": 25.5, "CMP-01": null, "LIV-01": 0.69, "SMT-05": 100.0, "GRN-01": 30.9, "GRN-02": 37.6, "SMT-03": null, "TAL-06": null, "CON-01": 165.0, "GRN-05": 32.0, "CMP-04": null, "CMP-06": 136},
-"Shanghai":{"SMT-01": 458.1, "TAL-02": 5, "CON-03": null, "CON-05": null, "CMP-01": null, "LIV-01": 0.5, "SMT-05": 91.6, "GRN-01": 28.4, "GRN-02": 29.9, "SMT-03": 86.46, "TAL-06": null, "CON-01": 105.0, "GRN-05": 43.2, "CMP-04": 11.7, "CMP-06": 137},
-"Beijing":{"SMT-01": 331.9, "TAL-02": 7, "CON-03": null, "CON-05": null, "CMP-01": null, "LIV-01": 0.5, "SMT-05": 91.6, "GRN-01": 31.0, "GRN-02": null, "SMT-03": null, "TAL-06": null, "CON-01": 124.0, "GRN-05": 39.8, "CMP-04": 19.1, "CMP-06": 281},
-"Shenzhen":{"SMT-01": 314.9, "TAL-02": 2, "CON-03": null, "CON-05": null, "CMP-01": null, "LIV-01": 0.5, "SMT-05": 91.6, "GRN-01": 17.3, "GRN-02": 21.9, "SMT-03": null, "TAL-06": null, "CON-01": 54.0, "GRN-05": null, "CMP-04": 9.2, "CMP-06": 86},
-"Delhi":{"SMT-01": 120.5, "TAL-02": 2, "CON-03": null, "CON-05": 55.4, "CMP-01": null, "LIV-01": 2.82, "SMT-05": 70.0, "GRN-01": 107.0, "GRN-02": 43.6, "SMT-03": null, "TAL-06": null, "CON-01": 79.0, "GRN-05": null, "CMP-04": 8.4, "CMP-06": 98}
+"Hong Kong":{"SMT-01": 431.6, "TAL-02": 5, "CON-03": 52.2, "CON-05": 47.7, "CMP-01": 66154, "LIV-01": 0.38, "SMT-05": 95.8, "GRN-01": 19.8, "GRN-02": 95.7, "SMT-03": null, "TAL-06": 38.3, "CON-01": 149.0, "GRN-05": 34.0, "CMP-04": 16.5, "CMP-06": 413, "LIV-04": null, "LIV-05": 2.2, "TAL-01": 35.7},
+"Taipei":{"SMT-01": 258.2, "TAL-02": 4, "CON-03": null, "CON-05": 43.6, "CMP-01": null, "LIV-01": 0.32, "SMT-05": 88.8, "GRN-01": 15.0, "GRN-02": null, "SMT-03": null, "TAL-06": 3.3, "CON-01": null, "GRN-05": 70.8, "CMP-04": null, "CMP-06": 25, "LIV-04": 83.4, "LIV-05": 4.76, "TAL-01": 66.2},
+"Bangkok":{"SMT-01": 375.6, "TAL-02": 1, "CON-03": null, "CON-05": 67.9, "CMP-01": null, "LIV-01": 4.79, "SMT-05": 90.9, "GRN-01": 23.4, "GRN-02": 11.8, "SMT-03": 66.67, "TAL-06": null, "CON-01": 154.0, "GRN-05": null, "CMP-04": null, "CMP-06": 8, "LIV-04": 76.6, "LIV-05": 2.34, "TAL-01": 17.4},
+"Kuala Lumpur":{"SMT-01": 272.1, "TAL-02": 4, "CON-03": null, "CON-05": 39.1, "CMP-01": null, "LIV-01": 0.73, "SMT-05": 98.0, "GRN-01": 28.3, "GRN-02": 46.1, "SMT-03": 59.38, "TAL-06": 13.1, "CON-01": 131.0, "GRN-05": 37.9, "CMP-04": null, "CMP-06": 19, "LIV-04": 76.7, "LIV-05": 2.27, "TAL-01": 34.9},
+"Jakarta":{"SMT-01": 97.7, "TAL-02": 0, "CON-03": 22.6, "CON-05": 59.8, "CMP-01": null, "LIV-01": 0.3, "SMT-05": 72.8, "GRN-01": 33.8, "GRN-02": 24.2, "SMT-03": 68.75, "TAL-06": null, "CON-01": 50.0, "GRN-05": null, "CMP-04": null, "CMP-06": 13, "LIV-04": 76.0, "LIV-05": 0.56, "TAL-01": 9.3},
+"Manila":{"SMT-01": 198.9, "TAL-02": 0, "CON-03": null, "CON-05": 57.3, "CMP-01": null, "LIV-01": 4.35, "SMT-05": 67.3, "GRN-01": 15.4, "GRN-02": 28.7, "SMT-03": 60.42, "TAL-06": null, "CON-01": 66.0, "GRN-05": 48.0, "CMP-04": null, "CMP-06": 10, "LIV-04": 69.9, "LIV-05": 0.87, "TAL-01": 32.3},
+"Ho Chi Minh City":{"SMT-01": 269.6, "TAL-02": 0, "CON-03": null, "CON-05": 40.3, "CMP-01": null, "LIV-01": 1.54, "SMT-05": 84.2, "GRN-01": 23.5, "GRN-02": 30.4, "SMT-03": 63.54, "TAL-06": null, "CON-01": 75.0, "GRN-05": null, "CMP-04": null, "CMP-06": 9, "LIV-04": 76.6, "LIV-05": 1.11, "TAL-01": 27.9},
+"Mumbai":{"SMT-01": 93.4, "TAL-02": 1, "CON-03": null, "CON-05": 61.5, "CMP-01": null, "LIV-01": 2.82, "SMT-05": 70.0, "GRN-01": 49.5, "GRN-02": 35.3, "SMT-03": 56.25, "TAL-06": null, "CON-01": 52.0, "GRN-05": null, "CMP-04": 8.7, "CMP-06": 122, "LIV-04": 72.8, "LIV-05": 0.96, "TAL-01": 18.8},
+"Abu Dhabi":{"SMT-01": 348.1, "TAL-02": 1, "CON-03": 60.8, "CON-05": 25.5, "CMP-01": null, "LIV-01": 0.69, "SMT-05": 100.0, "GRN-01": 30.9, "GRN-02": 37.6, "SMT-03": null, "TAL-06": null, "CON-01": 165.0, "GRN-05": 32.0, "CMP-04": null, "CMP-06": 136, "LIV-04": 83.1, "LIV-05": 2.99, "TAL-01": null},
+"Shanghai":{"SMT-01": 458.1, "TAL-02": 5, "CON-03": null, "CON-05": null, "CMP-01": null, "LIV-01": 0.5, "SMT-05": 91.6, "GRN-01": 28.4, "GRN-02": 29.9, "SMT-03": 86.46, "TAL-06": null, "CON-01": 105.0, "GRN-05": 43.2, "CMP-04": 11.7, "CMP-06": 137, "LIV-04": 83.2, "LIV-05": 3.8, "TAL-01": 33.9},
+"Beijing":{"SMT-01": 331.9, "TAL-02": 7, "CON-03": null, "CON-05": null, "CMP-01": null, "LIV-01": 0.5, "SMT-05": 91.6, "GRN-01": 31.0, "GRN-02": null, "SMT-03": null, "TAL-06": null, "CON-01": 124.0, "GRN-05": 39.8, "CMP-04": 19.1, "CMP-06": 281, "LIV-04": 82.5, "LIV-05": 6.34, "TAL-01": 42.0},
+"Shenzhen":{"SMT-01": 314.9, "TAL-02": 2, "CON-03": null, "CON-05": null, "CMP-01": null, "LIV-01": 0.5, "SMT-05": 91.6, "GRN-01": 17.3, "GRN-02": 21.9, "SMT-03": null, "TAL-06": null, "CON-01": 54.0, "GRN-05": null, "CMP-04": 9.2, "CMP-06": 86, "LIV-04": 83.9, "LIV-05": 3.02, "TAL-01": 28.8},
+"Delhi":{"SMT-01": 120.5, "TAL-02": 2, "CON-03": null, "CON-05": 55.4, "CMP-01": null, "LIV-01": 2.82, "SMT-05": 70.0, "GRN-01": 107.0, "GRN-02": 43.6, "SMT-03": null, "TAL-06": null, "CON-01": 79.0, "GRN-05": null, "CMP-04": 8.4, "CMP-06": 98, "LIV-04": 74.2, "LIV-05": 0.96, "TAL-01": 24.2}
 },
 "provenance":{
  "LIV-01": {
@@ -1741,6 +1741,90 @@ window.INDEX_DATA = {
     "year": "2022",
     "source": "OECD IL050 Tel Aviv District (TL3)",
     "note": "Tel Aviv District containing the city — district-level"
+   },
+   "Shanghai": {
+    "value": 83.2,
+    "year": "2022",
+    "raw": 83.18,
+    "source": "Shanghai Statistical Yearbook 2023, Table 2.1 (Shanghai Municipal Bureau of Statistics)",
+    "note": "Registered (hukou) population basis. 2022 was depressed by Shanghai's COVID mortality spike (2021 in the same table: 84.11); later yearbook editions dropped the column and the health commission site was unreachable, so 2022 is the newest verifiable official figure. Official statistic; independent verification not possible."
+   },
+   "Beijing": {
+    "value": 82.5,
+    "year": "2023",
+    "raw": 82.51,
+    "source": "Beijing municipal government data page (2024 health white-paper figure), beijing.gov.cn",
+    "note": "Municipal figure, 82.51 in 2023. A Nov 2025 official press conference announced 83.93 for 2024, but the transcript states no population basis and the +1.4y jump suggests a series change, so the white-paper series value is recorded and the announcement noted. Official statistic; independent verification not possible."
+   },
+   "Shenzhen": {
+    "value": 83.9,
+    "year": "2022",
+    "raw": 83.93,
+    "source": "Shenzhen Residents' Health White Paper 2022 (Shenzhen Municipal Health Commission)",
+    "note": "Municipal figure (83.93). The 2023-edition white paper publishes no updated life expectancy, so 2022 remains the latest official figure. Official statistic; independent verification not possible."
+   },
+   "Hong Kong": {
+    "value": null,
+    "year": "n/a",
+    "note": "NULL: Hong Kong C&SD publishes life expectancy at birth BY SEX ONLY — 2024 provisional: male 82.8, female 88.4 (2023 final: 82.5/88.1; 'Women and Men in Hong Kong 2025', Table 2.3). No official both-sexes figure exists and combining would require a weighting assumption, i.e. estimation."
+   },
+   "Taipei": {
+    "value": 83.4,
+    "year": "2024",
+    "source": "Taiwan Ministry of the Interior abridged life tables by county/city (內政統計通報 114年第34週)",
+    "note": "Taipei City figure, registered (household-registration) population basis — highest of Taiwan's six special municipalities."
+   },
+   "Bangkok": {
+    "value": 76.6,
+    "year": "2024",
+    "raw": 76.564,
+    "source": "World Bank SP.DYN.LE00.IN — Thailand",
+    "note": "COUNTRY proxy (Thailand national figure): Thai NSO/MOPH sites were bot-blocked this session, no Bangkok-level official figure fetchable."
+   },
+   "Kuala Lumpur": {
+    "value": 76.7,
+    "year": "2024",
+    "source": "DOSM Abridged Life Tables Malaysia 2023-2025, Chart 2 (state level)",
+    "note": "W.P. Kuala Lumpur (the Federal Territory = the city proper); 2024 preliminary (2023 final: 75.4)."
+   },
+   "Jakarta": {
+    "value": 76.0,
+    "year": "2024",
+    "raw": 75.99,
+    "source": "BPS, Umur Harapan Hidup [Metode Baru, SP2020 long-form basis], statistics table 2206",
+    "note": "DKI Jakarta PROVINCE (≈ city-region). Transcribed from the official BPS table via an archived copy (bps.go.id bot-blocked this session)."
+   },
+   "Manila": {
+    "value": 69.9,
+    "year": "2024",
+    "raw": 69.946,
+    "source": "World Bank SP.DYN.LE00.IN — Philippines",
+    "note": "COUNTRY proxy (Philippines national figure): psa.gov.ph blocked this session, no official NCR-level life expectancy fetchable."
+   },
+   "Ho Chi Minh City": {
+    "value": 76.6,
+    "year": "2024",
+    "source": "GSO/NSO Statistical Yearbook of Viet Nam 2024, Table 43 (province level)",
+    "note": "TP. Ho Chi Minh PROVINCE (≈ the city), 2024 preliminary (2023: 76.5). Official PDF via archived copy (nso.gov.vn blocked this session)."
+   },
+   "Mumbai": {
+    "value": 72.8,
+    "year": "2019-23",
+    "source": "India SRS Abridged Life Tables 2019-23, Statement 3 (Office of the Registrar General)",
+    "note": "STATE proxy: Maharashtra (rural+urban, both sexes) — India publishes no city life tables."
+   },
+   "Delhi": {
+    "value": 74.2,
+    "year": "2019-23",
+    "source": "India SRS Abridged Life Tables 2019-23, Statement 3 (Office of the Registrar General)",
+    "note": "NCT of Delhi (the state IS the city-region), rural+urban, both sexes."
+   },
+   "Abu Dhabi": {
+    "value": 83.1,
+    "year": "2024",
+    "raw": 83.069,
+    "source": "World Bank SP.DYN.LE00.IN — United Arab Emirates",
+    "note": "COUNTRY proxy (UAE national figure), same treatment as Dubai; SCAD unreachable this session and archived SCAD pages carry no life-expectancy figure."
    }
   }
  },
@@ -2018,6 +2102,84 @@ window.INDEX_DATA = {
     "year": "2023",
     "source": "OECD IL05 Tel Aviv District (TL2)",
     "note": "Tel Aviv District - Israel has TL2 districts only in this flow (no TL3). District is a reasonable metro-core proxy; national ISR = 3.50 in 2023."
+   },
+   "Shanghai": {
+    "value": 3.8,
+    "year": "2024",
+    "source": "Shanghai Statistical Yearbook 2025, Table 21.1: 38 licensed (assistant) physicians per 10,000",
+    "note": "Yearbook publishes the ratio as an integer per 10,000 (coarse). Chinese 执业(助理)医师 includes clinical, TCM, stomatology and public-health physicians — broader than OECD 'practising'. Official statistic; independent verification not possible."
+   },
+   "Beijing": {
+    "value": 6.34,
+    "year": "2025",
+    "source": "2025 Beijing health development statistical communiqué (Beijing Municipal Health Commission)",
+    "note": "Per 1,000 RESIDENT population. Reads high partly because Beijing's national-level hospitals serve patients from across China (place-of-practice basis, like Washington DC). Broad Chinese physician definition (incl. TCM etc.). Official statistic; independent verification not possible."
+   },
+   "Shenzhen": {
+    "value": 3.02,
+    "year": "2024",
+    "source": "Computed: 54,296 licensed (assistant) physicians (Guangdong Statistical Yearbook 2025, Table 21-4) / 17.99M year-end resident population (Table 3-7)",
+    "note": "Exact division of two published official numbers. Cross-check: the city's own 2023 white paper states 2.86 per 1,000 at end-2023. Broad Chinese physician definition. Official statistic; independent verification not possible."
+   },
+   "Hong Kong": {
+    "value": 2.2,
+    "year": "2024",
+    "source": "Computed: 16,533 registered doctors / 7.5241M mid-2024 population, both from 'Health Facts of Hong Kong 2025' (Department of Health)",
+    "note": "Doctors ON THE REGISTER (not necessarily practising), excludes dentists and Chinese-medicine practitioners — narrower than the mainland definition. DoH's own printed ratio 1:456 ≈ 2.19 per 1,000."
+   },
+   "Taipei": {
+    "value": 4.76,
+    "year": "2024",
+    "source": "Taiwan MOHW 2024 medical-institution annual report, Table 29: 47.6 Western-medicine physicians per 10,000, Taipei City",
+    "note": "Practising WESTERN-MEDICINE physicians only (TCM and dentists published separately), counted at place of practice over registered population — inflated by patients commuting from the wider metro (like DC/Paris cores)."
+   },
+   "Bangkok": {
+    "value": 2.34,
+    "year": "2024",
+    "source": "MOPH Thailand, Report on Health Resources 2024, Table 11: population per doctor = 428 in Bangkok",
+    "note": "CITY level (all affiliations incl. private). Denominator is the registered mid-year population; Bangkok's service population is larger and its doctors serve patients nationwide. Thailand national comparator: 0.59 per 1,000 (WHO, 2023)."
+   },
+   "Kuala Lumpur": {
+    "value": 2.27,
+    "year": "2024",
+    "source": "WHO GHO HWF_0001 — Malaysia: 22.72 medical doctors per 10,000",
+    "note": "COUNTRY proxy (no state-level density published)."
+   },
+   "Jakarta": {
+    "value": 0.56,
+    "year": "2024",
+    "source": "WHO GHO HWF_0001 — Indonesia: 5.59 per 10,000",
+    "note": "COUNTRY proxy (BPS provincial health statistics not fetchable this session)."
+   },
+   "Manila": {
+    "value": 0.87,
+    "year": "2024",
+    "source": "WHO GHO HWF_0001 — Philippines: 8.69 per 10,000",
+    "note": "COUNTRY proxy."
+   },
+   "Ho Chi Minh City": {
+    "value": 1.11,
+    "year": "2021",
+    "source": "WHO GHO HWF_0001 — Viet Nam: 11.07 per 10,000 (latest)",
+    "note": "COUNTRY proxy."
+   },
+   "Mumbai": {
+    "value": 0.96,
+    "year": "2024",
+    "source": "WHO GHO HWF_0001 — India: 9.55 per 10,000",
+    "note": "COUNTRY proxy (state tables publish registered stock, not active density)."
+   },
+   "Delhi": {
+    "value": 0.96,
+    "year": "2024",
+    "source": "WHO GHO HWF_0001 — India: 9.55 per 10,000",
+    "note": "COUNTRY proxy — same national figure as Mumbai."
+   },
+   "Abu Dhabi": {
+    "value": 2.99,
+    "year": "2023",
+    "source": "WHO GHO HWF_0001 — United Arab Emirates: 29.92 per 10,000 (latest)",
+    "note": "COUNTRY proxy (SCAD emirate-level figure not fetchable this session)."
    }
   }
  },
@@ -5076,6 +5238,87 @@ window.INDEX_DATA = {
     "year": "2022",
     "source": "OECD IL050 Tel Aviv District (TL3)",
     "note": "Tel Aviv District containing the city — district-level"
+   },
+   "Shanghai": {
+    "value": 33.9,
+    "year": "2020",
+    "source": "Shanghai Statistical Yearbook 2025, Table 2.13 (7th National Population Census): 33,872 per 100,000 with university education",
+    "note": "DIFFERENT BASIS: share of the TOTAL resident population of ALL AGES (not 25-64) with junior college (大专) and above, incl. non-completers and current students — like Dubai, not comparable with OECD shares. Official statistic; independent verification not possible."
+   },
+   "Beijing": {
+    "value": 42.0,
+    "year": "2020",
+    "raw": 41.98,
+    "source": "Beijing 7th National Population Census communiqué No.4: 41,980 per 100,000 with university education",
+    "note": "DIFFERENT BASIS: TOTAL population of all ages (not 25-64), junior college and above, incl. non-completers and current students. Official statistic; independent verification not possible."
+   },
+   "Shenzhen": {
+    "value": 28.8,
+    "year": "2020",
+    "raw": 28.849,
+    "source": "Guangdong 7th National Population Census communiqué No.5, Table 5-1: 28,849 per 100,000 with university education",
+    "note": "DIFFERENT BASIS: TOTAL population of all ages (not 25-64), junior college and above — highest of all 21 Guangdong cities. Official statistic; independent verification not possible."
+   },
+   "Hong Kong": {
+    "value": 35.7,
+    "year": "2024",
+    "source": "Computed from C&SD 'Women and Men in Hong Kong 2025', Table 4.1: (589,000 post-secondary non-degree + 1,794,600 degree) / 6,683,000 aged 15+",
+    "note": "DIFFERENT BASIS: population aged 15+ (not 25-64), highest level ATTENDED whether or not completed (General Household Survey). Exact division of published counts."
+   },
+   "Taipei": {
+    "value": 66.2,
+    "year": "2025",
+    "source": "Computed from Taipei Dept. of Civil Affairs / MOI household-registration table: 1,422,066 aged 15+ with junior college and above / 2,147,609 aged 15+",
+    "note": "DIFFERENT BASIS: registered population aged 15+ (not 25-64), 大專以上 per MOI grouping (incl. non-completers). National comparator on the same basis: 51.4%. Exact division of published counts."
+   },
+   "Bangkok": {
+    "value": 17.4,
+    "year": "2022",
+    "raw": 17.35,
+    "source": "World Bank/UNESCO UIS SE.TER.CUAT.BA.ZS — Thailand: population 25+ with at least a Bachelor's",
+    "note": "COUNTRY proxy AND narrower basis (bachelor's-and-above excludes short-cycle tertiary); Thai NSO Bangkok tables not fetchable this session."
+   },
+   "Kuala Lumpur": {
+    "value": 34.9,
+    "year": "2024",
+    "source": "DOSM Labour Force Survey Report Malaysia 2024: tertiary-educated share of employed persons",
+    "note": "COUNTRY proxy AND different basis: share of EMPLOYED PERSONS, Malaysia-wide (no fetchable state attainment table)."
+   },
+   "Jakarta": {
+    "value": 9.3,
+    "year": "2023",
+    "raw": 9.33,
+    "source": "World Bank/UNESCO UIS SE.TER.CUAT.BA.ZS — Indonesia: population 25+ with at least a Bachelor's",
+    "note": "COUNTRY proxy AND narrower basis (bachelor's-and-above). DKI Jakarta's true share is well above this national figure (provincial tables were unfetchable) — treat as a lower bound."
+   },
+   "Manila": {
+    "value": 32.3,
+    "year": "2020",
+    "source": "Computed from PSA 2020 Census attainment table: (162,655 short-cycle + 2,132,943 college + 70,552 post-bacc graduates) / 7,318,450 aged 25+",
+    "note": "NCR (Metro Manila) region, aged 25+, highest COMPLETED level. Exact division of published census counts (via archived copy of the official XLSX; psa.gov.ph blocked)."
+   },
+   "Ho Chi Minh City": {
+    "value": 27.9,
+    "year": "2020",
+    "source": "GSO Viet Nam Labour Force Survey 2020, Table 1.4: HCMC labour force with college (4.0%) + university and above (23.9%)",
+    "note": "DIFFERENT BASIS: share of the LABOUR FORCE (not population 25-64), 2020 — newer provincial LFS tables not fetchable. Sum of two published components."
+   },
+   "Mumbai": {
+    "value": 18.8,
+    "year": "2023-24",
+    "source": "India PLFS Annual Report 2023-24, Table 8 — Maharashtra, persons 15+: diploma 1.7 + graduate 13.5 + postgraduate+ 3.6",
+    "note": "STATE proxy (Maharashtra) AND different basis: persons aged 15+, rural+urban. Sum of published shares."
+   },
+   "Delhi": {
+    "value": 24.2,
+    "year": "2023-24",
+    "source": "India PLFS Annual Report 2023-24, Table 8 — NCT of Delhi, persons 15+: diploma 0.3 + graduate 19.1 + postgraduate+ 4.8",
+    "note": "NCT of Delhi (state = city-region), persons aged 15+. Sum of published shares."
+   },
+   "Abu Dhabi": {
+    "value": null,
+    "year": "n/a",
+    "note": "NULL: no official figure fetchable this session — SCAD unreachable, UAE stat portals 403, and the World Bank/UIS publish no tertiary-attainment series for the UAE."
    }
   }
  },
