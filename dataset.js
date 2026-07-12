@@ -35,7 +35,7 @@ window.INDEX_DATA = {
 {"id": "SMT-04", "domain": "Smart", "subtheme": "Digital Governance", "name": "Open data", "measures": "Maturity of public open-data provision", "unit": "index", "direction": "higher", "dataLevel": "City", "source": "Open Data Barometer", "appearsIn": "—", "pilot": 0, "caveat": "", "contestable": 0, "approx": "none"},
 {"id": "SMT-05", "domain": "Smart", "subtheme": "Digital Adoption", "name": "Population online", "measures": "% of residents using the internet", "unit": "%", "direction": "higher", "dataLevel": "Country proxy", "source": "World Bank WDI (ITU series)", "appearsIn": "—", "pilot": 1, "caveat": "Country-level series (ITU via World Bank WDI); reference year mostly 2024, Switzerland and Austria 2025. New York and San Francisco share the single US value; the UAE source records exactly 100.", "contestable": 0, "approx": "proxy"},
 {"id": "SMT-06", "domain": "Smart", "subtheme": "Smart Services", "name": "Smart mobility", "measures": "Real-time transit info / app availability", "unit": "index", "direction": "higher", "dataLevel": "City", "source": "IMD Smart City survey", "appearsIn": "IMD Smart City", "pilot": 0, "caveat": "Perception-based (resident survey).", "contestable": 0, "approx": "perception"},
-{"id": "CMP-01", "domain": "Competitive", "subtheme": "Economic Output", "name": "GDP per capita", "measures": "Metro GDP / population", "unit": "USD PPP", "direction": "higher", "dataLevel": "Metro", "source": "OECD Metro (FUA) / World Bank", "appearsIn": "GPCI (Economy)", "pilot": 1, "caveat": "OECD metropolitan (FUA) GDP per head in constant-2015-PPP USD; years 2020-2023 (London, Melbourne and Toronto are 2020 COVID-dip values, the latter two from an archived vintage). Singapore is a national World Bank figure on a 2021 PPP base — close but not identical basis. Dubai: no free PPP metro figure exists (blank).", "contestable": 0, "approx": "none"},
+{"id": "CMP-01", "domain": "Competitive", "subtheme": "Economic Output", "name": "GDP per capita", "measures": "Metro GDP / population", "unit": "USD PPP", "direction": "higher", "dataLevel": "Metro", "source": "OECD Metro (FUA) / World Bank", "appearsIn": "GPCI (Economy)", "pilot": 1, "caveat": "OECD metropolitan (FUA) GDP per head in constant-2015-PPP USD; years 2020-2023. London and the archived-vintage metros (Melbourne, Toronto, Montreal, Vancouver, Sydney) are 2020 COVID-dip values. Dublin reads high (multinational profit-shifting). Singapore is a national World Bank figure on a 2021 PPP base. Dubai and Tel Aviv: no honest metro PPP figure exists (blank).", "contestable": 0, "approx": "none"},
 {"id": "CMP-02", "domain": "Competitive", "subtheme": "Economic Output", "name": "Labour productivity", "measures": "Gross value added per worker", "unit": "USD", "direction": "higher", "dataLevel": "Metro", "source": "OECD", "appearsIn": "—", "pilot": 0, "caveat": "", "contestable": 0, "approx": "none"},
 {"id": "CMP-03", "domain": "Competitive", "subtheme": "Business Environment", "name": "Global firm presence", "measures": "Number of major global-firm HQs", "unit": "count", "direction": "higher", "dataLevel": "City", "source": "GPCI / Fortune", "appearsIn": "GPCI (Economy)", "pilot": 0, "caveat": "", "contestable": 0, "approx": "none"},
 {"id": "CMP-04", "domain": "Competitive", "subtheme": "Business Environment", "name": "Startup density", "measures": "Dealroom-tracked startups per 100,000 metro residents", "unit": "per 100k", "direction": "higher", "dataLevel": "Metro", "source": "Dealroom (public hub pages)", "appearsIn": "GPCI-Startup", "pilot": 1, "caveat": "Dealroom \"tracked startups\" per hub / page-shown metro population (captured 11 Jul 2026). Hubs are metros: SF = Bay Area, Toronto = Toronto-Waterloo, Berlin = Berlin/Brandenburg. Copenhagen, Vienna, Seoul, Dubai show no count and Amsterdam no population (blank). Database coverage varies by region — deepest in Europe/US.", "contestable": 0, "approx": "modelled"},
@@ -71,32 +71,32 @@ window.INDEX_DATA = {
 "Barcelona":{"LIV-01": 0.69, "LIV-04": 84.2, "LIV-05": 4.47, "LIV-06": 13.8, "GRN-01": 10.9, "GRN-02": null, "GRN-05": 42.1, "SMT-01": 338.8, "SMT-03": null, "SMT-05": 95.8, "CMP-01": 52064, "CMP-04": 28.5, "CMP-06": 222, "TAL-01": 46.9, "TAL-02": 5, "TAL-06": 27.3, "CON-01": 202, "CON-03": 66.9, "CON-05": 41.1},
 "Dubai":{"LIV-01": 0.69, "LIV-04": 83.1, "LIV-05": 3.35, "LIV-06": 7.8, "GRN-01": 35.0, "GRN-02": 40.6, "GRN-05": null, "SMT-01": 359.0, "SMT-03": 90.63, "SMT-05": 100.0, "CMP-01": null, "CMP-04": null, "CMP-06": 661, "TAL-01": 41.0, "TAL-02": 0, "TAL-06": null, "CON-01": 310, "CON-03": 24.8, "CON-05": 42.7},
 "San Francisco":{"LIV-01": 5.76, "LIV-04": 79.0, "LIV-05": 3.02, "LIV-06": 6.5, "GRN-01": 7.4, "GRN-02": null, "GRN-05": 53.1, "SMT-01": 367.7, "SMT-03": null, "SMT-05": 94.7, "CMP-01": 146853, "CMP-04": 320.8, "CMP-06": 20260, "TAL-01": 46.9, "TAL-02": 0, "TAL-06": 32.4, "CON-01": 60, "CON-03": 29.6, "CON-05": 49.7},
-"Stockholm":{"SMT-01": 302.2},
-"Oslo":{"SMT-01": 281.9},
-"Helsinki":{"SMT-01": 238.8},
-"Madrid":{"SMT-01": 382.3},
-"Milan":{"SMT-01": 429.2},
-"Rome":{"SMT-01": 376.5},
-"Munich":{"SMT-01": 221.7},
-"Frankfurt":{"SMT-01": 232.1},
-"Hamburg":{"SMT-01": 196.7},
-"Brussels":{"SMT-01": 266.9},
-"Dublin":{"SMT-01": 337.0},
-"Lisbon":{"SMT-01": 354.4},
-"Prague":{"SMT-01": 258.9},
-"Warsaw":{"SMT-01": 362.9},
-"Istanbul":{"SMT-01": 251.2},
-"Montreal":{"SMT-01": 334.2},
-"Vancouver":{"SMT-01": 374.2},
-"Chicago":{"SMT-01": 392.9},
-"Boston":{"SMT-01": 361.6},
-"Los Angeles":{"SMT-01": 392.1},
-"Seattle":{"SMT-01": 410.0},
-"Washington DC":{"SMT-01": 362.5},
-"Sydney":{"SMT-01": 239.5},
-"Auckland":{"SMT-01": 283.4},
-"Osaka":{"SMT-01": 295.1},
-"Tel Aviv":{"SMT-01": 366.9}
+"Stockholm":{"SMT-01": 302.2, "CMP-01": 81394},
+"Oslo":{"SMT-01": 281.9, "CMP-01": 63394},
+"Helsinki":{"SMT-01": 238.8, "CMP-01": 66107},
+"Madrid":{"SMT-01": 382.3, "CMP-01": 59768},
+"Milan":{"SMT-01": 429.2, "CMP-01": 82014},
+"Rome":{"SMT-01": 376.5, "CMP-01": 65690},
+"Munich":{"SMT-01": 221.7, "CMP-01": 102244},
+"Frankfurt":{"SMT-01": 232.1, "CMP-01": 82688},
+"Hamburg":{"SMT-01": 196.7, "CMP-01": 77768},
+"Brussels":{"SMT-01": 266.9, "CMP-01": 78040},
+"Dublin":{"SMT-01": 337.0, "CMP-01": 141694},
+"Lisbon":{"SMT-01": 354.4, "CMP-01": 50408},
+"Prague":{"SMT-01": 258.9, "CMP-01": 83056},
+"Warsaw":{"SMT-01": 362.9, "CMP-01": 81920},
+"Istanbul":{"SMT-01": 251.2, "CMP-01": 56428},
+"Montreal":{"SMT-01": 334.2, "CMP-01": 38730},
+"Vancouver":{"SMT-01": 374.2, "CMP-01": 45902},
+"Chicago":{"SMT-01": 392.9, "CMP-01": 75524},
+"Boston":{"SMT-01": 361.6, "CMP-01": 101761},
+"Los Angeles":{"SMT-01": 392.1, "CMP-01": 70646},
+"Seattle":{"SMT-01": 410.0, "CMP-01": 111516},
+"Washington DC":{"SMT-01": 362.5, "CMP-01": 83988},
+"Sydney":{"SMT-01": 239.5, "CMP-01": 45152},
+"Auckland":{"SMT-01": 283.4, "CMP-01": 55906},
+"Osaka":{"SMT-01": 295.1, "CMP-01": 41497},
+"Tel Aviv":{"SMT-01": 366.9, "CMP-01": null}
 },
 "provenance":{
  "LIV-01": {
@@ -1772,6 +1772,161 @@ window.INDEX_DATA = {
     "year": "2023",
     "source": "USA05F | San Francisco (Greater) | FUA | GDP | USD_PPP_PS | 2023",
     "note": "OECD FUA (metro), constant-PPP real USD per person. 'San Francisco (Greater)' FUA is the wider Bay Area delineation; aggregated from BEA county-level GDP."
+   },
+   "Stockholm": {
+    "value": 81394,
+    "year": "2023",
+    "source": "SE001F | Stockholm | FUA | USD_PPP_PS",
+    "note": "OECD FUA (metro), USD per person PPP, constant prices/constant PPP (real). Modelled estimate per OECD FUA methodology. 2020 was a COVID-dip year in this series (79724 vs 2019=81785); latest 2023 value is post-dip."
+   },
+   "Oslo": {
+    "value": 63394,
+    "year": "2021",
+    "source": "NO001F | Oslo | FUA | USD_PPP_PS",
+    "note": "OECD FUA (metro), USD per person PPP, constant prices/constant PPP (real). Modelled estimate per OECD FUA methodology. Latest is 2021; series shows a sharp drop 2020=73788 to 2021=63394 (OBS_STATUS=A for both) - likely P"
+   },
+   "Helsinki": {
+    "value": 66107,
+    "year": "2023",
+    "source": "FI001F | Helsinki/Helsingfors | FUA | USD_PPP_PS",
+    "note": "OECD FUA (metro), USD per person PPP, constant prices/constant PPP (real). Modelled estimate per OECD FUA methodology. 2020 was a COVID-dip year in this series (67861 vs 2019=70878); latest 2023 value is post-dip."
+   },
+   "Madrid": {
+    "value": 59768,
+    "year": "2022",
+    "source": "ES001F | Madrid | FUA | USD_PPP_PS",
+    "note": "OECD FUA (metro), USD per person PPP, constant prices/constant PPP (real). Modelled estimate per OECD FUA methodology. 2020 was a COVID-dip year in this series (52853 vs 2019=59996); latest 2022 value is post-dip."
+   },
+   "Milan": {
+    "value": 82014,
+    "year": "2022",
+    "source": "IT002F | Milano | FUA | USD_PPP_PS",
+    "note": "OECD FUA (metro), USD per person PPP, constant prices/constant PPP (real). Modelled estimate per OECD FUA methodology. 2020 was a COVID-dip year in this series (70127 vs 2019=75533); latest 2022 value is post-dip."
+   },
+   "Rome": {
+    "value": 65690,
+    "year": "2022",
+    "source": "IT001F | Roma | FUA | USD_PPP_PS",
+    "note": "OECD FUA (metro), USD per person PPP, constant prices/constant PPP (real). Modelled estimate per OECD FUA methodology. 2020 was a COVID-dip year in this series (55988 vs 2019=61814); latest 2022 value is post-dip."
+   },
+   "Munich": {
+    "value": 102244,
+    "year": "2022",
+    "source": "DE003F | München | FUA | USD_PPP_PS",
+    "note": "OECD FUA (metro), USD per person PPP, constant prices/constant PPP (real). Modelled estimate per OECD FUA methodology. 2020 was a COVID-dip year in this series (96323 vs 2019=102253); latest 2022 value is post-dip."
+   },
+   "Frankfurt": {
+    "value": 82688,
+    "year": "2022",
+    "source": "DE005F | Frankfurt am Main | FUA | USD_PPP_PS",
+    "note": "OECD FUA (metro), USD per person PPP, constant prices/constant PPP (real). Modelled estimate per OECD FUA methodology. 2020 was a COVID-dip year in this series (79678 vs 2019=84554); latest 2022 value is post-dip."
+   },
+   "Hamburg": {
+    "value": 77768,
+    "year": "2022",
+    "source": "DE002F | Hamburg | FUA | USD_PPP_PS",
+    "note": "OECD FUA (metro), USD per person PPP, constant prices/constant PPP (real). Modelled estimate per OECD FUA methodology. 2020 was a COVID-dip year in this series (70709 vs 2019=74563); latest 2022 value is post-dip."
+   },
+   "Brussels": {
+    "value": 78040,
+    "year": "2023",
+    "source": "BE001F | Bruxelles/Brussel/Leuven | FUA | USD_PPP_PS",
+    "note": "OECD FUA (metro), USD per person PPP, constant prices/constant PPP (real). Modelled estimate per OECD FUA methodology. 2020 was a COVID-dip year in this series (71470 vs 2019=76045); latest 2023 value is post-dip. FUA is"
+   },
+   "Dublin": {
+    "value": 141694,
+    "year": "2023",
+    "source": "IE001F | Dublin | FUA | USD_PPP_PS",
+    "note": "OECD FUA (metro), USD per person PPP, constant prices/constant PPP (real). Modelled estimate per OECD FUA methodology. Caution: Irish GDP is inflated by multinational profit-shifting; per-capita GDP overstates local inco"
+   },
+   "Lisbon": {
+    "value": 50408,
+    "year": "2022",
+    "source": "PT001F | Lisboa | FUA | USD_PPP_PS",
+    "note": "OECD FUA (metro), USD per person PPP, constant prices/constant PPP (real). Modelled estimate per OECD FUA methodology. 2020 was a COVID-dip year in this series (44950 vs 2019=49536); latest 2022 value is post-dip."
+   },
+   "Prague": {
+    "value": 83056,
+    "year": "2022",
+    "source": "CZ001F | Praha | FUA | USD_PPP_PS",
+    "note": "OECD FUA (metro), USD per person PPP, constant prices/constant PPP (real). Modelled estimate per OECD FUA methodology. 2020 was a COVID-dip year in this series (74036 vs 2019=80076); latest 2022 value is post-dip."
+   },
+   "Warsaw": {
+    "value": 81920,
+    "year": "2022",
+    "source": "PL001F | Warszawa | FUA | USD_PPP_PS",
+    "note": "OECD FUA (metro), USD per person PPP, constant prices/constant PPP (real). Modelled estimate per OECD FUA methodology. 2020 was a COVID-dip year in this series (73598 vs 2019=78295); latest 2022 value is post-dip."
+   },
+   "Istanbul": {
+    "value": 56428,
+    "year": "2023",
+    "source": "TR012F | Istanbul | FUA | USD_PPP_PS",
+    "note": "OECD FUA (metro), USD per person PPP, constant prices/constant PPP (real). Modelled estimate per OECD FUA methodology. 2023 value; no 2020 dip in this series (2019=47823, 2020=46353, 2021=52370)."
+   },
+   "Montreal": {
+    "value": 38730,
+    "year": "2020",
+    "source": "CAN02 | Montreal | METRO (archived DF_CITIES) | GDP_PC_REAL_PPP",
+    "note": "From ARCHIVED OECD Metropolitan areas dataset (OECD:DF_CITIES v1.0, tenant=archive) - current FUA dataflow DF_ECONOMY v1.1 has no GDP rows for this metro. USD, constant prices, constant PPP, base year 2015 (same basis as"
+   },
+   "Vancouver": {
+    "value": 45902,
+    "year": "2020",
+    "source": "CAN03 | Vancouver | METRO (archived DF_CITIES) | GDP_PC_REAL_PPP",
+    "note": "From ARCHIVED OECD Metropolitan areas dataset (OECD:DF_CITIES v1.0, tenant=archive) - current FUA dataflow DF_ECONOMY v1.1 has no GDP rows for this metro. USD, constant prices, constant PPP, base year 2015 (same basis as"
+   },
+   "Chicago": {
+    "value": 75524,
+    "year": "2023",
+    "source": "USA03F | Chicago | FUA | USD_PPP_PS",
+    "note": "OECD FUA (metro), USD per person PPP, constant prices/constant PPP (real). Modelled estimate per OECD FUA methodology. 2020 was a COVID-dip year in this series (68589 vs 2019=72110); latest 2023 value is post-dip."
+   },
+   "Boston": {
+    "value": 101761,
+    "year": "2023",
+    "source": "USA11F | Boston | FUA | USD_PPP_PS",
+    "note": "OECD FUA (metro), USD per person PPP, constant prices/constant PPP (real). Modelled estimate per OECD FUA methodology. 2020 was a COVID-dip year in this series (95573 vs 2019=95945); latest 2023 value is post-dip."
+   },
+   "Los Angeles": {
+    "value": 70646,
+    "year": "2023",
+    "source": "USA02F | Los Angeles (Greater) | FUA | USD_PPP_PS",
+    "note": "OECD FUA (metro), USD per person PPP, constant prices/constant PPP (real). Modelled estimate per OECD FUA methodology. 2020 was a COVID-dip year in this series (63941 vs 2019=66132); latest 2023 value is post-dip. Used U"
+   },
+   "Seattle": {
+    "value": 111516,
+    "year": "2023",
+    "source": "USA14F | Seattle | FUA | USD_PPP_PS",
+    "note": "OECD FUA (metro), USD per person PPP, constant prices/constant PPP (real). Modelled estimate per OECD FUA methodology. 2020 was a COVID-dip year in this series (101014 vs 2019=101024); latest 2023 value is post-dip."
+   },
+   "Washington DC": {
+    "value": 83988,
+    "year": "2023",
+    "source": "USA04F | Washington (Greater) | FUA | USD_PPP_PS",
+    "note": "OECD FUA (metro), USD per person PPP, constant prices/constant PPP (real). Modelled estimate per OECD FUA methodology. 2020 was a COVID-dip year in this series (79173 vs 2019=80601); latest 2023 value is post-dip. Used U"
+   },
+   "Sydney": {
+    "value": 45152,
+    "year": "2020",
+    "source": "AUS01 | Greater Sydney | METRO (archived DF_CITIES) | GDP_PC_REAL_PPP",
+    "note": "From ARCHIVED OECD Metropolitan areas dataset (OECD:DF_CITIES v1.0, tenant=archive) - current FUA dataflow DF_ECONOMY v1.1 has no GDP rows for this metro. USD, constant prices, constant PPP, base year 2015 (same basis as"
+   },
+   "Auckland": {
+    "value": 55906,
+    "year": "2022",
+    "source": "NZL01F | Auckland | FUA | USD_PPP_PS",
+    "note": "OECD FUA (metro), USD per person PPP, constant prices/constant PPP (real). Modelled estimate per OECD FUA methodology. 2020 was a COVID-dip year in this series (50555 vs 2019=51431); latest 2022 value is post-dip."
+   },
+   "Osaka": {
+    "value": 41497,
+    "year": "2021",
+    "source": "JPN02F | Osaka | FUA | USD_PPP_PS",
+    "note": "OECD FUA (metro), USD per person PPP, constant prices/constant PPP (real). Modelled estimate per OECD FUA methodology. 2020 was a COVID-dip year in this series (40063 vs 2019=41719); latest 2021 value is post-dip. Latest"
+   },
+   "Tel Aviv": {
+    "value": null,
+    "year": "n/a",
+    "note": "null - no GDP data exists for Tel Aviv in either source: current flow DSD_FUA_ECO@DF_ECONOMY v1.1 has only EMPW (employment) rows for ISR10F, and archived DF_CITIES has only environmental/hazard variables for ISR10 (no G"
    }
   }
  },
