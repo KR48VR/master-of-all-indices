@@ -38,9 +38,9 @@ window.INDEX_DATA = {
 {"id": "CMP-01", "domain": "Competitive", "subtheme": "Economic Output", "name": "GDP per capita", "measures": "Metro GDP / population", "unit": "USD PPP", "direction": "higher", "dataLevel": "Metro", "source": "OECD Metro (FUA) / World Bank", "appearsIn": "GPCI (Economy)", "pilot": 1, "caveat": "OECD metropolitan (FUA) GDP per head in constant-2015-PPP USD; years 2020-2023. London and the archived-vintage metros (Melbourne, Toronto, Montreal, Vancouver, Sydney) are 2020 COVID-dip values. Dublin reads high (multinational profit-shifting). Singapore is a national World Bank figure on a 2021 PPP base. Dubai and Tel Aviv: no honest metro PPP figure exists (blank).", "contestable": 0, "approx": "none"},
 {"id": "CMP-02", "domain": "Competitive", "subtheme": "Economic Output", "name": "Labour productivity", "measures": "Gross value added per worker", "unit": "USD", "direction": "higher", "dataLevel": "Metro", "source": "OECD", "appearsIn": "—", "pilot": 0, "caveat": "", "contestable": 0, "approx": "none"},
 {"id": "CMP-03", "domain": "Competitive", "subtheme": "Business Environment", "name": "Global firm presence", "measures": "Number of major global-firm HQs", "unit": "count", "direction": "higher", "dataLevel": "City", "source": "GPCI / Fortune", "appearsIn": "GPCI (Economy)", "pilot": 0, "caveat": "", "contestable": 0, "approx": "none"},
-{"id": "CMP-04", "domain": "Competitive", "subtheme": "Business Environment", "name": "Startup density", "measures": "Dealroom-tracked startups per 100,000 metro residents", "unit": "per 100k", "direction": "higher", "dataLevel": "Metro", "source": "Dealroom (public hub pages)", "appearsIn": "GPCI-Startup", "pilot": 1, "caveat": "Dealroom \"tracked startups\" per hub / page-shown metro population (captured 11 Jul 2026). Hubs are metros: SF = Bay Area, Toronto = Toronto-Waterloo, Berlin = Berlin/Brandenburg. Copenhagen, Vienna, Seoul, Dubai show no count and Amsterdam no population (blank). Database coverage varies by region — deepest in Europe/US.", "contestable": 0, "approx": "modelled"},
+{"id": "CMP-04", "domain": "Competitive", "subtheme": "Business Environment", "name": "Startup density", "measures": "Dealroom-tracked startups per 100,000 metro residents", "unit": "per 100k", "direction": "higher", "dataLevel": "Metro", "source": "Dealroom (public hub pages)", "appearsIn": "GPCI-Startup", "pilot": 1, "caveat": "Dealroom \"tracked startups\" per hub / page-shown metro population (captured 11-12 Jul 2026). Hubs are metros: SF = Bay Area, Toronto = Toronto-Waterloo, Berlin = Berlin/Brandenburg. Hubs whose pages render no startup count are blank (Copenhagen, Vienna, Seoul, Dubai and most hubs added in the 2026 expansion outside the largest ecosystems); Amsterdam shows no population (blank). Database coverage varies by region — deepest in Europe/US.", "contestable": 0, "approx": "modelled"},
 {"id": "CMP-05", "domain": "Competitive", "subtheme": "Dynamism", "name": "Employment growth", "measures": "5-year change in metro employment", "unit": "%", "direction": "higher", "dataLevel": "Metro", "source": "OECD", "appearsIn": "—", "pilot": 0, "caveat": "", "contestable": 0, "approx": "none"},
-{"id": "CMP-06", "domain": "Competitive", "subtheme": "Dynamism", "name": "VC funding", "measures": "Dealroom \"VC invested\" per resident (metro hub)", "unit": "USD", "direction": "higher", "dataLevel": "Metro", "source": "Dealroom (public hub pages)", "appearsIn": "Startup Genome", "pilot": 1, "caveat": "Dealroom hub \"VC invested\" / page-shown metro population (captured 11 Jul 2026). The source page does not state the time window of \"VC invested\" — compare across cities, not against external annual figures. Amsterdam blank (no population shown).", "contestable": 0, "approx": "none"},
+{"id": "CMP-06", "domain": "Competitive", "subtheme": "Dynamism", "name": "VC funding", "measures": "Dealroom \"VC invested\" per resident (metro hub)", "unit": "USD", "direction": "higher", "dataLevel": "Metro", "source": "Dealroom (public hub pages)", "appearsIn": "Startup Genome", "pilot": 1, "caveat": "Dealroom hub \"VC invested\" / page-shown metro population (captured 11-12 Jul 2026). The source page does not state the time window of \"VC invested\" — compare across cities, not against external annual figures. Amsterdam blank (no population shown).", "contestable": 0, "approx": "none"},
 {"id": "TAL-01", "domain": "Talent", "subtheme": "Education", "name": "Tertiary attainment", "measures": "% of adults with tertiary education", "unit": "%", "direction": "higher", "dataLevel": "Metro", "source": "OECD Regions / SingStat / Dubai Statistics Center", "appearsIn": "—", "pilot": 1, "caveat": "OECD regional shares (25-64, ISCED 5-8), finest level published: city-level for some, but state/province/region proxies for the US, Canadian, Australian, Italian, German and Japanese cities (named per value; Milan reads as Lombardy, Osaka as Kansai). Singapore counts residents 25+. Dubai is on a DIFFERENT basis — university-and-above as % of population 10+ (DSC 2023). Years mix 2020-2025.", "contestable": 0, "approx": "none"},
 {"id": "TAL-02", "domain": "Talent", "subtheme": "Education", "name": "Top universities", "measures": "Universities in the global top 500", "unit": "count", "direction": "higher", "dataLevel": "City", "source": "QS World University Rankings 2026", "appearsIn": "GPCI (R&D)", "pilot": 1, "caveat": "QS 2026 edition, counted with QS’s own city labels, city-proper rule: Stanford and Berkeley fall outside San Francisco (a real 0), the Saclay cluster outside Paris — counts are boundary-sensitive for SF, NY and Paris. Dubai’s 0 is real: all six UAE top-500 universities are in other emirates.", "contestable": 0, "approx": "none"},
 {"id": "TAL-03", "domain": "Talent", "subtheme": "Skills & Workforce", "name": "Knowledge workers", "measures": "% employed in knowledge-intensive jobs", "unit": "%", "direction": "higher", "dataLevel": "Metro", "source": "Eurostat / OECD", "appearsIn": "—", "pilot": 0, "caveat": "", "contestable": 0, "approx": "none"},
@@ -97,19 +97,19 @@ window.INDEX_DATA = {
 "Auckland":{"SMT-01": 283.4, "CMP-01": 55906, "LIV-04": 82.7, "TAL-01": 45.5, "LIV-05": 3.47, "LIV-01": 1.46, "SMT-05": 93.5, "GRN-01": 5.5, "GRN-02": 88.4, "LIV-06": 10.5, "CON-05": 42.2, "CON-03": 37.6, "SMT-03": 80.21, "TAL-02": 2, "CON-01": 46, "TAL-06": 42.5, "GRN-05": 27.0, "CMP-04": null, "CMP-06": 166},
 "Osaka":{"SMT-01": 295.1, "CMP-01": 41497, "LIV-04": 84.2, "TAL-01": 56.9, "LIV-05": 2.92, "LIV-01": 0.23, "SMT-05": 85.5, "GRN-01": 9.4, "GRN-02": 72.2, "LIV-06": 10.6, "CON-05": 42.9, "CON-03": null, "SMT-03": null, "TAL-02": 1, "CON-01": null, "TAL-06": 6.8, "GRN-05": 9.5, "CMP-04": 3.7, "CMP-06": 21},
 "Tel Aviv":{"SMT-01": 366.9, "CMP-01": null, "LIV-04": 83.1, "TAL-01": 60.4, "LIV-05": 4.9, "LIV-01": 1.63, "SMT-05": 88.2, "GRN-01": 17.4, "GRN-02": 65.7, "LIV-06": 20.0, "CON-05": null, "CON-03": 87.9, "SMT-03": null, "TAL-02": 1, "CON-01": 114, "TAL-06": 23.5, "GRN-05": 36.0, "CMP-04": null, "CMP-06": 2111},
-"Hong Kong":{"SMT-01": 431.6, "TAL-02": 5, "CON-03": 52.2, "CON-05": 47.7, "CMP-01": 66154, "LIV-01": 0.38, "SMT-05": 95.8, "GRN-01": 19.8, "GRN-02": 95.7, "SMT-03": null, "TAL-06": 38.3, "CON-01": 149.0, "GRN-05": 34.0},
-"Taipei":{"SMT-01": 258.2, "TAL-02": 4, "CON-03": null, "CON-05": 43.6, "CMP-01": null, "LIV-01": 0.32, "SMT-05": 88.8, "GRN-01": 15.0, "GRN-02": null, "SMT-03": null, "TAL-06": 3.3, "CON-01": null, "GRN-05": 70.8},
-"Bangkok":{"SMT-01": 375.6, "TAL-02": 1, "CON-03": null, "CON-05": 67.9, "CMP-01": null, "LIV-01": 4.79, "SMT-05": 90.9, "GRN-01": 23.4, "GRN-02": 11.8, "SMT-03": 66.67, "TAL-06": null, "CON-01": 154.0, "GRN-05": null},
-"Kuala Lumpur":{"SMT-01": 272.1, "TAL-02": 4, "CON-03": null, "CON-05": 39.1, "CMP-01": null, "LIV-01": 0.73, "SMT-05": 98.0, "GRN-01": 28.3, "GRN-02": 46.1, "SMT-03": 59.38, "TAL-06": 13.1, "CON-01": 131.0, "GRN-05": 37.9},
-"Jakarta":{"SMT-01": 97.7, "TAL-02": 0, "CON-03": 22.6, "CON-05": 59.8, "CMP-01": null, "LIV-01": 0.3, "SMT-05": 72.8, "GRN-01": 33.8, "GRN-02": 24.2, "SMT-03": 68.75, "TAL-06": null, "CON-01": 50.0, "GRN-05": null},
-"Manila":{"SMT-01": 198.9, "TAL-02": 0, "CON-03": null, "CON-05": 57.3, "CMP-01": null, "LIV-01": 4.35, "SMT-05": 67.3, "GRN-01": 15.4, "GRN-02": 28.7, "SMT-03": 60.42, "TAL-06": null, "CON-01": 66.0, "GRN-05": 48.0},
-"Ho Chi Minh City":{"SMT-01": 269.6, "TAL-02": 0, "CON-03": null, "CON-05": 40.3, "CMP-01": null, "LIV-01": 1.54, "SMT-05": 84.2, "GRN-01": 23.5, "GRN-02": 30.4, "SMT-03": 63.54, "TAL-06": null, "CON-01": 75.0, "GRN-05": null},
-"Mumbai":{"SMT-01": 93.4, "TAL-02": 1, "CON-03": null, "CON-05": 61.5, "CMP-01": null, "LIV-01": 2.82, "SMT-05": 70.0, "GRN-01": 49.5, "GRN-02": 35.3, "SMT-03": 56.25, "TAL-06": null, "CON-01": 52.0, "GRN-05": null},
-"Abu Dhabi":{"SMT-01": 348.1, "TAL-02": 1, "CON-03": 60.8, "CON-05": 25.5, "CMP-01": null, "LIV-01": 0.69, "SMT-05": 100.0, "GRN-01": 30.9, "GRN-02": 37.6, "SMT-03": null, "TAL-06": null, "CON-01": 165.0, "GRN-05": 32.0},
-"Shanghai":{"SMT-01": 458.1, "TAL-02": 5, "CON-03": null, "CON-05": null, "CMP-01": null, "LIV-01": 0.5, "SMT-05": 91.6, "GRN-01": 28.4, "GRN-02": 29.9, "SMT-03": 86.46, "TAL-06": null, "CON-01": 105.0, "GRN-05": 43.2},
-"Beijing":{"SMT-01": 331.9, "TAL-02": 7, "CON-03": null, "CON-05": null, "CMP-01": null, "LIV-01": 0.5, "SMT-05": 91.6, "GRN-01": 31.0, "GRN-02": null, "SMT-03": null, "TAL-06": null, "CON-01": 124.0, "GRN-05": 39.8},
-"Shenzhen":{"SMT-01": 314.9, "TAL-02": 2, "CON-03": null, "CON-05": null, "CMP-01": null, "LIV-01": 0.5, "SMT-05": 91.6, "GRN-01": 17.3, "GRN-02": 21.9, "SMT-03": null, "TAL-06": null, "CON-01": 54.0, "GRN-05": null},
-"Delhi":{"SMT-01": 120.5, "TAL-02": 2, "CON-03": null, "CON-05": 55.4, "CMP-01": null, "LIV-01": 2.82, "SMT-05": 70.0, "GRN-01": 107.0, "GRN-02": 43.6, "SMT-03": null, "TAL-06": null, "CON-01": 79.0, "GRN-05": null}
+"Hong Kong":{"SMT-01": 431.6, "TAL-02": 5, "CON-03": 52.2, "CON-05": 47.7, "CMP-01": 66154, "LIV-01": 0.38, "SMT-05": 95.8, "GRN-01": 19.8, "GRN-02": 95.7, "SMT-03": null, "TAL-06": 38.3, "CON-01": 149.0, "GRN-05": 34.0, "CMP-04": 16.5, "CMP-06": 413},
+"Taipei":{"SMT-01": 258.2, "TAL-02": 4, "CON-03": null, "CON-05": 43.6, "CMP-01": null, "LIV-01": 0.32, "SMT-05": 88.8, "GRN-01": 15.0, "GRN-02": null, "SMT-03": null, "TAL-06": 3.3, "CON-01": null, "GRN-05": 70.8, "CMP-04": null, "CMP-06": 25},
+"Bangkok":{"SMT-01": 375.6, "TAL-02": 1, "CON-03": null, "CON-05": 67.9, "CMP-01": null, "LIV-01": 4.79, "SMT-05": 90.9, "GRN-01": 23.4, "GRN-02": 11.8, "SMT-03": 66.67, "TAL-06": null, "CON-01": 154.0, "GRN-05": null, "CMP-04": null, "CMP-06": 8},
+"Kuala Lumpur":{"SMT-01": 272.1, "TAL-02": 4, "CON-03": null, "CON-05": 39.1, "CMP-01": null, "LIV-01": 0.73, "SMT-05": 98.0, "GRN-01": 28.3, "GRN-02": 46.1, "SMT-03": 59.38, "TAL-06": 13.1, "CON-01": 131.0, "GRN-05": 37.9, "CMP-04": null, "CMP-06": 19},
+"Jakarta":{"SMT-01": 97.7, "TAL-02": 0, "CON-03": 22.6, "CON-05": 59.8, "CMP-01": null, "LIV-01": 0.3, "SMT-05": 72.8, "GRN-01": 33.8, "GRN-02": 24.2, "SMT-03": 68.75, "TAL-06": null, "CON-01": 50.0, "GRN-05": null, "CMP-04": null, "CMP-06": 13},
+"Manila":{"SMT-01": 198.9, "TAL-02": 0, "CON-03": null, "CON-05": 57.3, "CMP-01": null, "LIV-01": 4.35, "SMT-05": 67.3, "GRN-01": 15.4, "GRN-02": 28.7, "SMT-03": 60.42, "TAL-06": null, "CON-01": 66.0, "GRN-05": 48.0, "CMP-04": null, "CMP-06": 10},
+"Ho Chi Minh City":{"SMT-01": 269.6, "TAL-02": 0, "CON-03": null, "CON-05": 40.3, "CMP-01": null, "LIV-01": 1.54, "SMT-05": 84.2, "GRN-01": 23.5, "GRN-02": 30.4, "SMT-03": 63.54, "TAL-06": null, "CON-01": 75.0, "GRN-05": null, "CMP-04": null, "CMP-06": 9},
+"Mumbai":{"SMT-01": 93.4, "TAL-02": 1, "CON-03": null, "CON-05": 61.5, "CMP-01": null, "LIV-01": 2.82, "SMT-05": 70.0, "GRN-01": 49.5, "GRN-02": 35.3, "SMT-03": 56.25, "TAL-06": null, "CON-01": 52.0, "GRN-05": null, "CMP-04": 8.7, "CMP-06": 122},
+"Abu Dhabi":{"SMT-01": 348.1, "TAL-02": 1, "CON-03": 60.8, "CON-05": 25.5, "CMP-01": null, "LIV-01": 0.69, "SMT-05": 100.0, "GRN-01": 30.9, "GRN-02": 37.6, "SMT-03": null, "TAL-06": null, "CON-01": 165.0, "GRN-05": 32.0, "CMP-04": null, "CMP-06": 136},
+"Shanghai":{"SMT-01": 458.1, "TAL-02": 5, "CON-03": null, "CON-05": null, "CMP-01": null, "LIV-01": 0.5, "SMT-05": 91.6, "GRN-01": 28.4, "GRN-02": 29.9, "SMT-03": 86.46, "TAL-06": null, "CON-01": 105.0, "GRN-05": 43.2, "CMP-04": 11.7, "CMP-06": 137},
+"Beijing":{"SMT-01": 331.9, "TAL-02": 7, "CON-03": null, "CON-05": null, "CMP-01": null, "LIV-01": 0.5, "SMT-05": 91.6, "GRN-01": 31.0, "GRN-02": null, "SMT-03": null, "TAL-06": null, "CON-01": 124.0, "GRN-05": 39.8, "CMP-04": 19.1, "CMP-06": 281},
+"Shenzhen":{"SMT-01": 314.9, "TAL-02": 2, "CON-03": null, "CON-05": null, "CMP-01": null, "LIV-01": 0.5, "SMT-05": 91.6, "GRN-01": 17.3, "GRN-02": 21.9, "SMT-03": null, "TAL-06": null, "CON-01": 54.0, "GRN-05": null, "CMP-04": 9.2, "CMP-06": 86},
+"Delhi":{"SMT-01": 120.5, "TAL-02": 2, "CON-03": null, "CON-05": 55.4, "CMP-01": null, "LIV-01": 2.82, "SMT-05": 70.0, "GRN-01": 107.0, "GRN-02": 43.6, "SMT-03": null, "TAL-06": null, "CON-01": 79.0, "GRN-05": null, "CMP-04": 8.4, "CMP-06": 98}
 },
 "provenance":{
  "LIV-01": {
@@ -4286,6 +4286,83 @@ window.INDEX_DATA = {
     "value": null,
     "year": "n/a",
     "note": "Hub page renders no startup count (no comparison table), as with Copenhagen/Vienna/Seoul/Dubai in v1.0."
+   },
+   "Hong Kong": {
+    "value": 16.5,
+    "year": "2026-07-12 (live db)",
+    "source": "web.archive.org capture 20260712080815 of https://dealroom.co/cities/hong-kong/ — peer-table self row (#15): Combined EV=$179B, 5-yr EV growth=12.4×, Unicorns=20, VC invested=$3.1B, Tracked startups=1,235; hero: 'Metro area · Asia · Pop. 7.5M · #37 city by EV'",
+    "trackedStartups": 1235,
+    "pagePopulation": 7500000
+   },
+   "Taipei": {
+    "value": null,
+    "year": "n/a",
+    "note": "Hub page renders no startup count (no comparison table), as with Copenhagen/Vienna/Seoul/Dubai in v1.0. Capture: web.archive.org capture 20260712081007 of https://dealroom.co/cities/taipei/"
+   },
+   "Bangkok": {
+    "value": null,
+    "year": "n/a",
+    "note": "Hub page renders no startup count (no comparison table), as with Copenhagen/Vienna/Seoul/Dubai in v1.0. Capture: web.archive.org capture 20260712081154 of https://dealroom.co/cities/bangkok/"
+   },
+   "Kuala Lumpur": {
+    "value": null,
+    "year": "n/a",
+    "note": "Hub page renders no startup count (no comparison table), as with Copenhagen/Vienna/Seoul/Dubai in v1.0. Capture: web.archive.org capture 20260712081400 of https://dealroom.co/cities/kuala-lumpur/"
+   },
+   "Jakarta": {
+    "value": null,
+    "year": "n/a",
+    "note": "Hub page renders no startup count (no comparison table), as with Copenhagen/Vienna/Seoul/Dubai in v1.0. Capture: web.archive.org capture 20260712081519 of https://dealroom.co/cities/jakarta/"
+   },
+   "Manila": {
+    "value": null,
+    "year": "n/a",
+    "note": "Hub page renders no startup count (no comparison table), as with Copenhagen/Vienna/Seoul/Dubai in v1.0. Capture: web.archive.org capture 20260712081718 of https://dealroom.co/cities/manila/"
+   },
+   "Ho Chi Minh City": {
+    "value": null,
+    "year": "n/a",
+    "note": "Hub page renders no startup count (no comparison table), as with Copenhagen/Vienna/Seoul/Dubai in v1.0. Capture: web.archive.org capture 20260712081817 of https://dealroom.co/cities/ho-chi-minh/"
+   },
+   "Mumbai": {
+    "value": 8.7,
+    "year": "2026-07-12 (live db)",
+    "source": "web.archive.org capture 20260712081906 of https://dealroom.co/cities/mumbai/ — peer-table self row (#2): Combined EV=$243B, 5-yr EV growth=15.3×, Unicorns=26, VC invested=$2.8B, Tracked startups=1,995; hero: 'Metro area · India · Pop. 22.9M · #25 city by EV'",
+    "trackedStartups": 1995,
+    "pagePopulation": 22900000
+   },
+   "Abu Dhabi": {
+    "value": null,
+    "year": "n/a",
+    "note": "Hub page renders no startup count (no comparison table), as with Copenhagen/Vienna/Seoul/Dubai in v1.0. Capture: web.archive.org capture 20260712081955 of https://dealroom.co/cities/abu-dhabi/"
+   },
+   "Shanghai": {
+    "value": 11.7,
+    "year": "2026-07-12 (live db)",
+    "source": "web.archive.org capture 20260712082046 of https://dealroom.co/cities/shanghai/ — peer-table self row (#5): Combined EV=$1T, 5-yr EV growth=5.3×, Unicorns=128, VC invested=$4.1B, Tracked startups=3,500; hero: 'Metro area · China · Pop. 29.9M · #12 city by EV'",
+    "trackedStartups": 3500,
+    "pagePopulation": 29900000
+   },
+   "Beijing": {
+    "value": 19.1,
+    "year": "2026-07-12 (live db)",
+    "source": "web.archive.org capture 20260712082234 of https://dealroom.co/cities/beijing/ — peer-table self row (#3): Combined EV=$1.6T, 5-yr EV growth=3.6×, Unicorns=169, VC invested=$6.3B, Tracked startups=4,278; hero: 'Metro area · China · Pop. 22.4M · #8 city by EV'",
+    "trackedStartups": 4278,
+    "pagePopulation": 22400000
+   },
+   "Shenzhen": {
+    "value": 9.2,
+    "year": "2026-07-12 (live db)",
+    "source": "web.archive.org capture 20260712082325 of https://dealroom.co/cities/shenzhen/ — peer-table self row (#4): Combined EV=$1T, 5-yr EV growth=1.9×, Unicorns=49, VC invested=$2B, Tracked startups=2,152; hero: 'Metro area · China · Pop. 23.3M · #11 city by EV'",
+    "trackedStartups": 2152,
+    "pagePopulation": 23300000
+   },
+   "Delhi": {
+    "value": 8.4,
+    "year": "2026-07-12 (live db)",
+    "source": "web.archive.org capture 20260712082414 of https://dealroom.co/cities/delhi/ — peer-table self row (#3): Combined EV=$228B, 5-yr EV growth=6.1×, Unicorns=30, VC invested=$2.8B, Tracked startups=2,403; hero: 'Metro area · India · Pop. 28.5M · #27 city by EV'",
+    "trackedStartups": 2403,
+    "pagePopulation": 28500000
    }
   }
  },
@@ -4633,6 +4710,110 @@ window.INDEX_DATA = {
     "vcInvestedUsd": 9500000000,
     "vcWindow": "not stated on page",
     "pagePopulation": 4500000
+   },
+   "Hong Kong": {
+    "value": 413,
+    "year": "2026-07-12 (live db)",
+    "source": "web.archive.org capture 20260712080815 of https://dealroom.co/cities/hong-kong/ — peer-table self row (#15): Combined EV=$179B, 5-yr EV growth=12.4×, Unicorns=20, VC invested=$3.1B, Tracked startups=1,235; hero: 'Metro area · Asia · Pop. 7.5M · #37 city by EV'",
+    "vcInvestedUsd": 3100000000,
+    "vcWindow": "not stated on page (label 'VC invested', no time window shown)",
+    "pagePopulation": 7500000
+   },
+   "Taipei": {
+    "value": 25,
+    "year": "2026-07-12 (live db)",
+    "source": "web.archive.org capture 20260712081007 of https://dealroom.co/cities/taipei/ — no peer table rendered; VC invested from the page's own meta description; hero: 'Metro area · Taiwan · Pop. 7M'",
+    "vcInvestedUsd": 172100000,
+    "vcWindow": "not stated on page (label 'VC invested', no time window shown)",
+    "pagePopulation": 7000000
+   },
+   "Bangkok": {
+    "value": 8,
+    "year": "2026-07-12 (live db)",
+    "source": "web.archive.org capture 20260712081154 of https://dealroom.co/cities/bangkok/ — no peer table rendered; VC invested from the page's own meta description; hero: 'Metro area · Thailand · Pop. 14.6M'",
+    "vcInvestedUsd": 120700000,
+    "vcWindow": "not stated on page (label 'VC invested', no time window shown)",
+    "pagePopulation": 14600000
+   },
+   "Kuala Lumpur": {
+    "value": 19,
+    "year": "2026-07-12 (live db)",
+    "source": "web.archive.org capture 20260712081400 of https://dealroom.co/cities/kuala-lumpur/ — no peer table rendered; VC invested from the page's own meta description; hero: 'Metro area · Malaysia · Pop. 8.5M'",
+    "vcInvestedUsd": 163700000,
+    "vcWindow": "not stated on page (label 'VC invested', no time window shown)",
+    "pagePopulation": 8500000
+   },
+   "Jakarta": {
+    "value": 13,
+    "year": "2026-07-12 (live db)",
+    "source": "web.archive.org capture 20260712081519 of https://dealroom.co/cities/jakarta/ — no peer table rendered; VC invested from the page's own meta description; hero: 'Metro area · Indonesia · Pop. 31.7M'",
+    "vcInvestedUsd": 407800000,
+    "vcWindow": "not stated on page (label 'VC invested', no time window shown)",
+    "pagePopulation": 31700000
+   },
+   "Manila": {
+    "value": 10,
+    "year": "2026-07-12 (live db)",
+    "source": "web.archive.org capture 20260712081718 of https://dealroom.co/cities/manila/ — no peer table rendered; VC invested from the page's own meta description; hero: 'Metro area · Philippines · Pop. 13.5M'",
+    "vcInvestedUsd": 129100000,
+    "vcWindow": "not stated on page (label 'VC invested', no time window shown)",
+    "pagePopulation": 13500000
+   },
+   "Ho Chi Minh City": {
+    "value": 9,
+    "year": "2026-07-12 (live db)",
+    "source": "web.archive.org capture 20260712081817 of https://dealroom.co/cities/ho-chi-minh/ — no peer table rendered; VC invested from the page's own meta description; hero: 'Metro area · Vietnam · Pop. 21.3M'",
+    "vcInvestedUsd": 200300000,
+    "vcWindow": "not stated on page (label 'VC invested', no time window shown)",
+    "pagePopulation": 21300000
+   },
+   "Mumbai": {
+    "value": 122,
+    "year": "2026-07-12 (live db)",
+    "source": "web.archive.org capture 20260712081906 of https://dealroom.co/cities/mumbai/ — peer-table self row (#2): Combined EV=$243B, 5-yr EV growth=15.3×, Unicorns=26, VC invested=$2.8B, Tracked startups=1,995; hero: 'Metro area · India · Pop. 22.9M · #25 city by EV'",
+    "vcInvestedUsd": 2800000000,
+    "vcWindow": "not stated on page (label 'VC invested', no time window shown)",
+    "pagePopulation": 22900000
+   },
+   "Abu Dhabi": {
+    "value": 136,
+    "year": "2026-07-12 (live db)",
+    "source": "web.archive.org capture 20260712081955 of https://dealroom.co/cities/abu-dhabi/ — no peer table rendered; VC invested from the page's own meta description; hero: 'Metro area · United Arab Emirates · Pop. 1.6M'",
+    "vcInvestedUsd": 218000000,
+    "vcWindow": "not stated on page (label 'VC invested', no time window shown)",
+    "pagePopulation": 1600000
+   },
+   "Shanghai": {
+    "value": 137,
+    "year": "2026-07-12 (live db)",
+    "source": "web.archive.org capture 20260712082046 of https://dealroom.co/cities/shanghai/ — peer-table self row (#5): Combined EV=$1T, 5-yr EV growth=5.3×, Unicorns=128, VC invested=$4.1B, Tracked startups=3,500; hero: 'Metro area · China · Pop. 29.9M · #12 city by EV'",
+    "vcInvestedUsd": 4100000000,
+    "vcWindow": "not stated on page (label 'VC invested', no time window shown)",
+    "pagePopulation": 29900000
+   },
+   "Beijing": {
+    "value": 281,
+    "year": "2026-07-12 (live db)",
+    "source": "web.archive.org capture 20260712082234 of https://dealroom.co/cities/beijing/ — peer-table self row (#3): Combined EV=$1.6T, 5-yr EV growth=3.6×, Unicorns=169, VC invested=$6.3B, Tracked startups=4,278; hero: 'Metro area · China · Pop. 22.4M · #8 city by EV'",
+    "vcInvestedUsd": 6300000000,
+    "vcWindow": "not stated on page (label 'VC invested', no time window shown)",
+    "pagePopulation": 22400000
+   },
+   "Shenzhen": {
+    "value": 86,
+    "year": "2026-07-12 (live db)",
+    "source": "web.archive.org capture 20260712082325 of https://dealroom.co/cities/shenzhen/ — peer-table self row (#4): Combined EV=$1T, 5-yr EV growth=1.9×, Unicorns=49, VC invested=$2B, Tracked startups=2,152; hero: 'Metro area · China · Pop. 23.3M · #11 city by EV'",
+    "vcInvestedUsd": 2000000000,
+    "vcWindow": "not stated on page (label 'VC invested', no time window shown)",
+    "pagePopulation": 23300000
+   },
+   "Delhi": {
+    "value": 98,
+    "year": "2026-07-12 (live db)",
+    "source": "web.archive.org capture 20260712082414 of https://dealroom.co/cities/delhi/ — peer-table self row (#3): Combined EV=$228B, 5-yr EV growth=6.1×, Unicorns=30, VC invested=$2.8B, Tracked startups=2,403; hero: 'Metro area · India · Pop. 28.5M · #27 city by EV'",
+    "vcInvestedUsd": 2800000000,
+    "vcWindow": "not stated on page (label 'VC invested', no time window shown)",
+    "pagePopulation": 28500000
    }
   }
  },
