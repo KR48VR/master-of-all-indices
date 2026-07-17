@@ -281,6 +281,7 @@ button{font-family:inherit}
     <div class="legend">
       <h3>How to read the flags</h3>
       <div class="lgrid">
+        <div class="litem"><span class="badge ext k">EXTENDED</span><span>Extended-tier measure: judged compromised (wrong geography, stale, concept drift, or demonstrated bias) &mdash; scored only when you switch the extended tier on.</span></div>
         <div class="litem"><span class="badge metro k">METRO</span><span>Metro-area figure, not the city proper.</span></div>
         <div class="litem"><span class="badge proxy k">PROXY</span><span>Country-level stand-in &mdash; the weakest kind of match. Use with care.</span></div>
         <div class="litem"><span class="dot crowd k"></span><span>Crowd-sourced (e.g. Numbeo) &mdash; a soft signal.</span></div>
@@ -313,6 +314,20 @@ button{font-family:inherit}
         <li><b>Missing data costs visibility, not rank.</b> A city missing a measure has that measure dropped from its
         own score and its coverage % reduced &mdash; it is never punished with an assumed zero.</li>
       </ul>
+      <h4>The two tiers</h4>
+      <p>Every sourced measure sits in one of two tiers. The <b>gold tier</b> (29 measures, the default view) contains
+      only measures that measure what their name says, from the best available source. The <b>extended tier</b>
+      (6 measures, off by default behind the labelled toggle) contains measures we judged <b>compromised</b> and say
+      so: an OECD-only economy pair that blanks every non-OECD city, a Europe-only knowledge-worker share, a water
+      statistic mixing 2016&ndash;2022 vintages, an open-data score that measures national statistics offices rather
+      than cities, and one measure &mdash; Wikidata museum counts &mdash; included purely as a <b>bias demonstration</b>
+      (Paris counts at 1.8&times; its official museums, Shanghai at 0.4&times;, London near zero from a
+      database-linkage artifact; the numbers are reproducible, and reproducibly wrong).</p>
+      <p>Why include them at all? Because conventional indices are built from exactly this kind of data &mdash;
+      silently. Here you can switch it on, watch the ranking move, and see every compromised cell badged and
+      explained. The remaining 3 catalog measures are permanently blank: no honest source exists for them, and the
+      reasons are recorded. That is the difference between a small index and a dishonest one.</p>
+
       <p><b>These rules are enforced by machinery, not just promised.</b> Every proposed change to the dataset must
       pass an automated integrity check before it can be published: it rejects any value that lacks a matching
       provenance record, any blank without an explanation, any invalid honesty flag, and any drift between the app's
@@ -329,11 +344,12 @@ button{font-family:inherit}
         <div class="mstat"><div class="n" id="m-blanks">&ndash;</div><div class="l">explained blanks</div></div>
       </div>
       <p>These figures are computed live from the dataset, so this page cannot drift out of date with the data.
-      The catalog defines <span id="m-catalog">38</span> measures in six areas; those not yet sourced show as
-      "no data" until real values exist for them.</p>
+      The catalog defines <span id="m-catalog">38</span> measures in six areas: 29 gold, 6 extended, and 3
+      permanently blank because no honest source exists (the reasons are recorded in the sourcing plan).</p>
 
       <h4>How big should this get?</h4>
-      <p>Our target is roughly <b>50 cities and ~35 measures</b> &mdash; deliberately not more. The reasoning:</p>
+      <p>We are at <b>55 cities and 35 sourced measures</b> &mdash; which was the target, and roughly where we intend
+      to stay. The reasoning:</p>
       <ul>
         <li><b>Cities.</b> Below ~30, the 0&ndash;100 rescaling is twitchy &mdash; one outlier stretches everyone's scale.
         Around 50, we cover essentially every city people actually compare, while staying inside the geography where
@@ -361,6 +377,7 @@ button{font-family:inherit}
         <tr><td>Robustness</td><td>asserted</td><td>measured: the stability check shows each city's rank range when any one measure is dropped</td></tr>
         <tr><td>The data itself</td><td>paywalled, or locked in a PDF</td><td>versioned CSV download, licensed</td></tr>
         <tr><td>The rules</td><td>an editorial promise</td><td>a public automated check on every change</td></tr>
+        <tr><td>Compromised metrics</td><td>blended in, undisclosed</td><td>quarantined in an off-by-default extended tier, badged and explained</td></tr>
         <tr><td>Size</td><td>100&ndash;200 cities</td><td>55 by design &mdash; every cell held to the same bar</td></tr>
       </table>
       <p>Conventional indices are genuinely better at breadth, long time series, and expert judgement where hard data
@@ -377,17 +394,20 @@ button{font-family:inherit}
       <p><b>Download:</b> <a href="dataset.csv" download>dataset.csv</a> (one row per city &times; measure, with
       reference year, source and notes) &middot; <a href="dataset.js">dataset.js</a> (full provenance, machine-readable).
       This is <b>version <span id="m-ver">1.0.0</span></b> (released <span id="m-rel">2026-07-12</span>); versions are
-      tagged on GitHub, so citations stay stable while the data evolves. Adding cities re-scales all scores, so scores
-      are comparable within a version, not across versions.</p>
+      tagged on GitHub, so citations stay stable while the data evolves. Adding cities or measures re-scales all
+      scores, so scores are comparable within a version &mdash; not across versions, and not between the gold and
+      extended views.</p>
       <p><b>License:</b> the engine (this page) is MIT. The compiled dataset is
       <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> &mdash; chosen because some
       upstream sources (WHO, Ookla) share their data on those terms and we cannot grant more rights than we have.
       Each value's own source license is recorded in its provenance; check it before commercial reuse.</p>
       <p><b>Cite as:</b> <span class="mono" style="font-size:11.5px">Poon, K. W. Master Index Workbench, v<span id="m-ver2">1.0.0</span>
-      (2026). https://kr48vr.github.io/master-of-all-indices/</span> &mdash; and please cite the version you used.</p>
+      (2026). https://kr48vr.github.io/master-of-all-indices/</span> &mdash; and please cite the version you used,
+      and whether the extended tier was on.</p>
 
       <p style="margin-top:16px">Full sourcing plan and per-measure verdicts:
-      <a href="https://github.com/KR48VR/master-of-all-indices/blob/main/SOURCING.md">SOURCING.md</a> &middot;
+      <a href="https://github.com/KR48VR/master-of-all-indices/blob/main/SOURCING.md">SOURCING.md</a> (pilot) &middot;
+      <a href="https://github.com/KR48VR/master-of-all-indices/blob/main/PHASE3.md">PHASE3.md</a> (Phase 3 &amp; tiers) &middot;
       raw data with provenance: <a href="https://github.com/KR48VR/master-of-all-indices/blob/main/dataset.js">dataset.js</a> &middot;
       engine &amp; data are open on <a href="https://github.com/KR48VR/master-of-all-indices">GitHub</a>.</p>
     </section>
