@@ -29,19 +29,21 @@ Live at: https://kr48vr.github.io/master-of-all-indices/
   Bump `meta.version` in dataset.js AND `CITATION.cff` together on release.
 
 ## Current status
-v2.0.0: the roster expansion is complete — 55 cities × 19 sourced pilot
-measures, ~88% of cells filled, every value with a per-value `provenance`
-entry (source/year/method) and every blank explained (CI-enforced, including
-missing-key detection). Expansion happened in two waves on top of the 16-city
-v1.0.0: Wave 1 added 26 OECD-country cities, Wave 2 the final 13 Asian/Gulf
-cities plus a 40-city waste-recycling dig. Some measures are structurally
-thin outside the OECD (Dealroom counts, UN LOSI, ITDP transit, OECD metro
-GDP, foreign-born stats) — those blanks are principled, with reasons recorded
-per city. Scores re-scale with the city set: v2 ranks are NOT comparable to
-v1.x (state the version when citing). The 19 NON-pilot measures have never
-had data values (the app shows them as "no data"); sourcing them is Phase 3.
-`SOURCING.md` documents the source plan per pilot measure; `ROSTER.md` the
-city-selection rules, named floor exceptions and Wave-2 actuals.
+v3.0.0: Phase 3 complete — 55 cities × 35 sourced measures in TWO TIERS.
+The `tier` field on every measure drives the app: 'gold' (29 measures,
+default view — each measures what its name says, from the best available
+source), 'extended' (6 known-compromised measures, off by default behind a
+labelled toggle with badges and a masthead banner: OECD-only economy pair,
+Europe-only knowledge workers, IWA water at 34/55, ODIN open data with
+concept drift, and Wikidata museum counts included purely as a crowd-bias
+demonstration), and 'none' (3 permanently blank: renewable share, talent
+inflow, travel-time-to-hubs — no honest source exists, reasons in PHASE3.md).
+Every value has per-value provenance and every blank an explanation
+(CI-enforced, incl. missing-key detection and tier validation). Scores
+re-scale with the city set AND the active measure set: v3 ranks are NOT
+comparable to v2/v1 (state version + tier when citing). `PHASE3.md` holds
+the Phase-3 verdicts and approved decisions (D1-D11); `SOURCING.md` the
+pilot-era plan; `ROSTER.md` city selection and floor actuals.
 
 ## How the engine works — do not change it
 For the selected measures: rescale each to 0–100 across the shown cities, flip

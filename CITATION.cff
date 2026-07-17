@@ -5,15 +5,18 @@ message: >-
   across versions.
 title: "Master Index Workbench"
 type: dataset
-version: 2.0.0
-date-released: 2026-07-12
+version: 3.0.0
+date-released: 2026-07-17
 url: "https://kr48vr.github.io/master-of-all-indices/"
 repository-code: "https://github.com/KR48VR/master-of-all-indices"
 abstract: >-
-  A build-your-own city index with a provenance-first dataset: 55 cities, 19
+  A build-your-own city index with a provenance-first dataset: 55 cities, 35
   sourced measures across six areas (Liveable, Green, Smart, Competitive,
-  Talent, Connected). Every value records its source, reference year, method
-  and caveats; missing data is left blank and explained, never estimated.
+  Talent, Connected), in two tiers — a conceptually-clean gold tier (29,
+  the default) and a clearly-badged extended tier of known-compromised
+  measures (6, off by default). Every value records its source, reference
+  year, method and caveats; missing data is left blank and explained, never
+  estimated.
 authors:
   - family-names: "Poon"
     given-names: "King Wang"
