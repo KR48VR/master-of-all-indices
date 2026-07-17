@@ -92,6 +92,11 @@ button{font-family:inherit}
   border-radius:4px; border:1px solid var(--line); color:var(--ink2); text-transform:uppercase; white-space:nowrap}
 .badge.metro{background:#f3f4f7}
 .badge.proxy{background:var(--amber-bg); border-color:#EAD4A6; color:#7a4e08}
+.badge.ext{background:#F6E8E8; border-color:#D9B3B3; color:#8a3030}
+.extflag{display:inline-block; margin-left:10px; padding:2px 9px; border-radius:12px; font-family:"IBM Plex Mono",monospace;
+  font-size:10px; letter-spacing:.04em; background:#8a3030; color:#fff; vertical-align:middle}
+.extrow{display:flex; align-items:center; gap:10px; margin-top:4px}
+.extrow small{font-size:11px; color:var(--ink3); line-height:1.45; flex:1}
 .dot{width:8px;height:8px;border-radius:50%;flex:none;cursor:help;border:1px solid rgba(0,0,0,.12)}
 .dot.crowd{background:#E7B24C}
 .dot.perception{background:#D98A5B}
@@ -220,7 +225,7 @@ button{font-family:inherit}
 <body>
 <div class="masthead">
   <div class="brand">
-    <div class="kick">Modular City Index &middot; <span id="ver">v1.0</span></div>
+    <div class="kick">Modular City Index &middot; <span id="ver">v1.0</span><span id="extflag" class="extflag" hidden>EXTENDED VIEW &mdash; includes known-compromised measures</span></div>
     <h1>Master Index Workbench</h1>
     <p>Pick the big areas, mix them, add or drop any measure &mdash; and watch the ranking rebuild live. Every
     approximation stays visible. Smaller than conventional indices &mdash; and able to prove every number they can't.</p>
@@ -228,7 +233,7 @@ button{font-family:inherit}
   </div>
   <div class="flag" role="note">
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 3 2 20h20L12 3Z" stroke="#B4740E" stroke-width="1.7" stroke-linejoin="round"/><path d="M12 9v5" stroke="#B4740E" stroke-width="1.7" stroke-linecap="round"/><circle cx="12" cy="17" r="1" fill="#B4740E"/></svg>
-    <span><b>Sourced data.</b> Every value shown is real, sourced and dated (see the provenance block in <code>dataset.js</code>). Blanks are honest gaps &mdash; where no verifiable figure exists, nothing is shown. The 19 measures outside the pilot set have no data yet.</span>
+    <span><b>Sourced data.</b> Every value shown is real, sourced and dated (see the provenance block in <code>dataset.js</code>). Blanks are honest gaps &mdash; where no verifiable figure exists, nothing is shown. The default view is the <b>gold tier</b>: measures that measure what their name says, from the best available source. The optional <b>extended tier</b> adds known-compromised measures &mdash; clearly badged &mdash; so you can see what conventional-index shortcuts do to a ranking.</span>
   </div>
 </div>
 
@@ -241,6 +246,12 @@ button{font-family:inherit}
     <div class="method" id="method">
       <button class="mbtn act" data-m="additive"><b>Simple average</b><small>every part counts equally</small></button>
       <button class="mbtn" data-m="geometric"><b>Balanced</b><small>rewards all-round cities</small></button>
+    </div>
+
+    <p class="sect-label" style="margin-top:22px">Extended tier</p>
+    <div class="extrow">
+      <button class="toggle" id="extbtn" aria-label="toggle extended tier"></button>
+      <small>Off = gold standard only. On = also show measures we judged <b>compromised</b> (wrong geography, stale, concept drift, demonstrated bias) &mdash; each badged and explained. Flip it to see what those shortcuts change.</small>
     </div>
 
     <p class="sect-label" style="margin-top:22px">Areas &amp; measures</p>
@@ -442,10 +453,10 @@ function computeIndex(P, state){
 
 // ---------------- STATE ----------------
 const state = {
-  domOn:{}, varOn:{}, domWeight:{}, method:'additive', expanded:null, prevRanks:{}, stability:false
+  domOn:{}, varOn:{}, domWeight:{}, method:'additive', expanded:null, prevRanks:{}, stability:false, extended:false
 };
 P.domains.forEach(d=>{ state.domOn[d.id]=true; state.domWeight[d.id]=1; });
-P.variables.forEach(v=>{ state.varOn[v.id] = !!v.pilot; });
+P.variables.forEach(v=>{ state.varOn[v.id] = v.tier==='gold'; });
 
 function activeSet(){
   const s=new Set();
@@ -454,15 +465,17 @@ function activeSet(){
 }
 
 // ---------------- CONTROLS RENDER ----------------
+function tierVisible(v){ return v.tier!=='extended' || state.extended; }
 function domVarCount(d){ return P.variables.filter(v=>v.domain===d && state.domOn[d] && state.varOn[v.id]).length; }
-function domTotal(d){ return P.variables.filter(v=>v.domain===d).length; }
+function domTotal(d){ return P.variables.filter(v=>v.domain===d && tierVisible(v)).length; }
 
 function renderControls(){
   // presets
   const presets = document.getElementById('presets'); presets.innerHTML='';
   const mk=(label,fn,active)=>{ const b=document.createElement('button'); b.className='chip'+(active?' act':''); b.textContent=label; b.onclick=fn; presets.appendChild(b); };
-  mk('Balanced blend', ()=>{ P.domains.forEach(d=>{state.domOn[d.id]=true; state.domWeight[d.id]=1;}); P.variables.forEach(v=>state.varOn[v.id]=!!v.pilot); recompute(true); });
-  P.domains.forEach(d=> mk(d.id+' focus', ()=>{ P.domains.forEach(x=>{state.domOn[x.id]=(x.id===d.id); state.domWeight[x.id]=1;}); P.variables.forEach(v=>state.varOn[v.id]=!!v.pilot); recompute(true); }) );
+  const goldReset = v => v.tier==='gold' || (state.extended && v.tier==='extended' && state.varOn[v.id]);
+  mk('Balanced blend', ()=>{ P.domains.forEach(d=>{state.domOn[d.id]=true; state.domWeight[d.id]=1;}); P.variables.forEach(v=>state.varOn[v.id]=goldReset(v)); recompute(true); });
+  P.domains.forEach(d=> mk(d.id+' focus', ()=>{ P.domains.forEach(x=>{state.domOn[x.id]=(x.id===d.id); state.domWeight[x.id]=1;}); P.variables.forEach(v=>state.varOn[v.id]=goldReset(v)); recompute(true); }) );
 
   // domains
   const wrap=document.getElementById('domains'); wrap.innerHTML='';
@@ -493,10 +506,10 @@ function renderControls(){
 
     // variables
     const vl=document.createElement('div'); vl.className='vlist';
-    P.variables.filter(v=>v.domain===d.id).forEach(v=>{
+    P.variables.filter(v=>v.domain===d.id && tierVisible(v)).forEach(v=>{
       const it=document.createElement('div'); it.className='vitem';
       const hasData = P.cities.some(c=>P.data[c][v.id]!==null && P.data[c][v.id]!==undefined);
-      const badges = badgeHTML(v);
+      const badges = (v.tier==='extended'?`<span class="badge ext tip" title="Extended tier: a measure we judged compromised — see its caveat for why">extended</span>`:'') + badgeHTML(v);
       it.innerHTML = `<input type="checkbox" class="vchk" ${state.varOn[v.id]?'checked':''}>
         <div class="vmeta">
           <div class="vname">${v.name} ${badges}</div>
@@ -515,6 +528,17 @@ function renderControls(){
     b.classList.toggle('act', b.dataset.m===state.method);
     b.onclick=()=>{ state.method=b.dataset.m; recompute(true); };
   });
+
+  // extended-tier toggle
+  const eb=document.getElementById('extbtn');
+  eb.classList.toggle('on', state.extended);
+  eb.onclick=()=>{
+    state.extended=!state.extended;
+    if(!state.extended) P.variables.forEach(v=>{ if(v.tier==='extended') state.varOn[v.id]=false; });
+    recompute(true);
+    renderControls();
+  };
+  document.getElementById('extflag').hidden = !state.extended;
   renderApprox();
 }
 

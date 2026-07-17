@@ -57,13 +57,23 @@ them. If you need to check the receipts, you're in the right place.
 | `city_index_blueprint.xlsx` | The measure catalog (reference, not read by the app). |
 | `scripts/` | Integrity checker and CSV generator (plain Node, no deps). |
 
-Current scale: 55 cities × 19 sourced measures (of a 38-measure catalog), 88%
-of cells filled — live figures are computed on the site's *Methods & choices*
-section. Next: growing the measure set toward ~35 (Phase 3), same bar per cell.
+Current scale: 55 cities × 35 sourced measures (of a 38-measure catalog), in
+two tiers. The **gold tier** (29 measures, the default view) contains only
+measures that measure what their name says, from the best available source.
+The **extended tier** (6 measures, off by default behind a labelled toggle)
+contains measures we judged compromised — wrong geography, stale, concept
+drift, or demonstrated bias — each badged and explained, so you can watch
+what conventional-index shortcuts do to a ranking. One of them (Wikidata
+museum counts) is included purely as a bias demonstration: Paris counts at
+1.8× its official museums, Shanghai at 0.4×, and London near zero from a
+database-linkage artifact — the numbers are reproducible, and reproducibly
+wrong. The three remaining catalog measures are permanently blank with
+reasons recorded (no honest source exists). See `PHASE3.md` for every
+verdict. Live figures are computed on the site's *Methods & choices* section.
 
 ## Cite
 
-> Poon, K. W. Master Index Workbench, v2.0.0 (2026). https://kr48vr.github.io/master-of-all-indices/
+> Poon, K. W. Master Index Workbench, v3.0.0 (2026). https://kr48vr.github.io/master-of-all-indices/
 
 See `CITATION.cff` (GitHub's "Cite this repository" button uses it). Please
 state the version: adding cities re-scales all scores, so scores are comparable
