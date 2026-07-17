@@ -28,6 +28,7 @@ const DATA_LEVELS = new Set(['City', 'Metro', 'Country proxy']);
 const APPROX = new Set(['none', 'crowd', 'perception', 'self-reported', 'modelled', 'proxy']);
 const DIRECTION = new Set(['higher', 'lower']);
 
+const TIERS = new Set(['gold', 'extended', 'none']);
 for (const v of P.variables) {
   ok(!varIds.has(v.id), `duplicate variable id ${v.id}`);
   varIds.add(v.id);
@@ -35,6 +36,14 @@ for (const v of P.variables) {
   ok(DATA_LEVELS.has(v.dataLevel), `${v.id}: invalid dataLevel '${v.dataLevel}'`);
   ok(APPROX.has(v.approx), `${v.id}: invalid approx '${v.approx}'`);
   ok(DIRECTION.has(v.direction), `${v.id}: invalid direction '${v.direction}'`);
+  ok(TIERS.has(v.tier), `${v.id}: invalid tier '${v.tier}' (gold/extended/none)`);
+  if (v.tier === 'gold') ok(!!(P.provenance || {})[v.id], `${v.id}: tier 'gold' but no provenance block — gold measures must be sourced`);
+  if (v.tier === 'none') {
+    for (const city of P.cities) {
+      const val = (P.data[city] || {})[v.id];
+      ok(val === null || val === undefined, `${city}/${v.id}: tier 'none' measure carries a value`);
+    }
+  }
 }
 
 const prov = P.provenance || {};
