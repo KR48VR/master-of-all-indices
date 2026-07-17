@@ -93,8 +93,11 @@ button{font-family:inherit}
 .badge.metro{background:#f3f4f7}
 .badge.proxy{background:var(--amber-bg); border-color:#EAD4A6; color:#7a4e08}
 .badge.ext{background:#F6E8E8; border-color:#D9B3B3; color:#8a3030}
-.extflag{display:inline-block; margin-left:10px; padding:2px 9px; border-radius:12px; font-family:"IBM Plex Mono",monospace;
+.extflag{display:inline-block; padding:2px 9px; border-radius:12px; font-family:"IBM Plex Mono",monospace;
   font-size:10px; letter-spacing:.04em; background:#8a3030; color:#fff; vertical-align:middle}
+.extflag[hidden]{display:none}
+#extflag{margin-top:8px}
+#extmark{margin-left:10px}
 .extrow{display:flex; align-items:center; gap:10px; margin-top:4px}
 .extrow small{font-size:11px; color:var(--ink3); line-height:1.45; flex:1}
 .dot{width:8px;height:8px;border-radius:50%;flex:none;cursor:help;border:1px solid rgba(0,0,0,.12)}
@@ -225,7 +228,7 @@ button{font-family:inherit}
 <body>
 <div class="masthead">
   <div class="brand">
-    <div class="kick">Modular City Index &middot; <span id="ver">v1.0</span><span id="extflag" class="extflag" hidden>EXTENDED VIEW &mdash; includes known-compromised measures</span></div>
+    <div class="kick">Modular City Index &middot; <span id="ver">v1.0</span></div>
     <h1>Master Index Workbench</h1>
     <p>Pick the big areas, mix them, add or drop any measure &mdash; and watch the ranking rebuild live. Every
     approximation stays visible. Smaller than conventional indices &mdash; and able to prove every number they can't.</p>
@@ -251,8 +254,9 @@ button{font-family:inherit}
     <p class="sect-label" style="margin-top:22px">Extended tier</p>
     <div class="extrow">
       <button class="toggle" id="extbtn" aria-label="toggle extended tier"></button>
-      <small>Off = gold standard only. On = also show measures we judged <b>compromised</b> (wrong geography, stale, concept drift, demonstrated bias) &mdash; each badged and explained. Flip it to see what those shortcuts change.</small>
+      <small>Off = gold standard only. On = also score the measures we judged <b>compromised</b> (wrong geography, stale, concept drift, demonstrated bias) &mdash; each badged and explained. Flip it to see what those shortcuts change.</small>
     </div>
+    <span id="extflag" class="extflag" hidden>EXTENDED VIEW &mdash; includes known-compromised measures</span>
 
     <p class="sect-label" style="margin-top:22px">Areas &amp; measures</p>
     <div id="domains"></div>
@@ -262,7 +266,7 @@ button{font-family:inherit}
 
   <main class="readout">
     <div class="rhead">
-      <h2>Ranking</h2>
+      <h2>Ranking<span id="extmark" class="extflag" hidden>extended measures active</span></h2>
       <div>
         <span class="rstat" id="rstat"></span>
         <button class="chip" id="stabbtn" title="Rule 5, 'does it wobble': re-runs the index once per active measure, each time with that measure removed, and shows every city's best and worst rank across those runs. Narrow range = robust position.">Stability check</button>
@@ -529,17 +533,23 @@ function renderControls(){
     b.onclick=()=>{ state.method=b.dataset.m; recompute(true); };
   });
 
-  // extended-tier toggle
+  // extended-tier toggle: ON activates every extended measure, OFF deactivates them
   const eb=document.getElementById('extbtn');
   eb.classList.toggle('on', state.extended);
   eb.onclick=()=>{
     state.extended=!state.extended;
-    if(!state.extended) P.variables.forEach(v=>{ if(v.tier==='extended') state.varOn[v.id]=false; });
+    P.variables.forEach(v=>{ if(v.tier==='extended') state.varOn[v.id]=state.extended; });
     recompute(true);
     renderControls();
   };
-  document.getElementById('extflag').hidden = !state.extended;
+  updateExtUI();
   renderApprox();
+}
+
+function updateExtUI(){
+  const extActive = P.variables.some(v=>v.tier==='extended' && state.varOn[v.id] && state.domOn[v.domain]);
+  document.getElementById('extflag').hidden = !state.extended;
+  document.getElementById('extmark').hidden = !extActive;
 }
 
 function badgeHTML(v){
@@ -595,6 +605,7 @@ function recompute(reorder){
   lastStab = state.stability ? computeStability() : null;
   renderRows(rows);
   renderControls_light();
+  updateExtUI();
   // stat line
   const nA=activeSet().size;
   document.getElementById('rstat').innerHTML =
