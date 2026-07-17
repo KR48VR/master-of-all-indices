@@ -100,6 +100,8 @@ button{font-family:inherit}
 #extmark{margin-left:10px}
 .extrow{display:flex; align-items:center; gap:10px; margin-top:4px}
 .extrow small{font-size:11px; color:var(--ink3); line-height:1.45; flex:1}
+.extlist{font-size:11px; color:var(--ink3); line-height:1.5; margin-top:7px}
+.extlist b{color:#8a3030; font-weight:600}
 .dot{width:8px;height:8px;border-radius:50%;flex:none;cursor:help;border:1px solid rgba(0,0,0,.12)}
 .dot.crowd{background:#E7B24C}
 .dot.perception{background:#D98A5B}
@@ -257,6 +259,7 @@ button{font-family:inherit}
       <small>Off = gold standard only. On = also score the measures we judged <b>compromised</b> (wrong geography, stale, concept drift, demonstrated bias) &mdash; each badged and explained. Flip it to see what those shortcuts change.</small>
     </div>
     <span id="extflag" class="extflag" hidden>EXTENDED VIEW &mdash; includes known-compromised measures</span>
+    <div class="extlist" id="extlist"></div>
 
     <p class="sect-label" style="margin-top:22px">Areas &amp; measures</p>
     <div id="domains"></div>
@@ -513,7 +516,7 @@ function renderControls(){
     P.variables.filter(v=>v.domain===d.id && tierVisible(v)).forEach(v=>{
       const it=document.createElement('div'); it.className='vitem';
       const hasData = P.cities.some(c=>P.data[c][v.id]!==null && P.data[c][v.id]!==undefined);
-      const badges = (v.tier==='extended'?`<span class="badge ext tip" title="Extended tier: a measure we judged compromised — see its caveat for why">extended</span>`:'') + badgeHTML(v);
+      const badges = badgeHTML(v);
       it.innerHTML = `<input type="checkbox" class="vchk" ${state.varOn[v.id]?'checked':''}>
         <div class="vmeta">
           <div class="vname">${v.name} ${badges}</div>
@@ -552,8 +555,18 @@ function updateExtUI(){
   document.getElementById('extmark').hidden = !extActive;
 }
 
+// static list of what the extended tier contains, visible whether or not it is on
+(function(){
+  const byDom = {};
+  P.variables.filter(v=>v.tier==='extended').forEach(v=>{ (byDom[v.domain]=byDom[v.domain]||[]).push(v.name); });
+  const parts = P.domains.filter(d=>byDom[d.id]).map(d=>`<b>${d.id}</b>: ${byDom[d.id].join(', ')}`);
+  document.getElementById('extlist').innerHTML = 'The extended tier contains ' +
+    P.variables.filter(v=>v.tier==='extended').length + ' measures &mdash; ' + parts.join(' &middot; ') + '.';
+})();
+
 function badgeHTML(v){
   let h='';
+  if(v.tier==='extended') h+=`<span class="badge ext tip" title="Extended tier: a measure we judged compromised — see its caveat for why">extended</span>`;
   if(v.dataLevel==='Metro') h+=`<span class="badge metro">metro</span>`;
   if(v.dataLevel==='Country proxy') h+=`<span class="badge proxy tip" title="Country-level stand-in, not city-specific">proxy</span>`;
   if(v.approx && v.approx!=='none') h+=`<span class="dot ${v.approx} tip" title="${v.caveat||v.approx}"></span>`;
