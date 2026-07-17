@@ -1,5 +1,18 @@
 # Phase 3 Sourcing Plan — the 19 unsourced catalog measures
 
+> **APPROVED 2026-07-17** with these resolutions: D1, D2, D6, D7, D9, D11 as
+> recommended; **D8 overridden to the CSA rule** (SF merges with San Jose, DC
+> with Baltimore — applied uniformly to all US metros); **D3 moved to the
+> extended tier** (concept drift makes ODIN unfit for gold); **D4/D5/D10
+> reframed**: instead of skip/defer, the honest-but-limited measures
+> (knowledge workers, employment growth, productivity, water use, cultural
+> venues as a bias demonstration, plus stale-value variants) become an
+> **extended tier, off by default**, behind a clearly-labelled toggle — the
+> default "gold" view stays conceptually pure, and turning the tier on shows
+> what conventional-index compromises do to the ranking. Talent inflow and
+> travel-time-to-hubs remain permanently blank (no data / license forbids).
+> Fill order: gold (10 measures, one commit each) → tier toggle → extended.
+
 *Feasibility study, 2026-07-17. Method: six research passes, one per source
 family; every candidate source was actually fetched this session and its
 coverage checked against all 55 cities by name (evidence archived in the
