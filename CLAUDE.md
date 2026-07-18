@@ -35,7 +35,16 @@ Live at: https://kr48vr.github.io/master-of-all-indices/
   Bump `meta.version` in dataset.js AND `CITATION.cff` together on release.
 
 ## Current status
-v3.0.0: Phase 3 complete — 55 cities × 35 sourced measures in TWO TIERS.
+v3.2.0: Phase 3 complete — 55 cities × 35 sourced measures in TWO TIERS.
+(v3.2.0 = LIV-01 homicide upgraded from Country proxy to MIXED city-level:
+45 city values from Eurostat/FBI/StatCan/national sources, means of annual
+rates over up-to-3 recent years, 10 evidence-backed blanks; decisions
+D-L1..L6 and the full study in LIV01.md. LIV-01 values NOT comparable to
+v3.1.0 national proxies.)
+(v3.1.0 = the GRN-03 CO2 measure moved to GHS-UCDB R2024A V1-2, May 2026:
+emissions year 2024, international aviation/shipping now INCLUDED, and the
+publisher re-benchmarked most centres — median same-year shift ~21%, so
+GRN-03 values are NOT comparable to v3.0.0.)
 The `tier` field on every measure drives the app: 'gold' (29 measures,
 default view — each measures what its name says, from the best available
 source), 'extended' (6 known-compromised measures, off by default behind a
@@ -70,7 +79,8 @@ data lowers a city's "coverage %".
   Washington DC, Sydney, Auckland), Asia & Gulf (Osaka, Tel Aviv, Hong Kong,
   Taipei, Bangkok, Kuala Lumpur, Jakarta, Manila, Ho Chi Minh City, Mumbai,
   Abu Dhabi, Shanghai, Beijing, Shenzhen, Delhi).
-- Each measure carries honesty flags: `dataLevel` (City / Metro / Country proxy),
+- Each measure carries honesty flags: `dataLevel` (City / Metro / Mixed / Country proxy —
+  Mixed = geography differs by city, each value's true unit on its receipt),
   `direction` (higher / lower), `approx` (crowd / perception / self-reported /
   modelled / none), and a `caveat`. These flags drive the badges in the app, so
   they must stay truthful.

@@ -15,7 +15,7 @@ const P = global.window.INDEX_DATA;
 // Publication cadence per measure: how many months between source updates,
 // and what to watch for. Keep this honest — it is the contract the report runs on.
 const CADENCE = {
-  'LIV-01': { months: 12, why: 'UNODC updates national homicide series annually' },
+  'LIV-01': { months: 12, why: 'mixed city sources (Eurostat/FBI/StatCan/national) all publish annually; windows roll forward each year' },
   'LIV-02': { months: 6,  why: 'Numbeo publishes Mid-Year (~Jul) and full-year (~Jan) editions' },
   'LIV-03': { months: 12, why: 'WGI releases annually (~Sept); never mix releases' },
   'LIV-04': { months: 12, why: 'national life tables / WB series update annually' },
@@ -25,7 +25,7 @@ const CADENCE = {
   'LIV-08': { months: 6,  why: 'live Wikidata counts drift continuously; re-run the uniform query to keep the bias demo current' },
   'GRN-01': { months: 24, why: 'WHO Ambient Air Quality DB releases roughly every two years' },
   'GRN-02': { months: 24, why: 'UN-Habitat SDG 11.7.1 sample updates irregularly' },
-  'GRN-03': { months: 12, why: 'EDGAR annual releases; UCDB V1.2 adoption decision pending' },
+  'GRN-03': { months: 12, why: 'EDGAR annual releases; UCDB V1-2 adopted at v3.1.0 (2026-07)' },
   'GRN-05': { months: 12, why: '40 hand-collected official sources; an annual manual sweep' },
   'GRN-06': { months: 24, why: 'IWA water statistics editions are biennial' },
   'GRN-07': { months: 6,  why: 'ThinkHazard classes are unversioned and can change silently; re-probe twice a year' },
@@ -54,7 +54,6 @@ const CADENCE = {
 
 // Standing watch items that are not simple age questions.
 const WATCHLIST = [
-  'GRN-03: UCDB V1.2 (May 2026) adds international transport and a newer EDGAR release — values will shift; adopting it is a documented version-bump decision.',
   'SMT-02: Turkiye launched commercial 5G in 2026 — Istanbul\'s honest 0.0 should become a real number at the next ITU drop.',
   'SMT-04: ODIN\'s exact Creative Commons variant still needs one publisher confirmation.',
   'GRN-06: IWA reuse permission check still pending.',

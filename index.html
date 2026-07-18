@@ -23,8 +23,8 @@
   "description": "A provenance-first city-index dataset: 55 cities and 35 sourced measures across six areas (Liveable, Green, Smart, Competitive, Talent, Connected), in two tiers - a conceptually-clean gold tier (29 measures, the default) and a clearly-badged extended tier of known-compromised measures (6, off by default). Every value records its source, reference year, extraction method and caveats; missing data is left blank and explained, never estimated. An interactive engine lets users reweight areas, drop measures and switch combine methods with the ranking rebuilding live.",
   "url": "https://kr48vr.github.io/master-of-all-indices/",
   "sameAs": "https://github.com/KR48VR/master-of-all-indices",
-  "version": "3.0.0",
-  "dateModified": "2026-07-17",
+  "version": "3.2.0",
+  "dateModified": "2026-07-18",
   "isAccessibleForFree": true,
   "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
   "creator": {"@type": "Person", "name": "Poon King Wang", "url": "https://github.com/KR48VR"},
@@ -153,6 +153,7 @@ button{font-family:inherit}
 .badge{font-family:"IBM Plex Mono",monospace; font-size:9.5px; letter-spacing:.03em; padding:1px 5px;
   border-radius:4px; border:1px solid var(--line); color:var(--ink2); text-transform:uppercase; white-space:nowrap}
 .badge.metro{background:#f3f4f7}
+.badge.mixed{background:#eef1f7; border-color:#D8DEEA; color:#3d4966}
 .badge.proxy{background:var(--amber-bg); border-color:#EAD4A6; color:#7a4e08}
 .badge.ext{background:#F6E8E8; border-color:#D9B3B3; color:#8a3030}
 .badge.stale{background:var(--amber-bg); border-color:#EAD4A6; color:#7a4e08; cursor:help}
@@ -373,6 +374,7 @@ button{font-family:inherit}
       <div class="lgrid">
         <div class="litem"><span class="badge ext k">EXTENDED</span><span>Extended-tier measure: judged compromised (wrong geography, stale, concept drift, or demonstrated bias) &mdash; scored only when you switch the extended tier on.</span></div>
         <div class="litem"><span class="badge metro k">METRO</span><span>Metro-area figure, not the city proper.</span></div>
+        <div class="litem"><span class="badge mixed k">MIXED</span><span>Geography differs by city (city proper here, metro there) &mdash; each value's true unit is on its receipt; ranks can shift on boundary choice alone.</span></div>
         <div class="litem"><span class="badge proxy k">PROXY</span><span>Country-level stand-in &mdash; the weakest kind of match. Use with care.</span></div>
         <div class="litem"><span class="dot crowd k"></span><span>Crowd-sourced (e.g. Numbeo) &mdash; a soft signal.</span></div>
         <div class="litem"><span class="dot perception k"></span><span>Perception / survey-based, not a hard count.</span></div>
@@ -807,6 +809,7 @@ function badgeHTML(v){
   let h='';
   if(v.tier==='extended') h+=`<span class="badge ext tip" title="Extended tier: a measure we judged compromised — see its caveat for why">extended</span>`;
   if(v.dataLevel==='Metro') h+=`<span class="badge metro">metro</span>`;
+  if(v.dataLevel==='Mixed') h+=`<span class="badge mixed tip" title="Mixed geography — each value's true unit is on its receipt">mixed</span>`;
   if(v.dataLevel==='Country proxy') h+=`<span class="badge proxy tip" title="Country-level stand-in, not city-specific">proxy</span>`;
   if(v.approx && v.approx!=='none') h+=`<span class="dot ${v.approx} tip" title="${v.caveat||v.approx}"></span>`;
   if(v.contestable) h+=`<span class="flagmark tip" title="${v.caveat||'Direction is contestable'}">&#9873;</span>`;
@@ -815,14 +818,14 @@ function badgeHTML(v){
 
 function renderApprox(){
   const act=[...activeSet()].map(id=>varById[id]);
-  const flagged = act.filter(v=> v.dataLevel==='Country proxy' || (v.approx&&v.approx!=='none'));
+  const flagged = act.filter(v=> v.dataLevel==='Country proxy' || v.dataLevel==='Mixed' || (v.approx&&v.approx!=='none'));
   const contest = act.filter(v=>v.contestable);
   const el=document.getElementById('approxline');
   if(!act.length){ el.innerHTML='No measures selected.'; return; }
   let parts=[];
   parts.push(`<b>${flagged.length} of ${act.length}</b> active measures are approximations`);
   const types={};
-  flagged.forEach(v=>{ const k = v.dataLevel==='Country proxy'?'country proxy':v.approx; types[k]=(types[k]||0)+1; });
+  flagged.forEach(v=>{ const k = v.dataLevel==='Country proxy'?'country proxy':(v.dataLevel==='Mixed'&&(!v.approx||v.approx==='none'))?'mixed geography':v.approx; types[k]=(types[k]||0)+1; });
   const tstr=Object.entries(types).map(([k,n])=>`${n} ${k}`).join(', ');
   el.innerHTML = parts[0] + (tstr?` (${tstr})`:'') + (contest.length?`.<br><span class="flagmark">&#9873;</span> ${contest.length} with a contestable direction.`:'.');
 }
