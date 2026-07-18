@@ -46,6 +46,50 @@ for (const v of P.variables) {
   }
 }
 
+// Plausibility guardrails: [min, max] per sourced measure. These are SANE-BOUNDS,
+// not statistical ranges — set wide enough that no genuine value could ever trip
+// them, tight enough that a typo (830 for 83.0), a unit slip (metres for km) or a
+// parser artifact fails CI loudly. Definitional bounds (0-100 indices, 0-3 coding)
+// are exact. Every measure with provenance MUST have an entry — declaring the
+// plausible envelope is part of sourcing a measure.
+const RANGES = {
+  'LIV-01': [0, 80],        // homicides per 100k
+  'LIV-02': [0, 100],       // index, definitional
+  'LIV-03': [0, 100],       // WGI governance score, definitional
+  'LIV-04': [55, 95],       // life expectancy, years
+  'LIV-05': [0.05, 25],     // physicians per 1k
+  'LIV-06': [1, 80],        // price-to-income ratio
+  'LIV-07': [5, 250],       // cost-of-living index (NYC=100)
+  'LIV-08': [0, 60],        // museums per 100k
+  'GRN-01': [1, 250],       // PM2.5 µg/m³
+  'GRN-02': [0, 100],       // % share, definitional
+  'GRN-03': [0.1, 50],      // tonnes CO2 per capita
+  'GRN-05': [0, 100],       // % share, definitional
+  'GRN-06': [30, 800],      // litres per capita per day
+  'GRN-07': [0, 3],         // hazard coding, definitional
+  'SMT-01': [5, 3000],      // Mbps
+  'SMT-02': [0, 100],       // % population, definitional
+  'SMT-03': [0, 100],       // LOSI index, definitional
+  'SMT-04': [0, 100],       // ODIN score, definitional
+  'SMT-05': [10, 100],      // % online
+  'SMT-06': [0, 100],       // survey score, definitional
+  'CMP-01': [5000, 300000], // GDP per capita USD PPP
+  'CMP-02': [15000, 500000],// GVA per worker USD
+  'CMP-03': [0, 400],       // firm HQ count
+  'CMP-04': [0, 1000],      // startups per 100k
+  'CMP-05': [-40, 60],      // 5-yr employment change %
+  'CMP-06': [0, 50000],     // VC USD per resident
+  'TAL-01': [1, 95],        // tertiary attainment %
+  'TAL-02': [0, 40],        // top-university count
+  'TAL-03': [5, 95],        // knowledge-intensive employment %
+  'TAL-04': [0.02, 25],     // researchers per 1k
+  'TAL-06': [0, 100],       // foreign-born %, definitional
+  'CON-01': [3, 800],       // international destinations count
+  'CON-03': [0, 100],       // % near frequent transit, definitional
+  'CON-04': [5, 150],       // commute minutes
+  'CON-05': [0, 150],       // congestion % (extra travel time; can exceed 100)
+};
+
 const prov = P.provenance || {};
 for (const pid of Object.keys(prov)) {
   ok(varIds.has(pid), `provenance for unknown measure '${pid}'`);
@@ -62,6 +106,9 @@ for (const city of Object.keys(P.data)) {
     if (val !== null && val !== undefined) {
       ok(typeof val === 'number' && isFinite(val), `${city}/${mid}: value is not a finite number`);
       ok(!!p, `${city}/${mid}: VALUE WITHOUT PROVENANCE — a number with no receipt`);
+      const rng = RANGES[mid];
+      if (rng) ok(val >= rng[0] && val <= rng[1],
+        `${city}/${mid}: IMPLAUSIBLE VALUE ${val} — outside sane bounds [${rng[0]}, ${rng[1]}] (typo? unit slip? parser artifact?)`);
       const pc = p && (p.perCity || {})[city];
       ok(!!pc, `${city}/${mid}: no per-city provenance entry`);
       if (pc && typeof pc.value === 'number') {
@@ -84,6 +131,11 @@ for (const v of P.variables) {
     const val = (P.data[city] || {})[v.id];
     ok(val === null || val === undefined, `${city}/${v.id}: value present but measure has NO provenance block`);
   }
+}
+
+// every sourced measure must declare its plausible envelope
+for (const pid of Object.keys(prov)) {
+  ok(!!RANGES[pid], `${pid}: sourced measure has NO plausibility range — add its sane bounds to RANGES in this script`);
 }
 
 // sourced measures must have an explicit cell (value or explained null) for EVERY city —
