@@ -67,7 +67,7 @@ blockquote{border-left:3px solid var(--amber); margin:14px 0; padding:2px 0 2px 
 </head>
 <body>
 <div class="mast">
-  <div class="kick">Master Index Workbench &middot; companion volume &middot; second edition</div>
+  <div class="kick">Master Index Workbench &middot; companion volume &middot; third edition</div>
   <h1>The Workbench Papers</h1>
   <p class="sub">Four documents behind <a href="https://kr48vr.github.io/master-of-all-indices/">the Master Index Workbench</a> —
   a build-your-own city index where every number has a receipt and a best-before date. The full research working paper, an
@@ -97,7 +97,7 @@ below is written for Nature Cities.</p>
 </div>
 
 <h2>A city index that shows its receipts: radical provenance, tiered honesty, and machine-enforced integrity in composite urban indicators</h2>
-<p class="meta">POON King Wang &middot; full working paper &middot; describes artifact v3.0.0 &middot; July 2026 &middot;
+<p class="meta">POON King Wang &middot; full working paper &middot; describes artifact v3.2.1 &middot; July 2026 &middot;
 artifact: <a href="https://kr48vr.github.io/master-of-all-indices/">kr48vr.github.io/master-of-all-indices</a></p>
 
 <div class="box abstract"><b>Abstract.</b> Composite city indices — liveability, sustainability, smartness, competitiveness —
@@ -113,7 +113,7 @@ museum count; Shanghai 0.4&times;; London near zero through a database-linkage a
 measure's last-verified date against its source's publication cadence and publishes the verdict monthly. Construction surfaced
 three findings: the geography of verifiability is systematically skewed against non-OECD cities; crowd-maintained data measures
 editing activity rather than urban reality; and honest blanks constitute an informative catalogue of failures in the global
-urban-statistics system. We argue that receipts, tiers, machine-enforced rules and freshness contracts are a transferable,
+urban-statistics system. A subsequent release (v3.2) replaced the homicide measure's national proxies with a mixed city-level collection — 45 verified city values under per-value geography receipts and a new "Mixed" flag, plus 10 evidence-backed blanks — quantifying what proxies hide (Washington DC 31.97 vs New York 4.87 homicides per 100k, previously one number) and surfacing a further finding: Japan's vital statistics register far fewer homicide deaths than its police data imply, a certification bias documented on the blanks themselves. We argue that receipts, tiers, machine-enforced rules and freshness contracts are a transferable,
 inexpensive template for honest composite indicators.</div>
 
 <h3>1. Introduction: the index genre and its verification gap</h3>
@@ -176,7 +176,7 @@ weights (e.g., Hong Kong's life expectancy remains blank because its statistics 
 any combined figure would smuggle in a weighting assumption).</li>
 <li><b>Every value carries its receipt.</b> The data model stores, per value: source (document-level, not family-level),
 reference year, extraction method, and caveats — rendered in the interface as a click-through popover on every cell.</li>
-<li><b>Compromises are flagged, never hidden.</b> Per-measure honesty flags (data level: city / metro / country proxy;
+<li><b>Compromises are flagged, never hidden.</b> Per-measure honesty flags (data level: city / metro / mixed / country proxy;
 approximation: none / crowd / perception / self-reported / modelled / proxy; direction; caveat) drive visible badges; per-value
 notes carry cell-specific compromises; and values whose reference year lags four or more years behind their measure's median
 wear a visible year-chip.</li>
@@ -239,11 +239,11 @@ screenshot cannot pass an extended ranking off as the gold one.</p>
 D1–D11, including two human overrides of AI recommendations), published with the sourcing verdicts for all nineteen candidate
 measures examined in the expansion phase — including, for each rejected measure, the specific sources evaluated and the reasons
 no honest fill exists.</p>
-<h5>4.4 Table 1 — the measure catalog at v3.0.0</h5>
+<h5>4.4 Table 1 — the measure catalog at v3.2.1</h5>
 <div class="tscroll">
 <table>
 <tr><th>ID</th><th>Measure</th><th>Area</th><th>Tier</th><th>Level</th><th>Approx.</th><th>Coverage</th><th>Source (abbrev.; full citation in per-value provenance)</th></tr>
-<tr><td class="mono">LIV-01</td><td>Homicide rate</td><td>Liveable</td><td><span class="tag gold">gold</span></td><td>Country proxy</td><td>proxy</td><td>55/55</td><td style="font-size:11.5px">UNODC Data Portal — Crime Trend Survey, intentional homic&hellip;</td></tr>
+<tr><td class="mono">LIV-01</td><td>Homicide rate</td><td>Liveable</td><td><span class="tag gold">gold</span></td><td>Mixed</td><td>none</td><td>45/55</td><td style="font-size:11.5px">Mixed city-level collection (decision D-L1a): Eurostat cr&hellip;</td></tr>
 <tr><td class="mono">LIV-02</td><td>Perceived safety</td><td>Liveable</td><td><span class="tag gold">gold</span></td><td>City</td><td>crowd</td><td>55/55</td><td style="font-size:11.5px">Numbeo Crime rankings — Safety Index column</td></tr>
 <tr><td class="mono">LIV-03</td><td>Political stability</td><td>Liveable</td><td><span class="tag gold">gold</span></td><td>Country proxy</td><td>perception</td><td>55/55</td><td style="font-size:11.5px">World Bank Worldwide Governance Indicators (WGI), 2025 re&hellip;</td></tr>
 <tr><td class="mono">LIV-04</td><td>Life expectancy</td><td>Liveable</td><td><span class="tag gold">gold</span></td><td>Metro</td><td>none</td><td>54/55</td><td style="font-size:11.5px">OECD Regional Demography — Life expectancy (DSD_REG_DEMO@&hellip;</td></tr>
@@ -253,7 +253,7 @@ no honest fill exists.</p>
 <tr><td class="mono">LIV-08</td><td>Cultural venues (bias demo)</td><td>Liveable</td><td><span class="tag ext">extended</span></td><td>City</td><td>crowd</td><td>55/55</td><td style="font-size:11.5px">Wikidata (live): distinct items instance-of museum (P31/P&hellip;</td></tr>
 <tr><td class="mono">GRN-01</td><td>PM2.5 air pollution</td><td>Green</td><td><span class="tag gold">gold</span></td><td>City</td><td>none</td><td>54/55</td><td style="font-size:11.5px">WHO Ambient Air Quality Database V8.0</td></tr>
 <tr><td class="mono">GRN-02</td><td>Open space access</td><td>Green</td><td><span class="tag gold">gold</span></td><td>City</td><td>modelled</td><td>46/55</td><td style="font-size:11.5px">UN-Habitat, Open spaces and green areas (SDG 11.7.1), Urb&hellip;</td></tr>
-<tr><td class="mono">GRN-03</td><td>CO2 per capita</td><td>Green</td><td><span class="tag gold">gold</span></td><td>Metro</td><td>modelled</td><td>55/55</td><td style="font-size:11.5px">EC JRC — EDGAR v2024 'Emissions in urban areas' (CO2 per&hellip;</td></tr>
+<tr><td class="mono">GRN-03</td><td>CO2 per capita</td><td>Green</td><td><span class="tag gold">gold</span></td><td>Metro</td><td>modelled</td><td>55/55</td><td style="font-size:11.5px">EC JRC — GHS-UCDB R2024A V1-2 'Emissions in urban areas'&hellip;</td></tr>
 <tr><td class="mono">GRN-04</td><td>Renewable share</td><td>Green</td><td><span class="tag none">blank</span></td><td>City</td><td>self-reported</td><td>0/55</td><td style="font-size:11.5px">no honest source exists (see decision log)</td></tr>
 <tr><td class="mono">GRN-05</td><td>Waste recycled</td><td>Green</td><td><span class="tag gold">gold</span></td><td>City</td><td>self-reported</td><td>46/55</td><td style="font-size:11.5px">Official municipal/national waste statistics per city (46&hellip;</td></tr>
 <tr><td class="mono">GRN-06</td><td>Water use per capita</td><td>Green</td><td><span class="tag ext">extended</span></td><td>City</td><td>self-reported</td><td>34/55</td><td style="font-size:11.5px">IWA International Statistics for Water Services — 'Specif&hellip;</td></tr>
@@ -313,7 +313,7 @@ verdict live. At the time of writing: 35/35 measures fresh; the mechanism was va
 which correctly flagged all eleven fast-cadence measures overdue.</p>
 
 <h3>6. Results</h3>
-<p>At v3.0.0 the dataset holds 1,702 provenanced values of 1,925 possible cells (88.4% coverage); all 223 blanks are explained;
+<p>At v3.2.1 the dataset holds 1,692 provenanced values of 1,925 possible cells (87.9% coverage); all 233 blanks are explained;
 42 values (2.5%) wear staleness chips; 100% of present values carry receipts. Three construction findings are results in their
 own right.</p>
 <h5>6.1 The geography of verifiability is skewed</h5>
@@ -339,13 +339,32 @@ and reproducibly wrong; activating them visibly re-ranks the index (Copenhagen f
 executive brief renders the shift). We suggest this pattern — <i>shipping a rejected measure as a labelled exhibit</i> — as a
 general device for indicator literacy.</p>
 <h5>6.3 Honest blanks are an informative catalogue</h5>
-<p>Refusing to estimate produced 223 documented absences whose reasons are themselves data about the urban-statistics system:
+<p>Refusing to estimate produced 233 documented absences whose reasons are themselves data about the urban-statistics system:
 sex-only life tables (Hong Kong); a last-published recycling rate from 2013 that credits source-reduction — waste never
 generated — and was abandoned by its own jurisdiction (Los Angeles); a metropolitan statistical agency publishing tonnages but
 no rates (Massachusetts); a genuine 0.0% (T&uuml;rkiye's 5G population coverage through 2024, recorded as true with a scheduled
 re-check); crowd tables gutted by citation purges mid-project (Tokyo, Osaka and Taipei airline destinations); and three catalog
 concepts with no honest source anywhere. Each blank names a specific, checkable failure of measurement infrastructure — a
 research agenda in negative space.</p>
+
+
+<h5>6.4 The proxy problem, quantified: the homicide upgrade</h5>
+<p>Release v3.2 provides the instrument's sharpest demonstration of what proxy grain conceals. Under the national proxy
+(v1.0&ndash;v3.1), Washington DC, Boston and New York shared one homicide rate; at city level (3-year mean rates per 100k,
+2022&ndash;24) they read 31.97, 5.48 and 4.87 &mdash; the <i>within</i>-country spread exceeds most <i>between</i>-country
+differences in the roster, meaning the proxy was least accurate exactly where the measure carries the most signal. The upgrade
+held values to a single disclosed method (mean of annual rates over the up-to-3 most recent published years; the publisher's own
+rate where published, else exact count-over-named-population arithmetic; London's computed mean reproduces ONS's published
+3-year rate) and to ICCS 0101 comparability, with every deviation flagged per value. Because sources publish different
+geographies (US police agencies = city proper; Canada = census metro areas; six European rows = province level), the measure
+introduced per-value geography receipts under a measure-level "Mixed" flag whose legend states plainly that ranks can shift on
+boundary choice alone. Construction also extended the geography-of-verifiability finding (&sect;6.1) below the national level:
+the ten remaining blanks are themselves findings &mdash; Japan's police homicide counts fold in attempts and preparation while
+its vital statistics under-register homicide deaths (222 nationally vs 283 police-recorded deaths, 2024; one registered homicide
+death in Tokyo's 23 wards in all of 2023), a certification bias now documented on the blanks; Victoria (Melbourne) publishes
+city-level homicide only bundled with attempted murder and road deaths (~4&times; overstatement); and Jakarta's provincial
+statistics bundle murder with negligence-causing-death inseparably &mdash; verified from the publication itself, retrieved
+through a human-in-the-loop browser session when automated access was refused.</p>
 
 <h3>7. Discussion</h3>
 <p><b>For index producers</b>, the Workbench demonstrates that per-value receipts, explained blanks, quarantined compromises and
@@ -376,6 +395,7 @@ expansion plan) and machine-checked, extraction was performed by one team; the d
 configurations are published precisely to invite independent re-derivation.</li>
 <li><b>License inheritance:</b> the compilation carries non-commercial terms inherited from upstream sources; two upstream
 license confirmations remain on the public watchlist.</li>
+<li><b>Mixed geography within a measure:</b> the city-level homicide measure spans city-proper, metro and province units because sources publish nothing else; each receipt names its unit and the flag legend warns that ranks can shift on boundary choice alone, but the heterogeneity itself is irreducible without discarding most of the coverage.</li>
 </ol>
 
 <h3>9. Conclusion</h3>
@@ -437,8 +457,8 @@ measure's freshness is checked monthly against its source's publication rhythm, 
 <div class="box">
 <span class="stat"><b>55</b><span>cities</span></span>
 <span class="stat"><b>35</b><span>sourced measures</span></span>
-<span class="stat"><b>1,702</b><span>verified values</span></span>
-<span class="stat"><b>223</b><span>explained blanks</span></span>
+<span class="stat"><b>1,692</b><span>verified values</span></span>
+<span class="stat"><b>233</b><span>explained blanks</span></span>
 <span class="stat"><b>100%</b><span>values with receipts</span></span>
 <span class="stat"><b>monthly</b><span>public freshness report</span></span>
 </div>
@@ -474,7 +494,7 @@ measure's freshness is checked monthly against its source's publication rhythm, 
 <line x1="448" y1="274" x2="430" y2="274" stroke="#D8DEEA" stroke-width="1.5"/>
 <text x="462" y="272" font-size="11" fill="#5c6470"><tspan x="462" dy="0"><tspan font-weight="600">The best-before input</tspan> &mdash; feeds the</tspan><tspan x="462" dy="14">monthly public freshness check.</tspan></text>
 </svg>
-<figcaption><b>The anatomy of a receipt &mdash; and this one is real.</b> The provenance behind Copenhagen's CO&#8322;-per-capita value, as recorded in the dataset (abridged for the figure; the full record also carries the source URLs and license terms). Every one of the 1,702 values on the instrument carries a receipt with this anatomy, one click away.</figcaption>
+<figcaption><b>The anatomy of a receipt &mdash; and this one is real.</b> The provenance behind Copenhagen's CO&#8322;-per-capita value, as recorded in the dataset (abridged for the figure; the full record also carries the source URLs and license terms). Every one of the 1,692 values on the instrument carries a receipt with this anatomy, one click away.</figcaption>
 </figure>
 
 <h4>What it lets you do that no conventional index can</h4>
@@ -635,11 +655,11 @@ Failures are reported here as proudly as passes: a QA log with no failures in it
 <div class="box">
 <span class="stat"><b>7</b><span>machine-enforced rule classes</span></span>
 <span class="stat"><b>35/35</b><span>measures range-bounded</span></span>
-<span class="stat"><b>223</b><span>blanks, all explained</span></span>
-<span class="stat"><b>6</b><span>adversarial verifiers on the plan</span></span>
-<span class="stat"><b>~45</b><span>research &amp; verification agent runs</span></span>
-<span class="stat"><b>17</b><span>defects found by testing</span></span>
-<span class="stat"><b>17</b><span>fixed — none shipped open</span></span>
+<span class="stat"><b>233</b><span>blanks, all explained</span></span>
+<span class="stat"><b>9</b><span>adversarial verifier runs</span></span>
+<span class="stat"><b>~60</b><span>research &amp; verification agent runs</span></span>
+<span class="stat"><b>26</b><span>defects found by testing</span></span>
+<span class="stat"><b>26</b><span>fixed — none shipped open</span></span>
 </div>
 
 <p>The ledger is organised in nine registers. Each row records <i>what was checked, how, and what happened</i>. Where a check
@@ -654,7 +674,7 @@ to confirm the gate actually fires.</p>
 <tr><th>Rule class</th><th>What it rejects</th><th>How we proved it fires</th><th>Status</th></tr>
 <tr><td>1. Receipt required</td><td>Any stored value with no matching provenance entry</td><td>Values added without provenance during development were rejected until the receipt was written</td><td><span class="tag pass">enforced</span></td></tr>
 <tr><td>2. Receipt agreement</td><td>A provenance entry whose recorded value disagrees with the stored value</td><td>Checker cross-foots every receipt against every cell on every run</td><td><span class="tag pass">enforced</span></td></tr>
-<tr><td>3. Explained blanks</td><td>A null value with no written explanation</td><td>All 223 current blanks carry explanations; removing one fails CI</td><td><span class="tag pass">enforced</span></td></tr>
+<tr><td>3. Explained blanks</td><td>A null value with no written explanation</td><td>All 233 current blanks carry explanations; removing one fails CI</td><td><span class="tag pass">enforced</span></td></tr>
 <tr><td>4. Valid flags &amp; tiers</td><td>Any <span class="mono">dataLevel</span>/<span class="mono">direction</span>/<span class="mono">approx</span>/<span class="mono">tier</span> outside the declared enums</td><td>Tier validation added with the two-tier system; bad enum values fail naming the measure</td><td><span class="tag pass">enforced</span></td></tr>
 <tr><td>5. No missing cells</td><td>A city×measure key absent entirely (as opposed to an explained null)</td><td><b>Born of a real failure:</b> the price-to-income measure had 13 cities <i>missing</i> rather than blank, silently evading rule 3. Found in the Phase-3 audit; cells filled from the source the same day; this rule added so the failure mode is extinct</td><td><span class="tag fail">FAILED once</span> → <span class="tag pass">hardened</span></td></tr>
 <tr><td>6. Plausibility bounds</td><td>A value outside its measure's declared sane envelope (all 35 sourced measures carry bounds — definitional where exact: 0–100 indices, 0–3 hazard codes; physical where not: life expectancy 55–95)</td><td>Negative-tested twice: a planted typo (759 for 75.9) failed CI naming the exact cell; deleting a bounds entry failed CI demanding it back</td><td><span class="tag pass">enforced, negative-tested</span></td></tr>
@@ -773,7 +793,27 @@ condition</b>. The lab ledger — including everything the lab caught and everyt
 <tr><td>Commit-verification alarm</td><td>An automated hook flagged an unsigned commit on main</td><td>Investigated before acting: it was GitHub's own merge commit — correctly left untouched (amending would have rewritten main's history)</td></tr>
 </table></div>
 
-<p style="margin-top:22px"><b>Reading this ledger.</b> Seventeen distinct defects are recorded above. Every one was found by a
+
+<h3>Register 10 — The homicide upgrade (v3.2.0–v3.2.1): the discipline at full stretch</h3>
+<p>The LIV-01 upgrade ran the entire quality machinery end to end — feasibility study, adversarial verification, owner rulings,
+uniform fill, and a human-browser retrieval arc. The ledger:</p>
+<div class="tscroll"><table>
+<tr><th>Check</th><th>Method</th><th>Result</th></tr>
+<tr><td>Every candidate source fetch-verified</td><td>5 research agents (4 regions + a global frame), each required to return one fetched proof value per source</td><td><span class="tag pass">PASS</span> — evidence archived with manifests</td></tr>
+<tr><td>The study survives refutation</td><td>3 adversarial verifiers recomputed every load-bearing number from the archives and refetched spot values live</td><td><span class="tag pass">held</span> — with the corrections below</td></tr>
+<tr><td>"Sweden reports nothing subnational to Eurostat"</td><td>Verifier queried the datasets directly</td><td><span class="tag fail">REFUTED as overbroad</span> — Sweden reports other offences, just not homicide; sentence narrowed</td></tr>
+<tr><td>"Eurostat's Swiss city series ended 2020"</td><td>Verifier checked sibling cities</td><td><span class="tag fail">overbroad</span> — true of Zurich only (Bern continues); wording fixed</td></tr>
+<tr><td>Munich's police-report corroboration</td><td>Verifier re-read the source PDF</td><td><span class="tag fail">imprecise</span> — directional, not exact (year-reported effects); downgraded to corroboration</td></tr>
+<tr><td>"No murder-by-region table exists for the Philippines"</td><td>Verifier walked the full PSA OpenSTAT API tree</td><td><span class="tag fail">REFUTED</span> — an official SDG intentional-homicide series for Metro Manila exists; <b>a verifier added a city to coverage</b></td></tr>
+<tr><td>Method validation</td><td>London's computed 3-year mean vs ONS's own published 3-year rate; Zurich's Eurostat series vs BFS completed-only counts</td><td><span class="tag pass">PASS</span> — both reproduce exactly</td></tr>
+<tr><td>Vital-statistics route for Tokyo/Osaka/Taipei</td><td>Dedicated vetting agent: definitions, geography splits, magnitude coherence vs police data</td><td><span class="tag fail">Japan FAILS</span> (certification bias: 222 vital-stats vs 283 police homicide deaths nationally; 1 registered death in Tokyo's 23 wards in 2023) — Tokyo/Osaka blanked with the evidence; Taipei <span class="tag pass">passes</span> with a mortality-lens flag</td></tr>
+<tr><td>Hong Kong 2025 vintage</td><td>Zero-tolerance read of the source's own narrative</td><td><span class="tag pass">excluded</span> — 168 of 194 "homicides" are one fire's deaths classified manslaughter; window held at 2022–24</td></tr>
+<tr><td>Jakarta's provincial publication usable?</td><td>Retrieved via the owner's browser + Google Drive (byte-size matched the publisher's listing; checksum recorded); every appendix table read</td><td><span class="tag fail">FAIL — verified bundling</span>: murder inseparable from negligence-causing-death; blank upgraded from "unretrieved" to evidence-backed</td></tr>
+<tr><td>UAE sources reachable?</td><td>Attempted from the build sandbox AND the owner's own browser</td><td><span class="tag fail">both fail</span> — receipts upgraded to "region-restricted hosting, doubly confirmed"</td></tr>
+<tr><td>Evidence hygiene (verifier findings)</td><td>File-by-file audit of the archives</td><td><span class="tag fail">4 defects</span>: a dead FBI definition capture (re-cited from UCR), a 404 saved as evidence, sample-only Israel archives (values re-verified live), and a loose "Sydney = 46" (correct only as Greater Sydney GCCSA) — all corrected</td></tr>
+<tr><td>Deploy watcher honesty</td><td>Self-reported: the v3.2.0 deploy-poll script's match pattern had a typo, so it "timed out" after the deploy had landed</td><td><span class="tag fail">tool bug</span> — deploy verified directly by byte-comparison instead; reported to the owner rather than hidden</td></tr>
+</table></div>
+<p style="margin-top:22px"><b>Reading this ledger.</b> Twenty-six distinct defects are recorded above. Every one was found by a
 check that existed to find it — an adversarial verifier, a negative test, a plausibility read, a palette validator, or the
 owner testing the live product — and every one was fixed in the session it was found, several by making the <i>system</i>
 stricter rather than just the instance correct. That is the standard the ledger is meant to evidence: not that nothing went
@@ -787,12 +827,12 @@ wrong, but that nothing wrong could pass through quietly.</p>
 <p class="meta">How a human and an AI built an honest index together — the contract, the full task-level ledger, and the three modes of working</p>
 
 <div class="box">
-<span class="stat"><b>31</b><span>pull requests (AI-opened)</span></span>
-<span class="stat"><b>29</b><span>merges (King-reviewed)</span></span>
-<span class="stat"><b>90</b><span>commits authored by AI</span></span>
-<span class="stat"><b>3</b><span>releases published by King</span></span>
-<span class="stat"><b>~45</b><span>background agents dispatched by AI</span></span>
-<span class="stat"><b>19</b><span>formal decisions ruled by King</span></span>
+<span class="stat"><b>34</b><span>pull requests (AI-opened)</span></span>
+<span class="stat"><b>33</b><span>merges (King-reviewed)</span></span>
+<span class="stat"><b>118</b><span>commits authored by AI</span></span>
+<span class="stat"><b>5</b><span>releases published by King</span></span>
+<span class="stat"><b>~60</b><span>background agents dispatched by AI</span></span>
+<span class="stat"><b>25</b><span>formal decisions ruled by King</span></span>
 </div>
 
 <p>The collaboration ran on a simple contract, set by King on day one: <b>non-negotiable rules</b> (never invent a number; never
@@ -805,7 +845,7 @@ every release). Within that contract the AI operated with wide autonomy — and 
 <span class="tag ind">independent</span> — one of us (or neither of us: the machines) worked alone, meeting the other at a gate.</p>
 
 <h3>The full ledger, task by task</h3>
-<p>Fifty-three steps, in order. <i>Who did what</i> names the actual division of labour inside each step; <i>the interaction</i>
+<p>Sixty-three steps, in order. <i>Who did what</i> names the actual division of labour inside each step; <i>the interaction</i>
 records how the step actually went, quoting the exchange where the words themselves were the mechanism.</p>
 
 <h4>Stage A — Foundation: rules, engine, pilot (v1.0.0)</h4>
@@ -891,14 +931,24 @@ records how the step actually went, quoting the exchange where the words themsel
 <tr><td>53</td><td>Monthly freshness reporting</td><td><b>Neither.</b> The workflow files its public verdict on schedule, cc'ing King</td><td><span class="tag ind">independent</span></td><td>The collaboration's third member is a robot with a calendar</td></tr>
 </table></div>
 
+
+<h4>Stage G — The homicide upgrade: the whole method, replayed (v3.1.0–v3.2.1)</h4>
+<div class="tscroll"><table>
+<tr><th>#</th><th>Task / step</th><th>Who did what</th><th>Mode</th><th>The interaction</th></tr>
+<tr><td>54</td><td>CO&#8322; V1-2 adoption (v3.1.0)</td><td><b>King</b> ruled it worth doing; <b>AI</b> re-ran the proven pipeline against the archived V1-2 files, catching that the publisher had re-benchmarked wholesale</td><td><span class="tag tool">tool</span></td><td>"6 feels like it is worth it" — shipped same session, with the ~21% median re-benchmark disclosed per receipt</td></tr>
+<tr><td>55</td><td>ROI framing for the homicide upgrade</td><td><b>King</b> asked for an honest ROI read and a decision path rather than a yes</td><td><span class="tag team">teammate</span></td><td>"7 has unknown ROI… you tell me what you feel about the ROI and ask if we should proceed or continue with the feasibility study" — the two-stage discipline, invoked by name</td></tr>
+<tr><td>56</td><td>Feasibility study, 55 cities</td><td><b>AI</b> dispatched 5 research agents (4 regions + a global frame), every source fetch-verified with a proof value</td><td><span class="tag ind">independent</span></td><td>Included the finding that our own UNODC caveat had gone stale — the discontinued city series had been revived as a three-largest-cities dashboard</td></tr>
+<tr><td>57</td><td>Adversarial verification of the study</td><td><b>AI</b> dispatched 3 verifiers instructed to refute; every load-bearing number recomputed</td><td><span class="tag ind">independent</span></td><td>Three overbroad claims corrected — and one REFUTATION ADDED A CITY: a verifier found the official Metro Manila homicide series the study had missed</td></tr>
+<tr><td>58</td><td>The recommendation</td><td><b>King</b> interrupted the decision form to ask the human question; <b>AI</b> answered with a position, not a menu</td><td><span class="tag team">teammate</span></td><td>"Do you recommend including it?" — "Yes… the country proxy is the least honest option we have, despite looking the cleanest." The full slate followed</td></tr>
+<tr><td>59</td><td>Rulings D-L1..L6</td><td><b>King</b> adopted the slate in one word, authorizing the Mixed flag vocabulary (a rule-2 change only he could sign off)</td><td><span class="tag team">teammate</span></td><td>"go!" — six decisions, including the geography model and the volatility treatment, now recorded in LIV01.md</td></tr>
+<tr><td>60</td><td>Fill + vital-statistics vetting</td><td><b>AI</b> ran 4 collection agents for raw published inputs plus a dedicated vetting agent for the mortality route</td><td><span class="tag ind">independent</span></td><td>The vetting returned the project's most striking negative result: Japan's vital statistics register one homicide death in Tokyo's 23 wards for all of 2023 — certification bias, so the route was refused</td></tr>
+<tr><td>61</td><td>Integration &amp; ship (v3.2.0)</td><td><b>AI</b> computed every value by one scripted method, built the MIXED badge machinery, verified in a browser, shipped</td><td><span class="tag tool">tool</span></td><td>45 city values + 10 evidence-backed blanks; London's mean reproduces ONS's own 3-year rate — the validation habit from the CO&#8322; pipeline, transplanted</td></tr>
+<tr><td>62</td><td>Publishing the releases</td><td><b>King</b> drove the GitHub release UI for the first time; <b>AI</b> guided screen by screen from screenshots</td><td><span class="tag team">teammate</span></td><td>Including one save: "Not yet — the notes in the box are the wrong ones" — the v3.2.0 text was about to ship on the v3.1.0 release. Caught from a screenshot, fixed before publish</td></tr>
+<tr><td>63</td><td>Browser-in-the-loop retrieval (v3.2.1)</td><td><b>King</b> lent his browser; <b>Claude in Chrome</b> (a third collaborator) fetched what geo-blocks denied the sandbox; the PDF crossed via Google Drive when chat upload refused it; <b>AI</b> verified byte-size against the publisher and read every appendix table</td><td><span class="tag team">teammate</span></td><td>The Jakarta verdict — murder inseparable from negligence-causing-death, so the blank stands on evidence — plus doubly-confirmed UAE blocks. A "failed" data hunt that made the dataset more truthful</td></tr>
+</table></div>
 <div class="box indigo">
 <h4 style="margin-top:0">The ledger, tallied</h4>
-<p style="font-size:13px">Of the 53 steps: <b>24 teammate</b> — the mode of every decision, every design exchange, and every
-override; <b>14 tool</b> — the mode of specification-driven building and data fills; <b>15 independent</b> — the mode of
-agent-fleet research, adversarial self-review, King's solo gates (merges, releases, live testing), and the two automated
-routines that now need neither of us. The pattern is not "human asks, machine does": the decisive steps were almost all
-teammate-mode, the heavy lifting tool-mode, and the scale independent-mode — with the gates ensuring every independent stretch
-ended in human review.</p>
+<p style="font-size:13px">Of the 63 steps: <b>29 teammate</b> — the mode of every decision, every design exchange, every override, and now every screen-by-screen walkthrough; <b>16 tool</b> — the mode of specification-driven building and data fills; <b>18 independent</b> — agent-fleet research, adversarial self-review, King's solo gates (merges, releases, live testing), and the two automated routines that need neither of us. Stage G added a third kind of collaborator: an AI in the owner's own browser, fetching what the build environment could not reach, with the human as the bridge between the two AIs. The pattern held: decisive steps teammate-mode, heavy lifting tool-mode, scale independent-mode — every autonomous stretch ending at a human gate.</p>
 </div>
 
 <h3>The three modes, distilled</h3>
@@ -941,7 +991,7 @@ feature, is the finding of this tab.</p>
 <a href="https://github.com/KR48VR/master-of-all-indices/blob/main/PHASE3.md">decision records</a> &middot;
 <a href="https://github.com/KR48VR/master-of-all-indices/issues?q=label%3Afreshness">freshness reports</a> &middot;
 <a href="https://github.com/KR48VR/master-of-all-indices">repository</a></p>
-<p style="color:var(--ink3); font-size:11.5px">Second edition. This volume is designed for integration: it shares the
+<p style="color:var(--ink3); font-size:11.5px">Third edition. This volume is designed for integration: it shares the
 Workbench's palette, typography and honesty conventions, and every claim links to the live artifact that proves it. Cite the
 Workbench as Poon, K. W., <i>Master Index Workbench</i> (2026) — stating the version you used and the tier.</p>
 </footer>
