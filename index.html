@@ -697,7 +697,8 @@ function _paintSky(map, titleFn){
     else {
       // min-max stretched for contrast (order-preserving; exact scores in the tooltip)
       b.style.height=Math.round(14 + (v-min)/span*86)+'%';
-      b.title=titleFn(c,v);
+      const t=titleFn(c,v);
+      if(b.title!==t) b.title=t;   // rewriting an unchanged title closes an open tooltip
     }
   });
 }
@@ -724,9 +725,19 @@ function runSkylineIntro(){
     .concat(P.domains.map(d=>({label:d.id+' only', map:_blendMap(goldOf(d.id))})));
   const CYCLES=10, HOLD=2600;   // ~0.8s morph + ~1.8s hold per skyline; stops on any blend change
   const cap=document.getElementById('skycap');
+  const host=document.getElementById('skyline');
+  // hovering pauses the tour so tooltips can actually be read (repainting closes them)
+  let paused=false;
+  if(host && !host._tourHover){
+    host._tourHover=true;
+    host.addEventListener('mouseenter', ()=>{ paused=true;
+      if(_introRunning && cap) cap.textContent = cap.textContent.replace(' — shifting until you blend your own', ' — paused while you look; hover away to resume'); });
+    host.addEventListener('mouseleave', ()=>{ paused=false; });
+  }
   _introRunning=true; let k=0;
   const step=()=>{
     if(!_introRunning) return;
+    if(paused){ _introTimer=setTimeout(step, 300); return; }   // hold the frame under the pointer
     if(k >= CYCLES*frames.length){
       _introRunning=false; if(cap) cap.textContent='';
       renderSkyline(lastRows); return;
@@ -1092,6 +1103,16 @@ if(location.hash.startsWith('#b=') && applyBlend(location.hash.slice(3))){
 }
 const _recompute0 = recompute;
 recompute = function(reorder){ cancelIntro(); _recompute0(reorder); syncURL(); };
+
+// a #b= link opened in an ALREADY-OPEN tab only changes the fragment (no reload) —
+// apply the blend live so shared links always work
+window.addEventListener('hashchange', ()=>{
+  if(location.hash.startsWith('#b=') && applyBlend(location.hash.slice(3))){
+    cancelIntro();
+    renderControls();
+    recompute(true);
+  }
+});
 
 // on load, let the skyline shift through a few real blends — this index is never static
 runSkylineIntro();
