@@ -79,6 +79,12 @@ button{font-family:inherit}
 .chip.share{background:var(--amber); color:#fff; border-color:var(--amber); font-weight:600}
 .chip.share:hover{background:#96610C; border-color:#96610C; color:#fff}
 .build .chip.share{margin-top:9px; width:100%; text-align:center}
+
+/* the data skyline: 55 bars, one per city, height = composite score in the CURRENT blend.
+   Reads as a skyline; is actually the live ranking. The only decoration with a receipt. */
+.skyline{display:flex; align-items:flex-end; gap:2px; flex-basis:100%; height:24px; margin-top:2px}
+.skyline i{flex:1; background:var(--indigo); opacity:.13; border-radius:1.5px 1.5px 0 0; min-height:2px; cursor:default; transition:height .35s ease, opacity .15s}
+.skyline i:hover{opacity:.45}
 .flag svg{flex:none}
 .flag b{font-weight:600}
 .flag span{font-size:12px; line-height:1.35}
@@ -310,6 +316,7 @@ button{font-family:inherit}
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 3 2 20h20L12 3Z" stroke="#B4740E" stroke-width="1.7" stroke-linejoin="round"/><path d="M12 9v5" stroke="#B4740E" stroke-width="1.7" stroke-linecap="round"/><circle cx="12" cy="17" r="1" fill="#B4740E"/></svg>
     <span><b>Sourced data.</b> Every value shown is real, sourced and dated (see the provenance block in <code>dataset.js</code>). Blanks are honest gaps &mdash; where no verifiable figure exists, nothing is shown. The default view is the <b>gold tier</b>: measures that measure what their name says, from the best available source. The optional <b>extended tier</b> adds known-compromised measures &mdash; clearly badged &mdash; so you can see what conventional-index shortcuts do to a ranking.</span>
   </div>
+  <div class="skyline" id="skyline" aria-hidden="true"></div>
 </div>
 
 <div class="wrap">
@@ -647,6 +654,18 @@ function renderControls(){
   renderApprox();
 }
 
+// the data skyline: one bar per city, height = composite in the current blend, rank order
+function renderSkyline(rows){
+  const host = document.getElementById('skyline');
+  if(!host) return;
+  const scored = rows.filter(r=>r.composite!==null);
+  if(!scored.length){ host.innerHTML=''; return; }
+  const max = Math.max(...scored.map(r=>r.composite));
+  host.innerHTML = scored.map(r=>
+    `<i style="height:${Math.max(8, Math.round(r.composite/max*100))}%" title="${r.rank}. ${r.city} — ${r.composite.toFixed(1)} in your current blend"></i>`
+  ).join('');
+}
+
 function updateExtUI(){
   const extActive = P.variables.some(v=>v.tier==='extended' && state.varOn[v.id] && state.domOn[v.domain]);
   document.getElementById('extflag').hidden = !state.extended;
@@ -746,6 +765,7 @@ function recompute(reorder){
   renderRows(rows);
   renderControls_light();
   updateExtUI();
+  renderSkyline(rows);
   // stat line
   const nA=activeSet().size;
   document.getElementById('rstat').innerHTML =
