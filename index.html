@@ -125,6 +125,7 @@ button{font-family:inherit}
 .badge.metro{background:#f3f4f7}
 .badge.proxy{background:var(--amber-bg); border-color:#EAD4A6; color:#7a4e08}
 .badge.ext{background:#F6E8E8; border-color:#D9B3B3; color:#8a3030}
+.badge.stale{background:var(--amber-bg); border-color:#EAD4A6; color:#7a4e08; cursor:help}
 .extflag{display:inline-block; padding:2px 9px; border-radius:12px; font-family:"IBM Plex Mono",monospace;
   font-size:10px; letter-spacing:.04em; background:#8a3030; color:#fff; vertical-align:middle}
 .extflag[hidden]{display:none}
@@ -320,6 +321,7 @@ button{font-family:inherit}
       <h2>Ranking<span id="extmark" class="extflag" hidden>extended measures active</span></h2>
       <div>
         <span class="rstat" id="rstat"></span>
+        <button class="chip" id="sharebtn" title="Copy a link that reproduces this exact blend: areas, weights, measures, method and tier. A shared ranking here is a recipe, not a screenshot.">Share this blend</button>
         <button class="chip" id="stabbtn" title="Rule 5, 'does it wobble': re-runs the index once per active measure, each time with that measure removed, and shows every city's best and worst rank across those runs. Narrow range = robust position.">Stability check</button>
       </div>
     </div>
@@ -336,6 +338,7 @@ button{font-family:inherit}
         <div class="litem"><span class="dot perception k"></span><span>Perception / survey-based, not a hard count.</span></div>
         <div class="litem"><span class="dot self-reported k"></span><span>Self-reported by the city; coverage gaps.</span></div>
         <div class="litem"><span class="dot modelled k"></span><span>Modelled estimate, not observed.</span></div>
+        <div class="litem"><span class="badge stale k">2015</span><span>Best-before warning: this value's reference year runs 4+ years behind its measure's typical year &mdash; the newest honest figure is simply old. The chip shows the year itself.</span></div>
         <div class="litem"><span class="flagmark k">&#9873;</span><span>Direction is contestable &mdash; "better" depends on your audience.</span></div>
         <div class="litem"><span class="k" style="color:var(--amber);font-weight:600">cov</span><span>Coverage: share of your chosen measures the city actually has data for.</span></div>
       </div>
@@ -378,8 +381,9 @@ button{font-family:inherit}
 
       <p><b>These rules are enforced by machinery, not just promised.</b> Every proposed change to the dataset must
       pass an automated integrity check before it can be published: it rejects any value that lacks a matching
-      provenance record, any blank without an explanation, any invalid honesty flag, and any drift between the app's
-      data and the downloadable CSV. Every run of the check is
+      provenance record, any blank without an explanation, any invalid honesty flag, any value outside its
+      measure's declared plausibility bounds (a typo or unit slip fails loudly, even with a receipt), and any
+      drift between the app's data and the downloadable CSV. Every run of the check is
       <a href="https://github.com/KR48VR/master-of-all-indices/actions/workflows/integrity.yml">public</a> &mdash;
       including the failures. The maintainers cannot quietly break these rules; the repository would refuse.
       Staleness is watched the same way: a monthly automated
@@ -426,7 +430,7 @@ button{font-family:inherit}
         <tr><td>Where a number comes from</td><td>a sources appendix, at best</td><td>click it: source, year, method, caveat</td></tr>
         <tr><td>Missing data</td><td>filled by estimation or analyst judgement, invisibly</td><td>left blank, explained, counted against coverage</td></tr>
         <tr><td>Approximations</td><td>undisclosed</td><td>badged per measure, tallied above the ranking</td></tr>
-        <tr><td>Weights &amp; method</td><td>fixed by the publisher</td><td>yours to change; the ranking rebuilds live</td></tr>
+        <tr><td>Weights &amp; method</td><td>fixed by the publisher</td><td>yours to change; the ranking rebuilds live &mdash; and any blend is shareable as a link that reproduces it exactly</td></tr>
         <tr><td>Robustness</td><td>asserted</td><td>measured: the stability check shows each city's rank range when any one measure is dropped</td></tr>
         <tr><td>The data itself</td><td>paywalled, or locked in a PDF</td><td>versioned CSV download, licensed</td></tr>
         <tr><td>The rules</td><td>an editorial promise</td><td>a public automated check on every change</td></tr>
@@ -637,6 +641,35 @@ function updateExtUI(){
     P.variables.filter(v=>v.tier==='extended').length + ' measures &mdash; ' + parts.join(' &middot; ') + '.';
 })();
 
+// best-before at cell level: parse the END year of a provenance 'year' field
+// ("2019-23" -> 2023, "2024/25" -> 2025, "2026-07-12" -> 2026, "FY2023" -> 2023)
+function refYear(y){
+  const s = String(y||'');
+  const m = s.match(/((?:19|20)\d{2})\s*[-\/]\s*(\d{2,4})/);
+  if(m){
+    const start=+m[1], e=m[2];
+    if(e.length===4) return Math.max(start, +e);
+    return (+e > start%100) ? Math.floor(start/100)*100 + +e : start; // "2019-23" is a range; "2026-07" is a date
+  }
+  const y4 = s.match(/(?:19|20)\d{2}/);
+  return y4 ? +y4[0] : null;
+}
+const staleMedian = {};   // measure id -> median reference year across cities
+(function(){
+  Object.keys(P.provenance||{}).forEach(mid=>{
+    const ys = Object.values(P.provenance[mid].perCity||{})
+      .filter(e=>e.value!==null && e.value!==undefined).map(e=>refYear(e.year)).filter(Boolean).sort((a,b)=>a-b);
+    if(ys.length) staleMedian[mid] = ys[Math.floor(ys.length/2)];
+  });
+})();
+function staleChip(mid, city){
+  const pc = P.provenance && P.provenance[mid] && P.provenance[mid].perCity && P.provenance[mid].perCity[city];
+  if(!pc || pc.value===null || pc.value===undefined) return '';
+  const y = refYear(pc.year), med = staleMedian[mid];
+  if(!y || !med || med - y < 4) return '';
+  return `<span class="badge stale tip" title="Best-before warning: this value's reference year is ${y} — ${med-y} years behind this measure's typical year (${med}). Click the value for its provenance.">${y}</span>`;
+}
+
 function badgeHTML(v){
   let h='';
   if(v.tier==='extended') h+=`<span class="badge ext tip" title="Extended tier: a measure we judged compromised — see its caveat for why">extended</span>`;
@@ -767,7 +800,7 @@ function breakdown(r){
       const cls = hasProv ? 'braw mono plink' : 'braw mono';
       const attrs = hasProv ? ` data-vid="${v.id}" role="button" tabindex="0" title="Where does this number come from?"` : '';
       return `<div class="bkvar"><span class="bn" title="${v.name}">${v.name}</span>
-        <span class="${cls}"${attrs}>${fmtRaw(v,x.raw)}</span> ${badgeHTML(v)} ${sc}</div>`;
+        <span class="${cls}"${attrs}>${fmtRaw(v,x.raw)}</span> ${staleChip(v.id, r.city)}${badgeHTML(v)} ${sc}</div>`;
     }).join('');
     const srcs=[...new Set(r.domVars[d].map(x=>varById[x.id].source))].join(' · ');
     col.innerHTML=`<div class="dh"><span class="dn">${d}</span><span class="ds mono">${r.domScores[d].toFixed(1)}</span></div>${vars}<div class="bksrc">Sources: ${srcs}${P.provenance?' · <span class="provhint">click a value for its source</span>':''}</div>`;
@@ -884,8 +917,54 @@ function showProv(vid, city, anchor){
 const stabBtn=document.getElementById('stabbtn');
 stabBtn.onclick=()=>{ state.stability=!state.stability; stabBtn.classList.toggle('act', state.stability); recompute(true); };
 
-renderControls();
-recompute(true);
+// ---- shareable blends: the full configuration lives in the URL ----
+// Encoded as a diff from the gold-tier defaults, so a clean view has a clean URL.
+function encodeBlend(){
+  const b = {};
+  if(state.method!=='additive') b.m = state.method;
+  if(state.extended) b.x = 1;
+  const dOff = P.domains.filter(d=>!state.domOn[d.id]).map(d=>d.id);
+  if(dOff.length) b.d = dOff;
+  const w = {}; P.domains.forEach(d=>{ if(state.domWeight[d.id]!==1) w[d.id]=state.domWeight[d.id]; });
+  if(Object.keys(w).length) b.w = w;
+  const vDiff = P.variables.filter(v=>state.varOn[v.id] !== (v.tier==='gold')).map(v=>v.id);
+  if(vDiff.length) b.v = vDiff;
+  return Object.keys(b).length ? btoa(JSON.stringify(b)).replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,'') : '';
+}
+function applyBlend(hash){
+  try{
+    const b = JSON.parse(atob(hash.replace(/-/g,'+').replace(/_/g,'/')));
+    if(b.m==='geometric'||b.m==='additive') state.method=b.m;
+    state.extended = !!b.x;
+    P.domains.forEach(d=>{ state.domOn[d.id] = !(b.d||[]).includes(d.id); });
+    P.domains.forEach(d=>{ const wv=(b.w||{})[d.id]; state.domWeight[d.id] = (typeof wv==='number' && wv>=0 && wv<=5) ? wv : 1; });
+    const flip = new Set(b.v||[]);
+    P.variables.forEach(v=>{ state.varOn[v.id] = flip.has(v.id) ? !(v.tier==='gold') : (v.tier==='gold'); });
+    if(!state.extended) P.variables.forEach(v=>{ if(v.tier==='extended') state.varOn[v.id]=false; });
+    return true;
+  }catch(e){ return false; }
+}
+function syncURL(){
+  const enc = encodeBlend();
+  history.replaceState(null, '', enc ? '#b='+enc : location.pathname + location.search);
+}
+document.getElementById('sharebtn').onclick = (e)=>{
+  syncURL();
+  const url = location.href;
+  const done = ()=>{ const btn=e.target; const t=btn.textContent; btn.textContent='Link copied ✓'; setTimeout(()=>btn.textContent=t, 1600); };
+  if(navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(url).then(done, done);
+  else { prompt('Copy this link to share your exact blend:', url); }
+};
+
+if(location.hash.startsWith('#b=') && applyBlend(location.hash.slice(3))){
+  renderControls();
+  recompute(true);
+} else {
+  renderControls();
+  recompute(true);
+}
+const _recompute0 = recompute;
+recompute = function(reorder){ _recompute0(reorder); syncURL(); };
 </script>
 </body>
 </html>
