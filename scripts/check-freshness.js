@@ -15,7 +15,7 @@ const P = global.window.INDEX_DATA;
 // Publication cadence per measure: how many months between source updates,
 // and what to watch for. Keep this honest — it is the contract the report runs on.
 const CADENCE = {
-  'LIV-01': { months: 12, why: 'UNODC updates national homicide series annually' },
+  'LIV-01': { months: 12, why: 'mixed city sources (Eurostat/FBI/StatCan/national) all publish annually; windows roll forward each year' },
   'LIV-02': { months: 6,  why: 'Numbeo publishes Mid-Year (~Jul) and full-year (~Jan) editions' },
   'LIV-03': { months: 12, why: 'WGI releases annually (~Sept); never mix releases' },
   'LIV-04': { months: 12, why: 'national life tables / WB series update annually' },
