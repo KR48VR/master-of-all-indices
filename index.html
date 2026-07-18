@@ -321,6 +321,7 @@ button{font-family:inherit}
       <h2>Ranking<span id="extmark" class="extflag" hidden>extended measures active</span></h2>
       <div>
         <span class="rstat" id="rstat"></span>
+        <button class="chip" id="sharebtn" title="Copy a link that reproduces this exact blend: areas, weights, measures, method and tier. A shared ranking here is a recipe, not a screenshot.">Share this blend</button>
         <button class="chip" id="stabbtn" title="Rule 5, 'does it wobble': re-runs the index once per active measure, each time with that measure removed, and shows every city's best and worst rank across those runs. Narrow range = robust position.">Stability check</button>
       </div>
     </div>
@@ -429,7 +430,7 @@ button{font-family:inherit}
         <tr><td>Where a number comes from</td><td>a sources appendix, at best</td><td>click it: source, year, method, caveat</td></tr>
         <tr><td>Missing data</td><td>filled by estimation or analyst judgement, invisibly</td><td>left blank, explained, counted against coverage</td></tr>
         <tr><td>Approximations</td><td>undisclosed</td><td>badged per measure, tallied above the ranking</td></tr>
-        <tr><td>Weights &amp; method</td><td>fixed by the publisher</td><td>yours to change; the ranking rebuilds live</td></tr>
+        <tr><td>Weights &amp; method</td><td>fixed by the publisher</td><td>yours to change; the ranking rebuilds live &mdash; and any blend is shareable as a link that reproduces it exactly</td></tr>
         <tr><td>Robustness</td><td>asserted</td><td>measured: the stability check shows each city's rank range when any one measure is dropped</td></tr>
         <tr><td>The data itself</td><td>paywalled, or locked in a PDF</td><td>versioned CSV download, licensed</td></tr>
         <tr><td>The rules</td><td>an editorial promise</td><td>a public automated check on every change</td></tr>
@@ -916,8 +917,54 @@ function showProv(vid, city, anchor){
 const stabBtn=document.getElementById('stabbtn');
 stabBtn.onclick=()=>{ state.stability=!state.stability; stabBtn.classList.toggle('act', state.stability); recompute(true); };
 
-renderControls();
-recompute(true);
+// ---- shareable blends: the full configuration lives in the URL ----
+// Encoded as a diff from the gold-tier defaults, so a clean view has a clean URL.
+function encodeBlend(){
+  const b = {};
+  if(state.method!=='additive') b.m = state.method;
+  if(state.extended) b.x = 1;
+  const dOff = P.domains.filter(d=>!state.domOn[d.id]).map(d=>d.id);
+  if(dOff.length) b.d = dOff;
+  const w = {}; P.domains.forEach(d=>{ if(state.domWeight[d.id]!==1) w[d.id]=state.domWeight[d.id]; });
+  if(Object.keys(w).length) b.w = w;
+  const vDiff = P.variables.filter(v=>state.varOn[v.id] !== (v.tier==='gold')).map(v=>v.id);
+  if(vDiff.length) b.v = vDiff;
+  return Object.keys(b).length ? btoa(JSON.stringify(b)).replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,'') : '';
+}
+function applyBlend(hash){
+  try{
+    const b = JSON.parse(atob(hash.replace(/-/g,'+').replace(/_/g,'/')));
+    if(b.m==='geometric'||b.m==='additive') state.method=b.m;
+    state.extended = !!b.x;
+    P.domains.forEach(d=>{ state.domOn[d.id] = !(b.d||[]).includes(d.id); });
+    P.domains.forEach(d=>{ const wv=(b.w||{})[d.id]; state.domWeight[d.id] = (typeof wv==='number' && wv>=0 && wv<=5) ? wv : 1; });
+    const flip = new Set(b.v||[]);
+    P.variables.forEach(v=>{ state.varOn[v.id] = flip.has(v.id) ? !(v.tier==='gold') : (v.tier==='gold'); });
+    if(!state.extended) P.variables.forEach(v=>{ if(v.tier==='extended') state.varOn[v.id]=false; });
+    return true;
+  }catch(e){ return false; }
+}
+function syncURL(){
+  const enc = encodeBlend();
+  history.replaceState(null, '', enc ? '#b='+enc : location.pathname + location.search);
+}
+document.getElementById('sharebtn').onclick = (e)=>{
+  syncURL();
+  const url = location.href;
+  const done = ()=>{ const btn=e.target; const t=btn.textContent; btn.textContent='Link copied ✓'; setTimeout(()=>btn.textContent=t, 1600); };
+  if(navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(url).then(done, done);
+  else { prompt('Copy this link to share your exact blend:', url); }
+};
+
+if(location.hash.startsWith('#b=') && applyBlend(location.hash.slice(3))){
+  renderControls();
+  recompute(true);
+} else {
+  renderControls();
+  recompute(true);
+}
+const _recompute0 = recompute;
+recompute = function(reorder){ _recompute0(reorder); syncURL(); };
 </script>
 </body>
 </html>
