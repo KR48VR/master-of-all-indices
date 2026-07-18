@@ -65,7 +65,18 @@ button{font-family:inherit}
   text-transform:uppercase; color:var(--ink3); margin-bottom:9px;}
 .brand p{margin:8px 0 0; color:var(--ink2); max-width:52ch; font-size:13px;}
 .flag{display:flex; gap:9px; align-items:center; background:var(--amber-bg);
-  border:1px solid #EAD4A6; color:#7a4e08; padding:9px 13px; border-radius:9px; max-width:340px;}
+  border:1px solid #EAD4A6; color:#7a4e08; padding:9px 13px; border-radius:9px; max-width:300px;}
+
+/* the workbench card: the product's identity, right of the title */
+.build{background:var(--indigo-soft); border:1px solid #D8DEEA; border-radius:10px;
+  padding:12px 15px; max-width:265px; align-self:center;}
+.build .bt{font-family:"IBM Plex Mono",monospace; font-size:10.5px; letter-spacing:.14em;
+  text-transform:uppercase; color:var(--indigo); margin-bottom:7px; font-weight:600}
+.build .bs{display:flex; gap:8px; font-size:12px; color:var(--ink2); line-height:1.45; margin-top:5px}
+.build .bn2{font-family:"IBM Plex Mono",monospace; color:var(--amber); font-weight:600; flex:none}
+.chip.share{background:var(--amber); color:#fff; border-color:var(--amber); font-weight:600}
+.chip.share:hover{background:#96610C; border-color:#96610C; color:#fff}
+.build .chip.share{margin-top:9px; width:100%; text-align:center}
 .flag svg{flex:none}
 .flag b{font-weight:600}
 .flag span{font-size:12px; line-height:1.35}
@@ -138,7 +149,7 @@ button{font-family:inherit}
 .cred .ck{font-family:"IBM Plex Mono",monospace; color:var(--up); font-weight:600; flex:none; margin-top:1px}
 .cred a{color:var(--amber); text-decoration:none; border-bottom:1px solid #EAD4A6}
 .cred a:hover{color:var(--ink)}
-@media (max-width:1180px){.creds{display:none}}
+@media (max-width:1420px){.creds{display:none}}
 
 .extrow{display:flex; align-items:center; gap:10px; margin-top:4px}
 .extrow small{font-size:11px; color:var(--ink3); line-height:1.45; flex:1}
@@ -278,9 +289,17 @@ button{font-family:inherit}
     approximation stays visible. Smaller than conventional indices &mdash; and able to prove every number they can't.</p>
     <a class="mlink" href="#methods">Why trust this? Methods &amp; choices &darr;</a>
   </div>
+  <div class="build" role="note">
+    <div class="bt">Make it yours</div>
+    <div class="bs"><span class="bn2">1</span><span>Pick the areas &amp; measures &mdash; or flip on the extended tier.</span></div>
+    <div class="bs"><span class="bn2">2</span><span>Reweight, switch method &mdash; the ranking rebuilds live.</span></div>
+    <div class="bs"><span class="bn2">3</span><span>Share your blend &mdash; the link reproduces it exactly.</span></div>
+    <button class="chip share" id="sharebtn2">Share this blend</button>
+  </div>
   <div class="creds" role="note">
     <div class="cred"><span class="ck">&#10003;</span><div><b>Every number has a receipt.</b><br>
-      Click any value: source, reference year, method, caveats. Blanks explain themselves.</div></div>
+      Click any value: source, reference year, method, caveats. Blanks explain themselves &mdash;
+      and implausible values can't even merge.</div></div>
     <div class="cred"><span class="ck">&#10003;</span><div><b>&hellip;and a best-before date.</b><br>
       <span id="freshline">Freshness is checked monthly against each source's publication rhythm &mdash;
       <a href="https://github.com/KR48VR/master-of-all-indices/issues?q=label%3Afreshness">reports are public</a>.</span></div></div>
@@ -321,7 +340,7 @@ button{font-family:inherit}
       <h2>Ranking<span id="extmark" class="extflag" hidden>extended measures active</span></h2>
       <div>
         <span class="rstat" id="rstat"></span>
-        <button class="chip" id="sharebtn" title="Copy a link that reproduces this exact blend: areas, weights, measures, method and tier. A shared ranking here is a recipe, not a screenshot.">Share this blend</button>
+        <button class="chip share" id="sharebtn" title="Copy a link that reproduces this exact blend: areas, weights, measures, method and tier. A shared ranking here is a recipe, not a screenshot.">Share this blend</button>
         <button class="chip" id="stabbtn" title="Rule 5, 'does it wobble': re-runs the index once per active measure, each time with that measure removed, and shows every city's best and worst rank across those runs. Narrow range = robust position.">Stability check</button>
       </div>
     </div>
@@ -948,13 +967,19 @@ function syncURL(){
   const enc = encodeBlend();
   history.replaceState(null, '', enc ? '#b='+enc : location.pathname + location.search);
 }
-document.getElementById('sharebtn').onclick = (e)=>{
-  syncURL();
-  const url = location.href;
-  const done = ()=>{ const btn=e.target; const t=btn.textContent; btn.textContent='Link copied ✓'; setTimeout(()=>btn.textContent=t, 1600); };
-  if(navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(url).then(done, done);
-  else { prompt('Copy this link to share your exact blend:', url); }
-};
+function wireShare(id){
+  const btn = document.getElementById(id);
+  if(!btn) return;
+  btn.onclick = ()=>{
+    syncURL();
+    const url = location.href;
+    const t = btn.textContent;
+    const done = ()=>{ btn.textContent='Link copied ✓'; setTimeout(()=>btn.textContent=t, 1600); };
+    if(navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(url).then(done, done);
+    else { prompt('Copy this link to share your exact blend:', url); }
+  };
+}
+wireShare('sharebtn'); wireShare('sharebtn2');
 
 if(location.hash.startsWith('#b=') && applyBlend(location.hash.slice(3))){
   renderControls();
