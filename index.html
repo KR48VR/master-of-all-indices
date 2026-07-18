@@ -403,8 +403,8 @@ button{font-family:inherit}
         <li><b>Every value carries its receipt.</b> Source, reference year, extraction method and caveats are recorded
         per value and shown in the click-through popover. Reference years differ across cities within a measure;
         we show the year rather than pretend otherwise.</li>
-        <li><b>Compromises are flagged, never hidden.</b> Metro-level stand-ins, country proxies, crowd-sourced and
-        modelled figures are all badged in the table, and the amber line above the ranking counts them.</li>
+        <li><b>Compromises are flagged, never hidden.</b> Metro-level stand-ins, country proxies, mixed geographies,
+        crowd-sourced and modelled figures are all badged in the table, and the amber line above the ranking counts them.</li>
         <li><b>Missing data costs visibility, not rank.</b> A city missing a measure has that measure dropped from its
         own score and its coverage % reduced &mdash; it is never punished with an assumed zero.</li>
       </ul>
@@ -487,9 +487,12 @@ button{font-family:inherit}
       <h4>Known limits</h4>
       <p>Reference years are mixed within measures (each value shows its own, and a value whose reference year runs
       4+ years behind its measure's typical year wears a small amber year-chip in the breakdown). Some cities carry state- or
-      province-level stand-ins where nothing finer is published. A few sources are crowd-maintained or modelled and
-      are flagged as such. Definitions genuinely differ for waste recycling across cities &mdash; the caveats say so
-      bluntly. When a better source appears, the value is upgraded and the provenance updated.</p>
+      province-level stand-ins where nothing finer is published. One measure (homicide) is city-level but MIXED in
+      geography &mdash; police-agency city proper in the US, census metro areas in Canada, province-level for a few European
+      rows &mdash; because sources publish nothing else; each receipt names its unit, and ranks can shift on boundary choice
+      alone. A few sources are crowd-maintained or modelled and are flagged as such. Definitions genuinely differ for waste
+      recycling across cities &mdash; the caveats say so bluntly. When a better source appears, the value is upgraded and
+      the provenance updated.</p>
 
       <h4>Data &amp; reuse</h4>
       <p><b>Download:</b> <a href="dataset.csv" download>dataset.csv</a> (one row per city &times; measure, with
