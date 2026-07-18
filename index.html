@@ -82,12 +82,18 @@ button{font-family:inherit}
 
 /* the data skyline: 55 bars, one per city, height = composite score in the CURRENT blend.
    Reads as a skyline; is actually the live ranking. The only decoration with a receipt. */
-.skyline{display:flex; align-items:flex-end; gap:2px; flex-basis:100%; height:24px; margin-top:2px}
+.skyline{display:flex; align-items:flex-end; gap:2px; flex-basis:100%; height:30px; margin-top:2px}
 .skyline i{flex:1; background:var(--indigo); opacity:.13; border-radius:1.5px 1.5px 0 0; min-height:2px; cursor:default;
   transition:height .5s cubic-bezier(.4,0,.2,1), background-color .4s, opacity .15s}
 .skyline i:hover{opacity:.45}
 .skyline.mine i{background:var(--amber); opacity:.22}
 .skyline.mine i:hover{opacity:.55}
+/* building silhouettes: deterministic per city (name hash), pure texture, no meaning */
+.skyline i.s1{border-radius:45% 45% 0 0}
+.skyline i.s2{border-radius:0; clip-path:polygon(0 100%, 0 24%, 50% 0, 100% 24%, 100% 100%)}
+.skyline i.s3{border-radius:0; clip-path:polygon(0 100%, 0 0, 72% 0, 72% 34%, 100% 34%, 100% 100%)}
+.skyline i.w1{flex-grow:.8}
+.skyline i.w2{flex-grow:1.35}
 .flag svg{flex:none}
 .flag b{font-weight:600}
 .flag span{font-size:12px; line-height:1.35}
@@ -665,17 +671,31 @@ function _ensureBars(){
   if(!host) return null;
   if(_skyBars) return _skyBars;
   _skyBars = {}; host.innerHTML = '';
-  P.cities.forEach(c=>{ const i=document.createElement('i'); host.appendChild(i); _skyBars[c]=i; });
+  P.cities.forEach(c=>{
+    const i=document.createElement('i');
+    // stable name hash -> silhouette + width variant: texture only, identical every render
+    let h=0; for(const ch of c) h=(h*31 + ch.charCodeAt(0))>>>0;
+    const s=h%4, w=(h>>3)%3;
+    if(s) i.classList.add('s'+s);
+    if(w) i.classList.add('w'+w);
+    host.appendChild(i); _skyBars[c]=i;
+  });
   return _skyBars;
 }
 function _paintSky(map, titleFn){
   const bars=_ensureBars(); if(!bars) return;
   const vals=Object.values(map).filter(v=>v!==null&&v!==undefined);
   const max=vals.length?Math.max(...vals):1;
+  const min=vals.length?Math.min(...vals):0;
+  const span=(max-min)||1;
   P.cities.forEach(c=>{
     const b=bars[c], v=map[c];
     if(v===null||v===undefined){ b.style.height='2px'; b.title=titleFn(c,null); }
-    else { b.style.height=Math.max(6,Math.round(v/max*100))+'%'; b.title=titleFn(c,v); }
+    else {
+      // min-max stretched for contrast (order-preserving; exact scores in the tooltip)
+      b.style.height=Math.round(14 + (v-min)/span*86)+'%';
+      b.title=titleFn(c,v);
+    }
   });
 }
 function renderSkyline(rows){
