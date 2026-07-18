@@ -25,7 +25,11 @@ they explain themselves.
 
 The [integrity workflow](.github/workflows/integrity.yml) fails any change that
 adds a value without provenance, breaks a flag, or lets `dataset.csv` drift
-from `dataset.js`.
+from `dataset.js`. A monthly [freshness workflow](.github/workflows/freshness.yml)
+compares every measure's last-verified date against its source's publication
+cadence and files the result as a public
+[freshness issue](https://github.com/KR48VR/master-of-all-indices/issues?q=label%3Afreshness) —
+staleness is a visible property here, not a quiet one.
 
 ## Why so small?
 

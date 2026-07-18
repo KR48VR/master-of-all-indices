@@ -21,6 +21,12 @@ Live at: https://kr48vr.github.io/master-of-all-indices/
 - `scripts/check-integrity.js` — mechanical enforcement of the honesty rules
   (every value provenanced, blanks explained, flags valid). Run it after any
   data change; CI runs it on every push/PR.
+- `scripts/check-freshness.js` — the freshness routine: compares each
+  measure's provenance `retrieved` date against its source's declared
+  publication cadence (the CADENCE map in the script) plus a standing
+  watchlist. A monthly GitHub Action files the report as a public issue
+  labelled `freshness`. When you refresh a measure, update its provenance
+  `retrieved` date; when a source's cadence changes, update the map.
 - `city_index_blueprint.xlsx` — the human-readable catalog of all 38 measures,
   with each one's source, direction, data level, and caveats. The app does NOT
   read it; it is the reference. READ IT to understand any measure.
