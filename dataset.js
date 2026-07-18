@@ -4,7 +4,7 @@
 // CLAUDE.md rule 3). A null/absent value is honest missing data — never
 // fill one with a guess. The 19 non-pilot measures have no data yet.
 window.INDEX_DATA = {
-"meta":{"name": "Master Index Workbench", "version": "3.2.0", "released": "2026-07-18", "dataLicense": "CC BY-NC-SA 4.0 (compilation); individual values inherit source terms recorded in provenance", "codeLicense": "MIT", "url": "https://kr48vr.github.io/master-of-all-indices/"},
+"meta":{"name": "Master Index Workbench", "version": "3.2.1", "released": "2026-07-18", "dataLicense": "CC BY-NC-SA 4.0 (compilation); individual values inherit source terms recorded in provenance", "codeLicense": "MIT", "url": "https://kr48vr.github.io/master-of-all-indices/"},
 "domains":[
 {"id": "Liveable", "tint": "#F6C99A", "ink": "#8a4b12"},
 {"id": "Green", "tint": "#A9CE9C", "ink": "#2f5d29"},
@@ -216,7 +216,7 @@ window.INDEX_DATA = {
    "Dubai": {
     "value": null,
     "year": "n/a",
-    "note": "NULL (retrieval failure, not absence): Dubai Police open data and the Dubai Statistics Center publish emirate crime statistics (incl. willful murder), but all UAE statistical hosts geo-block our environment. Fillable from another network."
+    "note": "NULL (retrieval failure, not absence — now doubly confirmed): Dubai Police open data and the Dubai Statistics Center publish emirate crime statistics (incl. willful murder), but dubaipulse.gov.ae and dubaipolice.gov.ae time out at network level from our build environment AND from the owner's own browser outside the UAE (verified 2026-07-18, repeated retries) — consistent with region-restricted hosting rather than a temporary outage. Fillable from a UAE-based connection."
    },
    "San Francisco": {
     "value": 6.06,
@@ -422,7 +422,7 @@ window.INDEX_DATA = {
     "year": "2020-22",
     "source": "Royal Thai Police criminal case statistics — reported cases (รับแจ้ง) 63/36/83 (2020, 2021, 2022); annual rates 1.13/0.65/1.51",
     "geography": "Bangkok Metropolis (กรุงเทพมหานคร province)",
-    "note": "Province = city (BMA area). ฆ่าผู้อื่น (murder) cases reported (รับแจ้ง); attempted murder (พยายามฆ่า) and assault causing death (ทำร้ายผู้อื่นถึงแก่ความตาย) are separate rows - completed murder only. Series ends at BE 2565 (2022) - the NSO table covers 2017-2022, so the window is 2020-2022, older than other cities. Registered (de jure) population; Bangkok's de facto population is substantially larger (unregistered residents/commuters), so the rate is overstated relative to de facto population. Denominator: DOPA registered population, Bangkok, 31 Dec 2020 (BE 2563); statpop API nat=999 (all nationalities), male 2,625,938 + female 2,962,284."
+    "note": "Province = city (BMA area). ฆ่าผู้อื่น (murder) cases reported (รับแจ้ง); attempted murder (พยายามฆ่า) and assault causing death (ทำร้ายผู้อื่นถึงแก่ความตาย) are separate rows - completed murder only. Series ends at BE 2565 (2022) - the NSO table covers 2017-2022, so the window is 2020-2022, older than other cities. Registered (de jure) population; Bangkok's de facto population is substantially larger (unregistered residents/commuters), so the rate is overstated relative to de facto population. Denominator: DOPA registered population, Bangkok, 31 Dec 2020 (BE 2563); statpop API nat=999 (all nationalities), male 2,625,938 + female 2,962,284. Newer-than-2022 years: the Royal Thai Police's dedicated crime-statistics portal (thaicrimes.org, linked from the force's own Crime Planning Division page) was serving a site-wide server error when checked from the owner's browser on 2026-07-18 — the window extends when that portal recovers."
    },
    "Kuala Lumpur": {
     "value": 0.74,
@@ -434,7 +434,7 @@ window.INDEX_DATA = {
    "Jakarta": {
     "value": null,
     "year": "n/a",
-    "note": "NULL (retrieval failure, not absence): BPS publishes murder (pembunuhan) for DKI Jakarta in 'Statistik Kriminal' / provincial crime statistics, but bps.go.id geo-blocks our environment (Cloudflare 403). Fillable with a free BPS API key or from another network."
+    "note": "NULL (verified bundling, same disqualification as Melbourne): the official provincial publication 'Statistik Kriminalitas Provinsi DKI Jakarta 2024' (BPS Jakarta, cat. 4401001.31, rel. 2025-09-29; retrieved via the owner's browser 2026-07-18, 5,106,744 bytes, MD5 29087d26...) publishes crimes against life ONLY as a combined category — pembunuhan (murder) + kelalaian mengakibatkan orang mati (negligence causing death): 22 reported (2023), 23 (2024) — with no murder-only split anywhere, including its appendix tables (finest granularity = 10 grouped categories). A murder-only count exists at POLICE-REGION level (Polda Metro Jaya = Jakarta + Depok/Bekasi/Tangerang buffer) in BPS's national 'Statistik Kriminal' — not yet retrieved (bps.go.id blocks our environment); fillable with that publication under a metro-geography flag."
    },
    "Manila": {
     "value": 3.63,
@@ -458,7 +458,7 @@ window.INDEX_DATA = {
    "Abu Dhabi": {
     "value": null,
     "year": "n/a",
-    "note": "NULL (retrieval failure, not absence): SCAD's statistical yearbook carries justice/security tables, but scad.gov.ae and the federal portals geo-block our environment. Fillable from another network."
+    "note": "NULL (retrieval failure, not absence — now doubly confirmed): SCAD's statistical yearbook carries justice/security tables, but scad.gov.ae times out at network level from our build environment AND from the owner's own browser outside the UAE (verified 2026-07-18) — consistent with region-restricted hosting. Fillable from a UAE-based connection."
    },
    "Shanghai": {
     "value": 0.32,

@@ -104,20 +104,22 @@ Deviations are per-value flags, not silent blends.
 | Ho Chi Minh City | No official public series (verified absence) |
 | Shenzhen | Yearbook verified: no crime chapter at all |
 | Beijing | Provisional: no published count found; yearbook host unreachable |
-| Jakarta, Dubai, Abu Dhabi | Retrieval failure, not absence — named sources geo-block the build environment |
+| Jakarta | Verified bundling (v3.2.1): the provincial BPS publication reports murder only combined with negligence-causing-death (22/23 cases 2023/24, no split) — Melbourne's disqualification; murder-only exists at Polda-Metro-Jaya level in BPS's national 'Statistik Kriminal', not yet retrieved |
+| Dubai, Abu Dhabi | Retrieval failure, not absence — hosts time out from the build environment AND the owner's browser outside the UAE (region-restricted hosting) |
 
 ### Owner fetch list (D-L5)
 
-- **Jakarta**: BPS "Statistik Kriminalitas Provinsi DKI Jakarta 2024"
-  (jakarta.bps.go.id, rel. 2025-09-29) or a free BPS Web API key; murder =
-  *pembunuhan*.
+- **Jakarta**: the provincial publication was retrieved (v3.2.1) and verified
+  unusable (murder not separable). Remaining path: BPS national "Statistik
+  Kriminal 2024" (bps.go.id) — *pembunuhan* by Polda; Polda Metro Jaya =
+  Jakarta + buffer (metro-geography flag needed).
 - **Dubai**: Dubai Pulse `dp_critical_crimes_report` / Dubai Police open
   data ("willful murder per 100k"); dsc.gov.ae yearbook as fallback.
 - **Abu Dhabi**: SCAD statistical yearbook, justice/security chapter
   (scad.gov.ae).
-- **Bangkok (newer years)**: Royal Thai Police statistics
-  (rtpstrategy.police.go.th — blocked by our egress allowlist, likely fine
-  from a browser).
+- **Bangkok (newer years)**: the force's crime portal thaicrimes.org
+  (confirmed official via the Crime Planning Division page) was serving a
+  site-wide server error on 2026-07-18 — retry when it recovers.
 
 ## Verification highlights
 
