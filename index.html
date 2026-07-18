@@ -130,6 +130,15 @@ button{font-family:inherit}
 .extflag[hidden]{display:none}
 #extflag{margin-top:8px}
 #extmark{margin-left:10px}
+/* masthead credential stamps */
+.creds{display:flex; flex-direction:column; gap:12px; max-width:295px; align-self:center; margin-left:auto; padding-right:6px}
+.cred{display:flex; gap:10px; font-size:12px; color:var(--ink2); line-height:1.5}
+.cred b{color:var(--ink); font-weight:600}
+.cred .ck{font-family:"IBM Plex Mono",monospace; color:var(--up); font-weight:600; flex:none; margin-top:1px}
+.cred a{color:var(--amber); text-decoration:none; border-bottom:1px solid #EAD4A6}
+.cred a:hover{color:var(--ink)}
+@media (max-width:1180px){.creds{display:none}}
+
 .extrow{display:flex; align-items:center; gap:10px; margin-top:4px}
 .extrow small{font-size:11px; color:var(--ink3); line-height:1.45; flex:1}
 .extlist{font-size:11px; color:var(--ink3); line-height:1.5; margin-top:7px}
@@ -268,6 +277,13 @@ button{font-family:inherit}
     approximation stays visible. Smaller than conventional indices &mdash; and able to prove every number they can't.</p>
     <a class="mlink" href="#methods">Why trust this? Methods &amp; choices &darr;</a>
   </div>
+  <div class="creds" role="note">
+    <div class="cred"><span class="ck">&#10003;</span><div><b>Every number has a receipt.</b><br>
+      Click any value: source, reference year, method, caveats. Blanks explain themselves.</div></div>
+    <div class="cred"><span class="ck">&#10003;</span><div><b>&hellip;and a best-before date.</b><br>
+      <span id="freshline">Freshness is checked monthly against each source's publication rhythm &mdash;
+      <a href="https://github.com/KR48VR/master-of-all-indices/issues?q=label%3Afreshness">reports are public</a>.</span></div></div>
+  </div>
   <div class="flag" role="note">
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 3 2 20h20L12 3Z" stroke="#B4740E" stroke-width="1.7" stroke-linejoin="round"/><path d="M12 9v5" stroke="#B4740E" stroke-width="1.7" stroke-linecap="round"/><circle cx="12" cy="17" r="1" fill="#B4740E"/></svg>
     <span><b>Sourced data.</b> Every value shown is real, sourced and dated (see the provenance block in <code>dataset.js</code>). Blanks are honest gaps &mdash; where no verifiable figure exists, nothing is shown. The default view is the <b>gold tier</b>: measures that measure what their name says, from the best available source. The optional <b>extended tier</b> adds known-compromised measures &mdash; clearly badged &mdash; so you can see what conventional-index shortcuts do to a ranking.</span>
@@ -369,7 +385,8 @@ button{font-family:inherit}
       Staleness is watched the same way: a monthly automated
       <a href="https://github.com/KR48VR/master-of-all-indices/issues?q=label%3Afreshness">freshness report</a>
       compares every measure's last-verified date against its source's publication cadence and files the result
-      publicly &mdash; so an ageing number cannot hide behind a fresh-looking page.</p>
+      publicly &mdash; so an ageing number cannot hide behind a fresh-looking page.
+      <span id="m-fresh"></span></p>
 
       <h4>Where the index stands today</h4>
       <div class="mstats">
@@ -845,6 +862,23 @@ function showProv(vid, city, anchor){
     set('m-ver', P.meta.version); set('m-ver2', P.meta.version);
     set('m-rel', P.meta.released);
   }
+})();
+
+// live freshness status from the latest public report (graceful no-op if unreachable)
+(function(){
+  fetch('https://api.github.com/repos/KR48VR/master-of-all-indices/issues?labels=freshness&state=all&per_page=1&sort=created&direction=desc')
+    .then(r=>r.ok?r.json():Promise.reject())
+    .then(list=>{
+      const it=list&&list[0]; if(!it) return;
+      const m=(it.body||'').match(/(\d+)\D{0,3} overdue\D{0,3}, (\d+) due soon, (\d+) fresh/);
+      const d=new Date(it.created_at).toISOString().slice(0,10);
+      const status = m ? (m[1]==='0' ? `all ${m[3]} measures fresh` : `${m[1]} overdue, ${m[2]} due soon`) : 'see the report';
+      const line = document.getElementById('freshline');
+      if(line) line.innerHTML = `Checked monthly against each source's publication rhythm. `+
+        `Last public check ${d}: <a href="${it.html_url}">${status}</a>.`;
+      const mf = document.getElementById('m-fresh');
+      if(mf) mf.innerHTML = ` The latest report (${d}) found <a href="${it.html_url}">${status}</a>.`;
+    }).catch(()=>{});
 })();
 
 const stabBtn=document.getElementById('stabbtn');
