@@ -57,8 +57,10 @@ button{font-family:inherit}
 :focus-visible{outline:2px solid var(--focus); outline-offset:2px; border-radius:4px;}
 
 /* ---- masthead ---- */
-.masthead{display:flex; align-items:flex-end; justify-content:space-between; gap:20px;
-  padding:26px 34px 20px; border-bottom:1px solid var(--line); flex-wrap:wrap;}
+.masthead{display:flex; align-items:center; justify-content:space-between; gap:20px;
+  padding:26px 34px 20px; flex-wrap:wrap;
+  background:var(--panel); border-bottom:1px solid var(--line);
+  box-shadow:0 2px 10px rgba(27,31,36,.05);}
 .brand h1{font-family:"Fraunces",serif; font-weight:500; font-size:30px; line-height:1;
   margin:0; letter-spacing:-.01em;}
 .brand .kick{font-family:"IBM Plex Mono",monospace; font-size:11px; letter-spacing:.16em;
