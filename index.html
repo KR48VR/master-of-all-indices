@@ -365,7 +365,11 @@ button{font-family:inherit}
       provenance record, any blank without an explanation, any invalid honesty flag, and any drift between the app's
       data and the downloadable CSV. Every run of the check is
       <a href="https://github.com/KR48VR/master-of-all-indices/actions/workflows/integrity.yml">public</a> &mdash;
-      including the failures. The maintainers cannot quietly break these rules; the repository would refuse.</p>
+      including the failures. The maintainers cannot quietly break these rules; the repository would refuse.
+      Staleness is watched the same way: a monthly automated
+      <a href="https://github.com/KR48VR/master-of-all-indices/issues?q=label%3Afreshness">freshness report</a>
+      compares every measure's last-verified date against its source's publication cadence and files the result
+      publicly &mdash; so an ageing number cannot hide behind a fresh-looking page.</p>
 
       <h4>Where the index stands today</h4>
       <div class="mstats">

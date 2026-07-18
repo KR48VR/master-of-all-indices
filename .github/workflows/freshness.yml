@@ -1,0 +1,46 @@
+name: Freshness report
+
+on:
+  schedule:
+    - cron: '0 6 1 * *'   # first of every month, 06:00 UTC
+  workflow_dispatch:        # and on demand from the Actions tab
+
+permissions:
+  issues: write
+  contents: read
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Build the freshness report
+        run: node scripts/check-freshness.js --md > freshness-report.md
+      - name: File it as a public issue
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const body = fs.readFileSync('freshness-report.md', 'utf8');
+            const month = new Date().toISOString().slice(0, 7);
+            const title = `Freshness report ${month}`;
+            // update this month's issue if it already exists, else open one
+            const existing = await github.rest.issues.listForRepo({
+              owner: context.repo.owner, repo: context.repo.repo,
+              state: 'open', labels: 'freshness', per_page: 20,
+            });
+            const hit = existing.data.find(i => i.title === title);
+            if (hit) {
+              await github.rest.issues.update({
+                owner: context.repo.owner, repo: context.repo.repo,
+                issue_number: hit.number, body,
+              });
+            } else {
+              await github.rest.issues.create({
+                owner: context.repo.owner, repo: context.repo.repo,
+                title, body, labels: ['freshness'],
+              });
+            }
