@@ -24,7 +24,8 @@ jobs:
         with:
           script: |
             const fs = require('fs');
-            const body = fs.readFileSync('freshness-report.md', 'utf8');
+            const body = 'cc @' + context.repo.owner + ' — monthly freshness check.\n\n' +
+              fs.readFileSync('freshness-report.md', 'utf8');
             const month = new Date().toISOString().slice(0, 7);
             const title = `Freshness report ${month}`;
             // update this month's issue if it already exists, else open one
