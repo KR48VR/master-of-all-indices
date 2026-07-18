@@ -381,6 +381,7 @@ button{font-family:inherit}
         <div class="litem"><span class="badge stale k">2015</span><span>Best-before warning: this value's reference year runs 4+ years behind its measure's typical year &mdash; the newest honest figure is simply old. The chip shows the year itself.</span></div>
         <div class="litem"><span class="flagmark k">&#9873;</span><span>Direction is contestable &mdash; "better" depends on your audience.</span></div>
         <div class="litem"><span class="k" style="color:var(--amber);font-weight:600">cov</span><span>Coverage: share of your chosen measures the city actually has data for.</span></div>
+        <div class="litem"><span class="k" style="font-family:'IBM Plex Mono',monospace;font-weight:600;color:var(--ink3)">skyline</span><span>The strip under the masthead is the live ranking &mdash; one bar per city, hover for exact scores (hovering pauses the tour). Heights are <b>stretched for contrast</b>, order-preserving but not proportional; the proportional chart is the Ranking itself. On load it tours the six areas; indigo = the gold default, amber = your customised blend.</span></div>
       </div>
       <div class="foot">Engine defaults: measures rescaled 0&ndash;100 across the shown cities, "lower is better" measures flipped automatically, then rolled up measure &rarr; sub-theme &rarr; area &rarr; composite. Weights are equal unless you change them. A measure with no data for a city is dropped from that city's score, and the drop shows up in coverage.</div>
     </div>
@@ -482,7 +483,8 @@ button{font-family:inherit}
       a ranking wobbles when a measure is dropped &mdash; you're in the right place.</p>
 
       <h4>Known limits</h4>
-      <p>Reference years are mixed within measures (each value shows its own). Some cities carry state- or
+      <p>Reference years are mixed within measures (each value shows its own, and a value whose reference year runs
+      4+ years behind its measure's typical year wears a small amber year-chip in the breakdown). Some cities carry state- or
       province-level stand-ins where nothing finer is published. A few sources are crowd-maintained or modelled and
       are flagged as such. Definitions genuinely differ for waste recycling across cities &mdash; the caveats say so
       bluntly. When a better source appears, the value is upgraded and the provenance updated.</p>

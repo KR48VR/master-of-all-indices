@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>The Workbench Papers — Master Index Workbench</title>
+<meta name="description" content="The working paper, executive brief, QA log and collaboration record behind the Master Index Workbench — a city index where every number has a receipt."/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F5F6F2; --panel:#FFFFFF; --ink:#1b1f24; --ink2:#5c6470; --ink3:#8b929c;
+  --line:#E4E6E0; --line2:#EEF0EB; --indigo:#26324F; --indigo-soft:#eef1f7;
+  --amber:#B4740E; --amber-bg:#FBF1DE; --up:#1B8A6B; --down:#C0512F;}
+html,body{margin:0}
+body{background:var(--paper); color:var(--ink); font-family:"IBM Plex Sans",system-ui,sans-serif;
+  font-size:14.5px; line-height:1.62; -webkit-font-smoothing:antialiased;}
+a{color:var(--amber)} a:hover{color:var(--ink)}
+.mast{background:var(--panel); border-bottom:1px solid var(--line); box-shadow:0 2px 10px rgba(27,31,36,.05);
+  padding:26px 34px 0;}
+.kick{font-family:"IBM Plex Mono",monospace; font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--ink3); margin-bottom:9px;}
+h1{font-family:"Fraunces",serif; font-weight:500; font-size:30px; margin:0 0 6px; letter-spacing:-.01em;}
+.sub{color:var(--ink2); max-width:78ch; font-size:13.5px; margin:0 0 18px}
+.tabs{display:flex; gap:4px; flex-wrap:wrap}
+.tab{border:1px solid var(--line); border-bottom:none; background:var(--paper); border-radius:9px 9px 0 0;
+  padding:9px 16px; font-size:13px; font-weight:600; color:var(--ink2); cursor:pointer}
+.tab.act{background:var(--panel); color:var(--ink); border-color:var(--line); position:relative; top:1px}
+.tab small{display:block; font-weight:400; font-size:10.5px; color:var(--ink3)}
+main{max-width:900px; margin:0 auto; padding:34px 34px 80px}
+section.pane{display:none} section.pane.act{display:block}
+h2{font-family:"Fraunces",serif; font-weight:500; font-size:23px; margin:0 0 4px}
+h3{font-family:"Fraunces",serif; font-weight:500; font-size:17.5px; margin:30px 0 8px}
+h4{font-size:13.5px; margin:22px 0 6px; text-transform:uppercase; letter-spacing:.06em; color:var(--indigo)}
+p{margin:10px 0}
+.meta{font-family:"IBM Plex Mono",monospace; font-size:11px; color:var(--ink3); margin-bottom:20px}
+.box{background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:16px 20px; margin:16px 0}
+.box.amber{background:var(--amber-bg); border-color:#EAD4A6}
+.box.indigo{background:var(--indigo-soft); border-color:#D8DEEA}
+.abstract{font-size:13.5px; color:var(--ink2)}
+table{border-collapse:collapse; width:100%; margin:14px 0; font-size:13px}
+th{text-align:left; font-size:11px; text-transform:uppercase; letter-spacing:.05em; color:var(--ink3); border-bottom:2px solid var(--line); padding:7px 10px 7px 0}
+td{border-bottom:1px solid var(--line2); padding:8px 10px 8px 0; vertical-align:top}
+.mono{font-family:"IBM Plex Mono",monospace}
+.tag{display:inline-block; font-family:"IBM Plex Mono",monospace; font-size:9.5px; letter-spacing:.03em; padding:1px 6px;
+  border:1px solid var(--line); border-radius:4px; background:var(--paper); white-space:nowrap}
+.tag.tool{background:var(--indigo-soft); border-color:#D8DEEA; color:var(--indigo)}
+.tag.team{background:var(--amber-bg); border-color:#EAD4A6; color:#7a4e08}
+.tag.ind{background:#EAF4EF; border-color:#CBE3D6; color:var(--up)}
+ol,ul{padding-left:22px} li{margin:6px 0}
+.refs{font-size:12.5px; color:var(--ink2)} .refs li{margin:8px 0}
+.stat{display:inline-block; margin:0 22px 10px 0}
+.stat b{font-family:"Fraunces",serif; font-size:24px; font-weight:500; display:block; color:var(--ink)}
+.stat span{font-size:11px; color:var(--ink3); text-transform:uppercase; letter-spacing:.05em}
+footer{border-top:1px solid var(--line); margin-top:50px; padding-top:18px; font-size:12.5px; color:var(--ink2)}
+blockquote{border-left:3px solid var(--amber); margin:14px 0; padding:2px 0 2px 16px; color:var(--ink2)}
+</style>
+</head>
+<body>
+<div class="mast">
+  <div class="kick">Master Index Workbench &middot; companion volume</div>
+  <h1>The Workbench Papers</h1>
+  <p class="sub">Four documents behind <a href="https://kr48vr.github.io/master-of-all-indices/">the Master Index Workbench</a> —
+  a build-your-own city index where every number has a receipt and a best-before date. A research working paper, an executive
+  brief, the quality-assurance ledger, and the record of how a human and an AI built it together.</p>
+  <div class="tabs" id="tabs">
+    <button class="tab act" data-t="paper">Working paper<small>journal-quality draft</small></button>
+    <button class="tab" data-t="brief">Executive brief<small>for decision-makers</small></button>
+    <button class="tab" data-t="qa">QA log<small>how quality was enforced</small></button>
+    <button class="tab" data-t="kai">King &amp; AI<small>how we worked together</small></button>
+  </div>
+</div>
+<main>
+
+<!-- ============================ TAB 1: WORKING PAPER ============================ -->
+<section class="pane act" id="pane-paper">
+
+<div class="box indigo">
+<h4 style="margin-top:0">Venue assessment</h4>
+<p style="font-size:13px">The natural home for this paper is <b>Nature Cities</b> (Springer Nature, launched 2024): it is the
+highest-visibility venue whose scope exactly matches the contribution — an interdisciplinary methods-and-resource paper about
+urban measurement, written for both researchers and practitioners, with an open interactive artifact. The draft below follows
+its Resource/Analysis conventions (short abstract, accessible main text, methods detail at the end). Two strong alternatives:
+<b>Environment &amp; Planning B: Urban Analytics and City Science</b> (the specialist home of urban-indicator methodology, likelier
+acceptance, narrower reach) and <b>Scientific Data</b> (if reframed as a Data Descriptor for the provenance-first dataset itself).
+The composite-indicator methodology community would also read it in <b>Social Indicators Research</b>, but the artifact-forward
+framing fits Nature Cities best.</p>
+</div>
+
+<h2>A city index that shows its receipts: radical provenance, tiered honesty, and machine-enforced integrity in composite urban indicators</h2>
+<p class="meta">POON King Wang &middot; working paper, v3.0.0 &middot; July 2026 &middot; artifact: <a href="https://kr48vr.github.io/master-of-all-indices/">kr48vr.github.io/master-of-all-indices</a></p>
+
+<div class="box abstract"><b>Abstract.</b> Composite city indices — liveability, sustainability, smartness, competitiveness — shape
+investment, migration and policy, yet almost none allow a reader to verify a single underlying number. We present the Master Index
+Workbench, a 55-city, 35-measure composite-index instrument designed around a discipline we call <i>radical provenance</i>: every
+value carries a click-through receipt (source, reference year, extraction method, caveats); every missing value is a documented
+blank rather than an estimate; and both properties are enforced by public, automated integrity checks that reject any change
+violating them — including values outside declared plausibility bounds. Two further mechanisms extend the discipline. A <i>two-tier
+taxonomy</i> separates measures that measure what their name says (gold, 29) from knowingly compromised measures (extended, 6) that
+users can activate to observe, live, what conventional-index data shortcuts do to a ranking — including a deliberately included
+crowd-data measure whose biases we quantify (Paris registers 1.8&times; its official museum count; Shanghai 0.4&times;; London near zero
+through a database-linkage artifact). A <i>freshness contract</i> compares each measure's last-verified date against its source's
+publication cadence and publishes the result monthly. We describe the construction, quantify what the extended tier reveals, and
+argue that receipts, tiers and machine-enforced rules constitute a transferable template for honest composite indicators.</div>
+
+<h3>1. The problem: indices without receipts</h3>
+<p>City indices have proliferated into a genre. The Economist Intelligence Unit ranks liveability; Mercer ranks quality of living;
+IMD ranks smartness; the Mori Memorial Foundation's Global Power City Index ranks "magnetism"; dozens of consultancies rank green,
+digital, creative and resilient cities. The methodological critique of such composites is mature: weighting and aggregation choices
+are consequential and contestable (Saisana, Saltelli &amp; Tarantola 2005; OECD/JRC 2008; Greco et al. 2019), and the data pipelines
+feeding urban dashboards embed silent judgements (Kitchin, Lauriault &amp; McArdle 2015). But the critique has mostly produced better
+<i>guidance</i> for index builders, not better <i>verification affordances</i> for index readers. In practice a reader confronting a
+published city rank cannot answer four elementary questions: Where does this number come from? How old is it? What was compromised
+to obtain it? And what would the ranking look like under my priorities rather than the publisher's?</p>
+<p>The Workbench is an existence proof that all four questions can be answered by construction, at the cost of breadth — 55 cities
+rather than 200 — and we argue that this trade is the honest one for decision-grade use.</p>
+
+<h3>2. Design principles</h3>
+<p>Four rules govern the dataset, and each is enforced by machinery rather than editorial promise
+(<a href="https://kr48vr.github.io/master-of-all-indices/#methods">Methods &amp; choices</a> on the live instrument):</p>
+<ol>
+<li><b>No number is invented, estimated or interpolated.</b> A value that cannot be verified from a real source is recorded as a
+blank, and the blank carries its explanation (e.g., Hong Kong's life expectancy is blank because its statistics office publishes
+sex-disaggregated figures only, and combining them would require a weighting assumption — i.e., estimation).</li>
+<li><b>Every value carries its receipt.</b> Source, reference year, extraction method and caveats are stored per value and rendered
+as a click-through popover.</li>
+<li><b>Compromises are flagged, never hidden.</b> Metro-level stand-ins, country proxies, crowd-sourced, perception-based,
+self-reported and modelled figures are badged; values whose reference year lags 4+ years behind their measure's median wear a
+visible year-chip.</li>
+<li><b>Missing data costs visibility, not rank.</b> A missing measure is dropped from that city's own score and reduces its
+displayed coverage; it is never imputed as zero.</li>
+</ol>
+<p>The enforcement layer is a public continuous-integration check that rejects any proposed change containing a value without a
+matching provenance record, a blank without an explanation, an invalid honesty flag, a missing cell, drift between the
+application's data and the downloadable CSV, or a value outside its measure's declared plausibility envelope — so a transcription
+error (759 for 75.9) fails loudly even when fully provenanced. Every run, including failures, is public.</p>
+
+<h3>3. Construction</h3>
+<p><b>Catalog and roster.</b> A 38-measure catalog spans six areas (Liveable, Green, Smart, Competitive, Talent, Connected). The
+city roster grew from a 16-city pilot to 55 cities under an explicit admission rule (at most three honest blanks of the 19
+then-sourced measures, with five named exceptions admitted for structural reasons). Reality diverged from projection: after
+sourcing, nine additional cities breached the floor because five sources proved structurally thin outside the OECD. Rather than
+silently relax the rule, the divergence is documented in the public roster file, and the subsequent expansion phase explicitly
+prioritised globally covered sources.</p>
+<p><b>Sourcing and extraction.</b> Values were extracted from primary publications wherever possible: national statistical
+yearbooks and communiqués (including Chinese municipal sources, recorded with the caveat that independent verification is not
+possible), UN and multilateral datasets (UNODC, WHO, ITU, UNESCO, UN-Habitat, World Bank WGI), official open data (Ookla, OECD
+SDMX, Eurostat, EDGAR/GHSL), and — where flagged as crowd or perception — Numbeo tables pinned to byte-verified edition URLs and
+survey products (IMD Smart City Index). Where official websites blocked automated access, archived copies of the official
+documents were used and disclosed per value. Verification practices included reproducing the publisher's own arithmetic (our
+EDGAR urban-centre CO<sub>2</sub> per-capita pipeline reproduces the JRC's published per-capita field exactly for all 55 cities)
+and visual spot-checking of parsed values against rendered source documents.</p>
+<p><b>Tier taxonomy.</b> Each measure is assigned <span class="mono">gold</span> (measures what its name says, from the best
+available source; 29), <span class="mono">extended</span> (knowingly compromised — OECD-only coverage, Europe-only coverage,
+mixed vintages, concept drift, or demonstrated bias; 6), or <span class="mono">none</span> (no honest source exists; 3, permanently
+blank with reasons recorded). The extended tier ships off by default behind a labelled control; activating it re-scores the index
+and marks the interface so a screenshot cannot pass an extended ranking off as the gold one. Tier assignment decisions, including
+the rejection rationale for every candidate source examined, are recorded in a public decisions file
+(<a href="https://github.com/KR48VR/master-of-all-indices/blob/main/PHASE3.md">PHASE3.md</a>).</p>
+<p><b>Scoring.</b> For the active measure set, each measure is min-max rescaled to 0–100 across the displayed cities,
+lower-is-better measures are inverted, and scores roll up measure &rarr; sub-theme &rarr; area &rarr; composite under user-controlled
+area weights, with additive and geometric aggregation available. Because rescaling depends on both the city set and the active
+measure set, scores are comparable within a version and tier view only — a warning carried in the citation guidance. A stability
+control re-computes the index once per active measure, dropping one each time, and displays each city's rank range. Any
+configuration — areas, weights, measures, method, tier — serialises into a shareable URL that reproduces the exact ranking,
+making every shared result a recipe rather than a screenshot.</p>
+<p><b>Freshness.</b> Each measure declares its source's publication cadence (Numbeo semiannual editions; ITU July/December drops;
+IMD each March; Forbes each June; unversioned sources re-probed twice yearly). A monthly automated job compares every measure's
+last-verified date against its cadence and files the report as a public issue; the instrument's masthead displays the latest
+verdict live. Staleness is thereby a visible property of the dataset rather than a quiet one.</p>
+
+<h3>4. What the honesty machinery reveals</h3>
+<p>At v3.0.0 the dataset holds 1,702 provenanced values of 1,925 possible cells (88.4%); all 223 blanks are explained; 42 values
+(2.5%) wear staleness chips. Three findings are worth reporting as results in their own right.</p>
+<p><b>The geography of verifiability is skewed.</b> Five candidate measures were rejected or quarantined because their best
+available sources structurally exclude non-OECD cities (metro GDP and labour statistics, knowledge-intensive employment) or have
+decayed (two blueprint sources died during construction; a third became login-gated). An index that refuses to estimate makes this
+skew visible: the fifteen non-OECD cities in our roster are systematically harder to describe honestly, and conventional indices
+covering them at parity are, necessarily, estimating.</p>
+<p><b>Crowd data measures editing activity, not the city.</b> Our deliberately included bias demonstration counts museums per
+100,000 residents from a crowd-maintained knowledge graph under one uniform, reproducible rule. Against official registers, Paris
+is overcounted 1.8&times; while Shanghai is undercounted to 0.4&times; — a relative bias of roughly 4.5&times; between two of the world's
+premier museum cities — and London, Amsterdam, Copenhagen and Auckland score at or near zero purely because their institutions
+link to different graph entities than the conventional city item. The numbers are reproducible, and reproducibly wrong; activating
+them visibly reshuffles the ranking (Copenhagen exits the top three).</p>
+<p><b>Honest blanks are informative.</b> Refusing to estimate produced a catalogue of instructive absences: no honest combined
+life expectancy exists for Hong Kong; no official recycling rate exists for Los Angeles more recent than a 2013 diversion figure
+that credits waste never generated; Türkiye's 5G coverage was genuinely 0.0% through 2024 and is recorded as such; three catalog
+measures (renewable share, talent inflow, travel time to global hubs) have no honest source at all. Each blank documents a
+specific failure of the global urban-statistics system.</p>
+
+<h3>5. Discussion and limitations</h3>
+<p>The Workbench trades breadth for verifiability, and several limitations follow. Four measures depend on one crowd provider
+(Numbeo), correlating their errors. Country proxies serve city-level questions for some measures, flagged but coarse. Waste
+recycling mixes genuinely different definitions across cities, disclosed bluntly per value. The compilation license inherits
+non-commercial terms from upstream sources. Extraction, though evidence-archived and adversarially reviewed, was performed by a
+single team; independent re-derivation is invited — the published extraction rules are deterministic, and the shareable-blend
+mechanism makes any published claim reproducible by a reader in one click.</p>
+<p>The transferable claim is architectural: <i>receipts per value, tiers for compromise, machine-enforced rules, and published
+freshness contracts</i> are general mechanisms, applicable to any composite indicator — national, corporate ESG, university
+rankings — and cheap to operate (the entire instrument is a static page and two dependency-free scripts). The genre's credibility
+problem is not that composite indices simplify; it is that they conceal. Concealment, this project suggests, is now a choice.</p>
+
+<h3>Data and code availability</h3>
+<p>The instrument, dataset (versioned CSV and provenance-annotated source file), integrity and freshness checkers, sourcing plans
+and decision records are public at <a href="https://github.com/KR48VR/master-of-all-indices">github.com/KR48VR/master-of-all-indices</a>
+(code MIT; data CC BY-NC-SA 4.0). Cite as: Poon, K. W., <i>Master Index Workbench</i>, v3.0.0 (2026), stating version and tier.</p>
+
+<h3>Acknowledgements</h3>
+<p>Construction, sourcing, verification and engineering were carried out in collaboration with an AI research partner (Claude,
+Anthropic), under human-defined rules and human review gates; the collaboration record is published alongside this paper
+(see the <a href="#" onclick="showTab('kai');return false">King &amp; AI</a> tab).</p>
+
+<h3>References</h3>
+<ul class="refs">
+<li>Greco, S., Ishizaka, A., Tasiou, M. &amp; Torrisi, G. (2019). On the methodological framework of composite indices: a review of the issues of weighting, aggregation, and robustness. <i>Social Indicators Research</i> 141, 61–94.</li>
+<li>Kitchin, R., Lauriault, T. P. &amp; McArdle, G. (2015). Knowing and governing cities through urban indicators, city benchmarking and real-time dashboards. <i>Regional Studies, Regional Science</i> 2(1), 6–28.</li>
+<li>OECD &amp; European Commission Joint Research Centre (2008). <i>Handbook on Constructing Composite Indicators: Methodology and User Guide.</i> OECD Publishing.</li>
+<li>Saisana, M., Saltelli, A. &amp; Tarantola, S. (2005). Uncertainty and sensitivity analysis techniques as tools for the quality assessment of composite indicators. <i>Journal of the Royal Statistical Society A</i> 168(2), 307–323.</li>
+<li>Barns, S. (2020). <i>Platform Urbanism: Negotiating Platform Ecosystems in Connected Cities.</i> Palgrave Macmillan.</li>
+<li>Economist Intelligence Unit (2025). <i>The Global Liveability Index.</i> London: EIU.</li>
+<li>Mori Memorial Foundation (2025). <i>Global Power City Index.</i> Tokyo: Institute for Urban Strategies.</li>
+<li>IMD World Competitiveness Center (2026). <i>Smart City Index.</i> Lausanne: IMD.</li>
+<li>Wilkinson, M. D. et al. (2016). The FAIR Guiding Principles for scientific data management and stewardship. <i>Scientific Data</i> 3, 160018.</li>
+</ul>
+</section>
+
+<!-- ============================ TAB 2: EXECUTIVE BRIEF ============================ -->
+<section class="pane" id="pane-brief">
+<h2>The index you can interrogate</h2>
+<p class="meta">An executive brief for public- and private-sector leaders &middot; 4-minute read</p>
+
+<p><b>You already use city indices.</b> They appear in your board papers, your location decisions, your talent strategies, your
+budget narratives and your press coverage. And you have almost certainly never been able to verify a single number in one — where
+it came from, how old it is, or what was compromised to produce it. When a ranking moves against you, you cannot audit it; when it
+moves for you, you cannot defend it beyond the headline.</p>
+
+<p>The <a href="https://kr48vr.github.io/master-of-all-indices/">Master Index Workbench</a> is built for exactly that gap: a
+55-city index across liveability, green, smart, competitive, talent and connectivity where <b>every number shows its receipt</b> —
+click any value and see its source, reference year, extraction method and caveats — and <b>every missing number explains itself</b>
+instead of being quietly estimated. The rules are enforced by public automated checks, not editorial promises: a value without a
+receipt, or outside sanity bounds, is mechanically rejected before it can be published. Data ages in the open, too — every
+measure's freshness is checked monthly against its source's publication rhythm, and the report is public.</p>
+
+<h4>What it lets you do that no conventional index can</h4>
+<ul>
+<li><b>Rebuild the ranking to your mandate.</b> An investment committee weighing connectivity, a ministry weighing liveability,
+a relocation team weighing cost — each can reweight areas, drop measures, and switch aggregation, with the ranking rebuilding
+live. The publisher's priorities stop masquerading as facts.</li>
+<li><b>Share decisions as recipes, not screenshots.</b> Any configuration serialises into a link that reproduces the exact
+ranking. A ranking you circulate to your board is auditable by your board.</li>
+<li><b>See what data shortcuts actually change.</b> A deliberately quarantined "extended tier" contains the kinds of compromised
+measures conventional indices blend in silently — wrong geographies, decade-old vintages, crowd data with demonstrated bias.
+Switch it on and watch the ranking move. It is a live tutorial in why index literacy matters, and a due-diligence question
+generator for any index a vendor sells you: <i>which of your indicators would sit in this tier?</i></li>
+<li><b>Trust the blanks.</b> Where you see no number, it is because no honest number exists — and the blank says why. In an era
+of confident dashboards, a documented "we don't know" is a competitive information advantage.</li>
+</ul>
+
+<h4>What it is honestly not</h4>
+<p>It covers 55 major cities, not 200; it is a current snapshot, not a time series; and where hard data does not exist it offers
+a blank, not expert judgement. Conventional indices are genuinely better at breadth and history. Use them for reach — and use
+this instrument to learn what questions to ask of them.</p>
+
+<h4>Three uses this quarter</h4>
+<ol>
+<li><b>Benchmark with receipts:</b> put your city's (or your candidate cities') profile in front of your team with every number's
+provenance one click away — and reweight it under your strategy's priorities rather than a publisher's.</li>
+<li><b>Stress-test a narrative:</b> before citing any ranking publicly, check whether the claim survives a change of weights, a
+dropped measure, or the stability check (which shows how far each city's rank moves when any single measure is removed).</li>
+<li><b>Raise your procurement bar:</b> adopt the four workbench rules — receipts, explained blanks, flagged compromises,
+published freshness — as evaluation criteria for any data or index product you buy.</li>
+</ol>
+
+<p style="margin-top:20px"><b>The strategic point.</b> Indices govern quietly: they set default comparisons, anchor negotiations,
+and write headlines. The organisations that thrive under measurement are those that can interrogate the measures. This instrument
+exists to make that interrogation ordinary — start at
+<a href="https://kr48vr.github.io/master-of-all-indices/">the Workbench</a>, read
+<a href="https://kr48vr.github.io/master-of-all-indices/#methods">Methods &amp; choices</a>, and make a blend of your own.</p>
+</section>
+
+<!-- ============================ TAB 3: QA LOG ============================ -->
+<section class="pane" id="pane-qa">
+<h2>The quality ledger</h2>
+<p class="meta">Everything done to hold content, data, rigor, visuals and design to the highest standard — with the incidents that proved the system works</p>
+
+<div class="box">
+<span class="stat"><b>7</b><span>machine-enforced rule classes</span></span>
+<span class="stat"><b>35/35</b><span>measures range-bounded</span></span>
+<span class="stat"><b>223</b><span>blanks, all explained</span></span>
+<span class="stat"><b>6</b><span>adversarial verifiers on the plan</span></span>
+<span class="stat"><b>~45</b><span>research &amp; verification agent runs</span></span>
+<span class="stat"><b>4</b><span>user-testing bugs found &amp; fixed</span></span>
+</div>
+
+<h3>1. Data integrity, enforced mechanically</h3>
+<ul>
+<li><b>The integrity checker</b> (<span class="mono">scripts/check-integrity.js</span>, run by CI on every push and pull request)
+rejects: values without matching provenance; provenance disagreeing with stored values; blanks without explanations; invalid
+honesty flags or tiers; missing data cells; values outside per-measure plausibility bounds; CSV drift from the source data.</li>
+<li><b>Plausibility bounds with negative tests:</b> every sourced measure declares a sane envelope (definitional bounds exact:
+0–100 indices, 0–3 hazard coding; physical bounds generous: life expectancy 55–95). Verified by deliberately planting a typo
+(759 for 75.9) — CI failed naming the exact cell — and by deleting a bounds entry — CI failed demanding it.</li>
+<li><b>An incident that hardened the system:</b> during the Phase-3 audit we found one measure (price-to-income) had never been
+filled for 13 cities — the cells were <i>missing</i> rather than blank, which evaded the explained-blank rule. The gap was filled
+the same day and the checker extended so a missing cell is now itself a CI failure. The failure mode is extinct.</li>
+</ul>
+
+<h3>2. Source verification practices</h3>
+<ul>
+<li><b>Fetch-verified or it doesn't count:</b> no value was recorded from a search snippet or memory; every value was transcribed
+from a document fetched during the session, with raw evidence archived. Where official sites blocked automation, archived copies
+of the official documents were used and disclosed per value.</li>
+<li><b>Reproducing the publisher's own arithmetic:</b> the CO<sub>2</sub> pipeline (EDGAR emissions ÷ urban-centre population) was
+validated by reproducing the JRC's own published per-capita field exactly, for all 55 cities, before our values were accepted.</li>
+<li><b>Pinned editions:</b> Numbeo values cite pinned edition URLs verified byte-identical to the live tables at extraction time.</li>
+<li><b>Rendered-document spot checks:</b> IMD survey scores were parsed programmatically, then 10 cities were read visually from
+the rendered PDF — all matched. Forbes HQ data had every correction hand-logged (a "Stockhold" typo; tax-domicile vs operational
+headquarters calls), and US metro assignment used the official OMB 2023 delineations, not intuition.</li>
+<li><b>Crowd-source forensics:</b> Wikipedia airport tables were audited against revision history; three cities (Tokyo, Osaka,
+Taipei) are honest blanks because citation purges gutted their tables — including a purge detected mid-project that changed our
+answer. ThinkHazard divisions were breadcrumb-verified after naive matching was caught assigning eight cities to wrong-country
+namesakes (Amsterdam to Suriname; Bangkok to a single canal district).</li>
+</ul>
+
+<h3>3. Adversarial verification</h3>
+<ul>
+<li>The Phase-3 sourcing plan was audited by <b>six independent verifier agents</b>, each cross-checking the plan's claims against
+archived evidence. They surfaced ~25 findings that were then fixed — among them: a wrong "world #1" claim (Abu Dhabi is second to
+Ajman on Numbeo safety); an evidence file that proved only a 50/55 first-pass match for the CO<sub>2</sub> join; a hazard class
+misdescribed (Bangkok's river flood is Medium; the High classes are coastal and heat); a mis-filed section placing a recommended
+measure under "Rejected"; and headline arithmetic that didn't yet reflect two approved decisions.</li>
+<li>Every wave of data integration ended with a <b>plausibility read of the full ranking</b> before commit — the step that caught,
+e.g., a transit measure briefly reading 24,400% from a units artifact.</li>
+</ul>
+
+<h3>4. Honest-blank governance</h3>
+<ul>
+<li>Principled exclusions were preferred over publishable-but-misleading numbers: Los Angeles' 2013 diversion figure (credits
+waste never generated) was quoted in the blank's explanation rather than recorded; Australia's 2010 researcher density was
+blanked rather than passed off as current; Hong Kong's life expectancy stayed blank rather than combine sex-specific figures by
+assumption; Türkiye's genuine 0.0% 5G was recorded <i>as true</i>, with a refresh note.</li>
+</ul>
+
+<h3>5. Freshness as a watched property</h3>
+<ul>
+<li>Every measure declares its source's publication cadence with reasoning; a monthly workflow files the fresh/due/overdue verdict
+as a <a href="https://github.com/KR48VR/master-of-all-indices/issues?q=label%3Afreshness">public issue</a>; the instrument's
+masthead displays the latest verdict live; values 4+ years behind their measure's median wear a visible year-chip. Time-travel
+tested: a simulated run eight months ahead correctly flagged all eleven fast-moving measures overdue.</li>
+</ul>
+
+<h3>6. Visual and interaction quality</h3>
+<ul>
+<li><b>Playwright verification accompanied every UI change:</b> 55 rows rendering, both aggregation methods re-ranking, coverage
+lines updating, tier toggle cycling cleanly, shareable-blend round-trips reproducing rankings in fresh pages, responsive behavior
+checked at 1440/1280/1000 widths, reduced-motion honoured, zero console errors as a merge condition.</li>
+<li><b>Live-user testing found what lab testing missed</b> — four real bugs, all fixed within the session they were reported:
+a CSS rule silently defeating the banner's hidden state; a toggle that revealed measures without scoring them; shared links
+failing in already-open tabs (fragment navigation doesn't reload); tour tooltips vanishing on repaint (now: hovering pauses the
+tour). The lab tests read attributes; the user used a browser. Both are now part of the definition of done.</li>
+<li><b>Design honesty:</b> the skyline's stretched heights are disclosed in the flags legend; the extended view marks the
+interface so screenshots can't misrepresent the gold ranking; even decoration obeys the no-randomness rule (silhouettes are
+deterministic hashes of city names).</li>
+</ul>
+
+<h3>7. Documentation that cannot drift far</h3>
+<ul>
+<li>Site statistics are computed live from the dataset (they cannot go stale); prose is audited against features — three
+catch-up passes were run after review questions, syncing the flags legend, Known limits, and the README's comparison table.
+Versioning follows semver with explicit comparability warnings (across versions, and between tiers); releases are tagged;
+<span class="mono">CITATION.cff</span> tracks each release.</li>
+</ul>
+</section>
+
+<!-- ============================ TAB 4: KING & AI ============================ -->
+<section class="pane" id="pane-kai">
+<h2>King &amp; AI</h2>
+<p class="meta">How a human and an AI built an honest index together — the workflow, the numbers, and the three modes of working</p>
+
+<div class="box">
+<span class="stat"><b>31</b><span>pull requests (AI-opened)</span></span>
+<span class="stat"><b>29</b><span>merges (King-reviewed)</span></span>
+<span class="stat"><b>90</b><span>commits authored by AI</span></span>
+<span class="stat"><b>3</b><span>releases published by King</span></span>
+<span class="stat"><b>~45</b><span>background agents dispatched by AI</span></span>
+<span class="stat"><b>19</b><span>formal decisions ruled by King</span></span>
+</div>
+
+<p>The collaboration ran on a simple contract, set by King on day one: <b>non-negotiable rules</b> (never invent a number; never
+hide a compromise) plus <b>staged gates</b> (plan first, approval before data, one measure per commit, King merges every pull
+request, King publishes every release). Within that contract the AI operated with wide autonomy — and the contract is why the
+autonomy was safe.</p>
+
+<h3>The workflow, phase by phase</h3>
+<table>
+<tr><th>Phase</th><th>Mainly executed by</th><th>Mode</th><th>What actually happened</th></tr>
+<tr><td>1. Conception &amp; rules</td><td>King</td><td><span class="tag team">teammate</span></td><td>King defined the product idea, the honesty rules and the two-stage discipline ("plan only… stop and show me the plan").</td></tr>
+<tr><td>2. Sourcing plan</td><td>AI</td><td><span class="tag team">teammate</span></td><td>AI researched a source per measure; King ruled on six judgment calls (accept a definition change; use a country proxy; choose city-proper counting…).</td></tr>
+<tr><td>3. Pilot fill (16 cities)</td><td>AI</td><td><span class="tag tool">tool</span></td><td>King opened network egress ("please fetch everything"); AI extracted, provenanced and committed measure by measure to the agreed spec.</td></tr>
+<tr><td>4. Authority roadmap</td><td>Both</td><td><span class="tag team">teammate</span></td><td>"What would make this authoritative?" — versioning, licensing, citation, CI, provenance UI, methods narrative; scoped together, built by AI.</td></tr>
+<tr><td>5. Roster expansion</td><td>Both</td><td><span class="tag team">teammate</span></td><td>King asked why Asia was underrepresented; AI projected coverage for ~40 candidates; King chose the admission rule (Option B) and the China-statistics policy.</td></tr>
+<tr><td>6. Waves 1–2 (55 cities)</td><td>AI + agent fleet</td><td><span class="tag ind">independent</span></td><td>~26 research agents filled measures across time zones while King was away; AI integrated with per-value provenance; King merged the results after review.</td></tr>
+<tr><td>7. Releases v1–v3</td><td>King</td><td><span class="tag ind">independent</span></td><td>King merged PRs, published the GitHub releases and verified the live site on his own schedule.</td></tr>
+<tr><td>8. Phase-3 feasibility</td><td>AI</td><td><span class="tag ind">independent</span></td><td>Six research passes over the 19 empty measures; six adversarial verifiers audited the resulting plan against evidence before King ever saw it.</td></tr>
+<tr><td>9. Decisions D1–D11</td><td>King</td><td><span class="tag team">teammate</span></td><td>King ruled on every tradeoff — and overruled two recommendations with reasoning (the CSA metro rule; moving ODIN to the extended tier). Both overrides improved the design.</td></tr>
+<tr><td>10. Two-tier system</td><td>King (concept), AI (build)</td><td><span class="tag team">teammate</span></td><td>The gold/extended architecture was King's idea, built on the AI's rejection analysis: "make explicit we aim for the gold standard while being fully cognizant of the rejected metrics."</td></tr>
+<tr><td>11. Masthead &amp; skyline design</td><td>Both, alternating</td><td><span class="tag team">teammate</span></td><td>The richest ping-pong of the project (see below).</td></tr>
+<tr><td>12. Freshness routine</td><td>AI</td><td><span class="tag tool">tool</span></td><td>King picked it from the roadmap ("let's do the freshness routine"); AI designed cadences, built the checker and the monthly public report.</td></tr>
+<tr><td>13. QA &amp; drift catches</td><td>King (review), AI (fix)</td><td><span class="tag team">teammate</span></td><td>King repeatedly caught what the AI missed: two PR-bookkeeping mixups, four live-site bugs, and the documentation drift ("have you updated Methods?").</td></tr>
+<tr><td>14. This volume</td><td>AI</td><td><span class="tag tool">tool</span></td><td>Commissioned by King with a precise four-part spec, including this taxonomy of our collaboration.</td></tr>
+</table>
+
+<h3>The three modes, with real examples</h3>
+
+<h4><span class="tag tool">King used AI as a tool</span> — precise instruction, faithful execution</h4>
+<ul>
+<li>"<i>I have switched the environment network access. Please fetch everything.</i>" &rarr; the AI extracted and provenanced the entire pilot dataset to the pre-agreed plan.</li>
+<li>"<i>Do the provenance UI.</i>" &rarr; the click-through receipt popover, built to the existing design language.</li>
+<li>"<i>Let's do 1 → 3 → 2.</i>" &rarr; plausibility bounds, staleness chips and shareable blends, delivered in the ordered sequence with tests.</li>
+</ul>
+
+<h4><span class="tag team">King and AI as teammates</span> — ideas transformed by passing between us</h4>
+<ul>
+<li><b>The skyline.</b> King proposed a city-skyline visual; the AI argued a literal skyline was the genre's cliché and counter-proposed a skyline <i>made of the data</i>; King accepted, then improved it twice — the looping blend-tour animation, and the amber-when-yours colour link to the Share button; the AI then contributed the tempo judgment (2.6s frames, not 640ms) and the honesty details (hover-pause, real blends only). Neither of us would have designed the final artifact alone.</li>
+<li><b>The extended tier.</b> The AI recommended skipping compromised measures; King reframed them as a product: quarantine them behind a toggle so users can <i>watch</i> what conventional shortcuts change. That reframing became the project's sharpest argument.</li>
+<li><b>Decision overrides.</b> On D8, King chose the wider CSA metro rule against the AI's recommendation ("merge SF with San Jose and DC with Baltimore") — accepting its tradeoffs knowingly; the AI then enforced the rule uniformly and documented the consequences. Disagreement, resolution, execution: the teammate loop working as intended.</li>
+</ul>
+
+<h4><span class="tag ind">We worked independently</span> — parallel work, meeting at gates</h4>
+<ul>
+<li>While King slept or worked elsewhere, the AI ran <b>research-agent fleets</b> (waste-recycling statistics across 40 cities; national statistics for 13 Asian cities; six adversarial verifiers auditing the Phase-3 plan) and integrated results into reviewed pull requests.</li>
+<li>King, alone, <b>merged 29 pull requests, published 3 releases, and tested the live site</b> — finding four real bugs no automated test had caught, each reported with a screenshot and each fixed the same session.</li>
+<li>And some work now happens with <b>neither of us</b>: the integrity gate rejects bad data on every push, and the freshness robot files its public report on the first of every month, whether or not either of us is watching.</li>
+</ul>
+
+<h3>What the record suggests</h3>
+<p>The division of labour was consistent: <b>King owned values, decisions, taste and verification-in-the-wild</b> — the rules,
+every tradeoff ruling, every design direction, every merge and release, and the four bugs only a real user finds.
+<b>The AI owned execution at scale and rigor under the rules</b> — extraction, engineering, testing, adversarial self-review,
+and the discipline of writing every compromise down. The gates made the autonomy trustworthy; the machinery made the trust
+checkable; and the best ideas — the tier system, the data skyline — belonged to neither of us alone. That, more than any single
+feature, is the finding of this tab.</p>
+</section>
+
+<footer>
+<p><b>Part of the Master Index Workbench.</b>
+<a href="https://kr48vr.github.io/master-of-all-indices/">The instrument</a> &middot;
+<a href="https://kr48vr.github.io/master-of-all-indices/#methods">Methods &amp; choices</a> &middot;
+<a href="https://kr48vr.github.io/master-of-all-indices/dataset.csv">dataset.csv</a> &middot;
+<a href="https://github.com/KR48VR/master-of-all-indices/blob/main/PHASE3.md">decision records</a> &middot;
+<a href="https://github.com/KR48VR/master-of-all-indices/issues?q=label%3Afreshness">freshness reports</a> &middot;
+<a href="https://github.com/KR48VR/master-of-all-indices">repository</a></p>
+<p style="color:var(--ink3); font-size:11.5px">This volume is designed for integration: it shares the Workbench's palette,
+typography and honesty conventions, and every claim links to the live artifact that proves it. Cite the Workbench as
+Poon, K. W., <i>Master Index Workbench</i>, v3.0.0 (2026) — stating version and tier.</p>
+</footer>
+</main>
+<script>
+function showTab(t){
+  document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('act', b.dataset.t===t));
+  document.querySelectorAll('.pane').forEach(p=>p.classList.toggle('act', p.id==='pane-'+t));
+  if(history.replaceState) history.replaceState(null,'','#'+t);
+  window.scrollTo({top:0});
+}
+document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>showTab(b.dataset.t));
+function applyHash(){ const t=location.hash.slice(1); if(t && document.getElementById('pane-'+t)) showTab(t); }
+window.addEventListener('hashchange', applyHash);
+applyHash();
+</script>
+</body>
+</html>
