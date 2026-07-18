@@ -83,8 +83,11 @@ button{font-family:inherit}
 /* the data skyline: 55 bars, one per city, height = composite score in the CURRENT blend.
    Reads as a skyline; is actually the live ranking. The only decoration with a receipt. */
 .skyline{display:flex; align-items:flex-end; gap:2px; flex-basis:100%; height:24px; margin-top:2px}
-.skyline i{flex:1; background:var(--indigo); opacity:.13; border-radius:1.5px 1.5px 0 0; min-height:2px; cursor:default; transition:height .35s ease, opacity .15s}
+.skyline i{flex:1; background:var(--indigo); opacity:.13; border-radius:1.5px 1.5px 0 0; min-height:2px; cursor:default;
+  transition:height .5s cubic-bezier(.4,0,.2,1), background-color .4s, opacity .15s}
 .skyline i:hover{opacity:.45}
+.skyline.mine i{background:var(--amber); opacity:.22}
+.skyline.mine i:hover{opacity:.55}
 .flag svg{flex:none}
 .flag b{font-weight:600}
 .flag span{font-size:12px; line-height:1.35}
@@ -654,17 +657,54 @@ function renderControls(){
   renderApprox();
 }
 
-// the data skyline: one bar per city, height = composite in the current blend, rank order
-function renderSkyline(rows){
+// the data skyline: one bar per city (FIXED positions, so blend changes animate as
+// real per-city movement via CSS height transitions), height = composite in the blend.
+let _skyBars = null, _introRunning = false, _introTimer = null;
+function _ensureBars(){
   const host = document.getElementById('skyline');
-  if(!host) return;
-  const scored = rows.filter(r=>r.composite!==null);
-  if(!scored.length){ host.innerHTML=''; return; }
-  const max = Math.max(...scored.map(r=>r.composite));
-  host.innerHTML = scored.map(r=>
-    `<i style="height:${Math.max(8, Math.round(r.composite/max*100))}%" title="${r.rank}. ${r.city} — ${r.composite.toFixed(1)} in your current blend"></i>`
-  ).join('');
+  if(!host) return null;
+  if(_skyBars) return _skyBars;
+  _skyBars = {}; host.innerHTML = '';
+  P.cities.forEach(c=>{ const i=document.createElement('i'); host.appendChild(i); _skyBars[c]=i; });
+  return _skyBars;
 }
+function _paintSky(map, titleFn){
+  const bars=_ensureBars(); if(!bars) return;
+  const vals=Object.values(map).filter(v=>v!==null&&v!==undefined);
+  const max=vals.length?Math.max(...vals):1;
+  P.cities.forEach(c=>{
+    const b=bars[c], v=map[c];
+    if(v===null||v===undefined){ b.style.height='2px'; b.title=titleFn(c,null); }
+    else { b.style.height=Math.max(6,Math.round(v/max*100))+'%'; b.title=titleFn(c,v); }
+  });
+}
+function renderSkyline(rows){
+  if(_introRunning) return;                    // don't fight the intro
+  const map={}, rank={};
+  rows.forEach(r=>{ map[r.city]=r.composite; rank[r.city]=r.rank; });
+  _paintSky(map, (c,v)=> v===null ? `${c} — no score in this blend` : `${rank[c]}. ${c} — ${v.toFixed(1)} in your current blend`);
+  const host=document.getElementById('skyline');
+  if(host) host.classList.toggle('mine', (typeof encodeBlend==='function') && encodeBlend()!=='');  // amber when it's YOUR blend
+}
+// intro: morph through three real single-area skylines on load, then settle on the current view
+function _blendMap(activeVars){
+  const w={}; P.domains.forEach(d=>w[d.id]=1);
+  const m={}; computeIndex(P,{activeVars, domainWeights:w, method:'additive'}).forEach(r=>m[r.city]=r.composite);
+  return m;
+}
+function runSkylineIntro(){
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const goldOf = d => new Set(P.variables.filter(v=>v.tier==='gold'&&v.domain===d).map(v=>v.id));
+  const frames = ['Green','Competitive','Connected'].map(d=>_blendMap(goldOf(d)));
+  _introRunning=true; let k=0;
+  const step=()=>{
+    if(!_introRunning) return;
+    if(k<frames.length){ _paintSky(frames[k], ()=> ''); k++; _introTimer=setTimeout(step,640); }
+    else { _introRunning=false; renderSkyline(lastRows); }
+  };
+  step();
+}
+function cancelIntro(){ if(_introRunning){ _introRunning=false; clearTimeout(_introTimer); renderSkyline(lastRows); } }
 
 function updateExtUI(){
   const extActive = P.variables.some(v=>v.tier==='extended' && state.varOn[v.id] && state.domOn[v.domain]);
@@ -1011,7 +1051,10 @@ if(location.hash.startsWith('#b=') && applyBlend(location.hash.slice(3))){
   recompute(true);
 }
 const _recompute0 = recompute;
-recompute = function(reorder){ _recompute0(reorder); syncURL(); };
+recompute = function(reorder){ cancelIntro(); _recompute0(reorder); syncURL(); };
+
+// on load, let the skyline shift through a few real blends — this index is never static
+runSkylineIntro();
 </script>
 </body>
 </html>
