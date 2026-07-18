@@ -24,7 +24,7 @@ ok(P.meta && P.meta.released, 'meta.released missing');
 
 const domainIds = new Set(P.domains.map(d => d.id));
 const varIds = new Set();
-const DATA_LEVELS = new Set(['City', 'Metro', 'Country proxy']);
+const DATA_LEVELS = new Set(['City', 'Metro', 'Mixed', 'Country proxy']);
 const APPROX = new Set(['none', 'crowd', 'perception', 'self-reported', 'modelled', 'proxy']);
 const DIRECTION = new Set(['higher', 'lower']);
 
