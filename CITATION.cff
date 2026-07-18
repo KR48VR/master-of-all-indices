@@ -5,7 +5,7 @@ message: >-
   across versions.
 title: "Master Index Workbench"
 type: dataset
-version: 3.2.0
+version: 3.2.1
 date-released: 2026-07-18
 url: "https://kr48vr.github.io/master-of-all-indices/"
 repository-code: "https://github.com/KR48VR/master-of-all-indices"
