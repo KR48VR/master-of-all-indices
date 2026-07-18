@@ -85,8 +85,8 @@ button{font-family:inherit}
 .skyline{display:flex; align-items:flex-end; gap:2px; flex-basis:100%; height:30px; margin-top:2px}
 .skyline i{flex:1; background:var(--indigo); opacity:.13; border-radius:1.5px 1.5px 0 0; min-height:2px; cursor:default;
   transition:height .8s cubic-bezier(.4,0,.2,1), background-color .4s, opacity .15s}
-.skycap{flex-basis:100%; text-align:right; font-family:"IBM Plex Mono",monospace; font-size:9.5px;
-  letter-spacing:.08em; text-transform:uppercase; color:var(--ink3); margin-top:3px; min-height:13px}
+.skycap{font-family:"IBM Plex Mono",monospace; font-size:9.5px;
+  letter-spacing:.08em; text-transform:uppercase; color:var(--ink3); margin-top:8px; min-height:13px}
 .skyline i:hover{opacity:.45}
 .skyline.mine i{background:var(--amber); opacity:.22}
 .skyline.mine i:hover{opacity:.55}
@@ -307,6 +307,7 @@ button{font-family:inherit}
     <p>Pick the big areas, mix them, add or drop any measure &mdash; and watch the ranking rebuild live. Every
     approximation stays visible. Smaller than conventional indices &mdash; and able to prove every number they can't.</p>
     <a class="mlink" href="#methods">Why trust this? Methods &amp; choices &darr;</a>
+    <div class="skycap" id="skycap" aria-hidden="true"></div>
   </div>
   <div class="build" role="note">
     <div class="bt">Make it yours</div>
@@ -328,7 +329,6 @@ button{font-family:inherit}
     <span><b>Sourced data.</b> Every value shown is real, sourced and dated (see the provenance block in <code>dataset.js</code>). Blanks are honest gaps &mdash; where no verifiable figure exists, nothing is shown. The default view is the <b>gold tier</b>: measures that measure what their name says, from the best available source. The optional <b>extended tier</b> adds known-compromised measures &mdash; clearly badged &mdash; so you can see what conventional-index shortcuts do to a ranking.</span>
   </div>
   <div class="skyline" id="skyline" aria-hidden="true"></div>
-  <div class="skycap" id="skycap" aria-hidden="true"></div>
 </div>
 
 <div class="wrap">
