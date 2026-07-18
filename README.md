@@ -20,7 +20,7 @@ they explain themselves.
 1. **No number is ever invented, estimated or interpolated.** Unverifiable ⇒ blank.
 2. **Every value carries its receipt** — source, year, method, caveats, per value.
 3. **Compromises are flagged, never hidden** — metro stand-ins, country proxies,
-   crowd-sourced and modelled figures are all badged in the UI.
+   mixed geographies, crowd-sourced and modelled figures are all badged in the UI.
 4. **Missing data costs visibility, not rank** — never an assumed zero.
 
 The [integrity workflow](.github/workflows/integrity.yml) fails any change that

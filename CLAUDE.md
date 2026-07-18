@@ -33,9 +33,21 @@ Live at: https://kr48vr.github.io/master-of-all-indices/
 - `SOURCING.md`, `README.md`, `LICENSE.md`, `CITATION.cff` — sourcing plan,
   public docs, licensing (code MIT / data CC BY-NC-SA 4.0), citation metadata.
   Bump `meta.version` in dataset.js AND `CITATION.cff` together on release.
+- `PHASE3.md`, `ROSTER.md`, `LIV01.md` — the decision records: Phase-3
+  sourcing verdicts (D1-D11), city-roster selection, and the LIV-01
+  city-level homicide study with decisions D-L1..L6. Per-value receipts
+  link to LIV01.md; treat all three as append-only history.
+- `papers.html` — The Workbench Papers (working paper, executive brief, QA
+  ledger, King & AI collaboration record). Version-stamped: it states which
+  artifact version it describes; re-generate its Table 1 from dataset.js
+  when updating it after a data release.
 
 ## Current status
-v3.2.0: Phase 3 complete — 55 cities × 35 sourced measures in TWO TIERS.
+v3.2.1: Phase 3 complete — 55 cities × 35 sourced measures in TWO TIERS.
+(v3.2.1 = receipt-only patch: Jakarta's blank verified from the retrieved
+provincial publication (murder inseparable from negligence-causing-death),
+UAE geo-blocks doubly confirmed from the owner's own browser; no value or
+score changes.)
 (v3.2.0 = LIV-01 homicide upgraded from Country proxy to MIXED city-level:
 45 city values from Eurostat/FBI/StatCan/national sources, means of annual
 rates over up-to-3 recent years, 10 evidence-backed blanks; decisions
