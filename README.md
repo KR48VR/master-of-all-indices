@@ -79,7 +79,7 @@ verdict. Live figures are computed on the site's *Methods & choices* section.
 
 ## Cite
 
-> Poon, K. W. Master Index Workbench, v3.0.0 (2026). https://kr48vr.github.io/master-of-all-indices/
+> Poon, K. W. Master Index Workbench, v3.1.0 (2026). https://kr48vr.github.io/master-of-all-indices/
 
 See `CITATION.cff` (GitHub's "Cite this repository" button uses it). Please
 state the version: adding cities re-scales all scores, so scores are comparable

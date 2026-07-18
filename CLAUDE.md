@@ -35,7 +35,11 @@ Live at: https://kr48vr.github.io/master-of-all-indices/
   Bump `meta.version` in dataset.js AND `CITATION.cff` together on release.
 
 ## Current status
-v3.0.0: Phase 3 complete — 55 cities × 35 sourced measures in TWO TIERS.
+v3.1.0: Phase 3 complete — 55 cities × 35 sourced measures in TWO TIERS.
+(v3.1.0 = the GRN-03 CO2 measure moved to GHS-UCDB R2024A V1-2, May 2026:
+emissions year 2024, international aviation/shipping now INCLUDED, and the
+publisher re-benchmarked most centres — median same-year shift ~21%, so
+GRN-03 values are NOT comparable to v3.0.0.)
 The `tier` field on every measure drives the app: 'gold' (29 measures,
 default view — each measures what its name says, from the best available
 source), 'extended' (6 known-compromised measures, off by default behind a

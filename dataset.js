@@ -4,7 +4,7 @@
 // CLAUDE.md rule 3). A null/absent value is honest missing data — never
 // fill one with a guess. The 19 non-pilot measures have no data yet.
 window.INDEX_DATA = {
-"meta":{"name": "Master Index Workbench", "version": "3.0.0", "released": "2026-07-17", "dataLicense": "CC BY-NC-SA 4.0 (compilation); individual values inherit source terms recorded in provenance", "codeLicense": "MIT", "url": "https://kr48vr.github.io/master-of-all-indices/"},
+"meta":{"name": "Master Index Workbench", "version": "3.1.0", "released": "2026-07-18", "dataLicense": "CC BY-NC-SA 4.0 (compilation); individual values inherit source terms recorded in provenance", "codeLicense": "MIT", "url": "https://kr48vr.github.io/master-of-all-indices/"},
 "domains":[
 {"id": "Liveable", "tint": "#F6C99A", "ink": "#8a4b12"},
 {"id": "Green", "tint": "#A9CE9C", "ink": "#2f5d29"},
@@ -24,7 +24,7 @@ window.INDEX_DATA = {
 {"id": "LIV-08", "domain": "Liveable", "subtheme": "Culture & Amenities", "name": "Cultural venues (bias demo)", "measures": "Wikidata-counted museums per 100,000 — a deliberate demonstration of crowd-data bias", "unit": "per 100k", "direction": "higher", "dataLevel": "City", "source": "City open data / GPCI", "appearsIn": "GPCI (Cultural Interaction)", "pilot": 0, "caveat": "EXTENDED TIER — INCLUDED AS A BIAS DEMONSTRATION, NOT A MEASUREMENT. These numbers measure Wikipedia/Wikidata editing activity and location-graph linkage, not cultural infrastructure. Three documented distortions: (1) editorial attention — Paris counts 1.8x its ~130 official museums while Shanghai counts 0.4x of its ~165 registered ones (a 4-5x relative bias); (2) graph linkage — London (0.1), Amsterdam (0.1), Copenhagen and Auckland (0.0) score near zero purely because their museums link to a different database item than the conventional city entry (the British Museum's chain never reaches 'London'); (3) denominator quirks — some city items carry agglomeration-scale populations (Kuala Lumpur, Delhi). Every count is reproducible from the recorded uniform query; no value should be read as a fact about culture. This is what an index built on convenient crowd counts looks like.", "contestable": 0, "approx": "crowd", "tier": "extended"},
 {"id": "GRN-01", "domain": "Green", "subtheme": "Air & Environment", "name": "PM2.5 air pollution", "measures": "Annual mean fine particulate matter", "unit": "µg/m³", "direction": "lower", "dataLevel": "City", "source": "WHO Ambient Air Quality DB v8.0", "appearsIn": "GPCI (Environment)", "pilot": 1, "caveat": "WHO DB v8.0 (June 2026): reference year varies by city (2019-2024 — Tokyo, Seoul and London are stuck at 2019). Several rows are greater-city/metro aggregates (Zurich, Paris, Amsterdam, New York, San Francisco). Barcelona station coverage moderate (79%).", "contestable": 0, "approx": "none", "tier": "gold"},
 {"id": "GRN-02", "domain": "Green", "subtheme": "Air & Environment", "name": "Open space access", "measures": "% of residents within 400 m walk of an open public space", "unit": "%", "direction": "higher", "dataLevel": "City", "source": "UN-Habitat SDG 11.7.1", "appearsIn": "—", "pilot": 1, "caveat": "SDG 11.7.1 access measure (2020): \"open public space\" includes plazas and squares, not only green areas, and the share is computed from OpenStreetMap public-space mapping plus a modelled population grid — not a survey. Replaces the original \"within 300 m of green space\" definition, which no global source publishes. Barcelona and San Francisco are outside UN-Habitat’s city sample (blank).", "contestable": 0, "approx": "modelled", "tier": "gold"},
-{"id": "GRN-03", "domain": "Green", "subtheme": "Climate & Emissions", "name": "CO2 per capita", "measures": "Territorial emissions per resident", "unit": "tonnes", "direction": "lower", "dataLevel": "Metro", "source": "Global Covenant of Mayors", "appearsIn": "—", "pilot": 0, "caveat": "EDGAR v2024 modelled emissions summed over each city's GHS urban centre ÷ the centre's published 2020 population (JRC's own arithmetic, reproduced exactly; 2022 is the latest emissions year, 2020 the nearest population epoch). Urban centres are contiguous built-up areas, not administrative cities — six are merged conurbations (SF=Bay Area, Taipei=with New Taipei, Manila=Metro Manila, Delhi=NCR, Osaka=Keihanshin, Shenzhen=Pearl River Delta), noted per value. International aviation and shipping are EXCLUDED, so port/hub cities read low (Hong Kong's 1.35 vs ~4.5 in territory statistics is flagged per value). A May 2026 UCDB revision (V1.2) adds international transport and a newer EDGAR release — values will shift when we adopt it (documented version-bump candidate).", "contestable": 0, "approx": "modelled", "tier": "gold"},
+{"id": "GRN-03", "domain": "Green", "subtheme": "Climate & Emissions", "name": "CO2 per capita", "measures": "Territorial emissions per resident", "unit": "tonnes", "direction": "lower", "dataLevel": "Metro", "source": "Global Covenant of Mayors", "appearsIn": "—", "pilot": 0, "caveat": "EDGAR modelled emissions summed over each city's GHS urban centre ÷ the centre's population (JRC's own arithmetic, reproduced exactly; UCDB R2024A V1-2, May 2026 — emissions year 2024, population epoch 2025). International aviation and shipping are now INCLUDED as spatially allocated, closing v3.0.0's biggest caveat — but allocation follows the polygon, so hub cities whose airports/ports fall outside their urban centre still read low (Hong Kong: 1.08 vs ~4.5 in territory statistics, flagged per value). Urban centres are contiguous built-up areas, not administrative cities — six are merged conurbations (SF=Bay Area, Taipei=with New Taipei, Manila=Metro Manila, Delhi=NCR, Osaka=Keihanshin, Shenzhen=Pearl River Delta), noted per value. The V1-2 release also re-benchmarked the EDGAR fields wholesale — the median same-year shift across these 55 centres is ~21% (mostly upward, from point-source relocation and re-gridding); centres that moved >=35% carry the number in their receipt (largest: Stockholm +363%, Oslo +68%, Helsinki +58%). v3.0.0 values (2022 vintage, excl. international transport, V1-0 EDGAR) are NOT comparable to these.", "contestable": 0, "approx": "modelled", "tier": "gold"},
 {"id": "GRN-04", "domain": "Green", "subtheme": "Climate & Emissions", "name": "Renewable share", "measures": "% of city energy from renewables", "unit": "%", "direction": "higher", "dataLevel": "City", "source": "WCCD (ISO 37120)", "appearsIn": "—", "pilot": 0, "caveat": "Only for cities that report to WCCD.", "contestable": 0, "approx": "self-reported", "tier": "none"},
 {"id": "GRN-05", "domain": "Green", "subtheme": "Resource Efficiency", "name": "Waste recycled", "measures": "% of municipal waste recycled", "unit": "%", "direction": "higher", "dataLevel": "City", "source": "Official city/national waste statistics", "appearsIn": "—", "pilot": 1, "caveat": "Compiled city-by-city from official sources — definitions are NOT directly comparable: mixes true recycling rates, separate-collection shares (Milan, Rome, Madrid, Prague, Frankfurt, Stockholm) and landfill-diversion rates (San Francisco, Toronto, Montreal, Washington DC, Sydney, Chicago, Auckland, Manila, Abu Dhabi; Tel Aviv's includes waste-to-energy); scopes differ (Singapore's 52% overall vs ~12% domestic; Chicago and Osaka structurally low from narrow administrative scope; Vancouver metro-wide all sectors incl. construction). Kuala Lumpur and Dublin are NATIONAL rates (country proxy); Abu Dhabi is the emirate; Vienna and Frankfurt are computed from official tonnages (no rate published). Years mostly 2023-2025 — Boston 2019, Hamburg 2020 and Manila 2015 are those cities' latest official rates. Cities publishing no genuine rate are blank, each with the reason recorded.", "contestable": 0, "approx": "self-reported", "tier": "gold"},
 {"id": "GRN-06", "domain": "Green", "subtheme": "Resource Efficiency", "name": "Water use per capita", "measures": "Daily water consumption per resident", "unit": "litres/day", "direction": "lower", "dataLevel": "City", "source": "WCCD", "appearsIn": "—", "pilot": 0, "caveat": "EXTENDED TIER — coverage-poor and vintage-mixed (adopted knowingly, D5-reframed): the only living multi-city source (IWA International Statistics for Water Services) covers 34 of 55 cities, mixing editions 2016-2022 — seven cities' newest figures are a decade old (2016: London, Melbourne, Sydney, Prague, Shanghai, Beijing, Shenzhen), flagged per value. Madrid and Barcelona share one Spain-wide figure (IWA's own note: country proxy). New York's 438 L/c/d exceeds the sanity band (likely total system demand) — recorded as published, flagged. Self-reported by utilities; no explicit portal license (cited with edition year; permissions check pending).", "contestable": 0, "approx": "self-reported", "tier": "extended"},
@@ -55,61 +55,61 @@ window.INDEX_DATA = {
 ],
 "cities":["Singapore", "Tokyo", "Copenhagen", "Zurich", "Vienna", "Seoul", "Melbourne", "Amsterdam", "London", "New York", "Paris", "Toronto", "Berlin", "Barcelona", "Dubai", "San Francisco", "Stockholm", "Oslo", "Helsinki", "Madrid", "Milan", "Rome", "Munich", "Frankfurt", "Hamburg", "Brussels", "Dublin", "Lisbon", "Prague", "Warsaw", "Istanbul", "Montreal", "Vancouver", "Chicago", "Boston", "Los Angeles", "Seattle", "Washington DC", "Sydney", "Auckland", "Osaka", "Tel Aviv", "Hong Kong", "Taipei", "Bangkok", "Kuala Lumpur", "Jakarta", "Manila", "Ho Chi Minh City", "Mumbai", "Abu Dhabi", "Shanghai", "Beijing", "Shenzhen", "Delhi"],
 "data":{
-"Singapore":{"LIV-01": 0.07, "LIV-04": 83.9, "LIV-05": 2.9, "LIV-06": 24.7, "GRN-01": 12.0, "GRN-02": 70.3, "GRN-05": 52.0, "SMT-01": 567.1, "SMT-03": 87.5, "SMT-05": 94.4, "CMP-01": 132570, "CMP-04": 68.1, "CMP-06": 690, "TAL-01": 54.1, "TAL-02": 2, "TAL-06": 48.7, "CON-01": 175, "CON-03": 28.0, "CON-05": 43.9, "LIV-02": 77.7, "LIV-07": 90.8, "CON-04": 41.0, "LIV-03": 86.94, "TAL-04": 8.78, "SMT-02": 95.0, "SMT-06": 65.3, "GRN-03": 4.88, "CMP-03": 11.0, "GRN-07": 3.0, "SMT-04": 90.0, "GRN-06": 154.0, "CMP-02": null, "CMP-05": null, "TAL-03": null, "LIV-08": 0.6},
-"Tokyo":{"LIV-01": 0.23, "LIV-04": 84.9, "LIV-05": 3.26, "LIV-06": 16.0, "GRN-01": 10.8, "GRN-02": 74.8, "GRN-05": 21.4, "SMT-01": 313.7, "SMT-03": 85.42, "SMT-05": 85.5, "CMP-01": 50287, "CMP-04": 14.8, "CMP-06": 81, "TAL-01": 64.2, "TAL-02": 4, "TAL-06": 5.6, "CON-01": null, "CON-03": null, "CON-05": 44.1, "LIV-02": 75.9, "LIV-07": 54.3, "CON-04": 42.7, "LIV-03": 85.27, "TAL-04": 5.61, "SMT-02": 96.6, "SMT-06": 54.1, "GRN-03": 3.16, "CMP-03": 122.0, "GRN-07": 3.0, "SMT-04": 71.0, "GRN-06": 215.0, "CMP-02": 88996.0, "CMP-05": 4.0, "TAL-03": null, "LIV-08": 2.7},
-"Copenhagen":{"LIV-01": 0.84, "LIV-04": 81.5, "LIV-05": 5.79, "LIV-06": 10.7, "GRN-01": 6.9, "GRN-02": 83.7, "GRN-05": 42.0, "SMT-01": 328.2, "SMT-03": 90.63, "SMT-05": 99.8, "CMP-01": 85842, "CMP-04": null, "CMP-06": 842, "TAL-01": 58.2, "TAL-02": 1, "TAL-06": 26.7, "CON-01": 192, "CON-03": 74.5, "CON-05": 40.2, "LIV-02": 73.7, "LIV-07": 86.8, "CON-04": 27.5, "LIV-03": 79.03, "TAL-04": 8.84, "SMT-02": 100.0, "SMT-06": 71.1, "GRN-03": 1.2, "CMP-03": 10.0, "GRN-07": 3.0, "SMT-04": 89.0, "GRN-06": 103.0, "CMP-02": 145510.0, "CMP-05": 9.8, "TAL-03": 58.7, "LIV-08": 0.0},
-"Zurich":{"LIV-01": 0.6, "LIV-04": 84.1, "LIV-05": 5.67, "LIV-06": 12.8, "GRN-01": 7.6, "GRN-02": 67.6, "GRN-05": 46.0, "SMT-01": 455.6, "SMT-03": 81.25, "SMT-05": 97.3, "CMP-01": 88723, "CMP-04": 49.0, "CMP-06": 571, "TAL-01": 56.6, "TAL-02": 2, "TAL-06": 44.0, "CON-01": 224, "CON-03": null, "CON-05": 48.9, "LIV-02": 75.9, "LIV-07": 123.1, "CON-04": 37.0, "LIV-03": 82.65, "TAL-04": 6.11, "SMT-02": 100.0, "SMT-06": 79.6, "GRN-03": 2.04, "CMP-03": 16.0, "GRN-07": 2.0, "SMT-04": 66.0, "GRN-06": null, "CMP-02": 124657.0, "CMP-05": 3.6, "TAL-03": 57.1, "LIV-08": 15.9},
-"Vienna":{"LIV-01": 0.88, "LIV-04": 81.0, "LIV-05": 7.17, "LIV-06": 15.8, "GRN-01": 9.9, "GRN-02": 72.4, "GRN-05": 35.2, "SMT-01": 251.9, "SMT-03": 84.38, "SMT-05": 91.9, "CMP-01": 66253, "CMP-04": null, "CMP-06": 63, "TAL-01": 46.3, "TAL-02": 2, "TAL-06": 40.9, "CON-01": 204, "CON-03": 86.7, "CON-05": 48.6, "LIV-02": 70.6, "LIV-07": 74.5, "CON-04": 22.9, "LIV-03": 74.29, "TAL-04": 6.63, "SMT-02": 98.0, "SMT-06": 76.4, "GRN-03": 1.96, "CMP-03": 8.0, "GRN-07": 2.0, "SMT-04": 72.0, "GRN-06": null, "CMP-02": 126851.0, "CMP-05": 5.4, "TAL-03": 52.5, "LIV-08": 8.9},
-"Seoul":{"LIV-01": 0.48, "LIV-04": 85.0, "LIV-05": 4.27, "LIV-06": 30.0, "GRN-01": 25.4, "GRN-02": 48.8, "GRN-05": 61.7, "SMT-01": 320.3, "SMT-03": 87.5, "SMT-05": 97.9, "CMP-01": 51292, "CMP-04": null, "CMP-06": 258, "TAL-01": 67.3, "TAL-02": 8, "TAL-06": 3.9, "CON-01": 142, "CON-03": null, "CON-05": null, "LIV-02": 74.6, "LIV-07": 64.5, "CON-04": 40.4, "LIV-03": 76.82, "TAL-04": 9.47, "SMT-02": 94.0, "SMT-06": 77.1, "GRN-03": 3.11, "CMP-03": 54.0, "GRN-07": 2.0, "SMT-04": 75.0, "GRN-06": 206.0, "CMP-02": 92111.0, "CMP-05": 3.9, "TAL-03": null, "LIV-08": 1.1},
-"Melbourne":{"LIV-01": 0.85, "LIV-04": 84.1, "LIV-05": 4.72, "LIV-06": 7.5, "GRN-01": 7.9, "GRN-02": 84.4, "GRN-05": 47.9, "SMT-01": 248.8, "SMT-03": null, "SMT-05": 96.1, "CMP-01": 40848, "CMP-04": 27.3, "CMP-06": 306, "TAL-01": 53.5, "TAL-02": 6, "TAL-06": 35.7, "CON-01": 40, "CON-03": null, "CON-05": 52.9, "LIV-02": 55.7, "LIV-07": 77.3, "CON-04": 42.0, "LIV-03": 79.44, "TAL-04": null, "SMT-02": 89.0, "SMT-06": 53.6, "GRN-03": 2.92, "CMP-03": 10.0, "GRN-07": 3.0, "SMT-04": 77.0, "GRN-06": 149.0, "CMP-02": null, "CMP-05": 6.8, "TAL-03": null, "LIV-08": 0.3},
-"Amsterdam":{"LIV-01": 0.69, "LIV-04": 82.1, "LIV-05": 4.89, "LIV-06": 9.9, "GRN-01": 8.9, "GRN-02": 77.6, "GRN-05": 25.0, "SMT-01": 317.8, "SMT-03": 78.13, "SMT-05": 97.0, "CMP-01": 87028, "CMP-04": null, "CMP-06": null, "TAL-01": 52.2, "TAL-02": 2, "TAL-06": 37.6, "CON-01": 285, "CON-03": null, "CON-05": 45.7, "LIV-02": 70.0, "LIV-07": 81.4, "CON-04": 22.8, "LIV-03": 73.21, "TAL-04": 6.56, "SMT-02": 99.0, "SMT-06": 65.5, "GRN-03": 2.69, "CMP-03": 17.0, "GRN-07": 3.0, "SMT-04": 82.0, "GRN-06": 141.0, "CMP-02": 136917.0, "CMP-05": 9.8, "TAL-03": 58.4, "LIV-08": 0.1},
-"London":{"LIV-01": 1.15, "LIV-04": 82.5, "LIV-05": 4.55, "LIV-06": 16.7, "GRN-01": 11.2, "GRN-02": 87.1, "GRN-05": 32.6, "SMT-01": 316.7, "SMT-03": 87.5, "SMT-05": 95.5, "CMP-01": 72186, "CMP-04": 116.3, "CMP-06": 1867, "TAL-01": 74.1, "TAL-02": 9, "TAL-06": 40.6, "CON-01": 411, "CON-03": null, "CON-05": 51.6, "LIV-02": 44.7, "LIV-07": 88.0, "CON-04": 44.7, "LIV-03": 70.3, "TAL-04": 4.47, "SMT-02": 85.0, "SMT-06": 66.0, "GRN-03": 2.06, "CMP-03": 57.0, "GRN-07": 3.0, "SMT-04": 70.0, "GRN-06": 149.0, "CMP-02": 142615.0, "CMP-05": null, "TAL-03": 61.2, "LIV-08": 0.1},
-"New York":{"LIV-01": 5.76, "LIV-04": 77.7, "LIV-05": 5.02, "LIV-06": 10.9, "GRN-01": 7.1, "GRN-02": 71.0, "GRN-05": 21.8, "SMT-01": 391.7, "SMT-03": 90.63, "SMT-05": 94.7, "CMP-01": 91990, "CMP-04": 86.9, "CMP-06": 1717, "TAL-01": 53.0, "TAL-02": 2, "TAL-06": 30.8, "CON-01": 153, "CON-03": 61.6, "CON-05": 48.8, "LIV-02": 49.2, "LIV-07": 100.0, "CON-04": 43.3, "LIV-03": 64.27, "TAL-04": 4.94, "SMT-02": 96.0, "SMT-06": 64.2, "GRN-03": 4.22, "CMP-03": 90.0, "GRN-07": 3.0, "SMT-04": 78.0, "GRN-06": 438.0, "CMP-02": 188044.0, "CMP-05": 0.5, "TAL-03": null, "LIV-08": 2.0},
-"Paris":{"LIV-01": 1.34, "LIV-04": 84.1, "LIV-05": 9.38, "LIV-06": 17.0, "GRN-01": 9.3, "GRN-02": 51.6, "GRN-05": 20.0, "SMT-01": 441.5, "SMT-03": 81.25, "SMT-05": 88.7, "CMP-01": 83089, "CMP-04": 42.0, "CMP-06": 516, "TAL-01": 58.6, "TAL-02": 7, "TAL-06": 22.7, "CON-01": 305, "CON-03": 83.0, "CON-05": 40.0, "LIV-02": 42.1, "LIV-07": 78.4, "CON-04": 41.1, "LIV-03": 61.77, "TAL-04": 5.37, "SMT-02": 93.0, "SMT-06": 64.1, "GRN-03": 1.64, "CMP-03": 44.0, "GRN-07": 3.0, "SMT-04": 63.0, "GRN-06": 201.0, "CMP-02": 159930.0, "CMP-05": 4.3, "TAL-03": 53.8, "LIV-08": 11.2},
-"Toronto":{"LIV-01": 1.98, "LIV-04": 81.8, "LIV-05": 2.21, "LIV-06": 11.6, "GRN-01": 9.4, "GRN-02": 91.7, "GRN-05": 50.6, "SMT-01": 494.5, "SMT-03": 79.17, "SMT-05": 94.4, "CMP-01": 44561, "CMP-04": 52.9, "CMP-06": 433, "TAL-01": 71.0, "TAL-02": 2, "TAL-06": 46.6, "CON-01": 172, "CON-03": 55.7, "CON-05": 47.7, "LIV-02": 56.3, "LIV-07": 65.6, "CON-04": 43.9, "LIV-03": 76.12, "TAL-04": 5.62, "SMT-02": 94.3, "SMT-06": 60.5, "GRN-03": 6.72, "CMP-03": 28.0, "GRN-07": 2.0, "SMT-04": 78.0, "GRN-06": null, "CMP-02": null, "CMP-05": 9.2, "TAL-03": null, "LIV-08": 1.4},
-"Berlin":{"LIV-01": 0.91, "LIV-04": 81.2, "LIV-05": 5.51, "LIV-06": 11.1, "GRN-01": 11.3, "GRN-02": 68.2, "GRN-05": 30.8, "SMT-01": 212.6, "SMT-03": 88.54, "SMT-05": 93.5, "CMP-01": 59205, "CMP-04": 49.4, "CMP-06": 452, "TAL-01": 48.1, "TAL-02": 3, "TAL-06": 24.9, "CON-01": 161, "CON-03": 70.5, "CON-05": 44.6, "LIV-02": 55.4, "LIV-07": 72.5, "CON-04": 33.4, "LIV-03": 68.02, "TAL-04": 5.93, "SMT-02": 98.0, "SMT-06": 65.1, "GRN-03": 3.66, "CMP-03": 2.0, "GRN-07": 3.0, "SMT-04": 79.0, "GRN-06": 115.0, "CMP-02": 108606.0, "CMP-05": 3.9, "TAL-03": 56.0, "LIV-08": 6.2},
-"Barcelona":{"LIV-01": 0.69, "LIV-04": 84.2, "LIV-05": 4.47, "LIV-06": 13.8, "GRN-01": 10.9, "GRN-02": null, "GRN-05": 42.1, "SMT-01": 338.8, "SMT-03": null, "SMT-05": 95.8, "CMP-01": 52064, "CMP-04": 28.5, "CMP-06": 222, "TAL-01": 46.9, "TAL-02": 5, "TAL-06": 27.3, "CON-01": 202, "CON-03": 66.9, "CON-05": 41.1, "LIV-02": 47.9, "LIV-07": 59.9, "CON-04": 29.8, "LIV-03": 65.84, "TAL-04": 3.65, "SMT-02": 85.4, "SMT-06": 67.6, "GRN-03": 1.48, "CMP-03": 1.0, "GRN-07": 3.0, "SMT-04": 77.0, "GRN-06": 128.0, "CMP-02": 106109.0, "CMP-05": 11.3, "TAL-03": 38.0, "LIV-08": 5.7},
-"Dubai":{"LIV-01": 0.69, "LIV-04": 83.1, "LIV-05": 3.35, "LIV-06": 7.8, "GRN-01": 35.0, "GRN-02": 40.6, "GRN-05": null, "SMT-01": 359.0, "SMT-03": 90.63, "SMT-05": 100.0, "CMP-01": null, "CMP-04": null, "CMP-06": 661, "TAL-01": 41.0, "TAL-02": 0, "TAL-06": null, "CON-01": 310, "CON-03": 24.8, "CON-05": 42.7, "LIV-02": 83.8, "LIV-07": 62.5, "CON-04": 36.3, "LIV-03": 79.37, "TAL-04": 2.61, "SMT-02": 99.46, "SMT-06": 81.8, "GRN-03": 13.93, "CMP-03": 5.0, "GRN-07": 3.0, "SMT-04": 85.0, "GRN-06": null, "CMP-02": null, "CMP-05": null, "TAL-03": null, "LIV-08": 0.4},
-"San Francisco":{"LIV-01": 5.76, "LIV-04": 79.0, "LIV-05": 3.02, "LIV-06": 6.5, "GRN-01": 7.4, "GRN-02": null, "GRN-05": 53.1, "SMT-01": 367.7, "SMT-03": null, "SMT-05": 94.7, "CMP-01": 146853, "CMP-04": 320.8, "CMP-06": 20260, "TAL-01": 46.9, "TAL-02": 0, "TAL-06": 32.4, "CON-01": 60, "CON-03": 29.6, "CON-05": 49.7, "LIV-02": 39.5, "LIV-07": 94.9, "CON-04": 49.0, "LIV-03": 64.27, "TAL-04": 4.94, "SMT-02": 96.0, "SMT-06": 60.5, "GRN-03": 3.66, "CMP-03": 63.0, "GRN-07": 3.0, "SMT-04": 78.0, "GRN-06": null, "CMP-02": 276597.0, "CMP-05": -2.1, "TAL-03": null, "LIV-08": 6.5},
-"Stockholm":{"SMT-01": 302.2, "CMP-01": 81394, "LIV-04": 85.0, "TAL-01": 60.0, "LIV-05": 4.91, "LIV-01": 1.15, "SMT-05": 95.8, "GRN-01": 4.9, "GRN-02": 86.0, "LIV-06": 12.5, "CON-05": 42.8, "CON-03": 70.1, "SMT-03": 80.21, "TAL-02": 2, "CON-01": 142, "TAL-06": 27.2, "GRN-05": 31.0, "CMP-04": null, "CMP-06": 1167, "LIV-02": 53.8, "LIV-07": 79.1, "CON-04": 34.1, "LIV-03": 76.2, "TAL-04": 8.91, "SMT-02": 98.2, "SMT-06": 72.4, "GRN-03": 0.66, "CMP-03": 22.0, "GRN-07": 2.0, "SMT-04": 83.0, "GRN-06": 184.0, "CMP-02": 141198.0, "CMP-05": 2.2, "TAL-03": 64.3, "LIV-08": 0.7},
-"Oslo":{"SMT-01": 281.9, "CMP-01": 63394, "LIV-04": 83.3, "TAL-01": 56.5, "LIV-05": 6.8, "LIV-01": 0.72, "SMT-05": 99.0, "GRN-01": 8.5, "GRN-02": 56.0, "LIV-06": 11.0, "CON-05": 33.2, "CON-03": null, "SMT-03": 78.13, "TAL-02": 1, "CON-01": 125, "TAL-06": 28.1, "GRN-05": 43.4, "CMP-04": null, "CMP-06": 297, "LIV-02": 65.7, "LIV-07": 92.1, "CON-04": 27.8, "LIV-03": 81.32, "TAL-04": 7.45, "SMT-02": 99.7, "SMT-06": 78.4, "GRN-03": 1.04, "CMP-03": 5.0, "GRN-07": 0.0, "SMT-04": 89.0, "GRN-06": 161.0, "CMP-02": 112828.0, "CMP-05": 8.0, "TAL-03": 56.4, "LIV-08": 0.7},
-"Helsinki":{"SMT-01": 238.8, "CMP-01": 66107, "LIV-04": 81.9, "TAL-01": 48.1, "LIV-05": 3.72, "LIV-01": 0.98, "SMT-05": 93.7, "GRN-01": 5.4, "GRN-02": null, "LIV-06": 11.4, "CON-05": 51.9, "CON-03": 78.0, "SMT-03": 81.25, "TAL-02": 1, "CON-01": 118, "TAL-06": 17.5, "GRN-05": 45.0, "CMP-04": null, "CMP-06": 688, "LIV-02": 74.9, "LIV-07": 73.9, "CON-04": 24.1, "LIV-03": 80.12, "TAL-04": 8.31, "SMT-02": 99.99, "SMT-06": 78.4, "GRN-03": 3.2, "CMP-03": 10.0, "GRN-07": 2.0, "SMT-04": 89.0, "GRN-06": 130.0, "CMP-02": 116570.0, "CMP-05": 3.0, "TAL-03": 52.6, "LIV-08": 12.7},
-"Madrid":{"SMT-01": 382.3, "CMP-01": 59768, "LIV-04": 85.4, "TAL-01": 50.0, "LIV-05": 6.18, "LIV-01": 0.69, "SMT-05": 95.8, "GRN-01": 10.3, "GRN-02": 63.1, "LIV-06": 13.2, "CON-05": 38.0, "CON-03": 68.8, "SMT-03": 92.71, "TAL-02": 4, "CON-01": 197, "TAL-06": 22.7, "GRN-05": 47.7, "CMP-04": 21.0, "CMP-06": 179, "LIV-02": 71.0, "LIV-07": 59.1, "CON-04": 28.2, "LIV-03": 65.84, "TAL-04": 3.65, "SMT-02": 85.4, "SMT-06": 70.6, "GRN-03": 1.03, "CMP-03": 12.0, "GRN-07": 2.0, "SMT-04": 77.0, "GRN-06": 128.0, "CMP-02": 110651.0, "CMP-05": 10.6, "TAL-03": 45.7, "LIV-08": 3.2},
-"Milan":{"SMT-01": 429.2, "CMP-01": 82014, "LIV-04": 84.7, "TAL-01": 23.6, "LIV-05": 5.59, "LIV-01": 0.57, "SMT-05": 89.2, "GRN-01": 20.4, "GRN-02": 76.2, "LIV-06": 18.2, "CON-05": 49.4, "CON-03": 50.4, "SMT-03": null, "TAL-02": 4, "CON-01": 244, "TAL-06": 15.0, "GRN-05": 63.33, "CMP-04": null, "CMP-06": 344, "LIV-02": 46.0, "LIV-07": 74.3, "CON-04": 35.9, "LIV-03": 71.17, "TAL-04": 2.86, "SMT-02": 90.0, "SMT-06": 70.7, "GRN-03": 2.11, "CMP-03": 11.0, "GRN-07": 2.0, "SMT-04": 76.0, "GRN-06": 265.0, "CMP-02": 148811.0, "CMP-05": 2.2, "TAL-03": 34.4, "LIV-08": 9.2},
-"Rome":{"SMT-01": 376.5, "CMP-01": 65690, "LIV-04": 83.6, "TAL-01": 28.5, "LIV-05": 6.77, "LIV-01": 0.57, "SMT-05": 89.2, "GRN-01": 11.8, "GRN-02": 80.0, "LIV-06": 14.9, "CON-05": 45.2, "CON-03": 71.7, "SMT-03": 81.25, "TAL-02": 2, "CON-01": 219, "TAL-06": 13.6, "GRN-05": 48.03, "CMP-04": null, "CMP-06": 58, "LIV-02": 53.3, "LIV-07": 60.0, "CON-04": 35.2, "LIV-03": 71.17, "TAL-04": 2.86, "SMT-02": 90.0, "SMT-06": 61.9, "GRN-03": 3.08, "CMP-03": 6.0, "GRN-07": 2.0, "SMT-04": 76.0, "GRN-06": 186.0, "CMP-02": 130468.0, "CMP-05": 1.4, "TAL-03": 43.9, "LIV-08": 8.3},
-"Munich":{"SMT-01": 221.7, "CMP-01": 102244, "LIV-04": 83.1, "TAL-01": 38.6, "LIV-05": 4.56, "LIV-01": 0.91, "SMT-05": 93.5, "GRN-01": 7.9, "GRN-02": null, "LIV-06": 13.1, "CON-05": 43.7, "CON-03": 81.9, "SMT-03": null, "TAL-02": 2, "CON-01": 202, "TAL-06": 31.9, "GRN-05": 55.3, "CMP-04": 52.5, "CMP-06": 1280, "LIV-02": 78.3, "LIV-07": 77.4, "CON-04": 28.2, "LIV-03": 68.02, "TAL-04": 5.93, "SMT-02": 98.0, "SMT-06": 69.0, "GRN-03": 3.17, "CMP-03": 10.0, "GRN-07": 2.0, "SMT-04": 79.0, "GRN-06": null, "CMP-02": 151118.0, "CMP-05": 1.3, "TAL-03": 46.4, "LIV-08": 4.8},
-"Frankfurt":{"SMT-01": 232.1, "CMP-01": 82688, "LIV-04": 81.9, "TAL-01": 35.6, "LIV-05": 4.27, "LIV-01": 0.91, "SMT-05": 93.5, "GRN-01": 8.7, "GRN-02": null, "LIV-06": 7.7, "CON-05": 42.3, "CON-03": null, "SMT-03": null, "TAL-02": 1, "CON-01": 284, "TAL-06": 35.5, "GRN-05": 37.6, "CMP-04": 7.8, "CMP-06": 18, "LIV-02": 54.5, "LIV-07": 71.5, "CON-04": 22.8, "LIV-03": 68.02, "TAL-04": 5.93, "SMT-02": 98.0, "SMT-06": null, "GRN-03": 3.56, "CMP-03": 5.0, "GRN-07": 3.0, "SMT-04": 79.0, "GRN-06": null, "CMP-02": 132741.0, "CMP-05": -0.2, "TAL-03": 48.8, "LIV-08": 8.1},
-"Hamburg":{"SMT-01": 196.7, "CMP-01": 77768, "LIV-04": 80.9, "TAL-01": 43.0, "LIV-05": 6.4, "LIV-01": 0.91, "SMT-05": 93.5, "GRN-01": 9.1, "GRN-02": 78.2, "LIV-06": 11.1, "CON-05": 49.3, "CON-03": 68.8, "SMT-03": null, "TAL-02": 1, "CON-01": 117, "TAL-06": 24.6, "GRN-05": 45.8, "CMP-04": 13.6, "CMP-06": 34, "LIV-02": 59.3, "LIV-07": 70.8, "CON-04": 30.5, "LIV-03": 68.02, "TAL-04": 5.93, "SMT-02": 98.0, "SMT-06": 65.2, "GRN-03": 3.5, "CMP-03": 2.0, "GRN-07": 3.0, "SMT-04": 79.0, "GRN-06": null, "CMP-02": 132626.0, "CMP-05": 3.1, "TAL-03": 50.5, "LIV-08": 6.2},
-"Brussels":{"SMT-01": 266.9, "CMP-01": 78040, "LIV-04": 82.2, "TAL-01": 56.9, "LIV-05": 4.44, "LIV-01": 1.08, "SMT-05": 95.8, "GRN-01": 7.6, "GRN-02": 85.8, "LIV-06": 7.2, "CON-05": 46.2, "CON-03": 89.0, "SMT-03": 73.96, "TAL-02": 2, "CON-01": 249, "TAL-06": 43.5, "GRN-05": 35.0, "CMP-04": 15.3, "CMP-06": 55, "LIV-02": 44.1, "LIV-07": 71.9, "CON-04": 36.4, "LIV-03": 67.97, "TAL-04": 5.99, "SMT-02": 99.8, "SMT-06": 63.8, "GRN-03": 2.98, "CMP-03": 6.0, "GRN-07": 1.0, "SMT-04": 54.0, "GRN-06": 96.0, "CMP-02": 166099.0, "CMP-05": null, "TAL-03": 52.1, "LIV-08": 10.0},
-"Dublin":{"SMT-01": 337.0, "CMP-01": 141694, "LIV-04": 83.3, "TAL-01": 61.0, "LIV-05": null, "LIV-01": 0.65, "SMT-05": 97.2, "GRN-01": 7.3, "GRN-02": 84.2, "LIV-06": 9.0, "CON-05": 72.9, "CON-03": 66.3, "SMT-03": 68.75, "TAL-02": 3, "CON-01": 199, "TAL-06": 26.6, "GRN-05": 42.0, "CMP-04": null, "CMP-06": 456, "LIV-02": 45.9, "LIV-07": 76.3, "CON-04": 40.4, "LIV-03": 78.02, "TAL-04": 5.75, "SMT-02": 86.0, "SMT-06": 62.0, "GRN-03": 3.18, "CMP-03": 15.0, "GRN-07": 3.0, "SMT-04": 77.0, "GRN-06": null, "CMP-02": 256297.0, "CMP-05": 15.6, "TAL-03": 55.6, "LIV-08": 5.1},
-"Lisbon":{"SMT-01": 354.4, "CMP-01": 50408, "LIV-04": 81.2, "TAL-01": 43.3, "LIV-05": 8.37, "LIV-01": 0.72, "SMT-05": 88.5, "GRN-01": 7.6, "GRN-02": 87.4, "LIV-06": 18.7, "CON-05": 39.0, "CON-03": 43.6, "SMT-03": 70.83, "TAL-02": 2, "CON-01": 146, "TAL-06": 17.3, "GRN-05": 26.0, "CMP-04": null, "CMP-06": 82, "LIV-02": 67.1, "LIV-07": 55.2, "CON-04": 34.6, "LIV-03": 75.07, "TAL-04": 5.98, "SMT-02": 98.7, "SMT-06": 65.9, "GRN-03": 0.92, "CMP-03": 3.0, "GRN-07": 3.0, "SMT-04": 83.0, "GRN-06": 111.0, "CMP-02": 92934.0, "CMP-05": 2.7, "TAL-03": 48.6, "LIV-08": 14.3},
-"Prague":{"SMT-01": 258.9, "CMP-01": 83056, "LIV-04": 81.1, "TAL-01": 54.8, "LIV-05": 8.24, "LIV-01": 0.77, "SMT-05": 87.7, "GRN-01": 13.4, "GRN-02": 83.5, "LIV-06": 18.2, "CON-05": 53.5, "CON-03": 89.2, "SMT-03": 67.71, "TAL-02": 2, "CON-01": 165, "TAL-06": 15.5, "GRN-05": 32.3, "CMP-04": null, "CMP-06": 69, "LIV-02": 75.3, "LIV-07": 57.3, "CON-04": 31.8, "LIV-03": 82.5, "TAL-04": 4.5, "SMT-02": 98.6, "SMT-06": 71.9, "GRN-03": 2.06, "CMP-03": 1.0, "GRN-07": 1.0, "SMT-04": 63.0, "GRN-06": 108.0, "CMP-02": 128349.0, "CMP-05": 0.3, "TAL-03": 57.8, "LIV-08": 7.9},
-"Warsaw":{"SMT-01": 362.9, "CMP-01": 81920, "LIV-04": 81.0, "TAL-01": 65.3, "LIV-05": 6.3, "LIV-01": 0.8, "SMT-05": 88.6, "GRN-01": 14.7, "GRN-02": 88.0, "LIV-06": 11.7, "CON-05": 51.3, "CON-03": 70.1, "SMT-03": 77.08, "TAL-02": 2, "CON-01": 152, "TAL-06": 5.7, "GRN-05": 28.5, "CMP-04": null, "CMP-06": 91, "LIV-02": 74.7, "LIV-07": 52.7, "CON-04": 34.8, "LIV-03": 74.41, "TAL-04": 3.68, "SMT-02": 91.0, "SMT-06": 69.9, "GRN-03": 2.44, "CMP-03": 4.0, "GRN-07": 2.0, "SMT-04": 90.0, "GRN-06": 122.0, "CMP-02": 139824.0, "CMP-05": 5.1, "TAL-03": 55.2, "LIV-08": 6.6},
-"Istanbul":{"SMT-01": 251.2, "CMP-01": 56428, "LIV-04": 77.1, "TAL-01": 31.8, "LIV-05": 2.96, "LIV-01": 3.23, "SMT-05": 89.8, "GRN-01": 50.5, "GRN-02": 59.8, "LIV-06": 10.1, "CON-05": 62.0, "CON-03": null, "SMT-03": 89.58, "TAL-02": 4, "CON-01": 322, "TAL-06": null, "GRN-05": null, "CMP-04": null, "CMP-06": 40, "LIV-02": 52.0, "LIV-07": 46.6, "CON-04": 50.7, "LIV-03": 49.31, "TAL-04": 2.64, "SMT-02": 0.0, "SMT-06": 61.8, "GRN-03": 1.52, "CMP-03": 10.0, "GRN-07": 3.0, "SMT-04": 64.0, "GRN-06": 147.0, "CMP-02": null, "CMP-05": 14.6, "TAL-03": 31.2, "LIV-08": 0.4},
-"Montreal":{"SMT-01": 334.2, "CMP-01": 38730, "LIV-04": 82.5, "TAL-01": 59.0, "LIV-05": 2.6, "LIV-01": 1.98, "SMT-05": 94.4, "GRN-01": 8.6, "GRN-02": 91.8, "LIV-06": 7.6, "CON-05": 41.3, "CON-03": 52.7, "SMT-03": null, "TAL-02": 3, "CON-01": 139, "TAL-06": 24.3, "GRN-05": 49.0, "CMP-04": 24.4, "CMP-06": 226, "LIV-02": 67.0, "LIV-07": 58.3, "CON-04": 40.1, "LIV-03": 76.12, "TAL-04": 5.62, "SMT-02": 94.3, "SMT-06": 63.4, "GRN-03": 5.59, "CMP-03": 11.0, "GRN-07": 3.0, "SMT-04": 78.0, "GRN-06": null, "CMP-02": null, "CMP-05": 4.3, "TAL-03": null, "LIV-08": 2.3},
-"Vancouver":{"SMT-01": 374.2, "CMP-01": 45902, "LIV-04": 81.5, "TAL-01": 64.0, "LIV-05": 2.71, "LIV-01": 1.98, "SMT-05": 94.4, "GRN-01": 6.0, "GRN-02": null, "LIV-06": 11.7, "CON-05": 56.5, "CON-03": 53.7, "SMT-03": null, "TAL-02": 1, "CON-01": 74, "TAL-06": 41.8, "GRN-05": 65.0, "CMP-04": 56.4, "CMP-06": 600, "LIV-02": 57.2, "LIV-07": 68.5, "CON-04": 35.9, "LIV-03": 76.12, "TAL-04": 5.62, "SMT-02": 94.3, "SMT-06": 56.0, "GRN-03": 4.27, "CMP-03": 4.0, "GRN-07": 3.0, "SMT-04": 78.0, "GRN-06": 337.0, "CMP-02": null, "CMP-05": 8.6, "TAL-03": null, "LIV-08": 2.9},
-"Chicago":{"SMT-01": 392.9, "CMP-01": 75524, "LIV-04": 76.8, "TAL-01": 50.9, "LIV-05": 3.7, "LIV-01": 5.76, "SMT-05": 94.7, "GRN-01": 8.7, "GRN-02": 47.8, "LIV-06": 3.2, "CON-05": 46.1, "CON-03": 43.2, "SMT-03": null, "TAL-02": 2, "CON-01": 81, "TAL-06": 19.4, "GRN-05": 9.0, "CMP-04": 29.4, "CMP-06": 210, "LIV-02": 34.8, "LIV-07": 75.8, "CON-04": 41.7, "LIV-03": 64.27, "TAL-04": 4.94, "SMT-02": 96.0, "SMT-06": 62.2, "GRN-03": 5.57, "CMP-03": 35.0, "GRN-07": 2.0, "SMT-04": 78.0, "GRN-06": 280.0, "CMP-02": 151167.0, "CMP-05": -0.9, "TAL-03": null, "LIV-08": 1.6},
-"Boston":{"SMT-01": 361.6, "CMP-01": 101761, "LIV-04": 79.0, "TAL-01": 58.2, "LIV-05": 5.52, "LIV-01": 5.76, "SMT-05": 94.7, "GRN-01": 6.4, "GRN-02": 68.2, "LIV-06": 7.9, "CON-05": 42.1, "CON-03": 47.6, "SMT-03": null, "TAL-02": 2, "CON-01": 63, "TAL-06": 20.7, "GRN-05": 25.0, "CMP-04": 126.9, "CMP-06": 2714, "LIV-02": 59.7, "LIV-07": 89.0, "CON-04": 45.0, "LIV-03": 64.27, "TAL-04": 4.94, "SMT-02": 96.0, "SMT-06": 59.0, "GRN-03": 5.19, "CMP-03": 22.0, "GRN-07": 3.0, "SMT-04": 78.0, "GRN-06": null, "CMP-02": 189747.0, "CMP-05": -0.9, "TAL-03": null, "LIV-08": 3.4},
-"Los Angeles":{"SMT-01": 392.1, "CMP-01": 70646, "LIV-04": 79.0, "TAL-01": 46.9, "LIV-05": 3.02, "LIV-01": 5.76, "SMT-05": 94.7, "GRN-01": 10.5, "GRN-02": null, "LIV-06": 8.2, "CON-05": 59.8, "CON-03": 5.7, "SMT-03": null, "TAL-02": 2, "CON-01": 81, "TAL-06": 33.4, "GRN-05": null, "CMP-04": 45.6, "CMP-06": 876, "LIV-02": 46.2, "LIV-07": 84.5, "CON-04": 57.1, "LIV-03": 64.27, "TAL-04": 4.94, "SMT-02": 96.0, "SMT-06": 59.8, "GRN-03": 4.68, "CMP-03": 16.0, "GRN-07": 3.0, "SMT-04": 78.0, "GRN-06": 265.0, "CMP-02": 147690.0, "CMP-05": -0.5, "TAL-03": null, "LIV-08": 1.8},
-"Seattle":{"SMT-01": 410.0, "CMP-01": 111516, "LIV-04": 79.2, "TAL-01": 52.9, "LIV-05": 2.98, "LIV-01": 5.76, "SMT-05": 94.7, "GRN-01": 6.1, "GRN-02": 63.5, "LIV-06": 4.8, "CON-05": 44.9, "CON-03": 26.1, "SMT-03": null, "TAL-02": 1, "CON-01": 38, "TAL-06": 22.1, "GRN-05": 53.4, "CMP-04": 73.8, "CMP-06": 1650, "LIV-02": 44.7, "LIV-07": 91.4, "CON-04": 42.9, "LIV-03": 64.27, "TAL-04": 4.94, "SMT-02": 96.0, "SMT-06": 56.1, "GRN-03": 4.13, "CMP-03": 14.0, "GRN-07": 3.0, "SMT-04": 78.0, "GRN-06": null, "CMP-02": 206967.0, "CMP-05": 6.7, "TAL-03": null, "LIV-08": 2.8},
-"Washington DC":{"SMT-01": 362.5, "CMP-01": 83988, "LIV-04": 78.0, "TAL-01": 70.7, "LIV-05": 12.02, "LIV-01": 5.76, "SMT-05": 94.7, "GRN-01": 6.3, "GRN-02": 52.8, "LIV-06": 4.3, "CON-05": 37.3, "CON-03": 33.1, "SMT-03": null, "TAL-02": 2, "CON-01": 70, "TAL-06": 24.7, "GRN-05": 27.93, "CMP-04": 36.9, "CMP-06": 556, "LIV-02": 40.3, "LIV-07": 92.1, "CON-04": 41.2, "LIV-03": 64.27, "TAL-04": 4.94, "SMT-02": 96.0, "SMT-06": 60.2, "GRN-03": 3.21, "CMP-03": 28.0, "GRN-07": 2.0, "SMT-04": 78.0, "GRN-06": null, "CMP-02": 160101.0, "CMP-05": 1.4, "TAL-03": null, "LIV-08": 14.8},
-"Sydney":{"SMT-01": 239.5, "CMP-01": 45152, "LIV-04": 84.1, "TAL-01": 52.5, "LIV-05": 4.58, "LIV-01": 0.85, "SMT-05": 96.1, "GRN-01": null, "GRN-02": 33.4, "LIV-06": 12.5, "CON-05": 43.7, "CON-03": 49.2, "SMT-03": 77.08, "TAL-02": 4, "CON-01": 65, "TAL-06": 38.6, "GRN-05": 52.0, "CMP-04": 40.1, "CMP-06": 250, "LIV-02": 66.2, "LIV-07": 79.2, "CON-04": 43.5, "LIV-03": 79.44, "TAL-04": null, "SMT-02": 89.0, "SMT-06": 65.9, "GRN-03": 1.93, "CMP-03": 14.0, "GRN-07": 3.0, "SMT-04": 77.0, "GRN-06": 206.0, "CMP-02": null, "CMP-05": 5.1, "TAL-03": null, "LIV-08": 0.1},
-"Auckland":{"SMT-01": 283.4, "CMP-01": 55906, "LIV-04": 82.7, "TAL-01": 45.5, "LIV-05": 3.47, "LIV-01": 1.46, "SMT-05": 93.5, "GRN-01": 5.5, "GRN-02": 88.4, "LIV-06": 10.5, "CON-05": 42.2, "CON-03": 37.6, "SMT-03": 80.21, "TAL-02": 2, "CON-01": 46, "TAL-06": 42.5, "GRN-05": 27.0, "CMP-04": null, "CMP-06": 166, "LIV-02": 49.4, "LIV-07": 64.4, "CON-04": 37.4, "LIV-03": 85.55, "TAL-04": 5.44, "SMT-02": 40.44, "SMT-06": 55.3, "GRN-03": 1.42, "CMP-03": 0.0, "GRN-07": 3.0, "SMT-04": 76.0, "GRN-06": null, "CMP-02": 101779.0, "CMP-05": 9.3, "TAL-03": null, "LIV-08": 0.0},
-"Osaka":{"SMT-01": 295.1, "CMP-01": 41497, "LIV-04": 84.2, "TAL-01": 56.9, "LIV-05": 2.92, "LIV-01": 0.23, "SMT-05": 85.5, "GRN-01": 9.4, "GRN-02": 72.2, "LIV-06": 10.6, "CON-05": 42.9, "CON-03": null, "SMT-03": null, "TAL-02": 1, "CON-01": null, "TAL-06": 6.8, "GRN-05": 9.5, "CMP-04": 3.7, "CMP-06": 21, "LIV-02": 67.0, "LIV-07": 42.7, "CON-04": null, "LIV-03": 85.27, "TAL-04": 5.61, "SMT-02": 96.6, "SMT-06": 51.2, "GRN-03": 4.41, "CMP-03": 14.0, "GRN-07": 3.0, "SMT-04": 71.0, "GRN-06": 246.0, "CMP-02": 76746.0, "CMP-05": 1.7, "TAL-03": null, "LIV-08": 1.7},
-"Tel Aviv":{"SMT-01": 366.9, "CMP-01": null, "LIV-04": 83.1, "TAL-01": 60.4, "LIV-05": 4.9, "LIV-01": 1.63, "SMT-05": 88.2, "GRN-01": 17.4, "GRN-02": 65.7, "LIV-06": 20.0, "CON-05": null, "CON-03": 87.9, "SMT-03": null, "TAL-02": 1, "CON-01": 114, "TAL-06": 23.5, "GRN-05": 36.0, "CMP-04": null, "CMP-06": 2111, "LIV-02": 73.8, "LIV-07": 103.9, "CON-04": 36.6, "LIV-03": 48.17, "TAL-04": null, "SMT-02": null, "SMT-06": 62.9, "GRN-03": 1.26, "CMP-03": 11.0, "GRN-07": 2.0, "SMT-04": 74.0, "GRN-06": null, "CMP-02": null, "CMP-05": null, "TAL-03": null, "LIV-08": 15.6},
-"Hong Kong":{"SMT-01": 431.6, "TAL-02": 5, "CON-03": 52.2, "CON-05": 47.7, "CMP-01": 66154, "LIV-01": 0.38, "SMT-05": 95.8, "GRN-01": 19.8, "GRN-02": 95.7, "SMT-03": null, "TAL-06": 38.3, "CON-01": 149.0, "GRN-05": 34.0, "CMP-04": 16.5, "CMP-06": 413, "LIV-04": null, "LIV-05": 2.2, "TAL-01": 35.7, "LIV-06": 35.2, "LIV-02": 78.2, "LIV-07": 76.4, "CON-04": 41.9, "LIV-03": 76.67, "TAL-04": 5.87, "SMT-02": 99.0, "SMT-06": 68.0, "GRN-03": 1.35, "CMP-03": 41.0, "GRN-07": 3.0, "SMT-04": 88.0, "GRN-06": 234.0, "CMP-02": null, "CMP-05": null, "TAL-03": null, "LIV-08": 0.7},
-"Taipei":{"SMT-01": 258.2, "TAL-02": 4, "CON-03": null, "CON-05": 43.6, "CMP-01": null, "LIV-01": 0.32, "SMT-05": 88.8, "GRN-01": 15.0, "GRN-02": null, "SMT-03": null, "TAL-06": 3.3, "CON-01": null, "GRN-05": 70.8, "CMP-04": null, "CMP-06": 25, "LIV-04": 83.4, "LIV-05": 4.76, "TAL-01": 66.2, "LIV-06": 31.4, "LIV-02": 83.4, "LIV-07": 54.5, "CON-04": 34.6, "LIV-03": 81.55, "TAL-04": null, "SMT-02": 98.17, "SMT-06": 77.8, "GRN-03": 1.9, "CMP-03": 30.0, "GRN-07": 3.0, "SMT-04": 66.0, "GRN-06": 336.0, "CMP-02": null, "CMP-05": null, "TAL-03": null, "LIV-08": 4.0},
-"Bangkok":{"SMT-01": 375.6, "TAL-02": 1, "CON-03": null, "CON-05": 67.9, "CMP-01": null, "LIV-01": 4.79, "SMT-05": 90.9, "GRN-01": 23.4, "GRN-02": 11.8, "SMT-03": 66.67, "TAL-06": null, "CON-01": 154.0, "GRN-05": null, "CMP-04": null, "CMP-06": 8, "LIV-04": 76.6, "LIV-05": 2.34, "TAL-01": 17.4, "LIV-06": 37.8, "LIV-02": 61.6, "LIV-07": 43.5, "CON-04": 44.4, "LIV-03": 54.22, "TAL-04": 1.59, "SMT-02": 95.0, "SMT-06": 76.1, "GRN-03": 1.71, "CMP-03": 16.0, "GRN-07": 3.0, "SMT-04": 64.0, "GRN-06": null, "CMP-02": null, "CMP-05": null, "TAL-03": null, "LIV-08": 1.0},
-"Kuala Lumpur":{"SMT-01": 272.1, "TAL-02": 4, "CON-03": null, "CON-05": 39.1, "CMP-01": null, "LIV-01": 0.73, "SMT-05": 98.0, "GRN-01": 28.3, "GRN-02": 46.1, "SMT-03": 59.38, "TAL-06": 13.1, "CON-01": 131.0, "GRN-05": 37.9, "CMP-04": null, "CMP-06": 19, "LIV-04": 76.7, "LIV-05": 2.27, "TAL-01": 34.9, "LIV-06": 8.6, "LIV-02": 40.9, "LIV-07": 38.8, "CON-04": 41.6, "LIV-03": 72.47, "TAL-04": 1.22, "SMT-02": 82.4, "SMT-06": 81.0, "GRN-03": 3.8, "CMP-03": 9.0, "GRN-07": 3.0, "SMT-04": 90.0, "GRN-06": 245.0, "CMP-02": null, "CMP-05": null, "TAL-03": null, "LIV-08": 0.3},
-"Jakarta":{"SMT-01": 97.7, "TAL-02": 0, "CON-03": 22.6, "CON-05": 59.8, "CMP-01": null, "LIV-01": 0.3, "SMT-05": 72.8, "GRN-01": 33.8, "GRN-02": 24.2, "SMT-03": 68.75, "TAL-06": null, "CON-01": 50.0, "GRN-05": null, "CMP-04": null, "CMP-06": 13, "LIV-04": 76.0, "LIV-05": 0.56, "TAL-01": 9.3, "LIV-06": 24.9, "LIV-02": 47.3, "LIV-07": 28.7, "CON-04": 53.5, "LIV-03": 55.49, "TAL-04": 0.4, "SMT-02": 8.92, "SMT-06": 83.2, "GRN-03": 2.01, "CMP-03": 12.0, "GRN-07": 3.0, "SMT-04": 74.0, "GRN-06": null, "CMP-02": null, "CMP-05": null, "TAL-03": null, "LIV-08": 0.7},
-"Manila":{"SMT-01": 198.9, "TAL-02": 0, "CON-03": null, "CON-05": 57.3, "CMP-01": null, "LIV-01": 4.35, "SMT-05": 67.3, "GRN-01": 15.4, "GRN-02": 28.7, "SMT-03": 60.42, "TAL-06": null, "CON-01": 66.0, "GRN-05": 48.0, "CMP-04": null, "CMP-06": 10, "LIV-04": 69.9, "LIV-05": 0.87, "TAL-01": 32.3, "LIV-06": 34.8, "LIV-02": 35.4, "LIV-07": 34.3, "CON-04": 50.7, "LIV-03": 52.67, "TAL-04": 0.32, "SMT-02": 72.41, "SMT-06": 61.9, "GRN-03": 0.43, "CMP-03": 7.0, "GRN-07": 3.0, "SMT-04": 74.0, "GRN-06": null, "CMP-02": null, "CMP-05": null, "TAL-03": null, "LIV-08": 0.5},
-"Ho Chi Minh City":{"SMT-01": 269.6, "TAL-02": 0, "CON-03": null, "CON-05": 40.3, "CMP-01": null, "LIV-01": 1.54, "SMT-05": 84.2, "GRN-01": 23.5, "GRN-02": 30.4, "SMT-03": 63.54, "TAL-06": null, "CON-01": 75.0, "GRN-05": null, "CMP-04": null, "CMP-06": 9, "LIV-04": 76.6, "LIV-05": 1.11, "TAL-01": 27.9, "LIV-06": 32.4, "LIV-02": 50.2, "LIV-07": 29.6, "CON-04": 32.1, "LIV-03": 65.99, "TAL-04": 0.84, "SMT-02": 25.5, "SMT-06": 76.3, "GRN-03": 0.92, "CMP-03": 1.0, "GRN-07": 3.0, "SMT-04": 48.0, "GRN-06": null, "CMP-02": null, "CMP-05": null, "TAL-03": null, "LIV-08": 0.0},
-"Mumbai":{"SMT-01": 93.4, "TAL-02": 1, "CON-03": null, "CON-05": 61.5, "CMP-01": null, "LIV-01": 2.82, "SMT-05": 70.0, "GRN-01": 49.5, "GRN-02": 35.3, "SMT-03": 56.25, "TAL-06": null, "CON-01": 52.0, "GRN-05": null, "CMP-04": 8.7, "CMP-06": 122, "LIV-04": 72.8, "LIV-05": 0.96, "TAL-01": 18.8, "LIV-06": 30.1, "LIV-02": 56.1, "LIV-07": 25.8, "CON-04": 55.2, "LIV-03": 52.47, "TAL-04": 0.26, "SMT-02": 82.15, "SMT-06": 80.9, "GRN-03": 0.79, "CMP-03": 33.0, "GRN-07": 3.0, "SMT-04": 54.0, "GRN-06": 150.0, "CMP-02": null, "CMP-05": null, "TAL-03": null, "LIV-08": 0.0},
-"Abu Dhabi":{"SMT-01": 348.1, "TAL-02": 1, "CON-03": 60.8, "CON-05": 25.5, "CMP-01": null, "LIV-01": 0.69, "SMT-05": 100.0, "GRN-01": 30.9, "GRN-02": 37.6, "SMT-03": null, "TAL-06": null, "CON-01": 165.0, "GRN-05": 32.0, "CMP-04": null, "CMP-06": 136, "LIV-04": 83.1, "LIV-05": 2.99, "TAL-01": null, "LIV-06": 7.4, "LIV-02": 88.6, "LIV-07": 55.1, "CON-04": 29.8, "LIV-03": 79.37, "TAL-04": 2.61, "SMT-02": 99.46, "SMT-06": 79.1, "GRN-03": 5.08, "CMP-03": 9.0, "GRN-07": 3.0, "SMT-04": 85.0, "GRN-06": null, "CMP-02": null, "CMP-05": null, "TAL-03": null, "LIV-08": 0.2},
-"Shanghai":{"SMT-01": 458.1, "TAL-02": 5, "CON-03": null, "CON-05": null, "CMP-01": null, "LIV-01": 0.5, "SMT-05": 91.6, "GRN-01": 28.4, "GRN-02": 29.9, "SMT-03": 86.46, "TAL-06": null, "CON-01": 105.0, "GRN-05": 43.2, "CMP-04": 11.7, "CMP-06": 137, "LIV-04": 83.2, "LIV-05": 3.8, "TAL-01": 33.9, "LIV-06": 31.2, "LIV-02": 73.5, "LIV-07": 40.5, "CON-04": 45.1, "LIV-03": 63.28, "TAL-04": 2.11, "SMT-02": 96.0, "SMT-06": 84.8, "GRN-03": 6.58, "CMP-03": 35.0, "GRN-07": 3.0, "SMT-04": 39.0, "GRN-06": 223.0, "CMP-02": null, "CMP-05": null, "TAL-03": null, "LIV-08": 0.3},
-"Beijing":{"SMT-01": 331.9, "TAL-02": 7, "CON-03": null, "CON-05": null, "CMP-01": null, "LIV-01": 0.5, "SMT-05": 91.6, "GRN-01": 31.0, "GRN-02": null, "SMT-03": null, "TAL-06": null, "CON-01": 124.0, "GRN-05": 39.8, "CMP-04": 19.1, "CMP-06": 281, "LIV-04": 82.5, "LIV-05": 6.34, "TAL-01": 42.0, "LIV-06": 29.7, "LIV-02": 74.4, "LIV-07": 37.9, "CON-04": 43.0, "LIV-03": 63.28, "TAL-04": 2.11, "SMT-02": 96.0, "SMT-06": 84.0, "GRN-03": 2.53, "CMP-03": 79.0, "GRN-07": 3.0, "SMT-04": 39.0, "GRN-06": 100.0, "CMP-02": null, "CMP-05": null, "TAL-03": null, "LIV-08": 0.5},
-"Shenzhen":{"SMT-01": 314.9, "TAL-02": 2, "CON-03": null, "CON-05": null, "CMP-01": null, "LIV-01": 0.5, "SMT-05": 91.6, "GRN-01": 17.3, "GRN-02": 21.9, "SMT-03": null, "TAL-06": null, "CON-01": 54.0, "GRN-05": null, "CMP-04": 9.2, "CMP-06": 86, "LIV-04": 83.9, "LIV-05": 3.02, "TAL-01": 28.8, "LIV-06": 28.6, "LIV-02": 75.5, "LIV-07": 38.7, "CON-04": 33.7, "LIV-03": 63.28, "TAL-04": 2.11, "SMT-02": 96.0, "SMT-06": 86.7, "GRN-03": 2.25, "CMP-03": 21.0, "GRN-07": 3.0, "SMT-04": 39.0, "GRN-06": 292.0, "CMP-02": null, "CMP-05": null, "TAL-03": null, "LIV-08": 0.1},
-"Delhi":{"SMT-01": 120.5, "TAL-02": 2, "CON-03": null, "CON-05": 55.4, "CMP-01": null, "LIV-01": 2.82, "SMT-05": 70.0, "GRN-01": 107.0, "GRN-02": 43.6, "SMT-03": null, "TAL-06": null, "CON-01": 79.0, "GRN-05": null, "CMP-04": 8.4, "CMP-06": 98, "LIV-04": 74.2, "LIV-05": 0.96, "TAL-01": 24.2, "LIV-06": 16.1, "LIV-02": 41.0, "LIV-07": 22.1, "CON-04": 57.4, "LIV-03": 52.47, "TAL-04": 0.26, "SMT-02": 82.15, "SMT-06": 79.7, "GRN-03": 0.63, "CMP-03": 15.0, "GRN-07": 3.0, "SMT-04": 54.0, "GRN-06": null, "CMP-02": null, "CMP-05": null, "TAL-03": null, "LIV-08": 0.0}
+"Singapore":{"LIV-01": 0.07, "LIV-04": 83.9, "LIV-05": 2.9, "LIV-06": 24.7, "GRN-01": 12.0, "GRN-02": 70.3, "GRN-05": 52.0, "SMT-01": 567.1, "SMT-03": 87.5, "SMT-05": 94.4, "CMP-01": 132570, "CMP-04": 68.1, "CMP-06": 690, "TAL-01": 54.1, "TAL-02": 2, "TAL-06": 48.7, "CON-01": 175, "CON-03": 28.0, "CON-05": 43.9, "LIV-02": 77.7, "LIV-07": 90.8, "CON-04": 41.0, "LIV-03": 86.94, "TAL-04": 8.78, "SMT-02": 95.0, "SMT-06": 65.3, "GRN-03": 6.74, "CMP-03": 11.0, "GRN-07": 3.0, "SMT-04": 90.0, "GRN-06": 154.0, "CMP-02": null, "CMP-05": null, "TAL-03": null, "LIV-08": 0.6},
+"Tokyo":{"LIV-01": 0.23, "LIV-04": 84.9, "LIV-05": 3.26, "LIV-06": 16.0, "GRN-01": 10.8, "GRN-02": 74.8, "GRN-05": 21.4, "SMT-01": 313.7, "SMT-03": 85.42, "SMT-05": 85.5, "CMP-01": 50287, "CMP-04": 14.8, "CMP-06": 81, "TAL-01": 64.2, "TAL-02": 4, "TAL-06": 5.6, "CON-01": null, "CON-03": null, "CON-05": 44.1, "LIV-02": 75.9, "LIV-07": 54.3, "CON-04": 42.7, "LIV-03": 85.27, "TAL-04": 5.61, "SMT-02": 96.6, "SMT-06": 54.1, "GRN-03": 3.64, "CMP-03": 122.0, "GRN-07": 3.0, "SMT-04": 71.0, "GRN-06": 215.0, "CMP-02": 88996.0, "CMP-05": 4.0, "TAL-03": null, "LIV-08": 2.7},
+"Copenhagen":{"LIV-01": 0.84, "LIV-04": 81.5, "LIV-05": 5.79, "LIV-06": 10.7, "GRN-01": 6.9, "GRN-02": 83.7, "GRN-05": 42.0, "SMT-01": 328.2, "SMT-03": 90.63, "SMT-05": 99.8, "CMP-01": 85842, "CMP-04": null, "CMP-06": 842, "TAL-01": 58.2, "TAL-02": 1, "TAL-06": 26.7, "CON-01": 192, "CON-03": 74.5, "CON-05": 40.2, "LIV-02": 73.7, "LIV-07": 86.8, "CON-04": 27.5, "LIV-03": 79.03, "TAL-04": 8.84, "SMT-02": 100.0, "SMT-06": 71.1, "GRN-03": 1.57, "CMP-03": 10.0, "GRN-07": 3.0, "SMT-04": 89.0, "GRN-06": 103.0, "CMP-02": 145510.0, "CMP-05": 9.8, "TAL-03": 58.7, "LIV-08": 0.0},
+"Zurich":{"LIV-01": 0.6, "LIV-04": 84.1, "LIV-05": 5.67, "LIV-06": 12.8, "GRN-01": 7.6, "GRN-02": 67.6, "GRN-05": 46.0, "SMT-01": 455.6, "SMT-03": 81.25, "SMT-05": 97.3, "CMP-01": 88723, "CMP-04": 49.0, "CMP-06": 571, "TAL-01": 56.6, "TAL-02": 2, "TAL-06": 44.0, "CON-01": 224, "CON-03": null, "CON-05": 48.9, "LIV-02": 75.9, "LIV-07": 123.1, "CON-04": 37.0, "LIV-03": 82.65, "TAL-04": 6.11, "SMT-02": 100.0, "SMT-06": 79.6, "GRN-03": 2.84, "CMP-03": 16.0, "GRN-07": 2.0, "SMT-04": 66.0, "GRN-06": null, "CMP-02": 124657.0, "CMP-05": 3.6, "TAL-03": 57.1, "LIV-08": 15.9},
+"Vienna":{"LIV-01": 0.88, "LIV-04": 81.0, "LIV-05": 7.17, "LIV-06": 15.8, "GRN-01": 9.9, "GRN-02": 72.4, "GRN-05": 35.2, "SMT-01": 251.9, "SMT-03": 84.38, "SMT-05": 91.9, "CMP-01": 66253, "CMP-04": null, "CMP-06": 63, "TAL-01": 46.3, "TAL-02": 2, "TAL-06": 40.9, "CON-01": 204, "CON-03": 86.7, "CON-05": 48.6, "LIV-02": 70.6, "LIV-07": 74.5, "CON-04": 22.9, "LIV-03": 74.29, "TAL-04": 6.63, "SMT-02": 98.0, "SMT-06": 76.4, "GRN-03": 2.68, "CMP-03": 8.0, "GRN-07": 2.0, "SMT-04": 72.0, "GRN-06": null, "CMP-02": 126851.0, "CMP-05": 5.4, "TAL-03": 52.5, "LIV-08": 8.9},
+"Seoul":{"LIV-01": 0.48, "LIV-04": 85.0, "LIV-05": 4.27, "LIV-06": 30.0, "GRN-01": 25.4, "GRN-02": 48.8, "GRN-05": 61.7, "SMT-01": 320.3, "SMT-03": 87.5, "SMT-05": 97.9, "CMP-01": 51292, "CMP-04": null, "CMP-06": 258, "TAL-01": 67.3, "TAL-02": 8, "TAL-06": 3.9, "CON-01": 142, "CON-03": null, "CON-05": null, "LIV-02": 74.6, "LIV-07": 64.5, "CON-04": 40.4, "LIV-03": 76.82, "TAL-04": 9.47, "SMT-02": 94.0, "SMT-06": 77.1, "GRN-03": 3.52, "CMP-03": 54.0, "GRN-07": 2.0, "SMT-04": 75.0, "GRN-06": 206.0, "CMP-02": 92111.0, "CMP-05": 3.9, "TAL-03": null, "LIV-08": 1.1},
+"Melbourne":{"LIV-01": 0.85, "LIV-04": 84.1, "LIV-05": 4.72, "LIV-06": 7.5, "GRN-01": 7.9, "GRN-02": 84.4, "GRN-05": 47.9, "SMT-01": 248.8, "SMT-03": null, "SMT-05": 96.1, "CMP-01": 40848, "CMP-04": 27.3, "CMP-06": 306, "TAL-01": 53.5, "TAL-02": 6, "TAL-06": 35.7, "CON-01": 40, "CON-03": null, "CON-05": 52.9, "LIV-02": 55.7, "LIV-07": 77.3, "CON-04": 42.0, "LIV-03": 79.44, "TAL-04": null, "SMT-02": 89.0, "SMT-06": 53.6, "GRN-03": 3.02, "CMP-03": 10.0, "GRN-07": 3.0, "SMT-04": 77.0, "GRN-06": 149.0, "CMP-02": null, "CMP-05": 6.8, "TAL-03": null, "LIV-08": 0.3},
+"Amsterdam":{"LIV-01": 0.69, "LIV-04": 82.1, "LIV-05": 4.89, "LIV-06": 9.9, "GRN-01": 8.9, "GRN-02": 77.6, "GRN-05": 25.0, "SMT-01": 317.8, "SMT-03": 78.13, "SMT-05": 97.0, "CMP-01": 87028, "CMP-04": null, "CMP-06": null, "TAL-01": 52.2, "TAL-02": 2, "TAL-06": 37.6, "CON-01": 285, "CON-03": null, "CON-05": 45.7, "LIV-02": 70.0, "LIV-07": 81.4, "CON-04": 22.8, "LIV-03": 73.21, "TAL-04": 6.56, "SMT-02": 99.0, "SMT-06": 65.5, "GRN-03": 3.52, "CMP-03": 17.0, "GRN-07": 3.0, "SMT-04": 82.0, "GRN-06": 141.0, "CMP-02": 136917.0, "CMP-05": 9.8, "TAL-03": 58.4, "LIV-08": 0.1},
+"London":{"LIV-01": 1.15, "LIV-04": 82.5, "LIV-05": 4.55, "LIV-06": 16.7, "GRN-01": 11.2, "GRN-02": 87.1, "GRN-05": 32.6, "SMT-01": 316.7, "SMT-03": 87.5, "SMT-05": 95.5, "CMP-01": 72186, "CMP-04": 116.3, "CMP-06": 1867, "TAL-01": 74.1, "TAL-02": 9, "TAL-06": 40.6, "CON-01": 411, "CON-03": null, "CON-05": 51.6, "LIV-02": 44.7, "LIV-07": 88.0, "CON-04": 44.7, "LIV-03": 70.3, "TAL-04": 4.47, "SMT-02": 85.0, "SMT-06": 66.0, "GRN-03": 2.02, "CMP-03": 57.0, "GRN-07": 3.0, "SMT-04": 70.0, "GRN-06": 149.0, "CMP-02": 142615.0, "CMP-05": null, "TAL-03": 61.2, "LIV-08": 0.1},
+"New York":{"LIV-01": 5.76, "LIV-04": 77.7, "LIV-05": 5.02, "LIV-06": 10.9, "GRN-01": 7.1, "GRN-02": 71.0, "GRN-05": 21.8, "SMT-01": 391.7, "SMT-03": 90.63, "SMT-05": 94.7, "CMP-01": 91990, "CMP-04": 86.9, "CMP-06": 1717, "TAL-01": 53.0, "TAL-02": 2, "TAL-06": 30.8, "CON-01": 153, "CON-03": 61.6, "CON-05": 48.8, "LIV-02": 49.2, "LIV-07": 100.0, "CON-04": 43.3, "LIV-03": 64.27, "TAL-04": 4.94, "SMT-02": 96.0, "SMT-06": 64.2, "GRN-03": 4.71, "CMP-03": 90.0, "GRN-07": 3.0, "SMT-04": 78.0, "GRN-06": 438.0, "CMP-02": 188044.0, "CMP-05": 0.5, "TAL-03": null, "LIV-08": 2.0},
+"Paris":{"LIV-01": 1.34, "LIV-04": 84.1, "LIV-05": 9.38, "LIV-06": 17.0, "GRN-01": 9.3, "GRN-02": 51.6, "GRN-05": 20.0, "SMT-01": 441.5, "SMT-03": 81.25, "SMT-05": 88.7, "CMP-01": 83089, "CMP-04": 42.0, "CMP-06": 516, "TAL-01": 58.6, "TAL-02": 7, "TAL-06": 22.7, "CON-01": 305, "CON-03": 83.0, "CON-05": 40.0, "LIV-02": 42.1, "LIV-07": 78.4, "CON-04": 41.1, "LIV-03": 61.77, "TAL-04": 5.37, "SMT-02": 93.0, "SMT-06": 64.1, "GRN-03": 1.38, "CMP-03": 44.0, "GRN-07": 3.0, "SMT-04": 63.0, "GRN-06": 201.0, "CMP-02": 159930.0, "CMP-05": 4.3, "TAL-03": 53.8, "LIV-08": 11.2},
+"Toronto":{"LIV-01": 1.98, "LIV-04": 81.8, "LIV-05": 2.21, "LIV-06": 11.6, "GRN-01": 9.4, "GRN-02": 91.7, "GRN-05": 50.6, "SMT-01": 494.5, "SMT-03": 79.17, "SMT-05": 94.4, "CMP-01": 44561, "CMP-04": 52.9, "CMP-06": 433, "TAL-01": 71.0, "TAL-02": 2, "TAL-06": 46.6, "CON-01": 172, "CON-03": 55.7, "CON-05": 47.7, "LIV-02": 56.3, "LIV-07": 65.6, "CON-04": 43.9, "LIV-03": 76.12, "TAL-04": 5.62, "SMT-02": 94.3, "SMT-06": 60.5, "GRN-03": 7.6, "CMP-03": 28.0, "GRN-07": 2.0, "SMT-04": 78.0, "GRN-06": null, "CMP-02": null, "CMP-05": 9.2, "TAL-03": null, "LIV-08": 1.4},
+"Berlin":{"LIV-01": 0.91, "LIV-04": 81.2, "LIV-05": 5.51, "LIV-06": 11.1, "GRN-01": 11.3, "GRN-02": 68.2, "GRN-05": 30.8, "SMT-01": 212.6, "SMT-03": 88.54, "SMT-05": 93.5, "CMP-01": 59205, "CMP-04": 49.4, "CMP-06": 452, "TAL-01": 48.1, "TAL-02": 3, "TAL-06": 24.9, "CON-01": 161, "CON-03": 70.5, "CON-05": 44.6, "LIV-02": 55.4, "LIV-07": 72.5, "CON-04": 33.4, "LIV-03": 68.02, "TAL-04": 5.93, "SMT-02": 98.0, "SMT-06": 65.1, "GRN-03": 3.19, "CMP-03": 2.0, "GRN-07": 3.0, "SMT-04": 79.0, "GRN-06": 115.0, "CMP-02": 108606.0, "CMP-05": 3.9, "TAL-03": 56.0, "LIV-08": 6.2},
+"Barcelona":{"LIV-01": 0.69, "LIV-04": 84.2, "LIV-05": 4.47, "LIV-06": 13.8, "GRN-01": 10.9, "GRN-02": null, "GRN-05": 42.1, "SMT-01": 338.8, "SMT-03": null, "SMT-05": 95.8, "CMP-01": 52064, "CMP-04": 28.5, "CMP-06": 222, "TAL-01": 46.9, "TAL-02": 5, "TAL-06": 27.3, "CON-01": 202, "CON-03": 66.9, "CON-05": 41.1, "LIV-02": 47.9, "LIV-07": 59.9, "CON-04": 29.8, "LIV-03": 65.84, "TAL-04": 3.65, "SMT-02": 85.4, "SMT-06": 67.6, "GRN-03": 1.52, "CMP-03": 1.0, "GRN-07": 3.0, "SMT-04": 77.0, "GRN-06": 128.0, "CMP-02": 106109.0, "CMP-05": 11.3, "TAL-03": 38.0, "LIV-08": 5.7},
+"Dubai":{"LIV-01": 0.69, "LIV-04": 83.1, "LIV-05": 3.35, "LIV-06": 7.8, "GRN-01": 35.0, "GRN-02": 40.6, "GRN-05": null, "SMT-01": 359.0, "SMT-03": 90.63, "SMT-05": 100.0, "CMP-01": null, "CMP-04": null, "CMP-06": 661, "TAL-01": 41.0, "TAL-02": 0, "TAL-06": null, "CON-01": 310, "CON-03": 24.8, "CON-05": 42.7, "LIV-02": 83.8, "LIV-07": 62.5, "CON-04": 36.3, "LIV-03": 79.37, "TAL-04": 2.61, "SMT-02": 99.46, "SMT-06": 81.8, "GRN-03": 16.79, "CMP-03": 5.0, "GRN-07": 3.0, "SMT-04": 85.0, "GRN-06": null, "CMP-02": null, "CMP-05": null, "TAL-03": null, "LIV-08": 0.4},
+"San Francisco":{"LIV-01": 5.76, "LIV-04": 79.0, "LIV-05": 3.02, "LIV-06": 6.5, "GRN-01": 7.4, "GRN-02": null, "GRN-05": 53.1, "SMT-01": 367.7, "SMT-03": null, "SMT-05": 94.7, "CMP-01": 146853, "CMP-04": 320.8, "CMP-06": 20260, "TAL-01": 46.9, "TAL-02": 0, "TAL-06": 32.4, "CON-01": 60, "CON-03": 29.6, "CON-05": 49.7, "LIV-02": 39.5, "LIV-07": 94.9, "CON-04": 49.0, "LIV-03": 64.27, "TAL-04": 4.94, "SMT-02": 96.0, "SMT-06": 60.5, "GRN-03": 4.53, "CMP-03": 63.0, "GRN-07": 3.0, "SMT-04": 78.0, "GRN-06": null, "CMP-02": 276597.0, "CMP-05": -2.1, "TAL-03": null, "LIV-08": 6.5},
+"Stockholm":{"SMT-01": 302.2, "CMP-01": 81394, "LIV-04": 85.0, "TAL-01": 60.0, "LIV-05": 4.91, "LIV-01": 1.15, "SMT-05": 95.8, "GRN-01": 4.9, "GRN-02": 86.0, "LIV-06": 12.5, "CON-05": 42.8, "CON-03": 70.1, "SMT-03": 80.21, "TAL-02": 2, "CON-01": 142, "TAL-06": 27.2, "GRN-05": 31.0, "CMP-04": null, "CMP-06": 1167, "LIV-02": 53.8, "LIV-07": 79.1, "CON-04": 34.1, "LIV-03": 76.2, "TAL-04": 8.91, "SMT-02": 98.2, "SMT-06": 72.4, "GRN-03": 0.71, "CMP-03": 22.0, "GRN-07": 2.0, "SMT-04": 83.0, "GRN-06": 184.0, "CMP-02": 141198.0, "CMP-05": 2.2, "TAL-03": 64.3, "LIV-08": 0.7},
+"Oslo":{"SMT-01": 281.9, "CMP-01": 63394, "LIV-04": 83.3, "TAL-01": 56.5, "LIV-05": 6.8, "LIV-01": 0.72, "SMT-05": 99.0, "GRN-01": 8.5, "GRN-02": 56.0, "LIV-06": 11.0, "CON-05": 33.2, "CON-03": null, "SMT-03": 78.13, "TAL-02": 1, "CON-01": 125, "TAL-06": 28.1, "GRN-05": 43.4, "CMP-04": null, "CMP-06": 297, "LIV-02": 65.7, "LIV-07": 92.1, "CON-04": 27.8, "LIV-03": 81.32, "TAL-04": 7.45, "SMT-02": 99.7, "SMT-06": 78.4, "GRN-03": 1.55, "CMP-03": 5.0, "GRN-07": 0.0, "SMT-04": 89.0, "GRN-06": 161.0, "CMP-02": 112828.0, "CMP-05": 8.0, "TAL-03": 56.4, "LIV-08": 0.7},
+"Helsinki":{"SMT-01": 238.8, "CMP-01": 66107, "LIV-04": 81.9, "TAL-01": 48.1, "LIV-05": 3.72, "LIV-01": 0.98, "SMT-05": 93.7, "GRN-01": 5.4, "GRN-02": null, "LIV-06": 11.4, "CON-05": 51.9, "CON-03": 78.0, "SMT-03": 81.25, "TAL-02": 1, "CON-01": 118, "TAL-06": 17.5, "GRN-05": 45.0, "CMP-04": null, "CMP-06": 688, "LIV-02": 74.9, "LIV-07": 73.9, "CON-04": 24.1, "LIV-03": 80.12, "TAL-04": 8.31, "SMT-02": 99.99, "SMT-06": 78.4, "GRN-03": 3.4, "CMP-03": 10.0, "GRN-07": 2.0, "SMT-04": 89.0, "GRN-06": 130.0, "CMP-02": 116570.0, "CMP-05": 3.0, "TAL-03": 52.6, "LIV-08": 12.7},
+"Madrid":{"SMT-01": 382.3, "CMP-01": 59768, "LIV-04": 85.4, "TAL-01": 50.0, "LIV-05": 6.18, "LIV-01": 0.69, "SMT-05": 95.8, "GRN-01": 10.3, "GRN-02": 63.1, "LIV-06": 13.2, "CON-05": 38.0, "CON-03": 68.8, "SMT-03": 92.71, "TAL-02": 4, "CON-01": 197, "TAL-06": 22.7, "GRN-05": 47.7, "CMP-04": 21.0, "CMP-06": 179, "LIV-02": 71.0, "LIV-07": 59.1, "CON-04": 28.2, "LIV-03": 65.84, "TAL-04": 3.65, "SMT-02": 85.4, "SMT-06": 70.6, "GRN-03": 1.31, "CMP-03": 12.0, "GRN-07": 2.0, "SMT-04": 77.0, "GRN-06": 128.0, "CMP-02": 110651.0, "CMP-05": 10.6, "TAL-03": 45.7, "LIV-08": 3.2},
+"Milan":{"SMT-01": 429.2, "CMP-01": 82014, "LIV-04": 84.7, "TAL-01": 23.6, "LIV-05": 5.59, "LIV-01": 0.57, "SMT-05": 89.2, "GRN-01": 20.4, "GRN-02": 76.2, "LIV-06": 18.2, "CON-05": 49.4, "CON-03": 50.4, "SMT-03": null, "TAL-02": 4, "CON-01": 244, "TAL-06": 15.0, "GRN-05": 63.33, "CMP-04": null, "CMP-06": 344, "LIV-02": 46.0, "LIV-07": 74.3, "CON-04": 35.9, "LIV-03": 71.17, "TAL-04": 2.86, "SMT-02": 90.0, "SMT-06": 70.7, "GRN-03": 2.37, "CMP-03": 11.0, "GRN-07": 2.0, "SMT-04": 76.0, "GRN-06": 265.0, "CMP-02": 148811.0, "CMP-05": 2.2, "TAL-03": 34.4, "LIV-08": 9.2},
+"Rome":{"SMT-01": 376.5, "CMP-01": 65690, "LIV-04": 83.6, "TAL-01": 28.5, "LIV-05": 6.77, "LIV-01": 0.57, "SMT-05": 89.2, "GRN-01": 11.8, "GRN-02": 80.0, "LIV-06": 14.9, "CON-05": 45.2, "CON-03": 71.7, "SMT-03": 81.25, "TAL-02": 2, "CON-01": 219, "TAL-06": 13.6, "GRN-05": 48.03, "CMP-04": null, "CMP-06": 58, "LIV-02": 53.3, "LIV-07": 60.0, "CON-04": 35.2, "LIV-03": 71.17, "TAL-04": 2.86, "SMT-02": 90.0, "SMT-06": 61.9, "GRN-03": 1.66, "CMP-03": 6.0, "GRN-07": 2.0, "SMT-04": 76.0, "GRN-06": 186.0, "CMP-02": 130468.0, "CMP-05": 1.4, "TAL-03": 43.9, "LIV-08": 8.3},
+"Munich":{"SMT-01": 221.7, "CMP-01": 102244, "LIV-04": 83.1, "TAL-01": 38.6, "LIV-05": 4.56, "LIV-01": 0.91, "SMT-05": 93.5, "GRN-01": 7.9, "GRN-02": null, "LIV-06": 13.1, "CON-05": 43.7, "CON-03": 81.9, "SMT-03": null, "TAL-02": 2, "CON-01": 202, "TAL-06": 31.9, "GRN-05": 55.3, "CMP-04": 52.5, "CMP-06": 1280, "LIV-02": 78.3, "LIV-07": 77.4, "CON-04": 28.2, "LIV-03": 68.02, "TAL-04": 5.93, "SMT-02": 98.0, "SMT-06": 69.0, "GRN-03": 3.18, "CMP-03": 10.0, "GRN-07": 2.0, "SMT-04": 79.0, "GRN-06": null, "CMP-02": 151118.0, "CMP-05": 1.3, "TAL-03": 46.4, "LIV-08": 4.8},
+"Frankfurt":{"SMT-01": 232.1, "CMP-01": 82688, "LIV-04": 81.9, "TAL-01": 35.6, "LIV-05": 4.27, "LIV-01": 0.91, "SMT-05": 93.5, "GRN-01": 8.7, "GRN-02": null, "LIV-06": 7.7, "CON-05": 42.3, "CON-03": null, "SMT-03": null, "TAL-02": 1, "CON-01": 284, "TAL-06": 35.5, "GRN-05": 37.6, "CMP-04": 7.8, "CMP-06": 18, "LIV-02": 54.5, "LIV-07": 71.5, "CON-04": 22.8, "LIV-03": 68.02, "TAL-04": 5.93, "SMT-02": 98.0, "SMT-06": null, "GRN-03": 4.75, "CMP-03": 5.0, "GRN-07": 3.0, "SMT-04": 79.0, "GRN-06": null, "CMP-02": 132741.0, "CMP-05": -0.2, "TAL-03": 48.8, "LIV-08": 8.1},
+"Hamburg":{"SMT-01": 196.7, "CMP-01": 77768, "LIV-04": 80.9, "TAL-01": 43.0, "LIV-05": 6.4, "LIV-01": 0.91, "SMT-05": 93.5, "GRN-01": 9.1, "GRN-02": 78.2, "LIV-06": 11.1, "CON-05": 49.3, "CON-03": 68.8, "SMT-03": null, "TAL-02": 1, "CON-01": 117, "TAL-06": 24.6, "GRN-05": 45.8, "CMP-04": 13.6, "CMP-06": 34, "LIV-02": 59.3, "LIV-07": 70.8, "CON-04": 30.5, "LIV-03": 68.02, "TAL-04": 5.93, "SMT-02": 98.0, "SMT-06": 65.2, "GRN-03": 3.4, "CMP-03": 2.0, "GRN-07": 3.0, "SMT-04": 79.0, "GRN-06": null, "CMP-02": 132626.0, "CMP-05": 3.1, "TAL-03": 50.5, "LIV-08": 6.2},
+"Brussels":{"SMT-01": 266.9, "CMP-01": 78040, "LIV-04": 82.2, "TAL-01": 56.9, "LIV-05": 4.44, "LIV-01": 1.08, "SMT-05": 95.8, "GRN-01": 7.6, "GRN-02": 85.8, "LIV-06": 7.2, "CON-05": 46.2, "CON-03": 89.0, "SMT-03": 73.96, "TAL-02": 2, "CON-01": 249, "TAL-06": 43.5, "GRN-05": 35.0, "CMP-04": 15.3, "CMP-06": 55, "LIV-02": 44.1, "LIV-07": 71.9, "CON-04": 36.4, "LIV-03": 67.97, "TAL-04": 5.99, "SMT-02": 99.8, "SMT-06": 63.8, "GRN-03": 3.82, "CMP-03": 6.0, "GRN-07": 1.0, "SMT-04": 54.0, "GRN-06": 96.0, "CMP-02": 166099.0, "CMP-05": null, "TAL-03": 52.1, "LIV-08": 10.0},
+"Dublin":{"SMT-01": 337.0, "CMP-01": 141694, "LIV-04": 83.3, "TAL-01": 61.0, "LIV-05": null, "LIV-01": 0.65, "SMT-05": 97.2, "GRN-01": 7.3, "GRN-02": 84.2, "LIV-06": 9.0, "CON-05": 72.9, "CON-03": 66.3, "SMT-03": 68.75, "TAL-02": 3, "CON-01": 199, "TAL-06": 26.6, "GRN-05": 42.0, "CMP-04": null, "CMP-06": 456, "LIV-02": 45.9, "LIV-07": 76.3, "CON-04": 40.4, "LIV-03": 78.02, "TAL-04": 5.75, "SMT-02": 86.0, "SMT-06": 62.0, "GRN-03": 3.84, "CMP-03": 15.0, "GRN-07": 3.0, "SMT-04": 77.0, "GRN-06": null, "CMP-02": 256297.0, "CMP-05": 15.6, "TAL-03": 55.6, "LIV-08": 5.1},
+"Lisbon":{"SMT-01": 354.4, "CMP-01": 50408, "LIV-04": 81.2, "TAL-01": 43.3, "LIV-05": 8.37, "LIV-01": 0.72, "SMT-05": 88.5, "GRN-01": 7.6, "GRN-02": 87.4, "LIV-06": 18.7, "CON-05": 39.0, "CON-03": 43.6, "SMT-03": 70.83, "TAL-02": 2, "CON-01": 146, "TAL-06": 17.3, "GRN-05": 26.0, "CMP-04": null, "CMP-06": 82, "LIV-02": 67.1, "LIV-07": 55.2, "CON-04": 34.6, "LIV-03": 75.07, "TAL-04": 5.98, "SMT-02": 98.7, "SMT-06": 65.9, "GRN-03": 1.05, "CMP-03": 3.0, "GRN-07": 3.0, "SMT-04": 83.0, "GRN-06": 111.0, "CMP-02": 92934.0, "CMP-05": 2.7, "TAL-03": 48.6, "LIV-08": 14.3},
+"Prague":{"SMT-01": 258.9, "CMP-01": 83056, "LIV-04": 81.1, "TAL-01": 54.8, "LIV-05": 8.24, "LIV-01": 0.77, "SMT-05": 87.7, "GRN-01": 13.4, "GRN-02": 83.5, "LIV-06": 18.2, "CON-05": 53.5, "CON-03": 89.2, "SMT-03": 67.71, "TAL-02": 2, "CON-01": 165, "TAL-06": 15.5, "GRN-05": 32.3, "CMP-04": null, "CMP-06": 69, "LIV-02": 75.3, "LIV-07": 57.3, "CON-04": 31.8, "LIV-03": 82.5, "TAL-04": 4.5, "SMT-02": 98.6, "SMT-06": 71.9, "GRN-03": 1.98, "CMP-03": 1.0, "GRN-07": 1.0, "SMT-04": 63.0, "GRN-06": 108.0, "CMP-02": 128349.0, "CMP-05": 0.3, "TAL-03": 57.8, "LIV-08": 7.9},
+"Warsaw":{"SMT-01": 362.9, "CMP-01": 81920, "LIV-04": 81.0, "TAL-01": 65.3, "LIV-05": 6.3, "LIV-01": 0.8, "SMT-05": 88.6, "GRN-01": 14.7, "GRN-02": 88.0, "LIV-06": 11.7, "CON-05": 51.3, "CON-03": 70.1, "SMT-03": 77.08, "TAL-02": 2, "CON-01": 152, "TAL-06": 5.7, "GRN-05": 28.5, "CMP-04": null, "CMP-06": 91, "LIV-02": 74.7, "LIV-07": 52.7, "CON-04": 34.8, "LIV-03": 74.41, "TAL-04": 3.68, "SMT-02": 91.0, "SMT-06": 69.9, "GRN-03": 2.21, "CMP-03": 4.0, "GRN-07": 2.0, "SMT-04": 90.0, "GRN-06": 122.0, "CMP-02": 139824.0, "CMP-05": 5.1, "TAL-03": 55.2, "LIV-08": 6.6},
+"Istanbul":{"SMT-01": 251.2, "CMP-01": 56428, "LIV-04": 77.1, "TAL-01": 31.8, "LIV-05": 2.96, "LIV-01": 3.23, "SMT-05": 89.8, "GRN-01": 50.5, "GRN-02": 59.8, "LIV-06": 10.1, "CON-05": 62.0, "CON-03": null, "SMT-03": 89.58, "TAL-02": 4, "CON-01": 322, "TAL-06": null, "GRN-05": null, "CMP-04": null, "CMP-06": 40, "LIV-02": 52.0, "LIV-07": 46.6, "CON-04": 50.7, "LIV-03": 49.31, "TAL-04": 2.64, "SMT-02": 0.0, "SMT-06": 61.8, "GRN-03": 1.84, "CMP-03": 10.0, "GRN-07": 3.0, "SMT-04": 64.0, "GRN-06": 147.0, "CMP-02": null, "CMP-05": 14.6, "TAL-03": 31.2, "LIV-08": 0.4},
+"Montreal":{"SMT-01": 334.2, "CMP-01": 38730, "LIV-04": 82.5, "TAL-01": 59.0, "LIV-05": 2.6, "LIV-01": 1.98, "SMT-05": 94.4, "GRN-01": 8.6, "GRN-02": 91.8, "LIV-06": 7.6, "CON-05": 41.3, "CON-03": 52.7, "SMT-03": null, "TAL-02": 3, "CON-01": 139, "TAL-06": 24.3, "GRN-05": 49.0, "CMP-04": 24.4, "CMP-06": 226, "LIV-02": 67.0, "LIV-07": 58.3, "CON-04": 40.1, "LIV-03": 76.12, "TAL-04": 5.62, "SMT-02": 94.3, "SMT-06": 63.4, "GRN-03": 6.5, "CMP-03": 11.0, "GRN-07": 3.0, "SMT-04": 78.0, "GRN-06": null, "CMP-02": null, "CMP-05": 4.3, "TAL-03": null, "LIV-08": 2.3},
+"Vancouver":{"SMT-01": 374.2, "CMP-01": 45902, "LIV-04": 81.5, "TAL-01": 64.0, "LIV-05": 2.71, "LIV-01": 1.98, "SMT-05": 94.4, "GRN-01": 6.0, "GRN-02": null, "LIV-06": 11.7, "CON-05": 56.5, "CON-03": 53.7, "SMT-03": null, "TAL-02": 1, "CON-01": 74, "TAL-06": 41.8, "GRN-05": 65.0, "CMP-04": 56.4, "CMP-06": 600, "LIV-02": 57.2, "LIV-07": 68.5, "CON-04": 35.9, "LIV-03": 76.12, "TAL-04": 5.62, "SMT-02": 94.3, "SMT-06": 56.0, "GRN-03": 4.97, "CMP-03": 4.0, "GRN-07": 3.0, "SMT-04": 78.0, "GRN-06": 337.0, "CMP-02": null, "CMP-05": 8.6, "TAL-03": null, "LIV-08": 2.9},
+"Chicago":{"SMT-01": 392.9, "CMP-01": 75524, "LIV-04": 76.8, "TAL-01": 50.9, "LIV-05": 3.7, "LIV-01": 5.76, "SMT-05": 94.7, "GRN-01": 8.7, "GRN-02": 47.8, "LIV-06": 3.2, "CON-05": 46.1, "CON-03": 43.2, "SMT-03": null, "TAL-02": 2, "CON-01": 81, "TAL-06": 19.4, "GRN-05": 9.0, "CMP-04": 29.4, "CMP-06": 210, "LIV-02": 34.8, "LIV-07": 75.8, "CON-04": 41.7, "LIV-03": 64.27, "TAL-04": 4.94, "SMT-02": 96.0, "SMT-06": 62.2, "GRN-03": 6.5, "CMP-03": 35.0, "GRN-07": 2.0, "SMT-04": 78.0, "GRN-06": 280.0, "CMP-02": 151167.0, "CMP-05": -0.9, "TAL-03": null, "LIV-08": 1.6},
+"Boston":{"SMT-01": 361.6, "CMP-01": 101761, "LIV-04": 79.0, "TAL-01": 58.2, "LIV-05": 5.52, "LIV-01": 5.76, "SMT-05": 94.7, "GRN-01": 6.4, "GRN-02": 68.2, "LIV-06": 7.9, "CON-05": 42.1, "CON-03": 47.6, "SMT-03": null, "TAL-02": 2, "CON-01": 63, "TAL-06": 20.7, "GRN-05": 25.0, "CMP-04": 126.9, "CMP-06": 2714, "LIV-02": 59.7, "LIV-07": 89.0, "CON-04": 45.0, "LIV-03": 64.27, "TAL-04": 4.94, "SMT-02": 96.0, "SMT-06": 59.0, "GRN-03": 6.11, "CMP-03": 22.0, "GRN-07": 3.0, "SMT-04": 78.0, "GRN-06": null, "CMP-02": 189747.0, "CMP-05": -0.9, "TAL-03": null, "LIV-08": 3.4},
+"Los Angeles":{"SMT-01": 392.1, "CMP-01": 70646, "LIV-04": 79.0, "TAL-01": 46.9, "LIV-05": 3.02, "LIV-01": 5.76, "SMT-05": 94.7, "GRN-01": 10.5, "GRN-02": null, "LIV-06": 8.2, "CON-05": 59.8, "CON-03": 5.7, "SMT-03": null, "TAL-02": 2, "CON-01": 81, "TAL-06": 33.4, "GRN-05": null, "CMP-04": 45.6, "CMP-06": 876, "LIV-02": 46.2, "LIV-07": 84.5, "CON-04": 57.1, "LIV-03": 64.27, "TAL-04": 4.94, "SMT-02": 96.0, "SMT-06": 59.8, "GRN-03": 5.36, "CMP-03": 16.0, "GRN-07": 3.0, "SMT-04": 78.0, "GRN-06": 265.0, "CMP-02": 147690.0, "CMP-05": -0.5, "TAL-03": null, "LIV-08": 1.8},
+"Seattle":{"SMT-01": 410.0, "CMP-01": 111516, "LIV-04": 79.2, "TAL-01": 52.9, "LIV-05": 2.98, "LIV-01": 5.76, "SMT-05": 94.7, "GRN-01": 6.1, "GRN-02": 63.5, "LIV-06": 4.8, "CON-05": 44.9, "CON-03": 26.1, "SMT-03": null, "TAL-02": 1, "CON-01": 38, "TAL-06": 22.1, "GRN-05": 53.4, "CMP-04": 73.8, "CMP-06": 1650, "LIV-02": 44.7, "LIV-07": 91.4, "CON-04": 42.9, "LIV-03": 64.27, "TAL-04": 4.94, "SMT-02": 96.0, "SMT-06": 56.1, "GRN-03": 4.62, "CMP-03": 14.0, "GRN-07": 3.0, "SMT-04": 78.0, "GRN-06": null, "CMP-02": 206967.0, "CMP-05": 6.7, "TAL-03": null, "LIV-08": 2.8},
+"Washington DC":{"SMT-01": 362.5, "CMP-01": 83988, "LIV-04": 78.0, "TAL-01": 70.7, "LIV-05": 12.02, "LIV-01": 5.76, "SMT-05": 94.7, "GRN-01": 6.3, "GRN-02": 52.8, "LIV-06": 4.3, "CON-05": 37.3, "CON-03": 33.1, "SMT-03": null, "TAL-02": 2, "CON-01": 70, "TAL-06": 24.7, "GRN-05": 27.93, "CMP-04": 36.9, "CMP-06": 556, "LIV-02": 40.3, "LIV-07": 92.1, "CON-04": 41.2, "LIV-03": 64.27, "TAL-04": 4.94, "SMT-02": 96.0, "SMT-06": 60.2, "GRN-03": 3.55, "CMP-03": 28.0, "GRN-07": 2.0, "SMT-04": 78.0, "GRN-06": null, "CMP-02": 160101.0, "CMP-05": 1.4, "TAL-03": null, "LIV-08": 14.8},
+"Sydney":{"SMT-01": 239.5, "CMP-01": 45152, "LIV-04": 84.1, "TAL-01": 52.5, "LIV-05": 4.58, "LIV-01": 0.85, "SMT-05": 96.1, "GRN-01": null, "GRN-02": 33.4, "LIV-06": 12.5, "CON-05": 43.7, "CON-03": 49.2, "SMT-03": 77.08, "TAL-02": 4, "CON-01": 65, "TAL-06": 38.6, "GRN-05": 52.0, "CMP-04": 40.1, "CMP-06": 250, "LIV-02": 66.2, "LIV-07": 79.2, "CON-04": 43.5, "LIV-03": 79.44, "TAL-04": null, "SMT-02": 89.0, "SMT-06": 65.9, "GRN-03": 1.92, "CMP-03": 14.0, "GRN-07": 3.0, "SMT-04": 77.0, "GRN-06": 206.0, "CMP-02": null, "CMP-05": 5.1, "TAL-03": null, "LIV-08": 0.1},
+"Auckland":{"SMT-01": 283.4, "CMP-01": 55906, "LIV-04": 82.7, "TAL-01": 45.5, "LIV-05": 3.47, "LIV-01": 1.46, "SMT-05": 93.5, "GRN-01": 5.5, "GRN-02": 88.4, "LIV-06": 10.5, "CON-05": 42.2, "CON-03": 37.6, "SMT-03": 80.21, "TAL-02": 2, "CON-01": 46, "TAL-06": 42.5, "GRN-05": 27.0, "CMP-04": null, "CMP-06": 166, "LIV-02": 49.4, "LIV-07": 64.4, "CON-04": 37.4, "LIV-03": 85.55, "TAL-04": 5.44, "SMT-02": 40.44, "SMT-06": 55.3, "GRN-03": 1.66, "CMP-03": 0.0, "GRN-07": 3.0, "SMT-04": 76.0, "GRN-06": null, "CMP-02": 101779.0, "CMP-05": 9.3, "TAL-03": null, "LIV-08": 0.0},
+"Osaka":{"SMT-01": 295.1, "CMP-01": 41497, "LIV-04": 84.2, "TAL-01": 56.9, "LIV-05": 2.92, "LIV-01": 0.23, "SMT-05": 85.5, "GRN-01": 9.4, "GRN-02": 72.2, "LIV-06": 10.6, "CON-05": 42.9, "CON-03": null, "SMT-03": null, "TAL-02": 1, "CON-01": null, "TAL-06": 6.8, "GRN-05": 9.5, "CMP-04": 3.7, "CMP-06": 21, "LIV-02": 67.0, "LIV-07": 42.7, "CON-04": null, "LIV-03": 85.27, "TAL-04": 5.61, "SMT-02": 96.6, "SMT-06": 51.2, "GRN-03": 5.2, "CMP-03": 14.0, "GRN-07": 3.0, "SMT-04": 71.0, "GRN-06": 246.0, "CMP-02": 76746.0, "CMP-05": 1.7, "TAL-03": null, "LIV-08": 1.7},
+"Tel Aviv":{"SMT-01": 366.9, "CMP-01": null, "LIV-04": 83.1, "TAL-01": 60.4, "LIV-05": 4.9, "LIV-01": 1.63, "SMT-05": 88.2, "GRN-01": 17.4, "GRN-02": 65.7, "LIV-06": 20.0, "CON-05": null, "CON-03": 87.9, "SMT-03": null, "TAL-02": 1, "CON-01": 114, "TAL-06": 23.5, "GRN-05": 36.0, "CMP-04": null, "CMP-06": 2111, "LIV-02": 73.8, "LIV-07": 103.9, "CON-04": 36.6, "LIV-03": 48.17, "TAL-04": null, "SMT-02": null, "SMT-06": 62.9, "GRN-03": 1.59, "CMP-03": 11.0, "GRN-07": 2.0, "SMT-04": 74.0, "GRN-06": null, "CMP-02": null, "CMP-05": null, "TAL-03": null, "LIV-08": 15.6},
+"Hong Kong":{"SMT-01": 431.6, "TAL-02": 5, "CON-03": 52.2, "CON-05": 47.7, "CMP-01": 66154, "LIV-01": 0.38, "SMT-05": 95.8, "GRN-01": 19.8, "GRN-02": 95.7, "SMT-03": null, "TAL-06": 38.3, "CON-01": 149.0, "GRN-05": 34.0, "CMP-04": 16.5, "CMP-06": 413, "LIV-04": null, "LIV-05": 2.2, "TAL-01": 35.7, "LIV-06": 35.2, "LIV-02": 78.2, "LIV-07": 76.4, "CON-04": 41.9, "LIV-03": 76.67, "TAL-04": 5.87, "SMT-02": 99.0, "SMT-06": 68.0, "GRN-03": 1.08, "CMP-03": 41.0, "GRN-07": 3.0, "SMT-04": 88.0, "GRN-06": 234.0, "CMP-02": null, "CMP-05": null, "TAL-03": null, "LIV-08": 0.7},
+"Taipei":{"SMT-01": 258.2, "TAL-02": 4, "CON-03": null, "CON-05": 43.6, "CMP-01": null, "LIV-01": 0.32, "SMT-05": 88.8, "GRN-01": 15.0, "GRN-02": null, "SMT-03": null, "TAL-06": 3.3, "CON-01": null, "GRN-05": 70.8, "CMP-04": null, "CMP-06": 25, "LIV-04": 83.4, "LIV-05": 4.76, "TAL-01": 66.2, "LIV-06": 31.4, "LIV-02": 83.4, "LIV-07": 54.5, "CON-04": 34.6, "LIV-03": 81.55, "TAL-04": null, "SMT-02": 98.17, "SMT-06": 77.8, "GRN-03": 2.03, "CMP-03": 30.0, "GRN-07": 3.0, "SMT-04": 66.0, "GRN-06": 336.0, "CMP-02": null, "CMP-05": null, "TAL-03": null, "LIV-08": 4.0},
+"Bangkok":{"SMT-01": 375.6, "TAL-02": 1, "CON-03": null, "CON-05": 67.9, "CMP-01": null, "LIV-01": 4.79, "SMT-05": 90.9, "GRN-01": 23.4, "GRN-02": 11.8, "SMT-03": 66.67, "TAL-06": null, "CON-01": 154.0, "GRN-05": null, "CMP-04": null, "CMP-06": 8, "LIV-04": 76.6, "LIV-05": 2.34, "TAL-01": 17.4, "LIV-06": 37.8, "LIV-02": 61.6, "LIV-07": 43.5, "CON-04": 44.4, "LIV-03": 54.22, "TAL-04": 1.59, "SMT-02": 95.0, "SMT-06": 76.1, "GRN-03": 1.77, "CMP-03": 16.0, "GRN-07": 3.0, "SMT-04": 64.0, "GRN-06": null, "CMP-02": null, "CMP-05": null, "TAL-03": null, "LIV-08": 1.0},
+"Kuala Lumpur":{"SMT-01": 272.1, "TAL-02": 4, "CON-03": null, "CON-05": 39.1, "CMP-01": null, "LIV-01": 0.73, "SMT-05": 98.0, "GRN-01": 28.3, "GRN-02": 46.1, "SMT-03": 59.38, "TAL-06": 13.1, "CON-01": 131.0, "GRN-05": 37.9, "CMP-04": null, "CMP-06": 19, "LIV-04": 76.7, "LIV-05": 2.27, "TAL-01": 34.9, "LIV-06": 8.6, "LIV-02": 40.9, "LIV-07": 38.8, "CON-04": 41.6, "LIV-03": 72.47, "TAL-04": 1.22, "SMT-02": 82.4, "SMT-06": 81.0, "GRN-03": 3.98, "CMP-03": 9.0, "GRN-07": 3.0, "SMT-04": 90.0, "GRN-06": 245.0, "CMP-02": null, "CMP-05": null, "TAL-03": null, "LIV-08": 0.3},
+"Jakarta":{"SMT-01": 97.7, "TAL-02": 0, "CON-03": 22.6, "CON-05": 59.8, "CMP-01": null, "LIV-01": 0.3, "SMT-05": 72.8, "GRN-01": 33.8, "GRN-02": 24.2, "SMT-03": 68.75, "TAL-06": null, "CON-01": 50.0, "GRN-05": null, "CMP-04": null, "CMP-06": 13, "LIV-04": 76.0, "LIV-05": 0.56, "TAL-01": 9.3, "LIV-06": 24.9, "LIV-02": 47.3, "LIV-07": 28.7, "CON-04": 53.5, "LIV-03": 55.49, "TAL-04": 0.4, "SMT-02": 8.92, "SMT-06": 83.2, "GRN-03": 1.85, "CMP-03": 12.0, "GRN-07": 3.0, "SMT-04": 74.0, "GRN-06": null, "CMP-02": null, "CMP-05": null, "TAL-03": null, "LIV-08": 0.7},
+"Manila":{"SMT-01": 198.9, "TAL-02": 0, "CON-03": null, "CON-05": 57.3, "CMP-01": null, "LIV-01": 4.35, "SMT-05": 67.3, "GRN-01": 15.4, "GRN-02": 28.7, "SMT-03": 60.42, "TAL-06": null, "CON-01": 66.0, "GRN-05": 48.0, "CMP-04": null, "CMP-06": 10, "LIV-04": 69.9, "LIV-05": 0.87, "TAL-01": 32.3, "LIV-06": 34.8, "LIV-02": 35.4, "LIV-07": 34.3, "CON-04": 50.7, "LIV-03": 52.67, "TAL-04": 0.32, "SMT-02": 72.41, "SMT-06": 61.9, "GRN-03": 0.54, "CMP-03": 7.0, "GRN-07": 3.0, "SMT-04": 74.0, "GRN-06": null, "CMP-02": null, "CMP-05": null, "TAL-03": null, "LIV-08": 0.5},
+"Ho Chi Minh City":{"SMT-01": 269.6, "TAL-02": 0, "CON-03": null, "CON-05": 40.3, "CMP-01": null, "LIV-01": 1.54, "SMT-05": 84.2, "GRN-01": 23.5, "GRN-02": 30.4, "SMT-03": 63.54, "TAL-06": null, "CON-01": 75.0, "GRN-05": null, "CMP-04": null, "CMP-06": 9, "LIV-04": 76.6, "LIV-05": 1.11, "TAL-01": 27.9, "LIV-06": 32.4, "LIV-02": 50.2, "LIV-07": 29.6, "CON-04": 32.1, "LIV-03": 65.99, "TAL-04": 0.84, "SMT-02": 25.5, "SMT-06": 76.3, "GRN-03": 1.06, "CMP-03": 1.0, "GRN-07": 3.0, "SMT-04": 48.0, "GRN-06": null, "CMP-02": null, "CMP-05": null, "TAL-03": null, "LIV-08": 0.0},
+"Mumbai":{"SMT-01": 93.4, "TAL-02": 1, "CON-03": null, "CON-05": 61.5, "CMP-01": null, "LIV-01": 2.82, "SMT-05": 70.0, "GRN-01": 49.5, "GRN-02": 35.3, "SMT-03": 56.25, "TAL-06": null, "CON-01": 52.0, "GRN-05": null, "CMP-04": 8.7, "CMP-06": 122, "LIV-04": 72.8, "LIV-05": 0.96, "TAL-01": 18.8, "LIV-06": 30.1, "LIV-02": 56.1, "LIV-07": 25.8, "CON-04": 55.2, "LIV-03": 52.47, "TAL-04": 0.26, "SMT-02": 82.15, "SMT-06": 80.9, "GRN-03": 1.04, "CMP-03": 33.0, "GRN-07": 3.0, "SMT-04": 54.0, "GRN-06": 150.0, "CMP-02": null, "CMP-05": null, "TAL-03": null, "LIV-08": 0.0},
+"Abu Dhabi":{"SMT-01": 348.1, "TAL-02": 1, "CON-03": 60.8, "CON-05": 25.5, "CMP-01": null, "LIV-01": 0.69, "SMT-05": 100.0, "GRN-01": 30.9, "GRN-02": 37.6, "SMT-03": null, "TAL-06": null, "CON-01": 165.0, "GRN-05": 32.0, "CMP-04": null, "CMP-06": 136, "LIV-04": 83.1, "LIV-05": 2.99, "TAL-01": null, "LIV-06": 7.4, "LIV-02": 88.6, "LIV-07": 55.1, "CON-04": 29.8, "LIV-03": 79.37, "TAL-04": 2.61, "SMT-02": 99.46, "SMT-06": 79.1, "GRN-03": 3.55, "CMP-03": 9.0, "GRN-07": 3.0, "SMT-04": 85.0, "GRN-06": null, "CMP-02": null, "CMP-05": null, "TAL-03": null, "LIV-08": 0.2},
+"Shanghai":{"SMT-01": 458.1, "TAL-02": 5, "CON-03": null, "CON-05": null, "CMP-01": null, "LIV-01": 0.5, "SMT-05": 91.6, "GRN-01": 28.4, "GRN-02": 29.9, "SMT-03": 86.46, "TAL-06": null, "CON-01": 105.0, "GRN-05": 43.2, "CMP-04": 11.7, "CMP-06": 137, "LIV-04": 83.2, "LIV-05": 3.8, "TAL-01": 33.9, "LIV-06": 31.2, "LIV-02": 73.5, "LIV-07": 40.5, "CON-04": 45.1, "LIV-03": 63.28, "TAL-04": 2.11, "SMT-02": 96.0, "SMT-06": 84.8, "GRN-03": 7.65, "CMP-03": 35.0, "GRN-07": 3.0, "SMT-04": 39.0, "GRN-06": 223.0, "CMP-02": null, "CMP-05": null, "TAL-03": null, "LIV-08": 0.3},
+"Beijing":{"SMT-01": 331.9, "TAL-02": 7, "CON-03": null, "CON-05": null, "CMP-01": null, "LIV-01": 0.5, "SMT-05": 91.6, "GRN-01": 31.0, "GRN-02": null, "SMT-03": null, "TAL-06": null, "CON-01": 124.0, "GRN-05": 39.8, "CMP-04": 19.1, "CMP-06": 281, "LIV-04": 82.5, "LIV-05": 6.34, "TAL-01": 42.0, "LIV-06": 29.7, "LIV-02": 74.4, "LIV-07": 37.9, "CON-04": 43.0, "LIV-03": 63.28, "TAL-04": 2.11, "SMT-02": 96.0, "SMT-06": 84.0, "GRN-03": 2.64, "CMP-03": 79.0, "GRN-07": 3.0, "SMT-04": 39.0, "GRN-06": 100.0, "CMP-02": null, "CMP-05": null, "TAL-03": null, "LIV-08": 0.5},
+"Shenzhen":{"SMT-01": 314.9, "TAL-02": 2, "CON-03": null, "CON-05": null, "CMP-01": null, "LIV-01": 0.5, "SMT-05": 91.6, "GRN-01": 17.3, "GRN-02": 21.9, "SMT-03": null, "TAL-06": null, "CON-01": 54.0, "GRN-05": null, "CMP-04": 9.2, "CMP-06": 86, "LIV-04": 83.9, "LIV-05": 3.02, "TAL-01": 28.8, "LIV-06": 28.6, "LIV-02": 75.5, "LIV-07": 38.7, "CON-04": 33.7, "LIV-03": 63.28, "TAL-04": 2.11, "SMT-02": 96.0, "SMT-06": 86.7, "GRN-03": 2.74, "CMP-03": 21.0, "GRN-07": 3.0, "SMT-04": 39.0, "GRN-06": 292.0, "CMP-02": null, "CMP-05": null, "TAL-03": null, "LIV-08": 0.1},
+"Delhi":{"SMT-01": 120.5, "TAL-02": 2, "CON-03": null, "CON-05": 55.4, "CMP-01": null, "LIV-01": 2.82, "SMT-05": 70.0, "GRN-01": 107.0, "GRN-02": 43.6, "SMT-03": null, "TAL-06": null, "CON-01": 79.0, "GRN-05": null, "CMP-04": 8.4, "CMP-06": 98, "LIV-04": 74.2, "LIV-05": 0.96, "TAL-01": 24.2, "LIV-06": 16.1, "LIV-02": 41.0, "LIV-07": 22.1, "CON-04": 57.4, "LIV-03": 52.47, "TAL-04": 0.26, "SMT-02": 82.15, "SMT-06": 79.7, "GRN-03": 0.72, "CMP-03": 15.0, "GRN-07": 3.0, "SMT-04": 54.0, "GRN-06": null, "CMP-02": null, "CMP-05": null, "TAL-03": null, "LIV-08": 0.0}
 },
 "provenance":{
  "LIV-01": {
@@ -9480,298 +9480,306 @@ window.INDEX_DATA = {
   }
  },
  "GRN-03": {
-  "source": "EC JRC — EDGAR v2024 'Emissions in urban areas' (CO2 per sector per GHS urban centre) + GHS-UCDB R2024A population, joined on urban-centre ID",
-  "url": "https://edgar.jrc.ec.europa.eu/dataset_ucdb (EDGAR_emiss_on_UCDB_2024.xlsx) + https://human-settlement.emergency.copernicus.eu/ghs_ucdb_2024.php (population attribute table)",
-  "license": "European Commission open reuse with attribution; cite Crippa et al. 2024 (ESSD 16:2811) and GHSL",
-  "edition": "EDGAR v2024 on UCDB R2024A V1-0; emissions year 2022, population epoch 2020",
-  "retrieved": "2026-07-17",
-  "method": "Sum of the six published CO2 sector columns for 2022 (Agriculture+Energy+Industry+Residential+Transport+Waste, ton/yr — verified equal to the published EM_CO2_TOT_2022 to the tonne for all 55) ÷ GH_POP_TOT_2020, exact division. Validation: the same arithmetic on 2020 columns reproduces JRC's published EM_CO2_PEC_2020 exactly for all 55 cities. All 55 urban-centre matches verified by name+country (Chicago disambiguated from Chicago Heights; Hong Kong's own centre is listed under country 'China').",
+  "source": "EC JRC — GHS-UCDB R2024A V1-2 'Emissions in urban areas' (EDGAR, updated May 2026; CO2 per sector per GHS urban centre, now incl. international transport) + GHS-UCDB population, joined on urban-centre ID",
+  "url": "https://human-settlement.emergency.copernicus.eu/ghs_ucdb_2024.php (GHS_UCDB_THEME_EMISSIONS_GLOBE_R2024A V1-2 + GHS_UCDB_THEME_GHSL_GLOBE_R2024A V1-2)",
+  "license": "European Commission open reuse with attribution; cite Mari Rivero et al. 2024, GHS-UCDB R2024A (doi:10.2905/1a338be6-7eaf-480c-9664-3a8ade88cbcd), EDGAR (Crippa et al.) and GHSL",
+  "edition": "GHS-UCDB R2024A V1-2 (data update 2026-05-15); emissions year 2024 incl. international transport, population epoch 2025",
+  "retrieved": "2026-07-18",
+  "method": "Published EM_CO2_TOT_2024 — verified equal to the sum of the six sectors (Agriculture+Energy+Industry+Residential+Transport+Waste) PLUS the new EM_CO2_INT international-transport field, to the tonne, for all 55 — ÷ GH_POP_TOT_2025, exact division. Validation: the same arithmetic on 2020 columns reproduces JRC's published EM_CO2_PEC_2020 exactly (max rel err <1e-6) for all 55 cities, confirming the publisher's own per-capita convention includes international transport. Join is ID-based on the 55 urban-centre IDs verified at v3.0.0; all 55 V1-2 main-city labels re-checked (four cosmetic renames, e.g. the Bay Area centre is now labelled 'San Francisco', the Pearl River Delta centre 'Guangzhou'). Same-year publisher revisions >=15% are noted per value.",
   "perCity": {
    "Singapore": {
-    "value": 4.88,
-    "year": "2022",
-    "source": "EDGAR v2024 UC #178 'Singapore': 24,449,810 t CO2 / 5,015,276 residents (2020 epoch)"
+    "value": 6.74,
+    "year": "2024",
+    "source": "UCDB V1-2 UC #178 'Singapore': 34,495,768 t CO2 (incl. 1,687,546 t international transport) / 5,117,759 residents (2025 epoch)"
    },
    "Tokyo": {
-    "value": 3.16,
-    "year": "2022",
-    "source": "EDGAR v2024 UC #5929 'Tokyo': 105,599,814 t CO2 / 33,447,551 residents (2020 epoch)",
-    "note": "UC is the contiguous Tokyo-Yokohama built-up area (pop 33.4M)."
+    "value": 3.64,
+    "year": "2024",
+    "source": "UCDB V1-2 UC #5929 'Tokyo': 120,688,728 t CO2 (incl. 1,483,478 t international transport) / 33,155,907 residents (2025 epoch)",
+    "note": "UC is the contiguous Tokyo-Yokohama built-up area (pop 33.2M)."
    },
    "Copenhagen": {
-    "value": 1.2,
-    "year": "2022",
-    "source": "EDGAR v2024 UC #698 'Copenhagen': 1,441,306 t CO2 / 1,201,209 residents (2020 epoch)"
+    "value": 1.57,
+    "year": "2024",
+    "source": "UCDB V1-2 UC #698 'Copenhagen': 1,977,816 t CO2 (incl. 347,380 t international transport) / 1,258,202 residents (2025 epoch)",
+    "note": "The May-2026 EDGAR revision moved this centre's same-year (2020) six-sector emissions +40%, before the vintage update and the addition of international transport."
    },
    "Zurich": {
-    "value": 2.04,
-    "year": "2022",
-    "source": "EDGAR v2024 UC #1689 'Zurich': 1,365,715 t CO2 / 667,861 residents (2020 epoch)"
+    "value": 2.84,
+    "year": "2024",
+    "source": "UCDB V1-2 UC #1689 'Zurich': 1,955,794 t CO2 (incl. 437,932 t international transport) / 689,208 residents (2025 epoch)"
    },
    "Vienna": {
-    "value": 1.96,
-    "year": "2022",
-    "source": "EDGAR v2024 UC #1081 'Vienna': 3,887,187 t CO2 / 1,988,046 residents (2020 epoch)"
+    "value": 2.68,
+    "year": "2024",
+    "source": "UCDB V1-2 UC #1081 'Vienna': 5,509,533 t CO2 (incl. 178,099 t international transport) / 2,056,565 residents (2025 epoch)"
    },
    "Seoul": {
-    "value": 3.11,
-    "year": "2022",
-    "source": "EDGAR v2024 UC #348 'Seoul': 69,150,094 t CO2 / 22,243,919 residents (2020 epoch)"
+    "value": 3.52,
+    "year": "2024",
+    "source": "UCDB V1-2 UC #348 'Seoul': 78,450,144 t CO2 (incl. 386,116 t international transport) / 22,261,692 residents (2025 epoch)"
    },
    "Melbourne": {
-    "value": 2.92,
-    "year": "2022",
-    "source": "EDGAR v2024 UC #1747 'Melbourne': 11,099,087 t CO2 / 3,801,530 residents (2020 epoch)"
+    "value": 3.02,
+    "year": "2024",
+    "source": "UCDB V1-2 UC #1747 'Melbourne': 12,105,007 t CO2 (incl. 115,205 t international transport) / 4,010,658 residents (2025 epoch)"
    },
    "Amsterdam": {
-    "value": 2.69,
-    "year": "2022",
-    "source": "EDGAR v2024 UC #1590 'Amsterdam': 3,187,682 t CO2 / 1,185,152 residents (2020 epoch)"
+    "value": 3.52,
+    "year": "2024",
+    "source": "UCDB V1-2 UC #1590 'Amsterdam': 4,311,492 t CO2 (incl. 1,097,068 t international transport) / 1,223,407 residents (2025 epoch)"
    },
    "London": {
-    "value": 2.06,
-    "year": "2022",
-    "source": "EDGAR v2024 UC #5816 'London': 20,515,376 t CO2 / 9,970,600 residents (2020 epoch)"
+    "value": 2.02,
+    "year": "2024",
+    "source": "UCDB V1-2 UC #5816 'London': 20,994,197 t CO2 (incl. 2,248,459 t international transport) / 10,408,332 residents (2025 epoch)"
    },
    "New York": {
-    "value": 4.22,
-    "year": "2022",
-    "source": "EDGAR v2024 UC #8099 'New York': 59,615,973 t CO2 / 14,113,884 residents (2020 epoch)",
-    "note": "UC pop 14.1M is the contiguous built-up core, smaller than the 20M metro."
+    "value": 4.71,
+    "year": "2024",
+    "source": "UCDB V1-2 UC #8099 'New York City': 66,812,239 t CO2 (incl. 2,349,239 t international transport) / 14,197,659 residents (2025 epoch)",
+    "note": "UC pop 14.2M is the contiguous built-up core, smaller than the 20M metro."
    },
    "Paris": {
-    "value": 1.64,
-    "year": "2022",
-    "source": "EDGAR v2024 UC #2878 'Paris': 15,112,530 t CO2 / 9,198,552 residents (2020 epoch)"
+    "value": 1.38,
+    "year": "2024",
+    "source": "UCDB V1-2 UC #2878 'Paris': 12,855,809 t CO2 (incl. 765,838 t international transport) / 9,328,385 residents (2025 epoch)"
    },
    "Toronto": {
-    "value": 6.72,
-    "year": "2022",
-    "source": "EDGAR v2024 UC #2869 'Toronto': 36,168,756 t CO2 / 5,379,559 residents (2020 epoch)"
+    "value": 7.6,
+    "year": "2024",
+    "source": "UCDB V1-2 UC #2869 'Toronto': 42,318,238 t CO2 (incl. 965,287 t international transport) / 5,566,382 residents (2025 epoch)"
    },
    "Berlin": {
-    "value": 3.66,
-    "year": "2022",
-    "source": "EDGAR v2024 UC #5483 'Berlin': 12,875,028 t CO2 / 3,521,506 residents (2020 epoch)"
+    "value": 3.19,
+    "year": "2024",
+    "source": "UCDB V1-2 UC #5483 'Berlin': 11,333,992 t CO2 (incl. 451,451 t international transport) / 3,549,997 residents (2025 epoch)"
    },
    "Barcelona": {
-    "value": 1.48,
-    "year": "2022",
-    "source": "EDGAR v2024 UC #5071 'Barcelona': 5,634,871 t CO2 / 3,797,532 residents (2020 epoch)"
+    "value": 1.52,
+    "year": "2024",
+    "source": "UCDB V1-2 UC #5071 'Barcelona': 5,935,956 t CO2 (incl. 454,946 t international transport) / 3,908,362 residents (2025 epoch)"
    },
    "Dubai": {
-    "value": 13.93,
-    "year": "2022",
-    "source": "EDGAR v2024 UC #1007 'Dubai': 60,548,757 t CO2 / 4,347,871 residents (2020 epoch)",
-    "note": "UC pop 4.35M spans the Dubai-Sharjah-Ajman conurbation."
+    "value": 16.79,
+    "year": "2024",
+    "source": "UCDB V1-2 UC #1007 'Dubai': 76,671,106 t CO2 (incl. 1,137,056 t international transport) / 4,565,478 residents (2025 epoch)",
+    "note": "UC pop 4.57M spans the Dubai-Sharjah-Ajman conurbation. The May-2026 EDGAR revision moved this centre's same-year (2020) six-sector emissions +38%, before the vintage update and the addition of international transport."
    },
    "San Francisco": {
-    "value": 3.66,
-    "year": "2022",
-    "source": "EDGAR v2024 UC #1461 'San Jose': 17,111,098 t CO2 / 4,679,439 residents (2020 epoch)",
-    "note": "GHS UC covers the contiguous SF Bay Area conurbation (UCDB main-city label 'San Jose'/'San Francisco'), i.e. SF+San Jose+Oakland combined."
+    "value": 4.53,
+    "year": "2024",
+    "source": "UCDB V1-2 UC #1461 'San Francisco': 21,375,841 t CO2 (incl. 354,016 t international transport) / 4,718,349 residents (2025 epoch)",
+    "note": "GHS UC covers the contiguous SF Bay Area conurbation (SF+San Jose+Oakland combined; V1-2 labels the centre 'San Francisco')."
    },
    "Stockholm": {
-    "value": 0.66,
-    "year": "2022",
-    "source": "EDGAR v2024 UC #1693 'Stockholm': 962,293 t CO2 / 1,450,800 residents (2020 epoch)",
-    "note": "Notably low but equals JRC's own published per-capita pattern (PEC_2020=0.664); EDGAR UC totals exclude international aviation/shipping."
+    "value": 0.71,
+    "year": "2024",
+    "source": "UCDB V1-2 UC #1693 'Stockholm': 1,101,031 t CO2 (incl. 110,647 t international transport) / 1,543,892 residents (2025 epoch)",
+    "note": "Notably low but equals JRC's own published series. V1-2 relocates a major energy point source into this centre for earlier epochs (2020 energy sector: 3.7 Mt) while its 2024 energy emissions fall to 0.33 Mt — the steep in-series decline is the publisher's data, reproduced here exactly. The May-2026 EDGAR revision moved this centre's same-year (2020) six-sector emissions +363%, before the vintage update and the addition of international transport."
    },
    "Oslo": {
-    "value": 1.04,
-    "year": "2022",
-    "source": "EDGAR v2024 UC #828 'Oslo': 873,752 t CO2 / 839,636 residents (2020 epoch)"
+    "value": 1.55,
+    "year": "2024",
+    "source": "UCDB V1-2 UC #828 'Oslo': 1,377,569 t CO2 (incl. 64,729 t international transport) / 889,573 residents (2025 epoch)",
+    "note": "The May-2026 EDGAR revision moved this centre's same-year (2020) six-sector emissions +68%, before the vintage update and the addition of international transport."
    },
    "Helsinki": {
-    "value": 3.2,
-    "year": "2022",
-    "source": "EDGAR v2024 UC #572 'Helsinki': 3,193,624 t CO2 / 997,296 residents (2020 epoch)"
+    "value": 3.4,
+    "year": "2024",
+    "source": "UCDB V1-2 UC #572 'Helsinki': 3,398,884 t CO2 (incl. 257,911 t international transport) / 1,001,125 residents (2025 epoch)",
+    "note": "The May-2026 EDGAR revision moved this centre's same-year (2020) six-sector emissions +58%, before the vintage update and the addition of international transport."
    },
    "Madrid": {
-    "value": 1.03,
-    "year": "2022",
-    "source": "EDGAR v2024 UC #3338 'Madrid': 5,680,607 t CO2 / 5,511,255 residents (2020 epoch)"
+    "value": 1.31,
+    "year": "2024",
+    "source": "UCDB V1-2 UC #3338 'Madrid': 7,445,890 t CO2 (incl. 623,413 t international transport) / 5,680,137 residents (2025 epoch)",
+    "note": "The May-2026 EDGAR revision moved this centre's same-year (2020) six-sector emissions +44%, before the vintage update and the addition of international transport."
    },
    "Milan": {
-    "value": 2.11,
-    "year": "2022",
-    "source": "EDGAR v2024 UC #1498 'Milan': 6,609,724 t CO2 / 3,137,748 residents (2020 epoch)"
+    "value": 2.37,
+    "year": "2024",
+    "source": "UCDB V1-2 UC #1498 'Milan': 7,425,791 t CO2 (incl. 301,750 t international transport) / 3,135,553 residents (2025 epoch)"
    },
    "Rome": {
-    "value": 3.08,
-    "year": "2022",
-    "source": "EDGAR v2024 UC #3938 'Rome': 7,562,888 t CO2 / 2,456,126 residents (2020 epoch)"
+    "value": 1.66,
+    "year": "2024",
+    "source": "UCDB V1-2 UC #3938 'Rome': 4,104,897 t CO2 (incl. 138,487 t international transport) / 2,476,089 residents (2025 epoch)",
+    "note": "The May-2026 EDGAR revision moved this centre's same-year (2020) six-sector emissions -47%, before the vintage update and the addition of international transport."
    },
    "Munich": {
-    "value": 3.17,
-    "year": "2022",
-    "source": "EDGAR v2024 UC #5249 'Munich': 5,593,992 t CO2 / 1,767,347 residents (2020 epoch)"
+    "value": 3.18,
+    "year": "2024",
+    "source": "UCDB V1-2 UC #5249 'Munich': 5,804,891 t CO2 (incl. 74,585 t international transport) / 1,827,704 residents (2025 epoch)"
    },
    "Frankfurt": {
-    "value": 3.56,
-    "year": "2022",
-    "source": "EDGAR v2024 UC #3400 'Frankfurt': 3,158,777 t CO2 / 887,963 residents (2020 epoch)"
+    "value": 4.75,
+    "year": "2024",
+    "source": "UCDB V1-2 UC #3400 'Frankfurt': 4,353,249 t CO2 (incl. 356,215 t international transport) / 916,259 residents (2025 epoch)",
+    "note": "The May-2026 EDGAR revision moved this centre's same-year (2020) six-sector emissions +41%, before the vintage update and the addition of international transport."
    },
    "Hamburg": {
-    "value": 3.5,
-    "year": "2022",
-    "source": "EDGAR v2024 UC #4184 'Hamburg': 6,085,594 t CO2 / 1,739,084 residents (2020 epoch)"
+    "value": 3.4,
+    "year": "2024",
+    "source": "UCDB V1-2 UC #4184 'Hamburg': 5,903,314 t CO2 (incl. 525,401 t international transport) / 1,733,898 residents (2025 epoch)"
    },
    "Brussels": {
-    "value": 2.98,
-    "year": "2022",
-    "source": "EDGAR v2024 UC #1290 'Brussels': 4,228,795 t CO2 / 1,417,148 residents (2020 epoch)"
+    "value": 3.82,
+    "year": "2024",
+    "source": "UCDB V1-2 UC #1290 'Brussels': 5,617,793 t CO2 (incl. 803,048 t international transport) / 1,468,754 residents (2025 epoch)"
    },
    "Dublin": {
-    "value": 3.18,
-    "year": "2022",
-    "source": "EDGAR v2024 UC #394 'Dublin': 3,432,062 t CO2 / 1,079,513 residents (2020 epoch)"
+    "value": 3.84,
+    "year": "2024",
+    "source": "UCDB V1-2 UC #394 'Dublin': 4,312,538 t CO2 (incl. 214,097 t international transport) / 1,124,520 residents (2025 epoch)"
    },
    "Lisbon": {
-    "value": 0.92,
-    "year": "2022",
-    "source": "EDGAR v2024 UC #231 'Lisbon': 1,775,416 t CO2 / 1,922,855 residents (2020 epoch)"
+    "value": 1.05,
+    "year": "2024",
+    "source": "UCDB V1-2 UC #231 'Lisbon': 2,069,388 t CO2 (incl. 508,750 t international transport) / 1,974,574 residents (2025 epoch)"
    },
    "Prague": {
-    "value": 2.06,
-    "year": "2022",
-    "source": "EDGAR v2024 UC #560 'Prague': 2,435,768 t CO2 / 1,181,057 residents (2020 epoch)"
+    "value": 1.98,
+    "year": "2024",
+    "source": "UCDB V1-2 UC #560 'Prague': 2,372,749 t CO2 (incl. 110,424 t international transport) / 1,201,278 residents (2025 epoch)"
    },
    "Warsaw": {
-    "value": 2.44,
-    "year": "2022",
-    "source": "EDGAR v2024 UC #3712 'Warsaw': 4,617,116 t CO2 / 1,892,607 residents (2020 epoch)"
+    "value": 2.21,
+    "year": "2024",
+    "source": "UCDB V1-2 UC #3712 'Warsaw': 4,419,054 t CO2 (incl. 229,115 t international transport) / 1,999,986 residents (2025 epoch)"
    },
    "Istanbul": {
-    "value": 1.52,
-    "year": "2022",
-    "source": "EDGAR v2024 UC #2637 'Istanbul': 21,699,290 t CO2 / 14,266,277 residents (2020 epoch)"
+    "value": 1.84,
+    "year": "2024",
+    "source": "UCDB V1-2 UC #2637 'Istanbul': 26,189,180 t CO2 (incl. 1,068,623 t international transport) / 14,210,222 residents (2025 epoch)"
    },
    "Montreal": {
-    "value": 5.59,
-    "year": "2022",
-    "source": "EDGAR v2024 UC #3700 'Montreal': 17,541,154 t CO2 / 3,135,550 residents (2020 epoch)"
+    "value": 6.5,
+    "year": "2024",
+    "source": "UCDB V1-2 UC #3700 'Montreal': 20,936,950 t CO2 (incl. 327,758 t international transport) / 3,221,844 residents (2025 epoch)"
    },
    "Vancouver": {
-    "value": 4.27,
-    "year": "2022",
-    "source": "EDGAR v2024 UC #358 'Vancouver': 8,952,028 t CO2 / 2,098,675 residents (2020 epoch)"
+    "value": 4.97,
+    "year": "2024",
+    "source": "UCDB V1-2 UC #358 'Vancouver': 10,924,335 t CO2 (incl. 400,486 t international transport) / 2,198,107 residents (2025 epoch)"
    },
    "Chicago": {
-    "value": 5.57,
-    "year": "2022",
-    "source": "EDGAR v2024 UC #7532 'Chicago': 29,466,945 t CO2 / 5,289,806 residents (2020 epoch)"
+    "value": 6.5,
+    "year": "2024",
+    "source": "UCDB V1-2 UC #7532 'Chicago': 34,574,778 t CO2 (incl. 852,666 t international transport) / 5,318,735 residents (2025 epoch)"
    },
    "Boston": {
-    "value": 5.19,
-    "year": "2022",
-    "source": "EDGAR v2024 UC #8255 'Boston': 8,608,558 t CO2 / 1,657,547 residents (2020 epoch)"
+    "value": 6.11,
+    "year": "2024",
+    "source": "UCDB V1-2 UC #8255 'Boston': 10,202,850 t CO2 (incl. 274,074 t international transport) / 1,669,310 residents (2025 epoch)"
    },
    "Los Angeles": {
-    "value": 4.68,
-    "year": "2022",
-    "source": "EDGAR v2024 UC #2007 'Los Angeles': 62,446,185 t CO2 / 13,341,630 residents (2020 epoch)"
+    "value": 5.36,
+    "year": "2024",
+    "source": "UCDB V1-2 UC #2007 'Los Angeles': 72,252,099 t CO2 (incl. 1,378,878 t international transport) / 13,474,333 residents (2025 epoch)"
    },
    "Seattle": {
-    "value": 4.13,
-    "year": "2022",
-    "source": "EDGAR v2024 UC #5098 'Seattle': 8,403,515 t CO2 / 2,033,619 residents (2020 epoch)"
+    "value": 4.62,
+    "year": "2024",
+    "source": "UCDB V1-2 UC #5098 'Seattle': 9,706,871 t CO2 (incl. 521,634 t international transport) / 2,099,643 residents (2025 epoch)"
    },
    "Washington DC": {
-    "value": 3.21,
-    "year": "2022",
-    "source": "EDGAR v2024 UC #7910 'Washington': 10,869,752 t CO2 / 3,383,772 residents (2020 epoch)"
+    "value": 3.55,
+    "year": "2024",
+    "source": "UCDB V1-2 UC #7910 'Washington': 12,328,927 t CO2 (incl. 193,418 t international transport) / 3,471,725 residents (2025 epoch)"
    },
    "Sydney": {
-    "value": 1.93,
-    "year": "2022",
-    "source": "EDGAR v2024 UC #2324 'Sydney': 7,949,223 t CO2 / 4,120,983 residents (2020 epoch)"
+    "value": 1.92,
+    "year": "2024",
+    "source": "UCDB V1-2 UC #2324 'Sydney': 8,412,219 t CO2 (incl. 526,035 t international transport) / 4,375,394 residents (2025 epoch)"
    },
    "Auckland": {
-    "value": 1.42,
-    "year": "2022",
-    "source": "EDGAR v2024 UC #1147 'Auckland': 2,157,190 t CO2 / 1,521,127 residents (2020 epoch)"
+    "value": 1.66,
+    "year": "2024",
+    "source": "UCDB V1-2 UC #1147 'Auckland': 2,701,502 t CO2 (incl. 138,227 t international transport) / 1,623,898 residents (2025 epoch)"
    },
    "Osaka": {
-    "value": 4.41,
-    "year": "2022",
-    "source": "EDGAR v2024 UC #4399 'Osaka [Kyoto]': 58,715,371 t CO2 / 13,299,772 residents (2020 epoch)",
-    "note": "GHS UC 'Osaka [Kyoto]' covers the Keihanshin conurbation (Osaka-Kobe-Kyoto)."
+    "value": 5.2,
+    "year": "2024",
+    "source": "UCDB V1-2 UC #4399 'Osaka': 65,749,039 t CO2 (incl. 368,957 t international transport) / 12,653,994 residents (2025 epoch)",
+    "note": "GHS UC covers the Keihanshin conurbation (Osaka-Kobe-Kyoto)."
    },
    "Tel Aviv": {
-    "value": 1.26,
-    "year": "2022",
-    "source": "EDGAR v2024 UC #457 'Tel Aviv': 3,063,982 t CO2 / 2,429,768 residents (2020 epoch)"
+    "value": 1.59,
+    "year": "2024",
+    "source": "UCDB V1-2 UC #457 'Tel Aviv': 4,168,285 t CO2 (incl. 320,144 t international transport) / 2,628,335 residents (2025 epoch)",
+    "note": "The May-2026 EDGAR revision moved this centre's same-year (2020) six-sector emissions +36%, before the vintage update and the addition of international transport."
    },
    "Hong Kong": {
-    "value": 1.35,
-    "year": "2022",
-    "source": "EDGAR v2024 UC #11185 'Hong Kong': 6,492,985 t CO2 / 4,811,077 residents (2020 epoch)",
-    "note": "Own UC (listed under country 'China'). Value looks low vs territory statistics (~4.5 t/cap incl. electricity): UC covers 4.8M of HK's 7.5M residents and major power stations may fall outside the UC polygon. Matches JRC's own published UC figure (PEC_2020=1.479)."
+    "value": 1.08,
+    "year": "2024",
+    "source": "UCDB V1-2 UC #11185 'Hong Kong': 5,191,810 t CO2 (incl. 581,760 t international transport) / 4,807,599 residents (2025 epoch)",
+    "note": "Own UC (listed under country 'China'). Still reads low vs territory statistics (~4.5 t/cap incl. electricity): the UC covers 4.8M of HK's 7.5M residents, and the small international-transport increment here (+0.12 t/cap) indicates most aviation/shipping emissions are allocated outside this UC polygon. Matches JRC's own published UC figure. The May-2026 EDGAR revision moved this centre's same-year (2020) six-sector emissions -36%, before the vintage update and the addition of international transport."
    },
    "Taipei": {
-    "value": 1.9,
-    "year": "2022",
-    "source": "EDGAR v2024 UC #1142 'New Taipei [Taipei]': 17,702,256 t CO2 / 9,312,193 residents (2020 epoch)",
-    "note": "GHS UC 'New Taipei [Taipei]' covers the Taipei-New Taipei(-Taoyuan) conurbation, not Taipei City alone."
+    "value": 2.03,
+    "year": "2024",
+    "source": "UCDB V1-2 UC #1142 'Taipei': 19,668,484 t CO2 (incl. 530,596 t international transport) / 9,686,521 residents (2025 epoch)",
+    "note": "GHS UC covers the Taipei-New Taipei(-Taoyuan) conurbation, not Taipei City alone."
    },
    "Bangkok": {
-    "value": 1.71,
-    "year": "2022",
-    "source": "EDGAR v2024 UC #2315 'Bangkok': 29,825,407 t CO2 / 17,430,926 residents (2020 epoch)"
+    "value": 1.77,
+    "year": "2024",
+    "source": "UCDB V1-2 UC #2315 'Bangkok': 33,622,676 t CO2 (incl. 783,921 t international transport) / 19,048,032 residents (2025 epoch)"
    },
    "Kuala Lumpur": {
-    "value": 3.8,
-    "year": "2022",
-    "source": "EDGAR v2024 UC #1648 'Kuala Lumpur': 29,431,599 t CO2 / 7,750,184 residents (2020 epoch)"
+    "value": 3.98,
+    "year": "2024",
+    "source": "UCDB V1-2 UC #1648 'Kuala Lumpur': 33,496,103 t CO2 (incl. 177,738 t international transport) / 8,413,206 residents (2025 epoch)"
    },
    "Jakarta": {
-    "value": 2.01,
-    "year": "2022",
-    "source": "EDGAR v2024 UC #5472 'Jakarta': 76,986,578 t CO2 / 38,214,046 residents (2020 epoch)"
+    "value": 1.85,
+    "year": "2024",
+    "source": "UCDB V1-2 UC #5472 'Jakarta': 74,919,218 t CO2 (incl. 287,731 t international transport) / 40,545,126 residents (2025 epoch)"
    },
    "Manila": {
-    "value": 0.43,
-    "year": "2022",
-    "source": "EDGAR v2024 UC #2323 'Quezon City [Manila]': 10,499,127 t CO2 / 24,447,603 residents (2020 epoch)",
-    "note": "GHS UC 'Quezon City [Manila]' covers the contiguous Metro Manila conurbation, not the City of Manila alone."
+    "value": 0.54,
+    "year": "2024",
+    "source": "UCDB V1-2 UC #2323 'Manila': 13,931,725 t CO2 (incl. 156,837 t international transport) / 25,921,189 residents (2025 epoch)",
+    "note": "GHS UC covers the contiguous Metro Manila conurbation, not the City of Manila alone."
    },
    "Ho Chi Minh City": {
-    "value": 0.92,
-    "year": "2022",
-    "source": "EDGAR v2024 UC #5239 'Ho Chi Minh City': 11,840,120 t CO2 / 12,917,368 residents (2020 epoch)"
+    "value": 1.06,
+    "year": "2024",
+    "source": "UCDB V1-2 UC #5239 'Ho Chi Minh City': 15,404,986 t CO2 (incl. 275,729 t international transport) / 14,557,830 residents (2025 epoch)"
    },
    "Mumbai": {
-    "value": 0.79,
-    "year": "2022",
-    "source": "EDGAR v2024 UC #7599 'Mumbai': 15,299,093 t CO2 / 19,252,504 residents (2020 epoch)"
+    "value": 1.04,
+    "year": "2024",
+    "source": "UCDB V1-2 UC #7599 'Mumbai': 21,262,647 t CO2 (incl. 454,870 t international transport) / 20,453,270 residents (2025 epoch)"
    },
    "Abu Dhabi": {
-    "value": 5.08,
-    "year": "2022",
-    "source": "EDGAR v2024 UC #325 'Abu Dhabi': 2,658,538 t CO2 / 523,212 residents (2020 epoch)"
+    "value": 3.55,
+    "year": "2024",
+    "source": "UCDB V1-2 UC #325 'Abu Dhabi': 1,804,536 t CO2 (incl. 29,560 t international transport) / 508,976 residents (2025 epoch)",
+    "note": "The May-2026 EDGAR revision moved this centre's same-year (2020) six-sector emissions -41%, before the vintage update and the addition of international transport."
    },
    "Shanghai": {
-    "value": 6.58,
-    "year": "2022",
-    "source": "EDGAR v2024 UC #11345 'Shanghai': 183,230,071 t CO2 / 27,835,301 residents (2020 epoch)"
+    "value": 7.65,
+    "year": "2024",
+    "source": "UCDB V1-2 UC #11345 'Shanghai': 234,821,535 t CO2 (incl. 1,197,377 t international transport) / 30,678,616 residents (2025 epoch)"
    },
    "Beijing": {
-    "value": 2.53,
-    "year": "2022",
-    "source": "EDGAR v2024 UC #8745 'Beijing': 44,399,379 t CO2 / 17,524,930 residents (2020 epoch)"
+    "value": 2.64,
+    "year": "2024",
+    "source": "UCDB V1-2 UC #8745 'Beijing': 47,888,831 t CO2 (incl. 666,714 t international transport) / 18,150,576 residents (2025 epoch)"
    },
    "Shenzhen": {
-    "value": 2.25,
-    "year": "2022",
-    "source": "EDGAR v2024 UC #10933 'Shenzhen [Guangzhou]': 92,965,841 t CO2 / 41,337,427 residents (2020 epoch)",
-    "note": "GHS UC 'Shenzhen [Guangzhou]' covers the merged Pearl River Delta conurbation (Shenzhen+Guangzhou+Dongguan+Foshan, pop 41.3M); no separate Shenzhen-only UC exists."
+    "value": 2.74,
+    "year": "2024",
+    "source": "UCDB V1-2 UC #10933 'Guangzhou': 117,742,352 t CO2 (incl. 954,281 t international transport) / 42,987,704 residents (2025 epoch)",
+    "note": "GHS UC covers the merged Pearl River Delta conurbation (Shenzhen+Guangzhou+Dongguan+Foshan; V1-2 labels the centre 'Guangzhou'); no separate Shenzhen-only UC exists."
    },
    "Delhi": {
-    "value": 0.63,
-    "year": "2022",
-    "source": "EDGAR v2024 UC #7963 'Ghaziabad [New Delhi]': 18,377,948 t CO2 / 29,391,147 residents (2020 epoch)",
-    "note": "GHS UC 'Ghaziabad [New Delhi]' covers the contiguous Delhi NCR built-up area (Delhi+Ghaziabad+Noida etc.)."
+    "value": 0.72,
+    "year": "2024",
+    "source": "UCDB V1-2 UC #7963 'New Delhi': 22,653,960 t CO2 (incl. 638,389 t international transport) / 31,422,508 residents (2025 epoch)",
+    "note": "GHS UC covers the contiguous Delhi NCR built-up area (Delhi+Ghaziabad+Noida etc.; V1-2 labels the centre 'New Delhi')."
    }
   }
  },
