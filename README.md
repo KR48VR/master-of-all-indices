@@ -42,10 +42,11 @@ deliberately smaller — every cell must meet the same bar, or stay blank.
 | Where a number comes from | a sources appendix, at best | click it: source, year, method, caveat |
 | Missing data | filled by estimation, invisibly | left blank, explained, counted against coverage |
 | Approximations | undisclosed | badged per measure, tallied in the UI |
-| Weights & method | fixed by the publisher | yours to change; ranking rebuilds live |
+| Weights & method | fixed by the publisher | yours to change; ranking rebuilds live — and any blend is shareable as a link that reproduces it exactly |
 | Robustness | asserted | measured (drop-one-measure rank ranges, in the UI) |
 | The data | paywalled or PDF | versioned CSV download, licensed |
 | The rules | an editorial promise | a public automated check on every change |
+| Compromised metrics | blended in, undisclosed | quarantined in an off-by-default extended tier, badged and explained |
 
 Conventional indices are genuinely better at breadth, long time series and
 expert judgement where hard data doesn't exist. If you need 200 cities, use
