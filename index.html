@@ -84,7 +84,9 @@ button{font-family:inherit}
    Reads as a skyline; is actually the live ranking. The only decoration with a receipt. */
 .skyline{display:flex; align-items:flex-end; gap:2px; flex-basis:100%; height:30px; margin-top:2px}
 .skyline i{flex:1; background:var(--indigo); opacity:.13; border-radius:1.5px 1.5px 0 0; min-height:2px; cursor:default;
-  transition:height .5s cubic-bezier(.4,0,.2,1), background-color .4s, opacity .15s}
+  transition:height .8s cubic-bezier(.4,0,.2,1), background-color .4s, opacity .15s}
+.skycap{flex-basis:100%; text-align:right; font-family:"IBM Plex Mono",monospace; font-size:9.5px;
+  letter-spacing:.08em; text-transform:uppercase; color:var(--ink3); margin-top:3px; min-height:13px}
 .skyline i:hover{opacity:.45}
 .skyline.mine i{background:var(--amber); opacity:.22}
 .skyline.mine i:hover{opacity:.55}
@@ -326,6 +328,7 @@ button{font-family:inherit}
     <span><b>Sourced data.</b> Every value shown is real, sourced and dated (see the provenance block in <code>dataset.js</code>). Blanks are honest gaps &mdash; where no verifiable figure exists, nothing is shown. The default view is the <b>gold tier</b>: measures that measure what their name says, from the best available source. The optional <b>extended tier</b> adds known-compromised measures &mdash; clearly badged &mdash; so you can see what conventional-index shortcuts do to a ranking.</span>
   </div>
   <div class="skyline" id="skyline" aria-hidden="true"></div>
+  <div class="skycap" id="skycap" aria-hidden="true"></div>
 </div>
 
 <div class="wrap">
@@ -714,17 +717,34 @@ function _blendMap(activeVars){
 }
 function runSkylineIntro(){
   if(matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if(typeof encodeBlend==='function' && encodeBlend()!=='') return; // arrived via a shared blend: show it, no tour
   const goldOf = d => new Set(P.variables.filter(v=>v.tier==='gold'&&v.domain===d).map(v=>v.id));
-  const frames = ['Green','Competitive','Connected'].map(d=>_blendMap(goldOf(d)));
+  const goldMap = {}; lastRows.forEach(r=>{ goldMap[r.city]=r.composite; });
+  const frames = [{label:'all areas (gold)', map:goldMap}]
+    .concat(P.domains.map(d=>({label:d.id+' only', map:_blendMap(goldOf(d.id))})));
+  const CYCLES=10, HOLD=2600;   // ~0.8s morph + ~1.8s hold per skyline; stops on any blend change
+  const cap=document.getElementById('skycap');
   _introRunning=true; let k=0;
   const step=()=>{
     if(!_introRunning) return;
-    if(k<frames.length){ _paintSky(frames[k], ()=> ''); k++; _introTimer=setTimeout(step,640); }
-    else { _introRunning=false; renderSkyline(lastRows); }
+    if(k >= CYCLES*frames.length){
+      _introRunning=false; if(cap) cap.textContent='';
+      renderSkyline(lastRows); return;
+    }
+    const f=frames[k%frames.length];
+    _paintSky(f.map, (c,v)=> v===null||v===undefined ? `${c} — no score in the ${f.label} blend` : `${c} — ${v.toFixed(1)} in the ${f.label} blend`);
+    if(cap) cap.textContent = 'skyline: ' + f.label + ' — shifting until you blend your own';
+    k++; _introTimer=setTimeout(step, HOLD);
   };
   step();
 }
-function cancelIntro(){ if(_introRunning){ _introRunning=false; clearTimeout(_introTimer); renderSkyline(lastRows); } }
+function cancelIntro(){
+  if(_introRunning){
+    _introRunning=false; clearTimeout(_introTimer);
+    const cap=document.getElementById('skycap'); if(cap) cap.textContent='';
+    renderSkyline(lastRows);
+  }
+}
 
 function updateExtUI(){
   const extActive = P.variables.some(v=>v.tier==='extended' && state.varOn[v.id] && state.domOn[v.domain]);
